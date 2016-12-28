@@ -1,0 +1,27 @@
+:host {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+
+    svg {
+        width: 24px;
+        height: 24px;
+        vertical-align: text-bottom;
+
+        path {
+            fill: rgba(0, 0, 0, 0.9);
+        }
+    }
+
+    .dropdown-item {
+        padding: 10px 15px;
+        border-bottom: 1px dotted #CCC;
+
+        small {
+            display: block;
+            color: #999;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
