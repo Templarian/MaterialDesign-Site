@@ -7,12 +7,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { IconComponent } from './shared/icon/icon.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { BannerComponent } from './shared/banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IconComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
