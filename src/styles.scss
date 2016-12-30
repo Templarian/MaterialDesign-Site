@@ -8,4 +8,31 @@
         border-radius: 4px;
         padding: 20px;
     }
+
+    pre {
+        position: relative;
+        code {
+            border-radius: 4px;
+
+            &.language-html::before {
+                content: 'HTML';
+            }
+
+            &.language-js::before {
+                content: 'JavaScript';
+            }
+
+            &.hljs::before {
+                font-size: 12px;
+                border-radius: 0 4px 0 4px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: #999;
+                background: #FFF;
+                padding: 2px 4px 2px 6px;
+                pointer-events: none;
+            }
+        }
+    }
 }
