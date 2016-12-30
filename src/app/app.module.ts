@@ -29,6 +29,13 @@ import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 const appRoutes: Routes = [
   //{ path: 'icon/:iconName',      component: HeroDetailComponent },
   {
+    path: 'getting-started',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started.md'
+    }
+  },
+  {
     path: 'getting-started/angular',
     component: ViewerComponent,
     data: {
@@ -40,6 +47,27 @@ const appRoutes: Routes = [
     component: ViewerComponent,
     data: {
       file: 'content/getting-started-angularjs.md'
+    }
+  },
+  {
+    path: 'getting-started/bootstrap',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started-bootstrap.md'
+    }
+  },
+  {
+    path: 'getting-started/polymer',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started-polymer.md'
+    }
+  },
+  {
+    path: 'getting-started/webpack',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started-webpack.md'
     }
   },
   {
