@@ -23,7 +23,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BannerComponent } from './shared/banner/banner.component';
 
 import { HomeComponent } from './home/home.component';
+import { IconsComponent } from './icons/icons.component';
 import { ViewerComponent } from './viewer/viewer.component';
+import { ResourcesComponent } from './resources/resources.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 
 const appRoutes: Routes = [
@@ -87,6 +89,12 @@ const appRoutes: Routes = [
   { path: '',
     component: HomeComponent
   },
+  { path: 'icons',
+    component: IconsComponent
+  },
+  { path: 'resources',
+    component: ResourcesComponent
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -94,7 +102,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
+    IconsComponent,
     ViewerComponent,
+    ResourcesComponent,
     PageNotFoundComponent,
     IconComponent,
     HeaderComponent,
