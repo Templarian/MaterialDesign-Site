@@ -15,7 +15,9 @@ declare var hljs: any;
 })
 export class ViewerComponent  {
 
-  remarkable = new Remarkable();
+  remarkable = new Remarkable({
+    html: true
+  });
   errorMessage: string;
   title: string = 'Loading...';
   pageData: string = 'Loading...';
