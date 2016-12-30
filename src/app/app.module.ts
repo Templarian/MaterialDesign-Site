@@ -27,13 +27,11 @@ import { ViewerComponent } from './viewer/viewer.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 
 const appRoutes: Routes = [
-  //{ path: 'crisis-center', component: CrisisListComponent },
-  //{ path: 'hero/:id',      component: HeroDetailComponent },
+  //{ path: 'icon/:iconName',      component: HeroDetailComponent },
   {
     path: 'getting-started/angular',
     component: ViewerComponent,
     data: {
-      title: 'Getting Started - Angular',
       file: 'content/getting-started-angular.md'
     }
   },
@@ -41,7 +39,6 @@ const appRoutes: Routes = [
     path: 'getting-started/angularjs',
     component: ViewerComponent,
     data: {
-      title: 'Getting Started - AngularJS',
       file: 'content/getting-started-angularjs.md'
     }
   },
@@ -49,7 +46,6 @@ const appRoutes: Routes = [
     path: 'getting-started/web',
     component: ViewerComponent,
     data: {
-      title: 'Getting Started - Web',
       file: 'content/getting-started-web.md'
     }
   },

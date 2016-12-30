@@ -2,12 +2,8 @@ import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 
-declare var Remarkable: any;
-
 @Injectable()
 export class ViewerService {
-
-  remarkable = new Remarkable();
 
   constructor (private http: Http) {}
 
@@ -18,7 +14,7 @@ export class ViewerService {
   }
 
   private extractData(res: Response) {
-    return this.remarkable.render(res.text());
+    return res.text();
   }
 
   private handleError (error: Response | any) {
