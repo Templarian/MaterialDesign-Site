@@ -36,6 +36,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/android',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started-android.md'
+    }
+  },
+  {
     path: 'getting-started/angular',
     component: ViewerComponent,
     data: {
