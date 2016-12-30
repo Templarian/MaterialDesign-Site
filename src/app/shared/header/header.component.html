@@ -11,10 +11,10 @@
         <div class="col-md-8">
             <ul class="nav navbar-nav float-xs-right">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Icons</a>
+                    <a class="nav-link" routerLink="/icons" routerLinkActive="active">Icons</a>
                 </li>
                 <li ngbDropdown class="nav-item dropdown">
-                    <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" id="gettingStartedDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Getting Started</a>
+                    <a ngbDropdownToggle href="#" onclick="event.preventDefault()" class="nav-link dropdown-toggle" id="gettingStartedDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Getting Started</a>
                     <div class="dropdown-menu" aria-labelledby="gettingStartedDropdown">
                         <a class="dropdown-item" routerLink="/getting-started/android" routerLinkActive="active">
                             <mdi-icon [name]="'android'"></mdi-icon>
@@ -53,7 +53,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Resources</a>
+                    <a class="nav-link" routerLink="/resources" routerLinkActive="active">Resources</a>
                 </li>
             </ul>
         </div>
