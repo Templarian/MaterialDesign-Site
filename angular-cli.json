@@ -20,7 +20,10 @@
       "styles": [
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "assets/third-party/highlight/highlight.pack.js",
+        "../node_modules/remarkable/dist/remarkable.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

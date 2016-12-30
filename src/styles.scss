@@ -1,1 +1,10 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+.content {
+    h1 {
+        padding: 60px;
+        background: #2196F3;
+        color: #FFF;
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "highlight.js": "registry:dt/highlight.js#9.1.0+20161227120821"
+  }
+}

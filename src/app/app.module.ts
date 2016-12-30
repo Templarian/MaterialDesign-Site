@@ -5,6 +5,17 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 
+// Statics
+import 'rxjs/add/observable/throw';
+
+// Operators
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/toPromise';
+
 import { AppComponent } from './app.component';
 import { IconComponent } from './shared/icon/icon.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -19,11 +30,27 @@ const appRoutes: Routes = [
   //{ path: 'crisis-center', component: CrisisListComponent },
   //{ path: 'hero/:id',      component: HeroDetailComponent },
   {
+    path: 'getting-started/angular',
+    component: ViewerComponent,
+    data: {
+      title: 'Getting Started - Angular',
+      file: 'content/getting-started-angular.md'
+    }
+  },
+  {
+    path: 'getting-started/angularjs',
+    component: ViewerComponent,
+    data: {
+      title: 'Getting Started - AngularJS',
+      file: 'content/getting-started-angularjs.md'
+    }
+  },
+  {
     path: 'getting-started/web',
     component: ViewerComponent,
     data: {
       title: 'Getting Started - Web',
-      file: 'content/getting-started-web'
+      file: 'content/getting-started-web.md'
     }
   },
   { path: '',
@@ -50,8 +77,12 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    // None
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
   

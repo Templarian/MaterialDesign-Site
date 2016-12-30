@@ -4,7 +4,17 @@ The [Material Design Icons](https://materialdesignicons.com) project has been gr
 
 ## Tech Stack
 
-Pretty much starting this with the latest of everything. Angular2, ngAngular, Bootstrap4, TypeScript2.
+Pretty much starting this with the latest of everything. Angular, ngAngular (Bootstrap 4), TypeScript2.
+
+## Running Locally
+
+Clone the project and install `angular-cli` globally. This will handle running the Angular project.
+
+```
+npm install angular-cli --global
+npm install
+ng serve
+```
 
 ## Goals
 
@@ -26,8 +36,4 @@ Pretty much starting this with the latest of everything. Angular2, ngAngular, Bo
 
 ## API Endpoints
 
-Below will document each public facing endpoint the system has and all the various query parameters each allows.
-
-```text
-api/
-```
+To view all the documented endpoints please open `src/content/api.md`.
