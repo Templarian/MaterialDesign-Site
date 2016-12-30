@@ -9,6 +9,26 @@
         padding: 20px;
     }
 
+    .sidebar {
+        .dropdown-item {
+            border-radius: 4px;
+        }
+        a small {
+            color: #666;
+        }
+        .dropdown-item.active {
+            color: #FFF;
+
+            small {
+                color: #FFF;
+            }
+
+            svg path {
+                fill: #FFF;
+            }
+        }
+    }
+
     pre {
         position: relative;
         code {
