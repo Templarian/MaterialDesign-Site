@@ -1,5 +1,6 @@
 # Web - Getting Started
 
+> The documentation below assumes you are using the webfont.
 
 ## Helper Classes
 
