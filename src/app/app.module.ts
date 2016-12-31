@@ -73,6 +73,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/react',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started-react.md'
+    }
+  },
+  {
     path: 'getting-started/svg',
     component: ViewerComponent,
     data: {
