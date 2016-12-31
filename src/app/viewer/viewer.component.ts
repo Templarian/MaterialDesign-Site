@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { ViewerService } from './viewer.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare var Remarkable: any;
 declare var hljs: any;
@@ -20,10 +21,11 @@ export class ViewerComponent  {
   });
   errorMessage: string;
   title: string = 'Loading...';
-  pageData: string = 'Loading...';
+  pageData: SafeHtml = 'Loading...';
 
   constructor (public route: ActivatedRoute,
-               private viewerService: ViewerService) {
+               private viewerService: ViewerService,
+               private sanitizer: DomSanitizer) {
     
   }
 
@@ -38,7 +40,7 @@ export class ViewerComponent  {
                           return '';
                         });
                         this.title = title;
-                        this.pageData = markdown;
+                        this.pageData = this.sanitizer.bypassSecurityTrustHtml(markdown);
                         setTimeout(function () {
                           let items = document.querySelectorAll('pre code');
                           for(var i = 0; i < items.length; i++) {
