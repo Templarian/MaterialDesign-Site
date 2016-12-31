@@ -1,6 +1,18 @@
-# Web - Getting Started
+# Webfont - Getting Started
 
-> The documentation below assumes you are using the webfont.
+The webfont is a quick way to integrate the icons into your application.
+
+## Setup
+
+Document CDN/Bower/NPM here.
+
+## Basic Example
+
+Each icon can be referenced by their name prefixed with `mdi-`. For instance to get the home icon `mdi-home`.
+
+```html
+Bob lives in a <span class="mdi mdi-home"></span>.
+```
 
 ## Helper Classes
 

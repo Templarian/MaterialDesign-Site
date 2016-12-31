@@ -73,6 +73,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/svg',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started-svg.md'
+    }
+  },
+  {
     path: 'getting-started/webpack',
     component: ViewerComponent,
     data: {
@@ -80,10 +87,10 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'getting-started/web',
+    path: 'getting-started/webfont',
     component: ViewerComponent,
     data: {
-      file: 'content/getting-started-web.md'
+      file: 'content/getting-started-webfont.md'
     }
   },
   { path: '',
