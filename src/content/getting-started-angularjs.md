@@ -14,8 +14,8 @@ Example here for the directive.
 
 The `mdi.svg` contains all the icons provided on the site. Use inline with $mdIconProvider.
 
-```html
-Configureapp.config(function($mdIconProvider) {
+```js
+app.config(function($mdIconProvider) {
   $mdIconProvider
     .defaultIconSet('my/app/mdi.svg')
 });
