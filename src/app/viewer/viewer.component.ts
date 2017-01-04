@@ -22,6 +22,7 @@ export class ViewerComponent  {
   errorMessage: string;
   title: string = 'Loading...';
   pageData: SafeHtml = 'Loading...';
+  file: string = 'error';
 
   constructor (public route: ActivatedRoute,
                private viewerService: ViewerService,
@@ -32,6 +33,7 @@ export class ViewerComponent  {
   loadContent (data) {
     let regex = new RegExp('<h1>(.*)</h1>');
     let title = 'Loading...';
+    this.file = data.file;
     this.viewerService.getMarkdownFileHtml(data.file)
                       .subscribe(markdown => {
                         markdown = this.remarkable.render(markdown);
