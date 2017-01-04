@@ -100,6 +100,13 @@ const appRoutes: Routes = [
       file: 'content/getting-started-webfont.md'
     }
   },
+  {
+    path: 'getting-started/windows',
+    component: ViewerComponent,
+    data: {
+      file: 'content/getting-started-windows.md'
+    }
+  },
   { path: '',
     component: HomeComponent
   },
