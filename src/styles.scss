@@ -93,3 +93,22 @@
         }
     }
 }
+
+.card.resource-blue {
+    background: #2095F2;
+
+    a {
+        color: #FFF;
+        display: block;
+        padding: 4px 8px;
+
+        svg path {
+            fill: #FFF;
+        }
+
+        &:hover {
+            background: darken(#2095F2, 10%);
+            text-decoration: none;
+        }
+    }
+}
