@@ -52,4 +52,4 @@ All naming must be in the exact order below.
 
 ## Notice a Bug?
 
-If you ever notice a bug in a name or think it does not follow these guidelines please open [issue](https://github.com/Templarian/MaterialDesign/issues).
+If you ever notice a bug in a name or think it does not follow these guidelines please open an [issue](https://github.com/Templarian/MaterialDesign/issues).
