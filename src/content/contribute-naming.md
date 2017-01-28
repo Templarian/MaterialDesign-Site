@@ -48,6 +48,7 @@ All naming must be in the exact order below.
 - `plus` is alwayed used to represent adding (do not use `add`).
 - `minus` is always used to represent subtracting.
 - `multiple` should be used on layered icons where there is a singular representation present.
+- `format-*` breaks all the rules. Because.
 
 ## Notice a Bug?
 
