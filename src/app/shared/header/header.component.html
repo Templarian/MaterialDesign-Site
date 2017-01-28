@@ -11,7 +11,7 @@
         <div class="col-md-8">
             <ul class="nav navbar-nav float-xs-right">
                 <li class="nav-item active">
-                    <a class="nav-link" routerLink="/icons" routerLinkActive="active">Icons</a>
+                    <a class="nav-link" routerLink="/icon" routerLinkActive="active">Icons</a>
                 </li>
                 <li ngbDropdown class="nav-item dropdown">
                     <a ngbDropdownToggle href="#" onclick="event.preventDefault()" class="nav-link dropdown-toggle" id="gettingStartedDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Getting Started</a>
@@ -69,7 +69,10 @@
                     <a class="nav-link" routerLink="/resources" routerLinkActive="active">Resources</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/contribute" routerLinkActive="active"><mdi-icon [name]="'github'"></mdi-icon></a>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=templarian&amp;repo=MaterialDesign&amp;type=star&amp;count=true&amp;" frameborder="0" scrolling="0" width="104" height="20" style="float:right;margin:11px 0 0 0"></iframe>
+                </li>
+                <li class="nav-item" style="margin-left:0;">
+                    <a class="nav-link" href="https://github.com/Templarian/MaterialDesign"><mdi-icon [name]="'github'"></mdi-icon></a>
                 </li>
             </ul>
         </div>

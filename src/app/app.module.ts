@@ -107,13 +107,26 @@ const appRoutes: Routes = [
       file: 'content/getting-started-windows.md'
     }
   },
-  { path: '',
+  {
+    path: '',
     component: HomeComponent
   },
-  { path: 'icons',
-    component: IconsComponent
+  {
+    path: 'icon',
+    component: IconsComponent,
+    data: {
+      icons: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
   },
-  { path: 'resources',
+  {
+    path: 'icon/:iconName',
+    component: IconComponent,
+    data: {
+      icons: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
+  },
+  {
+    path: 'resources',
     component: ResourcesComponent
   },
   { path: '**', component: PageNotFoundComponent }
