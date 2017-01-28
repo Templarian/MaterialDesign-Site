@@ -33,6 +33,7 @@ All naming must be in the exact order below.
 -minus
 -remove
 
+-multiple
 -variant
 -off
 -outline
@@ -41,11 +42,12 @@ All naming must be in the exact order below.
 ## Additional Details
 
 - `outline` must only be used on `2dp` lined icons.
-- `variant` is only to be used to reprsent the same icon with the same meaning.
-- `close` is never used to represent a `x` on an icon other than the `close-*`. Use `*-remove` for these instances.
-- `settings` in Material Design is three dots (`...`) not a cog or gear.
+- `variant` is only to be used to represent the same icon with the same meaning.
+- `close` is never to be used to represent a `x` on an icon other than the `close-*`. Use `*-remove` for these instances.
+- `settings` modifier is represented in Material Design as three dots (`...`) not a `cog` or `gear`.
 - `plus` is alwayed used to represent adding (do not use `add`).
 - `minus` is always used to represent subtracting.
+- `multiple` should be used on layered icons where there is a singular representation present.
 
 ## Notice a Bug?
 
