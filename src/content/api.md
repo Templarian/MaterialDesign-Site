@@ -87,18 +87,51 @@ If the array contains more than one item the download will be in an archived `zi
 api/package/{packageId}/{iconId}/download
 ```
 
-```
+
+| Property          | Required | Default        |
+| ------------------|----------|----------------|
+| id                | `true`   |                |
+| type              | `false`  | `"png"`        |
+| path              | `false`  | `[]`           |
+| width             | `false`  | package.width  |
+| height            | `false`  | package.height |
+| padding           | `false`  | `0`            |
+| paddingTop        | `false`  | `0`            |
+| paddingRight      | `false`  | `0`            |
+| paddingBottom     | `false`  | `0`            |
+| paddingLeft       | `false`  | `0`            |
+| foreground        | `false`  | `"#000000"`    |
+| foregroundOpacity | `false`  | `1`            |
+| background        | `false`  | `#FFFFFF`      |
+| backgroundOpacity | `false`  | `0`            |
+| radius            | `false`  | `0`            |
+| borderWidth       | `false`  | `0`            |
+| borderColor       | `false`  | `#000000`      |
+| borderOpacity     | `false`  | `0`            |
+| borderCap         | `false`  | `"round"`      |
+| borderArray       | `false`  | `[1]`          |
+| margin            | `false`  | `0`            |
+| marginTop         | `false`  | `0`            |
+| marginRight       | `false`  | `0`            |
+| marginBottom      | `false`  | `0`            |
+| marginLeft        | `false`  | `0`            |
+| gridColor         | `false`  | `"#F0F0F0"`    |
+| gridOpacity       | `false`  | `1`            |
+| matteColor        | `false`  | `"#FFFFFF"`    |
+| matteOpacity      | `false`  | `1`            |
+
+```json
 [{
-    "id": "",                 // required
-    "type": "png",            // required
-    "path": [],               // default: []
-    "width": 24,              // default: package.width
-    "height": 24,             // default: package.height
-    "padding": 10,            // default: 0
-    "paddingTop": 10,         // default: 0
-    "paddingRight": 10,       // default: 0
-    "paddingBottom": 10,      // default: 0
-    "paddingLeft": 10,        // default: 0
+    "id": "",
+    "type": "png",
+    "path": [],
+    "width": 24,
+    "height": 24,
+    "padding": 10,
+    "paddingTop": 10,
+    "paddingRight": 10,
+    "paddingBottom": 10,
+    "paddingLeft": 10,
     "foreground": "#FFFFFF",
     "foregroundOpacity": 1,
     "background": "#000000",
@@ -106,6 +139,7 @@ api/package/{packageId}/{iconId}/download
     "radius": 10,
     "borderWidth": 1,
     "borderColor": "#990000",
+    "borderOpacity": 1,
     "borderCap": "round",
     "borderArray": [4, 4],
     "margin": 10,
