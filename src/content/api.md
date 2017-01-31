@@ -7,7 +7,7 @@ To help others build out features for the site all the endpoints are described b
 ## Get List of Packages
 
 ```
-api/packages
+GET api/packages
 ```
 
 ```
@@ -19,7 +19,7 @@ api/packages
 ## Get Icon List in Package
 
 ```
-api/package/{packageId}
+GET api/package/{packageId}
 ```
 
 ```json
@@ -42,7 +42,7 @@ api/package/{packageId}
 Icon names are unique across a package.
 
 ```
-api/package/{packageId}/{iconName}
+GET api/package/{packageId}/{iconName}
 ```
 
 ```json
@@ -84,7 +84,7 @@ There is a universal endpoint for downloading icons or collections of icons allo
 If the array contains more than one item the download will be in an archived `zip`.
 
 ```
-api/package/{packageId}/{iconId}/download
+POST api/package/{packageId}/{iconId}/download
 ```
 
 
@@ -157,17 +157,17 @@ api/package/{packageId}/{iconId}/download
 ## Get Contributors
 
 ```
-api/contributors
+GET api/contributors
 ```
 
 ## Get Contributor
 
 ```
-api/contributor/{contributorId}
+GET api/contributor/{contributorId}
 ```
 
 ## Get Contributor Photo
 
 ```
-api/contributor/{contributorId}/photo
+GET api/contributor/{contributorId}/photo
 ```
