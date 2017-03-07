@@ -4,8 +4,8 @@ import { IconService } from '../shared/icon.service';
 
 @Component({
   selector: 'mdi-icons',
-  templateUrl: './icons.component.html',
-  styleUrls: ['./icons.component.scss'],
+  templateUrl: './iconsPage.component.html',
+  styleUrls: ['./iconsPage.component.scss'],
   providers: [
     IconService
   ]
