@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { ViewerService } from './viewer.service';
+import { ViewerService } from './viewerPage.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare var Remarkable: any;
@@ -8,13 +8,13 @@ declare var hljs: any;
 
 @Component({
   selector: 'mdi-viewer',
-  templateUrl: './viewer.component.html',
-  styleUrls: ['./viewer.component.scss'],
+  templateUrl: './viewerPage.component.html',
+  styleUrls: ['./viewerPage.component.scss'],
   providers: [
     ViewerService
   ]
 })
-export class ViewerComponent  {
+export class ViewerPageComponent  {
 
   remarkable = new Remarkable({
     html: true

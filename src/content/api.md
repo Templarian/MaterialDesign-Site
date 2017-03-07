@@ -29,7 +29,9 @@ GET api/package/{packageId}
     "width": 24,
     "height": 24,
     "versions": [
-
+        { "id": "", "minor": 1, "major": 7, "patch": 12 },
+        { "id": "", "minor": 1, "major": 7, "patch": 22 },
+        { "id": "", "minor": 1, "major": 8, "patch": 36 }
     ],
     "icons": [
 
@@ -91,7 +93,7 @@ POST api/package/{packageId}/{iconId}/download
 | Property          | Required | Default        | Values                                |
 | ------------------|----------|----------------|---------------------------------------|
 | id                | `true`   |                |                                       |
-| type              | `false`  | `"png"`        | `"png"`, `"svg"`, `"vector-drawable"` |
+| type              | `false`  | `"png"`        | `"png"`, `"svg"`, `"vector-drawable"`, `"xaml"` |
 | path              | `false`  | `[]`           | `["sub", "main"]`                     |
 | width             | `false`  | package.width  |  |
 | height            | `false`  | package.height |  |
@@ -160,13 +162,29 @@ POST api/package/{packageId}/{iconId}/download
 GET api/contributors
 ```
 
+```json
+[
+    {
+
+    }
+]
+```
+
 ## Get Contributor
 
 ```
 GET api/contributor/{contributorId}
 ```
 
+```json
+{
+
+}
+```
+
 ## Get Contributor Photo
+
+A contributors photo can be retrieved as a `100x100` image.
 
 ```
 GET api/contributor/{contributorId}/photo

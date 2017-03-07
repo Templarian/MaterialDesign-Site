@@ -22,124 +22,138 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BannerComponent } from './shared/banner/banner.component';
 
-import { HomeComponent } from './home/home.component';
-import { IconsComponent } from './icons/icons.component';
-import { ViewerComponent } from './viewer/viewer.component';
-import { ResourcesComponent } from './resources/resources.component';
-import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
+import { HomePageComponent } from './homePage/homePage.component';
+import { IconsPageComponent } from './iconsPage/iconsPage.component';
+import { ViewerPageComponent } from './viewerPage/viewerPage.component';
+import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
+import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 
 const appRoutes: Routes = [
   //{ path: 'icon/:iconName',      component: HeroDetailComponent },
   {
     path: 'getting-started',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started.md'
     }
   },
   {
     path: 'getting-started/android',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-android.md'
     }
   },
   {
     path: 'getting-started/angular',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-angular.md'
     }
   },
   {
     path: 'getting-started/angularjs',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-angularjs.md'
     }
   },
   {
     path: 'getting-started/bootstrap',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-bootstrap.md'
     }
   },
   {
     path: 'getting-started/polymer',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-polymer.md'
     }
   },
   {
     path: 'getting-started/react',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-react.md'
     }
   },
   {
     path: 'getting-started/svg',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-svg.md'
     }
   },
   {
     path: 'getting-started/webpack',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-webpack.md'
     }
   },
   {
     path: 'getting-started/webfont',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-webfont.md'
     }
   },
   {
     path: 'getting-started/windows',
-    component: ViewerComponent,
+    component: ViewerPageComponent,
     data: {
       file: 'content/getting-started-windows.md'
     }
   },
   {
     path: '',
-    component: HomeComponent
+    component: HomePageComponent
   },
   {
-    path: 'icon',
-    component: IconsComponent,
+    path: 'icons',
+    component: IconsPageComponent,
     data: {
-      icons: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
+  },
+  {
+    path: 'icons/light',
+    component: IconsPageComponent,
+    data: {
+      package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
     }
   },
   {
     path: 'icon/:iconName',
     component: IconComponent,
     data: {
-      icons: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
+  },
+  {
+    path: 'icon/:iconName/light',
+    component: IconComponent,
+    data: {
+      package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
     }
   },
   {
     path: 'resources',
-    component: ResourcesComponent
+    component: ResourcesPageComponent
   },
-  { path: '**', component: PageNotFoundComponent }
+  { path: '**', component: NotFoundPageComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    IconsComponent,
-    ViewerComponent,
-    ResourcesComponent,
-    PageNotFoundComponent,
+    HomePageComponent,
+    IconsPageComponent,
+    ViewerPageComponent,
+    ResourcesPageComponent,
+    NotFoundPageComponent,
     IconComponent,
     HeaderComponent,
     FooterComponent,
