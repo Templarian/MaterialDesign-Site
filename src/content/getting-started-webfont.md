@@ -41,6 +41,14 @@ Material Design Icons (MDI) contains many helper classes to quickly modify the l
 <span class="mdi mdi-account mdi-flip-h"></span>
 ```
 
+### Spin (v1.9.32+)
+
+- `mdi-spin` - Spinning icon.
+
+```html
+<span class="mdi mdi-loading mdi-spin">Processing</span>
+```
+
 ### Sets of Icons (v1.6.80+)
 
 ```html
