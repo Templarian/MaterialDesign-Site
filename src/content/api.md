@@ -4,6 +4,8 @@ To help others build out features for the site all the endpoints are described b
 
 > Please do not use these endpoints to scrape the site or to build third party applications. All data is provided from the CDN through the meta.json file.
 
+## Public Endpoints
+
 ## Get List of Packages
 
 ```
@@ -156,7 +158,7 @@ POST api/package/{packageId}/{iconId}/download
 }]
 ```
 
-## Get Contributors
+### Get Contributors
 
 ```
 GET api/contributors
@@ -170,7 +172,7 @@ GET api/contributors
 ]
 ```
 
-## Get Contributor
+### Get Contributor
 
 ```
 GET api/contributor/{contributorId}
@@ -182,10 +184,72 @@ GET api/contributor/{contributorId}
 }
 ```
 
-## Get Contributor Photo
+### Get Contributor Photo
 
 A contributors photo can be retrieved as a `100x100` image.
 
 ```
 GET api/contributor/{contributorId}/photo
 ```
+
+### Get Tags
+
+A list of tags used to group icons in the system. If count is 0 the item will not be returned.
+
+```
+GET api/tag
+```
+
+```json
+[
+    {
+        "id": "{uuid}",
+        "text": "Medical",
+        "count": 42
+    }
+]
+```
+
+### Get Related Icons
+
+```
+GET api/icon/{iconId}/related
+```
+
+## Private Endpoints
+
+While pretty much all data is open to the public most of the management related API's are restricted to collaborator accounts.
+
+### Get Tags
+
+This endpoint returns all tags, even tags with no associated icons.
+
+```
+GET api/admin/tag
+```
+
+```json
+[
+    {
+        "id": "{uuid}",
+        "text": "Medical",
+        "count": 42
+    },
+    ...
+]
+```
+
+### Post Tags
+
+Each tag should be labeled with oppropriate naming. Alpha and spaces only (`/^[a-zA-Z ]{3,}$/`).
+
+```
+POST api/admin/tag
+```
+
+```json
+{
+    "text": "Tag Name"
+}
+```
+

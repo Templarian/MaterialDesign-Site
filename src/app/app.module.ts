@@ -23,6 +23,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BannerComponent } from './shared/banner/banner.component';
 
 import { HomePageComponent } from './homePage/homePage.component';
+import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
@@ -127,14 +128,14 @@ const appRoutes: Routes = [
   },
   {
     path: 'icon/:iconName',
-    component: IconComponent,
+    component: IconPageComponent,
     data: {
       package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
     }
   },
   {
     path: 'icon/:iconName/light',
-    component: IconComponent,
+    component: IconPageComponent,
     data: {
       package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
     }
@@ -150,6 +151,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomePageComponent,
+    IconPageComponent,
     IconsPageComponent,
     ViewerPageComponent,
     ResourcesPageComponent,
