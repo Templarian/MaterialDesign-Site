@@ -2,7 +2,7 @@
 
 To help others build out features for the site all the endpoints are described below.
 
-> Please do not use these endpoints to scrape the site or to build third party applications. All data is provided from the CDN through the meta.json file.
+> Please do not use these endpoints to scrape the site or to build third party applications. All data is provided from the CDN through the meta.json file after every release.
 
 ## Public Endpoints
 
@@ -18,7 +18,7 @@ GET api/packages
 ]
 ```
 
-## Get Icon List in Package
+### Get Icon List in Package
 
 ```
 GET api/package/{packageId}
@@ -31,17 +31,29 @@ GET api/package/{packageId}
     "width": 24,
     "height": 24,
     "versions": [
-        { "id": "", "minor": 1, "major": 7, "patch": 12 },
-        { "id": "", "minor": 1, "major": 7, "patch": 22 },
-        { "id": "", "minor": 1, "major": 8, "patch": 36 }
+        { "id": "", "minor": 1, "major": 7, "patch": 12, "count": 42 },
+        ...
     ],
     "icons": [
-
+        ...
     ]
 }
 ```
 
-## Get Icon from Package by Name
+### Get Package Version List
+
+```
+GET api/package/{packageId}/version
+```
+
+```json
+[
+    { "id": "", "minor": 1, "major": 7, "patch": 22, "count": 42 },
+    ...
+]
+```
+
+### Get Icon from Package by Name
 
 Icon names are unique across a package.
 
