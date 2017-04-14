@@ -27,6 +27,7 @@ import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
+import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 
 const appRoutes: Routes = [
@@ -143,6 +144,10 @@ const appRoutes: Routes = [
   {
     path: 'resources',
     component: ResourcesPageComponent
+  },
+  {
+    path: 'admin',
+    component: AdminLoginPageComponent
   },
   { path: '**', component: NotFoundPageComponent }
 ];
