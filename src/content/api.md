@@ -31,11 +31,10 @@ GET api/package/{packageId}
     "width": 24,
     "height": 24,
     "versions": [
-        { "id": "", "minor": 1, "major": 7, "patch": 12, "count": 42 },
-        ...
+        { "id": "", "minor": 1, "major": 7, "patch": 12, "count": 42 }
     ],
     "icons": [
-        ...
+        
     ]
 }
 ```
@@ -48,8 +47,7 @@ GET api/package/{packageId}/version
 
 ```json
 [
-    { "id": "", "minor": 1, "major": 7, "patch": 22, "count": 42 },
-    ...
+    { "id": "", "minor": 1, "major": 7, "patch": 22, "count": 42 }
 ]
 ```
 

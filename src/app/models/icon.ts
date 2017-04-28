@@ -1,4 +1,4 @@
-class Icon {
+export class Icon {
     public id: string;
     public name: string;
     public description: string;

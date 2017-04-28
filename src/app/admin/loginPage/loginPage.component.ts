@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'mdi-login-page',
+  selector: 'mdi-admin-login-page',
   templateUrl: './loginPage.component.html',
   styleUrls: ['./loginPage.component.scss']
 })
