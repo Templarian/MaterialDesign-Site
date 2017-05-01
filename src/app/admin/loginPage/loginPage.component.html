@@ -1,11 +1,41 @@
-<form name="login">
-    <label>
-        Username
-        <input type="text" />
-    </label>
-    <label>
-        Password
-        <input type="password" />
-    </label>
-    <button>Login</button>
-</form>
+<div class="container-fluid">
+    <div class="row border-top">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2>Contributor Access</h2>
+            <form name="login">
+                <label>
+                    Username
+                    <input type="text"
+                        class="form-control"
+                        [value]="user" />
+                </label>
+                <label>
+                    Password
+                    <input type="password"
+                        class="form-control"
+                        [value]="pass" />
+                </label>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-default" (click)="goBack()">
+                            Go Back
+                        </button>
+                    </div>
+                    <div class="col text-sm-right">
+                        <button class="btn btn-primary" (click)="login()">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="panel">
+                <mdi-icon name="information-outline"></mdi-icon>
+                <p>
+                    Accounts are locked after three failed requests. DM <a href="https://twitter.com/templarian">@Templarian</a> if you get locked out.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

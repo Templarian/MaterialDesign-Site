@@ -160,6 +160,7 @@ const appRoutes: Routes = [
     IconsPageComponent,
     ViewerPageComponent,
     ResourcesPageComponent,
+    AdminLoginPageComponent,
     NotFoundPageComponent,
     IconComponent,
     HeaderComponent,
