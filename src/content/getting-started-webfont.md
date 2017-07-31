@@ -4,7 +4,14 @@ The webfont is a quick way to integrate the icons into your application.
 
 ## Setup
 
-Document CDN/Bower/NPM here.
+```
+npm install mdi
+bower install mdi
+```
+
+```
+https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.css
+```
 
 ## Basic Example
 
