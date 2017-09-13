@@ -89,6 +89,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/vuejs',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-vuejs.md'
+    }
+  },
+  {
     path: 'getting-started/webpack',
     component: ViewerPageComponent,
     data: {
