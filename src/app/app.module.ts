@@ -25,6 +25,8 @@ import { BannerComponent } from './shared/banner/banner.component';
 import { HomePageComponent } from './homePage/homePage.component';
 import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
+import { DownloadPageComponent } from './downloadPage/downloadPage.component';
+import { AdminIconPageComponent } from './admin/iconPage/iconPage.component';
 import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
 import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
@@ -149,12 +151,23 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'download',
+    component: DownloadPageComponent,
+    data: {
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
+  },
+  {
     path: 'resources',
     component: ResourcesPageComponent
   },
   {
     path: 'admin',
     component: AdminLoginPageComponent
+  },
+  {
+    path: 'admin/icons',
+    component: AdminIconPageComponent
   },
   { path: '**', component: NotFoundPageComponent }
 ];
@@ -167,7 +180,9 @@ const appRoutes: Routes = [
     IconsPageComponent,
     ViewerPageComponent,
     ResourcesPageComponent,
+    DownloadPageComponent,
     AdminLoginPageComponent,
+    AdminIconPageComponent,
     NotFoundPageComponent,
     IconComponent,
     HeaderComponent,
