@@ -119,6 +119,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'build/site',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/build.md'
+    }
+  },
+  {
     path: '',
     component: HomePageComponent
   },
