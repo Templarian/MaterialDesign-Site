@@ -79,6 +79,17 @@
                 content: 'JavaScript';
             }
 
+            &.language-text {
+                display: block;
+                overflow-x: auto;
+                padding: .5em;
+                background: #f0f0f0;
+            }
+
+            &.language-text::before {
+                content: 'Text';
+            }
+
             &.hljs::before {
                 font-size: 12px;
                 border-radius: 0 4px 0 4px;
