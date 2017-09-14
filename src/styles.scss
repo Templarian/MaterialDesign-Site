@@ -90,6 +90,7 @@
                 content: 'Text';
             }
 
+            &.language-text::before,
             &.hljs::before {
                 font-size: 12px;
                 border-radius: 0 4px 0 4px;
