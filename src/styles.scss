@@ -79,6 +79,14 @@
                 content: 'JavaScript';
             }
 
+            &.language-xml::before {
+                content: 'XML';
+            }
+
+            &.language-css::before {
+                content: 'CSS';
+            }
+
             &.language-text {
                 display: block;
                 overflow-x: auto;
