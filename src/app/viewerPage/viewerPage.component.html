@@ -1,7 +1,7 @@
 <mdi-banner [title]="title"></mdi-banner>
 <div class="viewer">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8" style="margin-top: -24px;">
             <div class="edit-on-github">
                 <a [href]="'https://github.com/Templarian/MaterialDesign-Site/tree/master/src/' + file">Edit on GitHub</a>
             </div>
@@ -61,7 +61,16 @@
             </a>
             <div class="more">
                 <p>Please help us improve the documentation by editing on GitHub.</p>
-                <button class="btn">Add Document</button>
+                <div class="btn-group d-flex">
+                    <button class="btn btn-secondary w-100">
+                        <mdi-icon [name]="'github'"></mdi-icon>
+                        View Docs
+                    </button>
+                    <button class="btn btn-secondary w-100">
+                        <mdi-icon [name]="'github'"></mdi-icon>
+                        Add Document
+                    </button>
+                </div>
             </div>
         </div>
     </div>

@@ -1,5 +1,9 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+body {
+    background: #414F56;
+}
+
 .dropdown-item.active {
     svg path {
         fill: #FFF;
@@ -16,6 +20,7 @@
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
         border-radius: 4px 0 4px 4px;
         padding: 20px;
+        background: #FFF;
     }
 
     .sidebar {

@@ -33,3 +33,44 @@
         }
     }
 }
+:host {
+    .more {
+        padding: .75rem 1.5rem;
+        p {
+            color: #FFF;
+        }
+    }
+
+    .btn {
+        svg {
+            vertical-align: middle;
+        }
+    }
+
+    a {
+        color: #FFF;
+
+        /deep/ {
+
+            svg path {
+                fill: #FFF;
+            }
+
+        }
+
+        &:hover {
+            /deep/ {
+                color: #222;
+
+                svg path {
+                    fill: #222;
+                }
+            }
+        }
+
+        small {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+    }
+}
