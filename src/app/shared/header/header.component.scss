@@ -11,6 +11,12 @@
         .btn-link {
             color: #FFF;
             cursor: pointer;
+            outline: none;
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
     .nav-item {
@@ -24,6 +30,16 @@
 
             path {
                 fill: #FFF;
+            }
+        }
+    }
+
+    .getting-started {
+        /deep/ {
+            svg {
+                vertical-align: bottom;
+                margin-bottom: -2px;
+                margin-left: -4px;
             }
         }
     }
