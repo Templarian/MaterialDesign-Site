@@ -12,65 +12,15 @@
         <li class="nav-item active">
             <a class="nav-link" routerLink="/icons" routerLinkActive="active">Icons</a>
         </li>
-        <li ngbDropdown class="nav-item dropdown">
-            <a ngbDropdownToggle href="#" onclick="event.preventDefault()" class="nav-link dropdown-toggle" id="gettingStartedDropdown"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Getting Started</a>
-            <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="gettingStartedDropdown">
-                <a class="dropdown-item" routerLink="/getting-started/android" routerLinkActive="active">
-                    <mdi-icon [name]="'android'"></mdi-icon>
-                    Android
-                    <small>Vector Drawables</small>
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/angular" routerLinkActive="active">
-                    <mdi-icon [name]="'angular'"></mdi-icon>
-                    Angular
-                    <small>Webfont / Component</small>
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/angularjs" routerLinkActive="active">
-                    <mdi-icon [name]="'angularjs'"></mdi-icon>
-                    AngularJS
-                    <small>1.x Support</small>
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/bootstrap" routerLinkActive="active">
-                    <mdi-icon [name]="'bootstrap'"></mdi-icon>
-                    Bootstrap
-                    <small>Webfont / Shim CSS</small>
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/polymer" routerLinkActive="active">
-                    <mdi-icon [name]="'polymer'"></mdi-icon>
-                    Polymer
-                    <small>v0.5 / v1.0 Supported</small>
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/react" routerLinkActive="active">
-                    <mdi-icon [name]="'react'"></mdi-icon>
-                    React
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/svg" routerLinkActive="active">
-                    <mdi-icon [name]="'svg'"></mdi-icon>
-                    SVG
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/webpack" routerLinkActive="active">
-                    <mdi-icon [name]="'webpack'"></mdi-icon>
-                    Webpack
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/webfont" routerLinkActive="active">
-                    <mdi-icon [name]="'html'"></mdi-icon>
-                    Webfont
-                    <small>Helper Classes</small>
-                </a>
-                <a class="dropdown-item" routerLink="/getting-started/windows" routerLinkActive="active">
-                    <mdi-icon [name]="'windows'"></mdi-icon>
-                    Windows
-                    <small>UWP / WPF</small>
-                </a>
-            </div>
+        <li class="nav-item dropdown">
+            <button href="#" (click)="isNav = !isNav" class="btn-link">Getting Started</button>
         </li>
         <li class="nav-item">
             <a class="nav-link" routerLink="/resources" routerLinkActive="active">Resources</a>
         </li>
-        <!--<li class="nav-item">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=templarian&amp;repo=MaterialDesign&amp;type=star&amp;count=true&amp;" frameborder="0" scrolling="0" width="104" height="20" style="float:right;margin:11px 0 0 0"></iframe>
-                </li>-->
+        <li class="nav-item">
+            <iframe src="https://ghbtns.com/github-btn.html?user=templarian&amp;repo=MaterialDesign&amp;type=star&amp;count=true&amp;" frameborder="0" scrolling="0" width="104" height="20" style="float:right;margin:11px 0 0 0"></iframe>
+        </li>
         <li class="nav-item" style="margin-left:0;">
             <a class="nav-link" href="https://github.com/Templarian/MaterialDesign">
                 <mdi-icon [name]="'github'"></mdi-icon>
@@ -78,3 +28,64 @@
         </li>
     </ul>
 </nav>
+<div class="menu" [ngbCollapse]="isNav">
+    <div>Getting Started</div>
+    <a routerLink="/getting-started/android" routerLinkActive="active">
+        <mdi-icon [name]="'android'"></mdi-icon>
+        Android
+        <small>Vector Drawables</small>
+    </a>
+    <a class="item" routerLink="/getting-started/angular" routerLinkActive="active">
+        <mdi-icon [name]="'angular'"></mdi-icon>
+        Angular
+        <small>Webfont / Component</small>
+    </a>
+    <a class="item" routerLink="/getting-started/angularjs" routerLinkActive="active">
+        <mdi-icon [name]="'angularjs'"></mdi-icon>
+        AngularJS
+        <small>1.x Support</small>
+    </a>
+    <a class="item" routerLink="/getting-started/bootstrap" routerLinkActive="active">
+        <mdi-icon [name]="'bootstrap'"></mdi-icon>
+        Bootstrap
+        <small>Webfont / Shim CSS</small>
+    </a>
+    <a class="item" routerLink="/getting-started/polymer" routerLinkActive="active">
+        <mdi-icon [name]="'polymer'"></mdi-icon>
+        Polymer
+        <small>v0.5 / v1.0 Supported</small>
+    </a>
+    <a class="item" routerLink="/getting-started/react" routerLinkActive="active">
+        <mdi-icon [name]="'react'"></mdi-icon>
+        React
+    </a>
+    <a class="item" routerLink="/getting-started/svg" routerLinkActive="active">
+        <mdi-icon [name]="'svg'"></mdi-icon>
+        SVG
+    </a>
+    <a class="item" routerLink="/getting-started/webpack" routerLinkActive="active">
+        <mdi-icon [name]="'webpack'"></mdi-icon>
+        Webpack
+    </a>
+    <a class="item" routerLink="/getting-started/webfont" routerLinkActive="active">
+        <mdi-icon [name]="'html'"></mdi-icon>
+        Webfont
+        <small>Helper Classes</small>
+    </a>
+    <a class="item" routerLink="/getting-started/windows" routerLinkActive="active">
+        <mdi-icon [name]="'windows'"></mdi-icon>
+        Windows
+        <small>UWP / WPF</small>
+    </a>
+    <div style="">Guides</div>
+    <a routerLink="/getting-started/android" routerLinkActive="active">
+        <mdi-icon [name]="'android'"></mdi-icon>
+        Contributing
+        <small>How to Help</small>
+    </a>
+    <a routerLink="/getting-started/android" routerLinkActive="active">
+        <mdi-icon [name]="'android'"></mdi-icon>
+        Icon Naming
+        <small>Naming Convention</small>
+    </a>
+</div>

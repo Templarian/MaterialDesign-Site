@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'header[mdi-header]',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent  {
-  name = 'Material Design Icons';
+  public name = 'Material Design Icons';
+  public isNav = true;
+
+  constructor(private router: Router) {
+    router.events.subscribe((val) => {
+        console.log(val instanceof NavigationEnd);
+        this.isNav = true;
+    });
+  }
 }

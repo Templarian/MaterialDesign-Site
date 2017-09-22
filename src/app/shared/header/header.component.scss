@@ -6,18 +6,25 @@
 
     .nav {
         display: inline-block;
+
+        .nav-link,
+        .btn-link {
+            color: #FFF;
+            cursor: pointer;
+        }
     }
     .nav-item {
         display: inline-block;
     }
+    nav /deep/ {
+        svg {
+            width: 24px;
+            height: 24px;
+            vertical-align: text-bottom;
 
-    svg {
-        width: 24px;
-        height: 24px;
-        vertical-align: text-bottom;
-
-        path {
-            fill: #FFF;
+            path {
+                fill: #FFF;
+            }
         }
     }
 
@@ -33,5 +40,10 @@
         &:last-child {
             border-bottom: 0;
         }
+    }
+
+    .menu {
+        background: #FFF;
+        padding: 10px 15px;
     }
 }

@@ -39,11 +39,13 @@
         p {
             color: #FFF;
         }
-    }
-
-    .btn {
-        svg {
-            vertical-align: middle;
+        /deep/ {
+            svg {
+                vertical-align: middle;
+                    path {
+                    fill: #FFF;
+                }
+            }
         }
     }
 
@@ -51,20 +53,29 @@
         color: #FFF;
 
         /deep/ {
-
-            svg path {
-                fill: #FFF;
+            svg {
+                vertical-align: middle;
+                path {
+                    fill: #FFF;
+                }
             }
-
         }
 
-        &:hover {
-            /deep/ {
-                color: #222;
+        &.list-group-item {
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            padding-top: 6px;
+            padding-bottom: 6px;
 
-                svg path {
-                    fill: #222;
-                }
+            &:hover {
+                color: #FFF;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            &.active {
+                background: rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }
         }
 
