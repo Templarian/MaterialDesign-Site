@@ -14,7 +14,7 @@ export class ViewerService {
   }
 
   private extractData(res: Response) {
-    return res.text().replace('{{version}}', '1.7.22');
+    return res.text().replace('{{version}}', '2.0.46');
   }
 
   private handleError (error: Response | any) {
