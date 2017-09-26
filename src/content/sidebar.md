@@ -20,7 +20,7 @@
   - svg SVG /getting-started/svg
   - vuejs Vue.JS /getting-started/vuejs
   - webpack Webpack /getting-started/webpack
-  - html5 Webfont _Helper Classes_ /getting-started/webfont
+  - html Webfont _Helper Classes_ /getting-started/webfont
   - windows Windows _UWP / WPF_ /getting-started/windows
 - /contribute
 - /contribute/icon-naming
