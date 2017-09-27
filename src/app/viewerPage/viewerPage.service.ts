@@ -55,7 +55,7 @@ export class ViewerService {
           clearNext = false;
         }
         baseUrls.push(m[1]);
-      } else if (m = line.match(/^  - ([^ ]+) (.+?)( _([^_]+)_)? \/([a-z-\/]+)$/)) {
+      } else if (m = line.match(/^  - ([^ ]+) (.+?)( _([^_]+)_)? \/([\w-\/]+)$/)) {
         baseUrls.forEach(function (baseUrl) {
           self.getSidebarByUrl(baseUrl).items.push(new SidebarItem(
             m[1],
@@ -66,10 +66,19 @@ export class ViewerService {
           ));
         });
         clearNext = true;
-      } else if (m = line.match(/^    -/)) {
-
+      } else if (m = line.match(/^    - ([^ ]+) (.+?)( _([^_]+)_)? \/([\w-\/]+)$/)) {
+        baseUrls.forEach(function (baseUrl) {
+          let items = self.getSidebarByUrl(baseUrl).items;
+          items[items.length - 1].subItems.push(new SidebarItem(
+            m[1],
+            m[2],
+            m[4],
+            m[5],
+            []
+          ));
+        });
       } else {
-        throw 'Invalid line item.';
+        throw 'Invalid line item in sidebar.md... "' + line + '"';
       }
     });
     return this.sidebars;

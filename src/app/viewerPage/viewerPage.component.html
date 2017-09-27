@@ -9,14 +9,24 @@
         </div>
         <div class="col-md-4 sidebar hidden-sm-down">
             <div class="list-group">
-                <a *ngFor="let item of sidebar.items"
-                    class="list-group-item"
-                    routerLink="/{{item.url}}"
-                    routerLinkActive="active">
-                    <mdi-icon [name]="item.icon"></mdi-icon>
-                    {{item.text}}
-                    <small [textContent]="item.subText">Vector Drawables</small>
-                </a>
+                <ng-container *ngFor="let item of sidebar.items">
+                    <a class="list-group-item"
+                        routerLink="/{{item.url}}"
+                        routerLinkActive="active">
+                        <mdi-icon [name]="item.icon"></mdi-icon>
+                        {{item.text}}
+                        <small [textContent]="item.subText">Vector Drawables</small>
+                    </a>
+                    <a *ngFor="let subItem of item.subItems"
+                        style="padding-left: 46px;"
+                        class="list-group-item"
+                        routerLink="/{{subItem.url}}"
+                        routerLinkActive="active">
+                        <mdi-icon [name]="subItem.icon"></mdi-icon>
+                        {{subItem.text}}
+                        <small [textContent]="subItem.subText">Vector Drawables</small>
+                    </a>
+                </ng-container>
             </div>
             <div class="more">
                 <p>Please help us improve the documentation by editing on GitHub.</p>
