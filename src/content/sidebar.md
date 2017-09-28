@@ -25,8 +25,8 @@
 - /contribute
 - /contribute/icon-naming
 - /contribute/site
-- /contribute/api
-  - account Contribute /contribute
-  - account Icon Naming /contribute/icon-naming
-  - account Site /contribute/site
-    - account API /contribute/api
+- /contribute/site/api
+  - account-comment Contribute /contribute
+  - textbox Icon Naming /contribute/icon-naming
+  - web Site /contribute/site
+    - file-tree API /contribute/site/api

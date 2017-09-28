@@ -12,6 +12,7 @@
                 <ng-container *ngFor="let item of sidebar.items">
                     <a class="list-group-item"
                         routerLink="/{{item.url}}"
+                        [routerLinkActiveOptions]="{ exact: true }"
                         routerLinkActive="active">
                         <mdi-icon [name]="item.icon"></mdi-icon>
                         {{item.text}}
@@ -21,6 +22,7 @@
                         style="padding-left: 46px;"
                         class="list-group-item"
                         routerLink="/{{subItem.url}}"
+                        [routerLinkActiveOptions]="{ exact: true }"
                         routerLinkActive="active">
                         <mdi-icon [name]="subItem.icon"></mdi-icon>
                         {{subItem.text}}

@@ -119,6 +119,34 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'contribute',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/contribute.md'
+    }
+  },
+  {
+    path: 'contribute/icon-naming',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/contribute-naming.md'
+    }
+  },
+  {
+    path: 'contribute/site',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/contribute-site.md'
+    }
+  },
+  {
+    path: 'contribute/site/api',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/api.md'
+    }
+  },
+  {
     path: 'build/site',
     component: ViewerPageComponent,
     data: {

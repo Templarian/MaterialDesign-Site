@@ -1,6 +1,6 @@
 # Contribute
 
-Material Design Icons only because of the team of designers and issue maintainers.
+Material Design Icons is only around because of the team of contributors.
 
 ## Ways to Help
 

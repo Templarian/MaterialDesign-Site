@@ -1,6 +1,6 @@
-# File Naming
+# Icon Naming
 
-MDI has strong guidelines setup to ensure naming of every icon is as consistent and expandable as possible.
+MDI has strong guidelines setup to ensure naming of every icon is as _consistent_ and expandable as possible.
 
 ## Base Names
 

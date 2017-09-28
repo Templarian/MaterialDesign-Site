@@ -12,7 +12,7 @@ export class HeaderComponent  {
 
   constructor(private router: Router) {
     router.events.subscribe((val) => {
-        console.log(val instanceof NavigationEnd);
+        //console.log(val instanceof NavigationEnd);
         this.isNav = true;
     });
   }
