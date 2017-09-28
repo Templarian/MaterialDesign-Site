@@ -8,11 +8,11 @@ To help others build out features for the site all the endpoints are described b
 
 ## Get List of Packages
 
-```
+```text
 GET api/packages
 ```
 
-```
+```text
 [
     // Reference api/package/{packageId}
 ]
@@ -20,7 +20,7 @@ GET api/packages
 
 ### Get Icon List in Package
 
-```
+```text
 GET api/package/{packageId}
 ```
 
@@ -41,7 +41,7 @@ GET api/package/{packageId}
 
 ### Get Package Version List
 
-```
+```text
 GET api/package/{packageId}/version
 ```
 
@@ -55,7 +55,7 @@ GET api/package/{packageId}/version
 
 Icon names are unique across a package.
 
-```
+```text
 GET api/package/{packageId}/{iconName}
 ```
 
@@ -97,7 +97,7 @@ There is a universal endpoint for downloading icons or collections of icons allo
 
 If the array contains more than one item the download will be in an archived `zip`.
 
-```
+```text
 POST api/package/{packageId}/{iconId}/download
 ```
 
@@ -170,7 +170,7 @@ POST api/package/{packageId}/{iconId}/download
 
 ### Get Contributors
 
-```
+```text
 GET api/contributors
 ```
 
@@ -184,7 +184,7 @@ GET api/contributors
 
 ### Get Contributor
 
-```
+```text
 GET api/contributor/{contributorId}
 ```
 
@@ -198,7 +198,7 @@ GET api/contributor/{contributorId}
 
 A contributors photo can be retrieved as a `100x100` image.
 
-```
+```text
 GET api/contributor/{contributorId}/photo
 ```
 
@@ -206,7 +206,7 @@ GET api/contributor/{contributorId}/photo
 
 A list of tags used to group icons in the system. If count is 0 the item will not be returned.
 
-```
+```text
 GET api/tag
 ```
 
@@ -222,7 +222,7 @@ GET api/tag
 
 ### Get Related Icons
 
-```
+```text
 GET api/icon/{iconId}/related
 ```
 
@@ -234,7 +234,7 @@ While pretty much all data is open to the public most of the management related 
 
 This endpoint returns all tags, even tags with no associated icons.
 
-```
+```text
 GET api/admin/tag
 ```
 
@@ -253,7 +253,7 @@ GET api/admin/tag
 
 Each tag should be labeled with oppropriate naming. Alpha and spaces only (`/^[a-zA-Z ]{3,}$/`).
 
-```
+```text
 POST api/admin/tag
 ```
 
