@@ -147,6 +147,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'code-of-conduct',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/code-of-conduct.md'
+    }
+  },
+  {
     path: 'build/site',
     component: ViewerPageComponent,
     data: {

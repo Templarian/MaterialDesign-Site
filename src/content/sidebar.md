@@ -26,7 +26,9 @@
 - /contribute/icon-naming
 - /contribute/site
 - /contribute/site/api
+- /code-of-conduct
   - account-comment Contribute /contribute
   - textbox Icon Naming /contribute/icon-naming
   - web Site /contribute/site
     - file-tree API /contribute/site/api
+  - scale-balance Code of Conduct /code-of-conduct
