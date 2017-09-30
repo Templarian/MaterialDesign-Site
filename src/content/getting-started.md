@@ -36,22 +36,19 @@
 	<h1>Using SVGs</h1>
 	<p>All of our icons are available as an SVG.</p>
 	<!-- TODO : Explain how to download them -->
-
 	<h2>As an Image File</h2>
 	<p>SVGs can be downloaded individually and included the same way as any bitmap image:</p>
 	<pre><code>&lt;img src="/path/to/icons/example-icon.svg" alt="An example icon" style="width:24px;height:24px" /&gt;</code></pre>
-
 	<h2>Inline SVG</h2>
 	<p>SVG's can be used inline in the HTML.</p>
 	<pre><code>&lt;svg style="width:24px;height:24px" viewbox="0 0 24 24"&gt;
-		&lt;path fill="#000000" d="M ... Z" /&gt; <!-- account -->
-	&lt;/svg&gt;</code></pre>
-
+  &lt;path fill="#000000" d="M ... Z" /&gt; <!-- account -->
+&lt;/svg&gt;</code></pre>
 	<p>Inline SVGs can also be overlayed by adding additional paths.</p>
 	<pre><code>&lt;svg style="width:24px;height:24px" viewbox="0 0 24 24"&gt;
-		&lt;path fill="#000000" d="M ... Z" /&gt; <!-- account -->
-		&lt;path fill="#990000" d="M ... Z" /&gt; <!-- block-helper -->
-	&lt;/svg&gt;</code></pre>
+  &lt;path fill="#000000" d="M ... Z" /&gt; <!-- account -->
+  &lt;path fill="#990000" d="M ... Z" /&gt; <!-- block-helper -->
+&lt;/svg&gt;</code></pre>
 </section>
 
 <section>
