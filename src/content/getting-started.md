@@ -28,30 +28,30 @@
 			<pre><code>npm install mdi</code></pre>
 		</div>
 	</div>
-	<a href="webfont" class="button">Learn More</a>
+	<a href="#" class="button">Learn More</a>
 </section>
 
 <section>
 	<a name="svg"></a>
 	<h1>Using SVGs</h1>
 	<p>All of our icons are available as an SVG.</p>
-  <!-- TODO : Explain how to download them -->
+	<!-- TODO : Explain how to download them -->
 
-  <h2>As an Image File</h2>
+	<h2>As an Image File</h2>
 	<p>SVGs can be downloaded individually and included the same way as any bitmap image:</p>
-	<pre><code><img src="/path/to/icons/example-icon.svg" alt="An example icon" style="width:24px;height:24px" /></code></pre>
+	<pre><code>&lt;img src="/path/to/icons/example-icon.svg" alt="An example icon" style="width:24px;height:24px" /&gt;</code></pre>
 
 	<h2>Inline SVG</h2>
 	<p>SVG's can be used inline in the HTML.</p>
-	<pre><code><svg style="width:24px;height:24px" viewbox="0 0 24 24">
-		<path fill="#000000" d="M ... Z" /> <!-- account -->
-	</svg></code></pre>
+	<pre><code>&lt;svg style="width:24px;height:24px" viewbox="0 0 24 24"&gt;
+		&lt;path fill="#000000" d="M ... Z" /&gt; <!-- account -->
+	&lt;/svg&gt;</code></pre>
 
 	<p>Inline SVGs can also be overlayed by adding additional paths.</p>
-	<pre><code><svg style="width:24px;height:24px" viewbox="0 0 24 24">
-		<path fill="#000000" d="M ... Z" /> <!-- account -->
-		<path fill="#990000" d="M ... Z" /> <!-- block-helper -->
-	</svg></code></pre>
+	<pre><code>&lt;svg style="width:24px;height:24px" viewbox="0 0 24 24"&gt;
+		&lt;path fill="#000000" d="M ... Z" /&gt; <!-- account -->
+		&lt;path fill="#990000" d="M ... Z" /&gt; <!-- block-helper -->
+	&lt;/svg&gt;</code></pre>
 </section>
 
 <section>
@@ -61,40 +61,3 @@
 		<!-- TODO : Add cards to link to framework documentation -->
 	</div>
 </section>
-
-
-## Android
-
-Text.
-
-## Angular
-
-Text.
-
-## AngularJS
-
-Text.
-
-## Bootstrap
-
-Text.
-
-## Polymer
-
-Text.
-
-## React
-
-Text.
-
-## SVG
-
-Text
-
-## Webfont
-
-Text
-
-## Webpack
-
-Text
