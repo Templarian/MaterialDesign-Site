@@ -1,3 +1,4 @@
+- /getting-started
 - /getting-started/android
 - /getting-started/angular
 - /getting-started/angularjs
@@ -10,6 +11,7 @@
 - /getting-started/webpack
 - /getting-started/webfont
 - /getting-started/windows
+  - none Getting Started /getting-started
   - android Android _Vector Drawables_ /getting-started/android
   - angular Angular _Webfont / Component_ /getting-started/angular
   - angularjs AngularJS _1.x Support_ /getting-started/angularjs

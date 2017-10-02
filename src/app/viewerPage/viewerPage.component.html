@@ -14,7 +14,7 @@
                         routerLink="/{{item.url}}"
                         [fragment]="item.hash"
                         [ngClass]="{ 'active': isActive(item) }">
-                        <mdi-icon [name]="item.icon"></mdi-icon>
+                        <mdi-icon *ngIf="item.icon != 'none'" [name]="item.icon"></mdi-icon>
                         {{item.text}}
                         <small [textContent]="item.subText"></small>
                     </a>

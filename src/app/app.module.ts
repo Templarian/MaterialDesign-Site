@@ -33,7 +33,6 @@ import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 
 const appRoutes: Routes = [
-  //{ path: 'icon/:iconName',      component: HeroDetailComponent },
   {
     path: 'getting-started',
     component: ViewerPageComponent,
