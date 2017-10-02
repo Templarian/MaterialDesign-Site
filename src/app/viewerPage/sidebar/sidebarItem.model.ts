@@ -3,6 +3,7 @@ export class SidebarItem {
                public text: string,
                public subText: string | null,
                public url: string,
+               public hash: string,
                public subItems: SidebarItem[]) {
       
   }

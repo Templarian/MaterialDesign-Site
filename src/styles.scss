@@ -118,6 +118,28 @@ body {
             }
         }
     }
+
+    table {
+        border: 1px solid #DDD;
+        width: 100%;
+        margin-bottom: 10px;
+
+        th {
+            background: #F1F1F1;
+            padding: 2px 4px;
+        }
+
+        td {
+            padding: 2px 4px;
+            &:not(:last-child) {
+                border-right: 1px solid #DDD;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid #DDD;
+        }
+    }
 }
 
 .card.resource-blue {

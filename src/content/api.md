@@ -6,7 +6,13 @@ To help others build out features for the site all the endpoints are described b
 
 ## Public Endpoints
 
-## Get List of Packages
+Public endpoints are visible to everyone using the website.
+
+- No Authentication
+- Cached results (up to 5 minutes)
+- Objects may not contain all properties (ex: user objects)
+
+### Get List of Packages
 
 ```text
 GET api/packages
@@ -39,7 +45,7 @@ GET api/package/{packageId}
 }
 ```
 
-### Get Package Version List
+#### Get Package Version List
 
 ```text
 GET api/package/{packageId}/version
@@ -51,7 +57,7 @@ GET api/package/{packageId}/version
 ]
 ```
 
-### Get Icon from Package by Name
+#### Get Icon from Package by Name
 
 Icon names are unique across a package.
 
@@ -91,7 +97,7 @@ GET api/package/{packageId}/{iconName}
 }
 ```
 
-## Download Icon
+### Download Icon
 
 There is a universal endpoint for downloading icons or collections of icons allowing for various types `png` (default), `svg`, or `vector-drawable`.
 

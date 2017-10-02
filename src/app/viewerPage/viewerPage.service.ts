@@ -55,18 +55,19 @@ export class ViewerService {
           clearNext = false;
         }
         baseUrls.push(m[1]);
-      } else if (m = line.match(/^  - ([^ ]+) (.+?)( _([^_]+)_)? \/([\w-\/]+)$/)) {
+      } else if (m = line.match(/^  - ([^ ]+) (.+?)( _([^_]+)_)? \/([\w-\/]+)#?([\w-]+)?$/)) {
         baseUrls.forEach(function (baseUrl) {
           self.getSidebarByUrl(baseUrl).items.push(new SidebarItem(
             m[1],
             m[2],
             m[4],
             m[5],
+            m[6] || null,
             []
           ));
         });
         clearNext = true;
-      } else if (m = line.match(/^    - ([^ ]+) (.+?)( _([^_]+)_)? \/([\w-\/]+)$/)) {
+      } else if (m = line.match(/^    - ([^ ]+) (.+?)( _([^_]+)_)? \/([\w-\/]+)#?([\w-]+)?$/)) {
         baseUrls.forEach(function (baseUrl) {
           let items = self.getSidebarByUrl(baseUrl).items;
           items[items.length - 1].subItems.push(new SidebarItem(
@@ -74,6 +75,7 @@ export class ViewerService {
             m[2],
             m[4],
             m[5],
+            m[6] || null,
             []
           ));
         });

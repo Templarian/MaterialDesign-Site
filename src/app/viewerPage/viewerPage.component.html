@@ -12,21 +12,21 @@
                 <ng-container *ngFor="let item of sidebar.items">
                     <a class="list-group-item"
                         routerLink="/{{item.url}}"
-                        [routerLinkActiveOptions]="{ exact: true }"
-                        routerLinkActive="active">
+                        [fragment]="item.hash"
+                        [ngClass]="{ 'active': isActive(item) }">
                         <mdi-icon [name]="item.icon"></mdi-icon>
                         {{item.text}}
-                        <small [textContent]="item.subText">Vector Drawables</small>
+                        <small [textContent]="item.subText"></small>
                     </a>
                     <a *ngFor="let subItem of item.subItems"
                         style="padding-left: 46px;"
                         class="list-group-item"
                         routerLink="/{{subItem.url}}"
-                        [routerLinkActiveOptions]="{ exact: true }"
-                        routerLinkActive="active">
+                        [fragment]="subItem.hash"
+                        [ngClass]="{ 'active': isActive(subItem) }">
                         <mdi-icon [name]="subItem.icon"></mdi-icon>
                         {{subItem.text}}
-                        <small [textContent]="subItem.subText">Vector Drawables</small>
+                        <small [textContent]="subItem.subText"></small>
                     </a>
                 </ng-container>
             </div>

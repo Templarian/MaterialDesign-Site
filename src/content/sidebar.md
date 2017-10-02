@@ -30,5 +30,6 @@
   - account-comment Contribute /contribute
   - textbox Icon Naming /contribute/icon-naming
   - web Site /contribute/site
-    - file-tree API /contribute/site/api
+  - file-tree API /contribute/site/api
+    - eye Get List of Packages /contribute/site/api#get-list-of-packages
   - scale-balance Code of Conduct /code-of-conduct
