@@ -1,3 +1,9 @@
 :host {
     padding: 10px 15px;
+    a {
+        color: #FFF;
+        svg path {
+            fill: #FFF;
+        }
+    }
 }
