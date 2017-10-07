@@ -12,7 +12,7 @@
         <li class="nav-item active">
             <a class="nav-link" routerLink="/icons" routerLinkActive="active">Icons</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" [ngClass]="{ 'nav-opened': !isNav }">
             <button class="btn-link getting-started" (click)="isNav = !isNav">
                 Documentation
                 <mdi-icon [name]="'chevron-up'" *ngIf="!isNav"></mdi-icon>

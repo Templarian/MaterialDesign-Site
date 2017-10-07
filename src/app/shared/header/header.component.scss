@@ -1,5 +1,26 @@
 :host {
 
+    .nav-item.dropdown button {
+        padding: 4px 8px 14px 8px;
+        margin: -8px -4px;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .nav-opened {
+        button {
+            background: #FFF;
+            color: #222 !important;
+            z-index: 2;
+            position: relative;
+            
+            /deep/ {
+                svg path {
+                    fill: #222;
+                }
+            }
+        }
+    }
+
     span {
         color: #FFF;
     }
@@ -61,6 +82,10 @@
     .menu {
         background: #FFF;
         padding: 10px 15px;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
         a {
             color: #222;
