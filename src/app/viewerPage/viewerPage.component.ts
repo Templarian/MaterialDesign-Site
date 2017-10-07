@@ -80,7 +80,7 @@ export class ViewerPageComponent  {
                         let icons: string[] = [];
                         markdown = markdown.replace(/mdi:([a-z-]+)/g, (m, icon) => {
                           icons.push(icon);
-                          return `<svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg>`;
+                          return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
                         });
                         this.title = title;
                         this.pageData = this.sanitizer.bypassSecurityTrustHtml(markdown);
@@ -94,16 +94,20 @@ export class ViewerPageComponent  {
                                         .subscribe(iconList => {
                                           icons.forEach(icon => {
                                             var ic = iconList.filter(x => x.name == icon);
-                                            let data = 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z';
+                                            let meta = {
+                                              data: 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z',
+                                              name: 'Could not find "' + icon + '"'
+                                            };
                                             if (ic.length > 0) {
-                                              data = ic[0].data;
+                                              meta = ic[0];
                                             }
                                             var svgs = document.querySelectorAll('svg[data-icon="mdi:' + icon + '"]');
                                             for (let i = 0; i < svgs.length; i++) {
                                               let svg = svgs[i];
                                               (<Element>svgs[i]).setAttribute('class', 'icon');
+                                              (<Element>svgs[i]).setAttribute('title', meta.name);
                                               let path = svgs[i].firstChild;
-                                              (<Element>path).setAttribute('d', data);
+                                              (<Element>path).setAttribute('d', meta.data);
                                             }
                                           });
                                         });
