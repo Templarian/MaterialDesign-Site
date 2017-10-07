@@ -91,9 +91,16 @@
             color: #222;
             display: inline-block;
             vertical-align: top;
-            margin-right: 1.5em;
-            margin-bottom: 1em;
-            width: 150px;
+            margin-right: 0.5em;
+            margin-bottom: 0.5em;
+            width: 12em;
+            padding: 0.5em 0.75em;
+            border-radius: 4px;
+
+            &:hover {
+                background: #f1F1F1;
+                text-decoration: none;
+            }
 
             /deep/ {
                 svg {
