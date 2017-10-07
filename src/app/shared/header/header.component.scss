@@ -12,7 +12,7 @@
             color: #222 !important;
             z-index: 2;
             position: relative;
-            
+
             /deep/ {
                 svg path {
                     fill: #222;
@@ -91,6 +91,10 @@
             color: #222;
             display: inline-block;
             vertical-align: top;
+            margin-right: 1.5em;
+            margin-bottom: 1em;
+            width: 150px;
+
             /deep/ {
                 svg {
                     float: left;
