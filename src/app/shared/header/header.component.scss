@@ -105,6 +105,9 @@
             /deep/ {
                 svg {
                     float: left;
+                    margin-right: 0.25em;
+                    vertical-align: middle;
+                    
                     path {
                         fill: #333;
                     }
