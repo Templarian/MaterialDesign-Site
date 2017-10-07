@@ -17,7 +17,9 @@ export class ViewerService {
   }
 
   private extractData(res: Response) {
-    return res.text().replace('{{version}}', '2.0.46');
+    let text = res.text();
+    text = text.replace('{{version}}', '2.0.46');
+    return text;
   }
 
   getSidebar () {

@@ -146,6 +146,20 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'guides',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/guides.md'
+    }
+  },
+  {
+    path: 'guide/home-assistant',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/guide-home-assistant.md'
+    }
+  },
+  {
     path: 'code-of-conduct',
     component: ViewerPageComponent,
     data: {

@@ -24,6 +24,10 @@
   - webpack Webpack /getting-started/webpack
   - html Webfont _Helper Classes_ /getting-started/webfont
   - windows Windows _UWP / WPF_ /getting-started/windows
+- /guides
+- /guide/home-assistant
+  - none Guides /guides
+  - web Home Assistant /guide/home-assistant
 - /contribute
 - /contribute/icon-naming
 - /contribute/site

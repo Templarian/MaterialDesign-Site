@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot, Event, NavigationEnd } from '@angular/router';
 import { ViewerService } from './viewerPage.service';
+import { IconService } from './../shared/icon.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 import { Sidebar } from './sidebar/sidebar.model';
@@ -14,7 +15,8 @@ declare var hljs: any;
   templateUrl: './viewerPage.component.html',
   styleUrls: ['./viewerPage.component.scss'],
   providers: [
-    ViewerService
+    ViewerService,
+    IconService
   ]
 })
 export class ViewerPageComponent  {
@@ -33,6 +35,7 @@ export class ViewerPageComponent  {
   constructor (public router: Router,
                public route: ActivatedRoute,
                private viewerService: ViewerService,
+               private iconService: IconService,
                private sanitizer: DomSanitizer) {
       this.url = route.snapshot.url.join('/');
       this.sidebar = new Sidebar(this.url, [
@@ -73,7 +76,12 @@ export class ViewerPageComponent  {
                               </svg>
                             </a>
                           </${m2}>`;
-                        })
+                        });
+                        let icons: string[] = [];
+                        markdown = markdown.replace(/mdi:([a-z-]+)/g, (m, icon) => {
+                          icons.push(icon);
+                          return `<svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg>`;
+                        });
                         this.title = title;
                         this.pageData = this.sanitizer.bypassSecurityTrustHtml(markdown);
                         setTimeout(function () {
@@ -82,6 +90,23 @@ export class ViewerPageComponent  {
                             hljs.highlightBlock(items[i]);
                           }
                         }, 500);
+                        this.iconService.getIconsByName('38EF63D0-4744-11E4-B3CF-842B2B6CFE1B', icons)
+                                        .subscribe(iconList => {
+                                          icons.forEach(icon => {
+                                            var ic = iconList.filter(x => x.name == icon);
+                                            let data = 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z';
+                                            if (ic.length > 0) {
+                                              data = ic[0].data;
+                                            }
+                                            var svgs = document.querySelectorAll('svg[data-icon="mdi:' + icon + '"]');
+                                            for (let i = 0; i < svgs.length; i++) {
+                                              let svg = svgs[i];
+                                              (<Element>svgs[i]).setAttribute('class', 'icon');
+                                              let path = svgs[i].firstChild;
+                                              (<Element>path).setAttribute('d', data);
+                                            }
+                                          });
+                                        });
                       },
                       e => this.errorMessage = e);
     this.viewerService.getSidebar()

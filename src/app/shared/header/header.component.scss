@@ -61,5 +61,23 @@
     .menu {
         background: #FFF;
         padding: 10px 15px;
+        columns: 200px;
+
+        a {
+            color: #222;
+            display: inline-block;
+            /deep/ {
+                svg {
+                    float: left;
+                    path {
+                        fill: #333;
+                    }
+                }
+            }
+            small {
+                display: block;
+            }
+        }
     }
+    
 }
