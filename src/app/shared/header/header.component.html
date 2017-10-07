@@ -14,7 +14,7 @@
         </li>
         <li class="nav-item dropdown">
             <button class="btn-link getting-started" (click)="isNav = !isNav">
-                Getting Started
+                Documentation
                 <mdi-icon [name]="'chevron-up'" *ngIf="!isNav"></mdi-icon>
                 <mdi-icon [name]="'chevron-down'" *ngIf="isNav"></mdi-icon>
             </button>
@@ -32,69 +32,93 @@
         </li>
     </ul>
 </nav>
-<div class="menu" [ngbCollapse]="isNav">
-    <div>Getting Started</div>
-    <a routerLink="/getting-started/android" routerLinkActive="active">
-        <mdi-icon [name]="'android'"></mdi-icon>
-        Android
-        <small>Vector Drawables</small>
-    </a>
-    <a class="item" routerLink="/getting-started/angular" routerLinkActive="active">
-        <mdi-icon [name]="'angular'"></mdi-icon>
-        Angular
-        <small>Webfont / Component</small>
-    </a>
-    <a class="item" routerLink="/getting-started/angularjs" routerLinkActive="active">
-        <mdi-icon [name]="'angularjs'"></mdi-icon>
-        AngularJS
-        <small>1.x Support</small>
-    </a>
-    <a class="item" routerLink="/getting-started/bootstrap" routerLinkActive="active">
-        <mdi-icon [name]="'bootstrap'"></mdi-icon>
-        Bootstrap
-        <small>Webfont / Shim CSS</small>
-    </a>
-    <a class="item" routerLink="/getting-started/bootstrap-3" routerLinkActive="active">
-        <mdi-icon [name]="'bootstrap'"></mdi-icon>
-        Bootstrap
-        <small>Legacy v3</small>
-    </a>
-    <a class="item" routerLink="/getting-started/polymer" routerLinkActive="active">
-        <mdi-icon [name]="'polymer'"></mdi-icon>
-        Polymer
-        <small>v0.5 / v1.0 Supported</small>
-    </a>
-    <a class="item" routerLink="/getting-started/react" routerLinkActive="active">
-        <mdi-icon [name]="'react'"></mdi-icon>
-        React
-    </a>
-    <a class="item" routerLink="/getting-started/svg" routerLinkActive="active">
-        <mdi-icon [name]="'svg'"></mdi-icon>
-        SVG
-    </a>
-    <a class="item" routerLink="/getting-started/webpack" routerLinkActive="active">
-        <mdi-icon [name]="'webpack'"></mdi-icon>
-        Webpack
-    </a>
-    <a class="item" routerLink="/getting-started/webfont" routerLinkActive="active">
-        <mdi-icon [name]="'html'"></mdi-icon>
-        Webfont
-        <small>Helper Classes</small>
-    </a>
-    <a class="item" routerLink="/getting-started/windows" routerLinkActive="active">
-        <mdi-icon [name]="'windows'"></mdi-icon>
-        Windows
-        <small>UWP / WPF</small>
-    </a>
-    <div style="">Guides</div>
-    <a routerLink="/contribute" routerLinkActive="active">
-        <mdi-icon [name]="'android'"></mdi-icon>
-        Contributing
-        <small>How to Help</small>
-    </a>
-    <a routerLink="/contribute/icon-naming" routerLinkActive="active">
-        <mdi-icon [name]="'android'"></mdi-icon>
-        Icon Naming
-        <small>Naming Convention</small>
-    </a>
+<div class="menu pt-3 pb-3" [ngbCollapse]="isNav">
+    <div class="row">
+        <div class="col-md-2">
+            <div>Getting Started</div>
+        </div>
+        <div class="col-md-10">
+            <a routerLink="/getting-started/android" routerLinkActive="active">
+                <mdi-icon [name]="'android'"></mdi-icon>
+                Android
+                <small>Vector Drawables</small>
+            </a>
+            <a class="item" routerLink="/getting-started/angular" routerLinkActive="active">
+                <mdi-icon [name]="'angular'"></mdi-icon>
+                Angular
+                <small>Webfont / Component</small>
+            </a>
+            <a class="item" routerLink="/getting-started/angularjs" routerLinkActive="active">
+                <mdi-icon [name]="'angularjs'"></mdi-icon>
+                AngularJS
+                <small>1.x Support</small>
+            </a>
+            <a class="item" routerLink="/getting-started/bootstrap" routerLinkActive="active">
+                <mdi-icon [name]="'bootstrap'"></mdi-icon>
+                Bootstrap
+                <small>Webfont / Shim CSS</small>
+            </a>
+            <a class="item" routerLink="/getting-started/bootstrap-3" routerLinkActive="active">
+                <mdi-icon [name]="'bootstrap'"></mdi-icon>
+                Bootstrap
+                <small>Legacy v3</small>
+            </a>
+            <a class="item" routerLink="/getting-started/polymer" routerLinkActive="active">
+                <mdi-icon [name]="'polymer'"></mdi-icon>
+                Polymer
+                <small>v0.5 / v1.0 Supported</small>
+            </a>
+            <a class="item" routerLink="/getting-started/react" routerLinkActive="active">
+                <mdi-icon [name]="'react'"></mdi-icon>
+                React
+            </a>
+            <a class="item" routerLink="/getting-started/svg" routerLinkActive="active">
+                <mdi-icon [name]="'svg'"></mdi-icon>
+                SVG
+            </a>
+            <a class="item" routerLink="/getting-started/webpack" routerLinkActive="active">
+                <mdi-icon [name]="'webpack'"></mdi-icon>
+                Webpack
+            </a>
+            <a class="item" routerLink="/getting-started/webfont" routerLinkActive="active">
+                <mdi-icon [name]="'html'"></mdi-icon>
+                Webfont
+                <small>Helper Classes</small>
+            </a>
+            <a class="item" routerLink="/getting-started/windows" routerLinkActive="active">
+                <mdi-icon [name]="'windows'"></mdi-icon>
+                Windows
+                <small>UWP / WPF</small>
+            </a>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-2">
+            <div>Guides</div>
+        </div>
+        <div class="col-md-10">
+            <a routerLink="/guide/home-assistant" routerLinkActive="active">
+                <mdi-icon [name]="'home-assistant'"></mdi-icon>
+                Home Assistant
+                <small>Useful Ideas</small>
+            </a>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-2">
+            <div>Contribute</div>
+        </div>
+        <div class="col-md-10">
+            <a routerLink="/contribute" routerLinkActive="active">
+                <mdi-icon [name]="'android'"></mdi-icon>
+                Contributing
+                <small>How to Help</small>
+            </a>
+            <a routerLink="/contribute/icon-naming" routerLinkActive="active">
+                <mdi-icon [name]="'android'"></mdi-icon>
+                Icon Naming
+                <small>Naming Convention</small>
+            </a>
+        </div>
+    </div>
 </div>
