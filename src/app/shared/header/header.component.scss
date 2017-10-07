@@ -1,22 +1,33 @@
 :host {
 
     .nav-item.dropdown button {
-        padding: 4px 8px 14px 8px;
+        padding: 4px 8px;
         margin: -8px -4px;
         border-radius: 4px 4px 0 0;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
     }
 
-    .nav-opened {
+    .nav-item.dropdown.nav-opened {
         button {
             background: #FFF;
             color: #222 !important;
             z-index: 4;
             position: relative;
+            padding: 4px 8px 14px 8px;
 
             /deep/ {
                 svg path {
                     fill: #222;
                 }
+            }
+
+            &:hover {
+                background: #FFF;
+                border-radius: 4px 4px 0 0;
             }
         }
     }
@@ -107,7 +118,7 @@
                     float: left;
                     margin-right: 0.25em;
                     vertical-align: middle;
-                    
+
                     path {
                         fill: #333;
                     }
