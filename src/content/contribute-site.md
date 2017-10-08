@@ -1,6 +1,6 @@
-# Site
+# Site & How to Contribute
 
-Similar to the icons this site is Open Source. Years ago when the project was smaller [@templarian](https://twitter.com/templarian) built all the features, but as the community grew it is difficult to built every feature.
+Similar to the icons this site is Open Source. Years ago when the project was smaller [@templarian](https://twitter.com/templarian) built all the features, but as the community grew it is difficult to build every feature.
 
 ## Tech Stack
 
@@ -25,4 +25,5 @@ Please also read through the API documentation, many of the existing endpoints h
 - Let us know early on if your feature needs a API to work.
 - Look at the existing code base and follow consistent naming.
 - Use existing services where it makse sense instead of wrapping your own.
+- Break up features into smaller features when possible.
 - Be patient, the larger the feature the long it takes for us to review.
