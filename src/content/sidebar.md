@@ -27,7 +27,7 @@
 - /guides
 - /guide/home-assistant
   - none Guides /guides
-  - web Home Assistant /guide/home-assistant
+  - home-assistant Home Assistant /guide/home-assistant
 - /contribute
 - /contribute/icon-naming
 - /contribute/site
