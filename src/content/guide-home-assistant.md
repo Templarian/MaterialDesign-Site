@@ -1,6 +1,6 @@
 # Home Assistant Guide
 
-Below is a list of common icons to use with the popular Home Assistant software.
+Below is a list of common icons to use with the popular [Home Assistant](https://home-assistant.io) software.
 
 | Use        | Icons |
 |------------|-------|
@@ -9,3 +9,4 @@ Below is a list of common icons to use with the popular Home Assistant software.
 | User       | mdi:account mdi:account-plus |
 | Fan        | mdi:fan mdi:fan-off |
 | Security   | mdi:security-home |
+| Lighting   | mdi:lamp mdi:lava-lamp mdi:ceiling-light mdi:lightbulb mdi:lightbulb-outline mdi:lightbulb-on mdi:lightbulb-on-outline |
