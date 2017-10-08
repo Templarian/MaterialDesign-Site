@@ -10,7 +10,7 @@ bower install mdi
 ```
 
 ```
-https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.css
+https://cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.css
 ```
 
 ## Basic Example
