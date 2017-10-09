@@ -27,7 +27,7 @@ import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { DownloadPageComponent } from './downloadPage/downloadPage.component';
 import { AdminIconPageComponent } from './admin/iconPage/iconPage.component';
-import { ViewerPageComponent } from './viewerPage/viewerPage.component';
+import { MarkdownComponent, ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
 import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
@@ -233,6 +233,7 @@ const appRoutes: Routes = [
     HomePageComponent,
     IconPageComponent,
     IconsPageComponent,
+    MarkdownComponent,
     ViewerPageComponent,
     ResourcesPageComponent,
     DownloadPageComponent,
