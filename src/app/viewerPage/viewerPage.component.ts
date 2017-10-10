@@ -54,6 +54,7 @@ export class ViewerPageComponent  {
   }
 
   loadContent (data) {
+    var self = this;
     let regex = new RegExp('<h1>(.*)</h1>');
     let title = 'Loading...';
     var linkIcon = this.linkIcon;
@@ -108,6 +109,10 @@ export class ViewerPageComponent  {
                                               (<Element>svgs[i]).setAttribute('title', meta.name);
                                               let path = svgs[i].firstChild;
                                               (<Element>path).setAttribute('d', meta.data);
+                                              svgs[i].parentElement.onclick = function (e) {
+                                                self.router.navigateByUrl('/icon/' + icon);
+                                                e.preventDefault();
+                                              };
                                             }
                                           });
                                         });
