@@ -6,6 +6,7 @@ import { IconService } from "app/shared/icon.service";
 @Component({
   selector: 'mdi-icon-page',
   templateUrl: './iconPage.component.html',
+  styleUrls: ['./iconPage.component.scss'],
   providers: [
     IconService
   ]

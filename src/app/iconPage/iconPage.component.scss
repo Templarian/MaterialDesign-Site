@@ -1,3 +1,22 @@
 :host {
-    
+    h1 {
+        color: #FFF;
+    }
+    div.preview {
+        width: 280px;
+        height: 280px;
+        background: url('/assets/resources/icon-grid.svg') #F1F1F1;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5) inset;
+
+        svg {
+            margin: 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+
+            path {
+                fill: #646464;
+            }
+        }
+    }
 }
