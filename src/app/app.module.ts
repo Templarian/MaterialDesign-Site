@@ -33,6 +33,7 @@ import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
 import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
+import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 
 const appRoutes: Routes = [
   {
@@ -260,7 +261,8 @@ const appRoutes: Routes = [
     IconComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    MarkdownComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,10 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, ElementRef, ViewChild } from "@angular/core";
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare var Remarkable: any;
 declare var hljs: any;
 
-class MarkdownReplace {
+export class MarkdownReplace {
   constructor(
     public find: RegExp,
     public replace: (substring: string, ...args: any[]) => string
@@ -12,9 +13,10 @@ class MarkdownReplace {
 
 @Component({
   selector: 'markdown-component',
-  template: `<div #md></div>`
+  template: `<div [innerHtml]="htmlData"></div>`
 })
 export class MarkdownComponent {
+  htmlData: SafeHtml = null;
   private _content = '<p>Content not set.</p>';
   @Input('replace') replace: MarkdownReplace[] = [];
   @Input('content') set content(value: string) {
@@ -26,7 +28,9 @@ export class MarkdownComponent {
   get content(): string {
       return this._content;
   }
-  constructor(){}
+  constructor(
+    private sanitizer: DomSanitizer
+    ){}
 
   remarkable = new Remarkable({
     html: true
@@ -35,20 +39,18 @@ export class MarkdownComponent {
   render() {
     if (this.content == null) { return; }
     let html = this.remarkable.render(this.content)
-    // Angular4 parses single { } syntax.
-    html = html.replace(/(^|[^{])\{($|[^\{])/g, "$1{{'{'}}$2")
-               .replace(/(^|[^}])\}($|[^\}])/g, "$1{{'}'}}$2");
+    // Replace Various Items
     this.replace.forEach(o => {
       html = html.replace(o.find, o.replace);
     });
     // Render HTML
-    
+    this.htmlData = this.sanitizer.bypassSecurityTrustHtml(html);
     // Code blocks
     setTimeout(function () {
         let items = document.querySelectorAll('pre code');
         for (var i = 0; i < items.length; i++) {
         hljs.highlightBlock(items[i]);
         }
-    }, 500);
+    });
   }
 }
