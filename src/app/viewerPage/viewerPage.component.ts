@@ -67,7 +67,7 @@ export class ViewerPageComponent {
     }
   }, {
     find: new RegExp('<(h[2-6])>([^<]+)</h[2-6]>', 'g'),
-    replace: function (m1, m2, m3) {
+    replace: (m1, m2, m3) => {
       let id = m3.toLowerCase().replace(/ /g, '-').replace(/\//, '');
       return `<${m2} id="${id}">
                 ${m3}
