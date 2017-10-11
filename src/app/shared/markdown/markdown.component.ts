@@ -7,7 +7,8 @@ declare var hljs: any;
 export class MarkdownReplace {
   constructor(
     public find: RegExp,
-    public replace: (substring: string, ...args: any[]) => string
+    public replace: (substring: string, ...args: any[]) => string,
+    public render?: () => void
     ) {}
 }
 
@@ -17,7 +18,7 @@ export class MarkdownReplace {
 })
 export class MarkdownComponent {
   htmlData: SafeHtml = null;
-  private _content = '<p>Content not set.</p>';
+  private _content = '<p>Loading...</p>';
   @Input('replace') replace: MarkdownReplace[] = [];
   @Input('content') set content(value: string) {
     if (this._content != value) {
@@ -45,6 +46,12 @@ export class MarkdownComponent {
     });
     // Render HTML
     this.htmlData = this.sanitizer.bypassSecurityTrustHtml(html);
+    // Additional Rendering
+    this.replace.forEach(o => {
+        if (o.render != null) {
+            o.render();
+        }
+    });
     // Code blocks
     setTimeout(function () {
         let items = document.querySelectorAll('pre code');

@@ -26,8 +26,7 @@ export class ViewerPageComponent {
   remarkable = new Remarkable({
     html: true
   });
-  markdown: string = 'Loading...';
-  replace: MarkdownReplace[] = [];
+  markdown: string = null;
   errorMessage: string;
   title: string = 'Loading...';
   file: string = 'error';
@@ -57,76 +56,78 @@ export class ViewerPageComponent {
     });
   }
 
+  icons: string[] = [];
+
+  replace: MarkdownReplace[] = [{
+    find: new RegExp('<h1>(.*)</h1>'),
+    replace: (sub, h1) => {
+      // Prevent double setting title
+      setTimeout(() => this.title = h1);
+      return '';
+    }
+  }, {
+    find: new RegExp('<(h[2-6])>([^<]+)</h[2-6]>', 'g'),
+    replace: function (m1, m2, m3) {
+      let id = m3.toLowerCase().replace(/ /g, '-').replace(/\//, '');
+      return `<${m2} id="${id}">
+                ${m3}
+                <a href="${this.url}#${id}" style="display:inline-block;vertical-align:middle;">
+                  <svg viewBox="0 0 24 24" style="width:18px;height:18px;">
+                    <path d="${this.linkIcon}" fill="#999" />
+                  </svg>
+                </a>
+              </${m2}>`;
+    }
+  },{
+    find: new RegExp('mdi:([a-z-]+)', 'g'),
+    replace: (m, icon) => {
+      this.icons.push(icon);
+      return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
+    },
+    render: () => {
+      this.iconService.getIconsByName('38EF63D0-4744-11E4-B3CF-842B2B6CFE1B', this.icons)
+        .subscribe(iconList => {
+          this.icons.forEach(icon => {
+            var ic = iconList.filter(x => x.name == icon);
+            let meta = {
+              data: 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z',
+              name: 'Could not find "' + icon + '"'
+            };
+            if (ic.length > 0) {
+              meta = ic[0];
+            }
+            var svgs = document.querySelectorAll('svg[data-icon="mdi:' + icon + '"]');
+            for (let i = 0; i < svgs.length; i++) {
+              let svg = svgs[i];
+              (<Element>svgs[i]).setAttribute('class', 'icon');
+              (<Element>svgs[i]).setAttribute('title', meta.name);
+              let path = svgs[i].firstChild;
+              (<Element>path).setAttribute('d', meta.data);
+              svgs[i].parentElement.onclick = (e) => {
+                this.router.navigateByUrl('/icon/' + icon);
+                e.preventDefault();
+              };
+              //this._popupService = new PopupService<NgbTooltipWindow>(
+              //  NgbTooltipWindow, injector, viewContainerRef, _renderer, componentFactoryResolver);
+            }
+          });
+        });
+      }
+    }
+  ];
+
   loadContent(data) {
     var self = this;
     let regex = new RegExp('<h1>(.*)</h1>');
-    let title = 'Loading...';
     var linkIcon = this.linkIcon;
-    var url = this.url;
     this.file = data.file;
+    // Render Markdown
     this.viewerService.getMarkdownFileHtml(data.file)
       .subscribe(markdown => {
-        let icons: string[] = [];
         this.markdown = markdown;
-        this.replace = [
-          {
-            find: new RegExp('<h1>(.*)</h1>'),
-            replace: (sub, h1) => {
-              setTimeout(() => this.title = h1);
-              return '';
-            }
-          },
-          {
-            find: new RegExp('<(h[2-6])>([^<]+)</h[2-6]>', 'g'),
-            replace: function (m1, m2, m3) {
-              let id = m3.toLowerCase().replace(/ /g, '-').replace(/\//, '');
-              return `<${m2} id="${id}">
-                        ${m3}
-                        <a href="${url}#${id}" style="display:inline-block;vertical-align:middle;">
-                          <svg viewBox="0 0 24 24" style="width:18px;height:18px;">
-                            <path d="${linkIcon}" fill="#999" />
-                          </svg>
-                        </a>
-                      </${m2}>`;
-            }
-          },
-          {
-            find: new RegExp('mdi:([a-z-]+)', 'g'),
-            replace: (m, icon) => {
-              icons.push(icon);
-              return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
-            }
-          }
-        ];
-        this.iconService.getIconsByName('38EF63D0-4744-11E4-B3CF-842B2B6CFE1B', icons)
-          .subscribe(iconList => {
-            icons.forEach(icon => {
-              var ic = iconList.filter(x => x.name == icon);
-              let meta = {
-                data: 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z',
-                name: 'Could not find "' + icon + '"'
-              };
-              if (ic.length > 0) {
-                meta = ic[0];
-              }
-              var svgs = document.querySelectorAll('svg[data-icon="mdi:' + icon + '"]');
-              for (let i = 0; i < svgs.length; i++) {
-                let svg = svgs[i];
-                (<Element>svgs[i]).setAttribute('class', 'icon');
-                (<Element>svgs[i]).setAttribute('title', meta.name);
-                let path = svgs[i].firstChild;
-                (<Element>path).setAttribute('d', meta.data);
-                svgs[i].parentElement.onclick = function (e) {
-                  self.router.navigateByUrl('/icon/' + icon);
-                  e.preventDefault();
-                };
-                //this._popupService = new PopupService<NgbTooltipWindow>(
-                //  NgbTooltipWindow, injector, viewContainerRef, _renderer, componentFactoryResolver);
-              }
-            });
-          });
       },
       e => this.errorMessage = e);
+    // Render Sidebar
     this.viewerService.getSidebar()
       .subscribe(sidebars => {
         this.sidebar = sidebars.find(sidebar => sidebar.url === this.url);
