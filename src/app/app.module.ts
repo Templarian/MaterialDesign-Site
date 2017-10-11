@@ -163,6 +163,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'guide/wcag',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/guide-wcag.md'
+    }
+  },
+  {
     path: 'code-of-conduct',
     component: ViewerPageComponent,
     data: {
@@ -279,5 +286,5 @@ const appRoutes: Routes = [
   ]
 })
 export class AppModule {
-  
+
 }
