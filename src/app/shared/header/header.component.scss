@@ -113,6 +113,12 @@
                 text-decoration: none;
             }
 
+            &.active {
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) inset;
+                background: #F1F1F1;
+                cursor: default;
+            }
+
             /deep/ {
                 svg {
                     float: left;
