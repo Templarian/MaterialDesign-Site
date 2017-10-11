@@ -1,6 +1,10 @@
+<mdi-banner [title]="iconName" [icon]="data"></mdi-banner>
 <div class="container">
-    <h1>Icon Name</h1>
     <div>
-        <div style="width:240px;height:240px;background: #F1F1F1"></div>
+        <div class="preview">
+            <svg viewBox="0 0 24 24">
+                <path [attr.d]="data"></path>
+            </svg>
+        </div>
     </div>
 </div>

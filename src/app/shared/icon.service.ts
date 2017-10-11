@@ -21,8 +21,15 @@ export class IconService {
         names: names.join(',')
       }
     })
-    .map(res => res.json().icons)
-    .catch(this.handleError);
+      .map(res => res.json().icons)
+      .catch(this.handleError);
+  }
+
+  getIconByName(packageId: string, name: string): Observable<any> {
+    var isMock = window.location.href.match(/localhost/) !== null;
+    return this.http.get('/api/package/' + packageId + '/name/' + name + (isMock ? '/mock.json' : ''))
+      .map(res => res.json())
+      .catch(this.handleError);
   }
 
   private handleError(error: Response | any) {

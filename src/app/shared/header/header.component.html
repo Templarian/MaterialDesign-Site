@@ -114,6 +114,11 @@
             <div>Contribute</div>
         </div>
         <div class="col-md-10">
+            <a routerLink="/contributors" routerLinkActive="active">
+                <mdi-icon [name]="'account-circle'"></mdi-icon>
+                Contributors
+                <small>The Team</small>
+            </a>
             <a routerLink="/contribute" routerLinkActive="active">
                 <mdi-icon [name]="'account-comment'"></mdi-icon>
                 Contributing
@@ -137,3 +142,4 @@
         </div>
     </div>
 </div>
+<div class="mask" *ngIf="!isNav" (click)="isNav = true"></div>

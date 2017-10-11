@@ -23,6 +23,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { BannerComponent } from './shared/banner/banner.component';
 
 import { HomePageComponent } from './homePage/homePage.component';
+import { ContributorPageComponent } from './contributorPage/contributorPage.component';
+import { ContributorsPageComponent } from './contributorsPage/contributorsPage.component';
 import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { DownloadPageComponent } from './downloadPage/downloadPage.component';
@@ -31,6 +33,7 @@ import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
 import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
+import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 
 const appRoutes: Routes = [
   {
@@ -213,6 +216,20 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'contributors',
+    component: ContributorsPageComponent,
+    data: {
+      package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
+    }
+  },
+  {
+    path: 'contributor/:name',
+    component: ContributorPageComponent,
+    data: {
+      package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
+    }
+  },
+  {
     path: 'download',
     component: DownloadPageComponent,
     data: {
@@ -238,6 +255,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomePageComponent,
+    ContributorPageComponent,
+    ContributorsPageComponent,
     IconPageComponent,
     IconsPageComponent,
     ViewerPageComponent,
@@ -249,7 +268,8 @@ const appRoutes: Routes = [
     IconComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    MarkdownComponent
   ],
   imports: [
     BrowserModule,

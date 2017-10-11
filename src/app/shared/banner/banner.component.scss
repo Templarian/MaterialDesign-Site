@@ -6,5 +6,26 @@
     
     h1 {
         margin: 0;
+        .icon {
+            display: inline-block;
+            padding: 4px;
+            background: #FFF;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-top: -8px;
+            margin-right: 4px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                vertical-align: top;
+
+                path {
+                    fill: #414F56;
+                }
+            }
+        }
     }
 }
