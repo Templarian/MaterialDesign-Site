@@ -14,11 +14,12 @@
                     [ngClass]="{ 'active': size == 48 }">48</button>
             </div>
             <div [ngClass]="['size-' + size]">
-                <span *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon">
+                <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
+                    [routerLink]="'/icon/' + icon.name">
                     <svg viewBox="0 0 24 24">
                         <path [attr.d]="icon.data" />
                     </svg>
-                </span>
+                </a>
             </div>
         </div>
         <div [ngClass]="{'col-md-4': !collapsed, 'col-md-1': collapsed }">
