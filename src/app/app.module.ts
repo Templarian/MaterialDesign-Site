@@ -34,6 +34,7 @@ import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component'
 import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
+import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
 
 const appRoutes: Routes = [
   {
@@ -248,6 +249,10 @@ const appRoutes: Routes = [
     path: 'admin/icons',
     component: AdminIconPageComponent
   },
+  {
+    path: 'admin/alias',
+    component: AdminAliasPageComponent
+  },
   { path: '**', component: NotFoundPageComponent }
 ];
 
@@ -264,6 +269,7 @@ const appRoutes: Routes = [
     DownloadPageComponent,
     AdminLoginPageComponent,
     AdminIconPageComponent,
+    AdminAliasPageComponent,
     NotFoundPageComponent,
     IconComponent,
     HeaderComponent,
