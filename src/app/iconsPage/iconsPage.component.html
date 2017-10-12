@@ -12,6 +12,13 @@
                 <button class="btn btn-light"
                     (click)="size = 48"
                     [ngClass]="{ 'active': size == 48 }">48</button>
+                <div ngbDropdown class="d-inline-block">
+                    <button class="btn btn-light" id="dropdownBasic1" ngbDropdownToggle>All ({{icons.length}})</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button class="dropdown-item">v2.0.46</button>
+                        <button class="dropdown-item">...</button>
+                    </div>
+                </div>
             </div>
             <div [ngClass]="['size-' + size]">
                 <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
