@@ -16,11 +16,11 @@ Below is a list of common icons to use with the popular [Home Assistant](https:/
 | Camera     | mdi:cctv mdi:webcam mdi:video mdi:video-off mdi:camera |
 | Vaccum     | mdi:roomba |
 | Smoke Alarm| mdi:nest-protect |
-| Window     | mdi:window-close mdi:windows-open |
+| Window     | mdi:window-closed mdi:window-open |
 | Security   | mdi:security-home mdi:lock mdi:lock-open mdi:lock-outline mdi:lock-open-outline|
 | Garage     | mdi:garage mdi:garage-open |
 | Projector  | mdi:projector mdi:projector-screen |
-| Kitchen    | mdi:fridge mdi:fridge-filled mdi:fridge-filler-top mdi:fridge-filled-bottom mdi:stove mdi:washing-machine |
+| Kitchen    | mdi:fridge mdi:fridge-filled mdi:fridge-filled-top mdi:fridge-filled-bottom mdi:stove mdi:washing-machine |
 | Bathroom   | mdi:scale-bathroom |
 | Bedroom    | mdi:hotel |
 | Sensors    | mdi:thermometer mdi:gauge mdi:water-percent mdi:run-fast mdi:bell mdi:brightness-7 |
