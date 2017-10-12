@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Icon } from './icon.model';
+import { Icon } from './../../shared/models/icon.model';
 
 @Component({
   selector: 'mdi-icon',

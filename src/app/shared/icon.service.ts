@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Icon } from 'app/shared/models/icon.model';
 
 @Injectable()
 export class IconService {
@@ -25,10 +26,13 @@ export class IconService {
       .catch(this.handleError);
   }
 
-  getIconByName(packageId: string, name: string): Observable<any> {
+  getIconByName(packageId: string, name: string): Observable<Icon> {
     var isMock = window.location.href.match(/localhost/) !== null;
     return this.http.get('/api/package/' + packageId + '/name/' + name + (isMock ? '/mock.json' : ''))
-      .map(res => res.json())
+      .map(res => {
+        let r = res.json();
+        return new Icon (r.name, r.data);
+      })
       .catch(this.handleError);
   }
 

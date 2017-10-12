@@ -29,7 +29,7 @@
 - /guide/wcag
   - none Guides /guides
   - home-assistant Home Assistant /guide/home-assistant
-  - human WCAG _Accessability_ /guide/wcag
+  - human WCAG _Accessibility_ /guide/wcag
 - /contribute
 - /contribute/icon-naming
 - /contribute/site
