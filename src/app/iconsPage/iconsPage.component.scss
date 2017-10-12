@@ -1,8 +1,38 @@
 :host {
+
+    .size-24 {
+        .icon {
+            width: 32px;
+            height: 32px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .size-36 {
+        .icon {
+            width: 44px;
+            height: 44px;
+            svg {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+    .size-48 {
+        .icon {
+            width: 56px;
+            height: 56px;
+            svg {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+
     .icon {
         display: inline-block;
-        border: 1px solid #C4C4C4;
-        background: #FFF;
         margin-right: 4px;
         margin-bottom: 4px;
         padding: 4px;
@@ -11,9 +41,15 @@
 
         svg {
             display: inline-block;
-            width: 24px;
-            height: 24px;
             vertical-align: middle;
+
+            path {
+                fill: #FFF;
+            }
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
         }
     }
 

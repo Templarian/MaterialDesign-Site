@@ -27,3 +27,4 @@ Please also read through the API documentation, many of the existing endpoints h
 - Use existing services where it makse sense instead of wrapping your own.
 - Break up features into smaller features when possible.
 - Be patient, the larger the feature the long it takes for us to review.
+- VS Code `CTRL+SHIFT+P` `Format Document`

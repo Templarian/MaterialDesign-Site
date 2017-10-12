@@ -12,6 +12,7 @@ import { IconService } from '../shared/icon.service';
 })
 export class IconsPageComponent {
   
+  size: number = 36;
   icons: any[] = [];
   errorMessage: any;
 
