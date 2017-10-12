@@ -1,18 +1,8 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-8" [ngClass]="['size-' + size]">
+        <div [ngClass]="{'col-md-8': !collapsed, 'col-md-11': collapsed }">
             <div class="filters">
                 <input type="text" class="search" placeholder="Search..." />
-            </div>
-            <span *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon">
-                <svg viewBox="0 0 24 24">
-                    <path [attr.d]="icon.data" />
-                </svg>
-            </span>
-        </div>
-        <div class="col-md-4">
-            <div class="mb-3">
-                Size:
                 <button class="btn btn-light"
                     (click)="size = 24"
                     [ngClass]="{ 'active': size == 24 }">24</button>
@@ -22,6 +12,27 @@
                 <button class="btn btn-light"
                     (click)="size = 48"
                     [ngClass]="{ 'active': size == 48 }">48</button>
+            </div>
+            <div [ngClass]="['size-' + size]">
+                <span *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon">
+                    <svg viewBox="0 0 24 24">
+                        <path [attr.d]="icon.data" />
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div [ngClass]="{'col-md-4': !collapsed, 'col-md-1': collapsed }">
+            <div class="mb-3">
+                <button class="btn btn-light"
+                    (click)="collapsed = true"
+                    *ngIf="!collapsed">
+                    <mdi-icon name="chevron-right"></mdi-icon>
+                </button>
+                <button class="btn btn-light"
+                    (click)="collapsed = false"
+                    *ngIf="collapsed">
+                    <mdi-icon name="chevron-left"></mdi-icon>
+                </button>
             </div>
             <div class="list-group">
                 <a href="#" class="list-group-item active">
