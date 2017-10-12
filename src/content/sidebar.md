@@ -26,8 +26,10 @@
   - windows Windows _UWP / WPF_ /getting-started/windows
 - /guides
 - /guide/home-assistant
+- /guide/wcag
   - none Guides /guides
   - home-assistant Home Assistant /guide/home-assistant
+  - human WCAG _Accessability_ /guide/wcag
 - /contribute
 - /contribute/icon-naming
 - /contribute/site
