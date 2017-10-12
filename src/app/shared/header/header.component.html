@@ -15,8 +15,8 @@
         <li class="nav-item dropdown" [ngClass]="{ 'nav-opened': !isNav }">
             <button class="btn-link getting-started" (click)="isNav = !isNav">
                 Documentation
-                <mdi-icon [name]="'chevron-up'" *ngIf="!isNav"></mdi-icon>
-                <mdi-icon [name]="'chevron-down'" *ngIf="isNav"></mdi-icon>
+                <mdi-icon [name]="'menu-up'" *ngIf="!isNav"></mdi-icon>
+                <mdi-icon [name]="'menu-down'" *ngIf="isNav"></mdi-icon>
             </button>
         </li>
         <li class="nav-item">
