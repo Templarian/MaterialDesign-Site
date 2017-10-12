@@ -17,8 +17,7 @@ export class IconPageComponent {
     private route: ActivatedRoute,
     private iconService: IconService) { }
 
-  icon: Icon;
-  data: string = 'M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z';
+  icon: Icon = new Icon('Loading...', 'M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z');
 
   ngOnInit() {
     const packageId: string = this.route.snapshot.data['package'];

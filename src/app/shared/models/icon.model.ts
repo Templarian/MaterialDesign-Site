@@ -4,8 +4,13 @@ export class Icon {
   private pathCommand: RegExp;
   private pathValues: RegExp;
 
-  constructor(public name: string,
-    public data: string = null) {
+  public name: string = null;
+  public data: string = null
+
+  constructor(name?: string, data?: string) {
+
+    this.name = name;
+    this.data = data;
 
     this.pathCommand = new RegExp("([a-z])["
       + this.spaces
