@@ -20,6 +20,10 @@ export class AdminIconsPageComponent {
     // Authed
     console.log('authed');
   }
+
+  async logout () {
+    await this.loginService.logout();
+  }
   
   public selectIcon () {
     

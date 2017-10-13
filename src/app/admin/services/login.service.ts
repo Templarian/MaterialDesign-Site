@@ -42,6 +42,19 @@ export class LoginService {
         .catch(this.handleError);
   }
 
+  logout (): Promise<boolean> {
+    let isMock = window.location.href.match(/localhost/) !== null;
+    if (isMock) {
+        return Promise.resolve(true);
+    }
+    return this.http.delete('/api/admin')
+        .toPromise()
+        .then(isAuthed => {
+          return isAuthed.json();
+        })
+        .catch(this.handleError);
+  }
+
   private handleError (error: Response | any) {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;
