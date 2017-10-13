@@ -4,7 +4,10 @@ import { LoginService } from 'app/admin/services/login.service';
 @Component({
   selector: 'mdi-admin-icons-page',
   templateUrl: './iconsPage.component.html',
-  styleUrls: ['./iconsPage.component.scss']
+  styleUrls: ['./iconsPage.component.scss'],
+  providers: [
+    LoginService
+  ]
 })
 export class AdminIconsPageComponent {
 

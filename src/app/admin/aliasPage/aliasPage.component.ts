@@ -4,7 +4,10 @@ import { LoginService } from 'app/admin/services/login.service';
 @Component({
   selector: 'mdi-admin-alias-page',
   templateUrl: './aliasPage.component.html',
-  styleUrls: ['./aliasPage.component.scss']
+  styleUrls: ['./aliasPage.component.scss'],
+  providers: [
+    LoginService
+  ]
 })
 export class AdminAliasPageComponent {
 
