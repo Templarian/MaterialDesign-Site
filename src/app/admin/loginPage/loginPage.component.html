@@ -1,29 +1,39 @@
 <div class="container-fluid">
     <div class="row border-top">
         <div class="col-md-4"></div>
-        <div class="col-md-4">
+        <div class="col-md-4 panel-login">
             <h2>Contributor Access</h2>
+            <div class="alert alert-danger" *ngIf="failed">
+                <mdi-icon name="alert"></mdi-icon>
+                Invalid login, please note 3 invalid logins locks the account.
+            </div>
             <form name="login">
                 <label>
                     Username
                     <input type="text"
+                        [(ngModel)]="user"
+                        name="user"
                         class="form-control"
-                        [(value)]="user" />
+                        (keyup)="validate()" />
                 </label>
                 <label>
                     Password
                     <input type="password"
+                        [(ngModel)]="pass"
+                        name="pass"
                         class="form-control"
-                        [(value)]="pass" />
+                        (keyup)="validate()" />
                 </label>
                 <div class="row">
                     <div class="col">
-                        <button class="btn btn-default" (click)="goBack()">
+                        <a class="btn btn-secondary" routerLink="/">
                             Go Back
-                        </button>
+                        </a>
                     </div>
                     <div class="col text-sm-right">
-                        <button class="btn btn-primary" (click)="login()">
+                        <button class="btn btn-primary"
+                            (click)="login()"
+                            [disabled]="isLoginDisabled">
                             Login
                         </button>
                     </div>

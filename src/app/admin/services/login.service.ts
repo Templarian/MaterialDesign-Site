@@ -1,11 +1,15 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable }     from 'rxjs/Rx';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class LoginService {
 
-  constructor (private http: Http) {}
+  constructor (
+    private http: Http,
+    private router: Router
+  ) {}
 
   login (user: string, pass: string): Promise<boolean> {
     let isMock = window.location.href.match(/localhost/) !== null;
@@ -16,9 +20,25 @@ export class LoginService {
         user: user,
         pass: pass
     };
-    return this.http.post('/api/login', body)
+    return this.http.post('/api/admin/login', body)
         .toPromise()
         .then(res => res.json())
+        .catch(this.handleError);
+  }
+
+  isAuthed (): Promise<boolean> {
+    let isMock = window.location.href.match(/localhost/) !== null;
+    if (isMock) {
+        return Promise.resolve(true);
+    }
+    return this.http.get('/api/admin')
+        .toPromise()
+        .then(isAuthed => {
+          if (!(isAuthed.json())) {
+            this.router.navigateByUrl('/admin');
+          }
+          return isAuthed.json();
+        })
         .catch(this.handleError);
   }
 

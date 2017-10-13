@@ -1,14 +1,32 @@
 :host {
-    h2 {
-        margin-top: 20px;
-    }
-    .container-fluid {
-        border-top: 4px solid #DDD;
-    }
     form {
         padding: 15px;
         label {
             display: block;
+        }
+    }
+    .panel-login {
+        background: #FFF;
+        padding-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        border-radius: 8px;
+        margin: 40px 0;
+
+        h2 {
+            margin-top: 20px;
+            color: #646464;
+        }
+
+        .alert {
+            margin-bottom: 5px;
+            /deep/ {
+                svg {
+                    vertical-align: middle;
+                    path {
+                        fill: #721c24;
+                    }
+                }
+            }
         }
     }
     .panel {

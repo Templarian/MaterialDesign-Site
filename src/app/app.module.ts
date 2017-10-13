@@ -28,7 +28,7 @@ import { ContributorsPageComponent } from './contributorsPage/contributorsPage.c
 import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { DownloadPageComponent } from './downloadPage/downloadPage.component';
-import { AdminIconPageComponent } from './admin/iconPage/iconPage.component';
+import { AdminIconsPageComponent } from './admin/iconsPage/iconsPage.component';
 import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
 import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
@@ -247,7 +247,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'admin/icons',
-    component: AdminIconPageComponent
+    component: AdminIconsPageComponent
   },
   {
     path: 'admin/alias',
@@ -268,7 +268,7 @@ const appRoutes: Routes = [
     ResourcesPageComponent,
     DownloadPageComponent,
     AdminLoginPageComponent,
-    AdminIconPageComponent,
+    AdminIconsPageComponent,
     AdminAliasPageComponent,
     NotFoundPageComponent,
     IconComponent,
