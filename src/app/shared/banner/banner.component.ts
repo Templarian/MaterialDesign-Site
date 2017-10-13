@@ -9,6 +9,7 @@ export class BannerComponent {
   
   @Input('title') name: string = 'Loading...';
   @Input('icon') data: string = null;
+  @Input('carbon') carbon: boolean;
   subtitle: string = null;
 
 }
