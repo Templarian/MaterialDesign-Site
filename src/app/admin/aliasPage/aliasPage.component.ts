@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { LoginService } from 'app/admin/services/login.service';
 
 @Component({
   selector: 'mdi-admin-alias-page',
@@ -6,9 +7,19 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./aliasPage.component.scss']
 })
 export class AdminAliasPageComponent {
-  
-  public selectIcon () {
-    
+
+  constructor(
+    private loginService: LoginService
+  ) { }
+
+  async ngOnInit() {
+    await this.loginService.isAuthed();
+    // Authed
+    console.log('authed');
+  }
+
+  public selectIcon() {
+
   }
 
 }
