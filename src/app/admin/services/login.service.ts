@@ -20,7 +20,7 @@ export class LoginService {
         user: user,
         pass: pass
     };
-    return this.http.post('/api/admin/login', body)
+    return this.http.post('/api/admin', body)
         .toPromise()
         .then(res => res.json())
         .catch(this.handleError);
