@@ -1,15 +1,20 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable }     from 'rxjs/Rx';
-import { Router } from '@angular/router';
+import { Router, Route, ActivatedRoute } from '@angular/router';
 
 @Injectable()
 export class LoginService {
 
+  private url: string;
+
   constructor (
     private http: Http,
-    private router: Router
-  ) {}
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    this.url = route.snapshot.url.map(m => m.path).join('/')
+  }
 
   login (user: string, pass: string): Promise<boolean> {
     let isMock = window.location.href.match(/localhost/) !== null;
@@ -29,12 +34,13 @@ export class LoginService {
   isAuthed (): Promise<boolean> {
     let isMock = window.location.href.match(/localhost/) !== null;
     if (isMock) {
-        return Promise.resolve(true);
+    //    return Promise.resolve(true);
     }
-    return this.http.get('/api/admin')
+    return this.http.get('/api/admin/mock.json')
         .toPromise()
         .then(isAuthed => {
-          if (!(isAuthed.json())) {
+          if (this.url != 'admin'
+            && !(isAuthed.json())) {
             this.router.navigateByUrl('/admin');
           }
           return isAuthed.json();
@@ -45,12 +51,14 @@ export class LoginService {
   logout (): Promise<boolean> {
     let isMock = window.location.href.match(/localhost/) !== null;
     if (isMock) {
+        this.router.navigateByUrl('/admin');
         return Promise.resolve(true);
     }
     return this.http.delete('/api/admin')
         .toPromise()
-        .then(isAuthed => {
-          return isAuthed.json();
+        .then(res => {
+          this.router.navigateByUrl('/admin');
+          return null;
         })
         .catch(this.handleError);
   }
