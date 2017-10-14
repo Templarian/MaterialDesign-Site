@@ -2,15 +2,35 @@
 <div class="container-fluid">
 <div class="row">
     <div class="col-md-6">
-        <h2>Alias Form</h2>
-        <div>
-            Select Icon
-        </div>
-        <div>
-            Existing Aliases
-        </div>
-        <div>
-            Enter Alias
+        <div class="card p-3">
+            <h2>Alias Form</h2>
+            <div>
+                <label>
+                    <span class="d-block">Package</span>
+                    <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+                        <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span class="d-block">Icon Name</span>
+                    <span class="preview">
+                        <svg viewBox="0 0 24 24">
+                            <path [attr.d]="selectedIcon.data"></path>
+                        </svg>
+                    </span>
+                    <select [(ngModel)]="selectedIcon" (change)="selectIcon()" class="custom-select">
+                        <option *ngFor="let i of icons" [ngValue]="i">{{i.name}}</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                Existing Aliases
+            </div>
+            <div>
+                Enter Alias
+            </div>
         </div>
     </div>
     <div class="col-md-6">

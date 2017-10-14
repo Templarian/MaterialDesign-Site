@@ -220,14 +220,14 @@ const appRoutes: Routes = [
     path: 'contributors',
     component: ContributorsPageComponent,
     data: {
-      package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
     }
   },
   {
     path: 'contributor/:name',
     component: ContributorPageComponent,
     data: {
-      package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
     }
   },
   {

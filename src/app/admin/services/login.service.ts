@@ -34,7 +34,7 @@ export class LoginService {
   isAuthed (): Promise<boolean> {
     let isMock = window.location.href.match(/localhost/) !== null;
     if (isMock) {
-    //    return Promise.resolve(true);
+        return Promise.resolve(true);
     }
     return this.http.get('/api/admin/mock.json')
         .toPromise()

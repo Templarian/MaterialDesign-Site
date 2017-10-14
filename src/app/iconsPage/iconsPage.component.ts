@@ -22,10 +22,9 @@ export class IconsPageComponent {
                 
   }
 
-  loadContent (data) {
-    this.iconService.getIcons(data.package).subscribe(icons => {
-      this.icons = icons;
-    }, e => this.errorMessage = e);
+  async loadContent (data) {
+    let icons = await this.iconService.getIcons(data.package);
+    this.icons = icons;
   }
 
   ngOnInit() {

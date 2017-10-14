@@ -25,6 +25,11 @@ export class Icon {
 
   }
 
+  public fromDto (res: any) {
+    this.name = res.name;
+    this.data = res.data;
+  }
+
   private r(n: number) {
     return Math.round(n * 100) / 100;
   };

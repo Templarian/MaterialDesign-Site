@@ -84,37 +84,34 @@ export class ViewerPageComponent {
       this.icons.push(icon);
       return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
     },
-    render: () => {
-      this.iconService.getIconsByName('38EF63D0-4744-11E4-B3CF-842B2B6CFE1B', this.icons)
-        .subscribe(iconList => {
-          this.icons.forEach(icon => {
-            var ic = iconList.filter(x => x.name == icon);
-            let meta = {
-              data: 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z',
-              name: 'Could not find "' + icon + '"'
-            };
-            if (ic.length > 0) {
-              meta = ic[0];
-            }
-            var svgs = document.querySelectorAll('svg[data-icon="mdi:' + icon + '"]');
-            for (let i = 0; i < svgs.length; i++) {
-              let svg = svgs[i];
-              (<Element>svgs[i]).setAttribute('class', 'icon');
-              (<Element>svgs[i]).setAttribute('title', meta.name);
-              let path = svgs[i].firstChild;
-              (<Element>path).setAttribute('d', meta.data);
-              svgs[i].parentElement.onclick = (e) => {
-                this.router.navigateByUrl('/icon/' + icon);
-                e.preventDefault();
-              };
-              //this._popupService = new PopupService<NgbTooltipWindow>(
-              //  NgbTooltipWindow, injector, viewContainerRef, _renderer, componentFactoryResolver);
-            }
-          });
-        });
-      }
+    render: async () => {
+      let iconList = await this.iconService.getIconsByName('38EF63D0-4744-11E4-B3CF-842B2B6CFE1B', this.icons);
+      this.icons.forEach(icon => {
+        var ic = iconList.filter(x => x.name == icon);
+        let meta = {
+          data: 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z',
+          name: 'Could not find "' + icon + '"'
+        };
+        if (ic.length > 0) {
+          meta = ic[0];
+        }
+        var svgs = document.querySelectorAll('svg[data-icon="mdi:' + icon + '"]');
+        for (let i = 0; i < svgs.length; i++) {
+          let svg = svgs[i];
+          (<Element>svgs[i]).setAttribute('class', 'icon');
+          (<Element>svgs[i]).setAttribute('title', meta.name);
+          let path = svgs[i].firstChild;
+          (<Element>path).setAttribute('d', meta.data);
+          svgs[i].parentElement.onclick = (e) => {
+            this.router.navigateByUrl('/icon/' + icon);
+            e.preventDefault();
+          };
+          //this._popupService = new PopupService<NgbTooltipWindow>(
+          //  NgbTooltipWindow, injector, viewContainerRef, _renderer, componentFactoryResolver);
+        }
+      });
     }
-  ];
+  }];
 
   loadContent(data) {
     var self = this;

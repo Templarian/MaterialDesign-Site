@@ -1,5 +1,10 @@
 export class Package {
-    public id: string;
-    public name: string;
-    public iconCount: string;
+  public iconCount: string;
+
+  constructor(
+    public id: string,
+    public name?: string
+  ) {
+
+  }
 }
