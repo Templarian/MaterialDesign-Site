@@ -1,3 +1,5 @@
+import { Alias } from "app/shared/models/alias.model";
+
 export class Icon {
 
   private spaces: string = "\x09\x0a\x0b\x0c\x0d\x20\xa0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000\u2028\u2029";
@@ -5,7 +7,8 @@ export class Icon {
   private pathValues: RegExp;
 
   public name: string = null;
-  public data: string = null
+  public data: string = null;
+  public aliases: Alias[] = [];
 
   constructor(name?: string, data?: string) {
 
@@ -69,6 +72,10 @@ export class Icon {
     if (this.data != null) {
       return this.parse(this.data).length;
     }
+  }
+
+  addAlias(alias: Alias) {
+    this.aliases.push(alias);
   }
 
 }

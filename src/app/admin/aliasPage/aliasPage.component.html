@@ -12,7 +12,7 @@
                     </select>
                 </label>
             </div>
-            <div>
+            <div *ngIf="selectedIcon != null">
                 <label>
                     <span class="d-block">Icon Name</span>
                     <span class="preview">
@@ -25,11 +25,21 @@
                     </select>
                 </label>
             </div>
-            <div>
+            <div *ngIf="selectedIcon != null">
                 Existing Aliases
+                <div>
+                    <span *ngFor="let a of selectedIcon.aliases; let i = index">
+                        <code>{{a.name}}</code>
+                        <span *ngIf="i != selectedIcon.aliases.length - 1">,</span>
+                    </span>
+                </div>
             </div>
-            <div>
+            <div *ngIf="selectedIcon != null">
                 Enter Alias
+                <div>
+                    <input type="text" class="form-control" [(ngModel)]="aliasName" (keyup)="validate()" />
+                </div>
+                <button class="btn btn-primary" [disabled]="disabledAlias">Add Alias</button>
             </div>
         </div>
     </div>

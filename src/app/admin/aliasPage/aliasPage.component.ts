@@ -19,7 +19,10 @@ export class AdminAliasPageComponent {
   public packages: Package[] = [];
   public selectedPackage: Package = null;
   public icons: Icon[];
-  public selectedIcon: Icon;
+  public selectedIcon: Icon = null;
+  public aliasName: string = '';
+
+  public disabledAlias: boolean = true;
 
   constructor(
     private loginService: LoginService,
@@ -44,7 +47,22 @@ export class AdminAliasPageComponent {
   }
 
   selectIcon() {
-    
+
+  }
+
+  validate() {
+    for(let alias of this.selectedIcon.aliases) {
+      if (this.aliasName == alias.name) {
+        this.disabledAlias = true;
+        return;
+      }
+    }
+    this.disabledAlias = this.aliasName.length == 0;
+  }
+
+  submitAlias() {
+    var s = this;
+    debugger;
   }
 
 }
