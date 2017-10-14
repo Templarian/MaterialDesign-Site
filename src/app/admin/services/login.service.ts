@@ -7,18 +7,19 @@ import { Router, Route, ActivatedRoute } from '@angular/router';
 export class LoginService {
 
   private url: string;
+  private isMock: boolean;
 
   constructor (
     private http: Http,
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.url = route.snapshot.url.map(m => m.path).join('/')
+    this.url = route.snapshot.url.map(m => m.path).join('/');
+    this.isMock = window.location.href.match(/localhost/) !== null;
   }
 
   login (user: string, pass: string): Promise<boolean> {
-    let isMock = window.location.href.match(/localhost/) !== null;
-    if (isMock) {
+    if (this.isMock) {
         return Promise.resolve(true);
     }
     let body = {
@@ -32,11 +33,10 @@ export class LoginService {
   }
 
   isAuthed (): Promise<boolean> {
-    let isMock = window.location.href.match(/localhost/) !== null;
-    if (isMock) {
+    if (this.isMock) {
         return Promise.resolve(true);
     }
-    return this.http.get('/api/admin/mock.json')
+    return this.http.get('/api/admin')
         .toPromise()
         .then(isAuthed => {
           if (this.url != 'admin'
@@ -49,8 +49,7 @@ export class LoginService {
   }
 
   logout (): Promise<boolean> {
-    let isMock = window.location.href.match(/localhost/) !== null;
-    if (isMock) {
+    if (this.isMock) {
         this.router.navigateByUrl('/admin');
         return Promise.resolve(true);
     }

@@ -13,8 +13,7 @@ export class IconService {
   }
 
   async getIcons(packageId: string): Promise<Icon[]> {
-    var isMock = window.location.href.match(/localhost/) !== null;
-    let res = await this.http.get('/api/package/' + packageId + (isMock ? '/mock.json' : ''))
+    let res = await this.http.get('/api/package/' + packageId + (this.isMock ? '/mock.json' : ''))
       .toPromise();
     return res.json().icons.map(icon => new Icon(icon.name, icon.data));
   }
