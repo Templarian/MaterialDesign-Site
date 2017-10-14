@@ -23,11 +23,12 @@ export class AdminLoginPageComponent {
   }
 
   async ngOnInit () {
-    await this.loginService.isAuthed();
-    // Authed
-    console.log('authed');
+    let isAuthed = await this.loginService.isAuthed();
     // Redirect
-    this.router.navigateByUrl('/admin/icons');
+    if (isAuthed) {
+      console.log('Already logged in... redirecting');
+      this.router.navigateByUrl('/admin/icons');
+    }
   }
 
   async login () {
