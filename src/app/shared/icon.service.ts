@@ -18,6 +18,7 @@ export class IconService {
       .toPromise();
     return res.json().icons.map(r => {
       let icon = new Icon(r.name, r.data);
+      icon.id = r.id;
       r.aliases.map(a => {
         icon.addAlias(new Alias(null, a));
       });
@@ -31,13 +32,33 @@ export class IconService {
         names: names.join(',')
       }
     }).toPromise();
-    return res.json().icons.map(icon => new Icon(icon.name, icon.data));
+    return res.json().icons.map(r => {
+      let icon = new Icon(r.name, r.data);
+      icon.id = r.id;
+      return icon;
+    });
   }
 
   async getIconByName(packageId: string, name: string): Promise<Icon> {
     let res = await this.http.get('/api/package/' + packageId + '/name/' + name + (this.isMock ? '/mock.json' : ''))
       .toPromise();
-    return res.json().map(icon => new Icon (icon.name, icon.data));
+    return res.json().map(r => {
+      let icon = new Icon (r.name, r.data);
+      icon.id = r.id;
+      return icon;
+    });
+  }
+
+  async addAlias(icon: Icon, aliasName: string): Promise<Icon> {
+    let res = await this.http.post('/api/admin/alias', {
+      icon: { id: icon.id },
+      alias: { name: aliasName }
+    }).toPromise();
+    return res.json().map(r => {
+      let icon = new Icon (r.name, r.data);
+      icon.id = r.id;
+      return icon;
+    });
   }
 
 }

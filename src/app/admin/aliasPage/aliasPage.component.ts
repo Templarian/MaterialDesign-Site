@@ -4,6 +4,7 @@ import { Package } from 'app/shared/models/package.model';
 import { IconService } from 'app/shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
 import { Observable } from 'rxjs';
+import { Alias } from 'app/shared/models/alias.model';
 
 @Component({
   selector: 'mdi-admin-alias-page',
@@ -61,8 +62,10 @@ export class AdminAliasPageComponent {
   }
 
   submitAlias() {
-    var s = this;
-    debugger;
+    let r = this.iconService.addAlias(this.selectedIcon, this.aliasName);
+    this.selectedIcon.addAlias(new Alias(null, this.aliasName));
+    this.aliasName = '';
+    this.validate();
   }
 
 }

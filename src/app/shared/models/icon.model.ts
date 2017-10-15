@@ -6,6 +6,7 @@ export class Icon {
   private pathCommand: RegExp;
   private pathValues: RegExp;
 
+  public id: string = null;
   public name: string = null;
   public data: string = null;
   public aliases: Alias[] = [];
