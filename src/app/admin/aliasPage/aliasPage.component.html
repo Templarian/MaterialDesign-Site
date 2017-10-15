@@ -28,6 +28,7 @@
             <div *ngIf="selectedIcon != null">
                 Existing Aliases
                 <div>
+                    <p *ngIf="selectedIcon.aliases.length == 0">No aliases have been assigned.</p>
                     <span *ngFor="let a of selectedIcon.aliases; let i = index">
                         <code>{{a.name}}</code>
                         <span *ngIf="i != selectedIcon.aliases.length - 1">,</span>
