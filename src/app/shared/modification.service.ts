@@ -16,7 +16,7 @@ export class ModificationService {
   }
 
   async getModificationsByType(packageId: string, modifications: ModificationType[]): Promise<Modification[]> {
-    let res = await this.http.get('/api/modification/' + packageId + (this.isMock ? '/mock.json' : ''), {
+    let res = await this.http.get('/api/package/' + packageId + '/modification' + (this.isMock ? '/mock.json' : ''), {
       params: {
         modificationId: modifications.join(',')
       }
