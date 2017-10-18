@@ -52,6 +52,21 @@
                         <button class="btn btn-primary" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>
                     </div>
                 </div>
+                <div>
+                    <h3>Recently Added Aliases</h3>
+                    <table class="table">
+                        <tr>
+                            <th>Icon</th>
+                            <th>Alias</th>
+                            <th>By User</th>
+                        </tr>
+                        <tr *ngFor="let m of modifications">
+                            <td>{{m.icon.name}}</td>
+                            <td>{{m.text}}</td>
+                            <td>{{m.user.name}}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="col-md-6">

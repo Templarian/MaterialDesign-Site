@@ -21,7 +21,7 @@ export class ModificationService {
         modificationId: modifications.join(',')
       }
     }).toPromise();
-    return res.json().icons.map(r => {
+    return res.json().map(r => {
       let modification = new Modification();
       modification.id = r.id;
       modification.modificaitonId = r.modificaitonId;
@@ -32,15 +32,19 @@ export class ModificationService {
       user.github = r.user.github;
       user.twitter = r.user.twitter;
       modification.user = user;
-      let icon = new Icon();
-      icon.id = r.icon.id;
-      icon.name = r.icon.name;
-      icon.data = r.icon.data;
-      icon.user.id = r.icon.user.id;
-      icon.user.name = r.icon.user.name;
-      icon.user.github = r.icon.user.github;
-      icon.user.twitter = r.icon.user.twitter;
-      modification.icon = icon;
+      if (r.icon.id == null) {
+        modification.icon = null;
+      } else {
+        let icon = new Icon();
+        icon.id = r.icon.id;
+        icon.name = r.icon.name;
+        icon.data = r.icon.data;
+        icon.user.id = r.icon.user.id;
+        icon.user.name = r.icon.user.name;
+        icon.user.github = r.icon.user.github;
+        icon.user.twitter = r.icon.user.twitter;
+        modification.icon = icon;
+      }
       modification.iconNameBefore = r.iconNameBefore;
       modification.iconNameAfter = r.iconNameAfter;
       modification.iconDataBefore = r.iconDataBefore;

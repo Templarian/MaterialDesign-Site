@@ -54,8 +54,7 @@ export class AdminAliasPageComponent {
     this.selectedIcon = this.icons[0];
     // Packages
     this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
-      ModificationType.News,
-      ModificationType.WebfontPublished
+      ModificationType.AliasCreated
     ]);
   }
 
