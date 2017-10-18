@@ -34,10 +34,12 @@
 - /contribute/icon-naming
 - /contribute/site
 - /contribute/site/api
+- /build/site
 - /code-of-conduct
   - account-comment Contribute /contribute
   - textbox Icon Naming /contribute/icon-naming
   - web Site /contribute/site
+    - web Last Build /build/site
   - file-tree API /contribute/site/api
     - eye Get List of Packages /contribute/site/api#get-list-of-packages
   - scale-balance Code of Conduct /code-of-conduct
