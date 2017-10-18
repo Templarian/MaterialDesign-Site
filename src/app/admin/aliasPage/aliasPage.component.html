@@ -59,11 +59,13 @@
                             <th>Icon</th>
                             <th>Alias</th>
                             <th>By User</th>
+                            <th>Date</th>
                         </tr>
                         <tr *ngFor="let m of modifications">
                             <td>{{m.icon.name}}</td>
                             <td>{{m.text}}</td>
                             <td>{{m.user.name}}</td>
+                            <td>{{m.date}}</td>
                         </tr>
                     </table>
                 </div>

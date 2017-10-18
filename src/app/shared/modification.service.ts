@@ -39,10 +39,12 @@ export class ModificationService {
         icon.id = r.icon.id;
         icon.name = r.icon.name;
         icon.data = r.icon.data;
-        icon.user.id = r.icon.user.id;
-        icon.user.name = r.icon.user.name;
-        icon.user.github = r.icon.user.github;
-        icon.user.twitter = r.icon.user.twitter;
+        let user = new User();
+        user.id = r.icon.user.id;
+        user.name = r.icon.user.name;
+        user.github = r.icon.user.github;
+        user.twitter = r.icon.user.twitter;
+        icon.user = user;
         modification.icon = icon;
       }
       modification.iconNameBefore = r.iconNameBefore;
