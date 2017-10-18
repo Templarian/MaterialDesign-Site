@@ -1,4 +1,5 @@
 import { Alias } from "app/shared/models/alias.model";
+import { User } from "app/shared/models/user.model";
 
 export class Icon {
 
@@ -9,6 +10,7 @@ export class Icon {
   public id: string = null;
   public name: string = null;
   public data: string = null;
+  public user: User = null;
   public aliases: Alias[] = [];
 
   constructor(name?: string, data?: string) {

@@ -22,15 +22,17 @@
     "@angular/platform-browser-dynamic": "^4.1.x",
     "@angular/router": "^4.1.x",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.15",
-    "bootstrap": "^4.0.0-alpha.5",
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.0.x",
+    "popper.js": "^1.11.0",
     "core-js": "^2.4.1",
     "remarkable": "^1.7.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.1",
-    "@angular/compiler-cli": "^4.1.x",
+    "@angular/cli": "1.5.0-rc.0",
+    "@angular/compiler-cli": "^4.4.5",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.60",
     "codelyzer": "~2.0.0",
@@ -45,6 +47,6 @@
     "protractor": "~5.1.x",
     "ts-node": "1.2.1",
     "tslint": "^4.5.x",
-    "typescript": "~2.1.x"
+    "typescript": "^2.5.3"
   }
 }

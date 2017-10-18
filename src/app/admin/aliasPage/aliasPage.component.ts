@@ -5,6 +5,9 @@ import { IconService } from 'app/shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
 import { Observable } from 'rxjs';
 import { Alias } from 'app/shared/models/alias.model';
+import { Modification } from 'app/shared/models/modification.model';
+import { ModificationService } from 'app/shared/modification.service';
+import { ModificationType } from 'app/shared/enums/modificationType.enum';
 
 @Component({
   selector: 'mdi-admin-alias-page',
@@ -12,7 +15,8 @@ import { Alias } from 'app/shared/models/alias.model';
   styleUrls: ['./aliasPage.component.scss'],
   providers: [
     LoginService,
-    IconService
+    IconService,
+    ModificationService
   ]
 })
 export class AdminAliasPageComponent {
@@ -22,12 +26,14 @@ export class AdminAliasPageComponent {
   public icons: Icon[];
   public selectedIcon: Icon = null;
   public aliasName: string = '';
+  public modifications: Modification[] = [];
 
   public disabledAlias: boolean = true;
 
   constructor(
     private loginService: LoginService,
-    private iconService: IconService
+    private iconService: IconService,
+    private modificationService: ModificationService
   ) {
     this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
     this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
@@ -43,8 +49,14 @@ export class AdminAliasPageComponent {
   }
 
   async selectPackage() {
+    // Icons
     this.icons = await this.iconService.getIcons(this.selectedPackage.id);
     this.selectedIcon = this.icons[0];
+    // Packages
+    this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
+      ModificationType.News,
+      ModificationType.WebfontPublished
+    ]);
   }
 
   selectIcon() {
