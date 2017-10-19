@@ -35,6 +35,7 @@ import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
+import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 
 const appRoutes: Routes = [
   {
@@ -238,6 +239,10 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'history',
+    component: HistoryPageComponent
+  },
+  {
     path: 'resources',
     component: ResourcesPageComponent
   },
@@ -267,6 +272,7 @@ const appRoutes: Routes = [
     ViewerPageComponent,
     ResourcesPageComponent,
     DownloadPageComponent,
+    HistoryPageComponent,
     AdminLoginPageComponent,
     AdminIconsPageComponent,
     AdminAliasPageComponent,
