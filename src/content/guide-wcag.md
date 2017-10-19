@@ -42,7 +42,7 @@ imagine the `desc` tag as the `alt` attribute on an `img` element. It's not just
 ``` html
 <svg version="1.1" viewBox="0 0 24 24" aria-labelledby="svg-title" aria-describedby="svg-desc">
   <title id="svg-title">Chevron pointing down</title>
-  <decs id="svg-desc">Press the spacebar or enter key to expand the content.</desc>
+  <desc id="svg-desc">Press the spacebar or enter key to expand the content.</desc>
   <path fill="black" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 </svg>
 ```
@@ -54,7 +54,7 @@ In order to cover all bases, let's include the `role` attribute with a value of 
 ``` html
 <svg version="1.1" viewBox="0 0 24 24" role="img" aria-labelledby="svg-title" aria-describedby="svg-desc">
   <title id="svg-title">Chevron pointing down</title>
-  <decs id="svg-desc">Press the spacebar or enter key to expand the content.</desc>
+  <desc id="svg-desc">Press the spacebar or enter key to expand the content.</desc>
   <path fill="black" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
 </svg>
 ```
