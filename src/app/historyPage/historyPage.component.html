@@ -2,19 +2,53 @@
 <div class="container-fluid mt-3">
     <div class="row">
         <div class="col-md-8">
-            <div class="card">
-                <div class="container-fluid">
-                    <div class="row">
+            <div class="container-fluid history">
+                <div class="history-item" *ngFor="let m of modifications" [ngSwitch]="m.modificaitonId">
+                    <div class="row" *ngSwitchCase="modificationType.News">
+                        <div class="col-1">User</div>
+                        <div class="col-1">Icon</div>
+                        <div class="col-6">Text</div>
+                        <div class="col-8 text-right">News Template</div>
+                    </div>
+                    <div class="row" *ngSwitchCase="modificationType.WebfontPublished">
+                        <div class="col-1">User</div>
+                        <div class="col-1">Icon</div>
+                        <div class="col-6">Text</div>
+                        <div class="col-8 text-right">Webfont Released Template</div>
+                    </div>
+                    <div class="row" *ngSwitchCase="modificationType.IconCreated">
+                        <div class="col-1">User</div>
+                        <div class="col-1">Icon</div>
+                        <div class="col-6">Text</div>
+                        <div class="col-8 text-right">Icon Created Template</div>
+                    </div>
+                    <div class="row" *ngSwitchCase="modificationType.IconRenamed">
+                        <div class="col-1">User</div>
+                        <div class="col-1">Icon</div>
+                        <div class="col-6">Text</div>
+                        <div class="col-8 text-right">Icon Renamed Template</div>
+                    </div>
+                    <div class="row" *ngSwitchCase="modificationType.IconModified">
                         <div class="col-1">User</div>
                         <div class="col-1">Icon</div>
                         <div class="col-6">Text</div>
                         <div class="col-8 text-right"></div>
                     </div>
-                    <div class="row">
+                    <div class="row" *ngSwitchCase="modificationType.IconDeleted">
                         <div class="col-1">User</div>
                         <div class="col-1">Icon</div>
                         <div class="col-6">Text</div>
-                        <div class="col-8 text-right"></div>
+                        <div class="col-8 text-right">Icon Deleted Template</div>
+                    </div>
+                    <div class="row" *ngSwitchCase="modificationType.AliasCreated">
+                        <div class="col-1">User</div>
+                        <div class="col-1">
+                            <svg viewBox="0 0 24 24">
+                                <path [attr.d]="m.icon.data"></path>
+                            </svg>
+                        </div>
+                        <div class="col-7">Added alias <code>{{m.text}}</code> to icon <code>{{m.icon.name}}</code></div>
+                        <div class="col-3 text-right">Alias Created Template</div>
                     </div>
                 </div>
             </div>
@@ -28,9 +62,7 @@
                     </h4>
                 </div>
                 <div class="list-group ml-2 mb-2 mr-2">
-                    <button *ngFor="let m of modificationTypes"
-                        [ngClass]="{ 'active': m.selected }"
-                        type="button" class="list-group-item list-group-item-action"
+                    <button *ngFor="let m of modificationTypes" [ngClass]="{ 'active': m.selected }" type="button" class="list-group-item list-group-item-action"
                         (click)="toggle(m)">
                         <span class="icon">
                             <mdi-icon [name]="m.selected ? 'checkbox-marked' : 'checkbox-blank-outline'"></mdi-icon>

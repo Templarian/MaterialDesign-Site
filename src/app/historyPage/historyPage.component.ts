@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'mdi-history-page',
@@ -15,55 +16,55 @@ export class HistoryPageComponent {
   title: string = 'History';
 
   constructor(
-    private modificationService: ModificationService
+    private modificationService: ModificationService,
+    private route: ActivatedRoute
   ) {}
 
-  modifications: Modification[];
+  modifications: Modification[] = [];
+  modificationType = ModificationType;
 
   modificationTypes: SelectModfiicationType[] = [{
     name: 'News',
-    icon: 'news',
     modificationType: ModificationType.News,
     selected: true
   }, {
-    name: 'Webfont Released',
-    icon: 'format-font',
+    name: 'Webfont Published',
     modificationType: ModificationType.WebfontPublished,
     selected: true
   }, {
     name: 'Icon Created',
-    icon: 'new',
     modificationType: ModificationType.IconCreated,
     selected: true
   }, {
     name: 'Icon Modified',
-    icon: '',
     modificationType: ModificationType.IconModified,
     selected: true
   }, {
     name: 'Icon Renamed',
-    icon: '',
     modificationType: ModificationType.IconRenamed,
     selected: true
   }, {
-    name: 'Icon Modified',
-    icon: '',
+    name: 'Icon Deleted',
     modificationType: ModificationType.IconDeleted,
     selected: true
   }, {
     name: 'Alias Created',
-    icon: '',
     modificationType: ModificationType.AliasCreated,
     selected: false
   }];
 
   async ngOnInit() {
-    //this.modifications = await this.modificationService.getModificationsByType('', []);
     let mods: string[] = [];
+    await this.toggle();
   }
 
-  async toggle (modificationType: SelectModfiicationType) {
-    modificationType.selected = !modificationType.selected;
+  async toggle (modificationType?: SelectModfiicationType) {
+    if (modificationType) {
+      modificationType.selected = !modificationType.selected;
+    }
+    let packageId = this.route.snapshot.data['package'];
+    let mods = this.modificationTypes.filter(m => m.selected).map(m => m.modificationType);
+    this.modifications = await this.modificationService.getModificationsByType(packageId, mods);
   }
   
 }
@@ -72,5 +73,4 @@ class SelectModfiicationType {
   public name: string;
   public modificationType: ModificationType;
   public selected: boolean = false;
-  public icon: string;
 }

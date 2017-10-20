@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -36,6 +36,8 @@ import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
 import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
 
 const appRoutes: Routes = [
   {
@@ -240,7 +242,10 @@ const appRoutes: Routes = [
   },
   {
     path: 'history',
-    component: HistoryPageComponent
+    component: HistoryPageComponent,
+    data: {
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
   },
   {
     path: 'resources',
@@ -286,13 +291,15 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [
-    // None
-  ],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: MockInterceptor,
+    multi: true,
+  }],
   bootstrap: [
     AppComponent
   ]

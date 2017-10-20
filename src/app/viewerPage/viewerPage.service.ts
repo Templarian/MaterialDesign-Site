@@ -1,6 +1,6 @@
-import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable }     from 'rxjs/Observable';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 import { Sidebar } from './sidebar/sidebar.model';
 import { SidebarItem } from './sidebar/sidebarItem.model';
@@ -8,29 +8,28 @@ import { SidebarItem } from './sidebar/sidebarItem.model';
 @Injectable()
 export class ViewerService {
 
-  constructor (private http: Http) {}
+  constructor(private http: HttpClient) { }
 
-  getMarkdownFileHtml (markdownFile: string): Observable<string> {
-    return this.http.get(markdownFile)
-                    .map(res => this.extractData(res))
-                    .catch(this.handleError);
+  getMarkdownFileHtml(markdownFile: string): Observable<string> {
+    return this.http.get(markdownFile, {
+      responseType: 'text'
+    }).map(res => this.extractData(res));
   }
 
-  private extractData(res: Response) {
-    let text = res.text();
+  private extractData(text: string) {
     text = text.replace('{{version}}', '2.0.46');
     return text;
   }
 
-  getSidebar () {
-    return this.http.get('content/sidebar.md')
-                    .map(res => this.processSidebar(res))
-                    .catch(this.handleError);
+  getSidebar() {
+    return this.http.get('content/sidebar.md', {
+      responseType: 'text'
+    }).map(res => this.processSidebar(res));
   }
 
   private sidebars: Sidebar[] = [];
 
-  private getSidebarByUrl (baseUrl): Sidebar {
+  private getSidebarByUrl(baseUrl): Sidebar {
     let sidebar = this.sidebars.find(sidebar => {
       return sidebar.url == baseUrl;
     });
@@ -43,8 +42,8 @@ export class ViewerService {
     }
   };
 
-  private processSidebar (res: Response): Sidebar[] {
-    var lines = res.text().split(/\r?\n/);
+  private processSidebar(text: string): Sidebar[] {
+    var lines = text.split(/\r?\n/);
     var baseUrls: string[] = [];
     var self = this;
     var clearNext = true;
@@ -86,20 +85,6 @@ export class ViewerService {
       }
     });
     return this.sidebars;
-  }
-
-  private handleError (error: Response | any) {
-    // In a real world app, we might use a remote logging infrastructure
-    let errMsg: string;
-    if (error instanceof Response) {
-      const body = error.json() || '';
-      const err = body.error || JSON.stringify(body);
-      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-    } else {
-      errMsg = error.message ? error.message : error.toString();
-    }
-    console.error(errMsg);
-    return Observable.throw(errMsg);
   }
 
 }

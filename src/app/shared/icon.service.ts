@@ -1,64 +1,44 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { HttpClient, HttpParams } from '@angular/common/http';
+
 import { Icon } from 'app/shared/models/icon.model';
 import { Alias } from 'app/shared/models/alias.model';
+import { Package } from 'app/shared/models/package.model';
 
 @Injectable()
 export class IconService {
 
-  private isMock: boolean;
-
-  constructor(private http: Http) {
-    this.isMock = window.location.href.match(/localhost/) !== null;
-  }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   async getIcons(packageId: string): Promise<Icon[]> {
-    let res = await this.http.get('/api/package/' + packageId + (this.isMock ? '/mock.json' : ''))
+    let res = await this.http.get<Package>('/api/package/' + packageId)
       .toPromise();
-    return res.json().icons.map(r => {
-      let icon = new Icon(r.name, r.data);
-      icon.id = r.id;
-      r.aliases.map(a => {
-        icon.addAlias(new Alias(null, a));
-      });
-      return icon;
-    });
+    return res.icons;
   }
 
   async getIconsByName(packageId: string, names: string[]): Promise<Icon[]> {
-    let res = await this.http.get('/api/package/' + packageId + (this.isMock ? '/mock.json' : ''), {
-      params: {
-        names: names.join(',')
-      }
+    let res = await this.http.get<Package>('/api/package/' + packageId, {
+      params: (new HttpParams())
+        .set('names', names.join(','))
     }).toPromise();
-    return res.json().icons.map(r => {
-      let icon = new Icon(r.name, r.data);
-      icon.id = r.id;
-      return icon;
-    });
+    return res.icons;
   }
 
   async getIconByName(packageId: string, name: string): Promise<Icon> {
-    let res = await this.http.get('/api/package/' + packageId + '/name/' + name + (this.isMock ? '/mock.json' : ''))
+    let res = await this.http.get<Icon>('/api/package/' + packageId + '/name/' + name)
       .toPromise();
-    return res.json().map(r => {
-      let icon = new Icon (r.name, r.data);
-      icon.id = r.id;
-      return icon;
-    });
+    return res;
   }
 
   async addAlias(icon: Icon, aliasName: string): Promise<Icon> {
-    let res = await this.http.post('/api/admin/alias', {
+    let res = await this.http.post<Icon>('/api/admin/alias', {
       icon: { id: icon.id },
       alias: { name: aliasName }
     }).toPromise();
-    return res.json().map(r => {
-      let icon = new Icon (r.name, r.data);
-      icon.id = r.id;
-      return icon;
-    });
+    return res;
   }
 
 }

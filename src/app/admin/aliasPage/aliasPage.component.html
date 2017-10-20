@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card p-3">
-                <h2>Alias Form</h2>
+                <h2>Alias Form <span class="text-danger">(disabled)</span></h2>
                 <div>
                     <label>
                         <span class="d-block">Package</span>
@@ -49,7 +49,7 @@
                         <input type="text" class="form-control" [(ngModel)]="aliasName" (keyup)="validate()" />
                     </div>
                     <div>
-                        <button class="btn btn-primary" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>
+                        <!--<button class="btn btn-primary" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>-->
                     </div>
                 </div>
                 <div>
