@@ -1,9 +1,44 @@
 <mdi-banner [title]="title" [carbon]="true"></mdi-banner>
-<div class="row">
-    <div class="col-md-8">
-        Placeholder Left
-    </div>
-    <div class="col-md-4">
-        Placeholder Right
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-1">User</div>
+                        <div class="col-1">Icon</div>
+                        <div class="col-6">Text</div>
+                        <div class="col-8 text-right"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">User</div>
+                        <div class="col-1">Icon</div>
+                        <div class="col-6">Text</div>
+                        <div class="col-8 text-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-0">
+                        <mdi-icon name="filter"></mdi-icon>
+                        Filter
+                    </h4>
+                </div>
+                <div class="list-group ml-2 mb-2 mr-2">
+                    <button *ngFor="let m of modificationTypes"
+                        [ngClass]="{ 'active': m.selected }"
+                        type="button" class="list-group-item list-group-item-action"
+                        (click)="toggle(m)">
+                        <span class="icon">
+                            <mdi-icon [name]="m.selected ? 'checkbox-marked' : 'checkbox-blank-outline'"></mdi-icon>
+                        </span>
+                        {{m.name}}
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

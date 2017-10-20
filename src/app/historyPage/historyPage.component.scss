@@ -1,3 +1,45 @@
 :host {
-    
+    h4 {
+        /deep/ {
+            svg {
+                margin-bottom: -3px;
+                path {
+                    fill: #495057;
+                }
+            }
+        }
+    }
+    .list-group {
+
+        /deep/ {
+            svg {
+                path {
+                    fill: #495057;
+                }
+            }
+        }
+
+        .icon {
+            padding: 6px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 36px;
+            height: 36px;
+            margin-left: -10px;
+            margin-right: 6px;
+        }
+
+        .list-group-item:focus,
+        .list-group-item.active:focus {
+            outline: none;
+            box-shadow: 0 0 3px rgba(0, 123, 255, 0.6);
+            z-index: 3;
+        }
+
+        .list-group-item.active {
+            background: #FFF;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            color: #495057;
+        }
+    }
 }
