@@ -13,10 +13,12 @@ export class ModificationService {
   constructor(private http: HttpClient) {
   }
 
-  async getModificationsByType(packageId: string, modifications: ModificationType[]): Promise<Modification[]> {
+  async getModificationsByType(packageId: string, modifications: ModificationType[], page: number = 1, size: number = 100): Promise<Modification[]> {
     let res = await this.http.get<Modification[]>('/api/package/' + packageId + '/modification', {
       params: (new HttpParams())
         .set('modificationId', modifications.join(','))
+        .set('page', page.toString())
+        .set('size', size.toString())
     });
     return res.toPromise();
   }
