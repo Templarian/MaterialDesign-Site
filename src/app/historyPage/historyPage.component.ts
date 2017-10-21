@@ -20,7 +20,7 @@ export class HistoryPageComponent {
     private route: ActivatedRoute
   ) {}
 
-  modifications: Modification[] = [];
+  modificationsByDate: GroupByDateModification[] = [];
   modificationType = ModificationType;
 
   modificationTypes: SelectModfiicationType[] = [{
@@ -64,7 +64,22 @@ export class HistoryPageComponent {
     }
     let packageId = this.route.snapshot.data['package'];
     let mods = this.modificationTypes.filter(m => m.selected).map(m => m.modificationType);
-    this.modifications = await this.modificationService.getModificationsByType(packageId, mods, 1, 100);
+    let modifications = await this.modificationService.getModificationsByType(packageId, mods, 1, 100);
+    let currentDate = '';
+    for (let m of modifications) {
+      if (currentDate != this.friendlyDate(new Date(m.date))) {
+        currentDate = this.friendlyDate(new Date(m.date));
+        this.modificationsByDate.push(new GroupByDateModification(currentDate));
+      }
+      this.modificationsByDate[this.modificationsByDate.length - 1].modifications.push(m);
+    }
+
+  }
+
+  friendlyDate (date: Date) {
+    let months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    let day: string[] = ['Saturday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sunday'];
+    return day[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
   }
   
 }
@@ -73,4 +88,11 @@ class SelectModfiicationType {
   public name: string;
   public modificationType: ModificationType;
   public selected: boolean = false;
+}
+
+class GroupByDateModification {
+  constructor (
+    public date: string
+  ) {}
+  public modifications: Modification[] = [];
 }

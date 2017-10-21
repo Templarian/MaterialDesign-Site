@@ -1,4 +1,12 @@
 :host {
+    h2 {
+        color: #FFF;
+        font-weight: normal;
+        font-size: 20px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
     h4 {
         /deep/ {
             svg {
@@ -57,6 +65,62 @@
 
             &:last-child {
                 border-radius: 0 0 4px 4px;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            }
+
+            .photo {
+                display: inline-block;
+                vertical-align: top;
+                border-radius: 24px;
+                overflow: hidden;
+                margin: 6px;
+
+                /deep/ {
+                    img {
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+            }
+
+            .icon {
+                display: inline-block;
+                padding: 6px 6px 6px 0;
+                vertical-align: top;
+                width: 48px;
+                height: 48px;
+
+                /deep/ {
+                    svg {
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+            }
+
+            .text {
+                display: inline-block;
+                margin-left: 14px;
+                code {
+                    background-color: rgba(0, 0, 0, 0.08);
+                }
+                span {
+                    display: block;
+                    margin-top: 8px;
+                }
+                small {
+                    display: block;
+                    color: #555;
+                }
+            }
+
+            .actions {
+                float: right;
+                margin-right: 10px;
+                margin-top: 15px;
             }
         }
     }

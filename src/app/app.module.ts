@@ -38,6 +38,7 @@ import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component
 import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
+import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
 
 const appRoutes: Routes = [
   {
@@ -283,6 +284,7 @@ const appRoutes: Routes = [
     AdminAliasPageComponent,
     NotFoundPageComponent,
     IconComponent,
+    UserComponent,
     HeaderComponent,
     FooterComponent,
     BannerComponent,
