@@ -47,6 +47,7 @@ Material Design Icons (MDI) contains many helper classes to quickly modify the l
 ```html
 <span class="mdi mdi-account mdi-flip-h"></span>
 ```
+> **Note:** `mdi-flip-*` and `mdi-rotate-*` classes cannot be used on the same element at the same time.
 
 ### Spin (v1.9.32+)
 

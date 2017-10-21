@@ -12,7 +12,7 @@ Example here for the directive.
 
 ## Angular Material
 
-The `mdi.svg` contains all the icons provided on the site. Use inline with $mdIconProvider.
+The `mdi.svg` file contains all the icons provided on the site. Use inline with $mdIconProvider.
 
 ```js
 app.config(function($mdIconProvider) {
