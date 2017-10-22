@@ -6,65 +6,103 @@
                 <h2>Changes on {{date.date}}</h2>
                 <div class="container-fluid history">
                     <div class="history-item" *ngFor="let m of date.modifications" [ngSwitch]="m.modificaitonId">
-                        <div class="row" *ngSwitchCase="modificationType.News">
-                            <div class="col-1">User</div>
-                            <div class="col-1">
-                                <svg viewBox="0 0 24 24">
-                                    <path [attr.d]="m.icon.data"></path>
-                                </svg>
+                        <div *ngSwitchCase="modificationType.News">
+                            <div class="photo">
+                                <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </div>
-                            <div class="col-6">Text</div>
-                            <div class="col-8 text-right">News Template</div>
+                            <div class="icon">
+                                <mdi-icon name="news"></mdi-icon>
+                            </div>
+                            <div class="text">
+                                <span>{{m.text}}</span>
+                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                            </div>
+                            <div class="actions">
+                                News
+                            </div>
                         </div>
-                        <div class="row" *ngSwitchCase="modificationType.WebfontPublished">
-                            <div class="col-1">User</div>
-                            <div class="col-1">
-                                <svg viewBox="0 0 24 24">
-                                    <path [attr.d]="m.icon.data"></path>
-                                </svg>
+                        <div *ngSwitchCase="modificationType.WebfontPublished">
+                            <div class="photo">
+                                <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </div>
-                            <div class="col-6">Text</div>
-                            <div class="col-8 text-right">Webfont Released Template</div>
+                            <div class="icon">
+                                <mdi-icon name="news"></mdi-icon>
+                            </div>
+                            <div class="text">
+                                <span>{{m.text}}</span>
+                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                            </div>
+                            <div class="actions">
+                                News
+                            </div>
                         </div>
-                        <div class="row" *ngSwitchCase="modificationType.IconCreated">
-                            <div class="col-1">User</div>
-                            <div class="col-1">
+                        <div *ngSwitchCase="modificationType.IconCreated">
+                            <div class="photo">
+                                <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
+                            </div>
+                            <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
-                            <div class="col-6">Text</div>
-                            <div class="col-8 text-right">Icon Created Template</div>
+                            <div class="text">
+                                <span>Icon <code>{{m.icon.name}}</code> created.</span>
+                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-secondary btn-sm">Report</button>
+                            </div>
                         </div>
-                        <div class="row" *ngSwitchCase="modificationType.IconRenamed">
-                            <div class="col-1">User</div>
-                            <div class="col-1">
+                        <div  *ngSwitchCase="modificationType.IconRenamed">
+                            <div class="photo">
+                                <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
+                            </div>
+                            <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
-                            <div class="col-6">Text</div>
-                            <div class="col-8 text-right">Icon Renamed Template</div>
+                            <div class="text">
+                                <span>Icon <code>{{m.icon.name}}</code> renamed to <code>test</code></span>
+                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-secondary btn-sm">Report</button>
+                            </div>
                         </div>
-                        <div class="row" *ngSwitchCase="modificationType.IconModified">
-                            <div class="col-1">User</div>
-                            <div class="col-1">
+                        <div  *ngSwitchCase="modificationType.IconModified">
+                            <div class="photo">
+                                <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
+                            </div>
+                            <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
-                            <div class="col-6">Text</div>
-                            <div class="col-8 text-right"></div>
+                            <div class="text">
+                                <span>Icon <code>{{m.icon.name}}</code> Modified</span>
+                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-secondary btn-sm">Report</button>
+                            </div>
                         </div>
-                        <div class="row" *ngSwitchCase="modificationType.IconDeleted">
-                            <div class="col-1">User</div>
-                            <div class="col-1">
+                        <div  *ngSwitchCase="modificationType.IconDeleted">
+                            <div class="photo">
+                                <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
+                            </div>
+                            <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
-                            <div class="col-6">Text</div>
-                            <div class="col-8 text-right">Icon Deleted Template</div>
+                            <div class="text">
+                                <span>Icon Deleted <code>{{m.icon.name}}</code> {{m.text}}</span>
+                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
+                            </div>
+                            <div class="actions">
+                                <button class="btn btn-secondary btn-sm">Report</button>
+                            </div>
                         </div>
                         <div *ngSwitchCase="modificationType.AliasCreated">
                             <div class="photo">
@@ -80,7 +118,7 @@
                                     <code>{{m.text}}</code> to icon
                                     <code>{{m.icon.name}}</code>
                                 </span>
-                                <small>at 3:30am by {{m.user.name}}</small>
+                                <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
                                 <button class="btn btn-secondary btn-sm">Report</button>

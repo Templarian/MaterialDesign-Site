@@ -22,10 +22,12 @@
     "@angular/platform-browser-dynamic": "^4.1.x",
     "@angular/router": "^4.1.x",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.15",
+    "@ngrx/store": "^4.1.0",
+    "@ngx-cache/core": "^4.0.1",
     "bootstrap": "^4.0.0-beta",
+    "core-js": "^2.4.1",
     "jquery": "^3.0.x",
     "popper.js": "^1.11.0",
-    "core-js": "^2.4.1",
     "remarkable": "^1.7.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"

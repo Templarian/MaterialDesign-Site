@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
+import { CacheModule } from '@ngx-cache/core';
 
 // Statics
 import 'rxjs/add/observable/throw';
@@ -39,6 +40,7 @@ import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
 import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
+import { CacheService } from 'app/shared/cache.service';
 
 const appRoutes: Routes = [
   {
@@ -294,6 +296,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    CacheModule.forRoot(),
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
@@ -301,7 +304,8 @@ const appRoutes: Routes = [
     provide: HTTP_INTERCEPTORS,
     useClass: MockInterceptor,
     multi: true,
-  }],
+  },
+  CacheService],
   bootstrap: [
     AppComponent
   ]
