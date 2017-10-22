@@ -62,6 +62,7 @@ export class HistoryPageComponent {
     if (modificationType) {
       modificationType.selected = !modificationType.selected;
     }
+    this.modificationsByDate = [];
     let packageId = this.route.snapshot.data['package'];
     let mods = this.modificationTypes.filter(m => m.selected).map(m => m.modificationType);
     let modifications = await this.modificationService.getModificationsByType(packageId, mods, 1, 100);

@@ -11,20 +11,19 @@ export class UserService {
     private http: HttpClient
   ) { }
 
-  private cache: User[] = [];
-
   async getUser(userId: string): Promise<User> {
-    //if (this.cache.filter(x => x.id == userId).length > 0) {
-    //  return this.cache.filter(x => x.id == userId)[0];
-    //}
+    try {
     let res = await this.http.get<User>('/api/user/' + userId)
-      .map(user => {
-          user.base64 = 'data:image/png;base64,' + user.base64;
-          return user;
+      .map(u => {
+          u.base64 = 'data:image/png;base64,' + u.base64;
+          return u;
       })
       .toPromise();
-    //this.cache.push(res);
-    return res;
+      return res;
+    } catch (e) {
+      console.dir(e);
+    }
+    
   }
 
 }
