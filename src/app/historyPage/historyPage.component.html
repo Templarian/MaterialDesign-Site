@@ -2,7 +2,7 @@
 <div class="container-fluid mt-3">
     <div class="row">
         <div class="col-md-8">
-            <div *ngFor="let date of modificationsByDate">
+            <div class="date-group" *ngFor="let date of modificationsByDate">
                 <h2>Changes on {{date.date}}</h2>
                 <div class="container-fluid history">
                     <div class="history-item" *ngFor="let m of date.modifications" [ngSwitch]="m.modificaitonId">
