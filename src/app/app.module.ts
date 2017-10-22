@@ -42,6 +42,7 @@ import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
 import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
 import { CacheService, CACHE } from '@ngx-cache/core';
 import { BrowserCacheModule, MemoryCacheService } from '@ngx-cache/platform-browser';
+import { PromiseCacheService } from 'app/shared/promiseCache.service';
 
 const appRoutes: Routes = [
   {
@@ -311,7 +312,7 @@ const appRoutes: Routes = [
     provide: HTTP_INTERCEPTORS,
     useClass: MockInterceptor,
     multi: true,
-  }],
+  }, PromiseCacheService],
   bootstrap: [
     AppComponent
   ]
