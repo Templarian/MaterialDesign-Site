@@ -5,6 +5,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Icon } from 'app/shared/models/icon.model';
 import { Alias } from 'app/shared/models/alias.model';
 import { Package } from 'app/shared/models/package.model';
+import { PromiseCache, CacheParam } from 'app/shared/promiseCache.decorator';
 
 @Injectable()
 export class IconService {
@@ -13,7 +14,8 @@ export class IconService {
     private http: HttpClient
   ) { }
 
-  async getIcons(packageId: string): Promise<Icon[]> {
+  @PromiseCache()
+  async getIcons(@CacheParam packageId: string): Promise<Icon[]> {
     let res = await this.http.get<Package>('/api/package/' + packageId)
       .toPromise();
     return res.icons;

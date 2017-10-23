@@ -10,8 +10,9 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 @Injectable()
 export class ModificationService {
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   async getModificationsByType(packageId: string, modifications: ModificationType[], page: number = 1, size: number = 100): Promise<Modification[]> {
     let res = await this.http.get<Modification[]>('/api/package/' + packageId + '/modification', {

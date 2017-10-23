@@ -52,7 +52,7 @@ export class AdminAliasPageComponent {
     // Icons
     this.icons = await this.iconService.getIcons(this.selectedPackage.id);
     this.selectedIcon = this.icons[0];
-    // Packages
+    // Aliases
     this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
       ModificationType.AliasCreated
     ]);
@@ -72,11 +72,15 @@ export class AdminAliasPageComponent {
     this.disabledAlias = this.aliasName.length == 0;
   }
 
-  submitAlias() {
-    let r = this.iconService.addAlias(this.selectedIcon, this.aliasName);
+  async submitAlias() {
+    await this.iconService.addAlias(this.selectedIcon, this.aliasName);
     this.selectedIcon.addAlias(new Alias(null, this.aliasName));
     this.aliasName = '';
     this.validate();
+    // Aliases
+    this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
+      ModificationType.AliasCreated
+    ]);
   }
 
 }
