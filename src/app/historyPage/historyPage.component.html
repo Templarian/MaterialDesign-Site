@@ -11,12 +11,9 @@
                                 <br/>
                                 <small>@{{m.user.github}}</small>
                             </ng-template>
-                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="icon">
-                                <mdi-icon name="news"></mdi-icon>
-                            </div>
                             <div class="text">
                                 <span>{{m.text}}</span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
@@ -30,12 +27,9 @@
                                 <br/>
                                 <small>@{{m.user.github}}</small>
                             </ng-template>
-                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="icon">
-                                <mdi-icon name="news"></mdi-icon>
-                            </div>
                             <div class="text">
                                 <span>{{m.text}}</span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
@@ -49,7 +43,7 @@
                                 <br/>
                                 <small>@{{m.user.github}}</small>
                             </ng-template>
-                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
                             <div class="icon">
@@ -71,7 +65,7 @@
                                 <br/>
                                 <small>@{{m.user.github}}</small>
                             </ng-template>
-                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
                             <div class="icon">
@@ -95,14 +89,19 @@
                                 <br/>
                                 <small>@{{m.user.github}}</small>
                             </ng-template>
-                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
-                                    <path [attr.d]="m.icon.data"></path>
+                                    <path fill="rgba(0, 0, 0, 0.5)" [attr.d]="m.dataBefore"></path>
                                 </svg>
                             </div>
+                            <div class="icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path [attr.d]="m.dataAfter"></path>
+                                    </svg>
+                                </div>
                             <div class="text">
                                 <span>Icon
                                     <code>{{m.icon.name}}</code> Modified</span>
@@ -117,7 +116,7 @@
                                 <br/>
                                 <small>@{{m.user.github}}</small>
                             </ng-template>
-                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
                             <div class="icon">
@@ -139,7 +138,7 @@
                                 <br/>
                                 <small>@{{m.user.github}}</small>
                             </ng-template>
-                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
                             <div class="icon">
