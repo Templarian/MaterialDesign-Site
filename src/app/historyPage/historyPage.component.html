@@ -19,7 +19,9 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                News
+                                <span class="label">
+                                    News
+                                </span>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.WebfontPublished">
@@ -35,7 +37,9 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                Webfont
+                                <span class="label">
+                                    Webfont
+                                </span>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconCreated">
@@ -57,7 +61,9 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <button class="btn btn-secondary btn-sm">Report</button>
+                                <a target="_blank"
+                                    [attr.href]="friendlyReport(m)"
+                                    class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconRenamed">
@@ -81,7 +87,9 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <button class="btn btn-secondary btn-sm">Report</button>
+                                <a target="_blank"
+                                    [attr.href]="friendlyReport(m)"
+                                    class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconModified">
@@ -108,7 +116,9 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <button class="btn btn-secondary btn-sm">Report</button>
+                                <a target="_blank"
+                                    [attr.href]="friendlyReport(m)"
+                                    class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconDeleted">
@@ -130,7 +140,9 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <button class="btn btn-secondary btn-sm">Report</button>
+                                <a target="_blank"
+                                    [attr.href]="friendlyReport(m)"
+                                    class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.AliasCreated">
@@ -154,7 +166,9 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <button class="btn btn-secondary btn-sm">Report</button>
+                                <a target="_blank"
+                                    [attr.href]="friendlyReport(m)"
+                                    class="btn btn-secondary btn-sm">Report</a>
                             </div>
                         </div>
                     </div>
