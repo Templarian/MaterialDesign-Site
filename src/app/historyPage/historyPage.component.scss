@@ -123,11 +123,11 @@
                 code {
                     background-color: rgba(0, 0, 0, 0.08);
                 }
-                span {
+                > span {
                     display: block;
                     margin-top: 8px;
                 }
-                small {
+                > small {
                     display: block;
                     color: #555;
                 }
