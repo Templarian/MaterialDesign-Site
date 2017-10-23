@@ -6,12 +6,14 @@ import { Icon } from 'app/shared/models/icon.model';
 import { Alias } from 'app/shared/models/alias.model';
 import { Package } from 'app/shared/models/package.model';
 import { PromiseCache, CacheParam } from 'app/shared/promiseCache.decorator';
+import { PromiseCacheService } from 'app/shared/promiseCache.service';
 
 @Injectable()
 export class IconService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private promiseCacheService: PromiseCacheService
   ) { }
 
   @PromiseCache()
