@@ -14,8 +14,8 @@
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="text">
-                                <span>{{m.text}}</span>
+                            <div class="text-content">
+                                <span [innerHtml]="m.text"></span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
@@ -30,8 +30,8 @@
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="text">
-                                <span>{{m.text}}</span>
+                            <div class="text-content">
+                                <span [innerHtml]="m.text"></span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
@@ -126,7 +126,7 @@
                             </div>
                             <div class="text">
                                 <span>Icon Deleted
-                                    <code>{{m.icon.name}}</code> {{m.text}}</span>
+                                    <code>{{m.icon.name}}</code> <span [innerHtml]="m.text"></span></span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">

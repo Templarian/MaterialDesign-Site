@@ -110,8 +110,16 @@
             }
 
             .text {
-                display: inline-block;
                 margin-left: 14px;
+            }
+
+            .text-content {
+                margin-left: 2px;
+            }
+
+            .text,
+            .text-content {
+                display: inline-block;
                 code {
                     background-color: rgba(0, 0, 0, 0.08);
                 }

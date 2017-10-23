@@ -19,7 +19,7 @@ export class HistoryPageComponent {
   constructor(
     private modificationService: ModificationService,
     private route: ActivatedRoute,
-    private html: DomSanitizer
+    private sanitizer: DomSanitizer
   ) {}
 
   modificationsByDate: GroupByDateModification[] = [];
@@ -85,6 +85,9 @@ export class HistoryPageComponent {
         currentDate = this.friendlyDate(new Date(m.date));
         this.modificationsByDate.push(new GroupByDateModification(currentDate));
       }
+      m.text = m.text.replace(/`([^`]+)`/g, function (m, m1) {
+        return `<code>${m1}</code>`;
+      });
       this.modificationsByDate[this.modificationsByDate.length - 1].modifications.push(m);
     }
 
