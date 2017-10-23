@@ -40,8 +40,6 @@ import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
 import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
-import { CacheService, CACHE } from '@ngx-cache/core';
-import { BrowserCacheModule, MemoryCacheService } from '@ngx-cache/platform-browser';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
 
 const appRoutes: Routes = [
@@ -298,13 +296,6 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    CacheModule.forRoot(),
-    BrowserCacheModule.forRoot([
-      {
-        provide: CACHE,
-        useClass: MemoryCacheService // or, LocalStorageCacheService
-      }
-    ]),
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
