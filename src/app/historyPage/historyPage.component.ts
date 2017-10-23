@@ -3,6 +3,7 @@ import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'mdi-history-page',
@@ -17,7 +18,8 @@ export class HistoryPageComponent {
 
   constructor(
     private modificationService: ModificationService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private html: DomSanitizer
   ) {}
 
   modificationsByDate: GroupByDateModification[] = [];
@@ -26,32 +28,43 @@ export class HistoryPageComponent {
   modificationTypes: SelectModfiicationType[] = [{
     name: 'News',
     modificationType: ModificationType.News,
-    selected: true
+    selected: true,
+    className: 'history-news'
   }, {
     name: 'Webfont Published',
     modificationType: ModificationType.WebfontPublished,
-    selected: true
+    selected: true,
+    className: 'history-webfont-published'
   }, {
     name: 'Icon Created',
     modificationType: ModificationType.IconCreated,
-    selected: true
+    selected: true,
+    className: 'history-icon-created'
   }, {
     name: 'Icon Modified',
     modificationType: ModificationType.IconModified,
-    selected: true
+    selected: true,
+    className: 'history-icon-modified'
   }, {
     name: 'Icon Renamed',
     modificationType: ModificationType.IconRenamed,
-    selected: true
+    selected: true,
+    className: 'history-icon-renamed'
   }, {
     name: 'Icon Deleted',
     modificationType: ModificationType.IconDeleted,
-    selected: true
+    selected: true,
+    className: 'history-icon-deleted'
   }, {
     name: 'Alias Created',
     modificationType: ModificationType.AliasCreated,
-    selected: false
+    selected: false,
+    className: 'history-alias-created'
   }];
+
+  getClassName (type: ModificationType) {
+    return this.modificationTypes.filter(m => m.modificationType == type)[0].className;
+  }
 
   async ngOnInit() {
     let mods: string[] = [];
@@ -90,8 +103,12 @@ export class HistoryPageComponent {
     var ampm = hours >= 12 ? 'pm' : 'am';
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
-    var strTime = hours + ':' + minutes + ' ' + ampm;
+    var strTime = hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + '' + ampm;
     return strTime;
+  }
+
+  friendlyUrl (str: string) {
+    return str.replace(' ', '-');
   }
   
 }
@@ -100,6 +117,7 @@ class SelectModfiicationType {
   public name: string;
   public modificationType: ModificationType;
   public selected: boolean = false;
+  public className: string;
 }
 
 class GroupByDateModification {

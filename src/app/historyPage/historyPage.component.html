@@ -5,11 +5,15 @@
             <div class="date-group" *ngFor="let date of modificationsByDate">
                 <h2>Changes on {{date.date}}</h2>
                 <div class="container-fluid history">
-                    <div class="history-item" *ngFor="let m of date.modifications" [ngSwitch]="m.modificaitonId">
+                    <div class="history-item" *ngFor="let m of date.modifications" [ngSwitch]="m.modificaitonId" [ngClass]="getClassName(m.modificaitonId)">
                         <div *ngSwitchCase="modificationType.News">
-                            <div class="photo">
+                            <ng-template #user>{{m.user.name}}
+                                <br/>
+                                <small>@{{m.user.github}}</small>
+                            </ng-template>
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
-                            </div>
+                            </a>
                             <div class="icon">
                                 <mdi-icon name="news"></mdi-icon>
                             </div>
@@ -22,9 +26,13 @@
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.WebfontPublished">
-                            <div class="photo">
+                            <ng-template #user>{{m.user.name}}
+                                <br/>
+                                <small>@{{m.user.github}}</small>
+                            </ng-template>
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
-                            </div>
+                            </a>
                             <div class="icon">
                                 <mdi-icon name="news"></mdi-icon>
                             </div>
@@ -33,71 +41,93 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                News
+                                Webfont
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.IconCreated">
-                            <div class="photo">
+                            <ng-template #user>{{m.user.name}}
+                                <br/>
+                                <small>@{{m.user.github}}</small>
+                            </ng-template>
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
-                            </div>
+                            </a>
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
                             <div class="text">
-                                <span>Icon <code>{{m.icon.name}}</code> created.</span>
+                                <span>Icon
+                                    <code>{{m.icon.name}}</code> created.</span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
                                 <button class="btn btn-secondary btn-sm">Report</button>
                             </div>
                         </div>
-                        <div  *ngSwitchCase="modificationType.IconRenamed">
-                            <div class="photo">
+                        <div *ngSwitchCase="modificationType.IconRenamed">
+                            <ng-template #user>{{m.user.name}}
+                                <br/>
+                                <small>@{{m.user.github}}</small>
+                            </ng-template>
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
-                            </div>
+                            </a>
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
                             <div class="text">
-                                <span>Icon <code>{{m.icon.name}}</code> renamed to <code>test</code></span>
+                                <span>Icon
+                                    <code class="name-before">{{m.nameBefore}}</code> renamed to
+                                    <code class="name-after">{{m.nameAfter}}</code>
+                                </span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
                                 <button class="btn btn-secondary btn-sm">Report</button>
                             </div>
                         </div>
-                        <div  *ngSwitchCase="modificationType.IconModified">
-                            <div class="photo">
+                        <div *ngSwitchCase="modificationType.IconModified">
+                            <ng-template #user>{{m.user.name}}
+                                <br/>
+                                <small>@{{m.user.github}}</small>
+                            </ng-template>
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
-                            </div>
+                            </a>
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
                             <div class="text">
-                                <span>Icon <code>{{m.icon.name}}</code> Modified</span>
+                                <span>Icon
+                                    <code>{{m.icon.name}}</code> Modified</span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
                                 <button class="btn btn-secondary btn-sm">Report</button>
                             </div>
                         </div>
-                        <div  *ngSwitchCase="modificationType.IconDeleted">
-                            <div class="photo">
+                        <div *ngSwitchCase="modificationType.IconDeleted">
+                            <ng-template #user>{{m.user.name}}
+                                <br/>
+                                <small>@{{m.user.github}}</small>
+                            </ng-template>
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
-                            </div>
+                            </a>
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
                             </div>
                             <div class="text">
-                                <span>Icon Deleted <code>{{m.icon.name}}</code> {{m.text}}</span>
+                                <span>Icon Deleted
+                                    <code>{{m.icon.name}}</code> {{m.text}}</span>
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
@@ -105,9 +135,13 @@
                             </div>
                         </div>
                         <div *ngSwitchCase="modificationType.AliasCreated">
-                            <div class="photo">
+                            <ng-template #user>{{m.user.name}}
+                                <br/>
+                                <small>@{{m.user.github}}</small>
+                            </ng-template>
+                            <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'bottom'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
-                            </div>
+                            </a>
                             <div class="icon">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
