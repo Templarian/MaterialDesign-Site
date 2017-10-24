@@ -19,6 +19,10 @@
                         <button class="dropdown-item">...</button>
                     </div>
                 </div>
+                <a routerLink="/history"
+                    class="btn btn-light">
+                    History
+                </a>
             </div>
             <div [ngClass]="['size-' + size]">
                 <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
