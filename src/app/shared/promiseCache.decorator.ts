@@ -28,6 +28,9 @@ export function PromiseCache(key?: string): any | Promise<any> {
       if (promiseCache.has(fullKey)) {
         return promiseCache.get(fullKey);
       }
+      if (key) {
+        promiseCache.map(key, fullKey);
+      }
       return promiseCache.set(fullKey, new Promise<any>(async resolve => {
         resolve(method.apply(this, args));
       }));

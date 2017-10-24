@@ -1,6 +1,9 @@
 export class PromiseCacheService {
 
+  // Cached promises
   private keys: object = {};
+  // Aliases mapped
+  private maps: object = {};
 
   private static instance: PromiseCacheService = undefined;
 
@@ -13,6 +16,9 @@ export class PromiseCacheService {
   }
 
   remove (key: string) {
+    if (key in this.map) {
+      delete this.keys[this.map[key]];
+    }
     delete this.keys[key];
   }
 
@@ -26,5 +32,13 @@ export class PromiseCacheService {
 
   set (key: string, promise: Promise<any>): Promise<any> {
     return this.keys[key] = promise;
+  }
+
+  map (from: string, to: string) {
+    this.maps[from] = to;
+  }
+
+  removeMap (from: string) {
+    delete this.maps[from];
   }
 }

@@ -4,13 +4,16 @@ import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
+import { LoginService } from 'app/admin/services/login.service';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'mdi-history-page',
   templateUrl: './historyPage.component.html',
   styleUrls: ['./historyPage.component.scss'],
   providers: [
-    ModificationService
+    ModificationService,
+    LoginService
   ]
 })
 export class HistoryPageComponent {
@@ -19,7 +22,9 @@ export class HistoryPageComponent {
   constructor(
     private modificationService: ModificationService,
     private route: ActivatedRoute,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private loginService: LoginService,
+    private modalService: NgbModal
   ) {}
 
   modificationsByDate: GroupByDateModification[] = [];
@@ -66,9 +71,24 @@ export class HistoryPageComponent {
     return this.modificationTypes.filter(m => m.modificationType == type)[0].className;
   }
 
+  isAuthed: boolean = false;
+
   async ngOnInit() {
     let mods: string[] = [];
     await this.toggle();
+    this.isAuthed = await this.loginService.isAuthed();
+  }
+
+  issueNumber: number = null;
+
+  async assignIssue(content, m: Modification) {
+    this.modalService.open(content).result.then((result) => {
+      m.issue = this.issueNumber;
+      this.modificationService.setAssignedIssue(m);
+      this.issueNumber = null;
+    }, (reason) => {
+      // dismissed
+    });
   }
 
   async toggle (modificationType?: SelectModfiicationType) {

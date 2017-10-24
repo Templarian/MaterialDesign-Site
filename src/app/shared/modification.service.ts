@@ -15,13 +15,17 @@ export class ModificationService {
   ) { }
 
   async getModificationsByType(packageId: string, modifications: ModificationType[], page: number = 1, size: number = 100): Promise<Modification[]> {
-    let res = await this.http.get<Modification[]>('/api/package/' + packageId + '/modification', {
+    return await this.http.get<Modification[]>('/api/package/' + packageId + '/modification', {
       params: (new HttpParams())
         .set('modificationId', modifications.join(','))
         .set('page', page.toString())
         .set('size', size.toString())
-    });
-    return res.toPromise();
+    }).toPromise();
+  }
+
+  async setAssignedIssue(m: Modification) {
+    return await this.http.post<Modification>('/api/admin/modification/issue', m)
+      .toPromise();
   }
 
 }

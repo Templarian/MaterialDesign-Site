@@ -15,6 +15,7 @@ export class Modification {
   public iconDataAfter: string;
   public text: string;
   public date: Date;
+  public issue: number;
 
   constructor (
   ) { }

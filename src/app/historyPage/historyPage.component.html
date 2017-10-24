@@ -7,10 +7,7 @@
                 <div class="container-fluid history">
                     <div class="history-item" *ngFor="let m of date.modifications" [ngSwitch]="m.modificaitonId" [ngClass]="getClassName(m.modificaitonId)">
                         <div *ngSwitchCase="modificationType.News">
-                            <ng-template #user>{{m.user.name}}
-                                <br/>
-                                <small>@{{m.user.github}}</small>
-                            </ng-template>
+                            
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
@@ -61,7 +58,15 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <a target="_blank"
+                                <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
+                                    [ngbTooltip]="'GitHub Issue'"
+                                    target="_blank"
+                                    href="https://github.com/Templarian/MaterialDesign/issues/{{m.issue}}">
+                                    #{{m.issue}}
+                                </a>
+                                <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
+                                    class="btn btn-secondary btn-sm">Assign Issue</button>
+                                <a target="_blank" *ngIf="!isAuthed"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -87,7 +92,15 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <a target="_blank"
+                                <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
+                                    [ngbTooltip]="'GitHub Issue'"
+                                    target="_blank"
+                                    href="https://github.com/Templarian/MaterialDesign/issues/{{m.issue}}">
+                                    #{{m.issue}}
+                                </a>
+                                <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
+                                    class="btn btn-secondary btn-sm">Assign Issue</button>
+                                <a target="_blank" *ngIf="!isAuthed"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -116,7 +129,15 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <a target="_blank"
+                                <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
+                                    [ngbTooltip]="'GitHub Issue'"
+                                    target="_blank"
+                                    href="https://github.com/Templarian/MaterialDesign/issues/{{m.issue}}">
+                                    #{{m.issue}}
+                                </a>
+                                <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
+                                    class="btn btn-secondary btn-sm">Assign Issue</button>
+                                <a target="_blank" *ngIf="!isAuthed"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -140,7 +161,15 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <a target="_blank"
+                                <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
+                                    [ngbTooltip]="'GitHub Issue'"
+                                    target="_blank"
+                                    href="https://github.com/Templarian/MaterialDesign/issues/{{m.issue}}">
+                                    #{{m.issue}}
+                                </a>
+                                <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
+                                    class="btn btn-secondary btn-sm">Assign Issue</button>
+                                <a target="_blank" *ngIf="!isAuthed"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -166,7 +195,15 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
-                                <a target="_blank"
+                                <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
+                                    [ngbTooltip]="'GitHub Issue'"
+                                    target="_blank"
+                                    href="https://github.com/Templarian/MaterialDesign/issues/{{m.issue}}">
+                                    #{{m.issue}}
+                                </a>
+                                <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
+                                    class="btn btn-secondary btn-sm">Assign Issue</button>
+                                <a target="_blank" *ngIf="!isAuthed"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -196,3 +233,20 @@
         </div>
     </div>
 </div>
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Assign Issue to History Item</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <label>
+            Issue Number
+            <input type="number" class="form-control" [(ngModel)]="issueNumber" />
+        </label>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c(issueNumber)">Set Issue Number</button>
+    </div>
+</ng-template>
