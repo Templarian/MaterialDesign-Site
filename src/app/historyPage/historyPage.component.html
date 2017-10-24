@@ -66,7 +66,7 @@
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
                                     class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed"
+                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -100,7 +100,7 @@
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
                                     class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed"
+                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -137,7 +137,7 @@
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
                                     class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed"
+                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -169,7 +169,7 @@
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
                                     class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed"
+                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
@@ -203,7 +203,7 @@
                                 </a>
                                 <button *ngIf="isAuthed" (click)="assignIssue(content, m)"
                                     class="btn btn-secondary btn-sm">Assign Issue</button>
-                                <a target="_blank" *ngIf="!isAuthed"
+                                <a target="_blank" *ngIf="!isAuthed && m.issue == null"
                                     [attr.href]="friendlyReport(m)"
                                     class="btn btn-secondary btn-sm">Report</a>
                             </div>
