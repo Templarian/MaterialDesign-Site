@@ -47,11 +47,12 @@
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="icon">
+                            <a class="icon"
+                                routerLink="/icon/{{m.icon.name}}">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
-                            </div>
+                            </a>
                             <div class="text">
                                 <span>Icon
                                     <code>{{m.icon.name}}</code> created.</span>
@@ -79,11 +80,12 @@
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="icon">
+                            <a class="icon"
+                                routerLink="/icon/{{m.icon.name}}">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
-                            </div>
+                            </a>
                             <div class="text">
                                 <span>Icon
                                     <code class="name-before">{{m.nameBefore}}</code> renamed to
@@ -118,11 +120,12 @@
                                     <path fill="rgba(0, 0, 0, 0.5)" [attr.d]="m.dataBefore"></path>
                                 </svg>
                             </div>
-                            <div class="icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path [attr.d]="m.dataAfter"></path>
-                                    </svg>
-                                </div>
+                            <a class="icon"
+                                routerLink="/icon/{{m.icon.name}}">
+                                <svg viewBox="0 0 24 24">
+                                    <path [attr.d]="m.dataAfter"></path>
+                                </svg>
+                            </a>
                             <div class="text">
                                 <span>Icon
                                     <code>{{m.icon.name}}</code> Modified</span>
@@ -150,11 +153,12 @@
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="icon">
+                            <a class="icon"
+                                routerLink="/icon/{{m.icon.name}}">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
-                            </div>
+                            </a>
                             <div class="text">
                                 <span>Icon Deleted
                                     <code>{{m.icon.name}}</code> <span [innerHtml]="m.text"></span></span>
@@ -182,11 +186,12 @@
                             <a class="photo" routerLink="/contributor/{{friendlyUrl(m.user.name)}}" [ngbTooltip]="user" [placement]="'right'">
                                 <mdi-user-photo [userId]="m.user.id"></mdi-user-photo>
                             </a>
-                            <div class="icon">
+                            <a class="icon"
+                                routerLink="/icon/{{m.icon.name}}">
                                 <svg viewBox="0 0 24 24">
                                     <path [attr.d]="m.icon.data"></path>
                                 </svg>
-                            </div>
+                            </a>
                             <div class="text">
                                 <span>Added alias
                                     <code>{{m.text}}</code> to icon
