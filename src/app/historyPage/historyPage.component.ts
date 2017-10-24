@@ -84,7 +84,7 @@ export class HistoryPageComponent {
   async assignIssue(content, m: Modification) {
     this.issueNumber = m.issue;
     this.modalService.open(content).result.then((result) => {
-      m.issue = this.issueNumber;
+      m.issue = result;
       this.modificationService.setAssignedIssue(m);
     }, (reason) => {
       // dismissed
