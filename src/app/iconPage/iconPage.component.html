@@ -5,7 +5,7 @@
             <svg *ngIf="isVector" viewBox="0 0 24 24">
                 <path [attr.d]="icon.data"></path>
             </svg>
-            <img *ngIf="loaded && !isVector" [attr.src]="'/api/preview?png=' + icon.data&fill=646464" />
+            <img *ngIf="loaded && !isVector" [attr.src]="'/api/preview?png=' + icon.data&foreground=646464" />
         </div>
         <button (click)="toggle()">Vector</button>
         <button (click)="toggle()">Raster</button>
