@@ -53,6 +53,45 @@
                 color: #495057;
             }
         }
+
+        &.side-nav {
+            a {
+                color: #FFF;
+        
+                /deep/ {
+                    svg {
+                        vertical-align: middle;
+                        path {
+                            fill: #FFF;
+                        }
+                    }
+                }
+        
+                &.list-group-item {
+                    background: transparent;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    color: #FFF;
+        
+                    &:hover {
+                        color: #FFF;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+        
+                    &.active {
+                        background: rgba(0, 0, 0, 0.1);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+                }
+        
+                small {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+        
+            }
+        }
     }
     
     .date-group:not(:first-child) {
@@ -148,7 +187,7 @@
                 .btn-issue {
                     font-weight: bold;
                     color: #333;
-                    
+
                     &:hover {
                         background: rgba(0, 0, 0, 0.1);
                         box-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
@@ -181,4 +220,5 @@
             background: #F3E5F5;
         }
     }
+
 }

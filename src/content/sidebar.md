@@ -45,7 +45,9 @@
   - scale-balance Code of Conduct /code-of-conduct
 - /about
 - /license
+- /history
 - /contact
   - information-outline About /about
+  - clock History /history
   - scale-balance License /license
   - email-outline Contact /contact
