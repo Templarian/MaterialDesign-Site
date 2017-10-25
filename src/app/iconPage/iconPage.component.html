@@ -2,10 +2,13 @@
 <div class="container">
     <div>
         <div class="preview">
-            <svg viewBox="0 0 24 24">
+            <svg *ngIf="isVector" viewBox="0 0 24 24">
                 <path [attr.d]="icon.data"></path>
             </svg>
+            <img *ngIf="loaded && !isVector" [attr.src]="'/api/preview?png=' + icon.data" />
         </div>
+        <button (click)="toggle()">Vector</button>
+        <button (click)="toggle()">Raster</button>
         <div>
             Point Count {{icon.getPointCount()}}
         </div>
@@ -14,6 +17,5 @@
         <pre class="mb-0">&lt;svg viewBox="0 0 24 24"&gt;
     &lt;path d="{{icon.data}}"&gt;&lt;/path&gt;
 &lt;/svg&gt;</pre>
-        <img src="/api/preview?png={{icon.data}}" />
     </div>
 </div>
