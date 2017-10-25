@@ -10,10 +10,10 @@
         <div class="btn-group btn-group-justified" style="width: 280px">
             <button class="btn btn-light" style="border-top-left-radius: 0;"
                 [ngClass]="{ 'active': isVector }"
-                (click)="toggle()">Vector</button>
+                (click)="setVector()">Vector</button>
             <button class="btn btn-light" style="border-top-right-radius: 0;"
                 [ngClass]="{ 'active': !isVector }"
-                (click)="toggle()">Raster</button>
+                (click)="setRaster()">Raster</button>
         </div>
         <div>
             Point Count {{icon.getPointCount()}}

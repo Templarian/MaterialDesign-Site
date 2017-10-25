@@ -30,8 +30,12 @@ export class IconPageComponent {
   }
 
   isVector: boolean = true;
-  toggle () {
-    this.isVector = !this.isVector;
+  setVector () {
+    this.isVector = true;
+  }
+
+  setRaster () {
+    this.isVector = false;
   }
 
 }
