@@ -141,5 +141,27 @@
             </a>
         </div>
     </div>
+    <div class="row pt-3">
+        <div class="col-md-2">
+            <div>Meta</div>
+        </div>
+        <div class="col-md-10">
+            <a routerLink="/about" routerLinkActive="active">
+                <mdi-icon [name]="'information-outline'"></mdi-icon>
+                About
+                <small>Learn More</small>
+            </a>
+            <a routerLink="/license" routerLinkActive="active">
+                <mdi-icon [name]="'scale-balance'"></mdi-icon>
+                License
+                <small>FAQs</small>
+            </a>
+            <a routerLink="/contact" routerLinkActive="active">
+                <mdi-icon [name]="'email-outline'"></mdi-icon>
+                Contact
+                <small>@Templarian</small>
+            </a>
+        </div>
+    </div>
 </div>
 <div class="mask" *ngIf="!isNav" (click)="isNav = true"></div>

@@ -191,6 +191,27 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'about',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/about.md'
+    }
+  },
+  {
+    path: 'license',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/license.md'
+    }
+  },
+  {
+    path: 'contact',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/contact.md'
+    }
+  },
+  {
     path: '',
     component: HomePageComponent
   },

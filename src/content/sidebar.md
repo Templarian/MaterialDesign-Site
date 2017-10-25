@@ -43,3 +43,9 @@
   - file-tree API /contribute/site/api
     - eye Get List of Packages /contribute/site/api#get-list-of-packages
   - scale-balance Code of Conduct /code-of-conduct
+- /about
+- /license
+- /contact
+  - information-outline About /about
+  - scale-balance License /license
+  - email-outline Contact /contact
