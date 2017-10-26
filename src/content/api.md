@@ -111,12 +111,9 @@ GET api/package/{packageId}/{iconName}
 
 There is a universal endpoint for downloading icons or collections of icons allowing for various types `png` (default), `svg`, or `vector-drawable`.
 
-If the array contains more than one item the download will be in an archived `zip`.
-
 ```text
 POST api/download
 ```
-
 
 | Property          | Required | Default        | Values                                |
 | ------------------|----------|----------------|---------------------------------------|
@@ -130,13 +127,13 @@ POST api/download
 | paddingRight      | `false`  | `0`            |  |
 | paddingBottom     | `false`  | `0`            |  |
 | paddingLeft       | `false`  | `0`            |  |
-| foreground        | `false`  | `"#000000"`    |  |
+| foreground        | `false`  | `"000000"`     |  |
 | foregroundOpacity | `false`  | `1`            |  |
 | background        | `false`  | `#FFFFFF`      |  |
 | backgroundOpacity | `false`  | `0`            |  |
 | radius            | `false`  | `0`            |  |
 | borderWidth       | `false`  | `0`            |  |
-| borderColor       | `false`  | `#000000`      |  |
+| borderColor       | `false`  | `000000`       |  |
 | borderOpacity     | `false`  | `0`            |  |
 | borderCap         | `false`  | `"round"`      |  |
 | borderArray       | `false`  | `[1]`          |  |
@@ -145,12 +142,16 @@ POST api/download
 | marginRight       | `false`  | `0`            |  |
 | marginBottom      | `false`  | `0`            |  |
 | marginLeft        | `false`  | `0`            |  |
-| gridColor         | `false`  | `"#F0F0F0"`    |  |
+| gridColor         | `false`  | `#F0F0F0"`     |  |
 | gridOpacity       | `false`  | `0`            |  |
-| matteColor        | `false`  | `"#FFFFFF"`    |  |
+| matteColor        | `false`  | `"FFFFFF"`     |  |
 | matteOpacity      | `false`  | `0`            |  |
 
-Request: [DownloadIcon](/contribute/site/api/data#downloadicon)[]
+Request: [DownloadIcon](/contribute/site/api/data#downloadicon) or [DownloadIcon](/contribute/site/api/data#downloadicon)[]
+
+Response: `*.png`, `*.jpg`, `*.svg`, `*.xaml`, `*.xml` or `*.zip`
+
+> Note: If an array is sent the results will be returned in a `zip`. `path` is ignored for object responses.
 
 ### Get Contributors
 
