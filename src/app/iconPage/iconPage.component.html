@@ -15,9 +15,9 @@
                 [ngClass]="{ 'active': !isVector }"
                 (click)="setRaster()">Raster</button>
         </div>
-        <div>
+        <!--<div *ngIf="loaded">
             Point Count {{icon.getPointCount()}}
-        </div>
+        </div>-->
     </div>
     <div class="card p-3">
         <pre class="mb-0">&lt;svg viewBox="0 0 24 24"&gt;

@@ -71,10 +71,16 @@ export class Icon {
     return data;
   }
 
+  get pointCount () {
+    console.log(this.getPointCount());
+    return this.getPointCount();
+  }
+
   getPointCount() {
     if (this.data != null) {
       return this.parse(this.data).length;
     }
+    return 0;
   }
 
   addAlias(alias: Alias) {
