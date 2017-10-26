@@ -6,6 +6,8 @@ In alphabetical order are all the models with properties (all properties can be 
 
 These are all the known models used in the site for either requests or responses. For performance reasons not all properties maybe be populated. This is especially true for deeply nested types.
 
+### Alias
+
 ```typescript
 class Alias {
     id: string,
@@ -49,6 +51,8 @@ class DownloadIcon {
 }
 ```
 
+### Icon
+
 ```typescript
 class Icon {
     id: string;
@@ -58,6 +62,8 @@ class Icon {
     aliases: Alias[];
 }
 ```
+
+### Modification
 
 ```typescript
 class Modification {
@@ -76,6 +82,8 @@ class Modification {
 }
 ```
 
+### Package
+
 ```typescript
 class Package {
     name: string;
@@ -85,12 +93,16 @@ class Package {
 }
 ```
 
+### Tag
+
 ```typescript
 class Tag {
     id: string;
     name: string;
 }
 ```
+
+### User
 
 ```typescript
 class User {

@@ -150,39 +150,7 @@ POST api/download
 | matteColor        | `false`  | `"#FFFFFF"`    |  |
 | matteOpacity      | `false`  | `0`            |  |
 
-```json
-[{
-    "id": "",
-    "type": "png",
-    "path": [],
-    "width": 24,
-    "height": 24,
-    "padding": 10,
-    "paddingTop": 10,
-    "paddingRight": 10,
-    "paddingBottom": 10,
-    "paddingLeft": 10,
-    "foreground": "#FFFFFF",
-    "foregroundOpacity": 1,
-    "background": "#000000",
-    "backgroundOpacity": 1,
-    "radius": 10,
-    "borderWidth": 1,
-    "borderColor": "#990000",
-    "borderOpacity": 1,
-    "borderCap": "round",
-    "borderArray": [4, 4],
-    "margin": 10,
-    "marginTop": 10,
-    "marginRight": 10,
-    "marginBottom": 10,
-    "marginLeft": 10,
-    "gridColor": "#F0F0F0",
-    "gridOpacity": 1,
-    "matteColor": "#FFFFFF",
-    "matteOpacity": 1
-}]
-```
+Request: [DownloadIcon](/contribute/site/api/data#downloadicon)[]
 
 ### Get Contributors
 
@@ -190,7 +158,7 @@ POST api/download
 GET api/user
 ```
 
-Response: [User](../data/#user)[]
+Response: [User](/contribute/site/api/data#user)[]
 
 ### Get Contributor
 
@@ -198,7 +166,7 @@ Response: [User](../data/#user)[]
 GET api/user/{userId}
 ```
 
-Response: [User](../data/#user)
+Response: [User](/contribute/site/api/data#user)
 
 ### Get Tags
 
