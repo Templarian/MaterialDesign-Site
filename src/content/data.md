@@ -1,6 +1,6 @@
 # Models / Enums
 
-In alphabetical order are all the models with public properties (all properties can be viewed in [GitHub](https://github.com/Templarian/MaterialDesign-Site/tree/master/src/app/shared/models)).
+In alphabetical order are all the models with properties (all properties can be viewed in [GitHub](https://github.com/Templarian/MaterialDesign-Site/tree/master/src/app/shared/models)).
 
 ## Models
 
@@ -8,8 +8,8 @@ These are all the known models used in the site for either requests or responses
 
 ```typescript
 class Alias {
-    public id: string,
-    public name: string
+    id: string,
+    name: string
 }
 ```
 
@@ -51,54 +51,54 @@ class DownloadIcon {
 
 ```typescript
 class Icon {
-    public id: string;
-    public name: string;
-    public data: string;
-    public user: User;
-    public aliases: Alias[];
+    id: string;
+    name: string;
+    data: string;
+    user: User;
+    aliases: Alias[];
 }
 ```
 
 ```typescript
 class Modification {
-    public id: string;
-    public modificaitonId: ModificationType;
-    public packageId: string;
-    public user: User;
-    public icon: Icon;
-    public iconNameBefore: string;
-    public iconNameAfter: string;
-    public iconDataBefore: string;
-    public iconDataAfter: string;
-    public text: string;
-    public date: Date;
-    public issue: number;
+    id: string;
+    modificaitonId: ModificationType;
+    packageId: string;
+    user: User;
+    icon: Icon;
+    iconNameBefore: string;
+    iconNameAfter: string;
+    iconDataBefore: string;
+    iconDataAfter: string;
+    text: string;
+    date: Date;
+    issue: number;
 }
 ```
 
 ```typescript
 class Package {
-    public name: string;
-    public width: number;
-    public height: number;
-    public icons: Icon[];
+    name: string;
+    width: number;
+    height: number;
+    icons: Icon[];
 }
 ```
 
 ```typescript
 class Tag {
-    public id: string;
-    public name: string;
+    id: string;
+    name: string;
 }
 ```
 
 ```typescript
 class User {
-    public id: string;
-    public github: string;
-    public twitter: string;
-    public name: string;
-    public base64: string;
+    id: string;
+    github: string;
+    twitter: string;
+    name: string;
+    base64: string;
 }
 ```
 
