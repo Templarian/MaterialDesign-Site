@@ -49,8 +49,22 @@ export class ViewerPageComponent {
       if (event instanceof NavigationEnd) {
         const tree = router.parseUrl(router.url);
         if (tree.fragment) {
-          const element = document.querySelector("#" + tree.fragment);
-          if (element) { element.scrollIntoView(); }
+          let element = document.querySelector("#" + tree.fragment);
+          if (element) {
+            element.scrollIntoView();
+          } else {
+            let trying = 0;
+            let clear = setInterval(x => {
+              element = document.querySelector("#" + tree.fragment);
+              if (element) {
+                element.scrollIntoView();
+                clearInterval(clear);
+              }
+              if (trying++ == 30) {
+                clearInterval(clear);
+              }
+            }, 100);
+          }
         }
       }
     });
