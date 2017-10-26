@@ -121,8 +121,8 @@ POST api/download
 | Property          | Required | Default        | Values                                |
 | ------------------|----------|----------------|---------------------------------------|
 | id                | `true`   |                |                                       |
-| type              | `false`  | `"png"`        | `"png"`, `"svg"`, `"vector-drawable"`, `"xaml"` |
-| path              | `false`  | `[]`           | `["sub", "main"]`                     |
+| type              | `false`  | `"png"`        | `"png"`, `"jpg"`, `"svg"`, `"vector-drawable"`, `"xaml"` |
+| path              | `false`  | `[]`           | `["folder", "subfolder"]`                     |
 | width             | `false`  | package.width  |  |
 | height            | `false`  | package.height |  |
 | padding           | `false`  | `0`            |  |

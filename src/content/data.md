@@ -110,10 +110,11 @@ Enums used in above models.
 
 ```typescript
 enum DownloadType {
-    Png = "PNG",
-    Jpg = "Jpg",
-    Svg = "SVG",
-    VectorDrawable = "VectorDrawable"
+    Png = "png",
+    Jpg = "jpg",
+    Svg = "svg",
+    Xaml = "xaml",
+    VectorDrawable = "vector-drawable"
 }
 ```
 

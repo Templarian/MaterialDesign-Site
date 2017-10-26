@@ -1,6 +1,6 @@
 export enum DownloadType {
-    Png = "PNG",
-    Jpg = "Jpg",
-    Svg = "SVG",
-    VectorDrawable = "VectorDrawable"
+    Png = "png",
+    Jpg = "jpg",
+    Svg = "svg",
+    VectorDrawable = "vector-drawable"
 }
