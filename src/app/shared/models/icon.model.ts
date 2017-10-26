@@ -12,6 +12,8 @@ export class Icon {
   public data: string = null;
   public user: User = null;
   public aliases: Alias[] = [];
+  public pointCounttest: number = 0;
+  
 
   constructor(name?: string, data?: string) {
 
@@ -69,11 +71,6 @@ export class Icon {
       return '';
     });
     return data;
-  }
-
-  get pointCount () {
-    console.log(this.getPointCount());
-    return this.getPointCount();
   }
 
   getPointCount() {

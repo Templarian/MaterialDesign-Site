@@ -114,7 +114,7 @@ There is a universal endpoint for downloading icons or collections of icons allo
 If the array contains more than one item the download will be in an archived `zip`.
 
 ```text
-POST api/package/{packageId}/{iconId}/download
+POST api/download
 ```
 
 

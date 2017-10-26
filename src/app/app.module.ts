@@ -156,6 +156,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'contribute/site/api/data',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/data.md'
+    }
+  },
+  {
     path: 'guides',
     component: ViewerPageComponent,
     data: {
