@@ -187,36 +187,18 @@ POST api/download
 ### Get Contributors
 
 ```text
-GET api/contributors
+GET api/user
 ```
 
-```json
-[
-    {
-
-    }
-]
-```
+Response: [User](../data/#user)[]
 
 ### Get Contributor
 
 ```text
-GET api/contributor/{contributorId}
+GET api/user/{userId}
 ```
 
-```json
-{
-
-}
-```
-
-### Get Contributor Photo
-
-A contributors photo can be retrieved as a `100x100` image.
-
-```text
-GET api/contributor/{contributorId}/photo
-```
+Response: [User](../data/#user)
 
 ### Get Tags
 
