@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 
 @Component({
   selector: 'context-menu',
@@ -18,4 +18,4 @@ class Menu {
     name: string = 'error';
     icon: string = null;
     menu: Menu[] = [];
-}
+}*/
