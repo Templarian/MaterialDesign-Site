@@ -83,4 +83,24 @@ export class AdminAliasPageComponent {
     ]);
   }
 
+  friendlyDate (date: Date) {
+    if (typeof date == 'string') {
+      date = new Date(date);
+    }
+    let months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    let day: string[] = ['Saturday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Sunday'];
+    return day[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+  }
+
+  friendlyTime (dateStr: string) {
+    let date = new Date(dateStr);
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    var strTime = hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + '' + ampm;
+    return strTime;
+  }
+
 }
