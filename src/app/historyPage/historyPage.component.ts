@@ -91,14 +91,22 @@ export class HistoryPageComponent {
     });
   }
 
+  page: number = 0;
+
   async toggle (modificationType?: SelectModfiicationType) {
     if (modificationType) {
       modificationType.selected = !modificationType.selected;
     }
     this.modificationsByDate = [];
+    this.page = 0;
+    await this.loadMore();
+  }
+
+  async loadMore() {
+    this.page++;
     let packageId = this.route.snapshot.data['package'];
     let mods = this.modificationTypes.filter(m => m.selected).map(m => m.modificationType);
-    let modifications = await this.modificationService.getModificationsByType(packageId, mods, 1, 100);
+    let modifications = await this.modificationService.getModificationsByType(packageId, mods, this.page, 100);
     let currentDate = '';
     for (let m of modifications) {
       if (currentDate != this.friendlyDate(new Date(m.date))) {
@@ -110,7 +118,6 @@ export class HistoryPageComponent {
       });
       this.modificationsByDate[this.modificationsByDate.length - 1].modifications.push(m);
     }
-
   }
 
   friendlyDate (date: Date) {
