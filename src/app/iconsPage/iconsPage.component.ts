@@ -32,12 +32,13 @@ export class IconsPageComponent {
 
   search: string = '';
   searchChanged() {
+    let s = this.search.toLowerCase();
     this.icons = this.iconsCache.filter(icon => {
-      if (icon.name.indexOf(this.search) != -1) {
+      if (icon.name.indexOf(s) != -1) {
         return true;
       }
       for (let alias of icon.aliases) {
-        if (alias.name.indexOf(this.search) != -1) {
+        if (alias.name.indexOf(s) != -1) {
           return true;
         }
       }
