@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { IconService } from '../shared/icon.service';
+import { Icon } from 'app/shared/models/icon.model';
 
 @Component({
   selector: 'mdi-icons',
@@ -11,20 +12,29 @@ import { IconService } from '../shared/icon.service';
   ]
 })
 export class IconsPageComponent {
-  
+
   collapsed: boolean = false;
   size: number = 36;
-  icons: any[] = [];
+  iconsCache: Icon[] = [];
+  icons: Icon[] = [];
   errorMessage: any;
 
-  constructor (private route: ActivatedRoute,
-               private iconService: IconService) {
-                
+  constructor(private route: ActivatedRoute,
+    private iconService: IconService) {
+
   }
 
-  async loadContent (data) {
+  async loadContent(data) {
     let icons = await this.iconService.getIcons(data.package);
-    this.icons = icons;
+    this.iconsCache = icons;
+    this.icons = this.iconsCache;
+  }
+
+  search: string = '';
+  searchChanged() {
+    this.icons = this.iconsCache.filter(icon => {
+      return icon.name.indexOf(this.search) != -1;
+    });
   }
 
   ngOnInit() {

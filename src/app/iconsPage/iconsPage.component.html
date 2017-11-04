@@ -2,7 +2,8 @@
     <div class="row">
         <div [ngClass]="{'col-md-8': !collapsed, 'col-md-11': collapsed }">
             <div class="filters">
-                <input type="text" class="search" placeholder="Search..." />
+                <input type="text" class="search" placeholder="Search..."
+                       [(ngModel)]="search" (keyup)="searchChanged()" />
                 <button class="btn btn-light"
                     (click)="size = 24"
                     [ngClass]="{ 'active': size == 24 }">24</button>
@@ -24,7 +25,7 @@
                     History
                 </a>
             </div>
-            <div [ngClass]="['size-' + size]">
+            <div class="card p-2" style="display: block;" [ngClass]="['size-' + size]">
                 <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
                     [routerLink]="'/icon/' + icon.name">
                     <svg viewBox="0 0 24 24">
