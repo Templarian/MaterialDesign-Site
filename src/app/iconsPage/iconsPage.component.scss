@@ -31,6 +31,17 @@
         }
     }
 
+    .btn-lighter {
+        background: rgba(255, 255, 255, 0.1);
+        color: #FFF;
+        border: rgba(255, 255, 255, 0.1);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border: rgba(255, 255, 255, 0.2);
+        }
+    }
+
     .icon {
         display: inline-block;
         margin-right: 4px;
