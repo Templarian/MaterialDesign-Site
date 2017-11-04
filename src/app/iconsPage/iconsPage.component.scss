@@ -59,8 +59,15 @@
 
     .search {
         font-size: 18px;
-        padding: 6px 10px;
-        border-radius: 4px;
-        border: 1px solid #C4C4C4;
+        padding: 5px 10px;
+        border: 0;
+        vertical-align: top;
+        background: transparent;
+        color: #FFF !important;
+        border-bottom: 2px solid #FFF;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
     }
 }
