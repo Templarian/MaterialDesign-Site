@@ -33,7 +33,15 @@ export class IconsPageComponent {
   search: string = '';
   searchChanged() {
     this.icons = this.iconsCache.filter(icon => {
-      return icon.name.indexOf(this.search) != -1;
+      if (icon.name.indexOf(this.search) != -1) {
+        return true;
+      }
+      for (let alias of icon.aliases) {
+        if (alias.name.indexOf(this.search) != -1) {
+          return true;
+        }
+      }
+      return false;
     });
   }
 
