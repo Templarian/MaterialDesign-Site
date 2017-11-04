@@ -59,6 +59,8 @@
     .wrap-search {
         display: inline-block;
         position: relative;
+        vertical-align: top;
+
         mdi-icon {
             position: absolute;
             left: 2px;
@@ -73,7 +75,6 @@
         font-size: 18px;
         padding: 5px 10px 5px 30px;
         border: 0;
-        vertical-align: top;
         background: transparent;
         color: #FFF !important;
         border-bottom: 2px solid #FFF;
