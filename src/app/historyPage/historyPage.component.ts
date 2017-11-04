@@ -92,6 +92,7 @@ export class HistoryPageComponent {
   }
 
   page: number = 0;
+  currentDate: string = '';
 
   async toggle (modificationType?: SelectModfiicationType) {
     if (modificationType) {
@@ -99,6 +100,7 @@ export class HistoryPageComponent {
     }
     this.modificationsByDate = [];
     this.page = 0;
+    this.currentDate = '';
     await this.loadMore();
   }
 
@@ -107,11 +109,10 @@ export class HistoryPageComponent {
     let packageId = this.route.snapshot.data['package'];
     let mods = this.modificationTypes.filter(m => m.selected).map(m => m.modificationType);
     let modifications = await this.modificationService.getModificationsByType(packageId, mods, this.page, 100);
-    let currentDate = '';
     for (let m of modifications) {
-      if (currentDate != this.friendlyDate(new Date(m.date))) {
-        currentDate = this.friendlyDate(new Date(m.date));
-        this.modificationsByDate.push(new GroupByDateModification(currentDate));
+      if (this.currentDate != this.friendlyDate(new Date(m.date))) {
+        this.currentDate = this.friendlyDate(new Date(m.date));
+        this.modificationsByDate.push(new GroupByDateModification(this.currentDate));
       }
       m.text = m.text.replace(/`([^`]+)`/g, function (m, m1) {
         return `<code>${m1}</code>`;
