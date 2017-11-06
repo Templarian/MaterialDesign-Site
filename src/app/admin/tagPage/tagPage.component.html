@@ -23,6 +23,21 @@
                 </div>
                 <div>
                     <label>
+                        <span class="d-block">Tag</span>
+                        <select [(ngModel)]="selectedTag" (change)="selectTag()" class="custom-select">
+                            <option *ngFor="let t of tags" [ngValue]="t">{{t.name}}</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="card card-inverse" style="display:block;">
+                    <span *ngFor="let i of previewIcons" style="display:inline-block;border-radius:2px;" class="p-1 m-1">
+                        <svg viewBox="0 0 24 24" style="width:24px;height:24px;">
+                            <path [attr.d]="i.data"></path>
+                        </svg>
+                    </span>
+                </div>
+                <div>
+                    <label>
                         <span class="d-block">Icon Name</span>
                         <mdi-icon-search [package]="selectedPackage"
                                          [(icon)]="selectedIcon"

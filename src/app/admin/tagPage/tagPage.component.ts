@@ -8,6 +8,8 @@ import { Alias } from 'app/shared/models/alias.model';
 import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
+import { TagService } from 'app/shared/tag.service';
+import { Tag } from 'app/shared/models/tag.model';
 
 @Component({
   selector: 'mdi-admin-tag-page',
@@ -16,6 +18,7 @@ import { ModificationType } from 'app/shared/enums/modificationType.enum';
   providers: [
     LoginService,
     IconService,
+    TagService,
     ModificationService
   ]
 })
@@ -33,6 +36,7 @@ export class AdminTagPageComponent {
   constructor(
     private loginService: LoginService,
     private iconService: IconService,
+    private tagService: TagService,
     private modificationService: ModificationService
   ) {
     this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
@@ -48,7 +52,21 @@ export class AdminTagPageComponent {
     this.selectPackage();
   }
 
+  tags: Tag[] = [];
+
+  selectedTag: Tag;
+  
+  previewIcons: Icon[] = [];
+
+  async selectTag() {
+    this.previewIcons = await this.iconService.getAdminIconsByTag(this.selectedPackage, this.selectedTag);
+  }
+
   async selectPackage() {
+    // Tags
+    this.tags = await this.tagService.getAdminTags(this.selectedPackage.id);
+    this.selectedTag = this.tags[0];
+    this.selectTag();
     // Icons
     //this.icons = await this.iconService.getIcons(this.selectedPackage.id);
     //this.selectedIcon = this.icons[0];

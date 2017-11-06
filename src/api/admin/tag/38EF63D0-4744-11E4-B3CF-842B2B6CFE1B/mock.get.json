@@ -1,0 +1,294 @@
+[
+    {
+        "id": "9BD547A8-BC85-48C1-B714-13205381F431",
+        "name": "account"
+    },
+    {
+        "id": "88879D19-71CD-474D-BA1B-D319D3F784F2",
+        "name": "action"
+    },
+    {
+        "id": "578F53B8-DDBB-41B5-ADF2-33C6CA42AA27",
+        "name": "agriculture"
+    },
+    {
+        "id": "47919305-6408-4CC9-A3E4-00BFE30A1F75",
+        "name": "alert"
+    },
+    {
+        "id": "A5251162-C9BC-48AA-BBC8-50468B57C9EE",
+        "name": "animal"
+    },
+    {
+        "id": "CC0AD55E-63C7-49C3-9EBB-CF357D4D8031",
+        "name": "arrange"
+    },
+    {
+        "id": "803FA54C-DBAC-4F83-B8B5-1EA208E037F8",
+        "name": "arrow"
+    },
+    {
+        "id": "829EBB9C-935E-4B33-A5F8-6695FBDC49C8",
+        "name": "audio"
+    },
+    {
+        "id": "9745348E-6E98-48E6-8928-C0A61CEAA768",
+        "name": "authentication"
+    },
+    {
+        "id": "27D4C4BE-3202-46A0-BE5A-D009FA4AFF6E",
+        "name": "av"
+    },
+    {
+        "id": "5741C2BC-BEF4-4923-8D3A-A3772B63269F",
+        "name": "battery"
+    },
+    {
+        "id": "2d8a6dba-095e-11e4-bf19-842b2b6cfe1b",
+        "name": "bell"
+    },
+    {
+        "id": "6C4526DE-2142-49E5-ADD7-8D5338D4BDC5",
+        "name": "border"
+    },
+    {
+        "id": "4A32B4D3-14E0-44DB-86BB-84C91B25A480",
+        "name": "box"
+    },
+    {
+        "id": "C691CF34-27F0-437F-9CDE-2ACACEC935C3",
+        "name": "camera"
+    },
+    {
+        "id": "DA1A9C78-EF36-4F3B-B961-53611D8CFE54",
+        "name": "cart"
+    },
+    {
+        "id": "B89C1B2A-7137-490E-B85D-A913BCC72D3C",
+        "name": "circle"
+    },
+    {
+        "id": "E58A1DC7-B6F8-4B70-BA2E-1E8EED2E2B3C",
+        "name": "clothing"
+    },
+    {
+        "id": "9AC0AF66-F6FA-4E18-A9BF-421D8B86B6D0",
+        "name": "cloud"
+    },
+    {
+        "id": "C1D20510-4FBF-4296-844B-BA4D14DB97BE",
+        "name": "color"
+    },
+    {
+        "id": "3550C095-6AE4-4547-B51C-0E3079B07DBD",
+        "name": "comment"
+    },
+    {
+        "id": "A6DDC5DB-F0A7-41B6-A9F9-9982DFD990D8",
+        "name": "currency"
+    },
+    {
+        "id": "490FD01D-C8C4-431F-B124-ED2C5DF6FD0F",
+        "name": "debug"
+    },
+    {
+        "id": "2B30667E-70E9-4778-8B31-7CEC1FC0331A",
+        "name": "device"
+    },
+    {
+        "id": "EBBC3831-B867-4A18-B120-BDCA097238C5",
+        "name": "directions"
+    },
+    {
+        "id": "13A9731D-1913-402D-A304-97AD39E780B8",
+        "name": "drawing"
+    },
+    {
+        "id": "969FA799-13E8-433E-8018-D145D6EA2F32",
+        "name": "edit"
+    },
+    {
+        "id": "1F9182F1-F6F0-42AC-95D6-5E6DBEAB5C3F",
+        "name": "error"
+    },
+    {
+        "id": "88FC762A-F11D-41C1-A670-E6D8F66967A5",
+        "name": "file"
+    },
+    {
+        "id": "071EB627-31CA-4BC5-A3BF-C3806D01B5F5",
+        "name": "filter"
+    },
+    {
+        "id": "87B79A3C-F1CE-4B2A-9671-8C6AF431654B",
+        "name": "folder"
+    },
+    {
+        "id": "42534A79-DCC6-493C-A6FA-B2B93CE69841",
+        "name": "form"
+    },
+    {
+        "id": "430DA3F8-27C4-4F76-A7B7-A430E1C13AD2",
+        "name": "format"
+    },
+    {
+        "id": "42EBA352-5EF4-4298-98D7-ED9D03F94D4D",
+        "name": "hardware"
+    },
+    {
+        "id": "5DD728E7-8136-48CD-8029-F1AE791E45EC",
+        "name": "helper"
+    },
+    {
+        "id": "FF2E8AA5-03F3-4440-8E66-B134689DDBCC",
+        "name": "holiday"
+    },
+    {
+        "id": "92028DC8-1187-48F9-A147-32866B577249",
+        "name": "image"
+    },
+    {
+        "id": "5021A3E1-0CDA-4F40-B335-41063215CF83",
+        "name": "local"
+    },
+    {
+        "id": "CD9049F5-1837-4E75-8FEE-00FAE12AD3DC",
+        "name": "lock"
+    },
+    {
+        "id": "3490548F-9FB2-44F9-9DD4-643EC30DAB4F",
+        "name": "logo"
+    },
+    {
+        "id": "7D17E297-CC6B-4FD1-A865-783E2EA4A640",
+        "name": "map"
+    },
+    {
+        "id": "E6803FD3-478F-455F-AD53-486FC7321858",
+        "name": "markdown"
+    },
+    {
+        "id": "57ACD5A1-A5D9-4D4E-81F3-E48D79525C48",
+        "name": "medical"
+    },
+    {
+        "id": "9B8E6A43-0979-4C85-B293-4AD2ECDAF458",
+        "name": "microphone"
+    },
+    {
+        "id": "23D8C2F2-6CCE-4A07-A17D-375D0CE62F59",
+        "name": "minus"
+    },
+    {
+        "id": "19A9C7D8-A7D8-4325-874B-73C6D15B9D6A",
+        "name": "movie"
+    },
+    {
+        "id": "829FA3F7-CF3D-4ADF-BF7C-CF739D632DEE",
+        "name": "octagon"
+    },
+    {
+        "id": "E356F017-3FF3-48FC-B88D-9B4A0612F11F",
+        "name": "off"
+    },
+    {
+        "id": "F65476C3-858F-42EC-BEC6-8C9401B79185",
+        "name": "operating system"
+    },
+    {
+        "id": "3681B5F7-FF50-4CA3-8D3D-C05A5C9F0EF0",
+        "name": "outline"
+    },
+    {
+        "id": "C8BADEE7-D637-4495-8076-CB751981252F",
+        "name": "person"
+    },
+    {
+        "id": "52C8BAB1-E27A-44D4-AE1F-011E0984706B",
+        "name": "phone"
+    },
+    {
+        "id": "7738AED4-51BB-4991-ADD6-307F19E5B8C5",
+        "name": "pin"
+    },
+    {
+        "id": "1E9C7C45-C148-450C-BF09-433BF4D4EFFA",
+        "name": "plus"
+    },
+    {
+        "id": "44ec2404-07fa-11e4-bf19-842b2b6cfe1b",
+        "name": "printer"
+    },
+    {
+        "id": "88ACACF4-32E0-4F71-8284-A00F70FE17AB",
+        "name": "religion"
+    },
+    {
+        "id": "8EAA916D-B674-468B-AC77-B5A7B3A1D104",
+        "name": "settings"
+    },
+    {
+        "id": "E819C508-1AA0-47BF-9EBE-BEC68B4D0FC5",
+        "name": "shape"
+    },
+    {
+        "id": "461B1D5A-3CE9-411B-862D-87EEB7E61DA1",
+        "name": "social"
+    },
+    {
+        "id": "D562C60D-7B39-49CE-A6C2-CAC7F6E1CFBA",
+        "name": "square"
+    },
+    {
+        "id": "22A96D11-517D-4AA7-9694-3AEA6F71E9D7",
+        "name": "statistics"
+    },
+    {
+        "id": "9DF628B9-DC15-4B5D-97CD-0E0F72E22DEF",
+        "name": "store"
+    },
+    {
+        "id": "478AD10A-EE50-4F3B-92C3-4296DE19909F",
+        "name": "text"
+    },
+    {
+        "id": "93D02297-E0AB-4E89-8AF7-8CFCE66835DF",
+        "name": "time"
+    },
+    {
+        "id": "79FD84EA-74CC-4659-B13F-E31AE4F29479",
+        "name": "tooltip"
+    },
+    {
+        "id": "5A04B8F2-0E91-4E88-B42D-4FE01A5294A2",
+        "name": "transform"
+    },
+    {
+        "id": "26A16D98-E058-44E0-9FAA-613B83F17090",
+        "name": "transportation"
+    },
+    {
+        "id": "468D72FD-A783-490E-9FA9-8315E29B2C2C",
+        "name": "user"
+    },
+    {
+        "id": "32B8398D-ABC6-48F1-A21D-9268F4DC5ECA",
+        "name": "vector"
+    },
+    {
+        "id": "3C541F77-AB1E-43A1-941B-52BC236C0B88",
+        "name": "video"
+    },
+    {
+        "id": "A5B10CDE-0A06-4887-BF7C-8236BFED79CD",
+        "name": "view"
+    },
+    {
+        "id": "B27D7992-B949-485E-B5E8-74788560A260",
+        "name": "vote"
+    },
+    {
+        "id": "5B2EB615-1802-4E65-92A5-90653EE673B3",
+        "name": "weather"
+    }
+]

@@ -38,6 +38,12 @@ export class IconService {
     return new Icon().from(res);
   }
 
+  async getAdminIconsByTag(pack: Package, tag: Tag): Promise<Icon[]> {
+    let res = await this.http.get<Icon[]>('/api/admin/icon/' + pack.id + '/tag/' + tag.id)
+      .toPromise();
+    return res.map(i => new Icon().from(i));
+  }
+
   async addAlias(icon: Icon, aliasName: string): Promise<Icon> {
     let res = await this.http.post<Icon>('/api/admin/alias', {
       icon: { id: icon.id },

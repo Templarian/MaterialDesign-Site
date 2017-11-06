@@ -22,8 +22,9 @@ export class TagService {
     return await this.http.get<Tag[]>('/api/tag').toPromise();
   }
 
-  async getAdminTags(): Promise<Tag[]> {
-    return await this.http.get<Tag[]>('/api/admin/tag').toPromise();
+  async getAdminTags(packageId: string): Promise<Tag[]> {
+    let res = await this.http.get<Tag[]>('/api/admin/tag/' + packageId).toPromise();
+    return res.map(t => new Tag().from(t));
   }
 
 }
