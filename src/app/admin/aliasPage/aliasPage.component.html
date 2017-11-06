@@ -1,4 +1,4 @@
-<mdi-banner title="Submit Alias" [carbon]="false"></mdi-banner>
+<mdi-banner title="Manage Aliases" [carbon]="false"></mdi-banner>
 <div class="container-fluid">
     <div class="row mb-3">
         <div class="col-md-12">
@@ -26,14 +26,6 @@
                         <mdi-icon-search [package]="selectedPackage"
                                          [(icon)]="selectedIcon"
                                          (iconChange)="selectIcon()"></mdi-icon-search>
-                        <!--<span class="preview">
-                            <svg viewBox="0 0 24 24">
-                                <path [attr.d]="selectedIcon.data"></path>
-                            </svg>
-                        </span>
-                        <select [(ngModel)]="selectedIcon" (change)="selectIcon()" class="custom-select">
-                            <option *ngFor="let i of icons" [ngValue]="i">{{i.name}}</option>
-                        </select>-->
                     </label>
                 </div>
                 <div *ngIf="selectedIcon != null">
@@ -52,7 +44,7 @@
                         <input type="text" class="form-control" [(ngModel)]="aliasName" (keyup)="validate()" />
                     </div>
                     <div>
-                        <button class="btn btn-primary" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>
+                        <button class="btn btn-primary btn-block mt-2" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>
                     </div>
                 </div>
                 

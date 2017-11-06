@@ -1,0 +1,19 @@
+:host {
+    .preview {
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        margin-right: 5px;
+        padding: 5px 8px;
+        vertical-align: top;
+        display: inline-block;
+        svg {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+
+            path {
+                fill: #646464;
+            }
+        }
+    }
+}

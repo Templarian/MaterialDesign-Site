@@ -41,6 +41,7 @@ import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
 import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
 import { IconSearchComponent } from 'app/shared/iconSearch/iconSearch.component';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
+import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
 
 const appRoutes: Routes = [
   {
@@ -294,6 +295,10 @@ const appRoutes: Routes = [
     path: 'admin/alias',
     component: AdminAliasPageComponent
   },
+  {
+    path: 'admin/tag',
+    component: AdminTagPageComponent
+  },
   { path: '**', component: NotFoundPageComponent }
 ];
 
@@ -312,6 +317,7 @@ const appRoutes: Routes = [
     AdminLoginPageComponent,
     AdminIconsPageComponent,
     AdminAliasPageComponent,
+    AdminTagPageComponent,
     NotFoundPageComponent,
     IconComponent,
     UserComponent,
