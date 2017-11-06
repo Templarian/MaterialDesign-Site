@@ -50,11 +50,11 @@ export class AdminAliasPageComponent {
 
   async selectPackage() {
     // Icons
-    this.icons = await this.iconService.getIcons(this.selectedPackage.id);
-    this.selectedIcon = this.icons[0];
+    //this.icons = await this.iconService.getIcons(this.selectedPackage.id);
+    //this.selectedIcon = this.icons[0];
     // Aliases
     this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
-      ModificationType.AliasCreated
+      ModificationType.IconAliasCreated
     ]);
   }
 
@@ -79,7 +79,7 @@ export class AdminAliasPageComponent {
     this.validate();
     // Aliases
     this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
-      ModificationType.AliasCreated
+      ModificationType.IconAliasCreated
     ]);
   }
 

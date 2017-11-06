@@ -5,4 +5,10 @@ export class Alias {
     public name?: string
   ) { }
 
+  from(alias: Alias): Alias {
+    this.id = alias.id;
+    this.name = alias.name;
+    return this;
+  }
+
 }

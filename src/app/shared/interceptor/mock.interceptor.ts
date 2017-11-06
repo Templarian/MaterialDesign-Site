@@ -12,6 +12,7 @@ export class MockInterceptor implements HttpInterceptor {
       let method = req.method.toLowerCase();
       let mockReq = req.clone({
         url: req.url + `/mock.${method}.json`,
+        method: 'GET',
         params: new HttpParams()
       });
       return next.handle(mockReq);

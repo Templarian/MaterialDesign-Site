@@ -62,7 +62,7 @@ export class HistoryPageComponent {
     className: 'history-icon-deleted'
   }, {
     name: 'Alias Created',
-    modificationType: ModificationType.AliasCreated,
+    modificationType: ModificationType.IconAliasCreated,
     selected: false,
     className: 'history-alias-created'
   }];

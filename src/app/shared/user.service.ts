@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { User } from 'app/shared/models/user.model';
@@ -15,13 +14,13 @@ export class UserService {
   ) { }
 
   @PromiseCache()
-  async getUser(@CacheParam userId: string): Promise<User> {
-    let foo = await this.http.get<User>('/api/user/' + userId)
-    .map(u => {
-      u.base64 = 'data:image/png;base64,' + u.base64;
-       return u;
-    }).toPromise();
-    return foo;
+  async getUser( @CacheParam userId: string): Promise<User> {
+    let user = await this.http.get<User>('/api/user/' + userId)
+      .map(u => {
+        u.base64 = 'data:image/png;base64,' + u.base64;
+        return u;
+      }).toPromise();
+    return user;
   }
 
 }

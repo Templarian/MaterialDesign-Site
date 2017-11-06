@@ -33,6 +33,15 @@ export class Icon {
 
   }
 
+  from(icon: Icon): Icon {
+    this.id = icon.id;
+    this.name = icon.name;
+    this.data = icon.data;
+    this.user = new User().from(icon.user);
+    this.aliases = icon.aliases.map(a => new Alias().from(a));
+    return this;
+  }
+
   public fromDto (res: any) {
     this.name = res.name;
     this.data = res.data;

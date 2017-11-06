@@ -7,6 +7,7 @@ import { Alias } from 'app/shared/models/alias.model';
 import { Package } from 'app/shared/models/package.model';
 import { PromiseCache, CacheParam } from 'app/shared/promiseCache.decorator';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
+import { Tag } from 'app/shared/models/tag.model';
 
 @Injectable()
 export class IconService {
@@ -20,7 +21,7 @@ export class IconService {
   async getIcons(@CacheParam packageId: string): Promise<Icon[]> {
     let res = await this.http.get<Package>('/api/package/' + packageId)
       .toPromise();
-    return res.icons;
+    return res.icons.map(i => new Icon().from(i));
   }
 
   async getIconsByName(packageId: string, names: string[]): Promise<Icon[]> {
@@ -28,13 +29,13 @@ export class IconService {
       params: (new HttpParams())
         .set('names', names.join(','))
     }).toPromise();
-    return res.icons;
+    return res.icons.map(i => new Icon().from(i));
   }
 
   async getIconByName(packageId: string, name: string): Promise<Icon> {
     let res = await this.http.get<Icon>('/api/package/' + packageId + '/name/' + name)
       .toPromise();
-    return res;
+    return new Icon().from(res);
   }
 
   async addAlias(icon: Icon, aliasName: string): Promise<Icon> {
@@ -42,7 +43,15 @@ export class IconService {
       icon: { id: icon.id },
       alias: { name: aliasName }
     }).toPromise();
-    return res;
+    return new Icon().from(res);
+  }
+
+  async addTag(icon: Icon, tag: Tag): Promise<Icon> {
+    let res = await this.http.post<Icon>('/api/admin/tag', {
+      icon: { id: icon.id },
+      tag: { id: tag.id }
+    }).toPromise();
+    return new Icon().from(res);
   }
 
 }

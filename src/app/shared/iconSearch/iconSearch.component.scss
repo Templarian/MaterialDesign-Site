@@ -1,0 +1,18 @@
+:host {
+    .search {
+        position: relative;
+
+        > svg {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 8px;
+            left: 8px
+        }
+
+        > input {
+            padding-left: 38px;
+        }
+        
+    }
+}

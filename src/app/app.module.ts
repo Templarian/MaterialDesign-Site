@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
-import { CacheModule } from '@ngx-cache/core';
 
 // Statics
 import 'rxjs/add/observable/throw';
@@ -40,6 +39,7 @@ import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
 import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
+import { IconSearchComponent } from 'app/shared/iconSearch/iconSearch.component';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
 
 const appRoutes: Routes = [
@@ -318,7 +318,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     BannerComponent,
-    MarkdownComponent
+    MarkdownComponent,
+    IconSearchComponent
   ],
   imports: [
     BrowserModule,

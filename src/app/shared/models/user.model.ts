@@ -6,7 +6,12 @@ export class User {
     public name: string = null;
     public base64: string = null;
 
-    constructor(
-    ) { }
-
+    from(user: User): User {
+        this.id = user.id;
+        this.github = user.github;
+        this.twitter = user.twitter;
+        this.name = user.name;
+        this.base64 = user.base64;
+        return this;
+    }
 }

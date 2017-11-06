@@ -20,4 +20,20 @@ export class Modification {
   constructor (
   ) { }
 
+  from(modification: Modification): Modification {
+    this.id = modification.id;
+    this.modificaitonId = modification.modificaitonId;
+    this.packageId = modification.packageId;
+    this.user = new User().from(modification.user);
+    this.icon = new Icon().from(modification.icon);
+    this.iconNameBefore = modification.iconNameBefore;
+    this.iconNameAfter = modification.iconNameAfter;
+    this.iconDataBefore = modification.iconDataBefore;
+    this.iconDataAfter = modification.iconDataAfter;
+    this.text = modification.text;
+    this.date = modification.date;
+    this.issue = modification.issue;
+    return this;
+  }
+
 }

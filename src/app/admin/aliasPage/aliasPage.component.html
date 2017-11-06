@@ -20,17 +20,20 @@
                         </select>
                     </label>
                 </div>
-                <div *ngIf="selectedIcon != null">
+                <div>
                     <label>
                         <span class="d-block">Icon Name</span>
-                        <span class="preview">
+                        <mdi-icon-search [package]="selectedPackage"
+                                         [(icon)]="selectedIcon"
+                                         (iconChange)="selectIcon()"></mdi-icon-search>
+                        <!--<span class="preview">
                             <svg viewBox="0 0 24 24">
                                 <path [attr.d]="selectedIcon.data"></path>
                             </svg>
                         </span>
                         <select [(ngModel)]="selectedIcon" (change)="selectIcon()" class="custom-select">
                             <option *ngFor="let i of icons" [ngValue]="i">{{i.name}}</option>
-                        </select>
+                        </select>-->
                     </label>
                 </div>
                 <div *ngIf="selectedIcon != null">
