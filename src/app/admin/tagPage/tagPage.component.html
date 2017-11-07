@@ -30,6 +30,7 @@
                     </label>
                 </div>
                 <div class="card card-inverse" style="display:block;">
+                    <p *ngIf="previewIcons.length == 0">No icons found.</p>
                     <span *ngFor="let i of previewIcons" style="display:inline-block;border-radius:2px;" class="p-1 m-1">
                         <svg viewBox="0 0 24 24" style="width:24px;height:24px;">
                             <path [attr.d]="i.data"></path>
@@ -41,6 +42,7 @@
                         <span class="d-block">Icon Name</span>
                         <mdi-icon-search [package]="selectedPackage"
                                          [(icon)]="selectedIcon"
+                                         [exclude]="previewIcons"
                                          (iconChange)="selectIcon()"></mdi-icon-search>
                     </label>
                 </div>

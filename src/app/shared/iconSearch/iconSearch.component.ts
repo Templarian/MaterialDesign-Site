@@ -18,6 +18,7 @@ export class IconSearchComponent {
   @Input('icon') icon: Icon;
   @Output('iconChange') iconChange: EventEmitter<Icon> = new EventEmitter<Icon>();
   @Input('icons') icons: Icon[];
+  @Input('exclude') exclude: Icon[] = [];
   @Input('multiple') multiple: boolean = false;
   @Input('package') package: Package;
 
@@ -32,6 +33,10 @@ export class IconSearchComponent {
       .debounceTime(200)
       .map(term => term === '' ? []
         : this.selectableIcons.filter(v => {
+          let ex: string[] = this.exclude.map(i => i.id);
+          if (ex.indexOf(v.id) != -1) {
+            return false;
+          }
           if (v.name.indexOf(term.toLowerCase()) > -1) {
             return true;
           }
@@ -48,11 +53,16 @@ export class IconSearchComponent {
     this.iconChange.emit(this.icon);
     return x.name;
   };
+
+  iconList: Icon[] = [];
   selectableIcons: Icon[] = [];
 
   async ngOnInit() {
-    var icons = await this.iconService.getIcons(this.package.id);
-    this.selectableIcons = icons;
+    this.iconList = await this.iconService.getIcons(this.package.id);
+    let ex: string[] = this.exclude.map(i => i.id);
+    this.selectableIcons = this.iconList.filter(i => {
+      return !(ex.indexOf(i.id) > -1);
+    });
   }
 }
 
