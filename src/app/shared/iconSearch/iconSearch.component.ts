@@ -26,7 +26,7 @@ export class IconSearchComponent {
     private iconService: IconService
   ) { }
 
-  s: string = '';
+  s: Icon = null;
 
   search = (text$: Observable<string>) =>
     text$
@@ -63,6 +63,14 @@ export class IconSearchComponent {
     this.selectableIcons = this.iconList.filter(i => {
       return !(ex.indexOf(i.id) > -1);
     });
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.icon) {
+      if (changes.icon.currentValue == null) {
+        this.s = null;
+      }
+    }
   }
 }
 
