@@ -44,20 +44,20 @@ export class IconService {
     return res.map(i => new Icon().from(i));
   }
 
-  async addAlias(icon: Icon, aliasName: string): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/alias', {
+  async addAlias(icon: Icon, aliasName: string): Promise<Alias> {
+    let res = await this.http.post<Alias>('/api/admin/alias', {
       icon: { id: icon.id },
       alias: { name: aliasName }
     }).toPromise();
-    return new Icon().from(res);
+    return new Alias().from(res);
   }
 
-  async addTag(icon: Icon, tag: Tag): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/tag', {
+  async addTag(icon: Icon, tag: Tag): Promise<Tag> {
+    let res = await this.http.post<Tag>('/api/admin/tag', {
       icon: { id: icon.id },
       tag: { id: tag.id }
     }).toPromise();
-    return new Icon().from(res);
+    return new Tag().from(res);
   }
 
 }

@@ -1,5 +1,6 @@
 import { Alias } from "app/shared/models/alias.model";
 import { User } from "app/shared/models/user.model";
+import { Tag } from "app/shared/models/tag.model";
 
 export class Icon {
 
@@ -12,6 +13,7 @@ export class Icon {
   public data: string = null;
   public user: User = null;
   public aliases: Alias[] = [];
+  public tags: Tag[] = [];
   public pointCounttest: number = 0;
   
 
@@ -91,6 +93,10 @@ export class Icon {
 
   addAlias(alias: Alias) {
     this.aliases.push(alias);
+  }
+
+  addTag(tag: Tag) {
+    this.tags.push(tag);
   }
 
 }

@@ -37,18 +37,17 @@
                         </svg>
                     </span>
                 </div>
-                <div>
-                    <label>
-                        <span class="d-block">Icon Name</span>
-                        <mdi-icon-search [package]="selectedPackage"
-                                         [(icon)]="selectedIcon"
-                                         [exclude]="previewIcons"
-                                         (iconChange)="selectIcon()"></mdi-icon-search>
-                    </label>
-                </div>
-                <div *ngIf="selectedIcon != null">
-                    Enter Tag
-                    <div class="mt-2">
+                <span class="d-block">Icon Name</span>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="d-block">
+                            <mdi-icon-search [package]="selectedPackage"
+                                             [(icon)]="selectedIcon"
+                                             [exclude]="previewIcons"
+                                             (iconChange)="selectIcon()"></mdi-icon-search>
+                        </label>
+                    </div>
+                    <div *ngIf="selectedIcon != null" class="col-md-6">
                         <button class="btn btn-primary btn-block" [disabled]="disabledTag" (click)="submitTag()">Add Tag</button>
                     </div>
                 </div>

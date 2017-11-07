@@ -31,7 +31,7 @@ export class AdminTagPageComponent {
   public aliasName: string = '';
   public modifications: Modification[] = [];
 
-  public disabledAlias: boolean = true;
+  public disabledTag: boolean = false;
 
   constructor(
     private loginService: LoginService,
@@ -83,22 +83,23 @@ export class AdminTagPageComponent {
   validate() {
     for(let alias of this.selectedIcon.aliases) {
       if (this.aliasName == alias.name) {
-        this.disabledAlias = true;
+        this.disabledTag = true;
         return;
       }
     }
-    this.disabledAlias = this.aliasName.length == 0;
+    this.disabledTag = this.aliasName.length == 0;
   }
 
-  async submitAlias() {
-    await this.iconService.addAlias(this.selectedIcon, this.aliasName);
-    this.selectedIcon.addAlias(new Alias(null, this.aliasName));
-    this.aliasName = '';
-    this.validate();
+  async submitTag() {
+    let tag = await this.iconService.addTag(this.selectedIcon, this.selectedTag);
+    this.selectedIcon.addTag(tag);
+    this.selectedIcon = null;
+    this.selectPackage();
+    //this.validate();
     // Aliases
-    this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
-      ModificationType.IconAliasCreated
-    ]);
+    //this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
+    //  ModificationType.IconAliasCreated
+    //]);
   }
 
   friendlyDate (date: Date) {
