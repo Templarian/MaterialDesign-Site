@@ -94,7 +94,7 @@ export class AdminTagPageComponent {
     let tag = await this.iconService.addTag(this.selectedIcon, this.selectedTag);
     this.selectedIcon.addTag(tag);
     this.selectedIcon = null;
-    this.selectPackage();
+    this.selectTag();
     //this.validate();
     // Aliases
     //this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
