@@ -46,6 +46,8 @@ export class IconSearchComponent {
             }
           }
           return false;
+        }).sort((a, b) => {
+          return a.name == term ? -1 : 1;
         }).slice(0, 10));
 
   formatter = (x: Icon) => {
