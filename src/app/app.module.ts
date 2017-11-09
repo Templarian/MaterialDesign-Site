@@ -238,6 +238,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'icons/:tagUrl',
+    component: IconsPageComponent,
+    data: {
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
+  },
+  {
     path: 'icon/:iconName',
     component: IconPageComponent,
     data: {
