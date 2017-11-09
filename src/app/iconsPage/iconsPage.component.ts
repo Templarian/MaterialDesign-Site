@@ -2,13 +2,16 @@ import { Component, Input } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { IconService } from '../shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
+import { Tag } from 'app/shared/models/tag.model';
+import { TagService } from 'app/shared/tag.service';
 
 @Component({
   selector: 'mdi-icons',
   templateUrl: './iconsPage.component.html',
   styleUrls: ['./iconsPage.component.scss'],
   providers: [
-    IconService
+    IconService,
+    TagService
   ]
 })
 export class IconsPageComponent {
@@ -18,9 +21,13 @@ export class IconsPageComponent {
   iconsCache: Icon[] = [];
   icons: Icon[] = [];
   errorMessage: any;
+  tags: Tag[] = [];
 
-  constructor(private route: ActivatedRoute,
-    private iconService: IconService) {
+  constructor(
+    private route: ActivatedRoute,
+    private iconService: IconService,
+    private tagService: TagService
+  ) {
 
   }
 
@@ -28,6 +35,7 @@ export class IconsPageComponent {
     let icons = await this.iconService.getIcons(data.package);
     this.iconsCache = icons;
     this.icons = this.iconsCache;
+    this.tags = await this.tagService.getTags(data.package);
   }
 
   search: string = '';

@@ -18,8 +18,8 @@ export class TagService {
     return await this.http.get<Tag>('/api/tag/' + tagId).toPromise();
   }
 
-  async getTags(): Promise<Tag[]> {
-    return await this.http.get<Tag[]>('/api/tag').toPromise();
+  async getTags(packageId: string): Promise<Tag[]> {
+    return await this.http.get<Tag[]>('/api/tag/' + packageId).toPromise();
   }
 
   async getAdminTags(packageId: string): Promise<Tag[]> {
