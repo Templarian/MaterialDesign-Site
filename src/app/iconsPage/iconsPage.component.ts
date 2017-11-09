@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot, Router, NavigationEnd } from '@angular/router';
 import { IconService } from '../shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
 import { Tag } from 'app/shared/models/tag.model';
@@ -24,6 +24,7 @@ export class IconsPageComponent {
   tags: Tag[] = [];
 
   constructor(
+    private router: Router,
     private route: ActivatedRoute,
     private iconService: IconService,
     private tagService: TagService
@@ -77,6 +78,13 @@ export class IconsPageComponent {
     this.route
       .data
       .subscribe(x => this.loadContent(x));
+
+      this.router.events.subscribe((evt) => {
+        if (evt instanceof NavigationEnd) {
+          this.tagUrl = this.route.snapshot.params['tagUrl'] || null;
+          this.searchChanged();
+        }
+      });
   }
 
 }

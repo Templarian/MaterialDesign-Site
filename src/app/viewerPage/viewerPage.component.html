@@ -13,7 +13,7 @@
             <div class="list-group">
                 <ng-container *ngFor="let item of sidebar.items">
                     <a class="list-group-item"
-                        routerLink="/{{item.url}}"
+                        [routerLink]="'/' + item.url"
                         [fragment]="item.hash"
                         [ngClass]="{ 'active': isActive(item) }">
                         <mdi-icon *ngIf="item.icon != 'none'" [name]="item.icon"></mdi-icon>
@@ -23,7 +23,7 @@
                     <a *ngFor="let subItem of item.subItems"
                         style="padding-left: 46px;"
                         class="list-group-item"
-                        routerLink="/{{subItem.url}}"
+                        [routerLink]="'/' + subItem.url"
                         [fragment]="subItem.hash"
                         [ngClass]="{ 'active': isActive(subItem) }">
                         <mdi-icon [name]="subItem.icon"></mdi-icon>
