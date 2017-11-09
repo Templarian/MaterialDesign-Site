@@ -50,7 +50,7 @@ export class IconsPageComponent {
         let tagUrls = icon.tags.map(t => t.url);
         let tagExists = false;
         for (let tagUrl of tagUrls) {
-          if (this.tagUrl.indexOf(tagUrl) != -1) {
+          if (this.tagUrl == tagUrl) {
             tagExists = true;
             break;
           }
