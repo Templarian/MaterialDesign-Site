@@ -42,6 +42,12 @@ export class IconsPageComponent {
   searchChanged() {
     let s = this.search.toLowerCase();
     this.icons = this.iconsCache.filter(icon => {
+      if (this.tagUrl != null) {
+        let tagUrls = icon.tags.map(t => t.url);
+        if (tagUrls.indexOf(this.tagUrl) == -1) {
+          return false;
+        }
+      }
       if (icon.name.indexOf(s) != -1) {
         return true;
       }
@@ -54,10 +60,16 @@ export class IconsPageComponent {
     });
   }
 
+  tagUrl: string = null;
+
   ngOnInit() {
+    this.tagUrl = this.route.snapshot.params['tagUrl'] || null;
     this.route
       .data
-      .subscribe(x => this.loadContent(x))
+      .subscribe(x => this.loadContent(x));
+    if (this.tagUrl) {
+      this.searchChanged();
+    }
   }
 
 }

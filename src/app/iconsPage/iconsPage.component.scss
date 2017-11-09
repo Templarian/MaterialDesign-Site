@@ -97,5 +97,10 @@
     .list-group-item {
         padding-top: 0.25em;
         padding-bottom: 0.25em;
+        color: #555;
+
+        &:hover {
+            background: #F1F1F1;
+        }
     }
 }
