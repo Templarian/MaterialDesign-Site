@@ -83,6 +83,7 @@ export class IconsPageComponent {
         if (evt instanceof NavigationEnd) {
           this.tagUrl = this.route.snapshot.params['tagUrl'] || null;
           this.searchChanged();
+          document.body.scrollIntoView();
         }
       });
   }

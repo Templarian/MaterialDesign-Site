@@ -26,7 +26,10 @@
                 "id": "79c44334-2d86-11e5-8ac4-842b2b6cfe1b",
                 "name": "Cody"
             },
-            "tags": [{"id": "fe9fa4d9-c43f-11e7-bf5c-94188269ec50", "name": "Account / User", "url": "user"}],
+            "tags": [
+                {"id": "fe9fa4d9-c43f-11e7-bf5c-94188269ec50", "name": "Agriculture", "url": "agriculture"},
+                {"id": "fe9fa4d9-c43f-11e7-bf5c-94188269ec50", "name": "Account / User", "url": "user"}
+            ],
             "commentCount": 0
         },
         {
@@ -40,7 +43,9 @@
                 "id": "a8a312b6-07e4-11e4-bf19-842b2b6cfe1b",
                 "name": "Google"
             },
-            "tags": [],
+            "tags": [
+                {"id": "fe9fa4d9-c43f-11e7-bf5c-94188269ec50", "name": "Alert", "url": "alert"}
+            ],
             "commentCount": 0
         },
         {
