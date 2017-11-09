@@ -47,7 +47,14 @@ export class IconsPageComponent {
     this.icons = this.iconsCache.filter(icon => {
       if (this.tagUrl != null) {
         let tagUrls = icon.tags.map(t => t.url);
-        if (tagUrls.indexOf(this.tagUrl) == -1) {
+        let tagExists = false;
+        for (let tagUrl of tagUrls) {
+          if (tagUrl.indexOf(this.tagUrl) != -1) {
+            tagExists = true;
+            break;
+          }
+        }
+        if (!tagExists) {
           return false;
         }
       }

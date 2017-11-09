@@ -41,6 +41,7 @@ export class Icon {
     this.data = icon.data;
     this.user = new User().from(icon.user);
     this.aliases = icon.aliases.map(a => new Alias().from(a));
+    this.tags = icon.tags.map(t => new Tag().from(t));
     return this;
   }
 
