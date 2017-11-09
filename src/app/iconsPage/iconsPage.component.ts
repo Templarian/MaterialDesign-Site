@@ -35,6 +35,9 @@ export class IconsPageComponent {
     let icons = await this.iconService.getIcons(data.package);
     this.iconsCache = icons;
     this.icons = this.iconsCache;
+    if (this.tagUrl) {
+      this.searchChanged();
+    }
     this.tags = await this.tagService.getTags(data.package);
   }
 
@@ -67,9 +70,6 @@ export class IconsPageComponent {
     this.route
       .data
       .subscribe(x => this.loadContent(x));
-    if (this.tagUrl) {
-      this.searchChanged();
-    }
   }
 
 }
