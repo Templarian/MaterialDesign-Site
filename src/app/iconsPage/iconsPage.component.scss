@@ -103,4 +103,34 @@
             background: #F1F1F1;
         }
     }
+    .col-sidebar-opened {
+        flex: 0 0 300px;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+    }
+    .col-main-opened {
+        flex: 0 0 calc(100% - 300px);
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .col-sidebar-collapsed {
+        flex: 0 0 120px;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+    }
+    .col-main-collapsed {
+        flex: 0 0 calc(100% - 120px);
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }

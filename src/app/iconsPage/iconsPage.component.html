@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div [ngClass]="{'col-md-8': !collapsed, 'col-md-11': collapsed }">
+        <div [ngClass]="{'col-main-opened': !collapsed, 'col-main-collapsed': collapsed }">
             <div class="filters">
                 <div class="wrap-search">
                     <input type="text" class="search" placeholder="Search..."
@@ -39,22 +39,27 @@
                 </a>
             </div>
         </div>
-        <div [ngClass]="{'col-md-4': !collapsed, 'col-md-1': collapsed }">
+        <div [ngClass]="{'col-sidebar-opened': !collapsed, 'col-sidebar-collapsed': collapsed }">
             <div class="mb-3">
-                <button class="btn btn-light"
+                <button class="btn btn-light btn-lighter"
                     (click)="collapsed = true"
                     *ngIf="!collapsed">
                     <mdi-icon name="chevron-right"></mdi-icon>
                 </button>
-                <button class="btn btn-light"
+                <button class="btn btn-light btn-lighter"
                     (click)="collapsed = false"
                     *ngIf="collapsed">
                     <mdi-icon name="chevron-left"></mdi-icon>
                 </button>
             </div>
             <div class="list-group">
-                <a [routerLink]="'/icons/' + tag.url" class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let tag of tags">
-                    {{tag.name}}<span class="badge badge-secondary badge-pill">{{tag.count}}</span>
+                <a [routerLink]="'/icons/' + tag.url"
+                    *ngFor="let tag of tags"
+                    class="list-group-item d-flex justify-content-between align-items-center"
+                    placement="left"
+                    [ngbTooltip]="collapsed ? tag.name : null">
+                    <span *ngIf="!collapsed">{{tag.name}}</span>
+                    <span class="badge badge-secondary badge-pill">{{tag.count}}</span>
                 </a>
             </div>
         </div>
