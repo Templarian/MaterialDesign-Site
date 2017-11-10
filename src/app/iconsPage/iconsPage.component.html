@@ -40,16 +40,16 @@
             </div>
         </div>
         <div [ngClass]="{'col-sidebar-opened': !collapsed, 'col-sidebar-collapsed': collapsed }">
-            <div class="mb-3">
+            <div class="mb-2">
                 <button class="btn btn-light btn-lighter"
                     (click)="collapsed = true"
                     *ngIf="!collapsed">
-                    <mdi-icon name="chevron-right"></mdi-icon>
+                    <!--<mdi-icon name="chevron-right"></mdi-icon>-->d
                 </button>
                 <button class="btn btn-light btn-lighter"
                     (click)="collapsed = false"
                     *ngIf="collapsed">
-                    <mdi-icon name="chevron-left"></mdi-icon>
+                    <!--<mdi-icon name="chevron-left"></mdi-icon>-->d
                 </button>
             </div>
             <div class="list-group">

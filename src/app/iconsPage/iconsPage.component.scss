@@ -65,7 +65,7 @@
     }
 
     .filters {
-        padding: 0 0 8px 0;
+        padding-bottom: calc(0.5rem - 2px);
     }
     .wrap-search {
         display: inline-block;
@@ -92,6 +92,27 @@
 
         &::placeholder {
             color: rgba(255, 255, 255, 0.4);
+        }
+    }
+    .list-group {
+        max-height: calc(100vh - 62.5px - 57.5px - 36px - 0.5rem);
+        display: block;
+        overflow-y: auto;
+        padding-right: 2px;
+
+        &::-webkit-scrollbar {
+            width:  10px;
+            height: 10px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: #FFF;
+            border-radius: 5px;
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
         }
     }
     .list-group-item {
