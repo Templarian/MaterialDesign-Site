@@ -58,6 +58,7 @@ export class IconsPageComponent {
       this.searchChanged();
     }
     this.tags = await this.tagService.getTags(data.package);
+    this.setHasVertical();
   }
 
   search: string = '';
