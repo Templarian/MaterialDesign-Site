@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostListener } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot, Router, NavigationEnd } from '@angular/router';
 import { IconService } from '../shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
@@ -30,6 +30,20 @@ export class IconsPageComponent {
     private tagService: TagService
   ) {
 
+  }
+
+  hasVertical: boolean = document.body.scrollHeight > document.body.clientHeight; 
+
+  @HostListener('window:scroll', ['$event'])
+  trackScroll(event) {
+    //console.dir("Scroll Event", event);
+    this.hasVertical = document.body.scrollHeight > document.body.clientHeight; 
+  }
+
+  @HostListener('window:resize', ['$event'])
+  trackResize(event) {
+    //console.dir("Resize Event", event);
+    this.hasVertical = document.body.scrollHeight > document.body.clientHeight; 
   }
 
   async loadContent(data) {
