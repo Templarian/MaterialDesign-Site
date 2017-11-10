@@ -40,6 +40,8 @@ export class IconsPageComponent {
     this.hasVertical = document.body.scrollHeight > window.innerHeight;
     if (window.scrollY >= this.boundingSidebarTags.top) {
       this.listOffset = window.scrollY - this.boundingSidebarTags.top;
+    } else {
+      this.listOffset = 0;
     }
   }
 
