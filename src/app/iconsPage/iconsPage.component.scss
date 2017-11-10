@@ -96,7 +96,9 @@
     }
 
     .has-vertical {
-        height: 100vh;
+        .list-group {
+            height: 100vh;
+        }
     }
 
     .has-vertical.has-scrolled {
