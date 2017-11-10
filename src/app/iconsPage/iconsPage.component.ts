@@ -38,6 +38,9 @@ export class IconsPageComponent {
   listOffset: number = 0;
   boundingSidebarTags: any = { top: 0 };
   setHasVertical() {
+    if (this.boundingSidebarTags.top == 0) {
+      this.boundingSidebarTags = this.sidebarTags.nativeElement.getBoundingClientRect();
+    }
     this.hasVertical = document.body.scrollHeight > window.innerHeight;
     if (window.scrollY >= this.boundingSidebarTags.top) {
       this.hasScrolled = true;
