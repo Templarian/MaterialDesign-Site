@@ -33,15 +33,16 @@ export class IconsPageComponent {
 
   }
 
-  hasVertical: boolean = document.body.scrollHeight > window.innerHeight; 
+  hasVertical: boolean = document.body.scrollHeight > window.innerHeight;
+  hasScrolled: boolean = false;
   listOffset: number = 0;
   boundingSidebarTags: any = { top: 0 };
   setHasVertical() {
     this.hasVertical = document.body.scrollHeight > window.innerHeight;
     if (window.scrollY >= this.boundingSidebarTags.top) {
-      this.listOffset = window.scrollY - this.boundingSidebarTags.top;
+      this.hasScrolled = true;
     } else {
-      this.listOffset = 0;
+      this.hasScrolled = false;
     }
   }
 
