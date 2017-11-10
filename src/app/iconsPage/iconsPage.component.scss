@@ -99,6 +99,7 @@
         display: block;
         overflow-y: auto;
         padding-right: 2px;
+        position: relative;
 
         &::-webkit-scrollbar {
             width:  10px;

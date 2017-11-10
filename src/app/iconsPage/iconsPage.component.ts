@@ -1,4 +1,4 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, HostListener, ViewChild } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot, Router, NavigationEnd } from '@angular/router';
 import { IconService } from '../shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
@@ -22,6 +22,7 @@ export class IconsPageComponent {
   icons: Icon[] = [];
   errorMessage: any;
   tags: Tag[] = [];
+  @ViewChild('sidebarTags') sidebarTags;
 
   constructor(
     private router: Router,
@@ -33,9 +34,13 @@ export class IconsPageComponent {
   }
 
   hasVertical: boolean = document.body.scrollHeight > window.innerHeight; 
-
+  listOffset: number = 0;
+  boundingSidebarTags: any = { top: 0 };
   setHasVertical() {
     this.hasVertical = document.body.scrollHeight > window.innerHeight;
+    if (window.scrollY >= this.boundingSidebarTags.top) {
+      this.listOffset = window.scrollY - this.boundingSidebarTags.top;
+    }
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -59,6 +64,7 @@ export class IconsPageComponent {
     }
     this.tags = await this.tagService.getTags(data.package);
     this.setHasVertical();
+    this.boundingSidebarTags = this.sidebarTags.nativeElement.getBoundingClientRect();
   }
 
   search: string = '';
