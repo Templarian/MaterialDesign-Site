@@ -32,18 +32,18 @@ export class IconsPageComponent {
 
   }
 
-  hasVertical: boolean = document.body.scrollHeight > document.body.clientHeight; 
+  hasVertical: boolean = document.body.scrollHeight > window.innerHeight; 
 
   @HostListener('window:scroll', ['$event'])
   trackScroll(event) {
     //console.dir("Scroll Event", event);
-    this.hasVertical = document.body.scrollHeight > document.body.clientHeight; 
+    this.hasVertical = document.body.scrollHeight > window.innerHeight; 
   }
 
   @HostListener('window:resize', ['$event'])
   trackResize(event) {
     //console.dir("Resize Event", event);
-    this.hasVertical = document.body.scrollHeight > document.body.clientHeight; 
+    this.hasVertical = document.body.scrollHeight > window.innerHeight; 
   }
 
   async loadContent(data) {
