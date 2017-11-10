@@ -34,16 +34,20 @@ export class IconsPageComponent {
 
   hasVertical: boolean = document.body.scrollHeight > window.innerHeight; 
 
+  setHasVertical() {
+    this.hasVertical = document.body.scrollHeight > window.innerHeight;
+  }
+
   @HostListener('window:scroll', ['$event'])
   trackScroll(event) {
     //console.dir("Scroll Event", event);
-    this.hasVertical = document.body.scrollHeight > window.innerHeight; 
+    this.setHasVertical();
   }
 
   @HostListener('window:resize', ['$event'])
   trackResize(event) {
     //console.dir("Resize Event", event);
-    this.hasVertical = document.body.scrollHeight > window.innerHeight; 
+    this.setHasVertical();
   }
 
   async loadContent(data) {
@@ -98,6 +102,7 @@ export class IconsPageComponent {
           this.tagUrl = this.route.snapshot.params['tagUrl'] || null;
           this.searchChanged();
           document.body.scrollIntoView();
+          this.setHasVertical();
         }
       });
   }
