@@ -109,6 +109,11 @@
             height: calc(100vh - 62.5px);
         }
     }
+    .has-vertical.has-scrolled.has-full {
+        .list-group {
+            height: 100vh;
+        }
+    }
 
     .list-group {
         height: calc(100vh - 62.5px - 57.5px - 36px - 0.5rem);

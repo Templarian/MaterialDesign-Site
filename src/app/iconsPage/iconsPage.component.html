@@ -1,4 +1,4 @@
-<div class="container-fluid" [ngClass]="{ 'has-vertical': hasVertical, 'has-scrolled': hasScrolled }">
+<div class="container-fluid" [ngClass]="{ 'has-vertical': hasVertical, 'has-scrolled': hasScrolled, 'has-full': hasFull }">
     <div class="row">
         <div [ngClass]="{'col-main-opened': !collapsed, 'col-main-collapsed': collapsed }">
             <div class="filters">
@@ -31,7 +31,7 @@
                 </a>
                 {{hasVertical}}
             </div>
-            <div class="card p-2" style="display: block;" [ngClass]="['size-' + size]">
+            <div #content class="card p-2" style="display: block;" [ngClass]="['size-' + size]">
                 <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
                     [routerLink]="'/icon/' + icon.name">
                     <svg viewBox="0 0 24 24">

@@ -23,6 +23,7 @@ export class IconsPageComponent {
   errorMessage: any;
   tags: Tag[] = [];
   @ViewChild('sidebarTags') sidebarTags;
+  @ViewChild('content') content;
 
   constructor(
     private router: Router,
@@ -35,6 +36,7 @@ export class IconsPageComponent {
 
   hasVertical: boolean = document.body.scrollHeight > window.innerHeight;
   hasScrolled: boolean = false;
+  hasFull: boolean = false;
   listOffset: number = 0;
   boundingSidebarTags: any = { top: 0 };
   setHasVertical() {
@@ -47,6 +49,8 @@ export class IconsPageComponent {
     } else {
       this.hasScrolled = false;
     }
+    this.hasFull = document.body.scrollHeight - window.innerHeight > 150
+      && document.body.scrollHeight - window.innerHeight - window.scrollY > 60;
   }
 
   @HostListener('window:scroll', ['$event'])
