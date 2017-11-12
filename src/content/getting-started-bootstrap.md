@@ -138,8 +138,8 @@ tab:breadcrumb-example Example
 tab:breadcrumb-code Code
 tab:breadcrumb-notes Notes
 tabContent:breadcrumb-example
-<nav aria-label="breadcrumb mb-0" role="navigation">
-  <ol class="breadcrumb">
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb mb-0">
     <li class="breadcrumb-item"><a href="#" class="mdi mdi-home">Home</a></li>
     <li class="breadcrumb-item"><a href="#" class="mdi mdi-book">Library</a></li>
     <li class="breadcrumb-item active" aria-current="page"><span class="mdi mdi-book-multiple">Data</span></li>
@@ -256,6 +256,44 @@ Make sure not to include any whitespace if there is just an icon in a button.
 ```
 
 > **Note:** The helper CSS might be helpful if you're using different size buttons.
+
+/tabContent
+/tabs
+
+
+tabs:Cards
+tab:card-example Example
+tab:card-code Code
+tab:card-notes Notes
+tabContent:card-example
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <h4 class="card-title mdi mdi-home">Card title</h4>
+    <h6 class="card-subtitle mdi mdi-star mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">You can use <span class="mdi mdi-emoticon-happy"></span> inline icons also.</p>
+    <a href="#" class="card-link mdi mdi-checkbox-blank">Card link</a>
+    <a href="#" class="card-link mdi mdi-checkbox-marked">Another link</a>
+  </div>
+</div>
+/tabContent
+tabContent:card-code
+
+```html
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <h4 class="card-title mdi mdi-home">Card title</h4>
+    <h6 class="card-subtitle mdi mdi-star mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">You can use <span class="mdi mdi-emoticon-happy"></span> inline icons also.</p>
+    <a href="#" class="card-link mdi mdi-checkbox-blank">Card link</a>
+    <a href="#" class="card-link mdi mdi-checkbox-marked">Another link</a>
+  </div>
+</div>
+```
+
+/tabContent
+tabContent:card-notes
+
+No notes.
 
 /tabContent
 /tabs
