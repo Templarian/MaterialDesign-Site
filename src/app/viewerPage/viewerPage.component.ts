@@ -92,7 +92,7 @@ export class ViewerPageComponent {
                 </a>
               </${m2}>`;
     }
-  },{
+  }, {
     find: new RegExp('mdi:([a-z0-9-]+)', 'g'),
     replace: (m, icon) => {
       this.icons.push(icon);
@@ -143,10 +143,29 @@ export class ViewerPageComponent {
       .subscribe(sidebars => {
         this.sidebar = sidebars.find(sidebar => sidebar.url === this.url);
       });
+    if (data.stylesheets) {
+      data.stylesheets.map(s => this.addCss(s));
+    }
   }
 
   isActive(sidebarItem: SidebarItem) {
     return sidebarItem.url == this.url && sidebarItem.hash == this.route.snapshot.fragment;
+  }
+
+  addCss(fileName) {
+    for(var i = 0; i < document.styleSheets.length; i++){
+      if(document.styleSheets[i].href == fileName){
+          return;
+      }
+    }
+    var head = document.head,
+      link = document.createElement('link');
+
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = fileName;
+
+    head.appendChild(link);
   }
 
   ngOnInit() {

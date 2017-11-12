@@ -77,7 +77,10 @@ const appRoutes: Routes = [
     path: 'getting-started/bootstrap',
     component: ViewerPageComponent,
     data: {
-      file: 'content/getting-started-bootstrap.md'
+      file: 'content/getting-started-bootstrap.md',
+      stylesheets: [
+        '//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css'
+      ]
     }
   },
   {
