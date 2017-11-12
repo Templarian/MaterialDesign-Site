@@ -6,7 +6,9 @@ tab:intro-install Install
 tab:intro-css Helper CSS
 tabContent:intro-content
 
-<p class="mb-0">Bootstrap is an Open Source CSS framework. There are component libaries making use of it for almost every JavaScript framework imaginable. Even this site uses it.</p>
+<p>Bootstrap is an Open Source CSS framework containing many of the most used components. This site also uses Bootstrap extensively.</p>
+
+<p class="mb-0"><small>This page is for Bootstrap v4, please view Bootstrap v3 for legacy support.</small></p>
 
 /tabContent
 tabContent:intro-install
@@ -107,10 +109,11 @@ tab:alert-example Example
 tab:alert-code Code
 tab:alert-notes Notes
 tabContent:alert-example
-<div>
-    <div class="alert alert-primary mdi mdi-alert" role="alert">
-        This is a primary alert—check it out!
-    </div>
+<div class="alert alert-primary mdi mdi-alert" role="alert">
+    This is a primary alert—check it out!
+</div>
+<div class="alert alert-danger mdi mdi-skull mb-0" role="alert">
+    This is a danger alert—careful!
 </div>
 /tabContent
 tabContent:alert-code
@@ -125,6 +128,40 @@ tabContent:alert-code
 tabContent:alert-notes
 
 Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="_blank">Alerts</a>
+
+/tabContent
+/tabs
+
+
+tabs:Breadcrumbs
+tab:breadcrumb-example Example
+tab:breadcrumb-code Code
+tab:breadcrumb-notes Notes
+tabContent:breadcrumb-example
+<nav aria-label="breadcrumb mb-0" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" class="mdi mdi-home">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" class="mdi mdi-book">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="mdi mdi-book-multiple">Data</span></li>
+  </ol>
+</nav>
+/tabContent
+tabContent:breadcrumb-code
+
+```html
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#" class="mdi mdi-home">Home</a></li>
+    <li class="breadcrumb-item"><a href="#" class="mdi mdi-book">Library</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="mdi mdi-book-multiple">Data</span></li>
+  </ol>
+</nav>
+```
+
+/tabContent
+tabContent:breadcrumb-notes
+
+No notes.
 
 /tabContent
 /tabs
@@ -184,13 +221,23 @@ tabContent:button-code
 ## Button Sizes
 
 ```html
-test
+<button class="btn btn-primary btn-sm mdi mdi-home">SM</button>
+<button class="btn btn-primary mdi mdi-home">MD</button>
+<button class="btn btn-primary btn-lg mdi mdi-home">LG</button>
 ```
 
 ## Button Colors
 
 ```html
-test
+<button type="button" class="btn btn-primary mdi mdi-home">Primary</button>
+<button type="button" class="btn btn-secondary mdi mdi-home">Secondary</button>
+<button type="button" class="btn btn-success mdi mdi-home">Success</button>
+<button type="button" class="btn btn-danger mdi mdi-home">Danger</button>
+<button type="button" class="btn btn-warning mdi mdi-home">Warning</button>
+<button type="button" class="btn btn-info mdi mdi-home">Info</button>
+<button type="button" class="btn btn-light mdi mdi-home">Light</button>
+<button type="button" class="btn btn-dark mdi mdi-home">Dark</button>
+<button type="button" class="btn btn-link mdi mdi-home">Link</button>
 ```
 
 /tabContent
@@ -213,423 +260,6 @@ Make sure not to include any whitespace if there is just an icon in a button.
 /tabContent
 /tabs
 
+## Expand Documentation
 
-tabs:Title Here
-tab:test-example Example Here
-tab:test-code Code Tab
-
-tabContent:test-example
-
-This is a code tab.
-
-```text
-This supports markdown codeblocks
-```
-
-/tabContent
-tabContent:test-code
-
-This is an example tab.
-
-```html
-<p>Event HTML markdown codeblocks</p>
-```
-
-/tabContent
-/tabs
-
-# Legacy docs below
-
-<div class="row">
-  <div class="col-md-5 example">
-                <div class="title">Button Groups</div>
-                <div class="btn-toolbar" role="toolbar">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default" aria-label="Left Align">
-                            <i class="mdi mdi-format-align-left" aria-hidden="true"></i>
-                        </button>
-                        <button type="button" class="btn btn-default" aria-label="Center Align"><i class="mdi mdi-format-align-center" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" aria-label="Right Align"><i class="mdi mdi-format-align-right" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" aria-label="Justify">
-                            <i class="mdi mdi-format-align-justify" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <button type="button" class="btn btn-default" aria-label="Button">Btn</button>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;div class="btn-toolbar" role="toolbar"&gt;
-   &lt;div class="btn-group"&gt;
-        &lt;button type="button"
-                class="btn btn-default"
-                aria-label="Left Align"&gt;
-            &lt;i class="mdi mdi-format-align-left"
-               aria-hidden="true"&gt;&lt;/i&gt;
-        &lt;/button&gt;
-        &lt;!-- OR --&gt;
-        &lt;button type="button"
-                class="btn btn-default mdi mdi-format-align-center"
-                aria-label="Center Align"&gt;&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">Button Sizes</div>
-                <div class="m-b-10">
-                    <button type="button" class="btn btn-xs btn-default" aria-label="Profile">
-                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btn btn-xs btn-default" aria-label="Profile btn-xs">
-                        <i class="mdi mdi-flask" aria-hidden="true"></i>
-                        btn-xs
-                    </button>
-                </div>
-                <div class="m-b-10">
-                    <button type="button" class="btn btn-sm btn-default" aria-label="Profile">
-                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-default" aria-label="Profile btn-sm">
-                        <i class="mdi mdi-flask" aria-hidden="true"></i>
-                        btn-sm
-                    </button>
-                </div>
-                <div class="m-b-10">
-                    <button type="button" class="btn btn-default" aria-label="Profile">
-                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btn btn-default" aria-label="Profile btn normal">
-                        <i class="mdi mdi-flask" aria-hidden="true"></i>
-                        btn
-                    </button>
-                </div>
-                <div class="m-b-10">
-                    <button type="button" class="btn btn-lg btn-default" aria-label="Profile">
-                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                    </button>
-                    <button type="button" class="btn btn-lg btn-default" aria-label="Profile btn-lg">
-                        <i class="mdi mdi-flask" aria-hidden="true"></i>
-                        btn-lg
-                    </button>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;button type="button" class="btn btn-default" aria-label="Profile"&gt;
-    &lt;i class="mdi mdi-account" aria-hidden="true"&gt;&lt;/i&gt;
-&lt;/button&gt;
-&lt;button type="button" class="btn btn-default" aria-label="Flask"&gt;
-    &lt;i class="mdi mdi-flask" aria-hidden="true"&gt;&lt;/i&gt;
-    btn
-&lt;/button&gt;
-&lt;!-- OR --&gt;
-&lt;button type="button" class="btn btn-default mdi mdi-flask" aria-label="Flask"&gt;
-    btn
-&lt;/button&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 example">
-                <div class="title">Button Group</div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default">
-                        <i class="mdi mdi-account"></i>
-                        Default
-                    </button>
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <span class="caret"></span>
-                        <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li>
-                            <a href="#">
-                                <i class="mdi mdi-sword"></i>
-                                Action
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="mdi mdi-security"></i>
-                                Another action
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="mdi mdi-pencil"></i>
-                                Something else here
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="example">
-            <div class="title">Button Colors</div>
-            <button type="button" class="btn btn-default">
-                <i class="mdi mdi-account"></i>
-                Default
-            </button>
-            <button type="button" class="btn btn-primary">
-                <i class="mdi mdi-account"></i>
-                Primary
-            </button>
-            <button type="button" class="btn btn-success">
-                <i class="mdi mdi-account"></i>
-                Success
-            </button>
-            <button type="button" class="btn btn-info">
-                <i class="mdi mdi-account"></i>
-                Info
-            </button>
-            <button type="button" class="btn btn-warning">
-                <i class="mdi mdi-account"></i>
-                Warning
-            </button>
-            <button type="button" class="btn btn-danger">
-                <i class="mdi mdi-account"></i>
-                Danger
-            </button>
-            <button type="button" class="btn btn-link">
-                <i class="mdi mdi-link"></i>
-                Link
-            </button>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">Tabs</div>
-                <ul class="nav nav-tabs">
-                    <li role="presentation" class="active">
-                        <a href="#">
-                            <i class="mdi mdi-home-modern"></i>
-                            Home
-                            <span class="sr-only"> (current)</span>
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#">
-                            <i class="mdi mdi-account"></i>
-                            Help
-                        </a>
-                    </li>
-                    <li role="presentation" class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                            <i class="mdi mdi-account"></i>
-                            Dropdown
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="#">
-                                    <i class="mdi mdi-sword"></i>
-                                    Action
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="mdi mdi-security"></i>
-                                    Another action
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="mdi mdi-pencil"></i>
-                                    Something else here
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;ul class="nav nav-tabs"&gt;
-    &lt;li role="presentation" class="active"&gt;
-        &lt;a href="#"&gt;
-            &lt;i class="mdi mdi-home-modern" aria-hidden="true"&gt;&lt;/i&gt;
-            Home
-            &lt;span class="sr-only"&gt; (current)&lt;/span&gt;
-        &lt;/a&gt;
-    &lt;/li&gt;
-    ...
-&lt;/ul&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">Breadcrumbs</div>
-                <ol class="breadcrumb">
-                    <li>
-                        <a href="#">
-                            <i class="mdi mdi-home-modern" aria-hidden="true"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="mdi mdi-library" aria-hidden="true"></i>
-                            <span>Library</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <i class="mdi mdi-database" aria-hidden="true"></i>
-                        <span>Data</span>
-                    </li>
-                </ol>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;ol class="breadcrumb"&gt;
-    &lt;li&gt;
-        &lt;a href="#"&gt;
-            &lt;i class="mdi mdi-home-modern" aria-hidden="true"&lt;/i&gt;
-            &lt;span&gt;Home&lt;/span&gt;
-        &lt;/a&gt;
-    &lt;/li&gt;
-    ...
-&lt;/ol&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">Alert</div>
-                <div class="alert alert-danger" role="alert">
-                    <span class="mdi mdi-alert-circle" aria-hidden="true"></span>
-                    <span class="sr-only">Error:</span>
-                    Enter a valid email address
-                </div>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;div class="alert alert-danger" role="alert"&gt;
-    &lt;span class="mdi mdi-alert-circle" aria-hidden="true"&gt;&lt;/span&gt;
-    &lt;span class="sr-only"&gt;Error:&lt;/span&gt;
-    Enter a valid email address
-&lt;/div&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">Input Group</div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button" aria-label="Search">
-                            <i class="mdi mdi-magnify" aria-hidden="true"></i>
-                        </button>
-                    </span>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;div class="input-group"&gt;
-    &lt;input type="text" class="form-control" placeholder="Search..."&gt;
-    &lt;span class="input-group-btn"&gt;
-        &lt;button class="btn btn-default" type="button" aria-label="Search"&gt;
-            &lt;i class="mdi mdi-magnify" aria-hidden="true"&gt;&lt;/i&gt;
-        &lt;/button&gt;
-    &lt;/span&gt;
-&lt;/div&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">Input Group Addon</div>
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="mdi mdi-tag" aria-hidden="true"></i></span>
-                    <input type="text" class="form-control" aria-label="Tag">
-                </div>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;div class="input-group"&gt;
-    &lt;span class="input-group-addon"&gt;
-        &lt;i class="mdi mdi-tag" aria-hidden="true"&gt;&lt;/i&gt;
-    &lt;/span&gt;
-    &lt;input type="text" class="form-control" aria-label="Tag"&gt;
-&lt;/div&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">Nav</div>
-                <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
-                                <span class="sr-only">Toggle navigation</span>
-                                <i class="mdi mdi-menu"></i>
-                            </button>
-                            <a class="navbar-brand" href="#">
-                                <i class="mdi mdi-package" aria-hidden="true"></i>
-                                Brand
-                            </a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="#">Home<span class="sr-only"> (current page)</span></a></li>
-                                <li><a href="#">Link</a></li>
-                                <li>
-                                    <a href="#">
-                                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                                        Link
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;nav class="navbar navbar-inverse"&gt;
-    &lt;div class="container-fluid"&gt;
-        &lt;div class="navbar-header"&gt;
-            &lt;button type="button" class="navbar-toggle collapsed"  
-                    data-toggle="collapse" data-target="#ex-navbar"&gt;
-              &lt;span class="sr-only"&gt;Toggle navigation&lt;/span&gt;
-              &lt;i class="mdi mdi-menu" aria-hidden="true"&gt;&lt;/i&gt;
-          &lt;/button&gt;
-          &lt;a class="navbar-brand" href="#"&gt;
-              &lt;i class="mdi mdi-package" aria-hidden="true"&gt;&lt;/i&gt;
-              Brand
-            &lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class="collapse navbar-collapse" id="ex-navbar"&gt;
-            &lt;ul class="nav navbar-nav"&gt;
-                &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;span class="sr-only"&gt; (current page)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-                ...
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</pre>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5 example">
-                <div class="title">List</div>
-                <ul class="list-group">
-                    <li class="list-group-item active">
-                        <span class="badge">42</span>
-                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                        Cras justo odio
-                    </li>
-                    <li class="list-group-item">
-                        <span class="badge">14</span>
-                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                        Dapibus ac facilisis in
-                    </li>
-                    <li class="list-group-item">
-                        <i class="mdi mdi-account" aria-hidden="true"></i>
-                        Morbi leo risus
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-7">
-                <pre>&lt;ul class="list-group"&gt;
-    &lt;li class="list-group-item active"&gt;
-        &lt;span class="badge"&gt;42&lt;/span&gt;
-        &lt;i class="mdi mdi-account" aria-hidden="true"&gt;&lt;/i&gt;
-        Cras justo odio
-    &lt;/li&gt;
-    ...
-&lt;/ul&gt;</pre>
-            </div>
-        </div>
+If you found an error or want to expand the documentation above please click the *Edit on GitHub* button at the top of the page. Not everything is covered for bevity, but always looking for feedback as this is the most accessed documentation page.
