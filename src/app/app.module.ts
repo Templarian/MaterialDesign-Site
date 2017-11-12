@@ -42,6 +42,7 @@ import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
 import { IconSearchComponent } from 'app/shared/iconSearch/iconSearch.component';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
 import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
+import { AdminRenamePageComponent } from 'app/admin/renamePage/renamePage.component';
 
 const appRoutes: Routes = [
   {
@@ -306,6 +307,10 @@ const appRoutes: Routes = [
     path: 'admin/tag',
     component: AdminTagPageComponent
   },
+  {
+    path: 'admin/rename',
+    component: AdminRenamePageComponent
+  },
   { path: '**', component: NotFoundPageComponent }
 ];
 
@@ -325,6 +330,7 @@ const appRoutes: Routes = [
     AdminIconsPageComponent,
     AdminAliasPageComponent,
     AdminTagPageComponent,
+    AdminRenamePageComponent,
     NotFoundPageComponent,
     IconComponent,
     UserComponent,

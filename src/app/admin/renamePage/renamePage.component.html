@@ -1,0 +1,45 @@
+<mdi-banner title="Manage Renames" [carbon]="false"></mdi-banner>
+<div class="container-fluid">
+    <div class="row mb-3">
+        <div class="col-md-12">
+            <div class="card pl-3 pr-3 pt-3">
+                <p>As a contributor you can rename icons. Every icon rename must have an issue recorded.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h2>Rename Form</h2>
+                <div>
+                    <label>
+                        <span class="d-block">Package</span>
+                        <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+                            <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span class="d-block">Icon Name</span>
+                        <mdi-icon-search [package]="selectedPackage"
+                                         [(icon)]="selectedIcon"
+                                         (iconChange)="selectIcon()"></mdi-icon-search>
+                    </label>
+                </div>
+                <div *ngIf="selectedIcon != null">
+                    Enter New Name
+                    <div>
+                        <input type="text" class="form-control" [(ngModel)]="renameText" (keyup)="validate()" />
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-block mt-2" [disabled]="disabledRename" (click)="submitRename()">Rename Icon</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p>Hmm...</p>
+        </div>
+    </div>

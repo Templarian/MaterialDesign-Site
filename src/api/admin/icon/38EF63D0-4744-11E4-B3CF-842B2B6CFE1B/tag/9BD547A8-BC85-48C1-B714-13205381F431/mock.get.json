@@ -25,6 +25,7 @@
             "id": "79c44334-2d86-11e5-8ac4-842b2b6cfe1b",
             "name": "Cody"
         },
+        "tags": [],
         "commentCount": 0
     },
     {
@@ -36,6 +37,7 @@
             "id": "79c44334-2d86-11e5-8ac4-842b2b6cfe1b",
             "name": "Cody"
         },
+        "tags": [],
         "commentCount": 0
     },
     {
@@ -52,6 +54,7 @@
             "id": "a8a312b6-07e4-11e4-bf19-842b2b6cfe1b",
             "name": "Google"
         },
+        "tags": [],
         "commentCount": 0
     },
     {
@@ -63,6 +66,7 @@
             "id": "c4ea5584-07e3-11e4-bf19-842b2b6cfe1b",
             "name": "Austin Andrews"
         },
+        "tags": [],
         "commentCount": 0
     }
 ]

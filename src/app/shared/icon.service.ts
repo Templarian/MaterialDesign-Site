@@ -60,4 +60,12 @@ export class IconService {
     return new Tag().from(res);
   }
 
+  async rename(icon: Icon, name: string): Promise<Icon> {
+    let res = await this.http.post<Icon>('/api/admin/icon/rename', {
+      icon: { id: icon.id },
+      name: name
+    }).toPromise();
+    return new Icon().from(res);
+  }
+
 }
