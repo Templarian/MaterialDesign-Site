@@ -5,8 +5,8 @@
             <div class="edit-on-github">
                 <a [href]="'https://github.com/Templarian/MaterialDesign-Site/tree/master/src/' + file">Edit on GitHub</a>
             </div>
-            <div class="content">
-                <markdown-component [content]="markdown" [replace]="replace"></markdown-component>
+            <div #content class="content">
+                <markdown-component [content]="markdown" [replace]="replace" (render)="process()"></markdown-component>
             </div>
         </div>
         <div class="col-md-4 sidebar hidden-sm-down">

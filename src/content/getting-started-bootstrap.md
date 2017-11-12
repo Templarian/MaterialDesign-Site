@@ -18,7 +18,8 @@ npm install mdi</code></pre>
 
 The below snippet of CSS must be included into your project. Future release may bundle these additional styles.
 
-<pre><code style="max-height: 110px;">i.mdi::before,
+```css
+i.mdi::before,
 span.mdi::before,
 button.mdi::before {
     font-size: 24px;
@@ -84,44 +85,64 @@ button.mdi::before {
     position: relative;
     top: 3px;
     left: -3px
-}</code></pre>
+}
+```
 
 ## Components <small>Example Usage</small>
 
-<ul class="nav nav-tabs">
-  <li class="nav-item">Buttons</li>
-  <li class="nav-item active">
-    <a id="button-example-tab" class="nav-link" data-toggle="tab" href="#button-example" role="tab" aria-controls="home"  aria-selected="true">Example</a>
-  </li>
-  <li class="nav-item">
-    <a id="button-code-tab" class="nav-link" data-toggle="tab" href="#button-code" role="tab" aria-selected="false">Code</a>
-  </li>
-</ul>
-<div class="tab-content">
-  <div class="tab-pane fade active" id="button-example" role="tabpanel" aria-labelledby="button-example-tab">
-    <div class="btn-toolbar" role="toolbar">
-      <div class="btn-group">
-        <button type="button" class="btn btn-secondary" aria-label="Left Align">
-          <span class="mdi mdi-format-align-left" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="btn btn-secondary" aria-label="Center Align"><span class="mdi mdi-format-align-center" aria-hidden="true"></span></button>
-        <button type="button" class="btn btn-secondary" aria-label="Right Align"><span class="mdi mdi-format-align-right" aria-hidden="true"></span></button>
-        <button type="button" class="btn btn-secondary" aria-label="Justify">
-          <span class="mdi mdi-format-align-justify" aria-hidden="true"></i>
-        </button>
-      </div>
-      <button type="button" class="btn btn-secondary" aria-label="Button">Btn</button>
+tabs:Buttons
+tab:button-example Example
+tab:button-code Code
+tabContent:button-example
+<div class="btn-toolbar" role="toolbar">
+    <div class="btn-group mr-2">
+        <button type="button" class="btn btn-secondary mdi mdi-format-align-left" aria-label="Left Align"></button>
+        <button type="button" class="btn btn-secondary mdi mdi-format-align-center" aria-label="Center Align"></button>
+        <button type="button" class="btn btn-secondary mdi mdi-format-align-right" aria-label="Right Align"></button>
+        <button type="button" class="btn btn-secondary mdi mdi-format-align-justify" aria-label="Justify"></button>
     </div>
-  </div>
-  <div class="tab-pane fade" id="button-code" role="tabpanel" aria-labelledby="button-code0tab">
-    <p>Code Panel</p>
+    <div class="btn-group">
+        <button type="button" class="btn btn-secondary" aria-label="Button">Btn</button>
+    </div>
+</div>
+/tabContent
+tabContent:button-code
 
-```html
-<p>testing</p>
+This is a tab content area...
+
+```text
+Testing
 ```
 
-  </div>
-</div>
+/tabContent
+/tabs
+
+
+tabs:Title Here
+tab:test-example Example Here
+tab:test-code Code Tab
+
+tabContent:test-example
+
+This is a code tab.
+
+```text
+This supports markdown codeblocks
+```
+
+/tabContent
+tabContent:test-code
+
+This is an example tab.
+
+```html
+<p>Event HTML markdown codeblocks</p>
+```
+
+/tabContent
+/tabs
+
+# Legacy docs below
 
 <div class="row">
   <div class="col-md-5 example">

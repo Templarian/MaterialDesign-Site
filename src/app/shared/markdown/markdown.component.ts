@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, ViewChild } from "@angular/core";
+import { Component, Input, ElementRef, ViewChild, EventEmitter, Output } from "@angular/core";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare var Remarkable: any;
@@ -26,6 +26,7 @@ export class MarkdownComponent {
       this.render();
     }
   }
+  @Output('render') renderEvent = new EventEmitter();
   get content(): string {
       return this._content;
   }
@@ -39,7 +40,7 @@ export class MarkdownComponent {
 
   render() {
     if (this.content == null) { return; }
-    let html = this.remarkable.render(this.content)
+    let html = this.remarkable.render(this.content);
     // Replace Various Items
     this.replace.forEach(o => {
       html = html.replace(o.find, o.replace);
@@ -48,16 +49,18 @@ export class MarkdownComponent {
     this.htmlData = this.sanitizer.bypassSecurityTrustHtml(html);
     // Additional Rendering
     this.replace.forEach(o => {
-        if (o.render != null) {
-            o.render();
-        }
+      if (o.render != null) {
+          o.render();
+      }
     });
     // Code blocks
-    setTimeout(function () {
-        let items = document.querySelectorAll('pre code');
-        for (var i = 0; i < items.length; i++) {
+    setTimeout(() => {
+      let items = document.querySelectorAll('pre code');
+      for (var i = 0; i < items.length; i++) {
         hljs.highlightBlock(items[i]);
-        }
+      }
+      // Render
+      this.renderEvent.emit();
     });
   }
 }

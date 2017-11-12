@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot, Event, NavigationEnd } from '@angular/router';
 import { ViewerService } from './viewerPage.service';
 import { IconService } from './../shared/icon.service';
@@ -22,7 +22,7 @@ declare var hljs: any;
   ]
 })
 export class ViewerPageComponent {
-
+  @ViewChild('content') content;
   remarkable = new Remarkable({
     html: true
   });
@@ -135,6 +135,29 @@ export class ViewerPageComponent {
     // Render Markdown
     this.viewerService.getMarkdownFileHtml(data.file)
       .subscribe(markdown => {
+        markdown = markdown.replace(/tabs:(.+)/g, (m, m1) => {
+          return `<div class="card mb-3">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item-title">${m1}</li>`;
+        });
+        markdown = markdown.replace(/tab:[^ ]+ .+(\r?\ntab:[^ ]+ .+)+/g, (m) => {
+          return `${m}\n</ul></div><div class="card-body tab-content">`;
+        });
+        markdown = markdown.replace(/tab:([^ ]+) (.+)/g, (m, m1, m2) => {
+          return `<li class="nav-item active">
+            <a id="${m1}-tab" class="nav-link" data-toggle="tab" href="#${m1}" role="tab" aria-controls="home"  aria-selected="true">${m2}</a>
+          </li>`;
+        });
+        markdown = markdown.replace(/tabContent:(.+)/g, (m, m1) => {
+          return `<div class="tab-pane fade" id="${m1}" role="tabpanel" aria-labelledby="${m1}-tab">`;
+        });
+        markdown = markdown.replace(/\/tabContent/g, (m) => {
+          return `</div>`;
+        });
+        markdown = markdown.replace(/\/tabs/g, (m) => {
+          return `</div></div>`;
+        });
         this.markdown = markdown;
       },
       e => this.errorMessage = e);
@@ -150,6 +173,30 @@ export class ViewerPageComponent {
 
   isActive(sidebarItem: SidebarItem) {
     return sidebarItem.url == this.url && sidebarItem.hash == this.route.snapshot.fragment;
+  }
+
+  process() {
+    let content = this.content.nativeElement;
+    let tabGroups = content.querySelectorAll('.nav-tabs') || [];
+    tabGroups.forEach(tabGroup => {
+      let tabs = tabGroup.querySelectorAll('[data-toggle="tab"]') || [];
+      tabs.forEach((tab, i) => {
+        if (i == 0) {
+          tab.className += ' active';
+          document.querySelector(tab.getAttribute('href')).className += ' show active';
+        }
+        tab.onclick = function (e) {
+          tabs.forEach(t => {
+            t.className = t.className.replace(/ active/, '');
+            let c = document.querySelector(t.getAttribute('href'));
+            c.className = c.className.replace(/ show active/, '');
+          });
+          tab.className += ' active';
+          document.querySelector(tab.getAttribute('href')).className += ' show active';
+          e.preventDefault();
+        };
+      });
+    });
   }
 
   addCss(fileName) {
