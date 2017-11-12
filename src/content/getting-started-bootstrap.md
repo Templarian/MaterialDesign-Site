@@ -89,15 +89,16 @@ button.mdi::before {
 ## Components <small>Example Usage</small>
 
 <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#button_example">Button Example</a>
+  <li class="nav-item">Buttons</li>
+  <li class="nav-item active">
+    <a id="button-example-tab" class="nav-link" data-toggle="tab" href="#button-example" role="tab" aria-controls="home"  aria-selected="true">Example</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#button_code">Link</a>
+    <a id="button-code-tab" class="nav-link" data-toggle="tab" href="#button-code" role="tab" aria-selected="false">Code</a>
   </li>
 </ul>
 <div class="tab-content">
-  <div class="tab-pane active" id="button_example" role="tabpanel">
+  <div class="tab-pane fade active" id="button-example" role="tabpanel" aria-labelledby="button-example-tab">
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group">
         <button type="button" class="btn btn-secondary" aria-label="Left Align">
@@ -112,8 +113,13 @@ button.mdi::before {
       <button type="button" class="btn btn-secondary" aria-label="Button">Btn</button>
     </div>
   </div>
-  <div class="tab-pane" id="button_code" role="tabpanel">
+  <div class="tab-pane fade" id="button-code" role="tabpanel" aria-labelledby="button-code0tab">
     <p>Code Panel</p>
+
+```html
+<p>testing</p>
+```
+
   </div>
 </div>
 
