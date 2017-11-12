@@ -1,26 +1,24 @@
 # Bootstrap - Getting Started
 
-Bootstrap content here.
-
-<iframe height='265' scrolling='no' title='Material Design Icons - Bootstrap' src='//codepen.io/templarian/embed/bdgoVQ/?height=265&theme-id=0&default-tab=html,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/templarian/pen/bdgoVQ/'>Material Design Icons - Bootstrap</a> by Austin Andrews (<a href='https://codepen.io/templarian'>@templarian</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
 <div class="row">
-            <div class="col-md-8">
-                <h2>CDN <small>Sponsored by <a href="https://www.maxcdn.com/open-source/">MaxCDN</a></small></h2>
-                <p>A content delivery network provides a fast way to deliver the webfont.</p>
-                <pre><code>//cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css</code></pre>
-            </div>
-            <div class="col-md-4">
-                <h2>Bower or NPM</h2>
-                <p>For <a href="http://bower.io/">Bower</a> or <a href="https://npmjs.com">NPM</a> use:</p>
-                <pre><code>bower install mdi
+  <div class="col-md-8">
+    <h2>CDN <small>Sponsored by <a href="https://www.maxcdn.com/open-source/">MaxCDN</a></small></h2>
+    <p>A content delivery network provides a fast way to deliver the webfont.</p>
+    <pre><code>//cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css</code></pre>
+  </div>
+  <div class="col-md-4">
+    <h2>Bower or NPM</h2>
+    <p>For <a href="http://bower.io/">Bower</a> or <a href="https://npmjs.com">NPM</a> use:</p>
+    <pre><code>bower install mdi
 npm install mdi</code></pre>
-            </div>
-        </div>
-        <h2>CSS <small>Additional Boostrap Specific CSS</small></h2>
-        <p>The below snippet of CSS must be included into your project. Future release may bundle these additional styles.</p>
-        <pre><code style="max-height: 110px;">i.mdi::before,
+  </div>
+</div>
+
+## CSS <small>Additional Boostrap Specific CSS</small>
+
+The below snippet of CSS must be included into your project. Future release may bundle these additional styles.
+
+<pre><code style="max-height: 110px;">i.mdi::before,
 span.mdi::before,
 button.mdi::before {
     font-size: 24px;
@@ -87,9 +85,40 @@ button.mdi::before {
     top: 3px;
     left: -3px
 }</code></pre>
-        <h2>Components <small>Example Usage</small></h2>
-        <div class="row">
-            <div class="col-md-5 example">
+
+## Components <small>Example Usage</small>
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#button_example">Button Example</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#button_code">Link</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" id="button_example" role="tabpanel">
+    <div class="btn-toolbar" role="toolbar">
+      <div class="btn-group">
+        <button type="button" class="btn btn-secondary" aria-label="Left Align">
+          <span class="mdi mdi-format-align-left" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-secondary" aria-label="Center Align"><span class="mdi mdi-format-align-center" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-secondary" aria-label="Right Align"><span class="mdi mdi-format-align-right" aria-hidden="true"></span></button>
+        <button type="button" class="btn btn-secondary" aria-label="Justify">
+          <span class="mdi mdi-format-align-justify" aria-hidden="true"></i>
+        </button>
+      </div>
+      <button type="button" class="btn btn-secondary" aria-label="Button">Btn</button>
+    </div>
+  </div>
+  <div class="tab-pane" id="button_code" role="tabpanel">
+    <p>Code Panel</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5 example">
                 <div class="title">Button Groups</div>
                 <div class="btn-toolbar" role="toolbar">
                     <div class="btn-group">
