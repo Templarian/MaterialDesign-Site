@@ -1,20 +1,29 @@
 # Bootstrap - Getting Started
 
+tabs:Introduction
+tab:intro-content Introduction
+tab:intro-install Install
+tab:intro-css Helper CSS
+tabContent:intro-content
+
+<p class="mb-0">Bootstrap is an Open Source CSS framework. There are component libaries making use of it for almost every JavaScript framework imaginable. Even this site uses it.</p>
+
+/tabContent
+tabContent:intro-install
 <div class="row">
   <div class="col-md-8">
-    <h2>CDN <small>Sponsored by <a href="https://www.maxcdn.com/open-source/">MaxCDN</a></small></h2>
     <p>A content delivery network provides a fast way to deliver the webfont.</p>
     <pre><code>//cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css</code></pre>
   </div>
   <div class="col-md-4">
-    <h2>Bower or NPM</h2>
     <p>For <a href="http://bower.io/">Bower</a> or <a href="https://npmjs.com">NPM</a> use:</p>
     <pre><code>bower install mdi
 npm install mdi</code></pre>
   </div>
 </div>
-
-## CSS <small>Additional Boostrap Specific CSS</small>
+<blockquote>The CDN is sponsored by <a href="https://www.maxcdn.com/open-source/">MaxCDN</a>. This project could not exist without their support.</blockquote>
+/tabContent
+tabContent:intro-css
 
 The below snippet of CSS must be included into your project. Future release may bundle these additional styles.
 
@@ -87,6 +96,9 @@ button.mdi::before {
     left: -3px
 }
 ```
+
+/tabContent
+/tabs
 
 ## Components <small>Example Usage</small>
 
