@@ -10,9 +10,39 @@ Learn more about [SVG](./svg).
 
 If you need a standalone directive we suggest using the one below.
 
+tabs:Standalone
+tab:mdi-usage Usage
+tab:mdi-code mdi.js
+tabContent:mdi-usage
+
+```html
+<!-- After defining in mdiService.add('account', 'data here') -->
+<mdi name="account"></div>
+<!-- Or directly... -->
+<mdi data="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z">
+```
+
+```javascript
+angular.module('app', ['mdi'])
+.controller('exampleController', [
+  'mdiService',
+  function (mdiService) {
+    // Individually
+    mdiService.add('account', 'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z');
+    // or in the config
+  }
+])
+```
+
+/tabContent
+tabContent:mdi-code
+
 ```javascript
 import:/assets/docs/angularjs/mdi.js
 ```
+
+/tabContent
+/tabs
 
 ## Frameworks
 
