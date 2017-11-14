@@ -10,6 +10,12 @@ export class ViewerService {
 
   constructor(private http: HttpClient) { }
 
+  async getFile(url: string): Promise<string> {
+    return this.http.get(url, {
+      responseType: 'text'
+    }).toPromise();
+  }
+
   getMarkdownFileHtml(markdownFile: string): Observable<string> {
     return this.http.get(markdownFile, {
       responseType: 'text'

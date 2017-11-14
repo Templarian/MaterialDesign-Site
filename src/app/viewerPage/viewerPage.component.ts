@@ -95,6 +95,7 @@ export class ViewerPageComponent {
   }, {
     find: new RegExp('mdi:([a-z0-9-]+)', 'g'),
     replace: (m, icon) => {
+      if (icon == 'not' || icon == 'before') { return m; }
       this.icons.push(icon);
       return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
     },
@@ -127,14 +128,25 @@ export class ViewerPageComponent {
     }
   }];
 
-  loadContent(data) {
+  async loadContent(data) {
     var self = this;
     let regex = new RegExp('<h1>(.*)</h1>');
     var linkIcon = this.linkIcon;
     this.file = data.file;
     // Render Markdown
     this.viewerService.getMarkdownFileHtml(data.file)
-      .subscribe(markdown => {
+      .subscribe(async markdown => {
+        // Import
+        let imports: string[] = [];
+        markdown.replace(/import:(.*)/g, (m, m1) => {
+          imports.push(m1);
+          return m;
+        });
+        let c: string[] = await Promise.all(imports.map(async (url, i) => await this.viewerService.getFile(url)));
+        imports.forEach((url, i) => {
+          markdown = markdown.replace('import:' + url, c[i]);
+        });
+        // Tabs
         markdown = markdown.replace(/tabs:(.+)/g, (m, m1) => {
           return `<div class="card mb-3">
             <div class="card-header">

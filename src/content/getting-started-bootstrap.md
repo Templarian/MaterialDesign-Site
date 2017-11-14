@@ -38,34 +38,7 @@ import:/assets/bootstrap/helper.css
 
 ## Components <small>Example Usage</small>
 
-tabs:Alerts
-tab:alert-example Example
-tab:alert-code Code
-tab:alert-notes Notes
-tabContent:alert-example
-<div class="alert alert-primary mdi mdi-alert" role="alert">
-    This is a primary alert—check it out!
-</div>
-<div class="alert alert-danger mdi mdi-skull mb-0" role="alert">
-    This is a danger alert—careful!
-</div>
-/tabContent
-tabContent:alert-code
-
-```html
-<div class="alert alert-primary mdi mdi-alert" role="alert">
-    This is a primary alert—check it out!
-</div>
-```
-
-/tabContent
-tabContent:alert-notes
-
-Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="_blank">Alerts</a>
-
-/tabContent
-/tabs
-
+import:/content/getting-started-bootstrap-alert.md
 
 tabs:Breadcrumbs
 tab:breadcrumb-example Example
@@ -239,9 +212,7 @@ tab:dropdown-code Code
 tab:dropdown-notes Notes
 tabContent:dropdown-example
 <div class="dropdown">
-  <button class="btn btn-secondary mdi mdi-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
+  <button class="btn btn-secondary mdi mdi-button dropdown-toggle mdi mdi-home" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="display:block;position:relative;float: none;width: 250px;">
     <a class="dropdown-item mdi mdi-star" href="#">Action</a>
     <a class="dropdown-item mdi mdi-star" href="#">Another action</a>
