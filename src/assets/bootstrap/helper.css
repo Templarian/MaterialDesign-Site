@@ -3,7 +3,8 @@
 .card-title.mdi::before,
 .card-subtitle.mdi::before,
 .card-link.mdi::before,
-.dropdown-item.mdi::before {
+.dropdown-item.mdi::before,
+.list-group-item.mdi::before {
     font-size: 1.25em;
     line-height: initial;
     position: relative;
@@ -17,6 +18,19 @@
 .dropdown-item.mdi:not(:empty)::before {
     margin-right: 0.25rem;
 }
+.list-group-item.mdi:not(:empty)::before {
+    margin-right: 0.5rem;
+}
 .dropdown-item.mdi:not(:empty)::before {
     margin-left: -0.75rem;
+}
+.list-group-item.mdi:not(:empty)::before {
+    margin-left: -0.5rem;
+}
+.modal-title.mdi::before {
+    font-size: 1.5em;
+    line-height: 0.5;
+    position: relative;
+    top: 0.26rem;
+    margin-right: 0.5rem;
 }
