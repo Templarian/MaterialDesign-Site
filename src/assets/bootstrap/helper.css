@@ -1,3 +1,4 @@
+.alert.mdi::before,
 .breadcrumb .mdi::before,
 .btn.mdi::before,
 .card-title.mdi::before,
@@ -11,6 +12,7 @@
     position: relative;
     top: 0.09rem;
 }
+.alert.mdi::before,
 .breadcrumb .mdi:not(:empty)::before,
 .btn.mdi:not(:empty)::before,
 .card-title.mdi:not(:empty)::before,
@@ -26,6 +28,7 @@
 .dropdown-item.mdi:not(:empty)::before {
     margin-left: -0.75rem;
 }
+.alert.mdi::before,
 .list-group-item.mdi:not(:empty)::before {
     margin-left: -0.5rem;
 }
