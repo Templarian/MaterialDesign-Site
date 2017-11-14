@@ -28,7 +28,7 @@ tabContent:intro-css
 The below snippet of CSS must be included into your project. Future release may bundle these additional styles.
 
 ```css
-import:/assets/bootstrap/helper.css
+import:/assets/docs/bootstrap/helper.css
 ```
 
 /tabContent

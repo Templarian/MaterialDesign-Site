@@ -8,9 +8,17 @@ Learn more about [SVG](./svg).
 
 ## Standalone Directive
 
-Example here for the directive.
+If you need a standalone directive we suggest using the one below.
 
-## Angular Material
+```javascript
+import:/assets/docs/angularjs/mdi.js
+```
+
+## Frameworks
+
+Some frameworks have specific implementations for using iconography as shown below.
+
+### Angular Material
 
 The `mdi.svg` file contains all the icons provided on the site. Use inline with $mdIconProvider.
 

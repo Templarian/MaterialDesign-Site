@@ -80,7 +80,7 @@ const appRoutes: Routes = [
       file: 'content/getting-started-bootstrap.md',
       stylesheets: [
         '//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css',
-        '/assets/bootstrap/helper.css'
+        '/assets/docs/bootstrap/helper.css'
       ]
     }
   },
