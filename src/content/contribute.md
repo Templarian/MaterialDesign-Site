@@ -26,12 +26,12 @@ Once **five** of your icons have been added to the set you can become a contribu
 
 ### Developer
 
-This site is open source, from the documentation to the front end. Any modification in the `master` branch builds within 30 seconds to production and pull requests are usually merged very quickly (especially documentation).
+This [site](/contribute/site) is open source, from the documentation to the front end. Any modification in the `master` branch builds within 30 seconds to production and pull requests are usually merged very quickly (especially documentation).
 
 The tech stack consists of relatively modern tooling, but is organized to be easy to edit for newcomers:
 
-- Angular 4
+- Angular 5
 - Bootstrap 4 (SASS)
-- Content is mostly Markdown files
+- Content is mostly Markdown files and can be edited right from GitHub's editor.
 
 The endpoints are still being documented and are being worked on to provide more robust functionality.
