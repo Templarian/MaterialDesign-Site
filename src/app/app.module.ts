@@ -85,6 +85,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/bootstrap-3',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-bootstrap-v3.md'
+    }
+  },
+  {
     path: 'getting-started/polymer',
     component: ViewerPageComponent,
     data: {
