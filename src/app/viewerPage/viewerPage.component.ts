@@ -128,6 +128,19 @@ export class ViewerPageComponent {
     }
   }];
 
+  async processImports(markdown) {
+    let imports: string[] = [];
+    markdown.replace(/import:(.*)/g, (m, m1) => {
+      imports.push(m1);
+      return m;
+    });
+    let c: string[] = await Promise.all(imports.map(async (url, i) => await this.viewerService.getFile(url)));
+    imports.forEach((url, i) => {
+      markdown = markdown.replace('import:' + url, c[i]);
+    });
+    return markdown;
+  }
+
   async loadContent(data) {
     var self = this;
     let regex = new RegExp('<h1>(.*)</h1>');
@@ -137,15 +150,9 @@ export class ViewerPageComponent {
     this.viewerService.getMarkdownFileHtml(data.file)
       .subscribe(async markdown => {
         // Import
-        let imports: string[] = [];
-        markdown.replace(/import:(.*)/g, (m, m1) => {
-          imports.push(m1);
-          return m;
-        });
-        let c: string[] = await Promise.all(imports.map(async (url, i) => await this.viewerService.getFile(url)));
-        imports.forEach((url, i) => {
-          markdown = markdown.replace('import:' + url, c[i]);
-        });
+        markdown = await this.processImports(markdown);
+        // Nested Imports
+        markdown = await this.processImports(markdown);
         // Tabs
         markdown = markdown.replace(/tabs:(.+)/g, (m, m1) => {
           return `<div class="card mb-3">
