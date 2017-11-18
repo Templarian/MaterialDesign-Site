@@ -43,6 +43,7 @@ import { IconSearchComponent } from 'app/shared/iconSearch/iconSearch.component'
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
 import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
 import { AdminRenamePageComponent } from 'app/admin/renamePage/renamePage.component';
+import { GithubPageComponent } from 'app/githubPage/githubPage.component';
 
 const appRoutes: Routes = [
   {
@@ -303,6 +304,10 @@ const appRoutes: Routes = [
     component: ResourcesPageComponent
   },
   {
+    path: 'github',
+    component: GithubPageComponent
+  },
+  {
     path: 'admin',
     component: AdminLoginPageComponent
   },
@@ -337,6 +342,7 @@ const appRoutes: Routes = [
     ResourcesPageComponent,
     DownloadPageComponent,
     HistoryPageComponent,
+    GithubPageComponent,
     AdminLoginPageComponent,
     AdminIconsPageComponent,
     AdminAliasPageComponent,

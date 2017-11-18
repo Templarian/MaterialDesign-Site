@@ -1,0 +1,30 @@
+<mdi-banner [title]="title" [carbon]="true"></mdi-banner>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2>GitHub Icon Preview</h2>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control"
+                            [(ngModel)]="name" (keyup)="update()" />
+                    </div>
+                    <div class="form-group">
+                        <label>Path Data</label>
+                        <input type="text" name="path" class="form-control"
+                            [(ngModel)]="path" (keyup)="update()" />
+                    </div>
+                    <div class="p-2 mb-2" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);border-radius:4px;display:inline-block;">
+                        <img [attr.src]="url" />
+                    </div>
+                    <p><small>Please copy and paste into GitHub. Do not link to image.</small></p>
+                    <button type="button" class="btn btn-primary">Download</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>
