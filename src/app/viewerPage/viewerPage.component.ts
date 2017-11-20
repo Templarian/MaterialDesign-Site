@@ -180,18 +180,10 @@ export class ViewerPageComponent {
         this.markdown = markdown;
       },
       e => this.errorMessage = e);
-    // Render Sidebar
-    this.viewerService.getSidebar()
-      .subscribe(sidebars => {
-        this.sidebar = sidebars.find(sidebar => sidebar.url === this.url);
-      });
+    // Load stylesheets
     if (data.stylesheets) {
       data.stylesheets.map(s => this.addCss(s));
     }
-  }
-
-  isActive(sidebarItem: SidebarItem) {
-    return sidebarItem.url == this.url && sidebarItem.hash == this.route.snapshot.fragment;
   }
 
   process() {

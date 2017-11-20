@@ -44,6 +44,7 @@ import { PromiseCacheService } from 'app/shared/promiseCache.service';
 import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
 import { AdminRenamePageComponent } from 'app/admin/renamePage/renamePage.component';
 import { GithubPageComponent } from 'app/githubPage/githubPage.component';
+import { SidebarComponent } from 'app/viewerPage/sidebar/sidebar.component';
 
 const appRoutes: Routes = [
   {
@@ -304,7 +305,7 @@ const appRoutes: Routes = [
     component: ResourcesPageComponent
   },
   {
-    path: 'github',
+    path: 'contribute/github',
     component: GithubPageComponent
   },
   {
@@ -354,6 +355,7 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     BannerComponent,
+    SidebarComponent,
     MarkdownComponent,
     IconSearchComponent
   ],
