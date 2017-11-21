@@ -1,0 +1,43 @@
+:host {
+    .card {
+        display: block;
+        padding: 0.5rem;
+        position: relative;
+
+        .avatar {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background: #F1F1F1;
+            vertical-align: top;
+            overflow: hidden;
+        }
+        .name {
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 6px;
+            padding-left: 6px;
+
+            small {
+                display: block;
+                font-size: 12px;
+                margin-top: -4px;
+            }
+        }
+        .bio {
+            display: block;
+            margin-top: 6px;
+            font-size: 14px;
+        }
+        .icon-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 2px 6px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+            border-left: 1px solid rgba(0, 0, 0, 0.125);
+            border-bottom-left-radius: 0.25rem;
+        }
+    }
+}

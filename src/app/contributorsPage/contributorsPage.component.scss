@@ -7,6 +7,7 @@
     blockquote {
         padding: 20px;
         position: relative;
+        margin-bottom: 0;
         &::before {
             content: '“';
             position: absolute;
@@ -29,5 +30,10 @@
 
     h2 {
         font-family: 'Roboto';
+        margin-bottom: 10px;
+    }
+
+    h2:not(:first-child) {
+        margin-top: 20px;
     }
 }
