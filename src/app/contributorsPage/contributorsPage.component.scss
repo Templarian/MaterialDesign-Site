@@ -1,3 +1,33 @@
 :host {
-    
+    .columns-3 {
+        column-count: 3;
+        column-gap: 30px;
+    }
+
+    blockquote {
+        padding: 20px;
+        position: relative;
+        &::before {
+            content: '“';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 46px;
+            font-family: sans-serif;
+            color: #646464;
+        }
+        &::after {
+            content: '”';
+            position: absolute;
+            right: 6px;
+            bottom: -0.5rem;
+            font-size: 46px;
+            font-family: sans-serif;
+            color: #646464;
+        }
+    }
+
+    h2 {
+        font-family: 'Roboto';
+    }
 }

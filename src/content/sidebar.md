@@ -30,6 +30,7 @@
   - none Guides /guides
   - home-assistant Home Assistant /guide/home-assistant
   - human WCAG _Accessibility_ /guide/wcag
+- /contributors
 - /contribute
 - /contribute/github
 - /contribute/icon-naming
@@ -38,6 +39,7 @@
 - /contribute/site/api/data
 - /build/site
 - /code-of-conduct
+  - account-multiple Contributors /contributors
   - account-comment Contribute /contribute
     - github GitHub Tools /contribute/github
   - textbox Icon Naming /contribute/icon-naming
