@@ -6,6 +6,6 @@
         {{user.name}}
         <small>@{{user.twitter}}</small>
     </span>
-    <span class="icon-count">999</span>
-    <span class="bio">Testing to see if this correctly cuts down the length of excess text.</span>
+    <span class="icon-count" *ngIf="user.iconCount > 0">{{user.iconCount}}</span>
+    <span class="bio">{{user.description}}</span>
 </div>
