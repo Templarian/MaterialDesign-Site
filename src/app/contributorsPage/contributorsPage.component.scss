@@ -1,15 +1,18 @@
 :host {
 
     blockquote {
-        padding: 20px;
+        padding: 20px 26px 20px 20px;
         position: relative;
         margin-bottom: 0;
+        font-size: 18px;
+        text-align: justify;
+
         &::before {
             content: '“';
             position: absolute;
             left: 0;
             top: 0;
-            font-size: 46px;
+            font-size: 48px;
             font-family: sans-serif;
             color: #646464;
         }
@@ -18,7 +21,7 @@
             position: absolute;
             right: 6px;
             bottom: -0.5rem;
-            font-size: 46px;
+            font-size: 48px;
             font-family: sans-serif;
             color: #646464;
         }
