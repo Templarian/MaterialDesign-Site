@@ -1,8 +1,10 @@
 <div class="card">
-    <div class="avatar"></div>
+    <div class="avatar">
+        <img [attr.src]="user.base64" />
+    </div>
     <span class="name">
-        Austin Andrews
-        <small>@templarian</small>
+        {{user.name}}
+        <small>@{{user.twitter}}</small>
     </span>
     <span class="icon-count">999</span>
     <span class="bio">Testing to see if this correctly cuts down the length of excess text.</span>

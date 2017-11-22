@@ -1,4 +1,7 @@
 :host {
+    display: block;
+    margin-bottom: 1rem;
+
     .card {
         display: block;
         padding: 0.5rem;
@@ -12,6 +15,10 @@
             background: #F1F1F1;
             vertical-align: top;
             overflow: hidden;
+
+            img {
+                width: 50px;
+            }
         }
         .name {
             display: inline-block;

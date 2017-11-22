@@ -23,4 +23,14 @@ export class UserService {
     return user;
   }
 
+  @PromiseCache()
+  async getUsers(): Promise<User[]> {
+    let res = await this.http.get<User[]>('/api/user')
+      .toPromise();
+    return res.map(i => new User().from(i)).map(u => {
+      u.base64 = 'data:image/png;base64,' + u.base64;
+      return u;
+    });
+  }
+
 }
