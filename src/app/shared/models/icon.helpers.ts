@@ -120,6 +120,7 @@ export abstract class IconHelpers {
       text.setAttribute('transform', 'translate(11, 283)');
       text.style.fontFamily = 'Segoe UI';
       text.style.fontSize = '12pt';
+      text.style.color = `#${color}`;
       text.textContent = this.name;
       svg.appendChild(text);
       resolve(await this.getPngFromSvg(svg));
