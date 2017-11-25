@@ -1,13 +1,15 @@
 # Polymer - Getting Started
 
-Install and import the `iron-icon` web component to start using `mdi-svg`
+Install and import the `iron-icon` web component, as well as `mdi-svg` to get started!
 
-## Using SVGs
-
-```
+```bash
 bower install --save mdi-svg
 bower install --save PolymerElements/iron-icon
 ```
+
+## Using SVGs
+
+Here's an example usage of how to use the `iron-icon` web component:
 
 ```html
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
@@ -22,9 +24,11 @@ bower install --save PolymerElements/iron-icon
 <iron-icon class="big" src="/path/to/icons/example-icon.svg"></iron-icon>
 ```
 
-## Using iron-iconset-svg
+## Using `mdi-iconset-svg`
 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/kriss-kross-io/mdi-iconset-svg)
+[![View `mdi-iconset-svg` on WebComponents.org](https://img.shields.io/badge/webcomponents.org-mdi--iconset--svg-blue.svg)](https://www.webcomponents.org/element/kriss-kross-io/mdi-iconset-svg "View the web component at webcomponents.org")
+
+Use the `icon` attribute of the `iron-icon` web component and specify the namespace of the icon, as well as the icon itself:
 
 ```
 bower install --save kriss-kross-io/mdi-iconset-svg
@@ -39,9 +43,11 @@ bower install --save PolymerElements/iron-icon
 ```
 
 The iconset has duplicate icons, and it's not recommended to import all the icons.
-Alternative you can create your own iconset with only the required icons. This version of the [Polymer Iconset Generator](https://mdi-poly-icon.appspot.com/) includes all icons from `mdi-iconset-svg`.
+Visit the [demo page](https://www.webcomponents.org/element/kriss-kross-io/mdi-iconset-svg/demo/demo/index.html) of the `mdi-iconset-svg` web component to view all the icons and namespaces.
 
-1. Visit [https://mdi-poly-icon.appspot.com/](https://mdi-poly-icon.appspot.com/)
-2. Select the icons you want to use in your app
-3. Download the optimized <iron-iconset-svg> markup and create an HTML import for it
-4. Load the import in your app and start using!
+Alternatively, you can create your own iconset with only the required icons. [MDI Polymer Iconset Generator](https://mdi-poly-icon.appspot.com/) includes all icons from `mdi-iconset-svg`.
+
+1. Visit <https://mdi-poly-icon.appspot.com> in your browser.
+2. Select the icons you want to use in your app.
+3. Download the optimized `<iron-iconset-svg>` markup and create an HTML import for it.
+4. Load the import in your app and start using the icons!
