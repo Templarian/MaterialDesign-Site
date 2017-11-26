@@ -39,8 +39,13 @@ export class GithubPageComponent {
   async update() {
     let context = this.canvas.nativeElement.getContext('2d');
     this.icon = new Icon(this.name, this.path);
-    let img = await this.icon.getGitHubPreview(true);
-    let back = await this.getImage('assets/resources/github-preview-blank.png');
+    let img = await this.icon.getGitHubPreview(this.isWip);
+    let back;
+    if (this.isWip) {
+      back = await this.getImage('assets/resources/github-preview-blank-draft.png');
+    } else {
+      back = await this.getImage('assets/resources/github-preview-blank.png');
+    }
     context.drawImage(back, 0, 0);
     context.drawImage(img, 0, 0);
     if (this.action == 'link') {

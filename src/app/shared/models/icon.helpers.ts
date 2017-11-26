@@ -100,8 +100,9 @@ export abstract class IconHelpers {
     return path;
   }
 
-  async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none', color: string = '8b8b8b') {
+  async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none') {
     return new Promise(async (resolve, reject) => {
+      let color: string = isWorkInProgress ? 'FFF' : '8B8B8B';
       let paths = [
         this.getIconSvgPath(11, 10, 1),
         this.getIconSvgPath(11, 44, 2),

@@ -32,7 +32,7 @@ export class Icon extends IconHelpers {
   addAlias(alias: Alias) { super.addAlias(alias); }
   addTag(tag: Tag) { super.addTag(tag); }
   getPointCount() { return super.getPointCount(); }
-  async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none', color: string = '8b8b8b') {
-    return await super.getGitHubPreview(isWorkInProgress, action, color);
+  async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none') {
+    return await super.getGitHubPreview(isWorkInProgress, action);
   }
 }
