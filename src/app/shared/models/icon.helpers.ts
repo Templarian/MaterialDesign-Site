@@ -120,7 +120,7 @@ export abstract class IconHelpers {
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       text.setAttribute('transform', 'translate(11, 283)');
       text.setAttribute('fill', '#555');
-      text.style.fontFamily = 'Segoe UI';
+      text.style.fontFamily = 'Segoe UI,Roboto,Arial';
       text.style.fontSize = '12pt';
       text.textContent = this.name;
       svg.appendChild(text);
