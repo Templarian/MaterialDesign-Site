@@ -1,12 +1,5 @@
 import { PromiseCacheService } from "app/shared/promiseCache.service";
 
-export function Cacheable() {
-  return function (target: any) {
-    target['testing'] = target.name;
-    return target;
-  };
-}
-
 export function CacheParam(target: any, propertyKey: string, index: number): void {
   const metadataKey = `__cache_${propertyKey}_`;
 
