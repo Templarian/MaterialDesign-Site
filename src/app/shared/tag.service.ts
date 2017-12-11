@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Tag } from 'app/shared/models/tag.model';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
-import { Cacheable, PromiseCache, CacheParam } from 'app/shared/promiseCache.decorator';
+import { PromiseCache, CacheParam } from 'app/shared/promiseCache.decorator';
 
 @Injectable()
 export class TagService {
