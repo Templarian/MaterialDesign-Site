@@ -1,3 +1,7 @@
+@import './../../../node_modules/bootstrap/scss/functions';
+@import './../../../node_modules/bootstrap/scss/variables';
+@import './../../../node_modules/bootstrap/scss/mixins';
+
 :host {
     .section-white {
         background: linear-gradient(135deg, #FFF 0%,#EEE 100%);
@@ -9,5 +13,14 @@
         color: #FFF;
         padding-top: 15px;
         padding-bottom: 20px;
+    }
+    .section-gray {
+        color: #646464;
+        background: #EEE;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+    .btn-outline-blue {
+        @include button-outline-variant(#414F56);
     }
 }
