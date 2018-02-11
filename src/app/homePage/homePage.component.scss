@@ -26,6 +26,7 @@
     .light {
         font-weight: 300;
     }
+
     .or {
         display: inline-block;
         border-radius: 10px;
@@ -39,5 +40,27 @@
         vertical-align: middle;
         font-weight: bold;
         opacity: 0.5;
+    }
+
+    .nav-link {
+        padding: 4px 8px;
+        background: transparent;
+        border-color: transparent;
+        color: #FFF;
+        opacity: 0.6;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .nav-link.active {
+        cursor: default;
+        padding: 4px 8px;
+        background: #5E5E5E;
+        border-color: transparent;
+        color: #FFF;
+        opacity: 1;
     }
 }
