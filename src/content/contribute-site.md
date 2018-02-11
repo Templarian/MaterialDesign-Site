@@ -26,6 +26,8 @@ Every page has a `.html`, `.scss`, and `.ts`. Most text is contained in Markdown
 
 All features for the site are managed through pull requests. Clone the project in GitHub following the instructions in the readme.
 
+<a href="https://github.com/Templarian/MaterialDesign-Site" class="btn btn-outline-secondary">View on GitHub</a>
+
 ### What Features are Wanted
 
 To know if your feature is going to be merged into production it is highly recommended that an issue be created first for the community and contribution team to review.
@@ -44,3 +46,7 @@ Please also read through the API documentation, many of the existing endpoints h
 - Break up features into smaller features when possible.
 - Be patient, the larger the feature the long it takes for us to review.
 - VS Code `CTRL+SHIFT+P` `Format Document`
+
+## Documentation
+
+If you are interested in documentation edits and additions can be done directly in GitHub. GitHub will even create pull requests for you. In the right sidebar click [View Docs](https://github.com/Templarian/MaterialDesign-Site/tree/master/src/content).
