@@ -1,8 +1,13 @@
 :host {
-    .section {
-        background: linear-gradient(135deg, #ffffff 0%,#f1f1f1 100%);
+    .section-white {
+        background: linear-gradient(135deg, #FFF 0%,#EEE 100%);
         padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
         color: #646464;
+    }
+    .section-clear {
+        color: #FFF;
+        padding-top: 15px;
+        padding-bottom: 20px;
     }
 }
