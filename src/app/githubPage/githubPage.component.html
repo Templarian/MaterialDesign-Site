@@ -46,7 +46,10 @@
                         <label>Path Data</label>
                         <input type="text" name="path" class="form-control" [(ngModel)]="path" (keyup)="update()" />
                     </div>
-
+                    <div class="form-group">
+                        <label>Optional Shadow Path Data</label>
+                        <input type="text" name="oldPath" class="form-control" [(ngModel)]="oldPath" (keyup)="update()" />
+                    </div>
                     <div class="p-2 mb-2" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);border-radius:4px;display:inline-block;">
                         <canvas #canvas width="325" height="294"></canvas>
                     </div>

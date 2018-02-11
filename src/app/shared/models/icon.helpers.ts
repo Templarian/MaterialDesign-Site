@@ -73,6 +73,24 @@ export abstract class IconHelpers {
     return 0;
   }
 
+  optimized() {
+
+  }
+
+  getWithoutArcs() {
+
+  }
+
+  async getDataUrl() {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.appendChild(this.getIconSvgPath(0, 0, 1));
+    const png = await this.getPngFromSvg(svg);
+    context.drawImage(png, 0, 0);
+    return canvas.toDataURL();
+  }
+
   addAlias(alias: Alias) {
     this.aliases.push(alias);
   }
@@ -81,12 +99,12 @@ export abstract class IconHelpers {
     this.tags.push(tag);
   }
 
-  private async getPngFromSvg(svgElement: SVGSVGElement) {
-    return new Promise((resolve, reject) => {
+  private async getPngFromSvg(svgElement: SVGSVGElement): Promise<HTMLImageElement> {
+    return new Promise<HTMLImageElement>((resolve, reject) => {
       var svg = new XMLSerializer().serializeToString(svgElement);
       var img = new Image();
       img.onload = function () {
-        resolve(this);
+        resolve(img);
       };
       img.src = `data:image/svg+xml; charset=utf8, ${encodeURIComponent(svg)}`;
     });
@@ -100,8 +118,8 @@ export abstract class IconHelpers {
     return path;
   }
 
-  async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none') {
-    return new Promise(async (resolve, reject) => {
+  async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none'): Promise<HTMLImageElement> {
+    return new Promise<HTMLImageElement>(async (resolve, reject) => {
       let color: string = isWorkInProgress ? 'FFF' : '8B8B8B';
       let paths = [
         this.getIconSvgPath(11, 10, 1),
@@ -112,7 +130,7 @@ export abstract class IconHelpers {
         height = 294;
       const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
       svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-      paths.forEach(path => {
+      paths.forEach((path, i) => {
         path.setAttribute('d', this.data);
         path.setAttribute('fill', `#${color}`);
         svg.appendChild(path);

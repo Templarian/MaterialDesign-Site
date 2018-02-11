@@ -1,13 +1,20 @@
 {
     "id": "5D085274-15B9-42EC-8CCE-2F94C5EC039C",
     "name": "home",
-    "aliases": [
-        "house"
-    ],
-    "tags": [
-        "action",
-        "local"
-    ],
+    "aliases": [{
+        "id": "uuid1",
+        "name": "alias1"
+    }, {
+        "id": "uuid2",
+        "name": "alias2"
+    }],
+    "tags": [{
+        "id": "uuid1",
+        "name": "alias1"
+    }, {
+        "id": "uuid2",
+        "name": "alias2"
+    }],
     "data": "M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z",
     "user": {
         "id": "a8a312b6-07e4-11e4-bf19-842b2b6cfe1b",
