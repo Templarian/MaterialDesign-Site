@@ -4,7 +4,23 @@ Similar to the icons this site is Open Source. Years ago when the project was sm
 
 ## Tech Stack
 
-If you are familiar with Angular and Bootstrap the process is pretty straight forward.
+If you are familiar with Angular and Bootstrap the code base is hopefully pretty easy to follow.
+
+```
+/api       // Mock json files for local development
+/app
+- admin    // Admin Pages
+- homePage
+  - homePage.component.html
+  - homePage.component.scss
+  - homePage.component.ts
+- shared
+  -        // Shared components
+/content
+  - *.md   // Documentation and page content
+```
+
+Every page has a `.html`, `.scss`, and `.ts`. Most text is contained in Markdown files to encourage editing by as wide of an audiance as possible.
 
 ## Building a Feature
 
@@ -24,7 +40,7 @@ Please also read through the API documentation, many of the existing endpoints h
 
 - Let us know early on if your feature needs a API to work.
 - Look at the existing code base and follow consistent naming.
-- Use existing services where it makse sense instead of wrapping your own.
+- Use existing services where it makes sense instead of wrapping your own.
 - Break up features into smaller features when possible.
 - Be patient, the larger the feature the long it takes for us to review.
 - VS Code `CTRL+SHIFT+P` `Format Document`
