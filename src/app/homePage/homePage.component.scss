@@ -53,6 +53,7 @@
         font-size: 1.7rem;
         padding: 0.4rem 1rem;
         position: relative;
+        overflow: hidden;
         &::after {
             content: '';
             position: absolute;
@@ -63,10 +64,14 @@
             border-width: 0.7rem;
             border-right-color: rgba(255,255,255,0.1);
             border-top-color: rgba(255,255,255,0.1);
+            transition: border-width 0.2s ease-in;
         }
         &:hover {
             background-color: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.1);
+            &::after {
+                border-width: 14rem;
+            }
         }
     }
     .light {
