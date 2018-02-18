@@ -19,17 +19,15 @@
                         [ngClass]="{ 'active': size == 48 }">48</button>
                 </div>
                 <div ngbDropdown class="d-inline-block">
-                    <button class="btn btn-light btn-lighter" id="dropdownBasic1" ngbDropdownToggle>All ({{iconsCache.length}})</button>
+                    <button class="btn btn-light btn-lighter" id="dropdownBasic1" ngbDropdownToggle>Latest ({{iconsCache.length}})</button>
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                         <button class="dropdown-item">v2.0.46</button>
                         <button class="dropdown-item">...</button>
                     </div>
                 </div>
-                <a routerLink="/history"
-                    class="btn btn-light btn-lighter">
-                    History
-                </a>
-                {{hasVertical}}
+                <button class="btn btn-light btn-lighter">
+                    Cheatsheet
+                </button>
             </div>
             <div #content class="card p-2" style="display: block;" [ngClass]="['size-' + size]">
                 <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
@@ -42,16 +40,23 @@
         </div>
         <div [ngClass]="{'col-sidebar-opened': !collapsed, 'col-sidebar-collapsed': collapsed }">
             <div class="mb-2">
-                <button class="btn btn-light btn-lighter"
-                    (click)="collapsed = true"
-                    *ngIf="!collapsed">
-                    <!--<mdi-icon name="chevron-right"></mdi-icon>-->d
-                </button>
-                <button class="btn btn-light btn-lighter"
-                    (click)="collapsed = false"
-                    *ngIf="collapsed">
-                    <!--<mdi-icon name="chevron-left"></mdi-icon>-->d
-                </button>
+                <div class="row">
+                    <div class="col-9">
+                        <span style="color:white;font-size:1.5rem;">Categories</span>
+                    </div>
+                    <div class="col-3 text-right">
+                        <button class="btn btn-light btn-lighter"
+                            (click)="collapsed = true"
+                            *ngIf="!collapsed">
+                            <!--<mdi-icon name="chevron-right"></mdi-icon>-->d
+                        </button>
+                        <button class="btn btn-light btn-lighter"
+                            (click)="collapsed = false"
+                            *ngIf="collapsed">
+                            <!--<mdi-icon name="chevron-left"></mdi-icon>-->d
+                        </button>
+                    </div>
+                </div>
             </div>
             <div #sidebarTags class="list-group">
                 <a [routerLink]="'/icons/' + tag.url"
