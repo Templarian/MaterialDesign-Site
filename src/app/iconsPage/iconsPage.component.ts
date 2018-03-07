@@ -39,6 +39,8 @@ export class IconsPageComponent {
   hasFull: boolean = false;
   listOffset: number = 0;
   boundingSidebarTags: any = { top: 0 };
+  isIconsLoading: boolean = true;
+
   setHasVertical() {
     if (this.boundingSidebarTags.top == 0) {
       this.boundingSidebarTags = this.sidebarTags.nativeElement.getBoundingClientRect();
@@ -67,6 +69,7 @@ export class IconsPageComponent {
 
   async loadContent(data) {
     let icons = await this.iconService.getIcons(data.package);
+    this.isIconsLoading = false;
     this.iconsCache = icons;
     this.icons = this.iconsCache;
     if (this.tagUrl) {
