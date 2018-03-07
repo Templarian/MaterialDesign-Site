@@ -95,6 +95,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/ember',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-ember.md'
+    }
+  },
+  {
     path: 'getting-started/polymer',
     component: ViewerPageComponent,
     data: {

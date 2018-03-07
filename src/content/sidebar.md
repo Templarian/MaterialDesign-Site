@@ -4,6 +4,7 @@
 - /getting-started/angularjs
 - /getting-started/bootstrap
 - /getting-started/bootstrap-3
+- /getting-started/ember
 - /getting-started/polymer
 - /getting-started/react
 - /getting-started/svg
@@ -17,6 +18,7 @@
   - angularjs AngularJS _1.x Support_ /getting-started/angularjs
   - bootstrap Bootstrap _Webfont / Shim CSS_ /getting-started/bootstrap
     - bootstrap Bootstrap 3 _Legacy_ /getting-started/bootstrap-3
+  - ember Ember /getting-started/ember
   - polymer Polymer _v0.5 / v1.0 Supported_ /getting-started/polymer
   - react React /getting-started/react
   - svg SVG /getting-started/svg
