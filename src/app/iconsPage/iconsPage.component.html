@@ -25,7 +25,8 @@
                         <button class="dropdown-item">...</button>
                     </div>
                 </div>
-                <button class="btn btn-light btn-lighter">
+                <button class="btn btn-light btn-lighter"
+                    (click)="isCheatsheet = !isCheatsheet">
                     Cheatsheet
                 </button>
             </div>
@@ -40,6 +41,8 @@
                     <svg viewBox="0 0 24 24">
                         <path [attr.d]="icon.data" />
                     </svg>
+                    <span *ngIf="isCheatsheet"
+                        class="codepoint">f001{{icon.codepoint}}</span>
                 </a>
             </div>
         </div>

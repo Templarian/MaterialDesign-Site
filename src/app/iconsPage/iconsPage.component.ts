@@ -40,6 +40,7 @@ export class IconsPageComponent {
   listOffset: number = 0;
   boundingSidebarTags: any = { top: 0 };
   isIconsLoading: boolean = true;
+  isCheatsheet: boolean = false;
 
   setHasVertical() {
     if (this.boundingSidebarTags.top == 0) {

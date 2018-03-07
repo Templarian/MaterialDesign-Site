@@ -62,6 +62,17 @@
         &:hover {
             background: rgba(0, 0, 0, 0.2);
         }
+
+        .codepoint {
+            font-size: 14px;
+            font-family: Consolas,monospace;
+            display: block;
+            text-align: center;
+            line-height: 18px;
+            color: #333;
+            border-radius: 4px;
+            margin: 4px -4px 0 -4px;
+        }
     }
 
     .filters {
