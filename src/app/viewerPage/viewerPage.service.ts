@@ -23,7 +23,7 @@ export class ViewerService {
   }
 
   private extractData(text: string) {
-    text = text.replace('{{version}}', '2.0.46');
+    text = text.replace('{{version}}', '2.1.99');
     return text;
   }
 
