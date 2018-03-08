@@ -82,7 +82,7 @@ const appRoutes: Routes = [
     data: {
       file: 'content/getting-started-bootstrap.md',
       stylesheets: [
-        '//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css',
+        '//cdn.materialdesignicons.com/2.1.99/css/materialdesignicons.min.css',
         '/assets/docs/bootstrap/helper.css'
       ]
     }
