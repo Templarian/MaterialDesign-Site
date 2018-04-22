@@ -1,0 +1,80 @@
+:host {
+    
+    .list-group {
+
+        /deep/ {
+            svg {
+                path {
+                    fill: #495057;
+                }
+            }
+        }
+
+        .icon {
+            padding: 6px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 36px;
+            height: 36px;
+            margin-left: -10px;
+            margin-right: 6px;
+        }
+
+        .list-group-item {
+            cursor: pointer;
+
+            &:focus,
+            &.active:focus {
+                outline: none;
+                box-shadow: 0 0 3px rgba(0, 123, 255, 0.6);
+                z-index: 3;
+            }
+
+            &.active {
+                background: #FFF;
+                border: 1px solid rgba(0, 0, 0, 0.125);
+                color: #495057;
+            }
+        }
+
+        &.side-nav {
+            a {
+                color: #FFF;
+        
+                /deep/ {
+                    svg {
+                        vertical-align: middle;
+                        path {
+                            fill: #FFF;
+                        }
+                    }
+                }
+        
+                &.list-group-item {
+                    background: transparent;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    color: #FFF;
+        
+                    &:hover {
+                        color: #FFF;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+        
+                    &.active {
+                        background: rgba(0, 0, 0, 0.1);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+                }
+        
+                small {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+        
+            }
+        }
+    }
+
+}

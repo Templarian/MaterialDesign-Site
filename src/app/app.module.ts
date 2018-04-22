@@ -35,6 +35,7 @@ import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
+import { IssuesPageComponent } from 'app/issuesPage/issuesPage.component';
 import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
@@ -302,6 +303,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'issues',
+    component: IssuesPageComponent,
+    data: {
+      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+    }
+  },
+  {
     path: 'history',
     component: HistoryPageComponent,
     data: {
@@ -352,6 +360,7 @@ const appRoutes: Routes = [
     ResourcesPageComponent,
     DownloadPageComponent,
     HistoryPageComponent,
+    IssuesPageComponent,
     GithubPageComponent,
     AdminLoginPageComponent,
     AdminIconsPageComponent,

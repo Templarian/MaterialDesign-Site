@@ -56,6 +56,7 @@
 - /history
 - /contact
   - information-outline About /about
+  - github Github Issues /issues
   - clock History /history
   - scale-balance License /license
   - email-outline Contact /contact
