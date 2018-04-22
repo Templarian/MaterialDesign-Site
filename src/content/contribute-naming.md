@@ -45,7 +45,7 @@ All naming must be in the exact order below.
 - `variant` is only to be used to represent the same icon with the same meaning.
 - `close` is never to be used to represent a `x` on an icon other than the `close-*`. Use `*-remove` for these instances.
 - `settings` modifier is represented in Material Design as three dots (`...`) not a `cog` or `gear`.
-- `plus` is alwayed used to represent adding (do not use `add`).
+- `plus` is always used to represent adding (do not use `add`).
 - `minus` is always used to represent subtracting.
 - `multiple` should be used on layered icons where there is a singular representation present.
 - `format-*` breaks all the rules. Because.
