@@ -26,7 +26,7 @@
                     <tbody>
                         <tr *ngFor="let issue of issues; index as i">
                             <td>{{i+1}}</td>
-                            <td><href="https://github.com/Templarian/MaterialDesign/issues/{{issue.number}}">#{{issue.number}}</a></td>
+                            <td><a href="https://github.com/Templarian/MaterialDesign/issues/{{issue.number}}">#{{issue.number}}</a></td>
                             <td class="text-left">{{issue.title}}</td>
                             <td class="text-left">{{issue.labels.includes("Rejected :negative_squared_cross_mark:")?"Rejected":issue.labels.includes("Low Priority :arrow_down:")?"Low Priority":issue.labels.includes("Contribution :heavy_check_mark:")?"Coming Soon":issue.labels.includes("High Priority :grey_exclamation:")?"High Priority":"Pending"}}</td>
                             <td>{{issue.labels.includes("Stock Google Icon :squirrel:")?"<mdi-icon name="check"></mdi-icon>":""}}</td>
