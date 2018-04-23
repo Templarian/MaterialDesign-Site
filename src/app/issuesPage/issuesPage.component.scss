@@ -4,6 +4,11 @@
         th {
             border-top: 0;
         }
+        mdi-icon[name="check"] {
+            /deep/ svg path {
+                fill: #155724;
+            }
+        }
     }
 
     mdi-icon {
