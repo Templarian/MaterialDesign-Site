@@ -1,34 +1,39 @@
 import { Component, Input } from '@angular/core';
-import { Modification } from 'app/shared/models/modification.model';
-import { ModificationService } from 'app/shared/modification.service';
-import { ModificationType } from 'app/shared/enums/modificationType.enum';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { LoginService } from 'app/admin/services/login.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Issue } from 'app/shared/models/issue.model';
+import { GitHubService } from 'app/shared/github.service';
 
 @Component({
   selector: 'mdi-issues-page',
   templateUrl: './issuesPage.component.html',
   styleUrls: ['./issuesPage.component.scss'],
   providers: [
-    ModificationService,
+    GitHubService,
     LoginService
   ]
 })
 export class IssuesPageComponent {
-  title: string = 'Issues';
+  title: string = 'GitHub Issues';
+  issues: Issue[];
 
   constructor(
-    private modificationService: ModificationService,
+    private gitHubService: GitHubService,
     private route: ActivatedRoute,
     private sanitizer: DomSanitizer,
     private loginService: LoginService,
     private modalService: NgbModal
-  ) {}
+  ) {
+    this.load();
+  }
 
-  async loadMore() {
-    
+  async load() {
+    this.issues = await this.gitHubService.getIssues();
+    this.issues.sort((a, b) => {
+      return a.plus - b.plus;
+    }).reverse();
   }
 
   friendlyDate (date: Date) {
@@ -50,10 +55,6 @@ export class IssuesPageComponent {
 
   friendlyUrl (str: string) {
     return str.replace(' ', '-');
-  }
-
-  friendlyReport (m: Modification) {
-    return 'https://github.com/Templarian/MaterialDesign/issues/new?title=History&body=Reason%3A%0D%0A%0D%0A%0D%0A%5BView+History+Item%5D%28http%3A%2F%2Fmaterialdesignicons.com%2Fhistory%2F' + m.id + '%29';
   }
   
 }

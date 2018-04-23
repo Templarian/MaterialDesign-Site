@@ -15,6 +15,15 @@
     .nav-tabs {
         background: #F1F1F1;
     }
+
+    .nav-tabs .nav-link {
+        color: #555;
+        
+        &:hover {
+            color: #222;
+            border-color: #C3C6C9 #C3C6C9 #B7B7B7;
+        }
+    }
     
     .list-group {
 

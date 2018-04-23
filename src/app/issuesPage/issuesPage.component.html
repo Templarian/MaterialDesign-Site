@@ -24,14 +24,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>#1234</td>
-                            <td class="text-left">Issue Name Here</td>
+                        <tr *ngFor="let issue of issues; index as i">
+                            <td>{{i+1}}</td>
+                            <td>#{{issue.number}}</td>
+                            <td class="text-left">{{issue.title}}</td>
                             <td class="text-left">Coming Soon</td>
                             <td></td>
-                            <td>5</td>
-                            <td>4</td>
+                            <td>{{issue.plus}}</td>
+                            <td>{{issue.comments}}</td>
                         </tr>
                     </tbody>
                 </table>
