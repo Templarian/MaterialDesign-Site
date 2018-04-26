@@ -10,6 +10,7 @@ export class Issue {
   public comments: number;
   public milestone: number;
   public number: number;
+  public status: string = null;
 
   from(issue: Issue): Issue {
     this.user = issue.user;

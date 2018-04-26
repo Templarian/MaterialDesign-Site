@@ -5,13 +5,24 @@
             <div class="card">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <button class="nav-link active">Issue Requests</button>
+                        <button class="nav-link" 
+                            [ngClass]="{'active': filter == null}"
+                            (click)="load(null)">Issue Requests</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link">Google Icon Requests</button>
+                        <button class="nav-link"
+                            [ngClass]="{'active': filter == 'Stock Google Icon'}"
+                            (click)="load('Stock Google Icon')">Google Icon Requests</button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link">Brand Requests</button>
+                        <button class="nav-link"
+                            [ngClass]="{'active': filter == 'Brand Icon'}"
+                            (click)="load('Brand Icon')">Brand Requests</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link"
+                            [ngClass]="{'active': filter == 'Home Assistant'}"
+                            (click)="load('Home Assistant')">Home Automation</button>
                     </li>
                 </ul>
                 <table class="table text-center">
@@ -31,9 +42,25 @@
                             <td>{{i+1}}</td>
                             <td><a href="https://github.com/Templarian/MaterialDesign/issues/{{issue.number}}">#{{issue.number}}</a></td>
                             <td class="text-left">{{issue.title}}</td>
-                            <td class="text-left">{{issue.labels.includes("Rejected :negative_squared_cross_mark:")?"Rejected":issue.labels.includes("Low Priority :arrow_down:")?"Low Priority":issue.labels.includes("Contribution :heavy_check_mark:")?"Coming Soon":issue.labels.includes("High Priority :grey_exclamation:")?"High Priority":"Pending"}}</td>
+                            <td class="text-left">
+                                <span *ngIf="issue.status == 'Rejected'"
+                                    class="status-rejected"
+                                    [ngbTooltip]="rejectedTooltip">Rejected</span>
+                                <span *ngIf="issue.status == 'Low Priority'"
+                                    class="status-low-priority"
+                                    [ngbTooltip]="lowPriorityTooltip">Low Priority</span>
+                                <span *ngIf="issue.status == 'Coming Soon'"
+                                    class="status-coming-soon"
+                                    [ngbTooltip]="comingSoonTooltip">Coming Soon</span>
+                                <span *ngIf="issue.status == 'High Priority'"
+                                    class="status-high-priority"
+                                    [ngbTooltip]="highPriorityTooltip">High Priority</span>
+                                <span *ngIf="issue.status == 'Pending'"
+                                    class="status-pending"
+                                    [ngbTooltip]="pendingTooltip">Pending</span>
+                            </td>
                             <td>
-                              <mdi-icon name="check" *ngIf="issue.labels.includes('Stock Google Icon :squirrel:')"></mdi-icon>
+                              <mdi-icon name="check" *ngIf="issue.labels.includes('Stock Google Icon')"></mdi-icon>
                             </td>
                             <td>{{issue.plus}}</td>
                             <td>{{issue.comments}}</td>
@@ -64,6 +91,11 @@
                     <mdi-icon name="email-outline"></mdi-icon>
                     Contact
                 </a>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="mb-0">Please 👍 the first comment to see it rise in the list.</p>
+                </div>
             </div>
         </div>
     </div>

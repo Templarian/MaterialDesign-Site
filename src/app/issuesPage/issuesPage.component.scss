@@ -9,6 +9,45 @@
                 fill: #155724;
             }
         }
+        tr:nth-child(even) {
+            background: #F1F1F1;
+        }
+
+        .status-rejected {
+            display: block;
+            padding: 4px 0;
+            text-align: center;
+            color: #666;
+        }
+        .status-pending {
+            display: block;
+            padding: 4px 0;
+            text-align: center;
+            background: #563d7c;
+            border-radius: 4px;
+            color: #FFF;
+        }
+        .status-coming-soon {
+            display: block;
+            padding: 4px 0;
+            text-align: center;
+            background: #32a316;
+            border-radius: 4px;
+            color: #FFF;
+        }
+        .status-high-priority {
+            display: block;
+            padding: 4px 0;
+            text-align: center;
+            background: #e11d21;
+            border-radius: 4px;
+            color: #FFF;
+        }
+        .status-low-priority {
+            display: block;
+            padding: 4px 0;
+            text-align: center;
+        }
     }
 
     mdi-icon {

@@ -18,6 +18,12 @@ import { GitHubService } from 'app/shared/github.service';
 export class IssuesPageComponent {
   title: string = 'GitHub Issues';
   issues: Issue[];
+  filter: string = null;
+  rejectedTooltip: string = 'This icon may be too specific or outside of the scope of the icon set.';
+  lowPriorityTooltip: string = 'This icon could be useful, but it fairly specific.';
+  comingSoonTooltip: string = 'An approved design has been accepted.';
+  highPriorityTooltip: string = 'This icon needs to be added soon.';
+  pendingTooltip: string = 'Approved request, but still needs more work.';
 
   constructor(
     private gitHubService: GitHubService,
@@ -26,11 +32,24 @@ export class IssuesPageComponent {
     private loginService: LoginService,
     private modalService: NgbModal
   ) {
-    this.load();
+    this.load(this.filter);
   }
 
-  async load() {
+  async load(filter: string) {
+    this.filter = filter;
     this.issues = await this.gitHubService.getIssues();
+    this.issues.forEach(issue => {
+      issue.status = issue.labels.includes("Rejected")
+        ? "Rejected" : issue.labels.includes("Low Priority") 
+        ? "Low Priority" : issue.labels.includes("Contribution")
+        ? "Coming Soon" : issue.labels.includes("High Priority")
+        ? "High Priority" : "Pending"
+    })
+    if (filter) {
+      this.issues = this.issues.filter(v => {
+        return v.labels.includes(filter);
+      })
+    }
     this.issues.sort((a, b) => {
       return a.plus - b.plus;
     }).reverse();
