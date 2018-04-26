@@ -23,10 +23,21 @@
 
         .nav-link {
             color: #555;
+            background: transparent;
+            cursor: pointer;
 
             &:hover {
                 color: #222;
                 border-color: #C3C6C9 #C3C6C9 #B7B7B7;
+            }
+
+            &.active {
+                background: #FFF;
+
+                &:hover {
+                    color: #222;
+                    border-bottom-color: #FFF;
+                }
             }
         }
     }
