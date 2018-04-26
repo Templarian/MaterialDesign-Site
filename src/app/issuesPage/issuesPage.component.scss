@@ -4,13 +4,23 @@
         th {
             border-top: 0;
         }
-        mdi-icon[name="check"] {
-            /deep/ svg path {
-                fill: #155724;
-            }
-        }
+        
         tr:nth-child(even) {
             background: #F1F1F1;
+        }
+
+        tr td mdi-icon[name="check"] {
+            background: #32a316;
+            border-radius: 20px;
+            width: 32px;
+            display: inline-block;
+            height: 32px;
+            padding: 4px;
+            vertical-align: top;
+            
+            /deep/ path {
+                fill: #FFF;
+            }
         }
 
         .status-rejected {
