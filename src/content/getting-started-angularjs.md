@@ -1,10 +1,6 @@
 # AngularJS - Getting Started
 
-In AngularJS you will want to use a method that cleanly inserts SVG inline.
-
-## SVG
-
-Learn more about [SVG](./svg).
+In AngularJS you will want to use a method that cleanly inserts [SVG](./svg) inline.
 
 ## Standalone Directive
 
