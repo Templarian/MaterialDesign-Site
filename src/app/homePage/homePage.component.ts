@@ -22,6 +22,7 @@ import {
   mdiCards, mdiCardsOutline,
   mdiCart, mdiCartOutline,
   mdiCheckCircle, mdiCheckCircleOutline,
+  mdiCheck, mdiCheckOutline,
 } from '@mdi/js'
 
 @Component({
@@ -53,7 +54,8 @@ export class HomePageComponent {
     { regular: mdiBriefcase, outline: mdiBriefcaseOutline },
     { regular: mdiCards, outline: mdiCardsOutline },
     { regular: mdiCart, outline: mdiCartOutline },
-    { regular: mdiCheckCircle, outline: mdiCheckCircleOutline }
+    { regular: mdiCheckCircle, outline: mdiCheckCircleOutline },
+    { regular: mdiCheck, outline: mdiCheckOutline }
   ]
 }
 
