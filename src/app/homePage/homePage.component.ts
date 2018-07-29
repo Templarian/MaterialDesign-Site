@@ -59,6 +59,7 @@ export class HomePageComponent {
   ]
 }
 
+// Trigger build
 interface regularOutline {
   regular: string;
   outline: string;
