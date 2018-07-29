@@ -114,4 +114,60 @@
         color: #FFF;
         opacity: 1;
     }
+    svg.regular,
+    svg.outline {
+        width: 24px;
+        height: 24px;
+        opacity: 0;
+
+        path {
+            fill: #414f56;
+        }
+    }
+    svg.outline {
+        margin-left: -24px;
+    }
+    svg.regular {
+        animation: animationFrames linear 4s;
+        animation-iteration-count: infinite;
+        -webkit-animation: animationFrames linear 4s;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    svg.outline {
+        animation: animationFrames linear 4s;
+        animation-iteration-count: infinite;
+        animation-delay: 2s;
+        -webkit-animation: animationFrames linear 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-delay: 2s;
+    }     
+}
+@keyframes animationFrames{
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes animationFrames{
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }

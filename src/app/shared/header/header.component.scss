@@ -1,4 +1,6 @@
 :host {
+    position: relative;
+    z-index: 1;
 
     .nav-item.dropdown button {
         padding: 4px 8px;
@@ -145,5 +147,16 @@
         width: 100%;
         height: calc(100% - 100px);
         background: rgba(0, 0, 0, 0.2);
+    }
+
+    .is-home {
+        .navbar-brand {
+            span {
+                color: #414F56;
+            }
+            svg path {
+                fill: #414F56;
+            }
+        }
     }
 }
