@@ -128,43 +128,43 @@
         margin-left: -24px;
     }
     svg.regular {
-        animation: animationFrames linear 4s;
+        animation: animationFrames linear 8s;
         animation-iteration-count: infinite;
-        -webkit-animation: animationFrames linear 4s;
+        -webkit-animation: animationFrames linear 8s;
         -webkit-animation-iteration-count: infinite;
     }
 
     svg.outline {
-        animation: animationFrames linear 4s;
+        animation: animationFrames linear 8s;
         animation-iteration-count: infinite;
-        animation-delay: 2s;
-        -webkit-animation: animationFrames linear 4s;
+        animation-delay: 4s;
+        -webkit-animation: animationFrames linear 8s;
         -webkit-animation-iteration-count: infinite;
-        -webkit-animation-delay: 2s;
+        -webkit-animation-delay: 4s;
     }     
 }
-@keyframes animationFrames{
+@keyframes animationFrames {
     0% {
         opacity: 0;
     }
-    10% {
+    5% {
         opacity: 1
     }
-    40% {
+    45% {
         opacity: 1;
     }
     50% {
         opacity: 0;
     }
 }
-@-webkit-keyframes animationFrames{
+@-webkit-keyframes animationFrames {
     0% {
         opacity: 0;
     }
-    10% {
+    5% {
         opacity: 1
     }
-    40% {
+    45% {
         opacity: 1;
     }
     50% {
