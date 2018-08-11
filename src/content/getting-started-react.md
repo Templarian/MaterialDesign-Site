@@ -8,7 +8,7 @@ npm install @mdi/react
 
 [MaterialDesign-React on GitHub](https://github.com/Templarian/MaterialDesign-React)
 
-## Props
+## Usage
 
 ```javascript
 import React, { Component } from 'react'
