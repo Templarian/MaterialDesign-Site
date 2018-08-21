@@ -20,7 +20,7 @@
   - bootstrap Bootstrap _Webfont / Shim CSS_ /getting-started/bootstrap
     - bootstrap Bootstrap 3 _Legacy_ /getting-started/bootstrap-3
   - ember Ember /getting-started/ember
-  - php PHP / Twig /getting-started/php
+  - language-php PHP _Twig_ /getting-started/php
   - polymer Polymer _v0.5 / v1.0 Supported_ /getting-started/polymer
   - react React /getting-started/react
   - svg SVG /getting-started/svg
