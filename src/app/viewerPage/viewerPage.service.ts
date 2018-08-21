@@ -49,7 +49,7 @@ export class ViewerService {
   };
 
   private processSidebar(text: string): Sidebar[] {
-    var lines = text.split(/\r?\n/);
+    var lines = text.replace(/\s+$/g, '').split(/\r?\n/);
     var baseUrls: string[] = [];
     var self = this;
     var clearNext = true;
