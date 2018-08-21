@@ -103,6 +103,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/php',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-php.md'
+    }
+  },
+  {
     path: 'getting-started/polymer',
     component: ViewerPageComponent,
     data: {
