@@ -5,6 +5,7 @@
 - /getting-started/bootstrap
 - /getting-started/bootstrap-3
 - /getting-started/ember
+- /getting-started/php
 - /getting-started/polymer
 - /getting-started/react
 - /getting-started/svg
