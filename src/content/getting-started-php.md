@@ -52,7 +52,7 @@ Simply register `Mdi::mdi` as a Twig simple function and get started!
 $twigEnv->addFunction(new \Twig_SimpleFunction('mdi', [Mdi::class, 'mdi'], ['is_safe' => ['html']]));
 ```
 
-```twig
+```
 <button>
     {{ mdi('account', 'fill-muted', 42, {'aria-label': 'My account icon'}) }}
     My account
