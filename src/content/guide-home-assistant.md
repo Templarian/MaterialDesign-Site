@@ -7,7 +7,7 @@ Below is a list of common icons to use with the popular [Home Assistant](https:/
 | Logo       | mdi:home-assistant |
 | Home       | mdi:home mdi:home-variant mdi:home-automation mdi:home-outline mdi:home-modern mdi:caravan mdi:floor-plan |
 | User       | mdi:account mdi:account-plus |
-| Lighting   | mdi:lamp mdi:ceiling-light mdi:lava-lamp mdi:led-strip mdi:lightbulb mdi:lightbulb-outline mdi:lightbulb-on mdi:lightbulb-on-outline mdi:spotlight mdi:spotlight-beam mdi:led-on mdi:led-off mdi:led-outline mdi:led-variant-on mdi:led-variant-off mdi:led-variant-outline |
+| Lighting   | mdi:lamp mdi:ceiling-light mdi:desk-lamp mdi:track-light mdi:light-switch mdi:lava-lamp mdi:led-strip mdi:lightbulb mdi:lightbulb-outline mdi:lightbulb-on mdi:lightbulb-on-outline mdi:spotlight mdi:spotlight-beam mdi:led-on mdi:led-off mdi:led-outline mdi:led-variant-on mdi:led-variant-off mdi:led-variant-outline |
 | HVAC       | mdi:nest-thermostat mdi:radiator mdi:air-conditioner |
 | Fan        | mdi:fan mdi:fan-off |
 | Audio      | mdi:speaker mdi:speaker-off mdi:speaker-wireless mdi:radio mdi:amplifier mdi:boombox mdi:dolby |
