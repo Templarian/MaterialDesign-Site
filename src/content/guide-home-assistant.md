@@ -23,7 +23,7 @@ Below is a list of common icons to use with the popular [Home Assistant](https:/
 | Kitchen    | mdi:fridge mdi:fridge-filled mdi:fridge-filled-top mdi:fridge-filled-bottom mdi:stove mdi:washing-machine |
 | Bathroom   | mdi:scale-bathroom |
 | Bedroom    | mdi:hotel |
-| Sensors    | mdi:thermometer mdi:thermometer-box mdi:gauge mdi:water-percent mdi:run-fast mdi:bell mdi:brightness-7 |
+| Sensors    | mdi:thermometer mdi:thermometer-lines mdi:gauge mdi:water-percent mdi:run-fast mdi:bell mdi:brightness-7 |
 | Cast       | mdi:cast mdi:cast-off mdi:cast-connected mdi:airplay |
 | Power      | mdi:power-plug mdi:power-plug-off mdi:power-socket mdi:power-socket-us mdi:power-socket-eu mdi:power-socket-uk |
 | Computer   | mdi:desktop-tower mdi:desktop-mac mdi:desktop-classic mdi:laptop mdi:laptop-off mdi:laptop-chromebook mdi:laptop-windows mdi:laptop-mac mdi:monitor mdi:monitor-multiple |
