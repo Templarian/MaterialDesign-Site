@@ -14,8 +14,8 @@ Below is a list of common icons to use with the popular [Home Assistant](https:/
 | Television | mdi:television mdi:television-guide mdi:television-classic |
 | Remote     | mdi:remote mdi:power mdi:play mdi:pause mdi:play-pause mdi:skip-previous mdi:skip-next mdi:skip-backward mdi:skip-forward mdi:record mdi:record-rec mdi:volume-high mdi:volume-medium mdi:volume-low mdi:volume-off mdi:volume-minus mdi:volume-plus mdi:gamepad |
 | Camera     | mdi:cctv mdi:webcam mdi:video mdi:video-off mdi:camera |
-| Vaccum     | mdi:roomba |
-| Smoke Alarm| mdi:nest-protect |
+| Vaccum     | mdi:robot-vacuum |
+| Smoke Alarm| mdi:smoke-detector |
 | Window     | mdi:window-closed mdi:window-open |
 | Security   | mdi:security-home mdi:lock mdi:lock-open mdi:lock-outline mdi:lock-open-outline|
 | Garage     | mdi:garage mdi:garage-open |
