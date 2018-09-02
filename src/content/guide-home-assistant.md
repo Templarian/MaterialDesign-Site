@@ -8,7 +8,7 @@ Below is a list of common icons to use with the popular [Home Assistant](https:/
 | Home       | mdi:home mdi:home-variant mdi:home-automation mdi:home-outline mdi:home-modern mdi:caravan mdi:floor-plan |
 | User       | mdi:account mdi:account-plus |
 | Lighting   | mdi:lamp mdi:ceiling-light mdi:desk-lamp mdi:track-light mdi:light-switch mdi:lava-lamp mdi:led-strip mdi:lightbulb mdi:lightbulb-outline mdi:lightbulb-on mdi:lightbulb-on-outline mdi:spotlight mdi:spotlight-beam mdi:led-on mdi:led-off mdi:led-outline mdi:led-variant-on mdi:led-variant-off mdi:led-variant-outline |
-| HVAC       | mdi:nest-thermostat mdi:radiator mdi:air-conditioner |
+| HVAC       | mdi:thermostat mdi:thermostat-box mdi:radiator mdi:air-conditioner |
 | Fan        | mdi:fan mdi:fan-off |
 | Audio      | mdi:speaker mdi:speaker-off mdi:speaker-wireless mdi:radio mdi:amplifier mdi:boombox mdi:dolby |
 | Television | mdi:television mdi:television-guide mdi:television-classic |
@@ -23,7 +23,7 @@ Below is a list of common icons to use with the popular [Home Assistant](https:/
 | Kitchen    | mdi:fridge mdi:fridge-filled mdi:fridge-filled-top mdi:fridge-filled-bottom mdi:stove mdi:washing-machine |
 | Bathroom   | mdi:scale-bathroom |
 | Bedroom    | mdi:hotel |
-| Sensors    | mdi:thermometer mdi:gauge mdi:water-percent mdi:run-fast mdi:bell mdi:brightness-7 |
+| Sensors    | mdi:thermometer mdi:thermometer-box mdi:gauge mdi:water-percent mdi:run-fast mdi:bell mdi:brightness-7 |
 | Cast       | mdi:cast mdi:cast-off mdi:cast-connected mdi:airplay |
 | Power      | mdi:power-plug mdi:power-plug-off mdi:power-socket mdi:power-socket-us mdi:power-socket-eu mdi:power-socket-uk |
 | Computer   | mdi:desktop-tower mdi:desktop-mac mdi:desktop-classic mdi:laptop mdi:laptop-off mdi:laptop-chromebook mdi:laptop-windows mdi:laptop-mac mdi:monitor mdi:monitor-multiple |
