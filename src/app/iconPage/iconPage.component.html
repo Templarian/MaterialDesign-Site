@@ -5,29 +5,39 @@
             <span>{{alias.name}}</span>{{isLast ? '' : ', '}}
         </span>
     </div>
-    <div>
-        <div class="preview">
-            <svg *ngIf="isVector" viewBox="0 0 24 24">
-                <path [attr.d]="icon.data"></path>
-            </svg>
-            <img *ngIf="loaded && !isVector" [attr.src]="'/api/preview?png=' + icon.data + '&foreground=646464'" />
+    <div style="display:flex">
+        <div style="flex:0;margin-right:1rem;">
+            <div class="preview">
+                <svg *ngIf="isVector" viewBox="0 0 24 24">
+                    <path [attr.d]="icon.data"></path>
+                </svg>
+                <img *ngIf="loaded && !isVector" [attr.src]="'/api/preview?png=' + icon.data + '&foreground=646464'" />
+            </div>
+            <div class="btn-group btn-group-justified" style="width: 280px">
+                <button class="btn btn-light" style="border-top-left-radius: 0;"
+                    [ngClass]="{ 'active': isVector }"
+                    (click)="setVector()">Vector</button>
+                <button class="btn btn-light" style="border-top-right-radius: 0;"
+                    [ngClass]="{ 'active': !isVector }"
+                    (click)="setRaster()">Raster</button>
+            </div>
+            <!--<div>Point Count... {{icon.pointCounttest}}</div>-->
+            <!--<div *ngIf="loaded">
+                Point Count {{icon.getPointCount()}}
+            </div>-->
         </div>
-        <div class="btn-group btn-group-justified" style="width: 280px">
-            <button class="btn btn-light" style="border-top-left-radius: 0;"
-                [ngClass]="{ 'active': isVector }"
-                (click)="setVector()">Vector</button>
-            <button class="btn btn-light" style="border-top-right-radius: 0;"
-                [ngClass]="{ 'active': !isVector }"
-                (click)="setRaster()">Raster</button>
+        <div style="flex:1" style="max-width: 840px">
+            <div class="card tags">
+                <span>Tags: </span>
+                <span *ngFor="let tag of icon.tags; let isLast=last">
+                    <span>{{tag.name}}</span>{{isLast ? '' : ', '}}
+                </span>
+            </div>
+            <div class="card mt-2 p-3" style="overflow-x: auto;">
+                <pre class="mb-0">&lt;svg viewBox="0 0 24 24"&gt;
+            &lt;path d="{{icon.data}}"&gt;&lt;/path&gt;
+        &lt;/svg&gt;</pre>
+            </div>
         </div>
-        <!--<div>Point Count... {{icon.pointCounttest}}</div>-->
-        <!--<div *ngIf="loaded">
-            Point Count {{icon.getPointCount()}}
-        </div>-->
-    </div>
-    <div class="card p-3">
-        <pre class="mb-0">&lt;svg viewBox="0 0 24 24"&gt;
-    &lt;path d="{{icon.data}}"&gt;&lt;/path&gt;
-&lt;/svg&gt;</pre>
     </div>
 </div>
