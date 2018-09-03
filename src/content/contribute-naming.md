@@ -26,13 +26,16 @@ All naming must be in the exact order below.
 | `*-left`   |           | `*-plus`     |              |
 | `*-right`  |           | `*-minus`    |              |
 |            |           | `*-remove`   |              |
+|            |           | `*-search`   |              |
 
 ![alert](/assets/resources/grid-96-alert.svg)
 ![arrow-right](/assets/resources/grid-96-arrow-right-bottom-right.svg)
 ![network](/assets/resources/grid-96-network.svg)
+![settings](/assets/resources/grid-96-settings.svg)
 ![plus](/assets/resources/grid-96-plus-bottom-right.svg)
 ![minus](/assets/resources/grid-96-minus-bottom-right.svg)
-![minus](/assets/resources/grid-96-remove-bottom-right.svg)
+![remove](/assets/resources/grid-96-remove-bottom-right.svg)
+![search](/assets/resources/grid-96-search-bottom-right.svg)
 ![off](/assets/resources/grid-96-off.svg)
 
 ## Additional Details
