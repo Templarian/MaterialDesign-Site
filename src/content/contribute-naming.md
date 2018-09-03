@@ -17,27 +17,22 @@ flask
 
 All naming must be in the exact order below.
 
-```text
--up
--down
--left
--right
--bold
--thick
+| Position   | Weight | Overlay         | Modifier     |
+|------------|-----------|--------------|--------------|
+| `*-top`    | `*-bold`  | `*-alert`    | `*-multiple` |
+| `*-bottom` | `*-thick` | `*-account`  | `*-variant`  |
+| `*-up`     |           | `*-network`  | `*-off`      |
+| `*-down`   |           | `*-settings` | `*-outline`  |
+| `*-left`   |           | `*-plus`     |              |
+| `*-right`  |           | `*-minus`    |              |
+|            |           | `*-remove`   |              |
+|            |           | `*-arrow`    |              |
 
--alert
--account
--network
--settings
--plus
--minus
--remove
-
--multiple
--variant
--off
--outline
-```
+![plus](/assets/resources/grid-96-plus-bottom-right.svg)
+![minus](/assets/resources/grid-96-minus-bottom-right.svg)
+![minus](/assets/resources/grid-96-remove-bottom-right.svg)
+![arrow-right](/assets/resources/grid-96-arrow-right-bottom-right.svg)
+![off](/assets/resources/grid-96-off.svg)
 
 ## Additional Details
 

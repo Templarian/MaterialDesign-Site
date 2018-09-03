@@ -29,13 +29,13 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "remarkable": "^1.7.1",
-    "rxjs": "^5.5.11",
+    "rxjs": "^5.5.12",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular/cli": "1.5.0",
     "@angular/compiler-cli": "^5.2.11",
-    "@mdi/js": "github:Templarian/MaterialDesign-JS",
+    "@mdi/js": "2.7.94",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.114",
     "codelyzer": "~2.0.0",
