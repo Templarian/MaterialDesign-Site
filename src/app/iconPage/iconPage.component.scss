@@ -1,4 +1,7 @@
 :host {
+    mdi-banner {
+        padding: 2rem 0 3rem 0;
+    }
     h1 {
         color: #FFF;
     }
@@ -7,7 +10,6 @@
         height: 280px;
         background: url('/assets/resources/icon-grid.svg') #F1F1F1;
         border-radius: 8px 8px 0 0;
-        box-shadow: 0 0 5px rgba(0,0,0,0.5) inset;
 
         svg {
             margin: 20px;
@@ -24,6 +26,16 @@
             height: 240px;
             margin: 20px;
             image-rendering: pixelated;
+        }
+    }
+    div.aliases {
+        margin-top: -1.75rem;
+        margin-bottom: 1rem;
+        color: #FFF;
+        > span > span {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
         }
     }
 }

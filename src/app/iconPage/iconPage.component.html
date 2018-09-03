@@ -1,5 +1,10 @@
-<mdi-banner [title]="icon.name" [icon]="icon.data" [carbon]="true"></mdi-banner>
 <div class="container">
+    <mdi-banner style="padding: 2.5rem 0" [title]="icon.name" [icon]="icon.data" [carbon]="true"></mdi-banner>
+    <div class="aliases">
+        <span *ngFor="let alias of icon.aliases; let isLast=last">
+            <span>{{alias.name}}</span>{{isLast ? '' : ', '}}
+        </span>
+    </div>
     <div>
         <div class="preview">
             <svg *ngIf="isVector" viewBox="0 0 24 24">
