@@ -6,12 +6,7 @@ MDI has strong guidelines setup to ensure naming of every icon is as _consistent
 
 Base names are generally the noun representation of an icon. In some cases this may also be the more common software term for the icon.
 
-```text
-arrow
-comment
-folder
-flask
-```
+Examples: `comment`, `folder`, or `flask`
 
 ## Hyphen Tagging
 
