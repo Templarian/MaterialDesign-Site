@@ -7,6 +7,7 @@ export class Icon extends IconHelpers {
 
   public id: string = null;
   public name: string = null;
+  public description: string = null;
   public data: string = null;
   public user: User = null;
   public aliases: Alias[] = [];
@@ -22,6 +23,7 @@ export class Icon extends IconHelpers {
   from(icon: Icon): Icon {
     this.id = icon.id;
     this.name = icon.name;
+    this.description = icon.description;
     this.data = icon.data;
     this.user = new User().from(icon.user);
     this.aliases = icon.aliases.map(a => new Alias().from(a));

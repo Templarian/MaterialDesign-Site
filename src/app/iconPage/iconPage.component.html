@@ -21,6 +21,12 @@
                     [ngClass]="{ 'active': !isVector }"
                     (click)="setRaster()">Raster</button>
             </div>
+            <div class="downloads mt-2">
+                <button class="btn btn-light btn-block"
+                    (click)="setVector()">Download 24dp Black</button>
+                <button class="btn btn-light btn-block"
+                    (click)="setVector()">Download 48dp Black</button>
+            </div>
             <!--<div>Point Count... {{icon.pointCounttest}}</div>-->
             <!--<div *ngIf="loaded">
                 Point Count {{icon.getPointCount()}}
@@ -29,17 +35,22 @@
         <div style="flex:1" style="max-width: 814px">
             <div class="card tags">
                 <div class="card-body">
+                    {{icon.description}}
+                </div>
+            </div>
+            <div class="card tags mt-3">
+                <div class="card-body">
                     <span>Tags: </span>
                     <span *ngFor="let tag of icon.tags; let isLast=last">
                         <span>{{tag.name}}</span>{{isLast ? '' : ', '}}
                     </span>
                 </div>
             </div>
-            <div class="card mt-2 p-3">
+            <div class="card mt-3 p-3">
                 <div class="card-body" style="overflow-x: auto;">
                 <pre class="mb-0">&lt;svg viewBox="0 0 24 24"&gt;
-            &lt;path d="{{icon.data}}"&gt;&lt;/path&gt;
-        &lt;/svg&gt;</pre>
+    &lt;path d="{{icon.data}}"/&gt;
+&lt;/svg&gt;</pre>
                 </div>
             </div>
         </div>
