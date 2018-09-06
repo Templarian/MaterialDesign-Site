@@ -21,8 +21,7 @@ composer require mesavolt/mdi-php
 
 ## Usage
 
-Globally configure the icons location. This should be done once and before
-the first usage of the `Mdi::mdi` function.
+If you didn't install the icons pack using one of the methods above, you can globally configure the icons location. This should be done once and before the first usage of the `Mdi::mdi` function.
 
 ```php
 Mdi::withIconsPath(__DIR__.'/../../../node_modules/@mdi/svg/svg/');
@@ -43,6 +42,26 @@ The `mdi` function provides 4 arguments to customize its output:
  - its class (`fill-muted` for instance)
  - its size (defaults to 24px)
  - some more attributes that will be added to the `<svg>` tag (`['aria-label' => 'My account']` for instance)
+
+### Default attributes
+
+You can add custom default attributes, or edit and remove the provided defaults.
+
+| Attribute name | Default value                                  |
+|----------------|------------------------------------------------|
+| `viewBox`      | `0 0 24 24`                                    |
+| `xmlns`        | `http://www.w3.org/2000/svg`                   |
+| `width`        | Whatever size was specified (defaults to `24`) |
+| `height`       | Whatever size was specified (defaults to `24`) |
+| `role`         | `presentation`                                 |
+
+```php
+Mdi::withDefaultAttributes([
+    'data-toggle' => 'tooltip',     // Add a new one
+    'role' => 'img',                // Replace default `presentation` value with `img`
+    'xmlns' => null,                // Remove default `xmlns` attribute
+]);
+```
 
 ## What about Twig?
 
