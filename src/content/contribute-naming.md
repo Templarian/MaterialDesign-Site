@@ -23,14 +23,50 @@ All naming must be in the exact order below.
 |            |           | `*-remove`   |              |
 |            |           | `*-search`   |              |
 
+### Overlay
+
+#### Alert
+
 ![alert](/assets/resources/grid-96-alert.svg)
+
+#### Arrow Right
+
 ![arrow-right](/assets/resources/grid-96-arrow-right-bottom-right.svg)
+
+#### Network
+
 ![network](/assets/resources/grid-96-network.svg)
+
+#### Settings
+
 ![settings](/assets/resources/grid-96-settings.svg)
+
+#### Plus
+
 ![plus](/assets/resources/grid-96-plus-bottom-right.svg)
+
+#### Minus
+
 ![minus](/assets/resources/grid-96-minus-bottom-right.svg)
+
+#### Remove
+
 ![remove](/assets/resources/grid-96-remove-bottom-right.svg)
+
+#### Search
+
 ![search](/assets/resources/grid-96-search-bottom-right.svg)
+
+### Modifier
+
+Modifiers are consistent across all icons in their representation.
+
+#### Multiple
+
+![multiple](/assets/resources/grid-96-multiple.svg)
+
+#### Off
+
 ![off](/assets/resources/grid-96-off.svg)
 
 ## Additional Details
