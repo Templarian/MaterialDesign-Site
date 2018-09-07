@@ -29,51 +29,72 @@ All position modifiers should be used to describe the direction an icon is point
 
 ### Overlay
 
-tabs:Overlay
-tab:intro-content icon:alert-box
-tab:intro-install icon:arrow-right-bold-box
-tab:intro-css icon:network
-tab:intro-css icon:settings-helper
-tab:intro-css icon:plus-box
-tab:intro-css icon:minus-box
-tab:intro-css icon:close-box
-tab:intro-css icon:magnify
-tabContent:intro-content
+tabs:
+tab:naming-alert icon:alert-box
+tab:naming-arrow icon:arrow-right-bold-box
+tab:naming-network icon:network
+tab:naming-settings icon:settings-helper
+tab:naming-plus icon:plus-box
+tab:naming-minus icon:minus-box
+tab:naming-remove icon:close-box
+tab:naming-search icon:magnify
+tabContent:naming-alert
 
-/tabContent
-/tabs
-
-#### Alert
+The alerts modifer can be shown inside of an icon or to the right.
 
 ![alert](/assets/resources/grid-96-alert.svg)
 
-#### Arrow Right
+/tabContent
+tabContent:naming-arrow
+
+The arrow modifer can point in any direction and should be placed in the bottom right.
 
 ![arrow-right](/assets/resources/grid-96-arrow-right-bottom-right.svg)
 
-#### Network
+/tabContent
+tabContent:naming-network
+
+The network modifer should only be used to dipict a network connected device or object.
 
 ![network](/assets/resources/grid-96-network.svg)
 
-#### Settings
+/tabContent
+tabContent:naming-settings
+
+The settings modifer in Material Design should be depicted by three dots and not a `cog` or `gear`.
 
 ![settings](/assets/resources/grid-96-settings.svg)
 
-#### Plus
+/tabContent
+tabContent:naming-plus
+
+The plus modifier can be appended to any noun icon.
 
 ![plus](/assets/resources/grid-96-plus-bottom-right.svg)
 
-#### Minus
+/tabContent
+tabContent:naming-minus
+
+The minus modifier can be appended to any noun icon.
 
 ![minus](/assets/resources/grid-96-minus-bottom-right.svg)
 
-#### Remove
+/tabContent
+tabContent:naming-remove
+
+The remove modifier can be appended to any noun icon.
 
 ![remove](/assets/resources/grid-96-remove-bottom-right.svg)
 
-#### Search
+/tabContent
+tabContent:naming-search
+
+The search modifier can be appended to any noun icon to depict the ability to search the object.
 
 ![search](/assets/resources/grid-96-search-bottom-right.svg)
+
+/tabContent
+/tabs
 
 ### Modifier
 

@@ -158,11 +158,12 @@ export class ViewerPageComponent {
         // Nested Imports
         markdown = await this.processImports(markdown);
         // Tabs
-        markdown = markdown.replace(/tabs:(.+)/g, (m, m1) => {
-          return `<div class="card mb-3">
+        markdown = markdown.replace(/tabs:(.*)/g, (m, m1) => {
+          const tab = `<div class="card mb-3">
             <div class="card-header">
-              <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item-title">${m1}</li>`;
+              <ul class="nav nav-tabs card-header-tabs">`;
+          const title = m1 === '' ? '' :  `<li class="nav-item-title">${m1}</li>`;
+          return `${tab}${title}`;
         });
         markdown = markdown.replace(/tab:[^ ]+ .+(\r?\ntab:[^ ]+ .+)+/g, (m) => {
           return `${m}\n</ul></div><div class="card-body tab-content">`;
