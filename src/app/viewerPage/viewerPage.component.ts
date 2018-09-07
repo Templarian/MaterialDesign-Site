@@ -98,9 +98,9 @@ export class ViewerPageComponent {
       if (icon == 'not' || icon == 'before') { return m; }
       this.icons.push(icon);
       if (type === 'mdi') {
-        return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
+        return `<a href="icon/${icon}"><svg class="icon icon-spin" data-type="link" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
       } else {
-        return `<svg class="icon icon-spin" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg>`;
+        return `<svg class="icon icon-spin" data-type="icon" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg>`;
       }
     },
     render: async () => {
@@ -121,10 +121,12 @@ export class ViewerPageComponent {
           (<Element>svgs[i]).setAttribute('title', meta.name);
           let path = svgs[i].firstChild;
           (<Element>path).setAttribute('d', meta.data);
-          svgs[i].parentElement.onclick = (e) => {
-            this.router.navigateByUrl('/icon/' + icon);
-            e.preventDefault();
-          };
+          if (svgs[i].getAttribute('data-type') === 'link') {
+            svgs[i].parentElement.onclick = (e) => {
+              this.router.navigateByUrl('/icon/' + icon);
+              e.preventDefault();
+            };
+          }
           //this._popupService = new PopupService<NgbTooltipWindow>(
           //  NgbTooltipWindow, injector, viewContainerRef, _renderer, componentFactoryResolver);
         }
