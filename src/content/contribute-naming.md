@@ -29,6 +29,20 @@ All position modifiers should be used to describe the direction an icon is point
 
 ### Overlay
 
+tabs:Overlay
+tab:intro-content icon:alert-box
+tab:intro-install icon:arrow-right-bold-box
+tab:intro-css icon:network
+tab:intro-css icon:settings-helper
+tab:intro-css icon:plus-box
+tab:intro-css icon:minus-box
+tab:intro-css icon:close-box
+tab:intro-css icon:magnify
+tabContent:intro-content
+
+/tabContent
+/tabs
+
 #### Alert
 
 ![alert](/assets/resources/grid-96-alert.svg)

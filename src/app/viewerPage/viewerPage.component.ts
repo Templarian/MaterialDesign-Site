@@ -93,11 +93,15 @@ export class ViewerPageComponent {
               </${m2}>`;
     }
   }, {
-    find: new RegExp('mdi:([a-z0-9-]+)', 'g'),
-    replace: (m, icon) => {
+    find: new RegExp('(mdi|icon):([a-z0-9-]+)', 'g'),
+    replace: (m, type, icon) => {
       if (icon == 'not' || icon == 'before') { return m; }
       this.icons.push(icon);
-      return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${m}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
+      if (type === 'mdi') {
+        return `<a href="icon/${icon}"><svg class="icon icon-spin" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
+      } else {
+        return `<svg class="icon icon-spin" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg>`;
+      }
     },
     render: async () => {
       let iconList = await this.iconService.getIconsByName('38EF63D0-4744-11E4-B3CF-842B2B6CFE1B', this.icons);
@@ -110,7 +114,7 @@ export class ViewerPageComponent {
         if (ic.length > 0) {
           meta = ic[0];
         }
-        var svgs = document.querySelectorAll('svg[data-icon="mdi:' + icon + '"]');
+        var svgs = document.querySelectorAll(`svg[data-icon="${icon}"]`);
         for (let i = 0; i < svgs.length; i++) {
           let svg = svgs[i];
           (<Element>svgs[i]).setAttribute('class', 'icon');
