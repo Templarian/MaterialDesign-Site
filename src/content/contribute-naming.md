@@ -12,16 +12,20 @@ Examples: `comment`, `folder`, or `flask`
 
 All naming must be in the exact order below.
 
-| Position   | Weight    | Overlay      | Modifier     |
-|------------|-----------|--------------|--------------|
-| `*-top`    | `*-bold`  | `*-alert`    | `*-multiple` |
-| `*-bottom` | `*-thick` | `*-arrow-*`  | `*-variant`  |
-| `*-up`     |           | `*-network`  | `*-off`      |
-| `*-down`   |           | `*-settings` | `*-outline`  |
-| `*-left`   |           | `*-plus`     |              |
-| `*-right`  |           | `*-minus`    |              |
-|            |           | `*-remove`   |              |
-|            |           | `*-search`   |              |
+| Position          | Weight    | Overlay      | Modifier     |
+|-------------------|-----------|--------------|--------------|
+| `*-top-left`      | `*-bold`  | `*-alert`    | `*-multiple` |
+| `*-top-right`     | `*-thick` | `*-arrow-*`  | `*-variant`  |
+| `*-bottom-left`   |           | `*-network`  | `*-off`      |
+| `*-bottom-right`  |           | `*-settings` | `*-outline`  |
+| `*-up`            |           | `*-plus`     |              |
+| `*-down`          |           | `*-minus`    |              |
+| `*-left`          |           | `*-remove`   |              |
+| `*-right`         |           | `*-search`   |              |
+
+### Position
+
+All position modifiers should be used to describe the direction an icon is pointing.
 
 ### Overlay
 
