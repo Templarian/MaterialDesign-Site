@@ -35,7 +35,7 @@
   - none Guides /guides
   - home-assistant Home Assistant /guide/home-assistant
   - human WCAG _Accessibility_ /guide/wcag
-  - format-letter-case Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
+  - checkbox-marked Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
 - /contributors
 - /contribute
 - /contribute/github
