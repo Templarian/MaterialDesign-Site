@@ -77,6 +77,13 @@ body {
     blockquote {
         padding-left: 10px;
         border-left: 4px solid #CCC;
+
+        &.alert.alert-info {
+            border-left-color: #0c5460;
+            svg path {
+                fill: #0c5460;
+            }
+        }
     }
 
     pre {
