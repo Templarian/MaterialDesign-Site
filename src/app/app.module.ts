@@ -215,6 +215,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'guide/webfont-alternatives',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/guide-webfont-alternative.md'
+    }
+  },
+  {
     path: 'code-of-conduct',
     component: ViewerPageComponent,
     data: {
