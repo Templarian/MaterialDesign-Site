@@ -31,10 +31,11 @@
 - /guides
 - /guide/home-assistant
 - /guide/wcag
+- /guide/webfont-alternatives
   - none Guides /guides
   - home-assistant Home Assistant /guide/home-assistant
   - human WCAG _Accessibility_ /guide/wcag
-  - webfont-alternatives Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
+  - format-letter-case Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
 - /contributors
 - /contribute
 - /contribute/github
