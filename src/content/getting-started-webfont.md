@@ -9,7 +9,7 @@ The webfont is a quick way to integrate the icons into your application.
 ## Setup
 
 ```
-npm install mdi
+npm install @mdi/font
 bower install mdi
 ```
 
