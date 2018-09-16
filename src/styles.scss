@@ -80,8 +80,11 @@ body {
 
         &.alert.alert-info {
             border-left-color: #0c5460;
-            svg path {
-                fill: #0c5460;
+            svg {
+                margin-right: 0.2rem;
+                path {
+                    fill: #0c5460;
+                }
             }
         }
     }
