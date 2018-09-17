@@ -15,7 +15,7 @@ The webfont is several font files that your browser can pick from. All modern br
 
 ## React Developer
 
-With the React framework you can read the [Getting Started](/getting-started/react) Guide on how to use the `@mdi/react` and `@mdi/js` library.
+For those using the React framework read the [Getting Started](/getting-started/react) guide on how to use the `@mdi/react` and `@mdi/js` library.
 
 ## Angular
 
