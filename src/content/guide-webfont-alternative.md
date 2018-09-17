@@ -4,7 +4,7 @@ This guide will outline some of the reasons to not use the Webfont and why other
 
 ## What is the webfont
 
-The webfont is several font files that your browser can pick from. All modern browsers will pick the `woff2` font file to download. This font as of `v2.7.94` is 145 KB compressed and growing with each release.
+The webfont is several font files that your browser can pick from. All modern browsers will pick the `woff2` font file to download. This font as of `v2.7.94` is **145 KB** compressed and growing with each release.
 
 - Large Size (larger than any modern web framework)
 - Use only 10 Icons and it includes all.
@@ -15,7 +15,7 @@ The webfont is several font files that your browser can pick from. All modern br
 
 ## React Developer
 
-As a React developer you can read the Getting Started Guide on how to use the `@mdi/react` and `@mdi/js` library.
+With the React framework you can read the [Getting Started](/getting-started/react) Guide on how to use the `@mdi/react` and `@mdi/js` library.
 
 ## Angular
 
