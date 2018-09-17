@@ -30,7 +30,7 @@ This [site](/contribute/site) is open source, from the documentation to the fron
 
 The tech stack consists of relatively modern tooling, but is organized to be easy to edit for newcomers:
 
-- Angular 5
+- Angular 6
 - Bootstrap 4 (SASS)
 - Content is mostly Markdown files and can be edited right from GitHub's editor.
 
