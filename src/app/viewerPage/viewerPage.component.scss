@@ -1,35 +1,35 @@
 .edit-on-github {
-    text-align: right;
+    float: right;
+    margin-top: -2.25rem;
+    padding: 0.35rem 0.5rem;
+    background: #FFF;
+    border-radius: 0.25rem 0.25rem 0 0;
 
     a {
-        background: white;
         display: inline-block;
         padding: 1px 6px 2px 6px;
         box-shadow: 1px 0 4px rgba(0, 0, 0, 0.2);
-        border-radius: 4px 4px 0 0;
-        font-size: 14px;
-        position: relative;
-        color: #AAA;
-
-        &::after {
-            content: '';
-            width: 100%;
-            height: 6px;
-            background: #FFF;
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            border-top: 1px dashed #DDD;
-        }
+        border-radius: 0.15rem;
+        font-size: 0.875rem;
+        border: 1px solid rgba(27,31,35,0.2);
+        color: #24292e;
+        background-color: #eff3f6;
+        background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
 
         &:hover {
-            color: #0275d8;
+            background-color: #e6ebf1;
+            background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
+            background-position: -.5em;
+            border-color: rgba(27,31,35,0.35);
+            box-shadow: 0 0 3px rgba(2, 117, 216, 0.5);
             text-decoration: none;
-            box-shadow: 0 1px 4px rgba(2, 117, 216, 0.5);
+        }
 
-            &::after {
-                border-top-color: #0275d8;
-            }
+        &:active {
+            background-color: #e9ecef;
+            background-image: none;
+            border-color: rgba(27,31,35,0.35);
+            box-shadow: inset 0 0.15em 0.3em rgba(27,31,35,0.15);
         }
     }
 }
