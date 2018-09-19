@@ -12,4 +12,5 @@ export class BannerComponent {
   @Input('carbon') carbon: boolean;
   subtitle: string = null;
 
+  isLocal: boolean = window.location.href.match(/localhost/) !== null
 }
