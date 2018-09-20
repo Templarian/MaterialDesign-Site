@@ -7,7 +7,7 @@
         </span>
         <span [innerHtml]="name"></span>
     </h1>
-    <div *ngIf="carbon" id="carbon" class="carbon-container">
+    <div *ngIf="carbon" id="carbon" [ngClass]="{'carbon-container': true, 'bg-white': !isLocal}">
         <img *ngIf="isLocal" src="/assets/resources/placeholder.svg"/>
     </div>
 </div>
