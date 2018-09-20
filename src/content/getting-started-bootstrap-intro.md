@@ -16,9 +16,8 @@ tabContent:intro-install
     <pre><code>//cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css</code></pre>
   </div>
   <div class="col-md-4">
-    <p>For <a href="http://bower.io/">Bower</a> or <a href="https://npmjs.com">NPM</a> use:</p>
-    <pre><code>bower install mdi
-npm install mdi</code></pre>
+    <p>For <a href="https://npmjs.com">NPM</a> use:</p>
+    <pre><code>npm install @mdi/font</code></pre>
   </div>
 </div>
 <blockquote>The CDN is sponsored by <a href="https://www.maxcdn.com/open-source/">MaxCDN</a>. This project could not exist without their support.</blockquote>

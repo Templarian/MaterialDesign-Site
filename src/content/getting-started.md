@@ -17,9 +17,9 @@ One of the easiest ways to access all of our icons is to use the webfont. For te
 		<pre><code>//cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css</code></pre>
 	</div>
 	<div class="col-md-4">
-		<h3>Bower or NPM</h3>
+		<h3>NPM or Yarn</h3>
 		<p>For <a href="https://npmjs.com">NPM</a> use:</p>
-		<pre><code>npm install mdi</code></pre>
+		<pre><code>npm install @mdi/font</code></pre>
 	</div>
 </div>
 <a href="#" class="btn btn-primary">Learn More</a>
