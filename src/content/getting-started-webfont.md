@@ -73,6 +73,20 @@ Material Design Icons (MDI) contains many helper classes to quickly modify the l
 </div>
 ```
 
+## Accessibility
+
+There are a few `aria-` attributes that can be added to the icon's tag or the parent's element to make things easier for screen readers.
+
+### Decoration Icons
+
+Many times an icon has text next to it that explains the things. The icon is just for decoration so the screen reader can ignore it.
+
+```html
+<span class="mdi mdi-bookmark" aria-hidden> Bookmark Item
+```
+
+... Type More Here ...
+
 ## File Descriptions
 
 - `fonts/`
