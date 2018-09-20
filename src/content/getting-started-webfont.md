@@ -72,3 +72,29 @@ Material Design Icons (MDI) contains many helper classes to quickly modify the l
     <span class="mdi-star-outline"></span>
 </div>
 ```
+
+## File Descriptions
+
+- `fonts/`
+  - `materialdesignicons-webfont.eot`
+  - `materialdesignicons-webfont.svg`
+  - `materialdesignicons-webfont.ttf`
+  - `materialdesignicons-webfont.woff`
+  - `materialdesignicons-webfont.woff2`
+- `css/`
+  - `materialdesignicons.min.css` - Minified CSS
+  - `materialdesignicons.min.css.map` - Developer Tools Map
+- `sass`
+  - `_animated.scss` - Animations
+  - `_core.scss` - The base `.mdi` class
+  - `_extras.scss` - Rotate / Flip / Colors
+  - `_functions.scss` - Helpers
+  - `_icons.scss` - Icon data
+  - `_path.scss` - Webfont paths
+  - `_variables` - All available variables
+  - `materialdesignicons.sass` - Main
+- `preview.html` - Preview all icons
+
+The above files are also on the CDN: [View Latest](https://cdn.materialdesignicons.com/{{version}}).
+
+> Note: `preview.html` is renamed to `index.html` on the CDN.

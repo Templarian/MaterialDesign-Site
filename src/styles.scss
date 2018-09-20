@@ -161,6 +161,20 @@ body {
         }
     }
 
+    blockquote code,
+    p code,
+    li code {
+        border-radius: 0.25rem;
+        padding: 0.1rem 0.25rem;
+        border: 1px solid rgba(232, 62, 140, 0.2)
+    }
+
+    ul {
+        padding-left: 1rem;
+        margin-left: 0.25rem;
+        list-style: square;
+    }
+
     .nav-item-title {
         padding: 0 20px 0 12px;
         line-height: 40px;
