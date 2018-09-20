@@ -8,9 +8,7 @@
         <span [innerHtml]="name"></span>
     </h1>
     <div *ngIf="carbon" style="position:absolute;width:308px;height:108px;border:4px solid rgba(0,0,0,0.1);border-radius:4px;right:20px;top:-29px;">
-        <div *ngIf="!isLocal">
-            <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIPKJW&placement=materialdesigniconscom" id="_carbonads_js"></script>
-        </div>
+        <script *ngIf="!isLocal" async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYIPKJW&placement=materialdesigniconscom" id="_carbonads_js"></script>
         <img *ngIf="isLocal" src="/assets/resources/placeholder.svg"/>
     </div>
 </div>
