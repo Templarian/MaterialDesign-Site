@@ -1,6 +1,8 @@
 # Getting Started
 
-MDI is available as either a <a href="#webfont">webfont</a> or in an <a href="#svg">SVG</a> format. We also provide support for a variety of <a href="#frameworks">frameworks</a>.
+<blockquote class="alert alert-info">
+  icon:information-outline Material Design Icons has been around for many years and is compatible with many technologies and frameworks. Please view the right sidebar for an appropriate getting started guide.
+</blockquote>
 
 ## Using the Webfont
 
