@@ -10,7 +10,7 @@ npm install @mdi/svg
 
 ## Image Tag
 
-The `<img />` HTML element can display SVG files similar to how `PNG`,`JPG`, or `GIF`'s are loaded.
+The `<img />` HTML element can display SVG files similar to how `PNG`, `JPG`, or `GIF`'s are loaded.
 
 ```html
 <img src="path/to/account-circle.svg"/>
