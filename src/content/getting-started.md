@@ -4,25 +4,9 @@ MDI is available as either a <a href="#webfont">webfont</a> or in an <a href="#s
 
 ## Using the Webfont
 
-One of the easiest ways to access all of our icons is to use the webfont. For testing or quick use you can import the CSS file from the CDN. You can also download the files via NPM to include in your project.
+One of the easiest ways to access all of our icons is to use the webfont. For testing or quick use you can include the CSS file from the CDN. You could also download the files via NPM to include in your project.
 
-<div class="row">
-	<div class="col-md-8">
-		<h3>CDN
-			<small>Sponsored by
-				<a href="https://www.maxcdn.com/open-source/">MaxCDN</a>
-			</small>
-		</h3>
-		<p>A content delivery network provides a fast way to deliver the webfont.</p>
-		<pre><code>//cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css</code></pre>
-	</div>
-	<div class="col-md-4">
-		<h3>NPM or Yarn</h3>
-		<p>For <a href="https://npmjs.com">NPM</a> use:</p>
-		<pre><code>npm install @mdi/font</code></pre>
-	</div>
-</div>
-<a href="#" class="btn btn-primary">Learn More</a>
+<a href="/getting-started/webfont" class="btn btn-primary">Learn More (Webfont - Getting Started)</a>
 
 
 ## Using SVGs
