@@ -3,7 +3,7 @@
 Material Design Icons can be used in React with a custom component or with the one provided in this module.
 
 ```
-npm install @mdi/react
+npm install @mdi/react @mdi/js
 ```
 
 [MaterialDesign-React on GitHub](https://github.com/Templarian/MaterialDesign-React)
