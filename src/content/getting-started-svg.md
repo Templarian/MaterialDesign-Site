@@ -38,4 +38,20 @@ svg path {
 }
 ```
 
-### Styling with
+### Styling SVG with SASS
+
+```scss
+svg {
+    width: 24px;
+    height: 24px;
+    path {
+        fill: red;
+    }
+}
+```
+
+### Intro to CSS `em` and `rem`
+
+Most themes are built around a `1rem` font size equivelent to `16px`.
+
+Since the icons are natively pixel perfect at `24px` we could use the `width: 1.5rem` for a 24x24 icon size.
