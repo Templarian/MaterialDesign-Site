@@ -124,6 +124,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/rollupjs',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-rollupjs.md'
+    }
+  },
+  {
     path: 'getting-started/svg',
     component: ViewerPageComponent,
     data: {

@@ -8,6 +8,7 @@
 - /getting-started/php
 - /getting-started/polymer
 - /getting-started/react
+- /getting-started/rollupjs
 - /getting-started/svg
 - /getting-started/vuejs
 - /getting-started/webpack
@@ -24,6 +25,7 @@
   - language-php PHP _Twig_ /getting-started/php
   - polymer Polymer _v0.5 / v1.0 Supported_ /getting-started/polymer
   - react React /getting-started/react
+  - rollupjs rollup.js /getting-started/rollupjs
   - svg SVG /getting-started/svg
   - vuejs Vue.JS /getting-started/vuejs
   - webpack Webpack /getting-started/webpack
