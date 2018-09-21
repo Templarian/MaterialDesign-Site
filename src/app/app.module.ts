@@ -159,6 +159,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/xamarin',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-xamarin.md'
+    }
+  },
+  {
     path: 'contribute',
     component: ViewerPageComponent,
     data: {

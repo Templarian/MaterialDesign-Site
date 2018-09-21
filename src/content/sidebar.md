@@ -13,6 +13,7 @@
 - /getting-started/webpack
 - /getting-started/webfont
 - /getting-started/windows
+- /getting-started/xamarin
   - none Getting Started /getting-started
   - android Android _Vector Drawables_ /getting-started/android
   - angular Angular _Webfont / Component_ /getting-started/angular
@@ -28,6 +29,7 @@
   - webpack Webpack /getting-started/webpack
   - html Webfont _Helper Classes_ /getting-started/webfont
   - windows Windows _UWP / WPF_ /getting-started/windows
+  - xamarin Xamarin /getting-started/xamarin
 - /guides
 - /guide/home-assistant
 - /guide/wcag
