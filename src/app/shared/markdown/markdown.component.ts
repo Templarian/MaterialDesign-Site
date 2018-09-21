@@ -14,7 +14,7 @@ export class MarkdownReplace {
 
 @Component({
   selector: 'markdown-component',
-  template: `<div [innerHtml]="htmlData"></div>`
+  template: `<div class="markdown" [innerHtml]="htmlData"></div>`
 })
 export class MarkdownComponent {
   htmlData: SafeHtml = null;

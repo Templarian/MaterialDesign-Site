@@ -169,10 +169,17 @@ body {
         border: 1px solid rgba(232, 62, 140, 0.2)
     }
 
-    ul {
-        padding-left: 1rem;
-        margin-left: 0.25rem;
-        list-style: square;
+    .markdown {
+        > ul {
+            padding-left: 1rem;
+            margin-left: 0.25rem;
+            list-style: square;
+            > li > ul {
+                padding-left: 1rem;
+                margin-left: 0.25rem;
+                list-style: square;
+            }
+        }
     }
 
     .nav-item-title {
