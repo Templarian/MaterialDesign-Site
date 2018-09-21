@@ -4,7 +4,7 @@ This guide will outline some of the reasons to not use the Webfont and why other
 
 ## What is the webfont
 
-The webfont is several font files that your browser can pick from. All modern browsers will pick the `woff2` font file to download. This font as of `v2.7.94` is **145 KB** compressed and growing with each release.
+The webfont is several font files that your browser can pick from. All modern browsers will pick the `woff2` font file to download. This font as of `v2.8.94` is **149 KB** compressed and growing with each release.
 
 - Large Size (larger than any modern web framework)
 - Use only 10 Icons and it includes all.
