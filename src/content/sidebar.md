@@ -30,6 +30,7 @@
   - vuejs Vue.JS /getting-started/vuejs
   - webpack Webpack /getting-started/webpack
   - html Webfont _Helper Classes_ /getting-started/webfont
+    - lightbulb-on Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
   - windows Windows _UWP / WPF_ /getting-started/windows
   - xamarin Xamarin /getting-started/xamarin
 - /guides
@@ -39,7 +40,7 @@
   - none Guides /guides
   - home-assistant Home Assistant /guide/home-assistant
   - human WCAG _Accessibility_ /guide/wcag
-  - checkbox-marked Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
+  - lightbulb-on Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
 - /contributors
 - /contribute
 - /contribute/github
