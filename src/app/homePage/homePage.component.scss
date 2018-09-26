@@ -157,7 +157,14 @@
         -webkit-animation: animationFrames linear 8s;
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-delay: 4s;
-    }     
+    }
+
+    /deep/ {
+        .carbon-container {
+            display:inline-block;
+            margin-top:70px;
+        }
+    }
 }
 @keyframes animationFrames {
     0% {

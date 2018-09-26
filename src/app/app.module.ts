@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { IconComponent } from './shared/icon/icon.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { CarbonComponent } from './shared/carbon/carbon.component';
 import { BannerComponent } from './shared/banner/banner.component';
 
 import { HomePageComponent } from './homePage/homePage.component';
@@ -379,6 +380,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomePageComponent,
+    CarbonComponent,
     ContributorBadgeComponent,
     ContributorPageComponent,
     ContributorsPageComponent,
