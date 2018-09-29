@@ -51,7 +51,7 @@
 - /build/site
 - /code-of-conduct
   - account-multiple Contributors /contributors
-  - account-comment Contribute /contribute
+  - comment-account Contribute /contribute
     - github GitHub Tools /contribute/github
   - textbox Icon Naming /contribute/icon-naming
   - web Site /contribute/site

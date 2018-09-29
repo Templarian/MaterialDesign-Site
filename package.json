@@ -35,7 +35,7 @@
   "devDependencies": {
     "@angular/cli": "1.5.0",
     "@angular/compiler-cli": "^5.2.11",
-    "@mdi/js": "2.7.94",
+    "@mdi/js": "2.8.94",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.114",
     "codelyzer": "~2.0.0",
