@@ -1,60 +1,67 @@
 <div class="container">
-    <mdi-banner style="padding: 2.5rem 0" [title]="icon.name" [icon]="icon.data" [carbon]="true"></mdi-banner>
-    <div class="aliases">
-        <span *ngFor="let alias of icon.aliases; let isLast=last">
-            <span>{{alias.name}}</span>{{isLast ? '' : ', '}}
-        </span>
-    </div>
-    <div style="display:flex">
-        <div style="flex:0;margin-right:1rem;">
-            <div class="preview">
-                <svg *ngIf="isVector" viewBox="0 0 24 24">
-                    <path [attr.d]="icon.data"></path>
-                </svg>
-                <img *ngIf="loaded && !isVector" [attr.src]="'/api/preview?png=' + icon.data + '&foreground=646464'" />
-            </div>
-            <div class="btn-group btn-group-justified" style="width: 280px">
-                <button class="btn btn-light" style="border-top-left-radius: 0;"
-                    [ngClass]="{ 'active': isVector }"
-                    (click)="setVector()">Vector</button>
-                <button class="btn btn-light" style="border-top-right-radius: 0;"
-                    [ngClass]="{ 'active': !isVector }"
-                    (click)="setRaster()">Raster</button>
-            </div>
-            <div class="downloads mt-2">
-                <button class="btn btn-light btn-block"
-                    (click)="setVector()">Download 24dp Black</button>
-                <button class="btn btn-light btn-block"
-                    (click)="setVector()">Download 48dp Black</button>
-                <button class="btn btn-light btn-block"
-                    (click)="setVector()">Export with Advanced Editor</button>
-            </div>
-            <!--<div>Point Count... {{icon.pointCounttest}}</div>-->
-            <!--<div *ngIf="loaded">
+  <mdi-banner style="padding: 2.5rem 0" [title]="icon.name" [icon]="icon.data" [carbon]="true"></mdi-banner>
+  <div class="aliases">
+    <span *ngFor="let alias of icon.aliases; let isLast=last">
+      <span>{{alias.name}}</span>{{isLast ? '' : ', '}}
+    </span>
+    <span *ngIf="icon.aliases.length === 0">
+      <span>No Aliases</span>
+    </span>
+  </div>
+  <div style="display:flex">
+    <div style="flex:0;margin-right:1rem;">
+      <div class="preview">
+        <svg *ngIf="isVector" viewBox="0 0 24 24">
+          <path [attr.d]="icon.data"></path>
+        </svg>
+        <img *ngIf="loaded && !isVector" [attr.src]="'/api/preview?png=' + icon.data + '&foreground=646464'" />
+      </div>
+      <div class="btn-group btn-group-justified" style="width: 280px">
+        <button class="btn btn-light" style="border-top-left-radius: 0;" [ngClass]="{ 'active': isVector }" (click)="setVector()">Vector</button>
+        <button class="btn btn-light" style="border-top-right-radius: 0;" [ngClass]="{ 'active': !isVector }" (click)="setRaster()">Raster</button>
+      </div>
+      <div class="downloads mt-2">
+        <button class="btn btn-light btn-block" (click)="setVector()">Download 24dp Black</button>
+        <button class="btn btn-light btn-block" (click)="setVector()">Download 48dp Black</button>
+        <button class="btn btn-light btn-block" (click)="setVector()">Export with Advanced Editor</button>
+      </div>
+      <!--<div>Point Count... {{icon.pointCounttest}}</div>-->
+      <!--<div *ngIf="loaded">
                 Point Count {{icon.getPointCount()}}
             </div>-->
+    </div>
+    <div style="flex:1" style="max-width: 814px">
+      <div class="card description">
+        <div class="card-body">
+          {{icon.description}}
         </div>
-        <div style="flex:1" style="max-width: 814px">
-            <div class="card description">
-                <div class="card-body">
-                    {{icon.description}}
-                </div>
-            </div>
-            <div class="card tags mt-3">
-                <div class="card-body">
-                    <span>Tags: </span>
-                    <span *ngFor="let tag of icon.tags; let isLast=last">
-                        <span>{{tag.name}}</span>{{isLast ? '' : ', '}}
-                    </span>
-                </div>
-            </div>
-            <div class="card mt-3 p-3">
-                <div class="card-body" style="overflow-x: auto;">
-                <pre class="mb-0">&lt;svg viewBox="0 0 24 24"&gt;
+      </div>
+      <div class="card tags mt-3">
+        <div class="card-body">
+          <span>Tags: </span>
+          <span *ngFor="let tag of icon.tags; let isLast=last">
+            <span>{{tag.name}}</span>{{isLast ? '' : ', '}}
+          </span>
+        </div>
+      </div>
+      <div class="card mt-3">
+        <div class="card-body" style="overflow-x: auto;">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">SVG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vector Drawables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">XAML</a>
+            </li>
+          </ul>
+          <pre class="mb-0">&lt;svg viewBox="0 0 24 24"&gt;
     &lt;path d="{{icon.data}}"/&gt;
 &lt;/svg&gt;</pre>
-                </div>
-            </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
