@@ -30,6 +30,7 @@ import { IconPageComponent } from './iconPage/iconPage.component';
 import { IconsPageComponent } from './iconsPage/iconsPage.component';
 import { DownloadPageComponent } from './downloadPage/downloadPage.component';
 import { AdminIconsPageComponent } from './admin/iconsPage/iconsPage.component';
+import { AdminIndexPageComponent } from './admin/indexPage/indexPage.component';
 import { ViewerPageComponent } from './viewerPage/viewerPage.component';
 import { ResourcesPageComponent } from './resourcesPage/resourcesPage.component';
 import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
@@ -358,6 +359,10 @@ const appRoutes: Routes = [
     component: AdminLoginPageComponent
   },
   {
+    path: 'admin/index',
+    component: AdminIndexPageComponent
+  },
+  {
     path: 'admin/icons',
     component: AdminIconsPageComponent
   },
@@ -394,6 +399,7 @@ const appRoutes: Routes = [
     GithubPageComponent,
     AdminLoginPageComponent,
     AdminIconsPageComponent,
+    AdminIndexPageComponent,
     AdminAliasPageComponent,
     AdminTagPageComponent,
     AdminRenamePageComponent,

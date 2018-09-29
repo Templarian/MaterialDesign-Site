@@ -1,45 +1,22 @@
 <mdi-banner title="Icon Management" [carbon]="false"></mdi-banner>
 <div class="container">
-    <div class="card p-3">
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <p>This is a placeholder page, need to do a lot before it can be used to manage icons.</p>
-            </div>
-            <div class="col-md-4 text-right">
-                <button class="btn btn-primary" (click)="logout()">Logout</button>
-            </div>
-        </div>
-        <table class="table">
-            <tr>
-                <th>Feature</th>
-                <th>Description</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>Icons</td>
-                <td><p>Edit alias data and metadata. [Coming Soon]</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/icons">View</a></td>
-            </tr>
-            <tr>
-                <td>History</td>
-                <td><p>Assign issues to history entries.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/history">View</a></td>
-            </tr>
-            <tr>
-                <td>Alias</td>
-                <td><p>Edit and manage aliases.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/alias">View</a></td>
-            </tr>
-            <tr>
-                <td>Tags</td>
-                <td><p>Edit and manage tags.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" routerLink="/admin/tag">View</a></td>
-            </tr>
-            <tr>
-                <td>Documentation</td>
-                <td><p>Please edit the documentation in GitHub.</p></td>
-                <td class="text-right"><a class="btn btn-primary btn-sm" target="_blank" href="https://github.com/Templarian/MaterialDesign-Site/tree/master/src/content">GitHub</a></td>
-            </tr>
-        </table>
+  <div class="card p-3">
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <p>Edit icon data below by searching for an icon or adding a new one.</p>
+      </div>
+      <div class="col-md-4 text-right">
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+      </div>
     </div>
+    <div class="row mb-2">
+      <div class="col-md-5">
+        <p>Icon Searcher here.</p>
+      </div>
+      <div class="col-md-2">Or</div>
+      <div class="col-md-5 text-right">
+        <button class="btn btn-primary" (click)="addIcon()">Add new Icon</button>
+      </div>
+    </div>
+  </div>
 </div>

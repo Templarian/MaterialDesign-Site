@@ -27,14 +27,14 @@ export class AdminLoginPageComponent {
     // Redirect
     if (isAuthed) {
       console.log('Already logged in... redirecting');
-      this.router.navigateByUrl('/admin/icons');
+      this.router.navigateByUrl('/admin/index');
     }
   }
 
   async login () {
     let isAuth = await this.loginService.login(this.user, this.pass);
     if (isAuth) {
-      this.router.navigateByUrl('/admin/icons');
+      this.router.navigateByUrl('/admin/index');
     } else {
       this.failed = true;
     }

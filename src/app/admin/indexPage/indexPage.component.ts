@@ -3,15 +3,15 @@ import { LoginService } from 'app/admin/services/login.service';
 import { TagService } from 'app/shared/tag.service';
 
 @Component({
-  selector: 'mdi-admin-icons-page',
-  templateUrl: './iconsPage.component.html',
-  styleUrls: ['./iconsPage.component.scss'],
+  selector: 'mdi-admin-index-page',
+  templateUrl: './indexPage.component.html',
+  styleUrls: ['./indexPage.component.scss'],
   providers: [
     LoginService,
     TagService
   ]
 })
-export class AdminIconsPageComponent {
+export class AdminIndexPageComponent {
 
   constructor (
     private loginService: LoginService,
@@ -29,10 +29,6 @@ export class AdminIconsPageComponent {
   }
   
   public selectIcon () {
-    
-  }
-
-  addIcon () {
     
   }
 
