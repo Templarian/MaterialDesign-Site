@@ -31,6 +31,7 @@ export class AdminIconsPageComponent {
   public selectedPackage: Package = null;
   public icons: Icon[];
   public selectedIcon: Icon = null;
+  public editIcon: Icon = null;
 
   async ngOnInit () {
     await this.loginService.isAuthed();
@@ -51,7 +52,8 @@ export class AdminIconsPageComponent {
   }
   
   public selectIcon () {
-    
+    console.log(this.selectedIcon)
+    this.editIcon = new Icon().from(this.selectedIcon);
   }
 
   addIcon () {

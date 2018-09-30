@@ -49,31 +49,36 @@
         </div>
       </div>
     </div>
-    <div class="row mb-3">
+    <div *ngIf="editIcon !== null" class="row mb-3">
       <div class="col-md-1">
         <span class="step">Step 3</span>
       </div>
       <div class="col-md-11">
         <div class="row">
           <div class="col-md-4">
-            <div class="form-group form-group-edit">
+            <div class="form-group">
               <label>Name</label>
-              <input class="form-control" name="name" disabled/>
-              <button class="btn btn-primary">Rename</button>
+              <input class="form-control" name="name"
+                [(value)]="editIcon.name" disabled/>
+              <div class="text-right mt-2">
+                <button class="btn btn-primary" disabled>Rename</button>
+              </div>
             </div>
           </div>
           <div class="col-md-8">
             <div class="form-group form-group-edit">
               <label>Description</label>
-              <textarea class="form-control" name="description" rows="5"></textarea>
+              <textarea class="form-control" name="description" rows="5"
+                [(value)]="editIcon.description"></textarea>
               <div><button class="btn btn-primary">Update</button></div>
             </div>
           </div>
         </div>
         <div class="form-group form-group-edit">
           <label>Path Data</label>
-          <textarea class="form-control" name="data" rows="3" disabled></textarea>
-          <div><button class="btn btn-primary">Update</button></div>
+          <textarea class="form-control" name="data" rows="3"
+            [(value)]="editIcon.data" disabled></textarea>
+          <div><button class="btn btn-primary" disabled>Update</button></div>
         </div>
       </div>
     </div>
