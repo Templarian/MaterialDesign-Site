@@ -27,4 +27,51 @@
     text-align: center;
     line-height: 2.5rem;
   }
+  .form-group-edit {
+    textarea {
+      border-radius: .25rem .25rem 0 0;
+      border-bottom: 0;
+      resize: none;
+    }
+    div {
+      text-align: right;
+      display: block;
+      border-radius: 0 0 .25rem .25rem;
+      border-left: 1px solid #ced4da;
+      border-right: 1px solid #ced4da;
+      border-bottom: 1px solid #ced4da;
+      padding: 0.25rem;
+      background: #FFF;
+    }
+    textarea + div {
+      position: relative;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      &::before {
+        content: ' ';
+        height: 0.5rem;
+        background: #FFF;
+        top: -0.5rem;
+        position: absolute;
+        width: calc(100% + 2px);
+        left: 0;
+        border-left: 1px solid #ced4da;
+        border-right: 1px solid #ced4da;
+        margin-left: -1px;
+      }
+    }
+    textarea:focus + div {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem #C0DEFF;
+      &::before {
+        border-left-color: #80bdff;
+        border-right-color: #80bdff;
+      }
+    }
+    textarea:disabled + div {
+      background: #e9ecef;
+      &::before {
+        background: #e9ecef;
+      }
+    }
+  }
 }
