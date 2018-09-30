@@ -22,8 +22,6 @@ export class AdminIconsPageComponent {
 
   async ngOnInit () {
     await this.loginService.isAuthed();
-    // Authed
-    console.log('authed');
   }
 
   goBack () {

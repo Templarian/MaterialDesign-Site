@@ -31,11 +31,12 @@ export class LoginService {
   }
 
   @PromiseCache('isAuthed')
-  isAuthed (): Promise<boolean> {
+  isAuthed (redirect:boolean = true): Promise<boolean> {
     return this.http.get<boolean>('/api/admin')
         .toPromise()
         .then(isAuthed => {
-          if ((this.url != 'admin'
+          if (redirect
+            && (this.url != 'admin'
             && this.url.match(/^admin/) != null)
             && !(isAuthed)) {
             this.router.navigateByUrl('/admin');

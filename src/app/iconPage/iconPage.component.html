@@ -7,6 +7,9 @@
     <span *ngIf="icon.aliases.length === 0">
       <span>No Aliases</span>
     </span>
+    <button *ngIf="isAuthed"
+      class="btn btn-light"
+      (click)="onAddAlias()">Add Alias</button>
   </div>
   <div style="display:flex">
     <div style="flex:0;margin-right:1rem;">
