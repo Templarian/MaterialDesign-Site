@@ -39,7 +39,9 @@
                 (iconChange)="selectIcon()"></mdi-icon-search>
             </label>
           </div>
-          <div class="col-md-1">Or</div>
+          <div class="col-md-1">
+            <span class="or">Or</span>
+          </div>
           <div class="col-md-3">
             <div>&nbsp;</div>
             <button class="btn btn-outline-success" (click)="addIcon()">Add new Icon</button>
@@ -52,14 +54,25 @@
         <span class="step">Step 3</span>
       </div>
       <div class="col-md-11">
-        <div class="form-group">
-          <label>Name</label>
-          <input class="form-control" name="name" disabled/>
-          <button class="btn btn-primary">Rename</button>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label>Name</label>
+              <input class="form-control" name="name" disabled/>
+              <button class="btn btn-primary">Rename</button>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="form-group">
+              <label>Description</label>
+              <textarea class="form-control" name="description" rows="5"></textarea>
+              <button class="btn btn-primary">Update</button>
+            </div>
+          </div>
         </div>
         <div class="form-group">
-          <label>Description</label>
-          <textarea class="form-control" name="description" rows="5"></textarea>
+          <label>Path Data</label>
+          <textarea class="form-control" name="data" rows="3" disabled></textarea>
           <button class="btn btn-primary">Update</button>
         </div>
       </div>
