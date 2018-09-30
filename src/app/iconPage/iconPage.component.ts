@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 
 import { IconService } from "app/shared/icon.service";
 import { Icon } from 'app/shared/models/icon.model';
+import { Package } from '../shared/models/package.model';
 
 @Component({
   selector: 'mdi-icon-page',
@@ -48,6 +49,16 @@ export class IconPageComponent {
 
   onAddAlias() {
     this.router.navigateByUrl('/admin/alias')
+  }
+
+  onEditIcon() {
+    const packageId: string = this.route.snapshot.data['package'];
+    this.router.navigateByUrl('/admin/icons', {
+      queryParams: {
+        package: new Package(packageId),
+        icon: this.icon
+      }
+    })
   }
 
 }

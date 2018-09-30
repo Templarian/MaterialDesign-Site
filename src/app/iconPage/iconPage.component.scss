@@ -51,4 +51,13 @@
             background: #EEE;
         }
     }
+    .description {
+        position: relative;
+        .edit {
+            position: absolute;
+            display: inline-block;
+            top: 0.5rem;
+            right: 0.5rem;
+        }
+    }
 }

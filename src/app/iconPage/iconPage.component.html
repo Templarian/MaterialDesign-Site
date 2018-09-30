@@ -35,6 +35,9 @@
     </div>
     <div style="flex:1" style="max-width: 814px">
       <div class="card description">
+        <button *ngIf="isAuthed"
+          class="btn btn-primary btn-sm edit"
+          (click)="onEditIcon()">Edit</button>
         <div class="card-body">
           {{icon.description}}
         </div>
