@@ -27,6 +27,7 @@ export class IconSearchComponent {
   ) { }
 
   s: Icon = null;
+  isDisabled: boolean = true;
 
   search = (text$: Observable<string>) =>
     text$
@@ -65,6 +66,7 @@ export class IconSearchComponent {
     this.selectableIcons = this.iconList.filter(i => {
       return !(ex.indexOf(i.id) > -1);
     });
+    this.isDisabled = false;
   }
 
   ngOnChanges(changes: SimpleChanges) {
