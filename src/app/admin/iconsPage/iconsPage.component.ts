@@ -47,7 +47,7 @@ export class AdminIconsPageComponent {
 
   async selectPackage() {
     // Icons
-    this.icons = await this.iconService.getIcons(this.selectedPackage.id);
+    this.icons = await this.iconService.getAdminIcons(this.selectedPackage.id);
     this.selectedIcon = this.icons[0];
   }
   
