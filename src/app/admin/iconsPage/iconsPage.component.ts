@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
 import { TagService } from 'app/shared/tag.service';
 import { Router } from '@angular/router';
+import { Package } from 'app/shared/models/package.model';
+import { Icon } from 'app/shared/models/icon.model';
+import { IconService } from 'app/shared/icon.service';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -9,16 +12,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./iconsPage.component.scss'],
   providers: [
     LoginService,
-    TagService
+    IconService
   ]
 })
 export class AdminIconsPageComponent {
 
   constructor (
     private loginService: LoginService,
-    private tagService: TagService,
+    private iconService: IconService,
     private router: Router
-  ) {}
+  ) {
+    this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
+    this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
+    this.selectedPackage = this.packages[0];
+  }
+
+  public packages: Package[] = [];
+  public selectedPackage: Package = null;
+  public icons: Icon[];
+  public selectedIcon: Icon = null;
 
   async ngOnInit () {
     await this.loginService.isAuthed();
@@ -30,6 +42,12 @@ export class AdminIconsPageComponent {
 
   async logout () {
     await this.loginService.logout();
+  }
+
+  async selectPackage() {
+    // Icons
+    this.icons = await this.iconService.getIcons(this.selectedPackage.id);
+    this.selectedIcon = this.icons[0];
   }
   
   public selectIcon () {

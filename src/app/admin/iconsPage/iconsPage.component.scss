@@ -1,0 +1,18 @@
+:host {
+  .step {
+    background: #F1F1F1;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #444;
+  }
+  blockquote {
+    background: #F1F1F1;
+    border-left: 4px solid #CCC;
+    padding: 0.5rem;
+  }
+}

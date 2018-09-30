@@ -3,21 +3,124 @@
   <div class="card p-3">
     <div class="row mb-2">
       <div class="col-md-8">
-        <p>Edit icon data below by searching for an icon or adding a new one.</p>
+        <p>Please ask on Slack if you are unsure about modifying or adding an icon.</p>
       </div>
       <div class="col-md-4 text-right">
-          <button class="btn btn-primary mr-2" (click)="goBack()">Go Back</button>
+        <button class="btn btn-primary mr-2" (click)="goBack()">Go Back</button>
         <button class="btn btn-primary" (click)="logout()">Logout</button>
       </div>
     </div>
-    <div class="row mb-2">
-      <div class="col-md-5">
-        <p>Icon Searcher here.</p>
+    <div class="row mb-3">
+      <div class="col-md-1">
+        <span class="step">Step 1</span>
       </div>
-      <div class="col-md-2">Or</div>
-      <div class="col-md-5 text-right">
-        <button class="btn btn-primary" (click)="addIcon()">Add new Icon</button>
+      <div class="col-md-11">
+        <label>
+          <span class="d-block">Select a Package</span>
+          <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+            <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+          </select>
+        </label>
       </div>
     </div>
+    <div class="row mb-3">
+      <div class="col-md-1">
+        <span class="step">Step 2</span>
+      </div>
+      <div class="col-md-11">
+        <!-- Select an Icon or New Icon -->
+        <div class="row">
+          <div class="col-md-3">
+            <label>
+              <span class="d-block">Search for an Icon</span>
+              <mdi-icon-search
+                [package]="selectedPackage"
+                [(icon)]="selectedIcon"
+                (iconChange)="selectIcon()"></mdi-icon-search>
+            </label>
+          </div>
+          <div class="col-md-1">Or</div>
+          <div class="col-md-3">
+            <div>&nbsp;</div>
+            <button class="btn btn-outline-success" (click)="addIcon()">Add new Icon</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-1">
+        <span class="step">Step 3</span>
+      </div>
+      <div class="col-md-11">
+        <div class="form-group">
+          <label>Name</label>
+          <input class="form-control" name="name" disabled/>
+          <button class="btn btn-primary">Rename</button>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea class="form-control" name="description" rows="5"></textarea>
+          <button class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-md-1">
+          <span class="step">Audit</span>
+        </div>
+        <div class="col-md-11">
+          <blockquote>
+            If a mistake is made please use the audit logs below to view revert the change.
+            This will make another audit entry.
+          </blockquote>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Date</th>
+                <th>Modification</th>
+                <th>Before</th>
+                <th>After</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Test</td>
+                <td>4 days ago</td>
+                <td>Rename</td>
+                <td><code>...</code></td>
+                <td><code>...</code></td>
+                <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
   </div>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="dateOfBirth">Date of birth</label>
+        <div class="input-group">
+          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>

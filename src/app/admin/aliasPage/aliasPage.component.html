@@ -1,90 +1,89 @@
 <mdi-banner title="Manage Aliases" [carbon]="false"></mdi-banner>
 <div class="container-fluid">
-    <div class="row mb-3">
-        <div class="col-md-12">
-            <div class="card pl-3 pr-3 pt-3">
-                <p>As a contributor you can submit aliases to be included instantly and approve community suggestion on the
-                    right.</p>
-            </div>
-        </div>
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <div class="card pl-3 pr-3 pt-3">
+        <p>As a contributor you can submit aliases to be included instantly and approve community suggestion on the
+          right.</p>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card p-3">
-                <h2>Alias Form</h2>
-                <div>
-                    <label>
-                        <span class="d-block">Package</span>
-                        <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
-                            <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
-                        </select>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <span class="d-block">Icon Name</span>
-                        <mdi-icon-search [package]="selectedPackage"
-                                         [(icon)]="selectedIcon"
-                                         (iconChange)="selectIcon()"></mdi-icon-search>
-                    </label>
-                </div>
-                <div *ngIf="selectedIcon != null">
-                    Existing Aliases
-                    <div>
-                        <p *ngIf="selectedIcon.aliases.length == 0">No aliases have been assigned.</p>
-                        <span *ngFor="let a of selectedIcon.aliases; let i = index">
-                            <code>{{a.name}}</code>
-                            <span *ngIf="i != selectedIcon.aliases.length - 1">,</span>
-                        </span>
-                    </div>
-                </div>
-                <div *ngIf="selectedIcon != null">
-                    Enter Alias
-                    <div>
-                        <input type="text" class="form-control" [(ngModel)]="aliasName" (keyup)="validate()" />
-                    </div>
-                    <div>
-                        <button class="btn btn-primary btn-block mt-2" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="card p-3 mt-3">
-                <div>
-                    <h3>Recently Added Aliases</h3>
-                    <table class="table">
-                        <tr>
-                            <th>Icon</th>
-                            <th>Alias</th>
-                            <th>By User</th>
-                            <th>Date</th>
-                        </tr>
-                        <tr *ngFor="let m of modifications">
-                            <td>{{m.icon.name}}</td>
-                            <td>{{m.text}}</td>
-                            <td>{{m.user.name}}</td>
-                            <td>{{friendlyDate(m.date)}} {{friendlyTime(m.date)}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h2>Alias Form</h2>
+        <div>
+          <label>
+            <span class="d-block">Package</span>
+            <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+              <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+            </select>
+          </label>
         </div>
-        <div class="col-md-6">
-            <div class="card p-3">
-                <h2>Approve Aliases</h2>
-                <p>Each alias requires 2 yes votes to get added.</p>
-                <div>
-                    <span style="float:left;width:32px;height:32px;background:#FFF;"></span>
-                    <span>Icon Name</span>
-                    <span>Alias Name</span>
-                    <mdi-icon name="checkbox-blank-outline"></mdi-icon>
-                    <mdi-icon name="checkbox-blank-outline"></mdi-icon>
-                    <mdi-icon name="checkbox-blank-outline"></mdi-icon>
-                </div>
-            </div>
-            <div class="card p-3 mt-3">
-                <h2>Downloads</h2>
-                <a class="btn btn-primary" href="/api/csv/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B?headers=Icon%20Name,Icon%20Alias&columns=icon.name,icon.aliases">Download .csv</a>
-            </div>
+        <div>
+          <label>
+            <span class="d-block">Icon Name</span>
+            <mdi-icon-search [package]="selectedPackage" [(icon)]="selectedIcon" (iconChange)="selectIcon()"></mdi-icon-search>
+          </label>
         </div>
+        <div *ngIf="selectedIcon != null">
+          Existing Aliases
+          <div>
+            <p *ngIf="selectedIcon.aliases.length == 0">No aliases have been assigned.</p>
+            <span *ngFor="let a of selectedIcon.aliases; let i = index">
+              <code>{{a.name}}</code>
+              <span *ngIf="i != selectedIcon.aliases.length - 1">,</span>
+            </span>
+          </div>
+        </div>
+        <div *ngIf="selectedIcon != null">
+          Enter Alias
+          <div>
+            <input type="text" class="form-control" [(ngModel)]="aliasName" (keyup)="validate()" />
+          </div>
+          <div>
+            <button class="btn btn-primary btn-block mt-2" [disabled]="disabledAlias" (click)="submitAlias()">Add Alias</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="card p-3 mt-3">
+        <div>
+          <h3>Recently Added Aliases</h3>
+          <table class="table">
+            <tr>
+              <th>Icon</th>
+              <th>Alias</th>
+              <th>By User</th>
+              <th>Date</th>
+            </tr>
+            <tr *ngFor="let m of modifications">
+              <td>{{m.icon.name}}</td>
+              <td>{{m.text}}</td>
+              <td>{{m.user.name}}</td>
+              <td>{{friendlyDate(m.date)}} {{friendlyTime(m.date)}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h2>Approve Aliases</h2>
+        <p>Each alias requires 2 yes votes to get added.</p>
+        <div>
+          <span style="float:left;width:32px;height:32px;background:#FFF;"></span>
+          <span>Icon Name</span>
+          <span>Alias Name</span>
+          <mdi-icon name="checkbox-blank-outline"></mdi-icon>
+          <mdi-icon name="checkbox-blank-outline"></mdi-icon>
+          <mdi-icon name="checkbox-blank-outline"></mdi-icon>
+        </div>
+      </div>
+      <div class="card p-3 mt-3">
+        <h2>Downloads</h2>
+        <a class="btn btn-primary" href="/api/csv/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B?headers=Icon%20Name,Icon%20Alias&columns=icon.name,icon.aliases">Download
+          .csv</a>
+      </div>
+    </div>
+  </div>
