@@ -36,6 +36,8 @@ export class ModfiicationTableComponent {
       ModificationType.IconRenamed,
       ModificationType.IconDescriptionModified,
       ModificationType.IconModified,
+      ModificationType.IconAliasCreated,
+      ModificationType.IconTagCreated
     ]
 
 
