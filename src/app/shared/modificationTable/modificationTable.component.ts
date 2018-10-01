@@ -25,7 +25,7 @@ export class ModfiicationTableComponent {
     private router: Router
   ) { }
   @Input('icon') icon: Icon = null
-  page: number = 0;
+  page: number = 1;
   currentDate: string = '';
   modificationsByDate: GroupByDateModification[] = [];
 
