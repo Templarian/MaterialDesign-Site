@@ -5,7 +5,7 @@ import { ModificationType } from "app/shared/enums/modificationType.enum";
 export class Modification {
 
   public id: string;
-  public modificaitonId: ModificationType;
+  public modificationId: ModificationType;
   public packageId: string;
   public user: User;
   public icon: Icon;
@@ -22,7 +22,7 @@ export class Modification {
 
   from(modification: Modification): Modification {
     this.id = modification.id;
-    this.modificaitonId = modification.modificaitonId;
+    this.modificationId = modification.modificationId;
     this.packageId = modification.packageId;
     this.user = new User().from(modification.user);
     this.icon = new Icon().from(modification.icon);

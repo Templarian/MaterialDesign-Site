@@ -68,7 +68,7 @@ class Icon {
 ```typescript
 class Modification {
     id: string;
-    modificaitonId: ModificationType;
+    modificationId: ModificationType;
     packageId: string;
     user: User;
     icon: Icon;

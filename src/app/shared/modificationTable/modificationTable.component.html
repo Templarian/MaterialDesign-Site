@@ -5,12 +5,54 @@
         <strong>{{group.date}}</strong>
       </td>
     </tr>
-    <tr *ngFor="let entry of group.modifications">
-      <td style="width:15rem">{{entry.user.name}}</td>
-      <td style="width:10rem;">{{friendlyModification(entry.modificaitonId)}}</td>
-      <td><code>...</code></td>
-      <td><code>...</code></td>
-      <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
-    </tr>
+    <ng-container *ngFor="let entry of group.modifications">
+      <ng-container [ngSwitch]="entry.modificationId">
+        <tr *ngSwitchCase="ModificationType.IconCreated">
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td colspan="2"></td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+        </tr>
+        <tr *ngSwitchCase="ModificationType.IconDeleted">
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td><code>{{entry.text}}</code></td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+        </tr>
+        <tr *ngSwitchCase="ModificationType.IconRenamed">
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td><code>{{entry.nameBefore}}</code></td>
+          <td><code>{{entry.nameAfter}}</code></td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+        </tr>
+        <tr *ngSwitchCase="ModificationType.IconDescriptionModified">
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td><code>{{entry.descriptionBefore}}</code></td>
+          <td><code>{{entry.descriptionAfter}}</code></td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+        </tr>
+        <tr *ngSwitchCase="ModificationType.IconModified">
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td><code>{{entry.dataBefore}}</code></td>
+          <td><code>{{entry.dataAfter}}</code></td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+        </tr>
+        <tr *ngSwitchCase="ModificationType.IconAliasCreated">
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td><code>{{entry.text}}</code></td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+        </tr>
+        <tr *ngSwitchCase="ModificationType.IconTagCreated">
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td colspan="2"><code>{{entry.text}}</code></td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+        </tr>
+      </ng-container>
+    </ng-container>
   </tbody>
 </table>

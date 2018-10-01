@@ -1,7 +1,7 @@
 [
     {
         "id": "3e7a0e1b-b355-11e7-bf5c-94188269ec50",
-        "modificaitonId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
+        "modificationId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -30,7 +30,7 @@
     },
     {
         "id": "87fb6a41-b354-11e7-bf5c-94188269ec50",
-        "modificaitonId": "AFFE875E-01BC-4A34-9BE3-27625A155B28",
+        "modificationId": "AFFE875E-01BC-4A34-9BE3-27625A155B28",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -59,7 +59,7 @@
     },
     {
         "id": "820b8714-b354-11e7-bf5c-94188269ec50",
-        "modificaitonId": "B1CE1713-A18A-4E9D-9E26-D0B4E44A1FAC",
+        "modificationId": "B1CE1713-A18A-4E9D-9E26-D0B4E44A1FAC",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -88,7 +88,7 @@
     },
     {
         "id": "51b1b2cc-b354-11e7-bf5c-94188269ec50",
-        "modificaitonId": "1506F66B-CC2A-4575-A20A-DC138628977A",
+        "modificationId": "1506F66B-CC2A-4575-A20A-DC138628977A",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -117,7 +117,7 @@
     },
     {
         "id": "46e38abf-b353-11e7-bf5c-94188269ec50",
-        "modificaitonId": "F7B6D49B-A86F-49AC-AF92-6B9D0DF6188B",
+        "modificationId": "F7B6D49B-A86F-49AC-AF92-6B9D0DF6188B",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": "truck-delivery",
         "nameAfter": "truck McTruck-truck",
@@ -146,7 +146,7 @@
     },
     {
         "id": "19445be2-b353-11e7-bf5c-94188269ec50",
-        "modificaitonId": "66B9FA99-1FAA-4D8F-B87F-B6F3CA444624",
+        "modificationId": "66B9FA99-1FAA-4D8F-B87F-B6F3CA444624",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -175,7 +175,7 @@
     },
     {
         "id": "f6100c55-b352-11e7-bf5c-94188269ec50",
-        "modificaitonId": "B4DEB3A8-A146-4086-9D7B-B67842A9CCB8",
+        "modificationId": "B4DEB3A8-A146-4086-9D7B-B67842A9CCB8",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -204,7 +204,7 @@
     },
     {
         "id": "ecb3dfda-b352-11e7-bf5c-94188269ec50",
-        "modificaitonId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
+        "modificationId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -233,7 +233,7 @@
     },
     {
         "id": "c6d9381b-b352-11e7-bf5c-94188269ec50",
-        "modificaitonId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
+        "modificationId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,
@@ -262,7 +262,7 @@
     },
     {
         "id": "c2acb992-b352-11e7-bf5c-94188269ec50",
-        "modificaitonId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
+        "modificationId": "691c8829-b1e7-11e7-bf5c-94188269ec50",
         "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
         "nameBefore": null,
         "nameAfter": null,

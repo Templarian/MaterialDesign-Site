@@ -28,6 +28,7 @@ export class ModfiicationTableComponent {
   page: number = 1;
   currentDate: string = '';
   modificationsByDate: GroupByDateModification[] = [];
+  ModificationType: typeof ModificationType = ModificationType;
 
   async loadModifications(icon) {
     const mods = [
