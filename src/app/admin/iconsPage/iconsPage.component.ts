@@ -52,12 +52,11 @@ export class AdminIconsPageComponent {
   }
   
   public selectIcon () {
-    console.log(this.selectedIcon)
     this.editIcon = new Icon().from(this.selectedIcon);
   }
 
   addIcon () {
-
+    this.editIcon = null;
   }
 
 

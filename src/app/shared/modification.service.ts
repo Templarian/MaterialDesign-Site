@@ -14,8 +14,27 @@ export class ModificationService {
     private http: HttpClient
   ) { }
 
-  async getModificationsByType(packageId: string, modifications: ModificationType[], page: number = 1, size: number = 100): Promise<Modification[]> {
+  async getModificationsByType(
+    packageId: string,
+    modifications: ModificationType[],
+    page: number = 1,
+    size: number = 100
+  ): Promise<Modification[]> {
     return await this.http.get<Modification[]>('/api/package/' + packageId + '/modification', {
+      params: (new HttpParams())
+        .set('modificationId', modifications.join(','))
+        .set('page', page.toString())
+        .set('size', size.toString())
+    }).toPromise();
+  }
+
+  async getIconModificationsByType(
+    iconId: string,
+    modifications: ModificationType[],
+    page: number = 1,
+    size: number = 100
+  ): Promise<Modification[]> {
+    return await this.http.get<Modification[]>('/api/icon/' + iconId + '/modification', {
       params: (new HttpParams())
         .set('modificationId', modifications.join(','))
         .set('page', page.toString())

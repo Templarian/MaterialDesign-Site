@@ -49,6 +49,7 @@ import { AdminRenamePageComponent } from 'app/admin/renamePage/renamePage.compon
 import { GithubPageComponent } from 'app/githubPage/githubPage.component';
 import { SidebarComponent } from 'app/viewerPage/sidebar/sidebar.component';
 import { ContributorBadgeComponent } from 'app/contributorsPage/contributorBadge/contributorBadge.component';
+import { ModfiicationTableComponent } from 'app/shared/modificationTable/modificationTable.component';
 
 const appRoutes: Routes = [
   {
@@ -404,6 +405,7 @@ const appRoutes: Routes = [
     AdminTagPageComponent,
     AdminRenamePageComponent,
     NotFoundPageComponent,
+    ModfiicationTableComponent,
     IconComponent,
     UserComponent,
     HeaderComponent,

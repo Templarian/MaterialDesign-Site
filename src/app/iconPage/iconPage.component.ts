@@ -61,4 +61,8 @@ export class IconPageComponent {
     })
   }
 
+  onAddIcon() {
+    
+  }
+
 }

@@ -82,37 +82,16 @@
         </div>
       </div>
     </div>
-    <div class="row mb-3">
+    <div *ngIf="editIcon !== null" class="row mb-3">
         <div class="col-md-1">
           <span class="step">Audit</span>
         </div>
         <div class="col-md-11">
           <blockquote>
-            If a mistake is made please use the audit logs below to view revert the change.
+            If a mistake is made please use the audit logs below to view and revert the change.
             This will make another audit entry.
           </blockquote>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>User</th>
-                <th>Date</th>
-                <th>Modification</th>
-                <th>Before</th>
-                <th>After</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Test</td>
-                <td>4 days ago</td>
-                <td>Rename</td>
-                <td><code>...</code></td>
-                <td><code>...</code></td>
-                <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
-              </tr>
-            </tbody>
-          </table>
+          <mdi-modification-table [icon]="editIcon"></mdi-modification-table>
         </div>
       </div>
   </div>
