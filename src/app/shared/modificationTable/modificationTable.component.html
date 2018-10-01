@@ -1,16 +1,16 @@
 <table class="table">
   <tbody *ngFor="let group of modificationsByDate">
     <tr>
-      <td colspan="4">
+      <td colspan="5">
         <strong>{{group.date}}</strong>
       </td>
     </tr>
     <tr *ngFor="let entry of group.modifications">
-      <td>{{entry.user.name}}</td>
-      <td>{{friendlyModification(entry.modificaitonId)}}</td>
+      <td style="width:15rem">{{entry.user.name}}</td>
+      <td style="width:10rem;">{{friendlyModification(entry.modificaitonId)}}</td>
       <td><code>...</code></td>
       <td><code>...</code></td>
-      <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
+      <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
     </tr>
   </tbody>
 </table>
