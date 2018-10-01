@@ -1,8 +1,10 @@
 # API Endpoints
 
-To help others build out features for the site all the endpoints are described below.
+<blockquote class="alert alert-danger">
+  icon:information-outline Please do not use these endpoints to scrape the site or to build third party applications. All data is provided from the CDN through the meta.json file after every release.
+</blockquote>
 
-> Please do not use these endpoints to scrape the site or to build third party applications. All data is provided from the CDN through the meta.json file after every release.
+To help others build out features for the site all the endpoints are described below.
 
 ## Public Endpoints
 
