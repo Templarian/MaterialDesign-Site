@@ -19,7 +19,7 @@ import { Modification } from '../models/modification.model';
 })
 export class ModfiicationTableComponent {
 
-  constructor (
+  constructor(
     private loginService: LoginService,
     private modificationService: ModificationService,
     private router: Router
@@ -52,20 +52,40 @@ export class ModfiicationTableComponent {
       });
       this.modificationsByDate[this.modificationsByDate.length - 1].modifications.push(m);
     }
-    console.log(this.modificationsByDate);
   }
 
-  ngOnChanges(changes: SimpleChanges){
+  ngOnChanges(changes: SimpleChanges) {
     this.loadModifications(changes.icon.currentValue);
   }
 
-  friendlyDate (date: Date) {
+  friendlyModification(type: string) {
+    switch (type) {
+      case ModificationType.IconCreated:
+        return 'Created';
+      case ModificationType.IconDeleted:
+        return 'Deleted';
+      case ModificationType.IconRenamed:
+        return 'Renamed';
+      case ModificationType.IconDescriptionModified:
+        return 'Description Modified'
+      case ModificationType.IconModified:
+        return 'Path Modified'
+      case ModificationType.IconAliasCreated:
+        return 'Alias Added';
+      case ModificationType.IconTagCreated:
+        return 'Tag Added'
+      default:
+        return 'Unknown';
+    }
+  }
+
+  friendlyDate(date: Date) {
     let months: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     let day: string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return day[date.getDay()] + ' ' + months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
   }
 
-  friendlyTime (dateStr: string) {
+  friendlyTime(dateStr: string) {
     let date = new Date(dateStr);
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -76,18 +96,18 @@ export class ModfiicationTableComponent {
     return strTime;
   }
 
-  friendlyUrl (str: string) {
+  friendlyUrl(str: string) {
     return str.replace(' ', '-');
   }
 
-  friendlyReport (m: Modification) {
+  friendlyReport(m: Modification) {
     return 'https://github.com/Templarian/MaterialDesign/issues/new?title=History&body=Reason%3A%0D%0A%0D%0A%0D%0A%5BView+History+Item%5D%28http%3A%2F%2Fmaterialdesignicons.com%2Fhistory%2F' + m.id + '%29';
   }
 }
 
 class GroupByDateModification {
-  constructor (
+  constructor(
     public date: string
-  ) {}
+  ) { }
   public modifications: Modification[] = [];
 }

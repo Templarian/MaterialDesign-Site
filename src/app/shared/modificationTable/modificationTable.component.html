@@ -9,11 +9,12 @@
       <th></th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngFor="let group of modificationsByDate">
     <tr>
-      <td>Test</td>
-      <td>4 days ago</td>
-      <td>Rename</td>
+      <td colspan="4">{{group.date}}</td>
+    </tr>
+    <tr *ngFor="let entry of group.modifications">
+      <td>{{friendlyModification(entry.modificaitonId)}}</td>
       <td><code>...</code></td>
       <td><code>...</code></td>
       <td><button class="btn btn-sm btn-outline-danger">Revert</button></td>
