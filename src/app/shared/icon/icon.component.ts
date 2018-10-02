@@ -30,7 +30,10 @@ import {
     mdiTagPlus,
     mdiStar,
     mdiDelete,
-    mdiPlusCircle
+    mdiPlusCircle,
+    mdiTooltipText,
+    mdiAsterisk,
+    mdiFileDocument
 } from '@mdi/js'
 
 @Component({
@@ -46,6 +49,7 @@ export class IconComponent  {
         new Icon('android', mdiAndroid),
         new Icon('angular', mdiAngular),
         new Icon('angularjs', mdiAngularjs),
+        new Icon('asterisk', mdiAsterisk),
         new Icon('bootstrap', mdiBootstrap),
         new Icon('chevron-left', mdiChevronLeft),
         new Icon('chevron-right', mdiChevronRight),
@@ -65,6 +69,7 @@ export class IconComponent  {
         new Icon('eye', mdiEye),
         new Icon('eye-off', mdiEyeOff),
         new Icon('file-tree', mdiFileTree),
+        new Icon('file-document', mdiFileDocument),
         new Icon('filter', mdiFilter),
         new Icon('format-letter-case', mdiFormatLetterCase),
         new Icon('github', mdiGithubCircle),
@@ -90,6 +95,7 @@ export class IconComponent  {
         new Icon('svg', mdiSvg),
         new Icon('tag-plus', mdiTagPlus),
         new Icon('thumb-up-outline', mdiThumbUpOutline),
+        new Icon('tooltip-text', mdiTooltipText),
         new Icon('textbox', mdiTextbox),
         new Icon('vuejs', mdiVuejs),
         new Icon('web', mdiWeb),
