@@ -49,7 +49,7 @@
           <td style="width:1.5rem"><mdi-icon name="tooltip-text"></mdi-icon></td>
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
-          <td><code>{{entry.text}}</code></td>
+          <td colspan="2"><code>{{entry.text}}</code></td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger">Revert</button></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconTagCreated">
