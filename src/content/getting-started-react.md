@@ -44,5 +44,5 @@ class App extends Component {
 | spin       | bool, number   | `false`  | `true = 2s`, `{spin}s` |
 
 <blockquote class="alert alert-info">
-  icon:information-outline Learn more about other features including the `Stack` component in the [Repo](https://github.com/Templarian/MaterialDesign-React).
+  icon:information-outline Learn more about other features including the `Stack` component in the <a href="https://github.com/Templarian/MaterialDesign-React">Repo</a>.
 </blockquote>
