@@ -197,6 +197,22 @@ body {
         line-height: 40px;
         font-size: 20px;
     }
+
+    .btn {
+        svg {
+            margin: -.5rem 0 -.25rem -.25rem;
+            vertical-align: middle;
+            path {
+                transition: fill 0.15s ease-in-out;
+            }
+        }
+        &.btn-outline-primary {
+            svg path { fill: #007bff }
+            &:hover {
+                svg path { fill: #FFF; }
+            }
+        }
+    }
 }
 
 .card.resource-blue {

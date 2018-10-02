@@ -6,7 +6,8 @@ Material Design Icons can be used in React with a custom component or with the o
 npm install @mdi/react @mdi/js
 ```
 
-[Demo](https://templarian.github.io/@mdi/react/) [MaterialDesign-React on GitHub](https://github.com/Templarian/MaterialDesign-React)
+<a href="https://templarian.github.io/@mdi/react/" class="btn btn-outline-primary">icon:teach Demo</a>
+<a href="https://github.com/Templarian/MaterialDesign-React" class="btn btn-outline-primary ml-2">icon:github-circle MaterialDesign-React on GitHub</a>
 
 ## Usage
 
@@ -43,5 +44,5 @@ class App extends Component {
 | spin       | bool, number   | `false`  | `true = 2s`, `{spin}s` |
 
 <blockquote class="alert alert-info">
-  mdi:information-outline Learn more about other features including the `Stack` component in the [Repo](https://github.com/Templarian/MaterialDesign-React).
+  icon:information-outline Learn more about other features including the `Stack` component in the [Repo](https://github.com/Templarian/MaterialDesign-React).
 </blockquote>
