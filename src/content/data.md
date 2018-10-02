@@ -121,6 +121,8 @@ Enums used in above models.
 
 ### DownloadType
 
+`downloadType.enum.ts` [View on GitHub](https://github.com/Templarian/MaterialDesign-Site/blob/master/src/app/shared/enums/downloadType.enum.ts)
+
 ```typescript
 enum DownloadType {
     Png = "png",
@@ -133,6 +135,8 @@ enum DownloadType {
 
 ### ModificationType
 
+`modificationType.enum.ts` [View on GitHub](https://github.com/Templarian/MaterialDesign-Site/blob/master/src/app/shared/enums/modificationType.enum.ts)
+
 ```typescript
 enum ModificationType {
     IconAliasCreated = "691c8829-b1e7-11e7-bf5c-94188269ec50",
@@ -141,6 +145,7 @@ enum ModificationType {
     IconModified = "1506F66B-CC2A-4575-A20A-DC138628977A",
     IconRenamed = "F7B6D49B-A86F-49AC-AF92-6B9D0DF6188B",
     IconTagCreated = "a185a9e8-c192-11e7-bf5c-94188269ec50",
+    IconDescriptionModified = "3c638179-c4ca-11e8-9f27-94188269ec50",
     WebfontPublished = "66B9FA99-1FAA-4D8F-B87F-B6F3CA444624",
     News = "B4DEB3A8-A146-4086-9D7B-B67842A9CCB8"
 }
