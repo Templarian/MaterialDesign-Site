@@ -212,6 +212,12 @@ body {
                 svg path { fill: #FFF; }
             }
         }
+        &.btn-outline-secondary {
+            svg path { fill: #444 }
+            &:hover {
+                svg path { fill: #FFF; }
+            }
+        }
     }
 }
 

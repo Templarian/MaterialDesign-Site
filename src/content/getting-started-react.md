@@ -7,7 +7,7 @@ npm install @mdi/react @mdi/js
 ```
 
 <a href="https://templarian.github.io/@mdi/react/" class="btn btn-outline-primary">icon:teach Demo</a>
-<a href="https://github.com/Templarian/MaterialDesign-React" class="btn btn-outline-primary ml-2">icon:github-circle MaterialDesign-React on GitHub</a>
+<a href="https://github.com/Templarian/MaterialDesign-React" class="btn btn-outline-secondary ml-2">icon:github-circle MaterialDesign-React on GitHub</a>
 
 ## Usage
 
