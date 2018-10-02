@@ -6,7 +6,7 @@ Material Design Icons can be used in React with a custom component or with the o
 npm install @mdi/react @mdi/js
 ```
 
-[MaterialDesign-React on GitHub](https://github.com/Templarian/MaterialDesign-React)
+[Demo](https://templarian.github.io/@mdi/react/) [MaterialDesign-React on GitHub](https://github.com/Templarian/MaterialDesign-React)
 
 ## Usage
 
@@ -35,11 +35,13 @@ class App extends Component {
 | Prop       | PropTypes      | Default  | Details |
 |------------|----------------|----------|---------|
 | path       | string         | required | SVG path data. Usually from @mdi/js |
-| size       | number, string | null     | `{size * 1.5}rem` |
+| size       | number, string | null     | `{size * 1.5}rem`, `'1em'`, `'24px'` |
 | horizontal | bool           | `false ` | Flip Horizontal |
 | vertical   | bool           | `false`  | Flip Vertical |
 | rotate     | number         | `0 `     | degrees `0` to `360` |
 | color      | string         | `#000`   | `rgb()` / `rgba()` / `#000` |
 | spin       | bool, number   | `false`  | `true = 2s`, `{spin}s` |
 
-Learn more about other features in the Repo.
+<blockquote class="alert alert-info">
+  mdi:information-outline Learn more about other features including the `Stack` component in the [Repo](https://github.com/Templarian/MaterialDesign-React).
+</blockquote>
