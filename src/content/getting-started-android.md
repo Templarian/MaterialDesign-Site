@@ -10,6 +10,10 @@ Android (5.0 API Level 21+) uses the Vector Drawable format that is similar to S
 
 Instead of having to download an SVG for each icon you need, you can use the [Material Icon Library](https://github.com/code-mc/material-icon-lib), a constantly updated library containing all of our icons. It can be easily used as Drawable, a standalone View or inside menu resource files.
 
+## Demo
+
+![](http://i.imgur.com/KXHfXo8.gif)
+
 ### Usage
 
 #### Step 1
