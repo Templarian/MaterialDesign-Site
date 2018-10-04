@@ -50,6 +50,7 @@ import { GithubPageComponent } from 'app/githubPage/githubPage.component';
 import { SidebarComponent } from 'app/viewerPage/sidebar/sidebar.component';
 import { ContributorBadgeComponent } from 'app/contributorsPage/contributorBadge/contributorBadge.component';
 import { ModfiicationTableComponent } from 'app/shared/modificationTable/modificationTable.component';
+import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
 
 const appRoutes: Routes = [
   {
@@ -413,7 +414,11 @@ const appRoutes: Routes = [
     BannerComponent,
     SidebarComponent,
     MarkdownComponent,
-    IconSearchComponent
+    IconSearchComponent,
+    AssignIssueModal
+  ],
+  entryComponents: [
+    AssignIssueModal
   ],
   imports: [
     BrowserModule,

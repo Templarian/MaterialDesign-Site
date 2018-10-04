@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { LoginService } from 'app/admin/services/login.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
 
 @Component({
   selector: 'mdi-history-page',
@@ -79,11 +80,10 @@ export class HistoryPageComponent {
     this.isAuthed = await this.loginService.isAuthed();
   }
 
-  issueNumber: number = null;
-
-  async assignIssue(content, m: Modification) {
-    this.issueNumber = m.issue;
-    this.modalService.open(content).result.then((result) => {
+  async assignIssue(m: Modification) {
+    const modal = this.modalService.open(AssignIssueModal);
+    modal.componentInstance.issueNumber = m.issue;
+    modal.result.then((result) => {
       m.issue = result;
       this.modificationService.setAssignedIssue(m);
     }, (reason) => {
