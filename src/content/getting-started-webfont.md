@@ -1,5 +1,5 @@
-<blockquote class="alert alert-info">
-  icon:information-outline Please read the <a href="/guide/webfont-alternatives">Webfont Alternatives Guide</a> before considering if the webfont is right for your project.
+<blockquote class="alert alert-warning">
+  icon:information-outline <b>Webfonts are large!</b> Please read the <a href="/guide/webfont-alternatives">Webfont Alternatives Guide</a> before considering if the webfont is right for your project.
 </blockquote>
 
 # Webfont - Getting Started
