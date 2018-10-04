@@ -22,6 +22,7 @@ All naming must be in the exact order below.
 | `*-down`          |           | `*-minus`    |              |
 | `*-left`          |           | `*-remove`   |              |
 | `*-right`         |           | `*-search`   |              |
+| `*-right`         |           | `*-question` |              |
 
 ### Position
 
@@ -118,6 +119,7 @@ Modifiers are consistent across all icons in their representation.
 - `minus` is always used to represent subtracting.
 - `multiple` should be used on layered icons where there is a singular representation present.
 - `format-*` breaks all the rules. Because.
+- `help` is a base icon, `*-question` is a modifer.
 
 ## Notice a Bug?
 
