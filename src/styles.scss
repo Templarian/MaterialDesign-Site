@@ -190,34 +190,34 @@ body {
                 list-style: square;
             }
         }
+
+        .btn {
+            svg {
+                margin: -.5rem 0 -.25rem -.25rem;
+                vertical-align: middle;
+                path {
+                    transition: fill 0.15s ease-in-out;
+                }
+            }
+            &.btn-outline-primary {
+                svg path { fill: #007bff }
+                &:hover {
+                    svg path { fill: #FFF; }
+                }
+            }
+            &.btn-outline-secondary {
+                svg path { fill: #444 }
+                &:hover {
+                    svg path { fill: #FFF; }
+                }
+            }
+        }
     }
 
     .nav-item-title {
         padding: 0 20px 0 12px;
         line-height: 40px;
         font-size: 20px;
-    }
-
-    .btn {
-        svg {
-            margin: -.5rem 0 -.25rem -.25rem;
-            vertical-align: middle;
-            path {
-                transition: fill 0.15s ease-in-out;
-            }
-        }
-        &.btn-outline-primary {
-            svg path { fill: #007bff }
-            &:hover {
-                svg path { fill: #FFF; }
-            }
-        }
-        &.btn-outline-secondary {
-            svg path { fill: #444 }
-            &:hover {
-                svg path { fill: #FFF; }
-            }
-        }
     }
 }
 
