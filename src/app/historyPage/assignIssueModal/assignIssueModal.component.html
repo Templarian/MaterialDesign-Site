@@ -1,0 +1,16 @@
+<div class="modal-header">
+  <h4 class="modal-title">Assign Issue to History Item</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <label>
+      Issue Number
+      <input #issueNumberInput type="number" class="form-control" [(ngModel)]="issueNumber" />
+  </label>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close(null)">Remove Issue Number</button>
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close(issueNumber)">Set Issue Number</button>
+</div>
