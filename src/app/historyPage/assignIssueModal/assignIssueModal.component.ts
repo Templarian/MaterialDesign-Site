@@ -17,7 +17,7 @@ export class AssignIssueModal {
     this.issueNumberInput.nativeElement.focus();
   }
 
-  close() {
+  save() {
     this.activeModal.close(this.issueNumber);
   }
 
