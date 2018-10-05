@@ -17,7 +17,7 @@ export class AssignIssueModal {
     this.issueNumberInput.nativeElement.focus();
   }
 
-  async save($event) {
+  save($event) {
     this.activeModal.close(this.issueNumber);
     if ($event) {
       $event.preventDefault();
