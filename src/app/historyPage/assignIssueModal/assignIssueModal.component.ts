@@ -16,4 +16,12 @@ export class AssignIssueModal {
     await delay();
     this.issueNumberInput.nativeElement.focus();
   }
+
+  close() {
+    this.activeModal.close(this.issueNumber);
+  }
+
+  clear() {
+    this.activeModal.close(null);
+  }
 }

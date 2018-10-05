@@ -11,10 +11,10 @@
         type="number"
         class="form-control"
         [(ngModel)]="issueNumber"
-        (keydown.enter)="activeModal.close(issueNumber)" />
+        (keydown.enter)="save()" />
   </label>
 </div>
 <div class="modal-footer">
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close(null)">Remove Issue Number</button>
-  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close(issueNumber)">Set Issue Number</button>
+  <button type="button" class="btn btn-outline-dark" (click)="clear()">Remove Issue Number</button>
+  <button type="button" class="btn btn-outline-dark" (click)="save()">Set Issue Number</button>
 </div>
