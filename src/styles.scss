@@ -97,6 +97,16 @@ body {
                 }
             }
         }
+
+        &.alert.alert-warning {
+            border-left-color: #856404;
+            svg {
+                margin-right: 0.2rem;
+                path {
+                    fill: #856404;
+                }
+            }
+        }
     }
 
     pre {
