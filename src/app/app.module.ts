@@ -226,7 +226,7 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'guide/wcag',
+    path: 'guide/accessiblility',
     component: ViewerPageComponent,
     data: {
       file: 'content/guide-wcag.md'

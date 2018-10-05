@@ -35,11 +35,11 @@
   - xamarin Xamarin /getting-started/xamarin
 - /guides
 - /guide/home-assistant
-- /guide/wcag
+- /guide/accessiblility
 - /guide/webfont-alternatives
   - none Guides /guides
+  - human Accessiblility _WCAG_ /guide/wcag
   - home-assistant Home Assistant /guide/home-assistant
-  - human WCAG _Accessibility_ /guide/wcag
   - lightbulb-on Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
 - /contributors
 - /contribute
