@@ -11,7 +11,7 @@
         type="number"
         class="form-control"
         [(ngModel)]="issueNumber"
-        (keydown.enter)="save()" />
+        (keydown.enter)="save($event)" />
   </label>
 </div>
 <div class="modal-footer">

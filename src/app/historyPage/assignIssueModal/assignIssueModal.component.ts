@@ -17,8 +17,11 @@ export class AssignIssueModal {
     this.issueNumberInput.nativeElement.focus();
   }
 
-  save() {
+  async save($event) {
     this.activeModal.close(this.issueNumber);
+    if ($event) {
+      $event.preventDefault();
+    }
   }
 
   clear() {
