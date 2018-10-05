@@ -7,7 +7,11 @@
 <div class="modal-body">
   <label>
       Issue Number
-      <input #issueNumberInput type="number" class="form-control" [(ngModel)]="issueNumber" />
+      <input #issueNumberInput
+        type="number"
+        class="form-control"
+        [(ngModel)]="issueNumber"
+        (keydown.enter)="activeModal.close(issueNumber)" />
   </label>
 </div>
 <div class="modal-footer">
