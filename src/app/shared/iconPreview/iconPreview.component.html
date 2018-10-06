@@ -1,5 +1,7 @@
 <div class="icon-grid">
-  <svg viewBox="0 0 24 24">
-    <path [d]="path"></path>
-  </svg>
+  <ng-container *ngIf="path != null">
+    <svg viewBox="0 0 24 24">
+      <path [attr.d]="path"></path>
+    </svg>
+  </ng-container>
 </div>
