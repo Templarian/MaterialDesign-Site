@@ -1,13 +1,14 @@
 import { Icon } from "app/shared/models/icon.model";
+import { PackageType } from "../enums/packageType.enum";
 
 export class Package {
   
-  public id: string;
+  public id: PackageType | string;
   public name: string;
   public icons: Icon[];
   public iconCount: string;
 
-  constructor(packageId?: string, packageName?: string) {
+  constructor(packageId?: PackageType | string, packageName?: string) {
     this.id = packageId;
     this.name = packageName;
   }

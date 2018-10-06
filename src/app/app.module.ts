@@ -51,6 +51,7 @@ import { SidebarComponent } from 'app/viewerPage/sidebar/sidebar.component';
 import { ContributorBadgeComponent } from 'app/contributorsPage/contributorBadge/contributorBadge.component';
 import { ModfiicationTableComponent } from 'app/shared/modificationTable/modificationTable.component';
 import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
+import { PackageType } from './shared/enums/packageType.enum';
 
 const appRoutes: Routes = [
   {
@@ -289,28 +290,28 @@ const appRoutes: Routes = [
     path: 'icons',
     component: IconsPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {
     path: 'icons/light',
     component: IconsPageComponent,
     data: {
-      package: '531A9B44-1962-11E5-89CC-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIconsLight
     }
   },
   {
     path: 'icons/:tagUrl',
     component: IconsPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {
     path: 'icon/:iconName',
     component: IconPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {
@@ -324,35 +325,35 @@ const appRoutes: Routes = [
     path: 'contributors',
     component: ContributorsPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {
     path: 'contributor/:name',
     component: ContributorPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {
     path: 'download',
     component: DownloadPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {
     path: 'issues',
     component: IssuesPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {
     path: 'history',
     component: HistoryPageComponent,
     data: {
-      package: '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B'
+      package: PackageType.MaterialDesignIcons
     }
   },
   {

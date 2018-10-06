@@ -9,6 +9,7 @@ import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
 import { Router } from '@angular/router';
+import { PackageType } from 'app/shared/enums/packageType.enum';
 
 @Component({
   selector: 'mdi-admin-alias-page',
@@ -37,8 +38,8 @@ export class AdminAliasPageComponent {
     private modificationService: ModificationService,
     private router: Router
   ) {
-    this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
-    this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
+    this.packages.push(new Package(PackageType.MaterialDesignIcons, "Material Design Icons"));
+    this.packages.push(new Package(PackageType.MaterialDesignIconsLight, "Material Design Icons Light"));
     this.selectedPackage = this.packages[0];
   }
 

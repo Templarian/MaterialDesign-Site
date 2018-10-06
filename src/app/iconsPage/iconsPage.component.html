@@ -29,6 +29,14 @@
                     (click)="isCheatsheet = !isCheatsheet">
                     Cheatsheet
                 </button>
+                <div class="btn-group">
+                    <button class="btn btn-light btn-lighter"
+                        (click)="size = 24"
+                        [ngClass]="{ 'active': size == 24 }">Regular</button>
+                    <button class="btn btn-light btn-lighter"
+                        (click)="size = 36"
+                        [ngClass]="{ 'active': size == 36 }">Light</button>
+                </div>
             </div>
             <div class="card p-2 loading" *ngIf="isIconsLoading">
                 <svg class="loading-spin" viewBox="0 0 24 24">
