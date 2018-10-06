@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'mdi-carbon',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./carbon.component.scss']
 })
 export class CarbonComponent {
+  @ViewChild('carbon') carbon: ElementRef;
   isLocal: boolean = window.location.href.match(/localhost/) !== null
 
   ngAfterViewInit() {
@@ -15,7 +16,7 @@ export class CarbonComponent {
       s.async = true;
       s.id = '_carbonads_js';
       s.src = '//cdn.carbonads.com/carbon.js?serve=CKYIPKJW&placement=materialdesigniconscom';
-      document.getElementById('carbon').appendChild(s);
+      this.carbon.nativeElement.appendChild(s);
     }
   }
 }
