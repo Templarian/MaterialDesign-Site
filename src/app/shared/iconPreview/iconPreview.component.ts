@@ -13,6 +13,7 @@ export class IconPreviewComponent {
   ) { }
 
   @Input('path') path: string = null;
+  @Input('color') color: string = '#222';
   pointCount: number = 0;
 
   setPoints(path: string) {
