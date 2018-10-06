@@ -39,10 +39,10 @@
         </tr>
         <tr *ngSwitchCase="ModificationType.IconModified">
           <td style="width:1.5rem"><mdi-icon name="asterisk"></mdi-icon></td>
-          <td colspan="3" style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:15rem">{{entry.user.name}}</td>
           <td colspan="3">
             <mdi-icon-preview [path]="entry.dataBefore"></mdi-icon-preview>
-            <mdi-icon-preview [path]="entry.dataAfter" class="ml-3"></mdi-icon-preview>
+            <mdi-icon-preview [path]="entry.dataAfter"></mdi-icon-preview>
           </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
