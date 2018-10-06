@@ -22,7 +22,7 @@ All naming must be in the exact order below.
 | `*-down`          |           | `*-minus`    |              |
 | `*-left`          |           | `*-remove`   |              |
 | `*-right`         |           | `*-search`   |              |
-| `*-right`         |           | `*-question` |              |
+|                   |           | `*-question` |              |
 
 ### Position
 
