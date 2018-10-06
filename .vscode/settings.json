@@ -1,4 +1,4 @@
 {
     "typescript.tsdk": "./node_modules/typescript/lib",
-    "window.smoothScrollingWorkaround": true
+    "editor.tabSize": 2,
 }

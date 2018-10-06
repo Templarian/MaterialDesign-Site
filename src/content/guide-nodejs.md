@@ -2,7 +2,7 @@
 
 > **Goal:** Write a NodeJS script that takes the `@mdi/svg` [package](https://github.com/Templarian/MaterialDesign-SVG) and converts it into a easy to view `preview.html`.
 
-I picked this since it accesses the `meta.json` (this contains all the meta information about each icon, like tags, aliases, etc.) and in the end generates a single `html` file.
+This example uses the `meta.json` (explained below) and in the end generates a single `html` file.
 
 ## Prerequisites
 
@@ -23,6 +23,26 @@ The first step will require you to open a command line of your choice (`CTRL+til
 Awesome, you will now see a folder called `node_modules` this contains a copy of the latest version of the SVG's and the `meta.json` file.
 
 > **Note:** If you want to see the `meta.json` open it and then run `CTRL+P` followed by typing `format`. This will format the JSON file.
+
+## What is meta.json
+
+The `meta.json` file is stored in the `@mdi/svg` package. This contains all the icon information. The data is normalized to cut down on the file size.
+
+```
+[{
+  id: "039be9b8-08ad-11e4-bf19-842b2b6cfe1b",
+  name: "vector-square",
+  codepoint: "F001",
+  aliases: [
+    "mdi"
+  ],
+  tags: [
+    "Vector"
+  ],
+  author: "Austin Andrews",
+  version: "1.5.54"
+}, ...]
+```
 
 ## Creating the Build Script
 
@@ -90,7 +110,7 @@ In the `package.json` a new script needs to be added to handle `build`.
 
 To run the build execute `npm run build`.
 
-![MDI Preview](/content/images/2018/04/mdi-preview-nodejs.png)
+![MDI Preview](/assets/resources/mdi-preview-nodejs.png)
 
 ## Wrapup
 

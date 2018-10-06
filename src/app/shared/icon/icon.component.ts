@@ -33,7 +33,8 @@ import {
     mdiPlusCircle,
     mdiTooltipText,
     mdiAsterisk,
-    mdiFileDocument
+    mdiFileDocument,
+    mdiNodejs
 } from '@mdi/js'
 
 @Component({
@@ -83,6 +84,7 @@ export class IconComponent  {
         new Icon('menu-down', mdiMenuDown),
         new Icon('menu-up', mdiMenuUp),
         new Icon('news', mdiNewspaper),
+        new Icon('nodejs', mdiNodejs),
         new Icon('language-php', mdiLanguagePhp),
         new Icon('plus-box-outline', mdiPlusBoxOutline),
         new Icon('plus-box', mdiPlusBox),

@@ -8,6 +8,7 @@ import { Alias } from 'app/shared/models/alias.model';
 import { Modification } from 'app/shared/models/modification.model';
 import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mdi-admin-alias-page',
@@ -33,7 +34,8 @@ export class AdminAliasPageComponent {
   constructor(
     private loginService: LoginService,
     private iconService: IconService,
-    private modificationService: ModificationService
+    private modificationService: ModificationService,
+    private router: Router
   ) {
     this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
     this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
@@ -46,6 +48,14 @@ export class AdminAliasPageComponent {
     console.log('authed');
     // Load Package
     this.selectPackage();
+  }
+
+  goBack () {
+    this.router.navigateByUrl('/admin/index')
+  }
+
+  async logout () {
+    await this.loginService.logout();
   }
 
   async selectPackage() {

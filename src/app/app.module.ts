@@ -240,6 +240,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'guide/nodejs-scripting',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/guide-nodejs.md'
+    }
+  },
+  {
     path: 'code-of-conduct',
     component: ViewerPageComponent,
     data: {

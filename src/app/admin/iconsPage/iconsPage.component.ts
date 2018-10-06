@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
-import { TagService } from 'app/shared/tag.service';
 import { Router } from '@angular/router';
 import { Package } from 'app/shared/models/package.model';
 import { Icon } from 'app/shared/models/icon.model';

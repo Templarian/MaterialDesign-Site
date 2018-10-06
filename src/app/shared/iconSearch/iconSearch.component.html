@@ -1,18 +1,18 @@
 <ng-template #rt let-r="result" let-t="term">
-    <svg viewBox="0 0 24 24" style="width:24px;height:24px;vertical-align: middle;margin: 0 0 0 -12px;">
-        <path [attr.d]="r.data"></path>
-    </svg>
-    {{r.name}}
+  <svg viewBox="0 0 24 24" style="width:24px;height:24px;vertical-align: middle;margin: 0 0 0 -12px;">
+    <path [attr.d]="r.data"></path>
+  </svg>
+  {{r.name}}
 </ng-template>
 <div class="search">
-    <svg *ngIf="s" style="width:24px;height:24px;">
-        <path [attr.d]="s.data" />
-    </svg>
-    <input type="text" class="form-control"
-           [(ngModel)]="s"
-           [ngbTypeahead]="search"
-           [resultTemplate]="rt"
-           [inputFormatter]="formatter"
-           [disabled]="isDisabled"
-           [placeholder]="isDisabled ? 'Loading...' : ''" />
+  <svg *ngIf="s" style="width:24px;height:24px;">
+    <path [attr.d]="s.data" />
+  </svg>
+  <input type="text" class="form-control"
+    [(ngModel)]="s"
+    [ngbTypeahead]="search"
+    [resultTemplate]="rt"
+    [inputFormatter]="formatter"
+    [disabled]="isDisabled"
+    [placeholder]="isDisabled ? 'Loading...' : ''" />
 </div>
