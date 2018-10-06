@@ -4,6 +4,7 @@ import { IconService } from '../shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
 import { Tag } from 'app/shared/models/tag.model';
 import { TagService } from 'app/shared/tag.service';
+import { PackageType } from '../shared/enums/packageType.enum';
 
 @Component({
   selector: 'mdi-icons',
@@ -41,6 +42,8 @@ export class IconsPageComponent {
   boundingSidebarTags: any = { top: 0 };
   isIconsLoading: boolean = true;
   isCheatsheet: boolean = false;
+  PackageType = PackageType;
+  packageId: PackageType = PackageType.MaterialDesignIcons;
 
   setHasVertical() {
     if (this.boundingSidebarTags.top == 0) {
@@ -69,6 +72,7 @@ export class IconsPageComponent {
   }
 
   async loadContent(data) {
+    this.packageId = data.package;
     let icons = await this.iconService.getIcons(data.package);
     this.isIconsLoading = false;
     this.iconsCache = icons;
@@ -108,6 +112,21 @@ export class IconsPageComponent {
       }
       return false;
     });
+  }
+
+  switchPackage(packageId: PackageType) {
+    if (this.packageId !== packageId) {
+      switch(packageId) {
+        case PackageType.MaterialDesignIcons:
+          this.router.navigateByUrl('/icons');
+          break;
+        case PackageType.MaterialDesignIconsLight:
+          this.router.navigateByUrl('/icons/light');
+          break;
+        default:
+          throw 'Invalid package';
+      }
+    }
   }
 
   tagUrl: string = null;
