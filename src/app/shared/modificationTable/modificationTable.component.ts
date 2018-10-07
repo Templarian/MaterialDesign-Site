@@ -41,7 +41,7 @@ export class ModfiicationTableComponent {
       ModificationType.IconTagCreated
     ]
 
-
+    this.modificationsByDate = [];
     let modifications = await this.modificationService.getIconModificationsByType(icon.id, mods, this.page, 100);
     for (let m of modifications) {
       if (this.currentDate != this.friendlyDate(new Date(m.date))) {
