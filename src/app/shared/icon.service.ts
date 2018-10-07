@@ -24,6 +24,12 @@ export class IconService {
     return res.icons.map(i => new Icon().from(i));
   }
 
+  async getIcon(iconId: string): Promise<Icon> {
+    let res = await this.http.get<Icon>('/api/icon/' + iconId)
+      .toPromise();
+    return new Icon().from(res);
+  }
+
   async getIconsByName(packageId: string, names: string[]): Promise<Icon[]> {
     let res = await this.http.get<Package>('/api/package/' + packageId, {
       params: (new HttpParams())
@@ -34,6 +40,12 @@ export class IconService {
 
   async getIconByName(packageId: string, name: string): Promise<Icon> {
     let res = await this.http.get<Icon>('/api/package/' + packageId + '/name/' + name)
+      .toPromise();
+    return new Icon().from(res);
+  }
+
+  async getAdminIcon(iconId: string): Promise<Icon> {
+    let res = await this.http.get<Icon>('/api/admin/icon/' + iconId)
       .toPromise();
     return new Icon().from(res);
   }

@@ -57,8 +57,8 @@ export class AdminIconsPageComponent {
     // this.selectedIcon = this.icons[0];
   }
 
-  public selectIcon() {
-    this.editIcon = new Icon().from(this.selectedIcon);
+  async selectIcon() {
+    this.editIcon = await this.iconService.getAdminIcon(this.selectedIcon.id);
   }
 
   addIcon() {
