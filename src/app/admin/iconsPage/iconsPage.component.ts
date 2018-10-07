@@ -66,7 +66,7 @@ export class AdminIconsPageComponent {
   }
 
   async updateDescription() {
-    await this.iconService.updateDescription(this.editIcon);
+    this.editIcon = await this.iconService.updateDescription(this.editIcon);
   }
 
 }
