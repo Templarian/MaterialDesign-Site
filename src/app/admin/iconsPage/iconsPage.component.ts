@@ -4,7 +4,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Package } from 'app/shared/models/package.model';
 import { Icon } from 'app/shared/models/icon.model';
 import { IconService } from 'app/shared/icon.service';
-import { query } from '@angular/core/src/animation/dsl';
 
 @Component({
   selector: 'mdi-admin-icons-page',

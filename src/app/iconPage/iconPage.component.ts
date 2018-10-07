@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
-import { ActivatedRoute } from "@angular/router";
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from "@angular/router";
 
 import { IconService } from "app/shared/icon.service";
 import { Icon } from 'app/shared/models/icon.model';
@@ -28,7 +27,7 @@ export class IconPageComponent {
   loaded: boolean = false;
   icon: Icon = new Icon('Loading...', 'M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z');
   isAuthed: boolean = false;
-  
+
   replace: MarkdownReplace[] = [];
   process() {
 
