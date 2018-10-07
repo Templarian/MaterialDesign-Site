@@ -37,6 +37,7 @@ export class AdminIconsPageComponent {
   public selectedPackage: Package = null;
   public icons: Icon[];
   public selectedIcon: Icon = null;
+  public icon: Icon = null;
   public editIcon: Icon = null;
 
   async ngOnInit() {
@@ -58,7 +59,8 @@ export class AdminIconsPageComponent {
   }
 
   async selectIcon() {
-    this.editIcon = await this.iconService.getAdminIcon(this.selectedIcon.id);
+    this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
+    this.editIcon = new Icon().from(this.icon);
   }
 
   addIcon() {
@@ -66,7 +68,8 @@ export class AdminIconsPageComponent {
   }
 
   async updateDescription() {
-    this.editIcon = await this.iconService.updateDescription(this.editIcon);
+    this.icon = await this.iconService.updateDescription(this.editIcon);
+    this.editIcon = new Icon().from(this.icon);
   }
 
 }
