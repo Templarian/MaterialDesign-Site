@@ -69,11 +69,14 @@ export class IconSearchComponent {
     this.isDisabled = false;
   }
 
-  ngOnChanges(changes: SimpleChanges) {
+  async ngOnChanges(changes: SimpleChanges) {
     if (changes.icon) {
       if (changes.icon.currentValue == null) {
         this.s = null;
       }
+    }
+    if (changes.package) {
+      await this.ngOnInit();
     }
   }
 }
