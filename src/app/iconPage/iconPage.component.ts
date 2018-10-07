@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { IconService } from "app/shared/icon.service";
 import { Icon } from 'app/shared/models/icon.model';
 import { Package } from '../shared/models/package.model';
+import { MarkdownReplace } from 'app/shared/markdown/markdown.component';
 
 @Component({
   selector: 'mdi-icon-page',
@@ -27,6 +28,11 @@ export class IconPageComponent {
   loaded: boolean = false;
   icon: Icon = new Icon('Loading...', 'M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z');
   isAuthed: boolean = false;
+  
+  replace: MarkdownReplace[] = [];
+  process() {
+
+  }
 
   async ngOnInit() {
     const packageId: string = this.route.snapshot.data['package'];

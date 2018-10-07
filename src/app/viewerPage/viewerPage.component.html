@@ -1,18 +1,19 @@
 <mdi-banner [title]="title" [carbon]="true"></mdi-banner>
 <div class="viewer">
-    <div class="row">
-        <div class="col-md-8" style="margin-top: -24px;">
-            <div class="edit-on-github">
-                <a [href]="'https://github.com/Templarian/MaterialDesign-Site/issues/new?title=Suggested%20Change%20to%20%22' + title + '%22&body=%3C%21--%20Describe%20how%20you%20would%20improve%20the%20documentation%20here%20--%3E'">Suggest a Change</a>
-                <span>or</span>
-                <a [href]="'https://github.com/Templarian/MaterialDesign-Site/tree/master/src/' + file">Edit on GitHub</a>
-            </div>
-            <div #content class="content">
-                <markdown-component [content]="markdown" [replace]="replace" (render)="process()"></markdown-component>
-            </div>
-        </div>
-        <div class="col-md-4 hidden-sm-down">
-            <mdi-sidebar></mdi-sidebar>
-        </div>
+  <div class="row">
+    <div class="col-md-8" style="margin-top: -24px;">
+      <div class="edit-on-github">
+        <a [href]="'https://github.com/Templarian/MaterialDesign-Site/issues/new?title=Suggested%20Change%20to%20%22' + title + '%22&body=%3C%21--%20Describe%20how%20you%20would%20improve%20the%20documentation%20here%20--%3E'">Suggest
+          a Change</a>
+        <span>or</span>
+        <a [href]="'https://github.com/Templarian/MaterialDesign-Site/tree/master/src/' + file">Edit on GitHub</a>
+      </div>
+      <div #content class="content">
+        <markdown-component [content]="markdown" [replace]="replace" (render)="process()"></markdown-component>
+      </div>
     </div>
+    <div class="col-md-4 hidden-sm-down">
+      <mdi-sidebar></mdi-sidebar>
+    </div>
+  </div>
 </div>
