@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Package } from 'app/shared/models/package.model';
 import { Icon } from 'app/shared/models/icon.model';
 import { IconService } from 'app/shared/icon.service';
+import { query } from '@angular/core/src/animation/dsl';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -16,7 +17,7 @@ import { IconService } from 'app/shared/icon.service';
 })
 export class AdminIconsPageComponent {
 
-  constructor (
+  constructor(
     private loginService: LoginService,
     private iconService: IconService,
     private route: ActivatedRoute,
@@ -38,15 +39,15 @@ export class AdminIconsPageComponent {
   public selectedIcon: Icon = null;
   public editIcon: Icon = null;
 
-  async ngOnInit () {
+  async ngOnInit() {
     await this.loginService.isAuthed();
   }
 
-  goBack () {
+  goBack() {
     this.router.navigateByUrl('/admin/index')
   }
 
-  async logout () {
+  async logout() {
     await this.loginService.logout();
   }
 
@@ -55,14 +56,17 @@ export class AdminIconsPageComponent {
     // this.icons = await this.iconService.getAdminIcons(this.selectedPackage.id);
     // this.selectedIcon = this.icons[0];
   }
-  
-  public selectIcon () {
+
+  public selectIcon() {
     this.editIcon = new Icon().from(this.selectedIcon);
   }
 
-  addIcon () {
+  addIcon() {
     this.editIcon = null;
   }
 
+  async updateDescription() {
+    await this.iconService.updateDescription(this.editIcon);
+  }
 
 }

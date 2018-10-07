@@ -74,4 +74,14 @@ export class IconService {
     return new Icon().from(res);
   }
 
+  async updateDescription(icon: Icon): Promise<Icon> {
+    let res = await this.http.post<Icon>('/api/admin/icon/description', {
+      icon: {
+        id: icon.id,
+        description: icon.description
+      }
+    }).toPromise();
+    return new Icon().from(res);
+  }
+
 }
