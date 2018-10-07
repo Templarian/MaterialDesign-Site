@@ -1,69 +1,68 @@
 <mdi-banner title="Manage Tags" [carbon]="false"></mdi-banner>
 <div class="container-fluid">
-    <div class="row mb-3">
-        <div class="col-md-12">
-            <div class="card pl-3 pr-3 pt-3">
-                <p>As a contributor you can submit tags to be included instantly and approve community suggestion on the
-                    right.</p>
-            </div>
-        </div>
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <p>As a contributor you can submit tags to be included instantly and approve community suggestion on the
+          right.</p>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card p-3">
-                <h2>Tag Form</h2>
-                <div>
-                    <label>
-                        <span class="d-block">Package</span>
-                        <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
-                            <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
-                        </select>
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <span class="d-block">Tag</span>
-                        <select [(ngModel)]="selectedTag" (change)="selectTag()" class="custom-select">
-                            <option *ngFor="let t of tags" [ngValue]="t">{{t.name}}</option>
-                        </select>
-                    </label>
-                </div>
-                <div class="card card-inverse" style="display:block;">
-                    <p *ngIf="previewIcons.length == 0">No icons found.</p>
-                    <span *ngFor="let i of previewIcons"
-                        [ngbTooltip]="i.name"
-                        style="display:inline-block;border-radius:2px;"
-                        class="p-1 m-1">
-                        <svg viewBox="0 0 24 24" style="width:24px;height:24px;">
-                            <path [attr.d]="i.data"></path>
-                        </svg>
-                    </span>
-                </div>
-                <span class="d-block">Icon Name</span>
-                <div class="row">
-                    <div class="col-md-6">
-                        <label class="d-block">
-                            <mdi-icon-search [package]="selectedPackage"
-                                             [(icon)]="selectedIcon"
-                                             [exclude]="previewIcons"
-                                             (iconChange)="selectIcon()"></mdi-icon-search>
-                        </label>
-                    </div>
-                    <div *ngIf="selectedIcon != null" class="col-md-6">
-                        <button class="btn btn-primary btn-block" [disabled]="disabledTag" (click)="submitTag()">Add Tag</button>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card p-3">
-                <h2>Approve Tags</h2>
-                <p>Coming Soon...</p>
-            </div>
-            <div class="card p-3 mt-3">
-                <h2>Downloads</h2>
-                <a class="btn btn-primary" href="/api/csv/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B?headers=Icon%20Name,Icon%20Alias&columns=icon.name,icon.aliases">Download .csv</a>
-            </div>
-        </div>
+    <div class="col-md-4 text-right">
+      <button class="btn btn-primary mr-2" (click)="goBack()">Go Back</button>
+      <button class="btn btn-primary" (click)="logout()">Logout</button>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h2>Tag Form</h2>
+        <div>
+          <label>
+            <span class="d-block">Package</span>
+            <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+              <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>
+            <span class="d-block">Tag</span>
+            <select [(ngModel)]="selectedTag" (change)="selectTag()" class="custom-select">
+              <option *ngFor="let t of tags" [ngValue]="t">{{t.name}}</option>
+            </select>
+          </label>
+        </div>
+        <div class="card card-inverse" style="display:block;">
+          <p *ngIf="previewIcons.length == 0">No icons found.</p>
+          <span *ngFor="let i of previewIcons" [ngbTooltip]="i.name" style="display:inline-block;border-radius:2px;"
+            class="p-1 m-1">
+            <svg viewBox="0 0 24 24" style="width:24px;height:24px;">
+              <path [attr.d]="i.data"></path>
+            </svg>
+          </span>
+        </div>
+        <span class="d-block">Icon Name</span>
+        <div class="row">
+          <div class="col-md-6">
+            <label class="d-block">
+              <mdi-icon-search [package]="selectedPackage" [(icon)]="selectedIcon" [exclude]="previewIcons"
+                (iconChange)="selectIcon()"></mdi-icon-search>
+            </label>
+          </div>
+          <div *ngIf="selectedIcon != null" class="col-md-6">
+            <button class="btn btn-primary btn-block" [disabled]="disabledTag" (click)="submitTag()">Add Tag</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h2>Approve Tags</h2>
+        <p>Coming Soon...</p>
+      </div>
+      <div class="card p-3 mt-3">
+        <h2>Downloads</h2>
+        <a class="btn btn-primary" href="/api/csv/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B?headers=Icon%20Name,Icon%20Alias&columns=icon.name,icon.aliases">Download
+          .csv</a>
+      </div>
+    </div>
+  </div>
