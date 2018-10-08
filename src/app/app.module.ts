@@ -38,6 +38,7 @@ import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
 import { IssuesPageComponent } from 'app/issuesPage/issuesPage.component';
+import { AdminSheetPageComponent } from 'app/admin/sheetPage/sheetPage.component';
 import { HistoryPageComponent } from 'app/historyPage/historyPage.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MockInterceptor } from 'app/shared/interceptor/mock.interceptor';
@@ -409,6 +410,7 @@ const appRoutes: Routes = [
     HistoryPageComponent,
     IssuesPageComponent,
     GithubPageComponent,
+    AdminSheetPageComponent,
     AdminLoginPageComponent,
     AdminIconsPageComponent,
     AdminIndexPageComponent,

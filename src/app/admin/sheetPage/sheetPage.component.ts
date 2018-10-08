@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'mdi-sheet-page',
+  selector: 'mdi-admin-sheet-page',
   templateUrl: './sheetPage.component.html',
   styleUrls: ['./sheetPage.component.scss']
 })
-export class SheetPageComponent {
+export class AdminSheetPageComponent {
 
   constructor() {}
 
