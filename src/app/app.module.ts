@@ -304,7 +304,7 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'icons/light/:tagUrl',
+    path: 'icons/:tagUrl/light',
     component: IconsPageComponent,
     data: {
       package: PackageType.MaterialDesignIconsLight
