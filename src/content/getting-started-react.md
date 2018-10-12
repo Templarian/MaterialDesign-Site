@@ -53,7 +53,7 @@ Applying a `className` attribute is usually the easiest solution. The example be
 
 In most cases it may be a good idea to set a base size. Assuming a `16px` base `font-size` in most themes applying `1.5rem` will make the icon a `24px`.
 
-```sass
+```css
 svg {
   width: 1.5rem;
 }
@@ -61,7 +61,7 @@ svg {
 
 For more specific styling apply classes. To make selection of layers easier use the `nth-child` selector.
 
-```sass
+```css
 // For <Icon className="custom-class" />
 svg.custom-class {
   path {
