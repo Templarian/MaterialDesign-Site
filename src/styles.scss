@@ -1,4 +1,5 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
+@import 'assets/prism-vs-dark.scss';
 
 body {
     background: #414F56;
@@ -109,41 +110,54 @@ body {
         }
     }
 
-    pre {
+    pre:not([class]) {
+        background: #1E1E1E;
+        padding: 1em;
+        margin: .5em 0;
+        overflow: auto;
+        border-radius: 0.25rem;
+        color: #9CDCFE;
+    }
+
+    pre[class*="language-"] {
         position: relative;
-        code {
-            border-radius: 4px;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) inset;
+        border-radius: 0.25rem;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) inset;
+        
+        &.language-text code::before {
+            content: 'Text';
+        }
+        &.language-html code::before {
+            content: 'HTML';
+        }
+        &.language-javascript code::before {
+            content: 'JavaScript';
+        }
+        &.language-jsx code::before {
+            content: 'JavaScript / JSX';
+        }
+        &.language-xml code::before {
+            content: 'XML';
+        }
+        &.language-css code::before {
+            content: 'CSS';
+        }
+        &.language-scss code::before {
+            content: 'SCSS';
+        }
+        &.language-php code::before {
+            content: 'PHP';
+        }
 
-            &.language-html::before {
-                content: 'HTML';
-            }
-
-            &.language-js::before {
-                content: 'JavaScript';
-            }
-
-            &.language-xml::before {
-                content: 'XML';
-            }
-
-            &.language-css::before {
-                content: 'CSS';
-            }
-
-            &.language-text {
-                display: block;
-                overflow-x: auto;
-                padding: .5em;
-                background: #f0f0f0;
-            }
-
-            &.language-text::before {
-                content: 'Text';
-            }
-
-            &.language-text::before,
-            &.hljs::before {
+        &.language-text,
+        &.language-html,
+        &.language-javascript,
+        &.language-jsx,
+        &.language-xml,
+        &.language-css,
+        &.language-scss,
+        &.language-php {
+            code::before {
                 font-size: 12px;
                 border-radius: 0 4px 0 4px;
                 position: absolute;
@@ -153,8 +167,8 @@ body {
                 background: #FFF;
                 padding: 2px 4px 2px 6px;
                 pointer-events: none;
-                border-bottom: 1px solid #DDD;
-                border-left: 1px solid #DDD;
+                border-bottom: 1px solid #000;
+                border-left: 1px solid #000;
             }
         }
     }

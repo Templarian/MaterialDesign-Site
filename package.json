@@ -28,10 +28,11 @@
     "core-js": "^2.5.7",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4",
+    "prismjs": "git+https://github.com/PrismJS/prism.git",
     "remarkable": "^1.7.1",
     "rxjs": "^6.3.3",
-    "zone.js": "^0.8.26",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "rxjs-compat": "^6.0.0-rc.0",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",

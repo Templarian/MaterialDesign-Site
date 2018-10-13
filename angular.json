@@ -23,11 +23,9 @@
               "src/content"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/third-party/highlight/styles/default.css"
+              "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/third-party/highlight/highlight.pack.js",
               "node_modules/remarkable/dist/remarkable.js"
             ]
           },

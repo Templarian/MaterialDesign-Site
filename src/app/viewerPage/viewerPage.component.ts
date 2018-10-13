@@ -10,7 +10,6 @@ import { NgbTooltipWindow } from "@ng-bootstrap/ng-bootstrap/tooltip/tooltip";
 import { MarkdownReplace } from "app/shared/markdown/markdown.component";
 
 declare var Remarkable: any;
-declare var hljs: any;
 
 @Component({
   selector: 'mdi-viewer',
@@ -39,7 +38,8 @@ export class ViewerPageComponent {
   constructor(public router: Router,
     public route: ActivatedRoute,
     private viewerService: ViewerService,
-    private iconService: IconService) {
+    private iconService: IconService
+  ) {
     this.url = route.snapshot.url.join('/');
     this.sidebar = new Sidebar(this.url, [
       new SidebarItem("home", "Loading...", "", "", "", [])
@@ -164,7 +164,7 @@ export class ViewerPageComponent {
           const tab = `<div class="card mb-3">
             <div class="card-header">
               <ul class="nav nav-tabs card-header-tabs">`;
-          const title = m1 === '' ? '' :  `<li class="nav-item-title">${m1}</li>`;
+          const title = m1 === '' ? '' : `<li class="nav-item-title">${m1}</li>`;
           return `${tab}${title}`;
         });
         markdown = markdown.replace(/tab:[^ ]+ .+(\r?\ntab:[^ ]+ .+)+/g, (m) => {
@@ -186,7 +186,7 @@ export class ViewerPageComponent {
         });
         this.markdown = markdown;
       },
-      e => this.errorMessage = e);
+        e => this.errorMessage = e);
     // Load stylesheets
     if (data.stylesheets) {
       data.stylesheets.map(s => this.addCss(s));
@@ -218,9 +218,9 @@ export class ViewerPageComponent {
   }
 
   addCss(fileName) {
-    for(var i = 0; i < document.styleSheets.length; i++){
-      if(document.styleSheets[i].href == fileName){
-          return;
+    for (var i = 0; i < document.styleSheets.length; i++) {
+      if (document.styleSheets[i].href == fileName) {
+        return;
       }
     }
     var head = document.head,
