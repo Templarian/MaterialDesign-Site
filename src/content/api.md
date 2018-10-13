@@ -69,6 +69,8 @@ GET api/package/{packageId}/version
 ]
 ```
 
+import:/content/api-get-icon.md
+
 #### Get Icon from Package by Name
 
 Icon names are unique across a package.
