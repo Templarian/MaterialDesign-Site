@@ -46,3 +46,37 @@ class App extends Component {
 <blockquote class="alert alert-info">
   icon:information-outline Learn more about other features including the `Stack` component in the <a href="https://github.com/Templarian/MaterialDesign-React">Repo</a>.
 </blockquote>
+
+## Styling
+
+Applying a `className` attribute is usually the easiest solution. The example below demonstrates using SCSS to style the icons.
+
+In most cases it may be a good idea to set a base size. Assuming a `16px` base `font-size` in most themes applying `1.5rem` will make the icon a `24px`.
+
+```css
+svg {
+  width: 1.5rem;
+}
+```
+
+For more specific styling apply classes. To make selection of layers easier use the `nth-child` selector.
+
+```css
+// For <Icon className="custom-class" />
+svg.custom-class {
+  path {
+    fill: blue;
+  }
+}
+// For <Stack className="custom-class">
+svg.custom-class {
+  // First layer (behind)
+  path:nth-child(1) {
+    fill: blue;
+  }
+  // Second layer (infront)
+  path:nth-child(2) {
+    fill: red;
+  }
+}
+```
