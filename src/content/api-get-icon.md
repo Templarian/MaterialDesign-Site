@@ -7,57 +7,5 @@ GET api/icon/:iconId
 ```
 
 ```yaml
-type: object
-properties:
-  id:
-    type: string
-    format: uuid
-  packageId:
-    type: string
-    format: uuid
-  name:
-    format: string
-  description: string
-  data:
-    format: string
-  user:
-    id:
-      type: string
-      format: uuid
-    name:
-      type: string
-    twitter:
-      type: string
-  - aliases:
-    id:
-      type: string
-      format: uuid
-    name:
-      type: string
-  - tags:
-    id:
-      type: string
-      format: uuid
-    name:
-      type: string
-    url:
-      type: string
-  - fonts:
-    codepoint:
-      type: string
-    version:
-      major:
-        type: integer
-      minor:
-        type: integer
-      patch:
-        type: integer
-    font:
-      id:
-        type: string
-        format: uuid
-      name:
-        type: string
-      description:
-        type: string
+$ref: '#/api/icon'
 ```

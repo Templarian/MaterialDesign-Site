@@ -9,9 +9,10 @@ properties:
     format: uuid
     example: 38EF63D0-4744-11E4-B3CF-842B2B6CFE1B
   name:
-    format: string
-    example: "account"
-  description: string
+    type: string
+    example: account
+  description:
+    type: string
     example: Used to represent an account or user.
   data:
     format: string
@@ -24,35 +25,15 @@ properties:
       type: string
     twitter:
       type: string
-  - aliases:
-    id:
-      type: string
-      format: uuid
-    name:
-      type: string
-  - tags:
-    id:
-      type: string
-      format: uuid
-    name:
-      type: string
-    url:
-      type: string
-  - fonts:
-    codepoint:
-      type: string
-    version:
-      major:
-        type: integer
-      minor:
-        type: integer
-      patch:
-        type: integer
-    font:
-      id:
-        type: string
-        format: uuid
-      name:
-        type: string
-      description:
-        type: string
+  aliases:
+    type: array
+    items:
+      $ref: '#/api/alias'
+  tags:
+    type: array
+    items:
+      $ref: '#/api/tag'
+  fonts:
+    type: array
+    items:
+      $ref: '#/api/font'

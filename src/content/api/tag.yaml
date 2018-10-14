@@ -1,0 +1,13 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  name:
+    type: string
+  url:
+    type: string
+    pattern: /$[a-z0-9-]+^/
+    description: Url friendly string
+  count:
+    type: integer

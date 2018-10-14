@@ -141,9 +141,33 @@ export class ViewerPageComponent {
       imports.push(m1);
       return m;
     });
+    markdown.replace(/\$ref: '#(.*)'/g, (m, m1) => {
+      imports.push(m1);
+      return m;
+    });
     let c: string[] = await Promise.all(imports.map(async (url, i) => await this.viewerService.getFile(url)));
     imports.forEach((url, i) => {
-      markdown = markdown.replace('import:' + url, c[i]);
+      markdown = markdown.replace(`import:${url}`, c[i]);
+    });
+    return markdown;
+  }
+
+  async processRefs(markdown) {
+    let imports: any[] = [];
+    markdown.replace(/([ ]*)\$ref: '#([^']*)'/g, (m, spaces, file) => {
+      console.log('spaces', "'" + spaces + "'", file);
+      imports.push({ spaces, file });
+      return m;
+    });
+    let c: string[] = await Promise.all(
+      imports.map(async (obj) => await this.viewerService.getFile(`/content/${obj.file}.yaml`))
+    );
+    imports.forEach((obj, i) => {
+      const lines = c[i].split(/\r?\n/);
+      const content = lines.map((line, i) => {
+        return `${i === 0 ? '' : obj.spaces}${line}`
+      }).join("\n");
+      markdown = markdown.replace(`$ref: '#${obj.file}`, content);
     });
     return markdown;
   }
@@ -186,8 +210,10 @@ export class ViewerPageComponent {
       .subscribe(async markdown => {
         // Import
         markdown = await this.processImports(markdown);
+        markdown = await this.processRefs(markdown);
         // Nested Imports
         markdown = await this.processImports(markdown);
+        markdown = await this.processRefs(markdown);
         // YAML Swagger Docs
         markdown = markdown.replace(/```yaml\r?\n([\s\S]*?)\r?\n```/g, this.processYaml);
         // Tabs

@@ -23,40 +23,7 @@ GET api/package/:packageId
 ```
 
 ```yaml
-type: object
-properties:
-  id:
-    type: string
-    format: uuid
-    example: 38EF63D0-4744-11E4-B3CF-842B2B6CFE1B
-  name:
-    type: string
-    example: Material Design Icons
-  width:
-    type: integer
-    example: 24
-  height:
-    type: integer
-    example: 24
-  version:
-    type: object
-    properties:
-      major:
-        type: integer
-        example: 3
-      minor:
-        type: integer
-        example: 0
-      patch:
-        type: integer
-        example: 15
-  icons:
-    type: array
-    items:
-      type: object
-      properties:
-        id:
-          type: string
+$ref: '#/api/icon'
 ```
 
 There are also various ways to filter the icon results by appending various parameters.
