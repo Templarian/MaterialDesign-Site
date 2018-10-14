@@ -269,8 +269,12 @@ body {
         ul {
             list-style: none;
             padding-left: 0;
+            margin-bottom: 0;
+
             li {
                 button {
+                    position: relative;
+                    top: 1px;
                     background: #FFF;
                     color: #444;
                     border: none;
@@ -282,6 +286,14 @@ body {
                     font-weight: bold;
                     margin-left: -1rem;
                     margin-right: 0.75rem;
+                    cursor: pointer;
+                    &:focus {
+                        outline: none;
+                    }
+                    &:hover {
+                        color: #000;
+                        background: #F1F1F1;
+                    }
                 }
                 ul {
                     padding-left: 1rem;

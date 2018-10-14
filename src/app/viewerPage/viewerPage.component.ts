@@ -11,6 +11,7 @@ import { NgbTooltipWindow } from "@ng-bootstrap/ng-bootstrap/tooltip/tooltip";
 import { MarkdownReplace } from "app/shared/markdown/markdown.component";
 
 declare var Remarkable: any;
+declare let window: any;
 
 @Component({
   selector: 'mdi-viewer',
@@ -69,6 +70,19 @@ export class ViewerPageComponent {
         }
       }
     });
+
+    window.yamlToggle = (e) => {
+      const button = e.target;
+      const parent = button.parentNode;
+      const ul = parent.querySelector('ul');
+      if (ul.className === 'd-none') {
+        ul.className = '';
+        button.innerText = '-';
+      } else {
+        ul.className = 'd-none';
+        button.innerText = '+';
+      }
+    }
   }
 
   icons: string[] = [];
@@ -205,7 +219,7 @@ export class ViewerPageComponent {
       switch (partial.type) {
         case 'object':
           const oName = part === '' ? '' : `<code class="yaml-key">${part}</code>: `;
-          html.push(`<li><button>+</button><code>${oName}{</code><ul>`);
+          html.push(`<li><button onClick="yamlToggle(event)">+</button><code>${oName}{</code><ul class="d-none">`);
           for (let part of Object.keys(partial.properties)) {
             this.processYamlRecursive(html, partial.properties[part], part);
           }
@@ -213,7 +227,7 @@ export class ViewerPageComponent {
         break;
         case 'array':
           const aName = part === '' ? '' : `<code class="yaml-key">${part}</code>: `;
-          html.push(`<li><button>+</button><code>${aName}[</code><ul>`);
+          html.push(`<li><button onClick="yamlToggle(event)">+</button><code>${aName}[</code><ul class="d-none">`);
           this.processYamlRecursive(html, partial.items);
           html.push('</ul><code class="yaml-end">]</code></li>');
         break;
