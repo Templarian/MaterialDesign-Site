@@ -254,9 +254,10 @@ body {
     }
 
     .yaml-preview {
+        position: relative;
         background: #1E1E1E;
         color: #FFF;
-        padding: 1rem;
+        padding: 1rem 1.5rem;
         border-radius: 0.25rem;
         code {
             border: none;
@@ -284,10 +285,14 @@ body {
                 }
                 ul {
                     padding-left: 1rem;
+                    & > li {
+                        border-left: 1px solid rgba(255, 255, 255, 0.05);
+                        padding-left: 0.5rem;
+                    }
                 }
             }
             & > li {
-                border-left: 1px solid rgba(255, 255, 255, 0.05);
+                border-left: 1px solid transparent;
                 padding-left: 0.5rem;
             }
         }
@@ -310,6 +315,21 @@ body {
 
         .yaml-key {
             color: #C586C0;
+        }
+
+        &::before {
+            content: 'YAML Preview';
+            font-size: 12px;
+            border-radius: 0 4px 0 4px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #999;
+            background: #FFF;
+            padding: 2px 4px 2px 6px;
+            pointer-events: none;
+            border-bottom: 1px solid #000;
+            border-left: 1px solid #000;
         }
     }
 }
