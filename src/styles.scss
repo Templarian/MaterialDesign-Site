@@ -314,3 +314,31 @@ body {
     }
   }
 }
+
+.carbon-container {
+    width: 308px;
+    height: 108px;
+    border: 4px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    /deep/ {
+        .carbon-wrap {
+            display: flex;
+            .carbon-text {
+                line-height: 1.20rem;
+                font-size: 0.80rem;
+                padding: 0.25rem;
+                color: #444;
+                &:hover {
+                    color: #333;
+                }
+            }
+        }
+        .carbon-poweredby {
+            float: right;
+            font-size: 0.75rem;
+            margin-top: -1.1rem;
+            color: #333;
+            margin-right: 0.1rem;
+        }
+    }
+}
