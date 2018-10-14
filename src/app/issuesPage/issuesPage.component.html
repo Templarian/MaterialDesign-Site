@@ -24,6 +24,11 @@
                             [ngClass]="{'active': filter == 'Home Assistant'}"
                             (click)="load('Home Assistant')">Home Automation</button>
                     </li>
+                    <li class="nav-item">
+                        <button class="nav-link"
+                            [ngClass]="{'active': filter == 'Future Variant'}"
+                            (click)="load('Future Variant')">Future Variants</button>
+                    </li>
                 </ul>
                 <table class="table text-center">
                     <thead>

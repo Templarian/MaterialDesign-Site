@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot, Event, NavigationEnd } from '@angular/router';
+import * as YAML from 'js-yaml';
 import { ViewerService } from './viewerPage.service';
 import { IconService } from './../shared/icon.service';
 
@@ -147,6 +148,34 @@ export class ViewerPageComponent {
     return markdown;
   }
 
+  processYaml(m, content) {
+    let error = ''
+    try {
+      const json = YAML.load(content);
+      if (json.type) {
+        console.log(json);
+        const html = [];
+        html.push('<div class="preview">');
+        html.push('<button>JSON</button> <button>YAML</button>');
+        html.push('<div><button>+</button> {<br/></div>');
+        html.push('<div><button>+</button> [<br/></div>');
+        html.push('</div>');
+        html.push("\r\n\r\n");
+        html.push(m);
+        return html.join('');
+      }
+    } catch (e) {
+      error = [
+        '<div class="alert alert-danger">',
+        '<strong>YAML Error:</strong><br/>',
+        e.message,
+        '</div>',
+        ''
+      ].join("") + "\r\n\r\n";
+    }
+    return `${error}${m}`;
+  }
+
   async loadContent(data) {
     var self = this;
     let regex = new RegExp('<h1>(.*)</h1>');
@@ -159,6 +188,8 @@ export class ViewerPageComponent {
         markdown = await this.processImports(markdown);
         // Nested Imports
         markdown = await this.processImports(markdown);
+        // YAML Swagger Docs
+        markdown = markdown.replace(/```yaml\r?\n([\s\S]*?)\r?\n```/g, this.processYaml);
         // Tabs
         markdown = markdown.replace(/tabs:(.*)/g, (m, m1) => {
           const tab = `<div class="card mb-3">

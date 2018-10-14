@@ -1,25 +1,21 @@
-### Get Icon by Id
-
-Please do not use this in any sort of looping. As this endpoing will always retrieve the latest from the database there is no cache.
-
-```text
-GET api/icon/:iconId
-```
-
-```yaml
 type: object
 properties:
   id:
     type: string
     format: uuid
+    example: E76EC23F-AB71-49B3-9173-841544527A20
   packageId:
     type: string
     format: uuid
+    example: 38EF63D0-4744-11E4-B3CF-842B2B6CFE1B
   name:
     format: string
+    example: "account"
   description: string
+    example: Used to represent an account or user.
   data:
     format: string
+    example: M...Z
   user:
     id:
       type: string
@@ -60,4 +56,3 @@ properties:
         type: string
       description:
         type: string
-```

@@ -14,37 +14,49 @@ Public endpoints are visible to everyone using the website.
 - Cached results (up to 5 minutes)
 - Objects may not contain all properties (ex: user objects)
 
-### Get List of Packages
-
-```text
-GET api/packages
-```
-
-```text
-[
-    // Reference api/package/{packageId}
-]
-```
+import:/content/api-get-package.md
 
 ### Get Icon List in Package
 
 ```text
-GET api/package/{packageId}
+GET api/package/:packageId
 ```
 
-```json
-{
-    "id": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
-    "name": "Material Design Icons",
-    "width": 24,
-    "height": 24,
-    "versions": [
-        { "id": "", "minor": 1, "major": 7, "patch": 12, "count": 42 }
-    ],
-    "icons": [
-        
-    ]
-}
+```yaml
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    example: 38EF63D0-4744-11E4-B3CF-842B2B6CFE1B
+  name:
+    type: string
+    example: Material Design Icons
+  width:
+    type: integer
+    example: 24
+  height:
+    type: integer
+    example: 24
+  version:
+    type: object
+    properties:
+      major:
+        type: integer
+        example: 3
+      minor:
+        type: integer
+        example: 0
+      patch:
+        type: integer
+        example: 15
+  icons:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
 ```
 
 There are also various ways to filter the icon results by appending various parameters.
@@ -60,13 +72,25 @@ There are also various ways to filter the icon results by appending various para
 #### Get Package Version List
 
 ```text
-GET api/package/{packageId}/version
+GET api/package/:packageId/version
 ```
 
-```json
-[
-    { "id": "", "minor": 1, "major": 7, "patch": 22, "count": 42 }
-]
+```yaml
+type: array
+items:
+  type: object
+  properties:
+    id:
+      type: string
+      format: uuid
+    major:
+      type: integer
+    minor:
+      type: integer
+    patch:
+      type: integer
+    count:
+      type: integer
 ```
 
 import:/content/api-get-icon.md
@@ -75,8 +99,8 @@ import:/content/api-get-icon.md
 
 Icon names are unique across a package.
 
-```text
-GET api/package/{packageId}/{iconName}
+```
+GET api/package/:packageId/:iconName
 ```
 
 ```json

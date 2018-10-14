@@ -123,6 +123,7 @@ body {
         position: relative;
         border-radius: 0.25rem;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1) inset;
+        margin-bottom: 1rem;
         
         &.language-text code::before {
             content: 'Text';
@@ -151,6 +152,9 @@ body {
         &.language-php code::before {
             content: 'PHP';
         }
+        &.language-yaml code::before {
+            content: 'YAML';
+        }
 
         &.language-text,
         &.language-html,
@@ -160,7 +164,8 @@ body {
         &.language-xml,
         &.language-css,
         &.language-scss,
-        &.language-php {
+        &.language-php,
+        &.language-yaml {
             code::before {
                 font-size: 12px;
                 border-radius: 0 4px 0 4px;
