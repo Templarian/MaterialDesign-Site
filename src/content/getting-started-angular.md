@@ -2,11 +2,11 @@
 
 > This getting started guide is still very much a work in progress.
 
-## Option 1 Custom Component
+## Custom Component
 
 We're still in the process of writing a first party library. Until then a component could be as simple as below.
 
-```js
+```typescript
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -22,7 +22,7 @@ export class IconComponent  {
 }
 ```
 
-```js
+```typescript
 import { Component } from '@angular/core';
 import { mdiAccount } from '@mdi/js';
 
@@ -39,7 +39,13 @@ export class AppComponent  {
 }
 ```
 
-## Option 2
+## Angular Material
+
+```
+npm install @mdi/angular-material
+```
+
+Or...
 
 [Angular 2+ Download for Angular Material 'mdi.svg'](https://materialdesignicons.com/api/download/angularmaterial/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B)
 
@@ -81,7 +87,7 @@ export class AppModule {
 
 If you're using Angular CLI, make sure to include `assets` folder under `.angular-cli.json` in `assets` array (Although by default, the angular CLI will autofill it in):
 
-```json Angular CLI file
+```json
 {
    "apps": [
      {
@@ -94,7 +100,7 @@ If you're using Angular CLI, make sure to include `assets` folder under `.angula
 ```
 Usage:
 
-```html Example Usage
+```html
 <!-- Icon by itself -->
 <mat-icon svgIcon="android"></mat-icon>
 <!-- Icon button -->
@@ -110,7 +116,7 @@ Usage:
 
 Please also add the following class to your styles (`styles.css`) to solve the problem where an icon isn't aligned properly when used in a menu item:
 
-```css styles.css
+```css
 button.mat-menu-item {
   line-height: 24px !important;
 }

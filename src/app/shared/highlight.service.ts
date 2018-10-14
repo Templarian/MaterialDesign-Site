@@ -6,6 +6,7 @@ import { isPlatformBrowser } from '@angular/common';
 import 'clipboard';
 
 import 'prismjs';
+import 'prismjs/components/prism-markup-templating';
 import 'prismjs/components/prism-css';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-jsx';
@@ -15,6 +16,7 @@ import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-sass';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-php';
 
 declare var Prism: any;
 
