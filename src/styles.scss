@@ -130,6 +130,9 @@ body {
         &.language-html code::before {
             content: 'HTML';
         }
+        &.language-typescript code::before {
+            content: 'TypeScript';
+        }
         &.language-javascript code::before {
             content: 'JavaScript';
         }
@@ -151,6 +154,7 @@ body {
 
         &.language-text,
         &.language-html,
+        &.language-typescript,
         &.language-javascript,
         &.language-jsx,
         &.language-xml,
