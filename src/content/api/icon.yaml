@@ -15,6 +15,7 @@ properties:
     type: string
     example: Used to represent an account or user.
   data:
+    type: string
     format: string
     example: M...Z
   user:

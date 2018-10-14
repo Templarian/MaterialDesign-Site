@@ -141,10 +141,6 @@ export class ViewerPageComponent {
       imports.push(m1);
       return m;
     });
-    markdown.replace(/\$ref: '#(.*)'/g, (m, m1) => {
-      imports.push(m1);
-      return m;
-    });
     let c: string[] = await Promise.all(imports.map(async (url, i) => await this.viewerService.getFile(url)));
     imports.forEach((url, i) => {
       markdown = markdown.replace(`import:${url}`, c[i]);
@@ -154,8 +150,7 @@ export class ViewerPageComponent {
 
   async processRefs(markdown) {
     let imports: any[] = [];
-    markdown.replace(/([ ]*)\$ref: '#([^']*)'/g, (m, spaces, file) => {
-      console.log('spaces', "'" + spaces + "'", file);
+    markdown.replace(/([ ]*)\$ref: '#([^']+)'/g, (m, spaces, file) => {
       imports.push({ spaces, file });
       return m;
     });
@@ -167,7 +162,7 @@ export class ViewerPageComponent {
       const content = lines.map((line, i) => {
         return `${i === 0 ? '' : obj.spaces}${line}`
       }).join("\n");
-      markdown = markdown.replace(`$ref: '#${obj.file}`, content);
+      markdown = markdown.replace(`$ref: '#${obj.file}'`, content);
     });
     return markdown;
   }
@@ -177,12 +172,17 @@ export class ViewerPageComponent {
     try {
       const json = YAML.load(content);
       if (json.type) {
-        console.log(json);
+        // console.log(json);
         const html = [];
-        html.push('<div class="preview">');
-        html.push('<button>JSON</button> <button>YAML</button>');
-        html.push('<div><button>+</button> {<br/></div>');
-        html.push('<div><button>+</button> [<br/></div>');
+        html.push('<div class="yaml">');
+        html.push('<div class="yaml-toolbar">');
+        html.push('<button class="btn-yaml-json">JSON</button> <button class="btn-yaml-yaml">YAML</button>');
+        html.push('</div>');
+        html.push('<div class="yaml-preview">');
+        html.push('<ul>');
+        this.processYamlRecursive(html, json);
+        html.push('</ul>');
+        html.push('</div>');
         html.push('</div>');
         html.push("\r\n\r\n");
         html.push(m);
@@ -200,6 +200,35 @@ export class ViewerPageComponent {
     return `${error}${m}`;
   }
 
+  processYamlRecursive(html, partial, part = '') {
+    if (partial.type) {
+      switch (partial.type) {
+        case 'object':
+          const oName = part === '' ? '' : `<code class="yaml-key">${part}</code>: `;
+          html.push(`<li><button>+</button><code>${oName}{</code><ul>`);
+          for (let part of Object.keys(partial.properties)) {
+            this.processYamlRecursive(html, partial.properties[part], part);
+          }
+          html.push('</ul><code class="yaml-end">}</code></li>');
+        break;
+        case 'array':
+          const aName = part === '' ? '' : `<code class="yaml-key">${part}</code>: `;
+          html.push(`<li><button>+</button><code>${aName}[</code><ul>`);
+          this.processYamlRecursive(html, partial.items);
+          html.push('</ul><code class="yaml-end">]</code></li>');
+        break;
+        case 'string':
+        case 'integer':
+          html.push(`<li><code class="yaml-prop"><code class="yaml-key">${part}</code>: <code class="yaml-type">${partial.type}</code></code></li>`);
+          break;
+        default:
+          html.push(`<li><code class="yaml-prop"><code class="yaml-key">${part}</code>: <code class="yaml-error">Error: Invalid type &quot;${partial.type}&quot;.</code></code></li>`);
+      }
+    } else {
+      html.push(`<li><code class="yaml-prop"><code class="yaml-key">${part}</code>: <code class="yaml-error">Error: No type found.</code></code></li>`);
+    }
+  }
+
   async loadContent(data) {
     var self = this;
     let regex = new RegExp('<h1>(.*)</h1>');
@@ -215,7 +244,10 @@ export class ViewerPageComponent {
         markdown = await this.processImports(markdown);
         markdown = await this.processRefs(markdown);
         // YAML Swagger Docs
-        markdown = markdown.replace(/```yaml\r?\n([\s\S]*?)\r?\n```/g, this.processYaml);
+        markdown = markdown.replace(
+          /```yaml\r?\n([\s\S]*?)\r?\n```/g,
+          (m, content) => this.processYaml(m, content)
+        );
         // Tabs
         markdown = markdown.replace(/tabs:(.*)/g, (m, m1) => {
           const tab = `<div class="card mb-3">

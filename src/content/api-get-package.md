@@ -12,22 +12,14 @@ items:
     id:
       type: string
       format: uuid
-    name":
+    name:
       type: integer
-    width":
+    width:
       type: integer
-    height":
+    height:
       type: integer
     version:
-      type: object
-      properties:
-        major:
-          type: integer
-        minor:
-          type: integer
-        patch:
-          type: integer
-- icons:
-  id:
-    type: string
+      $ref: '#/api/version'
+    icons:
+      $ref: '#/api/icon'
 ```

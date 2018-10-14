@@ -252,6 +252,66 @@ body {
         line-height: 40px;
         font-size: 20px;
     }
+
+    .yaml-preview {
+        background: #1E1E1E;
+        color: #FFF;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        code {
+            border: none;
+            color: #FFF;
+            font-size: 1rem;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            li {
+                button {
+                    background: #FFF;
+                    color: #444;
+                    border: none;
+                    border-radius: 2px;
+                    padding: 0;
+                    width: 1rem;
+                    line-height: 1rem;
+                    line-height: 1rem;
+                    font-weight: bold;
+                    margin-left: -1rem;
+                    margin-right: 0.75rem;
+                }
+                ul {
+                    padding-left: 1rem;
+                }
+            }
+            & > li {
+                border-left: 1px solid rgba(255, 255, 255, 0.05);
+                padding-left: 0.5rem;
+            }
+        }
+
+        .yaml-end {
+            padding-left: 0.75rem;
+        }
+
+        .yaml-prop {
+            padding-left: 0.75rem;
+        }
+
+        .yaml-type {
+            color: #9CDCFE;
+        }
+
+        .yaml-error {
+            color: #E91E63;
+        }
+
+        .yaml-key {
+            color: #C586C0;
+        }
+    }
 }
 
 .card.resource-blue {
