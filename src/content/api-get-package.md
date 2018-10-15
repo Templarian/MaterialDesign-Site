@@ -25,5 +25,7 @@ items:
     version:
       $ref: '#/api/version'
     icons:
-      $ref: '#/api/icon'
+      type: array
+      items:
+        $ref: '#/api/icon'
 ```

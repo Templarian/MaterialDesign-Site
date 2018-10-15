@@ -398,6 +398,10 @@ const appRoutes: Routes = [
     path: 'admin/rename',
     component: AdminRenamePageComponent
   },
+  {
+    path: 'admin/sheet',
+    component: AdminSheetPageComponent
+  },
   { path: '**', component: NotFoundPageComponent }
 ];
 
