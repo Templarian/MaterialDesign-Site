@@ -1,6 +1,6 @@
 ### Get Icon by Id
 
-Please do not use this in any sort of looping. As this endpoing will always retrieve the latest from the database there is no cache.
+Retrieve a single icon and all public properties at once. Note looping this is very slow as it uses no cache layer to ensure the latest data.
 
 ```text
 GET api/icon/:iconId

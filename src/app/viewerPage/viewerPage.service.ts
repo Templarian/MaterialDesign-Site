@@ -13,7 +13,10 @@ export class ViewerService {
   async getFile(url: string): Promise<string> {
     return this.http.get(url, {
       responseType: 'text'
-    }).toPromise().then((x) => x, () => `<p class="alert alert-danger">Import of "${url}" failed.</p>`);
+    }).toPromise().then(
+      (res) => this.extractData(res),
+      () => `<p class="alert alert-danger">Import of "${url}" failed.</p>`
+    );
   }
 
   getMarkdownFileHtml(markdownFile: string): Observable<string> {
@@ -23,7 +26,8 @@ export class ViewerService {
   }
 
   private extractData(text: string) {
-    text = text.replace('{{version}}', '2.7.94');
+    // TODO: Replace with config
+    text = text.replace('{{version}}', '2.8.94');
     return text;
   }
 
