@@ -6,6 +6,19 @@ properties:
   name:
     type: string
     example: Austin Andrews
+  description:
+    type: string
+    example: Usually a short bio
+  github:
+    type: string
+    example: Templarian
   twitter:
-      type: string
-      example: templarian
+    type: string
+    example: templarian
+  base64:
+    type: string
+    description: Base64 Encoded 100x100 Avatar
+  iconCount:
+    type: integer
+    example: 42
+    description: Populated only if packageId is passed

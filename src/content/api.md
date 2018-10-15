@@ -24,6 +24,12 @@ import:/content/api-get-icon.md
 
 import:/content/api-get-icon-by-name.md
 
+import:/content/api-get-tags.md
+
+import:/content/api-get-users.md
+
+import:/content/api-get-user.md
+
 ### Download Icon
 
 There is a universal endpoint for downloading icons or collections of icons allowing for various types `png` (default), `svg`, or `vector-drawable`.
@@ -70,23 +76,6 @@ Response: `*.png`, `*.jpg`, `*.svg`, `*.xaml`, `*.xml` or `*.zip`
 
 > Note: If an array is sent the results will be returned in a `zip`. `path` is ignored for object responses.
 
-### Get Contributors
-
-```text
-GET api/user
-```
-
-Response: [User](/contribute/site/api/data#user)[]
-
-### Get Contributor
-
-```text
-GET api/user/{userId}
-```
-
-Response: [User](/contribute/site/api/data#user)
-
-import:/content/api-get-tags.md
 
 ## Private Endpoints
 
