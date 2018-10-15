@@ -3,9 +3,7 @@
     <div class="col">
       <label>
         <span class="d-block">Select a Package</span>
-        <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
-          <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
-        </select>
+        
       </label>
       <h1>Poster Preview</h1>
       <div class="card">
