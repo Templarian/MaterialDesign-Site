@@ -5,9 +5,12 @@ properties:
     format: uuid
   name:
     type: string
+    example: Account / User
   url:
     type: string
     pattern: /$[a-z0-9-]+^/
     description: Url friendly string
+    example: user
   count:
     type: integer
+    example: 42

@@ -86,29 +86,7 @@ GET api/user/{userId}
 
 Response: [User](/contribute/site/api/data#user)
 
-### Get Tags
-
-A list of tags used to group icons in the system. If count is 0 the item will not be returned.
-
-```text
-GET api/tag
-```
-
-```json
-[
-    {
-        "id": "{uuid}",
-        "text": "Medical",
-        "count": 42
-    }
-]
-```
-
-### Get Related Icons
-
-```text
-GET api/icon/{iconId}/related
-```
+import:/content/api-get-tags.md
 
 ## Private Endpoints
 

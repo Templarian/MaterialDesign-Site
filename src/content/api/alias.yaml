@@ -6,3 +6,4 @@ properties:
   name:
     type: string
     pattern: /$[a-z0-9-]+^/
+    example: user

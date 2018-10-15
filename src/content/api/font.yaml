@@ -1,19 +1,11 @@
 type: object
 properties:
-  codepoint:
+  id:
     type: string
-  version:
-    major:
-      type: integer
-    minor:
-      type: integer
-    patch:
-      type: integer
-  font:
-    id:
-      type: string
-      format: uuid
-    name:
-      type: string
-    description:
-      type: string
+    format: uuid
+  name:
+    type: string
+    example: Material Design Icons
+  description:
+    type: string
+    example: Material Design Icons is...

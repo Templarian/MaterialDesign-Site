@@ -19,13 +19,7 @@ properties:
     format: string
     example: M...Z
   user:
-    id:
-      type: string
-      format: uuid
-    name:
-      type: string
-    twitter:
-      type: string
+    $ref: '#/api/user'
   aliases:
     type: array
     items:

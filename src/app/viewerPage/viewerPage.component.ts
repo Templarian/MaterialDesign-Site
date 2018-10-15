@@ -184,9 +184,12 @@ export class ViewerPageComponent {
 
   async processRefs(markdown) {
     let imports: any[] = [];
-    markdown.replace(/([ ]*)\$ref: '#([^']+)'/g, (m, spaces, file) => {
-      imports.push({ spaces, file });
-      return m;
+    let unique = 0;
+    markdown = markdown.replace(/([ ]*)\$ref: '#([^']+)'/g, (m, spaces, file) => {
+      unique++;
+      imports.push({ unique, spaces, file });
+      console.log(`${m}-${unique}`);
+      return `${m}-${unique}`;
     });
     let c: string[] = await Promise.all(
       imports.map(async (obj) => await this.viewerService.getFile(`/content/${obj.file}.yaml`))
@@ -196,7 +199,7 @@ export class ViewerPageComponent {
       const content = lines.map((line, i) => {
         return `${i === 0 ? '' : obj.spaces}${line}`
       }).join("\n");
-      markdown = markdown.replace(`$ref: '#${obj.file}'`, content);
+      markdown = markdown.replace(`$ref: '#${obj.file}'-${obj.unique}`, content);
     });
     return markdown;
   }
@@ -236,7 +239,12 @@ export class ViewerPageComponent {
   }
 
   processYamlRecursive(html, partial, part = '') {
-    if (partial.type) {
+    if (partial.$ref) {
+      html.push(`<li><code class="yaml-prop">`);
+      html.push(`<code class="yaml-key">${part}</code>: <code class="yaml-error">$ref: '${partial.$ref}'</code> `);
+      html.push(`<code class="yaml-example">Too many nested levels</code>`);
+      html.push(`</code></li>`);
+    } else if (partial.type) {
       switch (partial.type) {
         case 'object':
           const oName = part === '' ? '' : `<code class="yaml-key">${part}</code>: `;
@@ -277,11 +285,12 @@ export class ViewerPageComponent {
     // Render Markdown
     this.viewerService.getMarkdownFileHtml(data.file)
       .subscribe(async markdown => {
-        // Import
+        // Import - 2 deep
         markdown = await this.processImports(markdown);
+        markdown = await this.processImports(markdown);
+        // Process Refs - 3 deep
         markdown = await this.processRefs(markdown);
-        // Nested Imports
-        markdown = await this.processImports(markdown);
+        markdown = await this.processRefs(markdown);
         markdown = await this.processRefs(markdown);
         // YAML Swagger Docs
         markdown = markdown.replace(
