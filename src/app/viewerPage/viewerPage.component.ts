@@ -83,6 +83,26 @@ export class ViewerPageComponent {
         button.innerText = '+';
       }
     }
+
+    window.yamlTab = (e, tab) => {
+      const button = e.target;
+      const parent = button.parentNode;
+      const buttons = parent.querySelectorAll('button');
+      buttons.forEach(b => b.className = '');
+      button.className = 'active';
+      const jsonTab = button.parentNode.nextElementSibling;
+      const yamlTab = button.parentNode.parentNode.nextElementSibling;
+      switch (tab) {
+        case 'json':
+          jsonTab.className = 'yaml-preview yaml-show';
+          yamlTab.className = 'language-yaml yaml-hide';
+          break;
+        case 'yaml':
+          jsonTab.className = 'yaml-preview yaml-hide';
+          yamlTab.className = 'language-yaml yaml-show';
+          break;
+      }
+    }
   }
 
   icons: string[] = [];
@@ -190,7 +210,8 @@ export class ViewerPageComponent {
         const html = [];
         html.push('<div class="yaml">');
         html.push('<div class="yaml-toolbar">');
-        html.push('<button class="btn-yaml-json">JSON</button> <button class="btn-yaml-yaml">YAML</button>');
+        html.push(`<button onclick="yamlTab(event, 'json')" class="yaml-click">JSON Preview</button>`);
+        html.push(`<button onclick="yamlTab(event, 'yaml')" class="">YAML</button>`);
         html.push('</div>');
         html.push('<div class="yaml-preview">');
         html.push('<ul>');
@@ -219,7 +240,7 @@ export class ViewerPageComponent {
       switch (partial.type) {
         case 'object':
           const oName = part === '' ? '' : `<code class="yaml-key">${part}</code>: `;
-          html.push(`<li><button onClick="yamlToggle(event)">+</button><code>${oName}{</code><ul class="d-none">`);
+          html.push(`<li><button onclick="yamlToggle(event)">+</button><code>${oName}{</code><ul class="d-none">`);
           for (let part of Object.keys(partial.properties)) {
             this.processYamlRecursive(html, partial.properties[part], part);
           }
@@ -227,7 +248,7 @@ export class ViewerPageComponent {
         break;
         case 'array':
           const aName = part === '' ? '' : `<code class="yaml-key">${part}</code>: `;
-          html.push(`<li><button onClick="yamlToggle(event)">+</button><code>${aName}[</code><ul class="d-none">`);
+          html.push(`<li><button onclick="yamlToggle(event)">+</button><code>${aName}[</code><ul class="d-none">`);
           this.processYamlRecursive(html, partial.items);
           html.push('</ul><code class="yaml-end">]</code></li>');
         break;
@@ -318,6 +339,11 @@ export class ViewerPageComponent {
         };
       });
     });
+    // Close Yaml Tabs
+    const btns = document.querySelectorAll('.yaml-click') as any;
+    for (var e of btns) {
+      window.yamlTab({ target: e }, 'json');
+    }
   }
 
   addCss(fileName) {
