@@ -16,91 +16,13 @@ Public endpoints are visible to everyone using the website.
 
 import:/content/api-get-package.md
 
-### Get Icon List in Package
+import:/content/api-get-package-list.md
 
-```text
-GET api/package/:packageId
-```
-
-```yaml
-$ref: '#/api/icon'
-```
-
-There are also various ways to filter the icon results by appending various parameters.
-
-```text
-?search=account
-?name=account,account-plus
-?uuid=
-?author=uuid
-?author=community
-```
-
-#### Get Package Version List
-
-```text
-GET api/package/:packageId/version
-```
-
-```yaml
-type: array
-items:
-  type: object
-  properties:
-    id:
-      type: string
-      format: uuid
-    major:
-      type: integer
-    minor:
-      type: integer
-    patch:
-      type: integer
-    count:
-      type: integer
-```
+import:/content/api-get-font-versions-by-package.md
 
 import:/content/api-get-icon.md
 
-#### Get Icon from Package by Name
-
-Icon names are unique across a package.
-
-```
-GET api/package/:packageId/:iconName
-```
-
-```json
-{
-    "id": "9B295DCA-8352-407E-84F1-34890975D010",
-    "name": "format-align-center",
-    "description": "Align Center",
-    "data": "M3,3H21V5H3V3M7,7H17V9H7V7M3,11H21V13H3V11M7,15H17V17H7V15M3,19H21V21H3V19Z",
-    "date": "2015-04-23T18:25:43.511Z",
-    "package": {
-        "id": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
-        "name": "Material Design Icons",
-        "version": {
-            "major": 1,
-            "minor": 8,
-            "patch": 36
-        },
-        "width": 24,
-        "height": 24
-    },
-    "user": {
-        "name": "Google",
-        "twitter": "Google"
-    },
-    "comments": [],
-    "tags":[
-        {
-            "id":"430DA3F8-27C4-4F76-A7B7-A430E1C13AD2",
-            "text":"format"
-        }
-    ]
-}
-```
+import:/content/api-get-icon-by-name.md
 
 ### Download Icon
 

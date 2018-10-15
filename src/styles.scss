@@ -331,6 +331,10 @@ body {
             color: #C586C0;
         }
 
+        .yaml-example {
+            color: #333;
+        }
+
         &::before {
             content: 'JSON Preview';
             font-size: 12px;

@@ -254,7 +254,12 @@ export class ViewerPageComponent {
         break;
         case 'string':
         case 'integer':
-          html.push(`<li><code class="yaml-prop"><code class="yaml-key">${part}</code>: <code class="yaml-type">${partial.type}</code></code></li>`);
+          html.push(`<li><code class="yaml-prop">`);
+          html.push(`<code class="yaml-key">${part}</code>: <code class="yaml-type">${partial.type}</code>`);
+          if (partial.example) {
+            html.push(` <code class="yaml-example">${partial.example}</code>`);
+          }
+          html.push(`</code></li>`);
           break;
         default:
           html.push(`<li><code class="yaml-prop"><code class="yaml-key">${part}</code>: <code class="yaml-error">Error: Invalid type &quot;${partial.type}&quot;.</code></code></li>`);
