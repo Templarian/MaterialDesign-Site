@@ -1,14 +1,60 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <label>
-        <span class="d-block">Select a Package</span>
-        
-      </label>
-      <h1>Poster Preview</h1>
       <div class="card">
         <div class="card-body">
-          preview
+          <label>
+            <span class="d-block">Select a Package</span>
+            <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+              <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+            </select>
+            <div>
+              <label>
+                Rows
+                <input [(ngModel)]="rows" class="form-control" (change)="onChange()"/>
+              </label>
+              <label>
+                Columns
+                <input [(ngModel)]="columns" class="form-control" (change)="onChange()"/>
+              </label>
+              <span> = <span [innerText]="rows * columns"></span></span>
+            </div>
+            <div>
+              <label>
+                Poster Width in Inches
+                <input [(ngModel)]="posterWidth" class="form-control" (change)="onChange()"/>
+              </label>
+              <label>
+                Poster Height in Inches
+                <input [(ngModel)]="posterHeight" class="form-control" (change)="onChange()"/>
+              </label>
+              <label>
+                Poster Bleed in Inches
+                <input [(ngModel)]="posterBleed" class="form-control" (change)="onChange()"/>
+              </label>
+            </div>
+          </label>
+          <div>
+            <label>
+              Poster Title
+              <input [(ngModel)]="posterTitle" class="form-control" (change)="onChange()"/>
+            </label>
+          </div>
+          
+        </div>
+      </div>
+      <h1>Poster Designer</h1>
+      <div class="card">
+        <div class="card-body p-2">
+          <div style="box-shadow:0 0 10px rgba(0, 0, 0, 0.5)">
+            <svg [attr.viewBox]="'0 0 ' + width + ' ' + height" style="width: 100%">
+              <g *ngFor="let r of iRows" [attr.transform]="'translate(' + 0 + ' '  + (r * 24) + ')'">
+                <g *ngFor="let c of iColumns" [attr.transform]="'translate(' + (c * 24) + ' '  + 0 + ')'">
+                  <path [attr.d]="getIcon(r, c)"/>
+                </g>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
