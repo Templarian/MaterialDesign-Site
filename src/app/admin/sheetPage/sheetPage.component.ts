@@ -48,19 +48,21 @@ export class AdminSheetPageComponent {
 
   async ngOnInit() {
     await this.selectPackage();
-    this.onChange();
+    this.update();
   }
 
-  onChange() {
-    this.iRows = Array(this.rows).fill(0).map((x, i) => i);
-    this.iColumns = Array(this.columns).fill(0).map((x, i) => i);
-    this.width = 24 * this.columns;
-    this.height = 24 * this.rows;
+  update() {
+    this.iRows = Array(parseInt(this.rows as any)).fill(0).map((x, i) => i);
+    this.iColumns = Array(parseInt(this.columns as any)).fill(0).map((x, i) => i);
+    this.width = 24 * parseInt(this.columns as any);
+    this.height = 24 * parseInt(this.rows as any);
   }
 
   getIcon(row, column) {
+    row = parseInt(row);
+    column = parseInt(column);
     const index = (row * this.columns) + column;
-    if (this.icons.length > index) {
+    if (index < this.icons.length) {
       return this.icons[index].data;
     } else {
       return 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z';

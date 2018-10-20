@@ -4,6 +4,11 @@ properties:
     type: string
     format: uuid
     example: E76EC23F-AB71-49B3-9173-841544527A20
+  baseIconId:
+    type: string
+    format: uuid
+    example: E76EC23F-AB71-49B3-9173-841544527A20
+    description: Base icon id or self referenced if it is a base icon.
   packageId:
     type: string
     format: uuid
@@ -32,3 +37,7 @@ properties:
     type: array
     items:
       $ref: '#/api/font'
+  styles:
+    type: array
+    items:
+      $ref: '#/api/style'

@@ -30,6 +30,8 @@ import:/content/api-get-users.md
 
 import:/content/api-get-user.md
 
+import:/content/api-get-styles.md
+
 ### Download Icon
 
 There is a universal endpoint for downloading icons or collections of icons allowing for various types `png` (default), `svg`, or `vector-drawable`.
