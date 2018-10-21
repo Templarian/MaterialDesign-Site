@@ -26,6 +26,7 @@ export class IconPageComponent {
 
   loaded: boolean = false;
   icon: Icon = new Icon('Loading...', 'M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z');
+  relatedIcons: Icon[] = [];
   isAuthed: boolean = false;
 
   replace: MarkdownReplace[] = [];
@@ -38,9 +39,12 @@ export class IconPageComponent {
     const iconName: string = this.route.snapshot.params['iconName'];
     this.isAuthed = await this.loginService.isAuthed();
     
-    let icon = await this.iconService.getIconByName(packageId, iconName)
+    const icon = await this.iconService.getIconByName(packageId, iconName);
     this.icon = icon;
     this.loaded = true;
+
+    const icons = await this.iconService.getBaseChildrenIcons(icon.baseIconId);
+    this.relatedIcons = icons;
   }
 
   isVector: boolean = true;

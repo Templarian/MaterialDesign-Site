@@ -19,19 +19,19 @@ export class IconService {
 
   @PromiseCache()
   async getIcons(@CacheParam packageId: string): Promise<Icon[]> {
-    let res = await this.http.get<Package>('/api/package/' + packageId)
+    let res = await this.http.get<Package>(`/api/package/${packageId}`)
       .toPromise();
     return res.icons.map(i => new Icon().from(i));
   }
 
   async getIcon(iconId: string): Promise<Icon> {
-    let res = await this.http.get<Icon>('/api/icon/' + iconId)
+    let res = await this.http.get<Icon>(`/api/icon/${iconId}`)
       .toPromise();
     return new Icon().from(res);
   }
 
   async getIconsByName(packageId: string, names: string[]): Promise<Icon[]> {
-    let res = await this.http.get<Package>('/api/package/' + packageId, {
+    let res = await this.http.get<Package>(`/api/package/${packageId}`, {
       params: (new HttpParams())
         .set('names', names.join(','))
     }).toPromise();
@@ -39,25 +39,31 @@ export class IconService {
   }
 
   async getIconByName(packageId: string, name: string): Promise<Icon> {
-    let res = await this.http.get<Icon>('/api/package/' + packageId + '/name/' + name)
+    let res = await this.http.get<Icon>(`/api/package/${packageId}/name/${name}`)
       .toPromise();
     return new Icon().from(res);
   }
 
+  async getBaseChildrenIcons(baseIconId: string): Promise<Icon[]> {
+    let res = await this.http.get<Icon[]>(`/api/icon/${baseIconId}/base`)
+      .toPromise();
+    return res.map(i => new Icon().from(i));
+  }
+
   async getAdminIcon(iconId: string): Promise<Icon> {
-    let res = await this.http.get<Icon>('/api/admin/icon/' + iconId)
+    let res = await this.http.get<Icon>(`/api/admin/icon/${iconId}`)
       .toPromise();
     return new Icon().from(res);
   }
 
   async getAdminIcons(packageId: string): Promise<Icon[]> {
-    let res = await this.http.get<Package>('/api/admin/package/' + packageId)
+    let res = await this.http.get<Package>(`/api/admin/package/${packageId}`)
       .toPromise();
     return res.icons.map(i => new Icon().from(i));
   }
 
   async getAdminIconsByTag(pack: Package, tag: Tag): Promise<Icon[]> {
-    let res = await this.http.get<Icon[]>('/api/admin/icon/' + pack.id + '/tag/' + tag.id)
+    let res = await this.http.get<Icon[]>(`/api/admin/icon/${pack.id}/tag/${tag.id}`)
       .toPromise();
     return res.map(i => new Icon().from(i));
   }

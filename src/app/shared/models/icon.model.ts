@@ -6,6 +6,8 @@ import { Tag } from "app/shared/models/tag.model";
 export class Icon extends IconHelpers {
 
   public id: string = null;
+  public packageId: string = null
+  public baseIconId: string = null;
   public name: string = null;
   public description: string = null;
   public data: string = null;
@@ -22,6 +24,8 @@ export class Icon extends IconHelpers {
 
   from(icon: Icon): Icon {
     this.id = icon.id;
+    this.packageId = icon.packageId;
+    this.baseIconId = icon.baseIconId;
     this.name = icon.name;
     this.description = icon.description;
     this.data = icon.data;

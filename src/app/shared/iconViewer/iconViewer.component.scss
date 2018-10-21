@@ -1,0 +1,18 @@
+:host {
+  .item {
+    display: inline-block;
+    padding: 1rem;
+    width: 20%;
+    text-align: center;
+    svg {
+      width: 48px;
+      height: 48px;
+      path {
+        fill: #444;
+      }
+    }
+    .name {
+      font-size: 0.875rem;
+    }
+  }
+}

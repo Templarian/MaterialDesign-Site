@@ -22,6 +22,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CarbonComponent } from './shared/carbon/carbon.component';
 import { BannerComponent } from './shared/banner/banner.component';
+import { IconViewerComponent } from './shared/iconViewer/iconViewer.component';
 
 import { HomePageComponent } from './homePage/homePage.component';
 import { ContributorPageComponent } from './contributorPage/contributorPage.component';
@@ -413,6 +414,7 @@ const appRoutes: Routes = [
     ContributorBadgeComponent,
     ContributorPageComponent,
     ContributorsPageComponent,
+    IconViewerComponent,
     IconPageComponent,
     IconsPageComponent,
     ViewerPageComponent,
