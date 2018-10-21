@@ -1,9 +1,10 @@
 :host {
   .item {
     display: inline-block;
-    padding: 1rem;
+    padding: 0.5rem;
     width: 20%;
     text-align: center;
+    vertical-align: top;
     svg {
       width: 48px;
       height: 48px;

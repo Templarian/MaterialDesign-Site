@@ -21,5 +21,12 @@
     "user": {
         "id": "a8a312b6-07e4-11e4-bf19-842b2b6cfe1b",
         "name": "Google"
-    }
+    },
+    "styles": [{
+        "id": "uuid1",
+        "name": "circle"
+    }, {
+        "id": "uuid2",
+        "name": "outline"
+    }]
 }

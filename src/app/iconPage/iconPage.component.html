@@ -23,15 +23,19 @@
         <button class="btn btn-light" style="border-top-left-radius: 0;" [ngClass]="{ 'active': isVector }" (click)="setVector()">Vector</button>
         <button class="btn btn-light" style="border-top-right-radius: 0;" [ngClass]="{ 'active': !isVector }" (click)="setRaster()">Raster</button>
       </div>
-      <div class="downloads mt-2">
+      <div class="downloads mt-3">
         <button class="btn btn-light btn-block" (click)="setVector()">Download 24dp Black</button>
         <button class="btn btn-light btn-block" (click)="setVector()">Download 48dp Black</button>
         <button class="btn btn-light btn-block" (click)="setVector()">Export with Advanced Editor</button>
       </div>
-      <!--<div>Point Count... {{icon.pointCounttest}}</div>-->
-      <!--<div *ngIf="loaded">
-                Point Count {{icon.getPointCount()}}
-            </div>-->
+      <div class="mt-3 card">
+        <div class="card-body">
+          Styles:
+          <span *ngFor="let style of icon.styles;">
+            <span>{{style.name}} </span>
+          </span>
+        </div>
+      </div>
     </div>
     <div style="flex:1" style="max-width: 814px">
       <div class="card description">

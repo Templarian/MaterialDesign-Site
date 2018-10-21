@@ -2,6 +2,7 @@ import { IconHelpers } from "app/shared/models/icon.helpers";
 import { Alias } from "app/shared/models/alias.model";
 import { User } from "app/shared/models/user.model";
 import { Tag } from "app/shared/models/tag.model";
+import { Style } from "app/shared/models/style.model";
 
 export class Icon extends IconHelpers {
 
@@ -14,6 +15,7 @@ export class Icon extends IconHelpers {
   public user: User = null;
   public aliases: Alias[] = [];
   public tags: Tag[] = [];
+  public styles: Style[] = [];
 
   constructor(name?: string, data?: string) {
     super();
@@ -32,6 +34,7 @@ export class Icon extends IconHelpers {
     this.user = new User().from(icon.user);
     this.aliases = icon.aliases.map(a => new Alias().from(a));
     this.tags = icon.tags.map(t => new Tag().from(t));
+    this.styles = icon.styles.map(s => new Style().from(s));
     return this;
   }
 
