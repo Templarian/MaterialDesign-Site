@@ -74,4 +74,49 @@
       }
     }
   }
+  .style-checkboxes {
+    list-style: none;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+      button {
+        background: #FFF;
+        padding: 0;
+        position: relative;
+        border: 1px solid #DDD;
+        border-radius: 0.25rem;
+        overflow: hidden;
+        mdi-icon {
+          position: absolute;
+          top: 0.25rem;
+          right: 0.25rem;
+        }
+        img {
+          margin: 0.25rem 2rem 0.25rem 0.25rem;
+          width: 96px;
+          height: 96px;
+        }
+        span {
+          display: block;
+          padding: 0 0.25rem;
+          border-top: 1px solid #DDD;
+          background: rgba(0, 0, 0, 0.05);
+        }
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
+      &.active {
+        button {
+          border-color: #005cbf;
+          background: rgba(0, 123, 255, 0.25);
+          span {
+            border-color: #005cbf;
+          }
+        }
+      }
+    }
+  }
 }

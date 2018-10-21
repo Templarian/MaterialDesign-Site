@@ -34,7 +34,8 @@ import {
     mdiTooltipText,
     mdiAsterisk,
     mdiFileDocument,
-    mdiNodejs
+    mdiNodejs,
+    mdiCheckboxMarkedOutline
 } from '@mdi/js'
 
 @Component({
@@ -58,6 +59,7 @@ export class IconComponent  {
         new Icon('chevron-up', mdiChevronUp),
         new Icon('check', mdiCheck),
         new Icon('checkbox-marked', mdiCheckboxMarked),
+        new Icon('checkbox-marked-outline', mdiCheckboxMarkedOutline),
         new Icon('checkbox-blank-outline', mdiCheckboxBlankOutline),
         new Icon('clock', mdiClock),
         new Icon('code-braces', mdiCodeBraces),

@@ -8,6 +8,7 @@ import { Package } from 'app/shared/models/package.model';
 import { PromiseCache, CacheParam } from 'app/shared/promiseCache.decorator';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
 import { Tag } from 'app/shared/models/tag.model';
+import { Style } from './models/style.model';
 
 @Injectable()
 export class IconService {
@@ -48,6 +49,12 @@ export class IconService {
     let res = await this.http.get<Icon[]>(`/api/icon/${baseIconId}/base`)
       .toPromise();
     return res.map(i => new Icon().from(i));
+  }
+
+  async getStyles(packageId: string): Promise<Style[]> {
+    let res = await this.http.get<Style[]>(`/api/style/${packageId}`)
+      .toPromise();
+    return res.map(i => new Style().from(i));
   }
 
   async getAdminIcon(iconId: string): Promise<Icon> {
@@ -98,6 +105,14 @@ export class IconService {
         id: icon.id,
         description: icon.description
       }
+    }).toPromise();
+    return new Icon().from(res);
+  }
+
+  async toggleStyle(icon: Icon, style: Style) {
+    let res = await this.http.post<Icon>('/api/admin/icon/style', {
+      icon: { id: icon.id },
+      style: { id: style.id }
     }).toPromise();
     return new Icon().from(res);
   }

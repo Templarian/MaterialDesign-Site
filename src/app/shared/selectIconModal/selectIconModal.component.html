@@ -1,0 +1,27 @@
+<div class="modal-header">
+  <h4 class="modal-title">Select Icon</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+  <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <label>
+      Search for Icon
+      <mdi-icon-search
+        [package]="selectedPackage"
+        [(icon)]="selectedIcon"
+        (iconChange)="selectIcon()"></mdi-icon-search>
+  </label>
+  <div *ngIf="selectedIcon != null">
+    <svg viewBox="0 0 24 24">
+      <path [attr.d]="selectedIcon.data"></path>
+    </svg>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark"
+    (click)="activeModal.dismiss('Cross click')">Cancel</button>
+  <button type="button" class="btn btn-outline-dark"
+    [disabled]="selectedIcon === null"
+    (click)="save(null)">Set Icon</button>
+</div>

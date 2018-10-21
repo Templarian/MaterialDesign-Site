@@ -1,0 +1,82 @@
+[
+  {
+    "id": "e526737f-d404-11e8-a666-94188269ec50",
+    "name": "alert",
+    "count": 0
+  },
+  {
+    "id": "e5267a03-d404-11e8-a666-94188269ec50",
+    "name": "arrow",
+    "count": 0
+  },
+  {
+    "id": "d3b6ec52-d404-11e8-a666-94188269ec50",
+    "name": "bold",
+    "count": 0
+  },
+  {
+    "id": "e1aa40dd-d408-11e8-a666-94188269ec50",
+    "name": "circle",
+    "count": 1
+  },
+  {
+    "id": "fd76793f-d404-11e8-a666-94188269ec50",
+    "name": "minus",
+    "count": 0
+  },
+  {
+    "id": "1599efa7-d405-11e8-a666-94188269ec50",
+    "name": "multiple",
+    "count": 0
+  },
+  {
+    "id": "f15c647e-d404-11e8-a666-94188269ec50",
+    "name": "network",
+    "count": 0
+  },
+  {
+    "id": "bb5d67eb-d404-11e8-a666-94188269ec50",
+    "name": "off",
+    "count": 0
+  },
+  {
+    "id": "bb5d615c-d404-11e8-a666-94188269ec50",
+    "name": "outline",
+    "count": 1
+  },
+  {
+    "id": "fd767237-d404-11e8-a666-94188269ec50",
+    "name": "plus",
+    "count": 0
+  },
+  {
+    "id": "1599e8d2-d405-11e8-a666-94188269ec50",
+    "name": "question",
+    "count": 0
+  },
+  {
+    "id": "08af8e5f-d405-11e8-a666-94188269ec50",
+    "name": "remove",
+    "count": 0
+  },
+  {
+    "id": "08af95d5-d405-11e8-a666-94188269ec50",
+    "name": "search",
+    "count": 0
+  },
+  {
+    "id": "f15c6be2-d404-11e8-a666-94188269ec50",
+    "name": "settings",
+    "count": 0
+  },
+  {
+    "id": "d3b6f23d-d404-11e8-a666-94188269ec50",
+    "name": "thick",
+    "count": 0
+  },
+  {
+    "id": "1b1a5026-d405-11e8-a666-94188269ec50",
+    "name": "variant",
+    "count": 0
+  }
+]

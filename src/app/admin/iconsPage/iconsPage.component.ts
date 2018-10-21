@@ -4,6 +4,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Package } from 'app/shared/models/package.model';
 import { Icon } from 'app/shared/models/icon.model';
 import { IconService } from 'app/shared/icon.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Style } from 'app/shared/models/style.model';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -19,6 +21,7 @@ export class AdminIconsPageComponent {
   constructor(
     private loginService: LoginService,
     private iconService: IconService,
+    private modalService: NgbModal,
     private route: ActivatedRoute,
     private router: Router
   ) {
@@ -38,9 +41,12 @@ export class AdminIconsPageComponent {
   public selectedIcon: Icon = null;
   public icon: Icon = null;
   public editIcon: Icon = null;
+  public styles: Style[] = null;
+  public loading: boolean = true;
 
   async ngOnInit() {
     await this.loginService.isAuthed();
+    this.styles = await this.iconService.getStyles(this.selectedPackage.id);
   }
 
   goBack() {
@@ -55,11 +61,14 @@ export class AdminIconsPageComponent {
     // Icons
     // this.icons = await this.iconService.getAdminIcons(this.selectedPackage.id);
     // this.selectedIcon = this.icons[0];
+    this.styles = await this.iconService.getStyles(this.selectedPackage.id);
   }
 
   async selectIcon() {
+    this.loading = true;
     this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
     this.editIcon = new Icon().from(this.icon);
+    this.loading = false;
   }
 
   addIcon() {
@@ -69,6 +78,21 @@ export class AdminIconsPageComponent {
   async updateDescription() {
     this.icon = await this.iconService.updateDescription(this.editIcon);
     this.editIcon = new Icon().from(this.icon);
+  }
+
+  setBaseIcon() {
+    alert('set base icon');
+  }
+
+  inStyle(id) {
+    return this.editIcon.styles.find(s => s.id == id) != null;
+  }
+
+  async toggleStyle(style: Style) {
+    this.loading = true;
+    const icon = await this.iconService.toggleStyle(this.editIcon, style);
+    this.editIcon.styles = icon.styles;
+    this.loading = false;
   }
 
 }
