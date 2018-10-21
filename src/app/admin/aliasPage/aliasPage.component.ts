@@ -69,8 +69,8 @@ export class AdminAliasPageComponent {
     ]);
   }
 
-  selectIcon() {
-
+  async selectIcon() {
+    this.selectedIcon = await this.iconService.getAdminIcon(this.selectedIcon.id);
   }
 
   validate() {
