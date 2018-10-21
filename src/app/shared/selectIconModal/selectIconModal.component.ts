@@ -2,6 +2,7 @@ import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { delay } from '../../shared/delay';
 import { Icon } from '../models/icon.model';
+import { Package } from '../models/package.model';
 
 @Component({
   selector: 'mdi-select-icon-modal',
@@ -14,9 +15,15 @@ export class SelectIconModal {
 
   constructor(public activeModal: NgbActiveModal) {}
 
+  public selectedPackage: Package = null;
+
   async ngOnInit() {
     await delay();
     this.issueNumberInput.nativeElement.focus();
+  }
+
+  selectIcon() {
+    
   }
 
   save($event) {
