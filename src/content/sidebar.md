@@ -39,7 +39,7 @@
 - /guide/webfont-alternatives
 - /guide/nodejs-scripting
   - none Guides /guides
-  - human Accessiblility _WCAG_ /guide/wcag
+  - human Accessiblility _WCAG_ /guide/accessiblility
   - home-assistant Home Assistant /guide/home-assistant
   - lightbulb-on Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
   - nodejs NodeJS Scripting /guide/nodejs-scripting
