@@ -98,8 +98,8 @@
             <li *ngFor="let style of styles" [ngClass]="{ 'active': inStyle(style.id) }">
               <button (click)="toggleStyle(style)"
                 [disabled]="loading">
-                <mdi-icon name="checkbox-blank-outline" *ngIf="inStyle(style.id)"></mdi-icon>
-                <mdi-icon name="checkbox-marked-outline" *ngIf="!inStyle(style.id)"></mdi-icon>
+                <mdi-icon name="checkbox-blank-outline" *ngIf="!inStyle(style.id)"></mdi-icon>
+                <mdi-icon name="checkbox-marked-outline" *ngIf="inStyle(style.id)"></mdi-icon>
                 <img src="/assets/resources/grid-96-{{style.name}}.svg"/>
                 <span>{{style.name}}</span>
               </button>
