@@ -6,6 +6,7 @@ import { Icon } from 'app/shared/models/icon.model';
 import { IconService } from 'app/shared/icon.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Style } from 'app/shared/models/style.model';
+import { SelectIconModal } from 'app/shared/selectIconModal/selectIconModal.component';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -81,7 +82,14 @@ export class AdminIconsPageComponent {
   }
 
   setBaseIcon() {
-    alert('set base icon');
+    const modal = this.modalService.open(SelectIconModal);
+    modal.componentInstance.packageId = this.selectedPackage.id;
+    modal.componentInstance.baseIconId = this.editIcon.baseIconId;
+    modal.result.then((result) => {
+      this.iconService.setBaseIconId(this.editIcon, result);
+    }, (reason) => {
+      // dismissed
+    });
   }
 
   inStyle(id) {

@@ -10,20 +10,21 @@ import { Package } from '../models/package.model';
 })
 export class SelectIconModal {
   @Input() packageId: string;
-  @Input() selectedIcon: Icon = null;
-  @ViewChild('issueNumberInput') issueNumberInput: ElementRef;
+  @Input() baseIconId: string = null;
 
   constructor(public activeModal: NgbActiveModal) {}
 
   public selectedPackage: Package = null;
+  public selectedIcon: Icon = null;
 
   async ngOnInit() {
-    await delay();
-    this.issueNumberInput.nativeElement.focus();
+    this.selectedPackage = new Package(this.packageId);
+    this.selectedIcon = new Icon();
+    this.selectedIcon.id = this.baseIconId;
   }
 
   selectIcon() {
-    
+
   }
 
   save($event) {

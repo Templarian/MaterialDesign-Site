@@ -17,7 +17,7 @@ import { Alias } from 'app/shared/models/alias.model';
 export class IconSearchComponent {
   @Input('icon') icon: Icon;
   @Output('iconChange') iconChange: EventEmitter<Icon> = new EventEmitter<Icon>();
-  @Input('icons') icons: Icon[];
+  @Input('icons') icons: Icon[] = null;
   @Input('exclude') exclude: Icon[] = [];
   @Input('multiple') multiple: boolean = false;
   @Input('package') package: Package;
@@ -66,6 +66,11 @@ export class IconSearchComponent {
     this.selectableIcons = this.iconList.filter(i => {
       return !(ex.indexOf(i.id) > -1);
     });
+    if (this.icon) {
+      // Ensure icon is list of possibles
+      this.icon = this.selectableIcons.find(i => i.id === this.icon.id);
+      this.s = this.icon;
+    }
     this.isDisabled = false;
   }
 
