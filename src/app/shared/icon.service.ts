@@ -117,11 +117,11 @@ export class IconService {
     return new Icon().from(res);
   }
 
-  async setBaseIconId(icon: Icon, baseIconId: string) {
+  async setBaseIconId(icon: Icon, baseIcon: Icon) {
     let res = await this.http.post<Icon>('/api/admin/icon/base', {
       icon: {
         id: icon.id,
-        baseIconId: baseIconId
+        baseIconId: baseIcon.id
       }
     }).toPromise();
     return new Icon().from(res);
