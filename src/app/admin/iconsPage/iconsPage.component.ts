@@ -44,6 +44,7 @@ export class AdminIconsPageComponent {
   public editIcon: Icon = null;
   public styles: Style[] = null;
   public loading: boolean = true;
+  public baseIcon: Icon = null;
 
   async ngOnInit() {
     await this.loginService.isAuthed();
@@ -69,6 +70,7 @@ export class AdminIconsPageComponent {
     this.loading = true;
     this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
     this.editIcon = new Icon().from(this.icon);
+    this.baseIcon = await this.iconService.getAdminIcon(this.icon.baseIconId);
     this.loading = false;
   }
 
@@ -85,8 +87,10 @@ export class AdminIconsPageComponent {
     const modal = this.modalService.open(SelectIconModal);
     modal.componentInstance.packageId = this.selectedPackage.id;
     modal.componentInstance.baseIconId = this.editIcon.baseIconId;
-    modal.result.then((result) => {
-      this.iconService.setBaseIconId(this.editIcon, result);
+    modal.result.then(async (result) => {
+      const icon = await this.iconService.setBaseIconId(this.editIcon, result);
+      this.editIcon.baseIconId = icon.baseIconId;
+      this.baseIcon = await this.iconService.getAdminIcon(this.editIcon.baseIconId);
     }, (reason) => {
       // dismissed
     });

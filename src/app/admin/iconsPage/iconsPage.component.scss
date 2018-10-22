@@ -119,4 +119,33 @@
       }
     }
   }
+
+  .base-icon-wrap {
+    border: 1px solid #DDD;
+    border-radius: 0.25rem;
+  }
+
+  .base-icon {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0.25rem;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+      path {
+        fill: #444;
+      }
+    }
+  }
+  .base-icon-name {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .base-icon-btn {
+    border-top: 1px solid #EEE;
+    padding: 0.25rem;
+    text-align: right;
+  }
 }
