@@ -142,6 +142,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/ruby-on-rails',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-ruby-on-rails.md'
+    }
+  },
+  {
     path: 'getting-started/svg',
     component: ViewerPageComponent,
     data: {

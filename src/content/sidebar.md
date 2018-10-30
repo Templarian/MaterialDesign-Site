@@ -9,6 +9,7 @@
 - /getting-started/polymer
 - /getting-started/react
 - /getting-started/rollupjs
+- /getting-started/ruby-on-rails
 - /getting-started/svg
 - /getting-started/vuejs
 - /getting-started/webpack
@@ -26,6 +27,7 @@
   - polymer Polymer _v0.5 / v1.0 Supported_ /getting-started/polymer
   - react React /getting-started/react
   - rollupjs rollup.js /getting-started/rollupjs
+  - ruby-on-rails Ruby on Rails /getting-started/ruby-on-rails
   - svg SVG /getting-started/svg
   - vuejs Vue.JS /getting-started/vuejs
   - webpack Webpack /getting-started/webpack
