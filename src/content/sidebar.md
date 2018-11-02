@@ -40,11 +40,13 @@
 - /guide/accessiblility
 - /guide/webfont-alternatives
 - /guide/nodejs-scripting
+- /guide/iconify
   - none Guides /guides
   - human Accessiblility _WCAG_ /guide/accessiblility
   - home-assistant Home Assistant /guide/home-assistant
   - lightbulb-on Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
   - nodejs NodeJS Scripting /guide/nodejs-scripting
+  - iconify Iconify SVG framework /guide/iconify
 - /contributors
 - /contribute
 - /contribute/github

@@ -13,6 +13,10 @@ The webfont is several font files that your browser can pick from. All modern br
   In a scenerio where the frontend does not know all required icons it may be ideal to use the webfont.
 </blockquote>
 
+## Iconify
+
+Instead of using web font, you can use Iconify SVG framework. It is as easy to use as web font, but it only loads icons that are used on page and renders them as pixel perfect SVG rather than text. Read [Iconify Guide](/guide/iconify) guide on how to use MDI with Iconify.
+
 ## React Developer
 
 For those using the React framework read the [Getting Started](/getting-started/react) guide on how to use the `@mdi/react` and `@mdi/js` library.

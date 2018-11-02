@@ -261,6 +261,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'guide/iconify',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/guide-iconify.md'
+    }
+  },
+  {
     path: 'code-of-conduct',
     component: ViewerPageComponent,
     data: {
