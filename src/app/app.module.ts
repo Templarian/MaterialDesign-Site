@@ -282,6 +282,20 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'changelog',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/changelog.md'
+    }
+  },
+  {
+    path: 'upgrade',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/upgrade.md'
+    }
+  },
+  {
     path: 'about',
     component: ViewerPageComponent,
     data: {

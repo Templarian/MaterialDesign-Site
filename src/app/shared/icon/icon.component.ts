@@ -36,7 +36,9 @@ import {
     mdiAsterisk,
     mdiFileDocument,
     mdiNodejs,
-    mdiCheckboxMarkedOutline
+    mdiCheckboxMarkedOutline,
+    mdiArrowUpThick,
+    mdiFormatListChecks,
 } from '@mdi/js'
 
 @Component({
@@ -52,6 +54,8 @@ export class IconComponent  {
         new Icon('android', mdiAndroid),
         new Icon('angular', mdiAngular),
         new Icon('angularjs', mdiAngularjs),
+        new Icon('arrow-up-thick', mdiArrowUpThick),
+        new Icon('format-list-checks', mdiFormatListChecks),
         new Icon('asterisk', mdiAsterisk),
         new Icon('bootstrap', mdiBootstrap),
         new Icon('chevron-left', mdiChevronLeft),

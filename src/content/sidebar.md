@@ -68,10 +68,14 @@
   - scale-balance Code of Conduct /code-of-conduct
 - /about
 - /license
+- /changelog
 - /history
+- /upgrade
 - /contact
   - information-outline About /about
   - github Github Issues /issues
+  - format-list-checks Changelog /changelog
   - clock History /history
+  - arrow-up-thick Upgrade Guide /upgrade
   - scale-balance License /license
   - email-outline Contact /contact
