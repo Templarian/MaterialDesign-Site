@@ -29,4 +29,18 @@
 
 ## Version 2.7.94
 
-- Still adding legacy changelogs.
+- 100 New Icons
+- Renamed `phone-locked` to `phone-lock`
+- Renamed `email-secure` to `email-lock`
+- Renamed `send-secure` to `send-lock`
+- Renamed `book-secure` to `book-lock`
+- Renamed `book-unsecure` to `book-lock-open`
+- Replaced `account-settings-variant` with `account-details`
+  - This was removed as we standardized on ... for settings related icons to be inline with the Material Design guidelines.
+- Updated all `bell` icons to match the official updates.
+
+## Version 2.5.94
+
+- 110 New Icons
+
+> For older releases be sure check the History page.
