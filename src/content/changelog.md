@@ -1,10 +1,23 @@
 # Changelog
 
-## Version 3.2.xx (Preview)
+## Version 3.2.89
 
-- 200+ New Icons
+- 250 New Icons
 - Added `alpha-*-circle` with outline style also.
-- Renamed ...
+- Replaced `emoticon-*` with filled styles.
+  - Added `emoticon-*-outline`
+  - Added more emotes
+- Renamed `format-list-numbers` to `format-list-numbered`
+- Renamed `account-location` to `tooltip-account`
+- Naming Guidelines for `sheild` and `security` finalized
+  - Renamed `plane-shield` to `shield-airplane`
+  - Renamed `shield-remove` to `shield-off-outline`
+  - Renamed `security-home` to `shield-home`
+  - Renamed `security-off` to `shield-off`
+  - Renamed `security-account` to `shield-account`
+  - Renamed `security-account-outline` to `shield-account-outline`
+  - Renamed `security-lock` to `shield-lock`
+  - Renamed `verified` to `shield-check`
 
 ## Version 3.0.39
 
@@ -36,7 +49,7 @@
 - Renamed `book-secure` to `book-lock`
 - Renamed `book-unsecure` to `book-lock-open`
 - Replaced `account-settings-variant` with `account-details`
-  - This was removed as we standardized on ... for settings related icons to be inline with the Material Design guidelines.
+  - This was removed as we standardized on '...' for settings related icons to be inline with the Material Design guidelines.
 - Updated all `bell` icons to match the official updates.
 
 ## Version 2.5.94
