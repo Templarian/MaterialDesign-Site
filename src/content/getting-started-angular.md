@@ -50,7 +50,7 @@ Or...
 [Angular 2+ Download for Angular Material 'mdi.svg'](https://materialdesignicons.com/api/download/angularmaterial/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B)
 
 The `mdi.svg` contains all the icons provided on the site. Use inline with [MatIconRegistry](https://material.angular.io/components/icon/api).
-The following assumes that you're using the latest version of `@angular/material` (`2.0.0-beta.12`) and you already have the basic knowledge of Angular Material.
+The following assumes that you're using the latest version of `@angular/material` and you already have the basic knowledge of Angular Material.
 Place the SVG file under your `assets` folder. Please ensure that this file is publicly accessible.
 In your app's module file (typically `app.module.ts`), import `MatIconModule` and `MatIconRegistry` from `@angular/material`:
 
@@ -61,10 +61,6 @@ import { NgModule } from '@angular/core';
 import { MatIconRegistry, MatIconModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-/*
-From the latest master, HttpClientModule is required instead
-import { HttpClientModule } from '@angular/common/http';
-*/
 
 ...
 @NgModule({
@@ -72,7 +68,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
-    // From the latest master, HttpClientModule is required instead
     // Your other modules
     // Take note that you have to import MatIconModule into your app
     MatIconModule
