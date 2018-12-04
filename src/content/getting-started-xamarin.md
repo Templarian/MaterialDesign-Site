@@ -40,10 +40,10 @@ Also on IOS (It's never easy with Apple!) you have to include the file in the in
 <ResourceDictionary>
     <OnPlatform x:TypeArguments="x:String"
                 x:Key="IconFont">
-        <On Platform="Andriod"
+        <On Platform="Android"
             Value="materialdesignicons-webfont.ttf#Material Design Icons" />
         <On Platform="iOS"
-            Value="materialdesignicons-webfont.ttf" />
+            Value="materialdesignicons-webfont" />
         <On Platform="UWP"
             Value="/Assets/materialdesignicons-webfont.ttf#Material Design Icons" />
     </OnPlatform>
