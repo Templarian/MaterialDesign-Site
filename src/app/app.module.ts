@@ -398,6 +398,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'history/light',
+    component: HistoryPageComponent,
+    data: {
+      package: PackageType.MaterialDesignIconsLight
+    }
+  },
+  {
     path: 'resources',
     component: ResourcesPageComponent
   },
