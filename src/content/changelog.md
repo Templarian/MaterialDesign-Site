@@ -9,7 +9,7 @@
   - Added more emotes
 - Renamed `format-list-numbers` to `format-list-numbered`
 - Renamed `account-location` to `tooltip-account`
-- Naming Guidelines for `sheild` and `security` finalized
+- Naming Guidelines for `shield` and `security` finalized
   - Renamed `plane-shield` to `shield-airplane`
   - Renamed `shield-remove` to `shield-off-outline`
   - Renamed `security-home` to `shield-home`
