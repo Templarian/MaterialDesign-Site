@@ -2,6 +2,11 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 3.2.89 to 3.3.92
+
+- Rename `blender` to `blender-software`
+- Rename `beaker` to `beaker-outline`
+
 ## 3.0.39 to 3.2.89
 
 - Rename `emoticon-*` with `emoticon-*-outline`

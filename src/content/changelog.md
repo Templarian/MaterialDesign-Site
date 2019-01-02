@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 3.3.92
+
+- 103 New Icons
+- Added `blender`
+  - Renamed existing `blender` to `blender-software`
+- Added `beaker`
+  - Renamed existing `beaker` to `beaker-outline`
+
 ## Version 3.2.89
 
 - 250 New Icons
