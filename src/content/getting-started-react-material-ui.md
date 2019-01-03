@@ -1,4 +1,4 @@
-# React - Getting Started
+# Material-UI - Getting Started
 
 Material Design Icons can be used in React with [Material-UI](https://material-ui.com)'s `SvgIcon` component.
 
