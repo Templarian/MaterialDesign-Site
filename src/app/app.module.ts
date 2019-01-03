@@ -135,6 +135,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/react-material-ui',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-react-material-ui.md'
+    }
+  },
+  {
     path: 'getting-started/rollupjs',
     component: ViewerPageComponent,
     data: {

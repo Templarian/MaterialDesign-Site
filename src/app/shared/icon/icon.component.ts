@@ -39,6 +39,7 @@ import {
     mdiCheckboxMarkedOutline,
     mdiArrowUpThick,
     mdiFormatListChecks,
+    mdiMaterialUi,
 } from '@mdi/js'
 
 @Component({
@@ -89,6 +90,7 @@ export class IconComponent  {
         new Icon('information-outline', mdiInformationOutline),
         new Icon('lightbulb-on', mdiLightbulbOn),
         new Icon('magnify', mdiMagnify),
+        new Icon('material-ui', mdiMaterialUi),
         new Icon('menu-down', mdiMenuDown),
         new Icon('menu-up', mdiMenuUp),
         new Icon('news', mdiNewspaper),

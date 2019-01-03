@@ -8,6 +8,7 @@
 - /getting-started/php
 - /getting-started/polymer
 - /getting-started/react
+- /getting-started/react-material-ui
 - /getting-started/rollupjs
 - /getting-started/ruby-on-rails
 - /getting-started/svg
@@ -26,6 +27,7 @@
   - language-php PHP _Twig_ /getting-started/php
   - polymer Polymer _v0.5 / v1.0 Supported_ /getting-started/polymer
   - react React /getting-started/react
+  - material-ui Material-UI + React /getting-started/react-material-ui
   - rollupjs rollup.js /getting-started/rollupjs
   - ruby-on-rails Ruby on Rails /getting-started/ruby-on-rails
   - svg SVG /getting-started/svg
