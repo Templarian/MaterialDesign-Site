@@ -1,5 +1,17 @@
 # Changelog
 
+## Version 3.4.93
+
+- 101 New Icons
+- Added `tennis`
+  - Rename `tennis` to `tennis-ball`
+- Added `transfer-*`
+  - Rename `transfer` to `transfer-right`
+- Renamed `raspberrypi` to `raspberry-pi`
+- Renamed `car-brake-parking` to `car-brake-alert`
+- Deleted `google-wallet`
+  - Replaced codepoint with `google-classroom`
+
 ## Version 3.3.92
 
 - 103 New Icons

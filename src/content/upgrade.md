@@ -2,6 +2,14 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 3.3.92 to 3.4.93
+
+- Rename `tennis` to `tennis-ball`
+- Rename `transfer` to `transfer-right`
+- Renamed `raspberrypi` to `raspberry-pi`
+- Renamed `car-brake-parking` to `car-brake-alert`
+- Deleted `google-wallet`
+
 ## 3.2.89 to 3.3.92
 
 - Rename `blender` to `blender-software`
