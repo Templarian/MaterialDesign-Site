@@ -2,6 +2,8 @@
 
 So the first job is to get the font pack you can download the whole Icon pack as a Zip using the big download button top right and inside this zip you will find the required .ttf file.
 
+> The CDN is a great way to copy the unicode values. [View the CDN](https://cdn.materialdesignicons.com/{{version}}/)
+
 ## Adding the .ttf Font file to your Project.
 
 To use the Font file you first need to add it to each OS project.
