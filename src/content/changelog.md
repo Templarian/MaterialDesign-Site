@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 3.5.95
+
+- 102 New Icons
+- No Renames or Deletes
+
 ## Version 3.4.93
 
 - 101 New Icons

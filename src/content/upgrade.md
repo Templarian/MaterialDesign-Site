@@ -2,6 +2,10 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 3.4.93 to 3.5.95
+
+- None
+
 ## 3.3.92 to 3.4.93
 
 - Rename `tennis` to `tennis-ball`
