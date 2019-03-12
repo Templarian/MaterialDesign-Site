@@ -191,6 +191,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'getting-started/visual-studio-code',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/getting-started-visual-studio-code.md'
+    }
+  },
+  {
     path: 'contribute',
     component: ViewerPageComponent,
     data: {

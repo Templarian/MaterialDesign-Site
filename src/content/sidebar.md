@@ -16,6 +16,7 @@
 - /getting-started/webfont
 - /getting-started/windows
 - /getting-started/xamarin
+- /getting-started/visual-studio-code
   - none Getting Started /getting-started
   - android Android _Vector Drawables_ /getting-started/android
   - angular Angular _Webfont / Component_ /getting-started/angular
@@ -35,6 +36,7 @@
     - lightbulb-on Webfont Alternatives _Don't use the webfont_ /guide/webfont-alternatives
   - windows Windows _UWP / WPF_ /getting-started/windows
   - xamarin Xamarin /getting-started/xamarin
+  - visual-studio-code VS Code /getting-started/visual-studio-code
 - /guides
 - /guide/home-assistant
 - /guide/accessiblility

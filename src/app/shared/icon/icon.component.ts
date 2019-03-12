@@ -39,6 +39,7 @@ import {
     mdiCheckboxMarkedOutline,
     mdiArrowUpThick,
     mdiFormatListChecks,
+    mdiVisualStudioCode
 } from '@mdi/js'
 
 @Component({
@@ -113,7 +114,8 @@ export class IconComponent  {
         new Icon('webpack', mdiWebpack),
         new Icon('windows', mdiWindows),
         new Icon('human', mdiHuman),
-        new Icon('xamarin', mdiXamarin)
+        new Icon('xamarin', mdiXamarin),
+        new Icon('visual-studio-code', mdiVisualStudioCode)
     ]
 
     setIcon (name: string) {
