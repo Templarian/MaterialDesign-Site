@@ -41,7 +41,7 @@ Below we have currated a list of commonly used icons in Home Assistant.
 | Garage      | mdi:garage mdi:garage-open mdi:garage-alert |
 | Health      | mdi:scale-bathroom mdi:heart-pulse mdi:walk mdi:google-fit |
 | HVAC        | mdi:thermostat mdi:thermostat-box mdi:radiator mdi:radiator-off mdi:air-conditioner |
-| Kitchen     | mdi:fridge mdi:fridge-filled mdi:fridge-filled-top mdi:fridge-filled-bottom mdi:stove mdi:dashwasher mdi:washing-machine |
+| Kitchen     | mdi:fridge mdi:fridge-bottom mdi:fridge-top mdi:fridge-outline mdi:stove mdi:dishwasher mdi:washing-machine mdi:toaster-oven mdi:microwave |
 | Lighting    | mdi:lamp mdi:ceiling-light mdi:floor-lamp mdi:wall-sconce mdi:desk-lamp mdi:track-light mdi:light-switch mdi:lava-lamp mdi:led-strip mdi:lightbulb mdi:lightbulb-outline mdi:lightbulb-on mdi:lightbulb-on-outline mdi:spotlight mdi:spotlight-beam mdi:led-on mdi:led-off mdi:led-outline mdi:led-variant-on mdi:led-variant-off mdi:led-variant-outline |
 | Power       | mdi:power-plug mdi:power-plug-off mdi:power-socket mdi:power-socket-us mdi:power-socket-eu mdi:power-socket-uk |
 | Printer     | mdi:printer mdi:printer-alert mdi:printer-3d mdi:cloud-print mdi:cloud-print-outline |

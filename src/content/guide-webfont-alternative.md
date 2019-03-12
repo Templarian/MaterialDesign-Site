@@ -1,6 +1,6 @@
 # Webfont Alternatives - Guide
 
-This guide will outline some of the reasons to not use the Webfont and why other solutions that might work better in your use case.
+This guide will outline some alterntives of the Webfont and why other solutions might be more ideal.
 
 ## What is the webfont
 
