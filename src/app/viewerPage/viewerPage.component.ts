@@ -128,8 +128,9 @@ export class ViewerPageComponent {
               </${m2}>`;
     }
   }, {
-    find: new RegExp('(mdi|icon):([a-z0-9-]+)', 'g'),
+    find: new RegExp('(\\\\mdi|mdi|icon):([a-z0-9-]+)', 'g'),
     replace: (m, type, icon) => {
+      if (type == '\\mdi') { return `mdi:${icon}`; }
       if (icon == 'not' || icon == 'before') { return m; }
       this.icons.push(icon);
       if (type === 'mdi') {

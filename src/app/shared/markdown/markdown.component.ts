@@ -60,10 +60,6 @@ export class MarkdownComponent {
     });
     // Code blocks
     setTimeout(() => {
-      // let items = document.querySelectorAll('pre code');
-      // for (var i = 0; i < items.length; i++) {
-      //   hljs.highlightBlock(items[i]);
-      // }
       this.highlightService.highlightAll();
       // Render
       this.renderEvent.emit();

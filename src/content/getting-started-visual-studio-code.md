@@ -8,5 +8,5 @@ Maintained by [Lukas](https://github.com/lukas-tr) on [GitHub](https://github.co
 
 ## Features
 
-- Supports `mdiAccountCirlce`, `mdi-account-circle` or `mdi:account-circle` autocomplete.
+- Supports `mdiAccountCirlce`, `mdi-account-circle` or `\mdi:account-circle` autocomplete.
 - Hover over text for a preview of the icon.
