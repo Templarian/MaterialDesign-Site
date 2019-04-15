@@ -2,6 +2,36 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 3.5.95 to 3.6.95
+
+- Codepoint Updates
+  - `FDD0` -> `FE54` - `screw-lag`
+  - `FDD1` -> `FE55` - `screw-machine-flat-top`
+  - `FDD2` -> `FE56` - `screw-machine-round-top`
+  - `FDD3` -> `FE57` - `screw-round-top`
+  - `FDD4` -> `FE58` - `send-circle`
+  - `FDD5` -> `FE59` - `send-circle-outline`
+  - `FDD6` -> `FE5A` - `shoe-print`
+  - `FDD7` -> `FE5B` - `signature`
+  - `FDD8` -> `FE5C` - `signature-freehand`
+  - `FDD9` -> `FE5D` - `signature-image`
+  - `FDDA` -> `FE5E` - `signature-text`
+  - `FDDB` -> `FE5F` - `slope-downhill`
+  - `FDDC` -> `FE60` - `slope-uphill`
+  - `FDDD` -> `FE61` - `thermometer-alert`
+  - `FDDE` -> `FE62` - `thermometer-chevron-down`
+  - `FDDF` -> `FE63` - `thermometer-chevron-up`
+  - `FDE0` -> `FE64` - `thermometer-minus`
+  - `FDE1` -> `FE65` - `thermometer-plus`
+  - `FDE2` -> `FE66` - `translate-off`
+  - `FDE3` -> `FE67` - `upload-outline`
+  - `FDE4` -> `FE68` - `volume-variant-off`
+  - `FDE5` -> `FE69` - `wallpaper`
+  - `FDE6` -> `FE6A` - `water-outline`
+  - `FDE7` -> `FE6B` - `wifi-star`
+  - `FDE8` -> `FE6C` - `palette-outline`
+- Rename `gift` to `gift-outline`
+
 ## 3.4.93 to 3.5.95
 
 - None

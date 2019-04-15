@@ -27,7 +27,7 @@ export class ViewerService {
 
   private extractData(text: string) {
     // TODO: Replace with config
-    text = text.replace('{{version}}', '3.5.95');
+    text = text.replace('{{version}}', '3.6.95');
     return text;
   }
 
