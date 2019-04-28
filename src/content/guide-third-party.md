@@ -14,6 +14,9 @@ There are several ways we make integrating with third parties easy. The first is
 - `@mdi/svg` - Individual optimized SVG packages
   - `meta.json` - All icon meta data, tags, aliases, font codepoints.
 - `@mdi/font` - Webfont files.
+- CDN: https://cdn.materialdesignicons.com/{{version}}/
+  - CDN `meta.json` https://cdn.materialdesignicons.com/{{version}}/meta.json
+
 
 > Clearly state in the readme and documentation the [Material Design Icons](https://materialdesignicons.com) website and that the project is a third party project.
 
