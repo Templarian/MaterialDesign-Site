@@ -51,6 +51,7 @@
   - iconify Iconify SVG framework /guide/iconify
 - /contributors
 - /contribute
+- /contribute/third-party
 - /contribute/github
 - /contribute/icon-naming
 - /contribute/site
@@ -61,6 +62,7 @@
   - account-multiple Contributors /contributors
   - comment-account Contribute /contribute
     - github GitHub Tools /contribute/github
+  - puzzle-outline Third Party Guide /contribute/third-party
   - textbox Icon Naming /contribute/icon-naming
   - web Site /contribute/site
     - web Last Build /build/site

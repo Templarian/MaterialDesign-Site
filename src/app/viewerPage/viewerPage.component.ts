@@ -128,15 +128,16 @@ export class ViewerPageComponent {
               </${m2}>`;
     }
   }, {
-    find: new RegExp('(\\\\mdi|mdi|icon):([a-z0-9-]+)', 'g'),
-    replace: (m, type, icon) => {
+    find: new RegExp('(\\\\mdi|mdi|icon):([a-z0-9-]+):?([#a-z0-9-]+)?', 'g'),
+    replace: (m, type, icon, color) => {
       if (type == '\\mdi') { return `mdi:${icon}`; }
       if (icon == 'not' || icon == 'before') { return m; }
       this.icons.push(icon);
+      const c = color ? ` style="fill:${color}"` : '';
       if (type === 'mdi') {
-        return `<a href="icon/${icon}"><svg class="icon icon-spin" data-type="link" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg></a>`;
+        return `<a href="icon/${icon}"><svg class="icon icon-spin" data-type="link" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z"${c} /></svg></a>`;
       } else {
-        return `<svg class="icon icon-spin" data-type="icon" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z" /></svg>`;
+        return `<svg class="icon icon-spin" data-type="icon" data-icon="${icon}" viewBox="0 0 24 24"><path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z"${c} /></svg>`;
       }
     },
     render: async () => {

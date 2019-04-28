@@ -275,6 +275,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'contribute/third-party',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/guide-third-party.md'
+    }
+  },
+  {
     path: 'code-of-conduct',
     component: ViewerPageComponent,
     data: {
