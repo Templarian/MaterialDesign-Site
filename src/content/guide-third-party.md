@@ -1,6 +1,6 @@
 # Third Party Developer Guide
 
-While MDI supports several first party libraries, utils, and components our core team leaves a lot of the integrations are supported by the third party community.
+While MDI supports several first party libraries, utils, and components our core team leaves a lot of the integrations up to the third party community.
 
 ## Who is a Third Party Developer?
 
