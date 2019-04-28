@@ -11,11 +11,11 @@ Any developer that provides an integration that relies on MDI icons. This can be
 There are several ways we make integrating with third parties easy. The first is through our NPMJS packages for the node, JavaScript, and TypeScript communities.
 
 - `@mdi/js` - ES6/TypeScript module.
-- `@mdi/svg` - Individual optimized SVG packages
+- `@mdi/svg` - Individual optimized SVG files
   - `meta.json` - All icon meta data, tags, aliases, font codepoints.
 - `@mdi/font` - Webfont files.
-- CDN: https://cdn.materialdesignicons.com/{{version}}/
-  - CDN `meta.json` https://cdn.materialdesignicons.com/{{version}}/meta.json
+- CDN: `https://cdn.materialdesignicons.com/{{version}}/`
+  - CDN `meta.json`: `https://cdn.materialdesignicons.com/{{version}}/meta.json`
 
 
 > Clearly state in the readme and documentation the [Material Design Icons](https://materialdesignicons.com) website and that the project is a third party project.
