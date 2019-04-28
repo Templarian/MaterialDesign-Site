@@ -8,17 +8,20 @@ Any developer that provides an integration that relies on MDI icons. This can be
 
 ## Integrating with MDI
 
-There are several ways we make integrating with third parties easy. The first is through our NPMJS packages for the node, JavaScript, and TypeScript communities.
+The top priority of building an integration is knowing where you'll get the icons. There are three ways to get the icons NPMJS, the CDN, and GitHub.
 
+> Clearly state in the readme and documentation the [Material Design Icons](https://materialdesignicons.com) website and that the project is a third party project.
+
+### NPMJS
+
+NPMJS packages are built after each release node, JavaScript, and TypeScript communities.
+
+- The [@mdi](https://www.npmjs.com/org/mdi) organization on NPMJS.
 - `@mdi/js` - ES6/TypeScript module.
 - `@mdi/svg` - Individual optimized SVG files
   - `meta.json` - All icon meta data, tags, aliases, font codepoints.
+- `@mdi/util` - Node scripting utility for building your own scripts.
 - `@mdi/font` - Webfont files.
-- CDN: `https://cdn.materialdesignicons.com/{{version}}/`
-  - CDN `meta.json`: `https://cdn.materialdesignicons.com/{{version}}/meta.json`
-
-
-> Clearly state in the readme and documentation the [Material Design Icons](https://materialdesignicons.com) website and that the project is a third party project.
 
 If your project can use one of the first party libraries indirectly we recommend telling people to install them seperately. For instance `@mdi/react` can use any icon version.
 
@@ -27,6 +30,20 @@ npm install @mdi/js @mdi/react
 ```
 
 This allows one to swap out other icon packs or upgrade/downgrade indpendently. Not all projects can do this, but we recommend it when possible.
+
+###  CDN
+
+Similarly the CDN is updated after each release and keeps historical versions for compatability.
+
+- CDN: `https://cdn.materialdesignicons.com/{{version}}/`
+  - CDN `meta.json`: `https://cdn.materialdesignicons.com/{{version}}/meta.json`
+
+### GitHub
+
+GitHub is where we store all the NPM distribution repos. Each release is tagged so it's easy to view previous changes.
+
+- MaterialDesign-SVG
+- MaterialDesign-JS
 
 ### Build Script
 
