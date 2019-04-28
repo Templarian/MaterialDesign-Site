@@ -42,8 +42,9 @@ Similarly the CDN is updated after each release and keeps historical versions fo
 
 GitHub is where we store all the NPM distribution repos. Each release is tagged so it's easy to view previous changes.
 
-- MaterialDesign-SVG
-- MaterialDesign-JS
+- [MaterialDesign-SVG](https://github.com/Templarian/MaterialDesign-SVG)
+- [MaterialDesign-JS](https://github.com/Templarian/MaterialDesign-JS)
+- [MaterialDesign-Webfont](https://github.com/Templarian/MaterialDesign-Webfont)
 
 ### Build Script
 
