@@ -1,6 +1,8 @@
 # Contribute
 
-Material Design Icons is only around because of the [team of contributors](/contributors).
+<a href="/contributors" class="btn btn-outline-primary">icon:account-group Contributors</a>
+<a href="/contribute/github" class="btn btn-outline-secondary">icon:github-circle GitHub Tools</a>
+<a href="/contribute/third-party" class="btn btn-outline-secondary">icon:puzzle-outline Third Party Dev Guide</a>
 
 ## Ways to Help
 
