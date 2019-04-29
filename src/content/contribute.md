@@ -6,11 +6,20 @@
 
 ## Ways to Help
 
+There are many ways you as an individual can help, and to help we've broken it down to four main areas.
+
+- Suggest Icons - Search and open issues for suggestions you don't find.
+- Contribute Icons - Hundreds of open ideas waiting to be created.
+- Develop - Help make this website better.
+- Documention - Icons exist everywhere lets make it easy on everyone to use them.
+
+Step by step guides below outline the above ways to contribute.
+
 ### Suggest Icons
 
 The easiest way to help is to suggest icons, all you need is a GitHub account.
 
-Simply visit the [issues](https://github.com/Templarian/MaterialDesign/issues) section of our repository and click "New issue", a template should be there already so you know what information we're looking for. You should include what icon you're looking for (obviosuly) and if possible a few examples.
+Simply visit the [issues](https://github.com/Templarian/MaterialDesign/issues) section of our repository and click "New issue", a template will guide you through the information we're looking for. Images can be pasted in comments to provide examples.
 
 The team will take a look at your issue as soon as possible and label it accordingly. We may ask you for more information on what exactly you want or even reject your suggestion entirely if we feel it's too specific, but don't let that put you off suggesting more icons in the future!
 
