@@ -13,7 +13,7 @@ On any entities that allow the `icon` configuration variable, you can provide th
 ```yaml
 switch.front_yard:
   friendly_name: Front Yard Sprinklers
-  icon: mdi:water-pump
+  icon: \mdi:water-pump
 ```
 
 For more information on customizing entities in Home Assistant, [see their official documentation](https://www.home-assistant.io/docs/configuration/customizing-devices/).
