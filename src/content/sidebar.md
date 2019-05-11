@@ -52,6 +52,7 @@
 - /contributors
 - /contribute
 - /contribute/third-party
+- /contribute/first-party
 - /contribute/github
 - /contribute/icon-naming
 - /contribute/site
@@ -63,6 +64,7 @@
   - comment-account Contribute /contribute
     - github GitHub Tools /contribute/github
   - puzzle-outline Third Party Guide /contribute/third-party
+    - puzzle-outline First Party Guide /contribute/first-party
   - textbox Icon Naming /contribute/icon-naming
   - web Site /contribute/site
     - web Last Build /build/site
