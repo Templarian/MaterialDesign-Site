@@ -18,4 +18,4 @@ If you wanted to display the icon at `48x48` place the SVG path data in place of
 
 See the VectorIcon project:
 
-https://github.com/alansingfield/VectorIcon/blob/master/README.md
+[alansingfield/VectorIcon Readme](https://github.com/alansingfield/VectorIcon/blob/master/README.md)
