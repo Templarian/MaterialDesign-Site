@@ -41,11 +41,13 @@ export class AppComponent  {
 
 ## Angular Material
 
+Tested versioned releases can be used through NPM documented [here](https://www.npmjs.com/package/@mdi/angular-material).
+
 ```
 npm install @mdi/angular-material
 ```
 
-Or...
+Or if you want the latest WIP straight from the database it can be downloaded via the button below. Note: this includes WIP icons that could change, so we highly recommend using the versioned NPM package above.
 
 <a href="https://materialdesignicons.com/api/download/angularmaterial/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B" class="btn btn-outline-primary">icon:download Angular 2+ Download for Angular Material 'mdi.svg'</a>
 
