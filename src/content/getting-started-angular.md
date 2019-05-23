@@ -47,7 +47,7 @@ npm install @mdi/angular-material
 
 Or...
 
-<a href="https://materialdesignicons.com/api/download/angularmaterial/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B" class="btn btn-secondary">icon:download Angular 2+ Download for Angular Material 'mdi.svg'</a>
+<a href="https://materialdesignicons.com/api/download/angularmaterial/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B" class="btn btn-outline-primary">icon:download Angular 2+ Download for Angular Material 'mdi.svg'</a>
 
 The `mdi.svg` contains all the icons provided on the site. Use inline with [MatIconRegistry](https://material.angular.io/components/icon/api).
 The following assumes that you're using the latest version of `@angular/material` (`2.0.0-beta.12`) and you already have the basic knowledge of Angular Material.
