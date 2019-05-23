@@ -8,7 +8,7 @@ As Material Design Icons has continued to rapidly grow, we've decided to take a 
 
 > Material Design Icons is an icon library dedicated to providing high-quality icons that follow [Material design principles][1].
 
-Keeping that mission in mind, brand and logo icons are simply not _Material_. Additionally, we have had issues dealing with logos that don't work well in a color, don't fit in a distinguishable way within a 24x24dp artboard, or are just very obscure logos to begin with. It is very easy to say that we do not feel that we have served this niche of icons well.
+Keeping that mission in mind, brand and logo icons are simply not _Material_. Additionally, we have had issues dealing with logos that don't work well in a single color, don't fit in a distinguishable way within a 24x24dp artboard, or are just very obscure logos to begin with. It is very easy to say that we do not feel that we have served this niche of icons well.
 
 **Moving forward, we are no longer accepting new brand or logo icons into the
 Material Design Icons library.***
