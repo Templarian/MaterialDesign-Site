@@ -24,7 +24,7 @@ This announcement will also be given directly to larger projects so they can cor
 
 ### Where should I get my brand and logo icons from?
 
-We highly recommend our friends over at [SimpleIcons][2] to serve your brand icon needs. SimpleIcons is a full icon library specifically designed for brand and logo icons. They offer their [icon package on npm][3] and provide SVG and JavaScript interfaces to include the icons into your project. Additionally, they have a CDN available if you do not wish to host the icons yourself.
+We _highly_ recommend our friends over at [SimpleIcons][2] to serve your brand icon needs. SimpleIcons is a full icon library specifically designed for brand and logo icons. They offer their [icon package on npm][3] and provide SVG and JavaScript interfaces to include the icons into your project. Additionally, they have a CDN available if you do not wish to host the icons yourself.
 
 ### I use Home Assistant, will I be affected by this change?
 
