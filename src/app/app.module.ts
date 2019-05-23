@@ -338,6 +338,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'guide/brand-icons',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/brand-icons.md'
+    }
+  },
+  {
     path: '',
     component: HomePageComponent
   },
