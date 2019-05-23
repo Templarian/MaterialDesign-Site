@@ -338,7 +338,7 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'guide/brand-icons',
+    path: 'roadmap/brand-icons',
     component: ViewerPageComponent,
     data: {
       file: 'content/brand-icons.md'

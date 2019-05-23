@@ -12,7 +12,7 @@ Keeping that mission in mind, brand and logo icons are simply not _Material_. Ad
 
 **Moving forward, we are no longer accepting new brand or logo icons into the Material Design Icons library.***
 
-\* We _may_ consider technology-related logo icons based around development (e.g. Webpack) for well-known tools, but these will be done on a case-by-case basis.
+> We _may_ consider technology-related logo icons based around development (e.g. Webpack) for well-known tools, but these will be done on a case-by-case basis.
 
 ## Frequently Asked Questions
 
@@ -36,7 +36,7 @@ It really depends on if you are using brand or logo icons. If you are, we recomm
 
 ### I use MDI's helper libraries, such as `@mdi/react`. Is this compatible with SimpleIcons?
 
-It will be soon! `@mdi/react` simple takes raw SVG path data to render an icon. [Once SimpleIcons begins returning the combined path data in their module][5], you can simply use `@mdi/react` like this:
+The answer is very soon. Our react component takes raw SVG path data to render an icon. [Once SimpleIcons begins returning the combined path data in their module][5], you can simply use `@mdi/react` like this:
 
 ```jsx
 import React from 'react';
