@@ -1,6 +1,6 @@
 # Brand and Logo Icons
 
-Brand or logo icons are icons that represent a company and/or product logo. Some examples may include the Facebook logo, the Fedora linux distribution logo, the Xbox logo, etc.
+Brand or logo icons are icons that represent a company and/or product logo. Some examples may include the Facebook logo, the VLC logo, the Square logo, etc.
 
 ## Brand Icons in Material Design Icons
 
