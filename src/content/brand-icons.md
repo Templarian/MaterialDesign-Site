@@ -26,7 +26,7 @@ We highly recommend our friends over at [SimpleIcons][2] to serve your brand ico
 
 ### I use Home Assistant, will I be affected by this change?
 
-Most likely not, brand icons are rarely used in Home Assistant. Current brand icons in the MDI library will remain unchanged for now, but if there is a new brand icon you would like to use in Home Assistant, that will require some changes on Home Assitant's part to support other icon libraries. We have communicated our intent with Home Assistant and [have opened a feature request][4], asking them to add support for SimpleIcons to provide an avenue for new brand and logo icons.
+Most likely not as we do not provide many brands specific to home automation. Current brand icons in the MDI library will remain unchanged for now, but if there is a new brand icon you would like to use in Home Assistant, that will require some changes on Home Assistant's part to support other icon libraries. We have communicated our intent with Home Assistant and [have opened a feature request][4], asking them to add support for SimpleIcons to provide an avenue for new brand and logo icons.
 
 ### I use some other project that relies on MDI for their icons, will I be affected?
 
