@@ -85,3 +85,7 @@
   - arrow-up-thick Upgrade Guide /upgrade
   - scale-balance License /license
   - email-outline Contact /contact
+- /roadmap
+- /roadmap/brand-icons
+  - format-list Roadmap /roadmap
+  - format-list-check Roadmap /roadmap/brand-icons

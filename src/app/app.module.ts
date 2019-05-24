@@ -338,6 +338,13 @@ const appRoutes: Routes = [
     }
   },
   {
+    path: 'roadmap',
+    component: ViewerPageComponent,
+    data: {
+      file: 'content/roadmap.md'
+    }
+  },
+  {
     path: 'roadmap/brand-icons',
     component: ViewerPageComponent,
     data: {
