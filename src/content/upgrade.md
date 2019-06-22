@@ -2,6 +2,12 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 3.6.95 to 3.7.95
+
+- Rename `chart-scatterplot-hexbin` to `chart-scatter-plot-hexbin`
+- Rename `rotate-3d`to `rotate-3d-variant`
+  - Or use new `rotate-3d`
+
 ## 3.5.95 to 3.6.95
 
 - Codepoint Updates
@@ -51,7 +57,7 @@ Follow the guide starting with your version to the version you wish to upgrade t
 
 ## 3.0.39 to 3.2.89
 
-- Rename `emoticon-*` with `emoticon-*-outline`
+- Rename `emoticon-*` to `emoticon-*-outline`
 - Rename `format-list-numbers` to `format-list-numbered`
 - Rename `account-location` to `tooltip-account`
 - Rename `plane-shield` to `shield-airplane`

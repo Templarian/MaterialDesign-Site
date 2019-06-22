@@ -1,5 +1,25 @@
 # Changelog
 
+## Version 3.7.95
+
+- 100 New Icons
+- Renamed `chart-scatterplot-hexbin` to `chart-scatter-plot-hexbin`
+- Renamed `rotate-3d`to `rotate-3d-variant`
+  - Added `rotate-3d`
+- Updated `shared` / `shared-outline`
+- Updated `book-outline`
+- Updated `database-export` / `database-import`
+- Updated `visual-studio-code`
+- Updated `finance`
+- Updated `account-group`
+- Updated `account-multiple-plus-outline`
+- Updated `account-multiple-minus-outline`
+- Updated `account-multiple-outline`
+- Updated `math-compass`
+- Updated `format-list-bulleted-square`
+- Updated `billiards-rack`
+
+
 ## Version 3.6.95
 
 - Codepoint Updates
