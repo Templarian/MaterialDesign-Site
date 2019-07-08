@@ -50,4 +50,5 @@ export class Icon extends IconHelpers {
   async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none') {
     return await super.getGitHubPreview(isWorkInProgress, action);
   }
+  optimize() { super.optimize(); }
 }

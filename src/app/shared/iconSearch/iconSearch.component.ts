@@ -21,6 +21,7 @@ export class IconSearchComponent {
   @Input('exclude') exclude: Icon[] = [];
   @Input('multiple') multiple: boolean = false;
   @Input('package') package: Package;
+  @Input('disabled') disabled: boolean;
 
   constructor(
     private iconService: IconService

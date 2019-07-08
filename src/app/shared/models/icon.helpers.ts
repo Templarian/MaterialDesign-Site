@@ -2,6 +2,11 @@ import { User } from "app/shared/models/user.model";
 import { Alias } from "app/shared/models/alias.model";
 import { Tag } from "app/shared/models/tag.model";
 
+type IconError = {
+  message: string;
+  code: number;
+};
+
 export abstract class IconHelpers {
 
   constructor() {
@@ -30,6 +35,7 @@ export abstract class IconHelpers {
   public aliases: Alias[] = [];
   public tags: Tag[] = [];
   public pointCounttest: number = 0;
+  public errors: IconError[] = [];
 
   private r(n: number) {
     return Math.round(n * 100) / 100;
@@ -73,8 +79,9 @@ export abstract class IconHelpers {
     return 0;
   }
 
-  optimized() {
-
+  optimize() {
+    const errors = [];
+    this.errors = errors;
   }
 
   getWithoutArcs() {

@@ -41,10 +41,12 @@ export class AdminIconsPageComponent {
   public icons: Icon[];
   public selectedIcon: Icon = null;
   public icon: Icon = null;
+  public newIcon: Icon = null;
   public editIcon: Icon = null;
   public styles: Style[] = null;
   public loading: boolean = true;
   public baseIcon: Icon = null;
+  private noIcon = 'M0,0H24V24H0V0M2,2V22H22V2H2M11,5H13V15H11V5M11,17H13V19H11V17Z';
 
   async ngOnInit() {
     await this.loginService.isAuthed();
@@ -72,10 +74,17 @@ export class AdminIconsPageComponent {
     this.editIcon = new Icon().from(this.icon);
     this.baseIcon = await this.iconService.getAdminIcon(this.icon.baseIconId);
     this.loading = false;
+    this.newIcon = null;
   }
 
   addIcon() {
     this.editIcon = null;
+    this.selectedIcon = null;
+    this.newIcon = new Icon("", this.noIcon);
+  }
+
+  cancelIcon() {
+    this.newIcon = null;
   }
 
   async updateDescription() {
@@ -105,6 +114,10 @@ export class AdminIconsPageComponent {
     const icon = await this.iconService.toggleStyle(this.editIcon, style);
     this.editIcon.styles = icon.styles;
     this.loading = false;
+  }
+
+  optimize() {
+    this.newIcon.optimize();
   }
 
 }

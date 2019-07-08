@@ -17,7 +17,9 @@
       <div class="col-md-11">
         <label>
           <span class="d-block">Select a Package</span>
-          <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+          <select
+            [disabled]="newIcon !== null"
+            [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
             <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
           </select>
         </label>
@@ -34,6 +36,7 @@
             <label>
               <span class="d-block">Search for an Icon</span>
               <mdi-icon-search
+                [disabled]="newIcon !== null"
                 [package]="selectedPackage"
                 [(icon)]="selectedIcon"
                 (iconChange)="selectIcon()"></mdi-icon-search>
@@ -44,7 +47,10 @@
           </div>
           <div class="col-md-3">
             <div>&nbsp;</div>
-            <button class="btn btn-outline-success" (click)="addIcon()">Add new Icon</button>
+            <button *ngIf="newIcon === null"
+              class="btn btn-outline-success" (click)="addIcon()">Add New Icon</button>
+            <button *ngIf="newIcon !== null"
+              class="btn btn-outline-secondary" (click)="cancelIcon()">Cancel New Icon</button>
           </div>
         </div>
       </div>
@@ -117,17 +123,124 @@
       </div>
     </div>
     <div *ngIf="editIcon !== null" class="row mb-3">
+      <div class="col-md-1">
+        <span class="step">Audit</span>
+      </div>
+      <div class="col-md-11">
+        <blockquote>
+          If a mistake is made please use the audit logs below to view and revert the change.
+          This will make another audit entry.
+        </blockquote>
+        <mdi-modification-table [icon]="editIcon"></mdi-modification-table>
+      </div>
+    </div>
+    <div *ngIf="newIcon !== null">
+      <div class="row mb-3">
         <div class="col-md-1">
-          <span class="step">Audit</span>
+          <span class="step">Step 3</span>
         </div>
         <div class="col-md-11">
-          <blockquote>
-            If a mistake is made please use the audit logs below to view and revert the change.
-            This will make another audit entry.
-          </blockquote>
-          <mdi-modification-table [icon]="editIcon"></mdi-modification-table>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" name="name"
+                  [(value)]="newIcon.name"/>
+                <div class="alert alert-danger">Name already in use.</div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-body">
+                  <p>Read the naming guidelines. Ensure the order of the name matches existing conventions.</p>
+                  <p class="mb-0">
+                    <a class="btn btn-outline-secondary" target="_blank" href="/contribute/icon-naming">
+                      <mdi-icon name="file-document-box-outline"></mdi-icon>
+                      Naming Guidelines
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="row mb-3">
+        <div class="col-md-1">
+          <span class="step">Step 4</span>
+        </div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label>Path Data</label>
+                <textarea class="form-control" [(value)]="newIcon.data" rows="4"></textarea>
+                <div class="alert alert-danger">Invalid path data.</div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="background-color: #568EC7;">
+                <svg viewBox="0 0 24 24" style="width:90%;margin:5%;">
+                  <path [attr.d]="newIcon.data" style="fill:#FFF;"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="card">
+                <div class="card-body">
+                  <p>Font generation requires nicely optimized path data. After pasting in the SVG data click the optimize button below.</p>
+                  <p class="mb-0">
+                    <button class="btn btn-primary" (click)="optimize()">
+                      Optimize Path Data
+                    </button>
+                    <span class="ml-3" [innerText]="newIcon.getPointCount()"></span> Points
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-1">
+          <span class="step">Step 5</span>
+        </div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-4">
+              Production or Work in Progress
+              <div>[Publish | Hide from Production]</div>
+            </div>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-body">
+                  <p class="mb-0">Unpublished icons will be inserted into the database, but are hidden from the history page.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-1">
+          <span class="step">Step 6</span>
+        </div>
+        <div class="col-md-11">
+          <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-lg btn-primary">Publish Icon</button>
+            </div>
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-body">
+                  <p class="mb-0">Every new icon helps the community. Yay Open Source!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

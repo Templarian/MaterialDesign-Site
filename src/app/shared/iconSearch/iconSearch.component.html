@@ -13,6 +13,6 @@
     [ngbTypeahead]="search"
     [resultTemplate]="rt"
     [inputFormatter]="formatter"
-    [disabled]="isDisabled"
+    [disabled]="disabled || isDisabled"
     [placeholder]="isDisabled ? 'Loading...' : ''" />
 </div>
