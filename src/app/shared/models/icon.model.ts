@@ -16,6 +16,7 @@ export class Icon extends IconHelpers {
   public aliases: Alias[] = [];
   public tags: Tag[] = [];
   public styles: Style[] = [];
+  public published: boolean = true;
 
   constructor(name?: string, data?: string) {
     super();
@@ -50,5 +51,4 @@ export class Icon extends IconHelpers {
   async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none') {
     return await super.getGitHubPreview(isWorkInProgress, action);
   }
-  optimize() { super.optimize(); }
 }

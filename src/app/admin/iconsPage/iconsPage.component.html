@@ -145,8 +145,10 @@
               <div class="form-group">
                 <label>Name</label>
                 <input class="form-control" name="name"
-                  [(value)]="newIcon.name"/>
-                <div class="alert alert-danger">Name already in use.</div>
+                  #newIconName="ngModel"
+                  [(ngModel)]="newIcon.name"/>
+                <div class="alert alert-danger mt-2"
+                  *ngIf="!newIcon.validName()">Name format invalid.</div>
               </div>
             </div>
             <div class="col-md-8">
@@ -174,14 +176,15 @@
             <div class="col-md-4">
               <div class="form-group">
                 <label>Path Data</label>
-                <textarea class="form-control" [(value)]="newIcon.data" rows="4"></textarea>
-                <div class="alert alert-danger">Invalid path data.</div>
+                <textarea class="form-control" [(ngModel)]="newIcon.data" rows="4"
+                  (change)="pathChange()"></textarea>
+                <div class="alert alert-danger mt-2">Invalid path data.</div>
               </div>
             </div>
             <div class="col-md-3">
               <div class="card" style="background-color: #568EC7;">
                 <svg viewBox="0 0 24 24" style="width:90%;margin:5%;">
-                  <path [attr.d]="newIcon.data" style="fill:#FFF;"></path>
+                  <path [attr.d]="newIcon.data" style="fill:#FFF;" (error)="pathError()"></path>
                 </svg>
               </div>
             </div>
@@ -208,8 +211,23 @@
         <div class="col-md-11">
           <div class="row">
             <div class="col-md-4">
-              Production or Work in Progress
-              <div>[Publish | Hide from Production]</div>
+              <div class="mb-2">Production or Work in Progress</div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn"
+                  [ngClass]="{'btn-primary active': newIcon.published, 'btn-outline-primary': !newIcon.published}">
+                  <input type="radio"
+                    [value]="true"
+                    [(ngModel)]="newIcon.published"
+                    name="production" autocomplete="off"> Production
+                </label>
+                <label class="btn"
+                  [ngClass]="{'btn-primary active': !newIcon.published, 'btn-outline-primary': newIcon.published}">
+                  <input type="radio"
+                    [value]="false"
+                    [(ngModel)]="newIcon.published"
+                    name="production" autocomplete="off"> Work in Progress
+                </label>
+              </div>
             </div>
             <div class="col-md-8">
               <div class="card">

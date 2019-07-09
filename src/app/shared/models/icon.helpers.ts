@@ -79,9 +79,10 @@ export abstract class IconHelpers {
     return 0;
   }
 
-  optimize() {
+  optimize(): boolean {
     const errors = [];
     this.errors = errors;
+    return true;
   }
 
   getWithoutArcs() {
@@ -123,6 +124,22 @@ export abstract class IconHelpers {
     path.setAttribute('d', this.data);
     path.setAttribute('transform', `translate(${x},${y}) scale(${scale},${scale})`)
     return path;
+  }
+
+  validName(): boolean {
+    if (this.name === '') {
+      return false;
+    }
+    if (this.name.match(/-$/)) {
+      return false;
+    }
+    if (this.name.match(/outline-/)) {
+      return false;
+    }
+    if (!(this.name.match(/^[a-z0-9-]+$/))) {
+      return false;
+    }
+    return true;
   }
 
   async getGitHubPreview(isWorkInProgress: boolean, action: string = 'none'): Promise<HTMLImageElement> {

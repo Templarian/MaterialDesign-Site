@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Package } from 'app/shared/models/package.model';
@@ -35,7 +35,7 @@ export class AdminIconsPageComponent {
       this.selectedPackage = this.packages[0];
     }
   }
-
+  @ViewChild('newIconName') newIconName;
   public packages: Package[] = [];
   public selectedPackage: Package = null;
   public icons: Icon[];
@@ -51,6 +51,15 @@ export class AdminIconsPageComponent {
   async ngOnInit() {
     await this.loginService.isAuthed();
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
+  }
+
+  ngAfterViewInit(){
+    this.newIconName.update
+          .debounceTime(500)
+          .distinctUntilChanged() 
+          .subscribe(model => (value)=>{
+                console.log('delayed key press value',value);
+           });
   }
 
   goBack() {
@@ -81,6 +90,7 @@ export class AdminIconsPageComponent {
     this.editIcon = null;
     this.selectedIcon = null;
     this.newIcon = new Icon("", this.noIcon);
+    this.newIcon.published = false;
   }
 
   cancelIcon() {
@@ -117,7 +127,17 @@ export class AdminIconsPageComponent {
   }
 
   optimize() {
-    this.newIcon.optimize();
+    if (this.newIcon.optimize()) {
+      
+    }
+  }
+
+  pathChange(e) {
+    console.log(this.newIcon.data);
+  }
+
+  pathError(e) {
+    console.log(e, 'error');
   }
 
 }
