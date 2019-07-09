@@ -127,9 +127,7 @@ export class AdminIconsPageComponent {
   }
 
   optimize() {
-    if (this.newIcon.optimize()) {
-      
-    }
+    this.newIcon.data = this.newIcon.optimizePath();
   }
 
   pathChange(e) {
