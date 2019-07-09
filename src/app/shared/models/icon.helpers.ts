@@ -127,16 +127,11 @@ export abstract class IconHelpers {
   }
 
   validName(): boolean {
-    if (this.name === '') {
-      return false;
-    }
-    if (this.name.match(/-$/)) {
-      return false;
-    }
-    if (this.name.match(/outline-/)) {
-      return false;
-    }
-    if (!(this.name.match(/^[a-z0-9-]+$/))) {
+    if (this.name === ''
+      || this.name.match(/-$/)
+      || this.name.match(/^-/)
+      || this.name.match(/outline-/)
+      || !(this.name.match(/^[a-z0-9-]+$/))) {
       return false;
     }
     return true;
