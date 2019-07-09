@@ -42,6 +42,9 @@ export class Icon extends IconHelpers {
     if (icon.styles) {
       this.styles = icon.styles.map(s => new Style().from(s));
     }
+    if (typeof icon.published === 'boolean') {
+      this.published = icon.published;
+    } 
     return this;
   }
 
