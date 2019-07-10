@@ -90,12 +90,18 @@ export class AdminIconsPageComponent {
     this.editIcon = null;
     this.selectedIcon = null;
     this.newIcon = new Icon("", this.noIcon);
+    this.newIcon.packageId = this.selectedPackage.id;
     this.newIcon.published = false;
   }
 
   async submitIcon() {
-    await this.iconService.addIcon(this.newIcon);
-    this.cancelIcon();
+    const icon = await this.iconService.getIconByName(this.newIcon.packageId, this.newIcon.name);
+    if (icon) {
+      alert('Icon Exists!');
+    } else {
+      //await this.iconService.addIcon(this.newIcon);
+      //this.cancelIcon();
+    }
   }
 
   cancelIcon() {
