@@ -93,6 +93,11 @@ export class AdminIconsPageComponent {
     this.newIcon.published = false;
   }
 
+  async submitIcon() {
+    await this.iconService.addIcon(this.newIcon);
+    this.cancelIcon();
+  }
+
   cancelIcon() {
     this.newIcon = null;
   }
