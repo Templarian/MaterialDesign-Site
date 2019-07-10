@@ -95,16 +95,17 @@ export class AdminIconsPageComponent {
   }
 
   async submitIcon() {
-    const icon = await this.iconService.getIconByName(this.newIcon.packageId, this.newIcon.name);
-    if (icon) {
-      alert('Icon name already exists!');
-    } else {
-      try {
-        await this.iconService.addIcon(this.newIcon);
-        this.cancelIcon();
-      } catch (e) {
-        alert('Failed to add icon... for some reason?')
+    try {
+      const icon = await this.iconService.getIconByName(this.newIcon.packageId, this.newIcon.name);
+      if (icon) {
+        alert('Icon name already exists!');
+      } else {
+          await this.iconService.addIcon(this.newIcon);
+          this.cancelIcon();
       }
+    } catch (e) {
+      console.log(e);
+      alert('Failed to add icon.')
     }
   }
 
