@@ -99,8 +99,12 @@ export class AdminIconsPageComponent {
       const icon = await this.iconService.getIconByName(this.newIcon.packageId, this.newIcon.name);
       alert('Icon name already exists!');
     } catch (e) {
-        await this.iconService.addIcon(this.newIcon);
-        this.cancelIcon();
+        try {
+            await this.iconService.addIcon(this.newIcon);
+            this.cancelIcon();
+        } catch (ee) {
+            alert('Failed to add icon... not sure why.');
+        }
     }
   }
 
