@@ -105,6 +105,9 @@
           <textarea class="form-control" name="data" rows="3"
             [(ngModel)]="editIcon.data"></textarea>
           <div>
+            <span class="mr-3"><span [innerText]="editIcon.getPointCount()"></span> Points</span>
+            <button class="btn btn-outline-primary mr-2"
+              (click)="optimizeEdit()">Optimize Path Data</button>
             <button class="btn btn-primary"
               [disabled]="icon.data == '' || icon.data == editIcon.data"
               (click)="updateData()">Update</button>

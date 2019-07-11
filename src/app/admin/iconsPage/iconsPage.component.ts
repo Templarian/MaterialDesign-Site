@@ -139,6 +139,10 @@ export class AdminIconsPageComponent {
     this.loading = false;
   }
 
+  optimizeEdit() {
+    this.editIcon.data = this.editIcon.optimizePath();
+  }
+
   optimize() {
     this.newIcon.data = this.newIcon.optimizePath();
   }
