@@ -100,17 +100,28 @@
             </div>
           </div>
         </div>
-        <div class="form-group form-group-edit">
-          <label>Path Data</label>
-          <textarea class="form-control" name="data" rows="3"
-            [(ngModel)]="editIcon.data"></textarea>
-          <div>
-            <span class="mr-3"><span [innerText]="editIcon.getPointCount()"></span> Points</span>
-            <button class="btn btn-outline-primary mr-2"
-              (click)="optimizeEdit()">Optimize Path Data</button>
-            <button class="btn btn-primary"
-              [disabled]="icon.data == '' || icon.data == editIcon.data"
-              (click)="updateData()">Update</button>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card" style="background-color: #568EC7;">
+              <svg viewBox="0 0 24 24" style="width:90%;margin:5%;">
+                <path [attr.d]="editIcon.data" style="fill:#FFF;" (error)="pathError()"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="form-group form-group-edit">
+              <label>Path Data</label>
+              <textarea class="form-control" name="data" rows="3"
+                [(ngModel)]="editIcon.data"></textarea>
+              <div>
+                <span class="mr-3"><span [innerText]="editIcon.getPointCount()"></span> Points</span>
+                <button class="btn btn-outline-primary mr-2"
+                  (click)="optimizeEdit()">Optimize Path Data</button>
+                <button class="btn btn-primary"
+                  [disabled]="icon.data == '' || icon.data == editIcon.data"
+                  (click)="updateData()">Update</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="form-group">
