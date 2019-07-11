@@ -125,6 +125,16 @@ export class IconService {
     return new Icon().from(res);
   }
 
+  async updateData(icon: Icon): Promise<Icon> {
+    let res = await this.http.post<Icon>('/api/admin/icon/data', {
+      icon: {
+        id: icon.id,
+        data: icon.data
+      }
+    }).toPromise();
+    return new Icon().from(res);
+  }
+
   async toggleStyle(icon: Icon, style: Style) {
     let res = await this.http.post<Icon>('/api/admin/icon/style', {
       icon: { id: icon.id },
