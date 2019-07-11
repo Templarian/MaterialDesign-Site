@@ -84,7 +84,7 @@ export class IconService {
         data: icon.data,
         published: icon.published
       },
-      history: {
+      modification: {
         issue
       }
     }).toPromise();
