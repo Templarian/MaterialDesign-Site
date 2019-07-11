@@ -49,6 +49,9 @@ export class LoginService {
     return this.http.delete('/api/admin')
         .toPromise()
         .then(res => {
+          // Remove cache.
+          this.promiseCacheService.remove('isAuthed');
+          // Navigate
           this.router.navigateByUrl('/admin');
           return null;
         });
