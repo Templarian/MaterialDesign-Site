@@ -103,8 +103,12 @@
         <div class="form-group form-group-edit">
           <label>Path Data</label>
           <textarea class="form-control" name="data" rows="3"
-            [(value)]="editIcon.data"></textarea>
-          <div><button class="btn btn-primary" (click)="updateData()">Update</button></div>
+            [(ngModel)]="editIcon.data"></textarea>
+          <div>
+            <button class="btn btn-primary"
+              [disabled]="icon.data == '' || icon.data == editIcon.data"
+              (click)="updateData()">Update</button>
+          </div>
         </div>
         <div class="form-group">
           <label>Styles</label>

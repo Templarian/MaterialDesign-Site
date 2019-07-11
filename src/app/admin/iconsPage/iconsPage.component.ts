@@ -54,15 +54,6 @@ export class AdminIconsPageComponent {
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
   }
 
-  ngAfterViewInit(){
-    this.newIconName.update
-          .debounceTime(500)
-          .distinctUntilChanged() 
-          .subscribe(model => (value)=>{
-                console.log('delayed key press value',value);
-           });
-  }
-
   goBack() {
     this.router.navigateByUrl('/admin/index')
   }
@@ -116,6 +107,11 @@ export class AdminIconsPageComponent {
 
   async updateDescription() {
     this.icon = await this.iconService.updateDescription(this.editIcon);
+    this.editIcon = new Icon().from(this.icon);
+  }
+
+  async updateData() {
+    this.icon = await this.iconService.updateData(this.editIcon);
     this.editIcon = new Icon().from(this.icon);
   }
 
