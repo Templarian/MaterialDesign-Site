@@ -111,6 +111,7 @@ export class AdminIconsPageComponent {
 
   cancelIcon() {
     this.newIcon = null;
+    this.issue = null;
   }
 
   async updateDescription() {
