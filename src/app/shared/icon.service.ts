@@ -75,7 +75,7 @@ export class IconService {
     return res.map(i => new Icon().from(i));
   }
 
-  async addIcon(icon: Icon): Promise<Icon> {
+  async addIcon(icon: Icon, issue: string): Promise<Icon> {
     let res = await this.http.post<Icon>('/api/admin/icon', {
       icon: {
         packageId: icon.packageId,
@@ -83,6 +83,9 @@ export class IconService {
         description: icon.description,
         data: icon.data,
         published: icon.published
+      },
+      history: {
+        issue
       }
     }).toPromise();
     return new Icon().from(res);

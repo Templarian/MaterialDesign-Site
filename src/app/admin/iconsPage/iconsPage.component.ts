@@ -46,6 +46,7 @@ export class AdminIconsPageComponent {
   public styles: Style[] = null;
   public loading: boolean = true;
   public baseIcon: Icon = null;
+  public issue: string = null;
   private noIcon = 'M0,0H24V24H0V0M2,2V22H22V2H2M11,5H13V15H11V5M11,17H13V19H11V17Z';
 
   async ngOnInit() {
@@ -100,7 +101,7 @@ export class AdminIconsPageComponent {
       alert('Icon name already exists!');
     } catch (e) {
       try {
-        await this.iconService.addIcon(this.newIcon);
+        await this.iconService.addIcon(this.newIcon, this.issue);
         this.cancelIcon();
       } catch (ee) {
         alert('Failed to add icon... not sure why.');

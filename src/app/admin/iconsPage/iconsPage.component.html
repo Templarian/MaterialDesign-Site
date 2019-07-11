@@ -270,7 +270,12 @@
                 </label>
               </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-3">
+              <label>GitHub Issue <small>(optional)</small></label>
+              <input class="form-control" name="issue"
+                [(ngModel)]="issue"/>
+            </div>
+            <div class="col-md-5">
               <div class="card">
                 <div class="card-body">
                   <p class="mb-0">Unpublished icons will be inserted into the database, but are hidden from the history page.</p>
