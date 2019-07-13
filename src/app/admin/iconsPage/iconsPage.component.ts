@@ -140,14 +140,14 @@ export class AdminIconsPageComponent {
   }
 
   optimizeEdit() {
-    this.editIcon.data = this.editIcon.optimizePath();
-  }
-
-  optimize() {
-    // this.newIcon.data = this.newIcon.optimizePath();
+    // this.editIcon.data = this.editIcon.optimizePath();
     this.iconService.optimizeData(this.editIcon).then((result) => {
       console.log(result);
     });
+  }
+
+  optimize() {
+    this.newIcon.data = this.newIcon.optimizePath();
   }
 
   pathChange(e) {
