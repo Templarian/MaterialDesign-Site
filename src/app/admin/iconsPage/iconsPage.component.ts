@@ -148,6 +148,7 @@ export class AdminIconsPageComponent {
   }
 
   expand(data: string): string {
+    // Expand Code
     data = data.replace(/A([^A-Z]+)/g, (m, p) => {
       return p.replace(/(([^ ]+ ){6}[^ ]+ ?)/g, m => `A${m.trim()}`);
     });
