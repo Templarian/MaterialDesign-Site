@@ -32,7 +32,9 @@ export class Icon extends IconHelpers {
     this.name = icon.name;
     this.description = icon.description;
     this.data = icon.data;
-    this.user = new User().from(icon.user);
+    if (icon.user) {
+      this.user = new User().from(icon.user);
+    }
     if (icon.aliases) {
       this.aliases = icon.aliases.map(a => new Alias().from(a));
     }
