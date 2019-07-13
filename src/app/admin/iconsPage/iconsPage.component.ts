@@ -140,46 +140,30 @@ export class AdminIconsPageComponent {
   }
 
   optimizeEdit() {
-    // this.editIcon.data = this.editIcon.optimizePath();
     this.iconService.optimizeData(this.editIcon).then((icon) => {
-      const data = this.expand(icon.data);
-      this.editIcon.data = data;
+      this.editIcon.data = icon.data;
+      this.editIcon.expand();
+      this.editIcon.cleanRounding();
     });
-  }
-
-  expand(data: string): string {
-    // Expand Code
-    data = data.replace(/A([^A-Z]+)/g, (m, p) => {
-      return p.replace(/(([^ ]+ ){6}[^ ]+ ?)/g, m => `A${m.trim()}`);
-    });
-    data = data.replace(/C([^A-Z]+)/g, (m, p) => {
-      return p.replace(/(([^ ]+ ){5}[^ ]+ ?)/g, m => `C${m.trim()}`);
-    });
-    data = data.replace(/L([^A-Z]+)/g, (m, p) => {
-      return p.replace(/(([^ ]+ ){1}[^ ]+ ?)/g, m => `L${m.trim()}`);
-    });
-    return data;
   }
 
   optimize() {
-    // this.newIcon.data = this.newIcon.optimizePath();
     this.iconService.optimizeData(this.newIcon).then((icon) => {
-      const data = this.expand(icon.data);
-      this.newIcon.data = data;
+      this.newIcon.data = icon.data;
+      this.newIcon.expand();
+      this.newIcon.cleanRounding();
     });
   }
 
   validEditPath() {
-    if (this.editIcon.data.match(/A/)
-      || this.editIcon.data.match(/S/)) {
+    if (this.editIcon.data.match(/S/)) {
       return false;
     }
     return true;
   }
 
   validPath() {
-    if (this.newIcon.data.match(/A/)
-      || this.newIcon.data.match(/S/)) {
+    if (this.newIcon.data.match(/S/)) {
       return false;
     }
     return true;

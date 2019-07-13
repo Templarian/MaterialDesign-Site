@@ -342,7 +342,8 @@ export abstract class IconHelpers {
     return path;
   }
 
-  cleanRounding(text) {
+  cleanRounding() {
+    var text = this.data;
     text = text.replace(/-?\d+.\d+e-\d+/g, '0'); // e notation
     text = text.replace(/Z[ ]*M/g, 'M'); // 1 continous path only for font!
     text = text.replace(/(\d+)\.(\d{2,})/g, function (a, b, c) {
@@ -364,13 +365,27 @@ export abstract class IconHelpers {
         }
         return a;
     });
-    return text;
+    this.data = text;
   }
 
-  optimizePath() {
-      var data = this.data;
-      var parts = this.optimize(this.parsePathString(this.cleanRounding(this.convertToAbsolute(data))))
-      return this.partsToPath(parts);
+  // optimizePath() {
+  //    var data = this.data;
+  //    var parts = this.optimize(this.parsePathString(this.cleanRounding(this.convertToAbsolute(data))))
+  //    return this.partsToPath(parts);
+  // }
+
+  expand() {
+    var data = this.data;
+    data = data.replace(/A([^A-Z]+)/g, (m, p) => {
+      return p.replace(/(([^ ]+ ){6}[^ ]+ ?)/g, m => `A${m.trim()}`);
+    });
+    data = data.replace(/C([^A-Z]+)/g, (m, p) => {
+      return p.replace(/(([^ ]+ ){5}[^ ]+ ?)/g, m => `C${m.trim()}`);
+    });
+    data = data.replace(/L([^A-Z]+)/g, (m, p) => {
+      return p.replace(/(([^ ]+ ){1}[^ ]+ ?)/g, m => `L${m.trim()}`);
+    });
+    this.data = data;
   }
 
   parsePathString(pathString) {
