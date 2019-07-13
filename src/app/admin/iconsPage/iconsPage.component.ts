@@ -142,7 +142,14 @@ export class AdminIconsPageComponent {
   optimizeEdit() {
     // this.editIcon.data = this.editIcon.optimizePath();
     this.iconService.optimizeData(this.editIcon).then((icon) => {
-      this.editIcon.data = icon.data;
+      const data = this.expandArc(icon.data);
+      this.editIcon.data = data;
+    });
+  }
+
+  expandArc(data) {
+    return data.replace(/A([^A-Z]+)/g, (m, p) => {
+      return p.replace(/(([^ ]+ ){6}[^ ]+ ?)/g, m => `A${m.trim()}`);
     });
   }
 
