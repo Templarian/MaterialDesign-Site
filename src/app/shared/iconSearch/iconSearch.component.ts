@@ -62,6 +62,10 @@ export class IconSearchComponent {
   selectableIcons: Icon[] = [];
 
   async ngOnInit() {
+    if (!this.package) {
+      this.disabled = true;
+      return;
+    }
     this.iconList = await this.iconService.getAdminIcons(this.package.id);
     let ex: string[] = this.exclude.map(i => i.id);
     this.selectableIcons = this.iconList.filter(i => {

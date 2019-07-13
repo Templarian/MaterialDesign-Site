@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
+import { UserService } from 'app/shared/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Package } from 'app/shared/models/package.model';
 import { Icon } from 'app/shared/models/icon.model';
@@ -7,6 +8,7 @@ import { IconService } from 'app/shared/icon.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Style } from 'app/shared/models/style.model';
 import { SelectIconModal } from 'app/shared/selectIconModal/selectIconModal.component';
+import { User } from 'app/shared/models/user.model';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -14,7 +16,8 @@ import { SelectIconModal } from 'app/shared/selectIconModal/selectIconModal.comp
   styleUrls: ['./iconsPage.component.scss'],
   providers: [
     LoginService,
-    IconService
+    IconService,
+    UserService
   ]
 })
 export class AdminIconsPageComponent {
@@ -22,12 +25,13 @@ export class AdminIconsPageComponent {
   constructor(
     private loginService: LoginService,
     private iconService: IconService,
+    private userService: UserService,
     private modalService: NgbModal,
     private route: ActivatedRoute,
     private router: Router
   ) {
-    this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
-    this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
+    // this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
+    // this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
     const pack = this.route.snapshot.data['package'];
     if (pack) {
       this.selectedPackage = this.packages.find(p => p.id === pack.id);
@@ -37,6 +41,8 @@ export class AdminIconsPageComponent {
   }
   @ViewChild('newIconName') newIconName;
   public packages: Package[] = [];
+  public users: User[] = [];
+  public selectedUser: User = null;
   public selectedPackage: Package = null;
   public icons: Icon[];
   public selectedIcon: Icon = null;
@@ -51,6 +57,10 @@ export class AdminIconsPageComponent {
 
   async ngOnInit() {
     await this.loginService.isAuthed();
+    this.packages = await this.iconService.getAdminPackages();
+    this.selectedPackage = this.packages[0];
+    this.users = await this.userService.getAdminUsers(this.selectedPackage.id);
+    this.selectedUser = this.users[0];
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
   }
 

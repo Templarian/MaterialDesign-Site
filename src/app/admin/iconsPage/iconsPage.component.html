@@ -20,12 +20,21 @@
           <select
             [disabled]="newIcon !== null"
             [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
-            <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+            <option *ngFor="let p of packages" [ngValue]="p">{{p.name}} ({{p.iconCount}})</option>
+          </select>
+        </label>
+        <span class="or ml-3 mr-3">+</span>
+        <label>
+          <span class="d-block">On Behalf of User</span>
+          <select
+            [disabled]="newIcon !== null"
+            [(ngModel)]="selectedUser" (change)="selectUser()" class="custom-select">
+            <option *ngFor="let u of users" [ngValue]="u.id">{{u.github}} ({{u.iconCount}})</option>
           </select>
         </label>
       </div>
     </div>
-    <div class="row mb-3">
+    <div class="row mb-3" *ngIf="selectedPackage">
       <div class="col-md-1">
         <span class="step">Step 2</span>
       </div>

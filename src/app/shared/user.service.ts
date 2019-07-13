@@ -33,4 +33,17 @@ export class UserService {
     });
   }
 
+  async getAdminUsers(packageId: string): Promise<User[]> {
+    let res = await this.http.get<User[]>('/api/admin/user', {
+      params: {
+        'packageId': packageId
+      }
+    })
+      .toPromise();
+    return res.map(i => new User().from(i)).map(u => {
+      u.base64 = 'data:image/png;base64,' + u.base64;
+      return u;
+    });
+  }
+
 }

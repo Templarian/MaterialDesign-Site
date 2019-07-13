@@ -63,6 +63,12 @@ export class IconService {
     return new Icon().from(res);
   }
 
+  async getAdminPackages(): Promise<Package[]> {
+    let res = await this.http.get<Package[]>(`/api/admin/package`)
+      .toPromise();
+    return res.map(p => new Package().from(p));
+  }
+
   async getAdminIcons(packageId: string): Promise<Icon[]> {
     let res = await this.http.get<Package>(`/api/admin/package/${packageId}`)
       .toPromise();
