@@ -30,8 +30,6 @@ export class AdminIconsPageComponent {
     private route: ActivatedRoute,
     private router: Router
   ) {
-    // this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
-    // this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
     const pack = this.route.snapshot.data['package'];
     if (pack) {
       this.selectedPackage = this.packages.find(p => p.id === pack.id);
@@ -73,7 +71,10 @@ export class AdminIconsPageComponent {
   }
 
   async selectPackage() {
-    // Icons
+    // User Select
+    this.users = await this.userService.getAdminUsers(this.selectedPackage.id);
+    this.selectedUser = this.users[0];
+    // Icons Search component is smart now
     // this.icons = await this.iconService.getAdminIcons(this.selectedPackage.id);
     // this.selectedIcon = this.icons[0];
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
