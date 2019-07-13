@@ -80,6 +80,10 @@ export class AdminIconsPageComponent {
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
   }
 
+  async selectUser() {
+
+  }
+
   async selectIcon() {
     this.loading = true;
     this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
