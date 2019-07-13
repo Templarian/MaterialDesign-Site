@@ -11,7 +11,6 @@ type IconError = {
 export abstract class IconHelpers {
 
   constructor() {
-
     this.pathCommand = new RegExp("([a-z])["
       + this.spaces
       + ",]*((-?\\d*\\.?\\d*(?:e[\\-+]?\\d+)?["
@@ -22,7 +21,6 @@ export abstract class IconHelpers {
     this.pathValues = new RegExp("(-?\\d*\\.?\\d*(?:e[\\-+]?\\d+)?)["
       + this.spaces + "]*,?["
       + this.spaces + "]*", "ig");
-
   }
 
   private spaces: string = "\x09\x0a\x0b\x0c\x0d\x20\xa0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000\u2028\u2029";
@@ -370,7 +368,8 @@ export abstract class IconHelpers {
   }
 
   optimizePath() {
-      var parts = this.optimize(this.parsePathString(this.cleanRounding(this.convertToAbsolute(this.data))))
+      var data = this.data;
+      var parts = this.optimize(this.parsePathString(this.cleanRounding(this.convertToAbsolute(data))))
       return this.partsToPath(parts);
   }
 

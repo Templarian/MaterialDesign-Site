@@ -144,7 +144,10 @@ export class AdminIconsPageComponent {
   }
 
   optimize() {
-    this.newIcon.data = this.newIcon.optimizePath();
+    // this.newIcon.data = this.newIcon.optimizePath();
+    this.iconService.optimizeData(this.editIcon).then((result) => {
+      console.log(result);
+    });
   }
 
   pathChange(e) {
