@@ -141,8 +141,8 @@ export class AdminIconsPageComponent {
 
   optimizeEdit() {
     // this.editIcon.data = this.editIcon.optimizePath();
-    this.iconService.optimizeData(this.editIcon).then((result) => {
-      console.log(result);
+    this.iconService.optimizeData(this.editIcon).then((icon) => {
+      this.editIcon.data = icon.data;
     });
   }
 
