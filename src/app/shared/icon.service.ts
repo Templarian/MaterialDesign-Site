@@ -9,6 +9,7 @@ import { PromiseCache, CacheParam } from 'app/shared/promiseCache.decorator';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
 import { Tag } from 'app/shared/models/tag.model';
 import { Style } from './models/style.model';
+import { User } from './models/user.model';
 
 @Injectable()
 export class IconService {
@@ -81,8 +82,8 @@ export class IconService {
     return res.map(i => new Icon().from(i));
   }
 
-  async addIcon(icon: Icon, issue: string): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/icon', {
+  async addIcon(icon: Icon, user?: User, issue?: string): Promise<Icon> {
+    const body: any = {
       icon: {
         packageId: icon.packageId,
         name: icon.name,
@@ -90,10 +91,10 @@ export class IconService {
         data: icon.data,
         published: icon.published
       },
-      modification: {
-        issue
-      }
-    }).toPromise();
+    };
+    if (user) { body.user = { id: user.id }; }
+    if (issue) { body.modification = { issue }; }
+    let res = await this.http.post<Icon>('/api/admin/icon', body).toPromise();
     return new Icon().from(res);
   }
 
@@ -121,23 +122,27 @@ export class IconService {
     return new Icon().from(res);
   }
 
-  async updateDescription(icon: Icon): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/icon/description', {
+  async updateDescription(icon: Icon, user?: User): Promise<Icon> {
+    const body: any = {
       icon: {
         id: icon.id,
         description: icon.description
       }
-    }).toPromise();
+    };
+    if (user) { body.user = { id: user.id }};
+    const res = await this.http.post<Icon>('/api/admin/icon/description', body).toPromise();
     return new Icon().from(res);
   }
 
-  async updateData(icon: Icon): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/icon/data', {
+  async updateData(icon: Icon, user?: User): Promise<Icon> {
+    const body: any = {
       icon: {
         id: icon.id,
-        data: icon.data
+        description: icon.description
       }
-    }).toPromise();
+    };
+    if (user) { body.user = { id: user.id }};
+    const res = await this.http.post<Icon>('/api/admin/icon/data', body).toPromise();
     return new Icon().from(res);
   }
 

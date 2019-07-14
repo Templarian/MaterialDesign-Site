@@ -108,7 +108,7 @@ export class AdminIconsPageComponent {
       alert('Icon name already exists!');
     } catch (e) {
       try {
-        await this.iconService.addIcon(this.newIcon, this.issue);
+        await this.iconService.addIcon(this.newIcon, this.selectedUser, this.issue);
         this.cancelIcon();
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
@@ -122,12 +122,12 @@ export class AdminIconsPageComponent {
   }
 
   async updateDescription() {
-    this.icon = await this.iconService.updateDescription(this.editIcon);
+    this.icon = await this.iconService.updateDescription(this.editIcon, this.selectedUser);
     this.editIcon = new Icon().from(this.icon);
   }
 
   async updateData() {
-    this.icon = await this.iconService.updateData(this.editIcon);
+    this.icon = await this.iconService.updateData(this.editIcon, this.selectedUser);
     this.editIcon = new Icon().from(this.icon);
   }
 
