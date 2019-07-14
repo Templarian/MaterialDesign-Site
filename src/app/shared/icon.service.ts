@@ -138,7 +138,7 @@ export class IconService {
     const body: any = {
       icon: {
         id: icon.id,
-        description: icon.description
+        data: icon.data
       }
     };
     if (user) { body.user = { id: user.id }};
