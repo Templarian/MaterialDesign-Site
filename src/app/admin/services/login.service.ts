@@ -4,6 +4,7 @@ import { Router, Route, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { PromiseCache } from 'app/shared/promiseCache.decorator';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
+import { User } from 'app/shared/models/user.model';
 
 @Injectable()
 export class LoginService {
@@ -43,6 +44,12 @@ export class LoginService {
           }
           return isAuthed;
         });
+  }
+
+  async getAdmin(): Promise<User> {
+    let res = await this.http.get<User>('/api/admin/current')
+      .toPromise();
+    return new User().from(res);
   }
 
   logout (): Promise<boolean> {

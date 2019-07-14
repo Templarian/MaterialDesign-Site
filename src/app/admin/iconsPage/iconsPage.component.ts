@@ -58,7 +58,8 @@ export class AdminIconsPageComponent {
     this.packages = await this.iconService.getAdminPackages();
     this.selectedPackage = this.packages[0];
     this.users = await this.userService.getAdminUsers(this.selectedPackage.id);
-    this.selectedUser = this.users[0];
+    const currentUser = await this.loginService.getAdmin();
+    this.selectedUser = this.users.find(u => u.id === currentUser.id);
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
   }
 
