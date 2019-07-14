@@ -29,7 +29,7 @@
           <select
             [disabled]="newIcon !== null"
             [(ngModel)]="selectedUser" (change)="selectUser()" class="custom-select">
-            <option *ngFor="let u of users" [ngValue]="u.id">{{u.github}} ({{u.iconCount}})</option>
+            <option *ngFor="let u of users" [ngValue]="u">{{u.github}} ({{u.iconCount}})</option>
           </select>
         </label>
       </div>
