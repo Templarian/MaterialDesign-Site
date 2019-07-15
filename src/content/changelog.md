@@ -33,6 +33,7 @@
 
 ## Version 3.6.95
 
+- 100 New Icons
 - Codepoint Updates
   - `FDD0` -> `FE54` - `screw-lag`
   - `FDD1` -> `FE55` - `screw-machine-flat-top`
