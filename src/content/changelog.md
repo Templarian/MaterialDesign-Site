@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 3.8.95
+
+- 100 New Icons
+- Renamed `weather-partlycloudy` to `weather-partly-cloudy`
+- Updated `facebook-messenger`
+- Updated `waves`
+- Updated `weather-rainy`
+- Updated `flag-outline`
+- Updated `augmented-reality`
+- Updated `reload`
+
 ## Version 3.7.95
 
 - 100 New Icons
