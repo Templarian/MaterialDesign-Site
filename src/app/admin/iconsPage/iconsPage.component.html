@@ -324,7 +324,7 @@
             <div class="col-md-4">
                 <button class="btn btn-lg btn-primary"
                   (click)="submitIcon()"
-                  [disabled]="!newIcon.validName() || null">Publish Icon</button>
+                  [disabled]="!validPath() || !newIcon.validName() || null">Publish Icon</button>
             </div>
             <div class="col-md-8">
               <div class="card">
