@@ -87,6 +87,14 @@ export class AdminIconsPageComponent {
     this.styles = await this.iconService.getStyles(this.selectedPackage.id);
   }
 
+  selectFont() {
+
+  }
+
+  selectFontVersion() {
+    
+  }
+
   async selectUser() {
 
   }
