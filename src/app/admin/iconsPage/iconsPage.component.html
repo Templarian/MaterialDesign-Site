@@ -333,7 +333,6 @@
           <label>
               <span class="d-block">Select a Version</span>
               <select
-                [disabled]="newIcon !== null"
                 [(ngModel)]="selectedFontVersion" (change)="selectFontVersion()" class="custom-select">
                 <option *ngFor="let v of versions" [ngValue]="v">{{v.major}}.{{v.minor}}.{{v.patch}} ({{v.iconCount}})</option>
               </select>
