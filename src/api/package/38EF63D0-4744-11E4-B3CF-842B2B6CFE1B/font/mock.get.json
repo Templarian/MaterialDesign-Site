@@ -1,0 +1,258 @@
+[
+  {
+    "id": "D051337E-BC7E-11E5-A4E9-842B2B6CFE1B",
+    "name": "Material Design Icons",
+    "description": "The complete material design icon pack in a single font.",
+    "prefix": "mdi",
+    "fontName": "Material Design Icons",
+    "fileName": "materialdesignicons",
+    "fontFamily": "materialdesignicons",
+    "fontWeight": "normal",
+    "price": null,
+    "versions": [
+      {
+        "id": "937e4a4e-a455-11e9-aab8-94188269ec50",
+        "major": 3,
+        "minor": 8,
+        "patch": 95,
+        "description": "Release `v3.8.95`",
+        "date": "2019-07-12 09:28:05",
+        "released": true
+      },
+      {
+        "id": "31f6f641-94b4-11e9-aab8-94188269ec50",
+        "major": 3,
+        "minor": 7,
+        "patch": 95,
+        "description": "Release `v3.7.95`",
+        "date": "2019-06-19 09:28:05",
+        "released": true
+      },
+      {
+        "id": "f32eda4f-92ff-11e9-aab8-94188269ec50",
+        "major": 3,
+        "minor": 7,
+        "patch": 94,
+        "description": "Release `v3.7.94`",
+        "date": "2019-06-19 09:28:05",
+        "released": true
+      },
+      {
+        "id": "90f66d96-519a-11e9-a360-94188269ec50",
+        "major": 3,
+        "minor": 6,
+        "patch": 95,
+        "description": "Release `v3.6.95`",
+        "date": "2019-02-25 09:28:05",
+        "released": true
+      },
+      {
+        "id": "eaa8fbd0-3983-11e9-92de-94188269ec50",
+        "major": 3,
+        "minor": 5,
+        "patch": 95,
+        "description": "Release `v3.5.95`",
+        "date": "2019-02-25 09:28:05",
+        "released": true
+      },
+      {
+        "id": "272ca265-34bb-11e9-92de-94188269ec50",
+        "major": 3,
+        "minor": 5,
+        "patch": 94,
+        "description": "Release `v3.5.94`",
+        "date": "2019-02-19 09:28:05",
+        "released": true
+      },
+      {
+        "id": "22691b45-2291-11e9-92de-94188269ec50",
+        "major": 3,
+        "minor": 4,
+        "patch": 93,
+        "description": "Release `v3.4.93`",
+        "date": "2019-01-28 09:28:05",
+        "released": true
+      },
+      {
+        "id": "01932bdd-fab9-11e8-92de-94188269ec50",
+        "major": 3,
+        "minor": 3,
+        "patch": 92,
+        "description": "Release `v3.3.92`",
+        "date": "2018-12-31 09:28:05",
+        "released": true
+      },
+      {
+        "id": "b311caf3-f5b2-11e8-92de-94188269ec50",
+        "major": 3,
+        "minor": 2,
+        "patch": 89,
+        "description": "Release `v3.2.89`",
+        "date": "2018-12-01 09:28:05",
+        "released": true
+      },
+      {
+        "id": "4757e0a8-d360-11e8-a666-94188269ec50",
+        "major": 3,
+        "minor": 0,
+        "patch": 39,
+        "description": "Release `v3.0.39`",
+        "date": "2018-10-19 09:28:05",
+        "released": true
+      },
+      {
+        "id": "1dcd1a2a-baee-11e8-9f27-94188269ec50",
+        "major": 2,
+        "minor": 8,
+        "patch": 94,
+        "description": "Release `v2.8.94`",
+        "date": "2018-09-17 09:28:05",
+        "released": true
+      },
+      {
+        "id": "340b6e0a-ae1d-11e8-9f27-94188269ec50",
+        "major": 2,
+        "minor": 7,
+        "patch": 94,
+        "description": "Release `v2.7.94`",
+        "date": "2018-09-01 09:28:05",
+        "released": true
+      },
+      {
+        "id": "f5689fa3-9ab4-11e8-aa4e-94188269ec50",
+        "major": 2,
+        "minor": 6,
+        "patch": 95,
+        "description": "Release `v2.6.95`",
+        "date": "2018-08-07 09:28:05",
+        "released": true
+      },
+      {
+        "id": "9eeb0d55-8323-11e8-aa4e-94188269ec50",
+        "major": 2,
+        "minor": 5,
+        "patch": 94,
+        "description": "Release `v2.5.94`",
+        "date": "2018-07-08 09:28:05",
+        "released": true
+      },
+      {
+        "id": "a8141358-5d70-11e8-9326-94188269ec50",
+        "major": 2,
+        "minor": 4,
+        "patch": 85,
+        "description": "Release `v2.4.85`",
+        "date": "2018-05-22 09:28:05",
+        "released": true
+      },
+      {
+        "id": "e58fee8d-437f-11e8-b914-94188269ec50",
+        "major": 2,
+        "minor": 3,
+        "patch": 54,
+        "description": "Fix for 2.3.50 `@mdi\/*` npm",
+        "date": "2018-04-18 09:28:05",
+        "released": true
+      },
+      {
+        "id": "89b25452-418e-11e8-b914-94188269ec50",
+        "major": 2,
+        "minor": 3,
+        "patch": 50,
+        "description": "Second release to `@mdi\/*` npm",
+        "date": "2018-04-16 09:28:05",
+        "released": true
+      },
+      {
+        "id": "db36a378-2f75-11e8-b914-94188269ec50",
+        "major": 2,
+        "minor": 2,
+        "patch": 43,
+        "description": "First release to `@mdi\/*` npm",
+        "date": "2018-03-24 09:28:05",
+        "released": true
+      },
+      {
+        "id": "20b96d7a-1fd1-11e8-b914-94188269ec50",
+        "major": 2,
+        "minor": 1,
+        "patch": 99,
+        "description": "New release.",
+        "date": "2018-03-01 09:28:05",
+        "released": true
+      },
+      {
+        "id": "e4c04e0a-d733-11e7-bf5c-94188269ec50",
+        "major": 2,
+        "minor": 1,
+        "patch": 19,
+        "description": "New release.",
+        "date": "2017-12-02 09:28:05",
+        "released": true
+      },
+      {
+        "id": "d2307483-6b5f-11e7-8522-94188269ec50",
+        "major": 2,
+        "minor": 0,
+        "patch": 46,
+        "description": "New release.",
+        "date": "2017-07-17 09:28:05",
+        "released": true
+      },
+      {
+        "id": "546dff88-ec90-11e6-a586-842b2b6cfe1b",
+        "major": 1,
+        "minor": 9,
+        "patch": 32,
+        "description": "New release.",
+        "date": "2017-01-16 09:28:05",
+        "released": true
+      },
+      {
+        "id": "8c22b7a0-dc66-11e6-a586-842b2b6cfe1b",
+        "major": 1,
+        "minor": 8,
+        "patch": 36,
+        "description": "New release.",
+        "date": "2017-01-16 09:28:05",
+        "released": true
+      },
+      {
+        "id": "8b43a86a-695e-11e6-8c7d-842b2b6cfe1b",
+        "major": 1,
+        "minor": 7,
+        "patch": 22,
+        "description": "New release.",
+        "date": "2016-06-23 09:28:05",
+        "released": true
+      },
+      {
+        "id": "3c56728a-4322-11e6-8c7d-842b2b6cfe1b",
+        "major": 1,
+        "minor": 7,
+        "patch": 12,
+        "description": "New release.",
+        "date": "2016-06-08 09:28:05",
+        "released": true
+      },
+      {
+        "id": "656896C8-E0E2-11E5-A47A-842B2B6CFE1B",
+        "major": 1,
+        "minor": 6,
+        "patch": 50,
+        "description": "New release.",
+        "date": "2016-03-03 09:28:05",
+        "released": true
+      },
+      {
+        "id": "95C44106-BD73-11E5-A4E9-842B2B6CFE1B",
+        "major": 1,
+        "minor": 5,
+        "patch": 54,
+        "description": "First release to include code points.",
+        "date": "2016-01-17 09:28:05",
+        "released": true
+      }
+    ]
+  }
+]

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Icon } from 'app/shared/models/icon.model';
@@ -10,6 +9,7 @@ import { PromiseCacheService } from 'app/shared/promiseCache.service';
 import { Tag } from 'app/shared/models/tag.model';
 import { Style } from './models/style.model';
 import { User } from './models/user.model';
+import { Font } from './models/font.model';
 
 @Injectable()
 export class IconService {
@@ -70,10 +70,16 @@ export class IconService {
     return res.map(p => new Package().from(p));
   }
 
-  async getAdminIcons(packageId: string): Promise<Icon[]> {
-    let res = await this.http.get<Package>(`/api/admin/package/${packageId}`)
+  async getAdminFont(packageId: string): Promise<Font[]> {
+    let res = await this.http.get<Font[]>(`/api/admin/package/${packageId}/font`)
       .toPromise();
-    return res.icons.map(i => new Icon().from(i));
+    return res.map(f => new Font().from(f));
+  }
+
+  async getAdminIcons(packageId: string): Promise<Icon[]> {
+    let res = await this.http.get<Icon[]>(`/api/admin/package/${packageId}/icon`)
+      .toPromise();
+    return res.map(i => new Icon().from(i));
   }
 
   async getAdminIconsByTag(pack: Package, tag: Tag): Promise<Icon[]> {

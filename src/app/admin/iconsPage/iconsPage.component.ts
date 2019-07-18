@@ -9,6 +9,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Style } from 'app/shared/models/style.model';
 import { SelectIconModal } from 'app/shared/selectIconModal/selectIconModal.component';
 import { User } from 'app/shared/models/user.model';
+import { FontVersion } from 'app/shared/models/fontVersion.model';
+import { Font } from 'app/shared/models/font.model';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -42,6 +44,10 @@ export class AdminIconsPageComponent {
   public users: User[] = [];
   public selectedUser: User = null;
   public selectedPackage: Package = null;
+  public fonts: Font[] = [];
+  public selectedFont: Font = null;
+  public versions: FontVersion[] = [];
+  public selectedFontVersion: FontVersion = null;
   public icons: Icon[];
   public selectedIcon: Icon = null;
   public icon: Icon = null;
@@ -94,17 +100,22 @@ export class AdminIconsPageComponent {
     this.newIcon = null;
   }
 
-  addIcon() {
+  async addIcon() {
     this.editIcon = null;
     this.selectedIcon = null;
     this.newIcon = new Icon("", this.noIcon);
     this.newIcon.packageId = this.selectedPackage.id;
     this.newIcon.published = false;
+    this.fonts = await this.iconService.getAdminFont(this.selectedPackage.id);
+    this.selectedFont = this.fonts[0];
+    this.versions = this.selectedFont.versions;
+    this.selectedFontVersion = this.versions[0];
   }
 
   async submitIcon() {
     try {
       const icon = await this.iconService.getIconByName(this.newIcon.packageId, this.newIcon.name);
+      console.log(icon);
       alert('Icon name already exists!');
     } catch (e) {
       try {
