@@ -17,7 +17,7 @@ Public endpoints are visible to everyone using the website.
 
 import:/content/api-get-package.md
 
-import:/content/api-get-package-list.md
+import:/content/api-get-package-by-id.md
 
 import:/content/api-get-font-versions-by-package.md
 

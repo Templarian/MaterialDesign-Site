@@ -9,3 +9,7 @@ properties:
   description:
     type: string
     example: Material Design Icons is...
+  versions:
+    type: array
+    items:
+      $ref: '#/api/fontVersion'

@@ -19,7 +19,8 @@ properties:
     type: string
     example: "October release."
   date:
-    type: date
+    type: string
+    format: date
     example: 0
   released:
     type: boolean
