@@ -1,7 +1,7 @@
 # API Endpoints
 
 <blockquote class="alert alert-danger">
-  icon:information-outline Please do not use these endpoints to scrape the site or to build third party applications. All data is provided from the CDN through the meta.json file after every release.
+  icon:information-outline Please do not use these endpoints to scrape the site or to build third party applications. All data is provided in the <code>meta.json</code> on the <a href="https://cdn.materialdesignicons.com/{{version}}/meta.json">CDN</a> or in the <a href="https://github.com/Templarian/MaterialDesign-SVG/blob/master/meta.json">GitHub</a> repo after every release.
 </blockquote>
 
 To help others build out features for the site all the endpoints are described below.
@@ -41,7 +41,7 @@ While pretty much all data is open to the public most of the management related 
 
 import:/content/api/get-admin-package-font.md
 
-import:/content/api/get-admin-modification.md
+import:/content/api/get-admin-icon-modification.md
 
 import:/content/api/post-admin-icon-name.md
 

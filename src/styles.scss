@@ -182,7 +182,8 @@ body {
         }
     }
 
-    .tab-pane p:last-child {
+    .tab-pane p:last-child,
+    .tab-pane blockquote:last-child {
         margin-bottom: 0;
     }
 

@@ -1,5 +1,9 @@
 ### POST Admin Icon Alias
 
+```text
+POST api/admin/icon/alias
+```
+
 tabs:
 tab:post-icon-alias-description Description
 tab:post-icon-alias-request Request
