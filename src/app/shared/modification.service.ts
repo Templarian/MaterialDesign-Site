@@ -42,6 +42,20 @@ export class ModificationService {
     }).toPromise();
   }
 
+  async getAdminIconModificationsByType(
+    iconId: string,
+    modifications: ModificationType[],
+    page: number = 1,
+    size: number = 100
+  ): Promise<Modification[]> {
+    return await this.http.get<Modification[]>('/api/admin/icon/' + iconId + '/modification', {
+      params: (new HttpParams())
+        .set('modificationId', modifications.join(','))
+        .set('page', page.toString())
+        .set('size', size.toString())
+    }).toPromise();
+  }
+
   async setAssignedIssue(m: Modification) {
     return await this.http.post<Modification>('/api/admin/modification/issue', m)
       .toPromise();

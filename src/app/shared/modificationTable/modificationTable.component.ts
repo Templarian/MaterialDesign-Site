@@ -42,7 +42,7 @@ export class ModfiicationTableComponent {
     ]
 
     this.modificationsByDate = [];
-    let modifications = await this.modificationService.getIconModificationsByType(icon.id, mods, this.page, 100);
+    let modifications = await this.modificationService.getAdminIconModificationsByType(icon.id, mods, this.page, 100);
     for (let m of modifications) {
       if (this.currentDate != this.friendlyDate(new Date(m.date))) {
         this.currentDate = this.friendlyDate(new Date(m.date));
