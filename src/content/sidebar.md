@@ -70,7 +70,6 @@
     - web Last Build /build/site
   - file-tree API /contribute/site/api
     - code-braces Models and Enums /contribute/site/api/data
-    - eye Get List of Packages /contribute/site/api#get-list-of-packages
   - scale-balance Code of Conduct /code-of-conduct
 - /about
 - /license

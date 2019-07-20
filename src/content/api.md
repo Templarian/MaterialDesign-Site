@@ -19,9 +19,7 @@ import:/content/api/get-package.md
 
 import:/content/api/get-package-by-id.md
 
-import:/content/api/get-font-versions-by-package.md
-
-import:/content/api/get-icon.md
+import:/content/api/get-icon-by-id.md
 
 import:/content/api/get-icon-by-name.md
 
@@ -41,9 +39,11 @@ import:/content/api/get-icon-download.md
 
 While pretty much all data is open to the public most of the management related API's are restricted to collaborator and admin accounts.
 
+import:/content/api/get-admin-package-font.md
+
 import:/content/api/get-admin-modification.md
 
-import:/content/api/post-admin-icon-rename.md
+import:/content/api/post-admin-icon-name.md
 
 import:/content/api/post-admin-icon-description.md
 

@@ -121,7 +121,7 @@ export class IconService {
   }
 
   async rename(icon: Icon, name: string): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/icon/rename', {
+    let res = await this.http.post<Icon>('/api/admin/icon/name', {
       icon: { id: icon.id },
       name: name
     }).toPromise();
