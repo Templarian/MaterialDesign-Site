@@ -11,14 +11,18 @@
           <td style="width:1.5rem"><mdi-icon name="plus-circle"></mdi-icon></td>
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
-          <td colspan="2"></td>
-          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
+          <td colspan="3"></td>
+          <td style="width:6rem;text-align: center;"></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconDeleted">
           <td style="width:1.5rem"><mdi-icon name="delete"></mdi-icon></td>
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
           <td><code>{{entry.text}}</code></td>
+          <td style="width:4rem;text-align: center;">
+            <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+            <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconRenamed">
@@ -27,6 +31,10 @@
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
           <td><code>{{entry.nameBefore}}</code></td>
           <td><code>{{entry.nameAfter}}</code></td>
+          <td style="width:4rem;text-align: center;">
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconDescriptionModified">
@@ -35,6 +43,10 @@
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
           <td><code>{{entry.descriptionBefore}}</code></td>
           <td><code>{{entry.descriptionAfter}}</code></td>
+          <td style="width:4rem;text-align: center;">
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconModified">
@@ -44,6 +56,10 @@
             <mdi-icon-preview [path]="entry.dataBefore" [color]="'#666'"></mdi-icon-preview>
             <mdi-icon-preview [path]="entry.dataAfter"></mdi-icon-preview>
           </td>
+          <td style="width:4rem;text-align: center;">
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconAliasCreated">
@@ -51,6 +67,10 @@
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
           <td colspan="2"><code>{{entry.text}}</code></td>
+          <td style="width:4rem;text-align: center;">
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconTagCreated">
@@ -58,6 +78,10 @@
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
           <td colspan="2"><code>{{entry.text}}</code></td>
+          <td style="width:4rem;text-align: center;">
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
       </ng-container>

@@ -55,6 +55,16 @@ export class ModfiicationTableComponent {
     }
   }
 
+  async setVisible(entry: Modification) {
+    entry.isVisible = true;
+    await this.modificationService.setVisible(entry);
+  }
+
+  async setHidden(entry: Modification) {
+    entry.isVisible = false;
+    await this.modificationService.setVisible(entry);
+  }
+
   ngOnChanges(changes: SimpleChanges) {
     this.loadModifications(changes.icon.currentValue);
   }

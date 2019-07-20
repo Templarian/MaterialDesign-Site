@@ -47,4 +47,14 @@ export class ModificationService {
       .toPromise();
   }
 
+  async setVisible(m: Modification) {
+    return await this.http.post<Modification>('/api/admin/modification/visible', m)
+      .toPromise();
+  }
+
+  async setHidden(m: Modification) {
+    return await this.http.post<Modification>('/api/admin/modification/hidden', m)
+      .toPromise();
+  }
+
 }

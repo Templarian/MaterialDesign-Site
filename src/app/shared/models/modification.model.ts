@@ -16,6 +16,7 @@ export class Modification {
   public text: string;
   public date: Date;
   public issue: number;
+  public isVisible: boolean;
 
   constructor (
   ) { }
@@ -33,6 +34,7 @@ export class Modification {
     this.text = modification.text;
     this.date = modification.date;
     this.issue = modification.issue;
+    this.isVisible = modification.isVisible;
     return this;
   }
 
