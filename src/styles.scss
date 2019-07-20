@@ -182,6 +182,10 @@ body {
         }
     }
 
+    .tab-pane p:last-child {
+        margin-bottom: 0;
+    }
+
     table {
         border: 1px solid #DDD;
         width: 100%;
