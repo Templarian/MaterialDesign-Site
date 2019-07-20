@@ -7,5 +7,5 @@ GET api/package/:packageId/version
 ```yaml
 type: array
 items:
-  $ref: '#/api/version'
+  $ref: '#/api/model/version'
 ```

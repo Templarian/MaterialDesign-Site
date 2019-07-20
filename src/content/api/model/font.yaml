@@ -12,4 +12,4 @@ properties:
   versions:
     type: array
     items:
-      $ref: '#/api/fontVersion'
+      $ref: '#/api/model/fontVersion'

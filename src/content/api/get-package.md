@@ -17,7 +17,7 @@ tabContent:get-package-response
 ```yaml
 type: array
 items:
-  $ref: '#/api/package'
+  $ref: '#/api/model/package'
 ```
 
 /tabContent

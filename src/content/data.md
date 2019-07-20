@@ -59,6 +59,7 @@ class Icon {
     name: string;
     data: string;
     user: User;
+    tags: Tags[];
     aliases: Alias[];
 }
 ```
@@ -86,9 +87,39 @@ class Modification {
 
 ```typescript
 class Package {
+    id: string;
     name: string;
     width: number;
     height: number;
+    fonts: Font[];
+    icons: Icon[];
+}
+```
+
+### Font
+
+```typescript
+class Font {
+    id: string;
+    name: string;
+    fontVersions: FontVersions[];
+    iconCount: number;
+    icons: Icon[];
+}
+```
+
+### FontVersion
+
+```typescript
+class FontVersion {
+    id: string;
+    description: string;
+    major: number;
+    minor: number;
+    patch: number;
+    date: Date;
+    released: boolean;
+    iconCount: number;
     icons: Icon[];
 }
 ```
@@ -99,7 +130,7 @@ class Package {
 class Tag {
     id: string;
     name: string;
-    count: number;
+    iconCount: number;
 }
 ```
 

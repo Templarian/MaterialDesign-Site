@@ -9,5 +9,5 @@ GET api/admin/icon/:iconId/modification
 ```yaml
 type: array
 items:
-  $ref: '#/api/modification'
+  $ref: '#/api/model/modification'
 ```

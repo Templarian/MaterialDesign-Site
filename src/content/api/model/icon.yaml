@@ -24,20 +24,20 @@ properties:
     format: string
     example: M...Z
   user:
-    $ref: '#/api/user'
+    $ref: '#/api/model/user'
   aliases:
     type: array
     items:
-      $ref: '#/api/alias'
+      $ref: '#/api/model/alias'
   tags:
     type: array
     items:
-      $ref: '#/api/tag'
+      $ref: '#/api/model/tag'
   fonts:
     type: array
     items:
-      $ref: '#/api/font'
+      $ref: '#/api/model/font'
   styles:
     type: array
     items:
-      $ref: '#/api/style'
+      $ref: '#/api/model/style'

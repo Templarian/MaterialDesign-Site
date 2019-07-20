@@ -7,5 +7,5 @@ GET api/package/:packageId/:iconName
 ```
 
 ```yaml
-$ref: '#/api/icon'
+$ref: '#/api/model/icon'
 ```

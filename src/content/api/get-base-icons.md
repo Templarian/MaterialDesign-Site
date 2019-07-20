@@ -9,5 +9,5 @@ GET api/icon/:baseIconId/base
 ```yaml
 type: array
 items:
-  $ref: '#/api/icon'
+  $ref: '#/api/model/icon'
 ```

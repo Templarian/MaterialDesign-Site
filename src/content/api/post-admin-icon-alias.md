@@ -7,5 +7,5 @@ POST api/admin/icon/alias
 ```
 
 ```yaml
-$ref: '#/api/icon'
+$ref: '#/api/model/icon'
 ```

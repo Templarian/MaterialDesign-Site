@@ -9,5 +9,5 @@ GET api/:packageId/tag
 ```yaml
 type: array
 items:
-  $ref: '#/api/tag'
+  $ref: '#/api/model/tag'
 ```

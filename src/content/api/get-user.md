@@ -7,5 +7,5 @@ GET api/user/:userId
 ```
 
 ```yaml
-$ref: '#/api/user'
+$ref: '#/api/model/user'
 ```

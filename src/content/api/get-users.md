@@ -9,5 +9,5 @@ GET api/user
 ```yaml
 type: array
 items:
-  $ref: '#/api/user'
+  $ref: '#/api/model/user'
 ```

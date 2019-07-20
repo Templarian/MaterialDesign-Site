@@ -9,5 +9,5 @@ GET api/style/:packageId
 ```yaml
 type: array
 items:
-  $ref: '#/api/style'
+  $ref: '#/api/model/style'
 ```

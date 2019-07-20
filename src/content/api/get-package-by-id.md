@@ -29,7 +29,7 @@ There are various ways to filter the icon results by appending various parameter
 tabContent:get-package-by-id-response
 
 ```yaml
-$ref: '#/api/package'
+$ref: '#/api/model/package'
 ```
 
 /tabContent
