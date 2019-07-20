@@ -23,13 +23,13 @@ import:/content/api/get-icon-by-id.md
 
 import:/content/api/get-icon-by-name.md
 
-import:/content/api/get-tags.md
-
-import:/content/api/get-users.md
+import:/content/api/get-tag.md
 
 import:/content/api/get-user.md
 
-import:/content/api/get-styles.md
+import:/content/api/get-user-by-id.md
+
+import:/content/api/get-style.md
 
 import:/content/api/get-base-icons.md
 
