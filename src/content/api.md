@@ -13,6 +13,7 @@ Public endpoints are visible to everyone using the website.
 - No Authentication
 - Cached results (up to 5 minutes)
 - Objects may not contain all properties (ex: user objects)
+  - Look for the lock symbol in the object definitions below.
 
 import:/content/api-get-package.md
 
@@ -83,38 +84,20 @@ Response: `*.png`, `*.jpg`, `*.svg`, `*.xaml`, `*.xml` or `*.zip`
 
 ## Private Endpoints
 
-While pretty much all data is open to the public most of the management related API's are restricted to collaborator accounts.
+While pretty much all data is open to the public most of the management related API's are restricted to collaborator and admin accounts.
 
-### Get Tags
+import:/content/api-get-admin-modification.md
 
-This endpoint returns all tags, even tags with no associated icons.
+import:/content/api-post-admin-icon-rename.md
 
-```text
-GET api/admin/tag
-```
+import:/content/api-post-admin-icon-description.md
 
-```json
-[
-    {
-        "id": "{uuid}",
-        "text": "Medical",
-        "count": 42
-    },
-    ...
-]
-```
+import:/content/api-post-admin-icon-data.md
 
-### Post Tags
+import:/content/api-post-admin-icon-optimize.md
 
-Each tag should be labeled with oppropriate naming. Alpha and spaces only (`/^[a-zA-Z ]{3,}$/`).
+import:/content/api-post-admin-icon-tag.md
 
-```text
-POST api/admin/tag
-```
+import:/content/api-post-admin-icon-alias.md
 
-```json
-{
-    "text": "Tag Name"
-}
-```
-
+import:/content/api-post-admin-icon-style.md
