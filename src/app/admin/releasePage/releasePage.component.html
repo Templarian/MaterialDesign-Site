@@ -52,7 +52,7 @@
                 <span class="d-block">Select a Version</span>
                 <select
                   [(ngModel)]="selectedFontVersion" (change)="selectFontVersion()" class="custom-select">
-                  <option *ngFor="let v of versions" [ngValue]="v">{{v.major}}.{{v.minor}}.{{v.patch}} ({{v.iconCount}})</option>
+                  <option *ngFor="let v of fontVersions" [ngValue]="v">{{v.major}}.{{v.minor}}.{{v.patch}} ({{v.iconCount}})</option>
                 </select>
               </label>
             </div>
