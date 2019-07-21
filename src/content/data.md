@@ -102,7 +102,7 @@ class Package {
 class Font {
     id: string;
     name: string;
-    fontVersions: FontVersions[];
+    fontVersions: FontVersion[];
     iconCount: number;
     icons: Icon[];
 }
