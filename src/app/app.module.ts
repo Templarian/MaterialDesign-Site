@@ -58,6 +58,7 @@ import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueMo
 import { SelectIconModal } from './shared/selectIconModal/selectIconModal.component';
 
 import { PackageType } from './shared/enums/packageType.enum';
+import { AdminReleasePageComponent } from './admin/releasePage/releasePage.component';
 
 const appRoutes: Routes = [
   {
@@ -468,6 +469,10 @@ const appRoutes: Routes = [
     component: AdminTagPageComponent
   },
   {
+    path: 'admin/release',
+    component: AdminReleasePageComponent
+  },
+  {
     path: 'admin/rename',
     component: AdminRenamePageComponent
   },
@@ -506,6 +511,7 @@ const appRoutes: Routes = [
     AdminIndexPageComponent,
     AdminAliasPageComponent,
     AdminTagPageComponent,
+    AdminReleasePageComponent,
     AdminRenamePageComponent,
     NotFoundPageComponent,
     ModfiicationTableComponent,

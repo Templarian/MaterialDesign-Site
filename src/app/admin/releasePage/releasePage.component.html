@@ -1,0 +1,80 @@
+<mdi-banner title="Release Management" [carbon]="false"></mdi-banner>
+<div class="container-fluid">
+  <div class="card p-3">
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <p>If you do not know what this page is for do not touch anything! Many of these operations are <em>very</em> CPU intensive and will slow down production.</p>
+      </div>
+      <div class="col-md-4 text-right">
+        <button class="btn btn-primary mr-2" (click)="goBack()">Go Back</button>
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="card p-3">
+          <h2 class="mb-3">Release Steps</h2>
+          <div class="row mb-3">
+            <div class="col-md-2">
+              <span class="step">Step 1</span>
+            </div>
+            <div class="col-md-10">
+              <label>
+                <span class="d-block">Select a Package</span>
+                <select [(ngModel)]="selectedPackage" (change)="selectPackage()" class="custom-select">
+                  <option *ngFor="let p of packages" [ngValue]="p">{{p.name}}</option>
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-2">
+              <span class="step">Step 2</span>
+            </div>
+            <div class="col-md-10">
+              Select Font
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-2">
+              <span class="step">Step 3</span>
+            </div>
+            <div class="col-md-10">
+              Select Version
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-2">
+              <span class="step">Step 4</span>
+            </div>
+            <div class="col-md-10">
+              Verify New Icons
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-2">
+              <span class="step">Step 5</span>
+            </div>
+            <div class="col-md-10">
+              Generate <code>@mdi/svg</code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card p-3">
+          <h2>Release Management</h2>
+          <p>For a release to go out the list below needs to be tested.</p>
+          <ul>
+            <li>Assign Codepoints</li>
+            <li>Generate <code>@mdi/svg</code></li>
+            <li>Verify <code>@mdi/svg</code> works with the webfont builder</li>
+            <li>Generate <code>@mdi/font</code></li>
+            <li>Update <code>@mdi/svg</code> and <code>@mdi/font</code> repos.</li>
+            <li><code>@mdi/js</code> uses <code>npm run build</code></li>
+            <li><code>@mdi/angular-material</code> uses <code>npm run build</code></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>

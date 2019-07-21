@@ -1,0 +1,30 @@
+:host {
+    .step {
+        background: #F1F1F1;
+        font-weight: bold;
+        display: inline-block;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        color: #444;
+    }
+    .preview {
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.25rem;
+        margin-right: 5px;
+        padding: 5px 8px;
+        vertical-align: top;
+        display: inline-block;
+        svg {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+
+            path {
+                fill: #646464;
+            }
+        }
+    }
+}
