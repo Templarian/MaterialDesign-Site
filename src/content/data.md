@@ -102,7 +102,14 @@ class Package {
 class Font {
     id: string;
     name: string;
-    fontVersions: FontVersion[];
+    description: string;
+    prefix: string;
+    fontName: string;
+    fileName: string;
+    fontFamily: string;
+    fontWeight: string;
+    price: number;
+    versions: FontVersion[];
     iconCount: number;
     icons: Icon[];
 }
@@ -121,6 +128,20 @@ class FontVersion {
     released: boolean;
     iconCount: number;
     icons: Icon[];
+}
+```
+
+### FontIcon
+
+This is not used. It is simply a FK relationship between FontVersion and Icon.
+
+```typescript
+class FontIcon {
+    id: string;
+    fontId: string;
+    fontVersionId: string;
+    iconId: string;
+    codepoint: string;
 }
 ```
 
