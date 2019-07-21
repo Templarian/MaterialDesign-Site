@@ -10,6 +10,33 @@
         text-align: center;
         color: #444;
     }
+    .icon-list {
+        display: flex;
+        border-bottom: 1px solid #DDD;
+        .icon {
+            border: 1px solid #DDD;
+            border-radius: 0.25rem;
+            align-self: center;
+            width: 2rem;
+            height: 2rem;
+            margin-left: -0.5rem;
+            margin-right: 0.5rem;
+            svg {
+                fill: #444;
+            }
+        }
+        .name {
+            flex: 1;
+            align-self: center;
+        }
+        .codepoint {
+            padding-right: 0.5rem;
+            input {
+                width: 4rem;
+                font-family: 'Consolas', 'Courier New', Courier, monospace;
+            }
+        }
+    }
     .preview {
         border: 1px solid rgba(0, 0, 0, 0.15);
         border-radius: 0.25rem;

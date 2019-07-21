@@ -30,6 +30,8 @@ export class AdminReleasePageComponent {
   public selectedIcon: Icon = null;
   public aliasName: string = '';
   public modifications: Modification[] = [];
+  public iconsNoVersion: Icon[] = [];
+  public iconsVersion: Icon[] = [];
 
   public disabledTag: boolean = false;
 
@@ -73,14 +75,16 @@ export class AdminReleasePageComponent {
     // Load FontVersions
     this.fontVersions = this.selectedFont.versions;
     this.selectedFontVersion = this.fontVersions[0];
+    this.selectFont();
+    this.selectFontVersion();
   }
 
   async selectFont() {
-
+    this.iconsNoVersion = await this.iconService.getAdminFontNoVersion(this.selectedFont);
   }
 
   async selectFontVersion() {
-
+    this.iconsVersion = await this.iconService.getAdminFontVersion(this.selectedFontVersion);
   }
 
 }

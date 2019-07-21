@@ -17,6 +17,7 @@ export class Icon extends IconHelpers {
   public tags: Tag[] = [];
   public styles: Style[] = [];
   public published: boolean = true;
+  public codepoint: number = null;
 
   constructor(name?: string, data?: string) {
     super();
@@ -47,6 +48,9 @@ export class Icon extends IconHelpers {
     if (typeof icon.published === 'boolean') {
       this.published = icon.published;
     } 
+    if (icon.codepoint) {
+      this.codepoint = icon.codepoint;
+    }
     return this;
   }
 

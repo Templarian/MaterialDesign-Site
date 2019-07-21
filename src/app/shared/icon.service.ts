@@ -10,6 +10,7 @@ import { Tag } from 'app/shared/models/tag.model';
 import { Style } from './models/style.model';
 import { User } from './models/user.model';
 import { Font } from './models/font.model';
+import { FontVersion } from './models/fontVersion.model';
 
 @Injectable()
 export class IconService {
@@ -84,6 +85,20 @@ export class IconService {
 
   async getAdminIconsByTag(pack: Package, tag: Tag): Promise<Icon[]> {
     let res = await this.http.get<Icon[]>(`/api/admin/icon/${pack.id}/tag/${tag.id}`)
+      .toPromise();
+    return res.map(i => new Icon().from(i));
+  }
+
+  async getAdminFontNoVersion(font: Font): Promise<Icon[]> {
+    // Find all icons without a font version (aka no codepoint)
+    let res = await this.http.get<Icon[]>(`/api/admin/font/${font.id}/none`)
+      .toPromise();
+    return res.map(i => new Icon().from(i));
+  }
+
+  async getAdminFontVersion(fontVersion: FontVersion): Promise<Icon[]> {
+    // Find all icons with a codepoint
+    let res = await this.http.get<Icon[]>(`/api/admin/font/version/${fontVersion.id}`)
       .toPromise();
     return res.map(i => new Icon().from(i));
   }

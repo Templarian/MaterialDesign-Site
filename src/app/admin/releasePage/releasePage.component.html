@@ -62,7 +62,40 @@
               <span class="step">Step 4</span>
             </div>
             <div class="col-md-10">
-              Verify New Icons
+              <div>Exiting Icons</div>
+              <ul class="list-group">
+                  <li *ngFor="let icon of iconsVersion" class="list-group-item icon-list">
+                    <div class="icon">
+                      <svg viewBox="0 0 24 24">
+                        <path [attr.d]="icon.data"></path>
+                      </svg>
+                    </div>
+                    <div class="name">{{icon.name}}</div>
+                    <div class="codepoint">
+                        <input type="text" class="form-control" [(ngModel)]="icon.codepoint" disabled/>
+                      </div>
+                    <div class="button">
+                      <button class="btn btn-primary" disabled>Assign</button>
+                    </div>
+                  </li>
+                </ul>
+              <div class="mt-2">Verify New Icons</div>
+              <ul class="list-group">
+                <li *ngFor="let icon of iconsNoVersion" class="list-group-item icon-list">
+                  <div class="icon">
+                    <svg viewBox="0 0 24 24">
+                      <path [attr.d]="icon.data"></path>
+                    </svg>
+                  </div>
+                  <div class="name">{{icon.name}}</div>
+                  <div class="codepoint">
+                      <input type="text" class="form-control"/>
+                    </div>
+                  <div class="button">
+                    <button class="btn btn-primary">Assign</button>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="row mb-3">
