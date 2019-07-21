@@ -70,7 +70,7 @@ export class IconService {
     return res.map(p => new Package().from(p));
   }
 
-  async getAdminFont(packageId: string): Promise<Font[]> {
+  async getAdminFonts(packageId: string): Promise<Font[]> {
     let res = await this.http.get<Font[]>(`/api/admin/package/${packageId}/font`)
       .toPromise();
     return res.map(f => new Font().from(f));

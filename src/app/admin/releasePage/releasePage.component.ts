@@ -4,10 +4,10 @@ import { Package } from 'app/shared/models/package.model';
 import { IconService } from 'app/shared/icon.service';
 import { Icon } from 'app/shared/models/icon.model';
 import { Modification } from 'app/shared/models/modification.model';
-import { ModificationService } from 'app/shared/modification.service';
-import { TagService } from 'app/shared/tag.service';
 import { Tag } from 'app/shared/models/tag.model';
 import { Router } from '@angular/router';
+import { FontVersion } from 'app/shared/models/fontVersion.model';
+import { Font } from 'app/shared/models/font.model';
 
 @Component({
   selector: 'mdi-admin-release-page',
@@ -15,14 +15,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./releasePage.component.scss'],
   providers: [
     LoginService,
-    IconService,
-    TagService
+    IconService
   ]
 })
 export class AdminReleasePageComponent {
 
   public packages: Package[] = [];
   public selectedPackage: Package = null;
+  public fonts: Font[] = [];
+  public selectedFont: Font = null;
+  public fontVersions: FontVersion[] = [];
+  public selectedFontVersion: FontVersion = null;
   public icons: Icon[];
   public selectedIcon: Icon = null;
   public aliasName: string = '';
@@ -33,34 +36,30 @@ export class AdminReleasePageComponent {
   constructor(
     private loginService: LoginService,
     private iconService: IconService,
-    private tagService: TagService,
     private router: Router
-  ) {
-    this.packages.push(new Package("38EF63D0-4744-11E4-B3CF-842B2B6CFE1B", "Material Design Icons"));
-    this.packages.push(new Package("531A9B44-1962-11E5-89CC-842B2B6CFE1B", "Material Design Icons Light"));
-    this.selectedPackage = this.packages[0];
-  }
+  ) { }
 
   async ngOnInit() {
     await this.loginService.isAuthed();
-    // Authed
-    console.log('authed');
+    // Load Packages
+    this.packages = await this.iconService.getAdminPackages();
+    this.selectedPackage = this.packages[0];
     // Load Package
     this.selectPackage();
   }
 
-  goBack () {
+  goBack() {
     this.router.navigateByUrl('/admin/index')
   }
 
-  async logout () {
+  async logout() {
     await this.loginService.logout();
   }
 
   tags: Tag[] = [];
 
   selectedTag: Tag;
-  
+
   previewIcons: Icon[] = [];
 
   async selectTag() {
@@ -68,33 +67,20 @@ export class AdminReleasePageComponent {
   }
 
   async selectPackage() {
-    
+    // Load Fonts
+    this.fonts = await this.iconService.getAdminFonts(this.selectedPackage.id);
+    this.selectedFont = this.fonts[0];
+    // Load FontVersions
+    this.fontVersions = this.selectedFont.versions;
+    this.selectedFontVersion = this.fontVersions[0];
   }
 
-  async selectIcon() {
-    this.selectedIcon = await this.iconService.getAdminIcon(this.selectedIcon.id);
+  async selectFont() {
+
   }
 
-  validate() {
-    for(let alias of this.selectedIcon.aliases) {
-      if (this.aliasName == alias.name) {
-        this.disabledTag = true;
-        return;
-      }
-    }
-    this.disabledTag = this.aliasName.length == 0;
-  }
+  async selectFontVersion() {
 
-  async submitTag() {
-    let tag = await this.iconService.addTag(this.selectedIcon, this.selectedTag);
-    this.selectedIcon.addTag(tag);
-    this.selectedIcon = null;
-    this.selectTag();
-    //this.validate();
-    // Aliases
-    //this.modifications = await this.modificationService.getModificationsByType(this.selectedPackage.id, [
-    //  ModificationType.IconAliasCreated
-    //]);
   }
 
 }
