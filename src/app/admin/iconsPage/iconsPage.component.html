@@ -74,9 +74,10 @@
             <div class="form-group">
               <label>Name</label>
               <input class="form-control" name="name"
-                [(value)]="editIcon.name" disabled/>
+                [(value)]="editIcon.name"/>
               <div class="text-right mt-2">
-                <button class="btn btn-primary" disabled>Rename</button>
+                <button class="btn btn-primary" (click)="rename()"
+                  [disabled]="!editIcon.validName()">Rename</button>
               </div>
             </div>
             <div class="form-group">

@@ -142,11 +142,15 @@ export class IconService {
     return new Tag().from(res);
   }
 
-  async rename(icon: Icon, name: string): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/icon/name', {
-      icon: { id: icon.id },
-      name: name
-    }).toPromise();
+  async rename(icon: Icon, user?: User): Promise<Icon> {
+    const body: any = {
+      icon: {
+        id: icon.id,
+        name: icon.name
+      },
+    };
+    if (user) { body.user = { id: user.id }};
+    let res = await this.http.post<Icon>('/api/admin/icon/name', body).toPromise();
     return new Icon().from(res);
   }
 

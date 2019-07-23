@@ -212,4 +212,9 @@ export class AdminIconsPageComponent {
     console.log(e, 'error');
   }
 
+  async rename(){
+    const updatedIcon = await this.iconService.rename(this.editIcon, this.selectedUser);
+    this.selectedIcon.name = updatedIcon.name;
+  }
+
 }

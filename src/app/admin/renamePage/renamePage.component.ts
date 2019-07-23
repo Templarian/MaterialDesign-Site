@@ -69,7 +69,8 @@ export class AdminRenamePageComponent {
   }
 
   async submitRename() {
-    await this.iconService.rename(this.selectedIcon, this.renameText);
+    //this.selectIcon.name = this.renameText;
+    //await this.iconService.rename(this.selectedIcon,);
     this.selectedIcon.name = this.renameText;
     this.renameText = '';
     this.selectedIcon = null;
