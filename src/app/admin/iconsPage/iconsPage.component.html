@@ -84,7 +84,7 @@
               <label>Base Icon</label>
               <div *ngIf="loading">Loading...</div>
               <div *ngIf="!loading" class="base-icon-wrap">
-                <div *ngIf="baseIcon == null">
+                <div *ngIf="baseIcon != null">
                   <div class="base-icon">
                     <svg viewBox="0 0 24 24">
                       <path [attr.d]="baseIcon.data"/>
@@ -96,8 +96,8 @@
                       (click)="setBaseIcon()">Change Base Icon</button>
                   </div>
                 </div>
-                <div *ngIf="baseIcon != null">
-                  <div class="alert alert-danger">No Base Icon</div>
+                <div *ngIf="baseIcon == null">
+                  <div class="alert alert-danger m-1">No Base Icon</div>
                   <div class="base-icon-btn">
                     <button class="btn btn-primary"
                       (click)="setBaseIcon()">Change Base Icon</button>

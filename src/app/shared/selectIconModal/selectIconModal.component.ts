@@ -19,8 +19,10 @@ export class SelectIconModal {
 
   async ngOnInit() {
     this.selectedPackage = new Package(this.packageId);
-    this.selectedIcon = new Icon();
-    this.selectedIcon.id = this.baseIconId;
+    if (this.baseIconId) {
+      this.selectedIcon = new Icon();
+      this.selectedIcon.id = this.baseIconId;
+    }
   }
 
   selectIcon() {

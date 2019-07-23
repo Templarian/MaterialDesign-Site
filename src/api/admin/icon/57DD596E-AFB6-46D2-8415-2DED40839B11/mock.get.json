@@ -1,0 +1,28 @@
+{
+  "id": "57DD596E-AFB6-46D2-8415-2DED40839B11",
+  "baseIconId": null,
+  "packageId": "38EF63D0-4744-11E4-B3CF-842B2B6CFE1B",
+  "name": "bag-carry-on-check",
+  "description": "Carry On Bag Check.",
+  "data": "M15.28,16.69L18.14,13.88L18.84,14.58L15.28,18.14L13.17,16L13.88,15.28L15.28,16.69M8,21A2,2 0 0,1 6,19V9A2,2 0 0,1 8,7V21M9,7H14V4A2,2 0 0,1 12,2H16V10A6,6 0 0,1 22,16A6,6 0 0,1 16,22C14.77,22 13.63,21.63 12.68,21H9V7M16,12A4,4 0 0,0 12,16A4,4 0 0,0 16,20A4,4 0 0,0 20,16A4,4 0 0,0 16,12Z",
+  "user": {
+    "name": "Google",
+    "github": "Google",
+    "twitter": "Google"
+  },
+  "aliases": [
+    {
+      "id": "73264c86-2bc5-11e9-92de-94188269ec50",
+      "name": "carry-on-bag-tick"
+    }
+  ],
+  "tags": [
+    {
+      "id": "1e719aec-c442-11e7-bf5c-94188269ec50",
+      "name": "Transportation + Flying",
+      "url": "transportation-flying"
+    }
+  ],
+  "fonts": [],
+  "styles": []
+}
