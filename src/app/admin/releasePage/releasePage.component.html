@@ -62,7 +62,7 @@
               <span class="step">Step 4</span>
             </div>
             <div class="col-md-10">
-              <div>Exiting Icons</div>
+              <div class="mb-2">Exiting Icons ({{iconsVersion}} Icons)</div>
               <ul class="list-group">
                   <li *ngFor="let icon of iconsVersion" class="list-group-item icon-list">
                     <div class="icon">
@@ -79,7 +79,7 @@
                     </div>
                   </li>
                 </ul>
-              <div class="mt-2">Verify New Icons</div>
+              <div class="mt-2 mb-2">Verify New Icons ({{iconsNoVersion.length}} Icons)</div>
               <ul class="list-group">
                 <li *ngFor="let icon of iconsNoVersion" class="list-group-item icon-list">
                   <div class="icon">
@@ -89,8 +89,8 @@
                   </div>
                   <div class="name">{{icon.name}}</div>
                   <div class="codepoint">
-                      <input type="text" class="form-control"/>
-                    </div>
+                    <input type="text" class="form-control" (focus)="focusEmpty(icon)"/>
+                  </div>
                   <div class="button">
                     <button class="btn btn-primary">Assign</button>
                   </div>
