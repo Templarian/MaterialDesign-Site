@@ -74,7 +74,7 @@
             <div class="form-group">
               <label>Name</label>
               <input class="form-control" name="name"
-                [(value)]="editIcon.name"/>
+                [(ngModel)]="editIcon.name"/>
               <div class="text-right mt-2">
                 <button class="btn btn-primary" (click)="rename()"
                   [disabled]="!editIcon.validName()">Rename</button>
