@@ -125,10 +125,9 @@
               <div>
                 <span class="mr-3"><span [innerText]="editIcon.getPointCount()"></span> Points</span>
                 <button class="btn btn-outline-primary mr-2"
-                  [disabled]="!validEditPath()"
                   (click)="optimizeEdit()">Optimize Path Data</button>
                 <button class="btn btn-primary"
-                  [disabled]="icon.data == '' || icon.data == editIcon.data"
+                  [disabled]="icon.data == '' || icon.data == editIcon.data || !validEditPath"
                   (click)="updateData()">Update</button>
               </div>
             </div>
@@ -263,7 +262,6 @@
                   <p>Font generation requires nicely optimized path data. After pasting in the SVG data click the optimize button below.</p>
                   <p class="mb-0">
                     <button class="btn btn-primary"
-                      [disabled]="!validPath()"
                       (click)="optimize()">
                       Optimize Path Data
                     </button>
