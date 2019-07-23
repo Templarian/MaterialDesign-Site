@@ -89,7 +89,7 @@
                   </div>
                   <div class="name">{{icon.name}}</div>
                   <div class="codepoint">
-                    <input type="text" class="form-control" (focus)="focusEmpty(icon)"/>
+                    <input type="text" class="form-control" (focus)="focusEmpty(icon)" [(ngModel)]="icon.codepoint"/>
                   </div>
                   <div class="button">
                     <button class="btn btn-primary">Assign</button>
