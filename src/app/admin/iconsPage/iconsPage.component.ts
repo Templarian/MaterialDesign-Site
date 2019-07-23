@@ -103,7 +103,11 @@ export class AdminIconsPageComponent {
     this.loading = true;
     this.icon = await this.iconService.getAdminIcon(this.selectedIcon.id);
     this.editIcon = new Icon().from(this.icon);
-    this.baseIcon = await this.iconService.getAdminIcon(this.icon.baseIconId);
+    if (this.icon.baseIconId) {
+      this.baseIcon = await this.iconService.getAdminIcon(this.icon.baseIconId);
+    } else {
+      this.baseIcon = null;
+    }
     this.loading = false;
     this.newIcon = null;
   }

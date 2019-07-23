@@ -82,17 +82,26 @@
             </div>
             <div class="form-group">
               <label>Base Icon</label>
-              <div *ngIf="baseIcon == null">Loading...</div>
-              <div *ngIf="baseIcon != null" class="base-icon-wrap">
-                <div class="base-icon">
-                  <svg viewBox="0 0 24 24">
-                    <path [attr.d]="baseIcon.data"/>
-                  </svg>
+              <div *ngIf="loading">Loading...</div>
+              <div *ngIf="!loading" class="base-icon-wrap">
+                <div *ngIf="baseIcon == null">
+                  <div class="base-icon">
+                    <svg viewBox="0 0 24 24">
+                      <path [attr.d]="baseIcon.data"/>
+                    </svg>
+                  </div>
+                  <div class="base-icon-name">{{baseIcon.name}}</div>
+                  <div class="base-icon-btn">
+                    <button class="btn btn-primary"
+                      (click)="setBaseIcon()">Change Base Icon</button>
+                  </div>
                 </div>
-                <div class="base-icon-name">{{baseIcon.name}}</div>
-                <div class="base-icon-btn">
-                  <button class="btn btn-primary"
-                    (click)="setBaseIcon()">Change Base Icon</button>
+                <div *ngIf="baseIcon != null">
+                  <div class="alert alert-danger">No Base Icon</div>
+                  <div class="base-icon-btn">
+                    <button class="btn btn-primary"
+                      (click)="setBaseIcon()">Change Base Icon</button>
+                  </div>
                 </div>
               </div>
             </div>
