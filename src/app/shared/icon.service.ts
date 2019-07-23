@@ -89,6 +89,13 @@ export class IconService {
     return res.map(i => new Icon().from(i));
   }
 
+  async getAdminFontNextCodepoint(font: Font): Promise<Icon> {
+    // Get the hex codepoint ex: F001
+    let res = await this.http.get<Icon>(`/api/admin/font/${font.id}/next`)
+      .toPromise();
+    return new Icon().from(res);
+  }
+
   async getAdminFontNoVersion(font: Font): Promise<Icon[]> {
     // Find all icons without a font version (aka no codepoint)
     let res = await this.http.get<Icon[]>(`/api/admin/font/${font.id}/none`)

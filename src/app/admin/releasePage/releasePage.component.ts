@@ -87,4 +87,11 @@ export class AdminReleasePageComponent {
     this.iconsVersion = await this.iconService.getAdminFontVersion(this.selectedFontVersion);
   }
 
+  async onFocusEmpty(icon: Icon) {
+    if (!icon.codepoint) {
+      var iconCodepoint = await this.iconService.getAdminFontNextCodepoint(this.selectedFont);
+      icon.codepoint = iconCodepoint.codepoint;
+    }
+  }
+
 }

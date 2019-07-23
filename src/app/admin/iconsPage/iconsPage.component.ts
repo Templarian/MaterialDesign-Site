@@ -191,14 +191,14 @@ export class AdminIconsPageComponent {
   }
 
   validEditPath() {
-    if (this.editIcon.data.match(/S/)) {
+    if (this.editIcon.data.match(/[a-y]/)) {
       return false;
     }
     return true;
   }
 
   validPath() {
-    if (this.newIcon.data.match(/S/)) {
+    if (this.newIcon.data.match(/[a-y]/)) {
       return false;
     }
     return true;
