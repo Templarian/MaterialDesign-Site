@@ -36,7 +36,7 @@ It really depends on if you are using brand or logo icons. If you are, we recomm
 
 ### I use MDI's helper libraries, such as `@mdi/react`. Is this compatible with SimpleIcons?
 
-The answer is very soon. Our react component takes raw SVG path data to render an icon. [Once SimpleIcons begins returning the combined path data in their module][5], you can simply use `@mdi/react` like this:
+Yes! Our react component takes raw SVG path data to render an icon. SimpleIcons also returns the combined path data of their icons, so you can simply use `@mdi/react` like this:
 
 ```jsx
 import React from 'react';
@@ -58,4 +58,3 @@ function App() {
 [2]: https://simpleicons.org/
 [3]: https://www.npmjs.com/package/simple-icons
 [4]: https://community.home-assistant.io/t/material-design-icons-simpleicons-add-support-for-simpleicons-library/108765
-[5]: https://github.com/simple-icons/simple-icons/issues/1272
