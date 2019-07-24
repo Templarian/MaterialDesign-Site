@@ -9,6 +9,7 @@ export class MockInterceptor implements HttpInterceptor {
       && req.url.match(/^\/api/) != null;
     if (isMock) {
       console.info(req.urlWithParams);
+      console.info(req.body);
       let method = req.method.toLowerCase();
       let mockReq = req.clone({
         url: req.url + `/mock.${method}.json`,

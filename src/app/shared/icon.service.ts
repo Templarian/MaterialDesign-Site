@@ -110,6 +110,17 @@ export class IconService {
     return res.map(i => new Icon().from(i));
   }
 
+  async setCodepoint(icon: Icon, fontVersion: FontVersion): Promise<Icon> {
+    // Find all icons with a codepoint
+    let res = await this.http.post<Icon>(`/api/admin/font/version/${fontVersion.id}/codepoint`, {
+      icon: {
+        id: icon.id,
+        codepoint: icon.codepoint
+      }
+    }).toPromise();
+    return new Icon().from(res);
+  }
+
   async addIcon(icon: Icon, user?: User, issue?: string): Promise<Icon> {
     const body: any = {
       icon: {
