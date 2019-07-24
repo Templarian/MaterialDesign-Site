@@ -118,6 +118,7 @@ export class IconService {
         codepoint: icon.codepoint
       }
     }).toPromise();
+    // Will not contain codepoint
     return new Icon().from(res);
   }
 

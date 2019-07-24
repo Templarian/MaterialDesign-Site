@@ -96,7 +96,9 @@ export class AdminReleasePageComponent {
 
   async assign(icon: Icon) {
     const updatedIcon = await this.iconService.setCodepoint(icon, this.selectedFontVersion);
-    icon.codepoint = updatedIcon.codepoint;
+    // Refresh lists
+    this.selectFont();
+    this.selectFontVersion();
   }
 
 }
