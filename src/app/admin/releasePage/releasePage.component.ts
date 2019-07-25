@@ -112,7 +112,7 @@ export class AdminReleasePageComponent {
 
   async generateSvg() {
     const success = await this.iconService.generateSvgBundle(this.selectedFontVersion);
-    alert(success);
+    this.checkSvgCache();
   }
 
 }
