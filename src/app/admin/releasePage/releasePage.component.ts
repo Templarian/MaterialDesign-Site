@@ -75,16 +75,17 @@ export class AdminReleasePageComponent {
     // Load FontVersions
     this.fontVersions = this.selectedFont.versions;
     this.selectedFontVersion = this.fontVersions[0];
-    this.selectFont();
-    this.selectFontVersion();
+    await this.selectFont();
   }
 
   async selectFont() {
     this.iconsNoVersion = await this.iconService.getAdminFontNoVersion(this.selectedFont);
+    await this.selectFontVersion();
   }
 
   async selectFontVersion() {
     this.iconsVersion = await this.iconService.getAdminFontVersion(this.selectedFontVersion);
+    await this.checkSvgCache();
   }
 
   async focusEmpty(icon: Icon) {
@@ -97,8 +98,16 @@ export class AdminReleasePageComponent {
   async assign(icon: Icon) {
     const updatedIcon = await this.iconService.setCodepoint(icon, this.selectedFontVersion);
     // Refresh lists
-    this.selectFont();
-    this.selectFontVersion();
+    await this.selectFont();
+  }
+
+  async checkSvgCache() {
+    const bundleCache = await this.iconService.getSvgBundleCacheDate(this.selectedFontVersion);
+    if (bundleCache.isCached) {
+      console.log('cache', bundleCache.date);
+    } else {
+      console.log('no cache')
+    }
   }
 
   async generateSvg() {

@@ -12,6 +12,11 @@ import { User } from './models/user.model';
 import { Font } from './models/font.model';
 import { FontVersion } from './models/fontVersion.model';
 
+type BundleCache = {
+  isCached: boolean;
+  date: Date;
+};
+
 @Injectable()
 export class IconService {
 
@@ -112,6 +117,12 @@ export class IconService {
 
   async generateSvgBundle(fontVersion: FontVersion): Promise<boolean> {
     let res = await this.http.get<boolean>(`/api/admin/font/version/${fontVersion.id}/generate/svg`)
+      .toPromise();
+    return res;
+  }
+
+  async getSvgBundleCacheDate(fontVersion: FontVersion): Promise<BundleCache> {
+    let res = await this.http.get<BundleCache>(`/api/admin/font/version/${fontVersion.id}/generate/svg/cache`)
       .toPromise();
     return res;
   }
