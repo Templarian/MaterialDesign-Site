@@ -112,7 +112,7 @@
               <div class="mb-2">Generate <code>@mdi/svg</code></div>
               <button class="btn btn-primary mr-2" (click)="generateSvg()">Generate</button>
               <a class="btn btn-outline-primary"
-                [disabled]="!isSvgBundleCached"
+                [ngClass]="{ 'disabled': !isSvgBundleCached }"
                 [attr.href]="downloadSvgBundle()">Download</a>
               <span *ngIf="isSvgBundleCached">Cached: {{svgBundleCacheDate}}</span>
             </div>
