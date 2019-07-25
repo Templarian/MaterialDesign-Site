@@ -101,18 +101,28 @@ export class AdminReleasePageComponent {
     await this.selectFont();
   }
 
+  public isSvgBundleCached: boolean = false;
+  public svgBundleCacheDate: string = null;
+
   async checkSvgCache() {
     const bundleCache = await this.iconService.getSvgBundleCacheDate(this.selectedFontVersion);
+    this.isSvgBundleCached = true;
     if (bundleCache.isCached) {
       console.log('cache', bundleCache.date);
+      this.svgBundleCacheDate = bundleCache.date.toISOString();
     } else {
-      console.log('no cache')
+      console.log('no cache');
+      this.svgBundleCacheDate = null;
     }
   }
 
   async generateSvg() {
     const success = await this.iconService.generateSvgBundle(this.selectedFontVersion);
-    this.checkSvgCache();
+    await this.checkSvgCache();
+  }
+
+  downloadSvgBundle(): string {
+    return `/api/admin/font/version/${this.selectedFontVersion.id}/download/svg`;
   }
 
 }

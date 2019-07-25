@@ -111,7 +111,10 @@
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/svg</code></div>
               <button class="btn btn-primary mr-2" (click)="generateSvg()">Generate</button>
-              <button class="btn btn-outline-primary">Download</button>
+              <a class="btn btn-outline-primary"
+                [disabled]="!isSvgBundleCached"
+                [attr.href]="downloadSvgBundle()">Download</a>
+              <span *ngIf="isSvgBundleCached">Cached: {{svgBundleCacheDate}}</span>
             </div>
           </div>
           <div class="row mb-3">
