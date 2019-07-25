@@ -109,7 +109,7 @@ export class AdminReleasePageComponent {
     this.isSvgBundleCached = true;
     if (bundleCache.isCached) {
       console.log('cache', bundleCache.date);
-      this.svgBundleCacheDate = bundleCache.date.toISOString();
+      this.svgBundleCacheDate = bundleCache.date.toString();
     } else {
       console.log('no cache');
       this.svgBundleCacheDate = null;
