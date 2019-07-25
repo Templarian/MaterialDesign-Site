@@ -110,7 +110,7 @@
             </div>
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/svg</code></div>
-              <button class="btn btn-primary mr-2">Generate</button>
+              <button class="btn btn-primary mr-2" (click)="generateSvg()">Generate</button>
               <button class="btn btn-outline-primary">Download</button>
             </div>
           </div>
@@ -160,7 +160,7 @@
             </li>
             <li>
               <strong>Q. What is a codepoint?</strong>
-              <p>A. Codepoint are a hex index in a font. These must be unique within a single font.</p>
+              <p>A. A codepoints is a index (hex encoded) in a font. These must be unique within a single font and should not change between releases.</p>
             </li>
             <li>
               <strong>Q. How do I know what codepoint to use?</strong>

@@ -110,8 +110,13 @@ export class IconService {
     return res.map(i => new Icon().from(i));
   }
 
+  async generateSvgBundle(fontVersion: FontVersion): Promise<boolean> {
+    let res = await this.http.get<boolean>(`/api/admin/font/version/${fontVersion.id}/generate/svg`)
+      .toPromise();
+    return res;
+  }
+
   async setCodepoint(icon: Icon, fontVersion: FontVersion): Promise<Icon> {
-    // Find all icons with a codepoint
     let res = await this.http.post<Icon>(`/api/admin/font/version/${fontVersion.id}/codepoint`, {
       icon: {
         id: icon.id,
