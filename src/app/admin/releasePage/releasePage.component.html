@@ -63,6 +63,9 @@
             </div>
             <div class="col-md-10">
               <div class="mb-2">Exiting Icons ({{iconsVersion.length}} Icons)</div>
+              <div *ngIf="iconsVersion.length == 0" class="alert alert-danger">
+                No Icons in Release
+              </div>
               <ul class="list-group">
                   <li *ngFor="let icon of iconsVersion" class="list-group-item icon-list">
                     <div class="icon">
@@ -80,6 +83,9 @@
                   </li>
                 </ul>
               <div class="mt-2 mb-2">Verify New Icons ({{iconsNoVersion.length}} Icons)</div>
+              <div *ngIf="iconsNoVersion.length == 0" class="alert alert-info">
+                All Icons have Codepoints!
+              </div>
               <ul class="list-group">
                 <li *ngFor="let icon of iconsNoVersion" class="list-group-item icon-list">
                   <div class="icon">
