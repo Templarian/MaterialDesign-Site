@@ -122,7 +122,7 @@ export class AdminReleasePageComponent {
   }
 
   downloadSvgBundle(): string {
-    if (!this.selectedFontVersion) { return ''; }
+    if (this.selectedFontVersion == null) { return ''; }
     return `/api/admin/font/version/${this.selectedFontVersion.id}/download/svg`;
   }
 
