@@ -28,6 +28,7 @@
     "core-js": "^2.5.7",
     "jquery": "^3.3.1",
     "js-yaml": "^3.12.0",
+    "luxon": "^1.17.2",
     "popper.js": "^1.14.4",
     "prismjs": "git+https://github.com/PrismJS/prism.git",
     "remarkable": "^1.7.1",

@@ -114,7 +114,7 @@
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isSvgBundleCached }"
                 [attr.href]="downloadSvgBundle()">Download</a>
-              <span *ngIf="isSvgBundleCached">Cached: {{svgBundleCacheDate}}</span>
+              <span *ngIf="isSvgBundleCached" class="ml-3 align-middle">Cached on {{svgBundleCacheDate}}</span>
             </div>
           </div>
           <div class="row mb-3">

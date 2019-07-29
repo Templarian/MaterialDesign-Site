@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DateTime } from 'luxon';
 import { LoginService } from 'app/admin/services/login.service';
 import { Package } from 'app/shared/models/package.model';
 import { IconService } from 'app/shared/icon.service';
@@ -109,7 +110,7 @@ export class AdminReleasePageComponent {
     this.isSvgBundleCached = true;
     if (bundleCache.isCached) {
       console.log('cache', bundleCache.date);
-      this.svgBundleCacheDate = bundleCache.date.toString();
+      this.svgBundleCacheDate = bundleCache.date.toLocaleString(DateTime.DATETIME_MED);
     } else {
       console.log('no cache');
       this.svgBundleCacheDate = null;

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { DateTime } from 'luxon';
 
 import { Icon } from 'app/shared/models/icon.model';
 import { Alias } from 'app/shared/models/alias.model';
@@ -14,7 +15,7 @@ import { FontVersion } from './models/fontVersion.model';
 
 type BundleCache = {
   isCached: boolean;
-  date: Date;
+  date: DateTime;
 };
 
 @Injectable()
@@ -124,7 +125,10 @@ export class IconService {
   async getSvgBundleCacheDate(fontVersion: FontVersion): Promise<BundleCache> {
     let res = await this.http.get<BundleCache>(`/api/admin/font/version/${fontVersion.id}/generate/svg/cache`)
       .toPromise();
-    return res;
+    return {
+      date: DateTime.fromISO(res.date),
+      isCached: res.isCached
+    };
   }
 
   async setCodepoint(icon: Icon, fontVersion: FontVersion): Promise<Icon> {
