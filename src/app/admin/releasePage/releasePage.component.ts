@@ -109,10 +109,10 @@ export class AdminReleasePageComponent {
     const bundleCache = await this.iconService.getSvgBundleCacheDate(this.selectedFontVersion);
     this.isSvgBundleCached = true;
     if (bundleCache.isCached) {
-      console.log('cache', bundleCache.date);
+      // console.log('cache', bundleCache.date);
       this.svgBundleCacheDate = bundleCache.date.toLocaleString(DateTime.DATETIME_MED);
     } else {
-      console.log('no cache');
+      // console.log('no cache');
       this.svgBundleCacheDate = null;
     }
   }
