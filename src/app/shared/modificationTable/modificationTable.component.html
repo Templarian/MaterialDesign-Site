@@ -1,7 +1,7 @@
 <table class="table">
   <tbody *ngFor="let group of modificationsByDate">
     <tr>
-      <td colspan="6">
+      <td colspan="7">
         <strong>{{group.date}}</strong>
       </td>
     </tr>
@@ -63,10 +63,10 @@
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
         <tr *ngSwitchCase="ModificationType.IconAuthorModified">
-          <td style="width:1.5rem"><mdi-icon name="account"></mdi-icon></td>
+          <td style="width:1.5rem"><mdi-icon name="account-circle"></mdi-icon></td>
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
-          <td colspan="2"><code>{{entry.joinId}}</code></td>
+          <td colspan="2"><code>{{friendlyName(entry.joinId)}}</code></td>
           <td style="width:4rem;text-align: center;">
               <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
               <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>

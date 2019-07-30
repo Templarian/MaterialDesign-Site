@@ -7,6 +7,7 @@ import { ModificationService } from 'app/shared/modification.service';
 import { ModificationType } from 'app/shared/enums/modificationType.enum';
 import { Icon } from 'app/shared/models/icon.model';
 import { Modification } from '../models/modification.model';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'mdi-modification-table',
@@ -14,7 +15,8 @@ import { Modification } from '../models/modification.model';
   styleUrls: ['./modificationTable.component.scss'],
   providers: [
     LoginService,
-    ModificationService
+    ModificationService,
+    UserService
   ]
 })
 export class ModfiicationTableComponent {
@@ -22,6 +24,7 @@ export class ModfiicationTableComponent {
   constructor(
     private loginService: LoginService,
     private modificationService: ModificationService,
+    private userService: UserService,
     private router: Router
   ) { }
   @Input('icon') icon: Icon = null
@@ -68,6 +71,10 @@ export class ModfiicationTableComponent {
 
   ngOnChanges(changes: SimpleChanges) {
     this.loadModifications(changes.icon.currentValue);
+  }
+
+  friendlyName(userId: number) {
+    return `unknown (${userId})`;
   }
 
   friendlyModification(type: string) {
