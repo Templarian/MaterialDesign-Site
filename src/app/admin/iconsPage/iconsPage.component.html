@@ -81,6 +81,18 @@
               </div>
             </div>
             <div class="form-group">
+              <label>Author</label>
+              <div style="border: 1px solid #DDD;border-radius: 0.25rem;">
+                <div style="margin:0.5rem;">
+                  <span>{{editIcon.user.name}}</span>
+                  <small class="ml-2">{{editIcon.user.github}}</small>
+                </div>
+                <div class="text-right p-1" style="border-top: 1px solid #DDD;">
+                  <button class="btn btn-primary" (click)="assignUser()">Assign Owner</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
               <label>Base Icon</label>
               <div *ngIf="loading">Loading...</div>
               <div *ngIf="!loading" class="base-icon-wrap">

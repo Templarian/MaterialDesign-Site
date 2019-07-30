@@ -11,6 +11,7 @@ import { SelectIconModal } from 'app/shared/selectIconModal/selectIconModal.comp
 import { User } from 'app/shared/models/user.model';
 import { FontVersion } from 'app/shared/models/fontVersion.model';
 import { Font } from 'app/shared/models/font.model';
+import { AssignUserModal } from 'app/shared/assignUserModal/assignUserModal.component';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -219,6 +220,18 @@ export class AdminIconsPageComponent {
   async rename(){
     const updatedIcon = await this.iconService.rename(this.editIcon, this.selectedUser);
     this.selectedIcon.name = updatedIcon.name;
+  }
+
+  async assignUser() {
+    const modal = this.modalService.open(AssignUserModal);
+    modal.componentInstance.user = this.editIcon.user;
+    modal.componentInstance.package = this.selectedPackage;
+    modal.result.then(async (user) => {
+      var icon = await this.iconService.setUser(this.selectedIcon, user);
+      this.editIcon.user = icon.user;
+    }, (reason) => {
+      // dismissed
+    });
   }
 
 }

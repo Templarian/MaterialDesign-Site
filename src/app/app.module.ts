@@ -55,6 +55,7 @@ import { ContributorBadgeComponent } from 'app/contributorsPage/contributorBadge
 import { ModfiicationTableComponent } from 'app/shared/modificationTable/modificationTable.component';
 import { IconPreviewComponent } from 'app/shared/iconPreview/iconPreview.component';
 import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
+import { AssignUserModal } from 'app/shared/assignUserModal/assignUserModal.component';
 import { SelectIconModal } from './shared/selectIconModal/selectIconModal.component';
 
 import { PackageType } from './shared/enums/packageType.enum';
@@ -525,10 +526,12 @@ const appRoutes: Routes = [
     MarkdownComponent,
     IconSearchComponent,
     AssignIssueModal,
+    AssignUserModal,
     SelectIconModal
   ],
   entryComponents: [
     AssignIssueModal,
+    AssignUserModal,
     SelectIconModal
   ],
   imports: [
