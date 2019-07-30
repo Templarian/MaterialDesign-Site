@@ -19,14 +19,14 @@
               <path [attr.d]="baseIcon.icon.data" fill="#222"/>
             </svg>
             <svg *ngFor="let icon of baseIcon.icons" viewBox="0 0 24 24" style="width: 1.5rem;height: 1.5rem">
-                <path [attr.d]="icon.data" fill="#777"/>
-              </svg>
+              <path [attr.d]="icon.data" fill="#777"/>
+            </svg>
           </div>
           <div class="card-body p-2" *ngIf="!baseIcon.icon">
             <div>NO BASE ICONS:</div>
             <svg *ngFor="let icon of baseIcon.icons" viewBox="0 0 24 24" style="width: 1.5rem;height: 1.5rem">
-                <path [attr.d]="icon.data" fill="#777"/>
-              </svg>
+              <path [attr.d]="icon.data" fill="#777"/>
+            </svg>
           </div>
         </div>
       </div>
