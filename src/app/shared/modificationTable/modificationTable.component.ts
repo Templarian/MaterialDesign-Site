@@ -38,6 +38,7 @@ export class ModfiicationTableComponent {
       ModificationType.IconDescriptionModified,
       ModificationType.IconModified,
       ModificationType.IconAliasCreated,
+      ModificationType.IconAuthorModified,
       ModificationType.IconTagCreated
     ]
 
@@ -84,7 +85,9 @@ export class ModfiicationTableComponent {
       case ModificationType.IconAliasCreated:
         return 'Alias Added';
       case ModificationType.IconTagCreated:
-        return 'Tag Added'
+        return 'Tag Added';
+      case ModificationType.IconAuthorModified:
+        return 'Assigned Author';
       default:
         return 'Unknown';
     }
