@@ -227,8 +227,11 @@ export class AdminIconsPageComponent {
     modal.componentInstance.user = this.editIcon.user;
     modal.componentInstance.package = this.selectedPackage;
     modal.result.then(async (user) => {
-      var icon = await this.iconService.setUser(this.selectedIcon, user);
-      this.editIcon.user = icon.user;
+      const icon = new Icon();
+      icon.id = this.selectedIcon.id;
+      icon.user = user;
+      var updatedIcon = await this.iconService.updateUser(icon, this.selectedUser);
+      this.editIcon.user = updatedIcon.user;
     }, (reason) => {
       // dismissed
     });

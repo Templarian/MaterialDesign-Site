@@ -158,15 +158,15 @@ export class IconService {
     return new Icon().from(res);
   }
 
-  async setUser(icon: Icon, user: User): Promise<Icon> {
-    let res = await this.http.post<Icon>('/api/admin/icon/user', {
+  async updateUser(icon: Icon, user: User): Promise<Icon> {
+    const body = {
       icon: {
         id: icon.id,
-        user: {
-          id: user.id
-        }
+        user: { id: icon.user.id }
       }
-    }).toPromise();
+    } as any;
+    if (user) { body.user = { id: user.id }};
+    let res = await this.http.post<Icon>('/api/admin/icon/user', body).toPromise();
     return new Icon().from(res);
   }
 
