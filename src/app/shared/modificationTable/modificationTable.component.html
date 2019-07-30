@@ -62,7 +62,7 @@
           </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
-        <tr *ngSwitchCase="ModificationType.IconAliasCreated">
+        <tr *ngSwitchCase="ModificationType.IconAuthorModified">
           <td style="width:1.5rem"><mdi-icon name="account"></mdi-icon></td>
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
