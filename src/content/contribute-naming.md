@@ -14,8 +14,8 @@ All naming must be in the exact order below.
 
 | Position          | Weight    | Overlay      | Modifier     |
 |-------------------|-----------|--------------|--------------|
-| `*-top-left`      | `*-bold`  | `*-alert`    | `*-multiple` |
-| `*-top-right`     | `*-thick` | `*-arrow-*`  | `*-variant`  |
+| `*-top-left`      | `*-bold`  | `*-alert`    | `*-variant`  |
+| `*-top-right`     | `*-thick` | `*-arrow-*`  | `*-multiple` |
 | `*-bottom-left`   |           | `*-network`  | `*-off`      |
 | `*-bottom-right`  |           | `*-settings` | `*-outline`  |
 | `*-up`            |           | `*-plus`     |              |
