@@ -142,7 +142,10 @@
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isFontBundleCached || !isSvgBundleCached }"
                 [attr.href]="downloadFontBundle()">Download</a>
-              <span *ngIf="isFontBundleCached" class="ml-3 align-middle">Cached on {{svgBundleCacheDate}}</span>
+              <span *ngIf="isFontBundleCached" class="ml-3 align-middle">Cached on {{fontBundleCacheDate}}</span>
+              <div *ngIf="isFontBundleCached" class="alert alert-info">
+                <strong>Note:</strong> Generate slows down the entire site for ~30 seconds. Download the cache!
+              </div>
             </div>
           </div>
           <div class="row mb-3">
