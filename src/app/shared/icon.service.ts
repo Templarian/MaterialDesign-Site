@@ -131,6 +131,21 @@ export class IconService {
     };
   }
 
+  async generateFontBundle(fontVersion: FontVersion): Promise<boolean> {
+    let res = await this.http.get<boolean>(`/api/admin/font/version/${fontVersion.id}/generate/font`)
+      .toPromise();
+    return res;
+  }
+
+  async getFontBundleCacheDate(fontVersion: FontVersion): Promise<BundleCache> {
+    let res = await this.http.get<BundleCache>(`/api/admin/font/version/${fontVersion.id}/generate/font/cache`)
+      .toPromise();
+    return {
+      date: DateTime.fromISO(res.date),
+      isCached: res.isCached
+    };
+  }
+
   async setCodepoint(icon: Icon, fontVersion: FontVersion): Promise<Icon> {
     let res = await this.http.post<Icon>(`/api/admin/font/version/${fontVersion.id}/codepoint`, {
       icon: {

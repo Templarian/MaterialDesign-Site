@@ -27,6 +27,7 @@ export class AdminReleasePageComponent {
   public selectedFont: Font = null;
   public fontVersions: FontVersion[] = [];
   public selectedFontVersion: FontVersion = null;
+  public editFontVersion: FontVersion = null;
   public icons: Icon[];
   public selectedIcon: Icon = null;
   public aliasName: string = '';
@@ -86,7 +87,9 @@ export class AdminReleasePageComponent {
 
   async selectFontVersion() {
     this.iconsVersion = await this.iconService.getAdminFontVersion(this.selectedFontVersion);
+    this.editFontVersion = new FontVersion().from(this.selectedFontVersion);
     await this.checkSvgCache();
+    await this.checkFontCache();
   }
 
   async focusEmpty(icon: Icon) {
@@ -125,6 +128,31 @@ export class AdminReleasePageComponent {
   downloadSvgBundle(): string {
     if (this.selectedFontVersion == null) { return ''; }
     return `/api/admin/font/version/${this.selectedFontVersion.id}/download/svg`;
+  }
+
+  public isFontBundleCached: boolean = false;
+  public fontBundleCacheDate: string = null;
+
+  async checkFontCache() {
+    const bundleCache = await this.iconService.getFontBundleCacheDate(this.selectedFontVersion);
+    this.isFontBundleCached = true;
+    if (bundleCache.isCached) {
+      console.log('cache', bundleCache.date);
+      this.fontBundleCacheDate = bundleCache.date.toLocaleString(DateTime.DATETIME_MED);
+    } else {
+      console.log('no cache');
+      this.fontBundleCacheDate = null;
+    }
+  }
+
+  async generateFont() {
+    const success = await this.iconService.generateFontBundle(this.selectedFontVersion);
+    await this.checkFontCache();
+  }
+
+  downloadFontBundle(): string {
+    if (this.selectedFontVersion == null) { return ''; }
+    return `/api/admin/font/version/${this.selectedFontVersion.id}/download/font`;
   }
 
 }

@@ -47,7 +47,7 @@
             <div class="col-md-2">
               <span class="step">Step 3</span>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-3">
               <label>
                 <span class="d-block">Select a Version</span>
                 <select
@@ -55,6 +55,21 @@
                   <option *ngFor="let v of fontVersions" [ngValue]="v">{{v.major}}.{{v.minor}}.{{v.patch}} ({{v.iconCount}})</option>
                 </select>
               </label>
+            </div>
+            <div *ngIf="editFontVersion" class="col-md-7">
+              <label>
+                <span class="d-block">Major</span>
+                <input [(ngModel)]="editFontVersion.major"/>
+              </label>
+              <label>
+                <span class="d-block">Minor</span>
+                <input [(ngModel)]="editFontVersion.minor"/>
+              </label>
+              <label>
+                <span class="d-block">Patch</span>
+                <input [(ngModel)]="editFontVersion.patch"/>
+              </label>
+              <button class="btn btn-primary">Update Version</button>
             </div>
           </div>
           <div class="row mb-3">
@@ -123,8 +138,11 @@
             </div>
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/font</code></div>
-              <button class="btn btn-primary mr-2">Generate</button>
-              <button class="btn btn-outline-primary">Download</button>
+              <button class="btn btn-primary mr-2" (click)="generateFont()">Generate</button>
+              <a class="btn btn-outline-primary"
+                [ngClass]="{ 'disabled': !isFontBundleCached || !isSvgBundleCached }"
+                [attr.href]="downloadFontBundle()">Download</a>
+              <span *ngIf="isFontBundleCached" class="ml-3 align-middle">Cached on {{svgBundleCacheDate}}</span>
             </div>
           </div>
           <div class="row mb-3">
