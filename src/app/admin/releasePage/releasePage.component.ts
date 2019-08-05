@@ -106,6 +106,7 @@ export class AdminReleasePageComponent {
   }
 
   public isSvgBundleCached: boolean = false;
+  public isGenerateSvgDisabled: boolean = false;
   public svgBundleCacheDate: string = null;
 
   async checkSvgCache() {
@@ -121,8 +122,10 @@ export class AdminReleasePageComponent {
   }
 
   async generateSvg() {
+    this.isGenerateSvgDisabled = true;
     const success = await this.iconService.generateSvgBundle(this.selectedFontVersion);
     await this.checkSvgCache();
+    this.isGenerateSvgDisabled = false;
   }
 
   downloadSvgBundle(): string {
@@ -131,6 +134,7 @@ export class AdminReleasePageComponent {
   }
 
   public isFontBundleCached: boolean = false;
+  public isGenerateFontDisabled: boolean = false;
   public fontBundleCacheDate: string = null;
 
   async checkFontCache() {
@@ -146,8 +150,10 @@ export class AdminReleasePageComponent {
   }
 
   async generateFont() {
+    this.isGenerateFontDisabled = true;
     const success = await this.iconService.generateFontBundle(this.selectedFontVersion);
     await this.checkFontCache();
+    this.isGenerateFontDisabled = false;
   }
 
   downloadFontBundle(): string {

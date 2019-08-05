@@ -125,7 +125,9 @@
             </div>
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/svg</code></div>
-              <button class="btn btn-primary mr-2" (click)="generateSvg()">Generate</button>
+              <button class="btn btn-primary mr-2"
+                [disabled]="isGenerateSvgDisabled"
+                (click)="generateSvg()">Generate</button>
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isSvgBundleCached }"
                 [attr.href]="downloadSvgBundle()">Download</a>
@@ -138,12 +140,14 @@
             </div>
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/font</code></div>
-              <button class="btn btn-primary mr-2" (click)="generateFont()">Generate</button>
+              <button class="btn btn-primary mr-2"
+                [disabled]="isGenerateFontDisabled"
+                (click)="generateFont()">Generate</button>
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isFontBundleCached || !isSvgBundleCached }"
                 [attr.href]="downloadFontBundle()">Download</a>
               <span *ngIf="isFontBundleCached" class="ml-3 align-middle">Cached on {{fontBundleCacheDate}}</span>
-              <div *ngIf="isFontBundleCached" class="alert alert-info">
+              <div *ngIf="isFontBundleCached" class="alert alert-info mt-2">
                 <strong>Note:</strong> Generate slows down the entire site for ~30 seconds. Download the cache!
               </div>
             </div>
