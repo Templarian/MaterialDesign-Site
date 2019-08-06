@@ -90,10 +90,10 @@
                     </div>
                     <div class="name">{{icon.name}}</div>
                     <div class="codepoint">
-                        <input type="text" class="form-control" [(ngModel)]="icon.codepoint" disabled/>
+                        <input type="text" class="form-control" [(ngModel)]="icon.codepoint"/>
                       </div>
                     <div class="button">
-                      <button class="btn btn-primary" disabled>Assign</button>
+                      <button class="btn btn-primary" (click)="assign(icon)" [disabled]="!icon.codepoint">Assign</button>
                     </div>
                   </li>
                 </ul>
