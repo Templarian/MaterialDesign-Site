@@ -269,7 +269,7 @@ export class IconService {
       id: fontVersion.id,
       major: fontVersion.major,
       minor: fontVersion.minor,
-      path: fontVersion.patch
+      patch: fontVersion.patch
     }).toPromise();
     return new FontVersion().from(res);
   }
