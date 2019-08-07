@@ -59,17 +59,24 @@
             <div *ngIf="editFontVersion" class="col-md-7">
               <label>
                 <span class="d-block">Major</span>
-                <input [(ngModel)]="editFontVersion.major"/>
+                <input [(ngModel)]="editFontVersion.major"
+                  style="width: 4rem;"
+                  class="form-control"/>
               </label>
               <label>
                 <span class="d-block">Minor</span>
-                <input [(ngModel)]="editFontVersion.minor"/>
+                <input [(ngModel)]="editFontVersion.minor"
+                  style="width: 4rem;"
+                  class="form-control"/>
               </label>
               <label>
                 <span class="d-block">Patch</span>
-                <input [(ngModel)]="editFontVersion.patch"/>
+                <input [(ngModel)]="editFontVersion.patch"
+                  style="width: 4rem;"
+                  class="form-control"/>
               </label>
-              <button class="btn btn-primary">Update Version</button>
+              <button class="btn btn-primary"
+                (click)="updateFontVersion()">Update Version</button>
             </div>
           </div>
           <div class="row mb-3">

@@ -264,4 +264,14 @@ export class IconService {
     return new Icon().from(res);
   }
 
+  async updateFontVersion(fontVersion: FontVersion) {
+    let res = await this.http.post<FontVersion>('/api/admin/font/version', {
+      id: fontVersion.id,
+      major: fontVersion.major,
+      minor: fontVersion.minor,
+      path: fontVersion.patch
+    }).toPromise();
+    return new FontVersion().from(res);
+  }
+
 }

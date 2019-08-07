@@ -161,4 +161,9 @@ export class AdminReleasePageComponent {
     return `/api/admin/font/version/${this.selectedFontVersion.id}/download/font`;
   }
 
+  async updateFontVersion() {
+    await this.iconService.updateFontVersion(this.editFontVersion);
+    alert('Updated Font Version');
+  }
+
 }
