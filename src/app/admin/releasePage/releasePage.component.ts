@@ -162,7 +162,10 @@ export class AdminReleasePageComponent {
   }
 
   async updateFontVersion() {
-    await this.iconService.updateFontVersion(this.editFontVersion);
+    const fontVersion = await this.iconService.updateFontVersion(this.editFontVersion);
+    this.editFontVersion.major = fontVersion.major;
+    this.editFontVersion.minor = fontVersion.minor;
+    this.editFontVersion.patch = fontVersion.patch;
     alert('Updated Font Version');
   }
 
