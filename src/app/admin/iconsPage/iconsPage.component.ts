@@ -118,7 +118,7 @@ export class AdminIconsPageComponent {
     this.selectedIcon = null;
     this.newIcon = new Icon("", this.noIcon);
     this.newIcon.packageId = this.selectedPackage.id;
-    this.newIcon.published = false;
+    this.newIcon.published = true;
     this.fonts = await this.iconService.getAdminFonts(this.selectedPackage.id);
     this.selectedFont = this.fonts[0];
     this.versions = this.selectedFont.versions;
