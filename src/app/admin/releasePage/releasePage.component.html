@@ -47,7 +47,7 @@
             <div class="col-md-2">
               <span class="step">Step 3</span>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-10">
               <label>
                 <span class="d-block">Select a Version</span>
                 <select
@@ -55,28 +55,28 @@
                   <option *ngFor="let v of fontVersions" [ngValue]="v">{{v.major}}.{{v.minor}}.{{v.patch}} ({{v.iconCount}})</option>
                 </select>
               </label>
-            </div>
-            <div *ngIf="editFontVersion" class="col-md-7">
-              <label class="mr-1">
-                <span class="d-block">Major</span>
-                <input [(ngModel)]="editFontVersion.major"
-                  style="width: 4rem;"
-                  class="form-control"/>
-              </label>
-              <label class="mr-1">
-                <span class="d-block">Minor</span>
-                <input [(ngModel)]="editFontVersion.minor"
-                  style="width: 4rem;"
-                  class="form-control"/>
-              </label>
-              <label class="mr-1">
-                <span class="d-block">Patch</span>
-                <input [(ngModel)]="editFontVersion.patch"
-                  style="width: 4rem;"
-                  class="form-control"/>
-              </label>
-              <button class="btn btn-primary"
-                (click)="updateFontVersion()">Update Version</button>
+              <span *ngIf="editFontVersion" class="pl-2">
+                <label class="mr-1">
+                  <span class="d-block">Major</span>
+                  <input [(ngModel)]="editFontVersion.major"
+                    style="width: 4rem;"
+                    class="form-control"/>
+                </label>
+                <label class="mr-1">
+                  <span class="d-block">Minor</span>
+                  <input [(ngModel)]="editFontVersion.minor"
+                    style="width: 4rem;"
+                    class="form-control"/>
+                </label>
+                <label class="mr-1">
+                  <span class="d-block">Patch</span>
+                  <input [(ngModel)]="editFontVersion.patch"
+                    style="width: 4rem;"
+                    class="form-control"/>
+                </label>
+                <button class="btn btn-primary"
+                  (click)="updateFontVersion()">Update Version</button>
+              </span>
             </div>
           </div>
           <div class="row mb-3">
@@ -133,12 +133,15 @@
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/svg</code></div>
               <button class="btn btn-primary mr-2"
-                [disabled]="isGenerateSvgDisabled"
+                [disabled]="isGenerateSvgDisabled || selectedFontVersion.released"
                 (click)="generateSvg()">Generate</button>
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isSvgBundleCached }"
                 [attr.href]="downloadSvgBundle()">Download</a>
               <span *ngIf="isSvgBundleCached" class="ml-3 align-middle">Cached on {{svgBundleCacheDate}}</span>
+              <div *ngIf="selectedFontVersion.released" class="alert alert-info mt-2">
+                Released versions cannot be generated! Download from cache.
+              </div>
             </div>
           </div>
           <div class="row mb-3">
@@ -148,7 +151,7 @@
             <div class="col-md-10">
               <div class="mb-2">Generate <code>@mdi/font</code></div>
               <button class="btn btn-primary mr-2"
-                [disabled]="isGenerateFontDisabled"
+                [disabled]="isGenerateFontDisabled || selectedFontVersion.released"
                 (click)="generateFont()">Generate</button>
               <a class="btn btn-outline-primary"
                 [ngClass]="{ 'disabled': !isFontBundleCached || !isSvgBundleCached }"
@@ -156,6 +159,9 @@
               <span *ngIf="isFontBundleCached" class="ml-3 align-middle">Cached on {{fontBundleCacheDate}}</span>
               <div *ngIf="isFontBundleCached" class="alert alert-info mt-2">
                 <strong>Note:</strong> Generate slows down the entire site for ~30 seconds. Download the cache!
+              </div>
+              <div *ngIf="selectedFontVersion.released" class="alert alert-info mt-2">
+                Released versions cannot be generated! Download from cache.
               </div>
             </div>
           </div>
