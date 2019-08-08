@@ -1,5 +1,20 @@
 # Changelog
 
+## Version 3.9.97
+
+- 102 New Icons
+- Renamed `book-multiple-variant` to `book-variant-multiple`
+- Renamed `book-multiple-plus` to `book-plus-multiple`
+- Renamed `book-multiple-minus` to `book-minus-multiple`
+- Renamed `book-multiple-remove` to `book-remove-multiple`
+- Renamed `carry-on-bag-check` to `bag-carry-on-check`
+- Updated all `music-note-*`
+- Updated `power-socket-uk`
+- Updated `markdown`
+- Updated `content-save-*`
+- Updated `email-*`
+- Updated `folder-*-outline`
+
 ## Version 3.8.95
 
 - 100 New Icons

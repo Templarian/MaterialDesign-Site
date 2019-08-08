@@ -2,6 +2,10 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 3.8.95 to 3.9.97
+
+- No Changes
+
 ## 3.7.95 to 3.8.95
 
 - Rename `weather-partlycloudy` to `weather-partly-cloudy`
