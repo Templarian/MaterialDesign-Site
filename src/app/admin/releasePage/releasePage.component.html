@@ -157,7 +157,7 @@
                 [ngClass]="{ 'disabled': !isFontBundleCached || !isSvgBundleCached }"
                 [attr.href]="downloadFontBundle()">Download</a>
               <span *ngIf="isFontBundleCached" class="ml-3 align-middle">Cached on {{fontBundleCacheDate}}</span>
-              <div *ngIf="isFontBundleCached" class="alert alert-info mt-2">
+              <div *ngIf="isFontBundleCached && !selectedFontVersion.released" class="alert alert-info mt-2">
                 <strong>Note:</strong> Generate slows down the entire site for ~30 seconds. Download the cache!
               </div>
               <div *ngIf="selectedFontVersion.released" class="alert alert-info mt-2">

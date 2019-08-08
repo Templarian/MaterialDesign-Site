@@ -4,7 +4,11 @@ Follow the guide starting with your version to the version you wish to upgrade t
 
 ## 3.8.95 to 3.9.97
 
-- No Changes
+- Renamed `book-multiple-variant` to `book-variant-multiple`
+- Renamed `book-multiple-plus` to `book-plus-multiple`
+- Renamed `book-multiple-minus` to `book-minus-multiple`
+- Renamed `book-multiple-remove` to `book-remove-multiple`
+- Renamed `carry-on-bag-check` to `bag-carry-on-check`
 
 ## 3.7.95 to 3.8.95
 
