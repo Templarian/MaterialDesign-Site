@@ -3,6 +3,7 @@
 ## Version 3.9.97
 
 - 102 New Icons
+- CSS / SASS `:before` to `::before` dropping legacy support.
 - Renamed `book-multiple-variant` to `book-variant-multiple`
 - Renamed `book-multiple-plus` to `book-plus-multiple`
 - Renamed `book-multiple-minus` to `book-minus-multiple`
