@@ -21,7 +21,7 @@ action "ng build production" {
 }
 
 action "FTP Deploy" {
-  uses = "SamKirkland/FTP-Deploy-Action"
+  uses = "SamKirkland/FTP-Deploy-Action@master"
   needs = ["ng build production"]
   secrets = ["FTP_PASSWORD", "FTP_SERVER", "FTP_USERNAME", "REMOTE_DIR", "LOCAL_DIR"]
 }
