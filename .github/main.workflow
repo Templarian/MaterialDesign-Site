@@ -1,6 +1,6 @@
 workflow "Build and deploy on push" {
   on = "push"
-  resolves = ["FTP Deploy"]
+  resolves = ["HTTP client"]
 }
 
 action "npm install" {
@@ -16,6 +16,18 @@ action "build prod" {
 
 action "FTP Deploy" {
   uses = "SamKirkland/FTP-Deploy-Action@master"
-  secrets = ["FTP_PASSWORD", "FTP_SERVER", "FTP_USERNAME", "REMOTE_DIR", "LOCAL_DIR"]
+  secrets = [
+    "FTP_PASSWORD",
+    "FTP_SERVER",
+    "FTP_USERNAME",
+    "LOCAL_DIR",
+    "REMOTE_DIR",
+  ]
   needs = ["build prod"]
+}
+
+action "HTTP client" {
+  uses = "swinton/httpie.action@69125d73caa2c6821f6a41a86112777a37adc171"
+  needs = ["FTP Deploy"]
+  args = ["GET", "https://dev.materialdesignicons.com/admin/build"]
 }
