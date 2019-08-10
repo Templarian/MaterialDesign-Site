@@ -148,4 +148,27 @@
     padding: 0.25rem;
     text-align: right;
   }
+
+  .badge {
+    padding: 0.35rem 0.5rem;
+    vertical-align: top;
+  }
+
+  .badge button {
+    border: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    padding: 2px;
+    margin-left: 0.3rem;
+  }
+  .badge button:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .badge button svg {
+    fill: #FFF;
+  }
 }
