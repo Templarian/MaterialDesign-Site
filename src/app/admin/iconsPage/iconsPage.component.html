@@ -126,7 +126,7 @@
               <button class="btn btn-sm btn-primary mr-2">Add Alias</button>
               <span *ngFor="let alias of editIcon.aliases" class="badge badge-secondary">
                 <span>{{alias.name}}</span>
-                <button>
+                <button (click)="removeAlias(alias)">
                   <svg viewBox="0 0 16 16">
                     <path d="M 3.05025,4.46447L 4.46447,3.05025L 8,6.58579L 11.5355,3.05025L 12.9497,4.46447L 9.41421,8L 12.9497,11.5355L 11.5355,12.9497L 8,9.41422L 4.46447,12.9497L 3.05025,11.5355L 6.58579,8L 3.05025,4.46447 Z "/>
                   </svg>
@@ -140,7 +140,7 @@
               <button class="btn btn-sm btn-primary mr-2">Add Tag</button>
               <span *ngFor="let tag of editIcon.tags" class="badge badge-secondary">
                 <span>{{tag.name}}</span>
-                <button>
+                <button (click)="removeTag(tag)">
                   <svg viewBox="0 0 16 16">
                     <path d="M 3.05025,4.46447L 4.46447,3.05025L 8,6.58579L 11.5355,3.05025L 12.9497,4.46447L 9.41421,8L 12.9497,11.5355L 11.5355,12.9497L 8,9.41422L 4.46447,12.9497L 3.05025,11.5355L 6.58579,8L 3.05025,4.46447 Z "/>
                   </svg>

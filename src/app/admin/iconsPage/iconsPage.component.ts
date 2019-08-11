@@ -12,6 +12,11 @@ import { User } from 'app/shared/models/user.model';
 import { FontVersion } from 'app/shared/models/fontVersion.model';
 import { Font } from 'app/shared/models/font.model';
 import { AssignUserModal } from 'app/shared/assignUserModal/assignUserModal.component';
+import { Alias } from 'app/shared/models/alias.model';
+import { Tag } from 'app/shared/models/tag.model';
+import { ConfirmModal } from 'app/shared/confirmModal/confirmModal.component';
+import { AliasService } from 'app/shared/alias.service';
+import { TagService } from 'app/shared/tag.service';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -20,7 +25,9 @@ import { AssignUserModal } from 'app/shared/assignUserModal/assignUserModal.comp
   providers: [
     LoginService,
     IconService,
-    UserService
+    UserService,
+    AliasService,
+    TagService
   ]
 })
 export class AdminIconsPageComponent {
@@ -29,6 +36,8 @@ export class AdminIconsPageComponent {
     private loginService: LoginService,
     private iconService: IconService,
     private userService: UserService,
+    private aliasService: AliasService,
+    private tagService: TagService,
     private modalService: NgbModal,
     private route: ActivatedRoute,
     private router: Router
@@ -234,6 +243,24 @@ export class AdminIconsPageComponent {
       this.editIcon.user = updatedIcon.user;
     }, (reason) => {
       // dismissed
+    });
+  }
+
+  async removeAlias(alias: Alias) {
+    const modal = this.modalService.open(ConfirmModal);
+    modal.componentInstance.title = "Delete Alias";
+    modal.componentInstance.description = "Are you sure you delete this alias?";
+    modal.result.then(async () => {
+      this.editIcon.aliases = await this.aliasService.deleteAlias(alias);
+    });
+  }
+
+  async removeTag(tag: Tag) {
+    const modal = this.modalService.open(ConfirmModal);
+    modal.componentInstance.title = "Delete Tag";
+    modal.componentInstance.description = "Are you sure you delete this tag?";
+    modal.result.then(async () => {
+      this.editIcon.tags = await this.tagService.deleteTag(tag);
     });
   }
 
