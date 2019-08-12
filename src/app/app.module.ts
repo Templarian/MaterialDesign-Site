@@ -56,6 +56,8 @@ import { ModfiicationTableComponent } from 'app/shared/modificationTable/modific
 import { IconPreviewComponent } from 'app/shared/iconPreview/iconPreview.component';
 import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
 import { AssignUserModal } from 'app/shared/assignUserModal/assignUserModal.component';
+import { AssignTagModal } from 'app/shared/assignTagModal/assignTagModal.component';
+import { AssignAliasModal } from 'app/shared/assignAliasModal/assignAliasModal.component';
 import { ConfirmModal } from './shared/confirmModal/confirmModal.component';
 import { SelectIconModal } from './shared/selectIconModal/selectIconModal.component';
 
@@ -528,12 +530,16 @@ const appRoutes: Routes = [
     IconSearchComponent,
     AssignIssueModal,
     AssignUserModal,
+    AssignTagModal,
+    AssignAliasModal,
     ConfirmModal,
     SelectIconModal
   ],
   entryComponents: [
     AssignIssueModal,
     AssignUserModal,
+    AssignTagModal,
+    AssignAliasModal,
     ConfirmModal,
     SelectIconModal
   ],

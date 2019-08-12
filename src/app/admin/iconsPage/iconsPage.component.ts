@@ -17,6 +17,8 @@ import { Tag } from 'app/shared/models/tag.model';
 import { ConfirmModal } from 'app/shared/confirmModal/confirmModal.component';
 import { AliasService } from 'app/shared/alias.service';
 import { TagService } from 'app/shared/tag.service';
+import { AssignTagModal } from 'app/shared/assignTagModal/assignTagModal.component';
+import { AssignAliasModal } from 'app/shared/assignAliasModal/assignAliasModal.component';
 
 @Component({
   selector: 'mdi-admin-icons-page',
@@ -264,4 +266,27 @@ export class AdminIconsPageComponent {
     });
   }
 
+  addTag() {
+    const modal = this.modalService.open(AssignTagModal);
+    modal.componentInstance.package = this.selectedPackage;
+    modal.result.then(async (tag: Tag) => {
+      const newTag = await this.tagService.assignTag(this.selectedIcon, tag);
+      this.editIcon.addTag(newTag);
+    }, (reason) => {
+      // dismissed
+    });
+  }
+
+  addAlias() {
+    const modal = this.modalService.open(AssignAliasModal);
+    modal.componentInstance.package = this.selectedPackage;
+    modal.result.then(async (name: string) => {
+      const alias = new Alias();
+      alias.name = name;
+      const newAlias = await this.aliasService.assignTag(this.selectedIcon, alias);
+      this.editIcon.addAlias(newAlias);
+    }, (reason) => {
+      // dismissed
+    });
+  }
 }

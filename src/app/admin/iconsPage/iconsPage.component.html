@@ -123,7 +123,9 @@
               <div>
                 <label>Aliases</label>
               </div>
-              <button class="btn btn-sm btn-primary mr-2">Add Alias</button>
+              <button
+                class="btn btn-sm btn-primary mr-2"
+                (click)="addAlias()">Add Alias</button>
               <span *ngFor="let alias of editIcon.aliases" class="badge badge-secondary">
                 <span>{{alias.name}}</span>
                 <button (click)="removeAlias(alias)">
@@ -137,7 +139,9 @@
               <div>
                 <label>Tags</label>
               </div>
-              <button class="btn btn-sm btn-primary mr-2">Add Tag</button>
+              <button
+                class="btn btn-sm btn-primary mr-2"
+                (click)="addTag()">Add Tag</button>
               <span *ngFor="let tag of editIcon.tags" class="badge badge-secondary">
                 <span>{{tag.name}}</span>
                 <button (click)="removeTag(tag)">
