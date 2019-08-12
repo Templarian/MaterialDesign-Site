@@ -253,7 +253,7 @@ export class AdminIconsPageComponent {
     modal.componentInstance.title = "Delete Alias";
     modal.componentInstance.description = "Are you sure you delete this alias?";
     modal.result.then(async () => {
-      this.editIcon.aliases = await this.aliasService.deleteAlias(alias);
+      this.editIcon.aliases = await this.aliasService.deleteAlias(this.selectedIcon, alias);
     });
   }
 
@@ -262,7 +262,7 @@ export class AdminIconsPageComponent {
     modal.componentInstance.title = "Delete Tag";
     modal.componentInstance.description = "Are you sure you delete this tag?";
     modal.result.then(async () => {
-      this.editIcon.tags = await this.tagService.deleteTag(tag);
+      this.editIcon.tags = await this.tagService.deleteTag(this.selectedIcon, tag);
     });
   }
 
@@ -283,7 +283,7 @@ export class AdminIconsPageComponent {
     modal.result.then(async (name: string) => {
       const alias = new Alias();
       alias.name = name;
-      const newAlias = await this.aliasService.assignTag(this.selectedIcon, alias);
+      const newAlias = await this.aliasService.assignAlias(this.selectedIcon, alias);
       this.editIcon.addAlias(newAlias);
     }, (reason) => {
       // dismissed

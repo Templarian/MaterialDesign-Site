@@ -36,8 +36,8 @@ export class TagService {
     return new Tag().from(res);
   }
 
-  async deleteTag(tag: Tag): Promise<Tag[]> {
-    let res = await this.http.delete<Tag[]>('/api/admin/tag/' + tag.id).toPromise();
+  async deleteTag(icon: Icon, tag: Tag): Promise<Tag[]> {
+    let res = await this.http.delete<Tag[]>(`/api/admin/icon/${icon.id}/tag/${tag.id}`).toPromise();
     return res.map(t => new Tag().from(t));
   }
 
