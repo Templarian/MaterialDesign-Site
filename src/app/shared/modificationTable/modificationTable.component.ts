@@ -8,6 +8,7 @@ import { ModificationType } from 'app/shared/enums/modificationType.enum';
 import { Icon } from 'app/shared/models/icon.model';
 import { Modification } from '../models/modification.model';
 import { UserService } from '../user.service';
+import { Tag } from '../models/tag.model';
 
 @Component({
   selector: 'mdi-modification-table',
@@ -16,7 +17,8 @@ import { UserService } from '../user.service';
   providers: [
     LoginService,
     ModificationService,
-    UserService
+    UserService,
+    TagService
   ]
 })
 export class ModfiicationTableComponent {
@@ -25,6 +27,7 @@ export class ModfiicationTableComponent {
     private loginService: LoginService,
     private modificationService: ModificationService,
     private userService: UserService,
+    private tagService: TagService,
     private router: Router
   ) { }
   @Input('icon') icon: Icon = null
@@ -32,8 +35,10 @@ export class ModfiicationTableComponent {
   currentDate: string = '';
   modificationsByDate: GroupByDateModification[] = [];
   ModificationType: typeof ModificationType = ModificationType;
+  tags: Tag[] = [];
 
-  async loadModifications(icon) {
+  async loadModifications(icon: Icon) {
+    this.tags = await this.tagService.getTags(icon.packageId);
     const mods = [
       ModificationType.IconCreated,
       ModificationType.IconDeleted,
@@ -41,10 +46,11 @@ export class ModfiicationTableComponent {
       ModificationType.IconDescriptionModified,
       ModificationType.IconModified,
       ModificationType.IconAliasCreated,
+      ModificationType.IconAliasDeleted,
       ModificationType.IconAuthorModified,
-      ModificationType.IconTagCreated
+      ModificationType.IconTagCreated,
+      ModificationType.IconTagDeleted
     ]
-
     this.modificationsByDate = [];
     let modifications = await this.modificationService.getAdminIconModificationsByType(icon.id, mods, this.page, 100);
     for (let m of modifications) {
@@ -98,6 +104,11 @@ export class ModfiicationTableComponent {
       default:
         return 'Unknown';
     }
+  }
+
+  friendlyTag(tagId: string) {
+    const tag = this.tags.find(t => t.id === tagId);
+    return tag ? tag.name : 'Unknown';
   }
 
   friendlyDate(date: Date) {
