@@ -11,7 +11,7 @@
         #inputTag
         [(ngModel)]="selectedTag"
         class="custom-select">
-        <option *ngFor="let tag of tags" [ngValue]="tag">{{tag.name}} ({{tag.iconCount}})</option>
+        <option *ngFor="let tag of tags" [ngValue]="tag">{{tag.name}} ({{tag.count}})</option>
       </select>
   </label>
 </div>

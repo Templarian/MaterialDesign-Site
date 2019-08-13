@@ -353,9 +353,17 @@
               </div>
             </div>
             <div class="col-md-3">
-              <label>GitHub Issue <small>(optional)</small></label>
-              <input class="form-control" name="issue"
-                [(ngModel)]="issue"/>
+              <div class="form-group">
+                <label>GitHub Issue <small>(optional)</small></label>
+                <input class="form-control"
+                  [ngClass]="{'is-invalid': isIssueInvalid()}"
+                  name="issue"
+                  [(ngModel)]="issue"/>
+                <div class="invalid-feedback">
+                  Please do not include a # symbol.
+                </div>
+              </div>
+              
             </div>
             <div class="col-md-5">
               <div class="card">

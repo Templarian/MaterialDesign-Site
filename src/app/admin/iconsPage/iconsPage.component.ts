@@ -151,6 +151,16 @@ export class AdminIconsPageComponent {
     }
   }
 
+  isIssueInvalid(){
+    if (this.issue === null || this.issue === '') {
+      return false;
+    }
+    if(this.issue.match(/#/)) {
+      return true;
+    }
+    return false;
+  }
+
   cancelIcon() {
     this.newIcon = null;
     this.issue = null;
