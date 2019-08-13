@@ -84,8 +84,30 @@
           </td>
           <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
         </tr>
+        <tr *ngSwitchCase="ModificationType.IconAliasDeleted">
+          <td style="width:1.5rem"><mdi-icon name="tooltip-text"></mdi-icon></td>
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td colspan="2"><code>{{entry.text}}</code></td>
+          <td style="width:4rem;text-align: center;">
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
+        </tr>
         <tr *ngSwitchCase="ModificationType.IconTagCreated">
           <td style="width:1.5rem"><mdi-icon name="tag-plus"></mdi-icon></td>
+          <td style="width:15rem">{{entry.user.name}}</td>
+          <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
+          <td colspan="2"><code>{{friendlyTag(entry.joinId)}}</code></td>
+          <td style="width:4rem;text-align: center;">
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="entry.isVisible" (click)="setHidden(entry)"><mdi-icon name="eye"></mdi-icon></button>
+              <button class="btn btn-sm btn-outline-secondary" *ngIf="!entry.isVisible" (click)="setVisible(entry)"><mdi-icon name="eye-off"></mdi-icon></button>
+          </td>
+          <td style="width:6rem;text-align: center;"><button class="btn btn-sm btn-outline-danger" disabled>Revert</button></td>
+        </tr>
+        <tr *ngSwitchCase="ModificationType.IconTagDeleted">
+          <td style="width:1.5rem"><mdi-icon name="tag-minus"></mdi-icon></td>
           <td style="width:15rem">{{entry.user.name}}</td>
           <td style="width:10rem;">{{friendlyModification(entry.modificationId)}}</td>
           <td colspan="2"><code>{{friendlyTag(entry.joinId)}}</code></td>

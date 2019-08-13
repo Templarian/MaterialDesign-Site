@@ -97,8 +97,12 @@ export class ModfiicationTableComponent {
         return 'Path Modified'
       case ModificationType.IconAliasCreated:
         return 'Alias Added';
+      case ModificationType.IconAliasDeleted:
+        return 'Alias Removed';
       case ModificationType.IconTagCreated:
         return 'Tag Added';
+      case ModificationType.IconTagDeleted:
+        return 'Tag Removed';
       case ModificationType.IconAuthorModified:
         return 'Assigned Author';
       default:
