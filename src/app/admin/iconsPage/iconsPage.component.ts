@@ -263,7 +263,8 @@ export class AdminIconsPageComponent {
     modal.componentInstance.title = "Delete Alias";
     modal.componentInstance.description = "Are you sure you delete this alias?";
     modal.result.then(async () => {
-      this.editIcon.aliases = await this.aliasService.deleteAlias(this.selectedIcon, alias);
+      const updatedIcon =  await this.aliasService.deleteAlias(this.selectedIcon, alias);
+      this.editIcon.aliases = updatedIcon.aliases;
     });
   }
 
@@ -272,7 +273,8 @@ export class AdminIconsPageComponent {
     modal.componentInstance.title = "Delete Tag";
     modal.componentInstance.description = "Are you sure you delete this tag?";
     modal.result.then(async () => {
-      this.editIcon.tags = await this.tagService.deleteTag(this.selectedIcon, tag);
+      const updatedIcon =  await this.tagService.deleteTag(this.selectedIcon, tag);
+      this.editIcon.tags = updatedIcon.tags;
     });
   }
 
@@ -280,8 +282,8 @@ export class AdminIconsPageComponent {
     const modal = this.modalService.open(AssignTagModal);
     modal.componentInstance.package = this.selectedPackage;
     modal.result.then(async (tag: Tag) => {
-      const newTag = await this.tagService.assignTag(this.selectedIcon, tag);
-      this.editIcon.addTag(newTag);
+      const updatedIcon = await this.tagService.assignTag(this.selectedIcon, tag);
+      this.editIcon.tags = updatedIcon.tags;
     }, (reason) => {
       // dismissed
     });
@@ -293,8 +295,8 @@ export class AdminIconsPageComponent {
     modal.result.then(async (name: string) => {
       const alias = new Alias();
       alias.name = name;
-      const newAlias = await this.aliasService.assignAlias(this.selectedIcon, alias);
-      this.editIcon.addAlias(newAlias);
+      const updatedIcon = await this.aliasService.assignAlias(this.selectedIcon, alias);
+      this.editIcon.aliases = updatedIcon.aliases;
     }, (reason) => {
       // dismissed
     });

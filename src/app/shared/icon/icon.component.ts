@@ -41,7 +41,8 @@ import {
     mdiArrowUpThick,
     mdiFormatListChecks,
     mdiVisualStudioCode,
-    mdiPuzzleOutline
+    mdiPuzzleOutline,
+    mdiTagMinus
 } from '@mdi/js'
 
 @Component({
@@ -112,6 +113,7 @@ export class IconComponent  {
         new Icon('star', mdiStar),
         new Icon('svg', mdiSvg),
         new Icon('tag-plus', mdiTagPlus),
+        new Icon('tag-minus', mdiTagMinus),
         new Icon('thumb-up-outline', mdiThumbUpOutline),
         new Icon('tooltip-text', mdiTooltipText),
         new Icon('textbox', mdiTextbox),

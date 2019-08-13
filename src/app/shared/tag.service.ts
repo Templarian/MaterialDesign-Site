@@ -28,17 +28,17 @@ export class TagService {
     return res.map(t => new Tag().from(t));
   }
 
-  async assignTag(icon: Icon, tag: Tag): Promise<Tag> {
-    let res = await this.http.post<Tag>('/api/admin/icon/tag', {
+  async assignTag(icon: Icon, tag: Tag): Promise<Icon> {
+    let res = await this.http.post<Icon>('/api/admin/icon/tag', {
       icon: { id: icon.id },
       tag: { id: tag.id }
     }).toPromise();
-    return new Tag().from(res);
+    return new Icon().from(res);
   }
 
-  async deleteTag(icon: Icon, tag: Tag): Promise<Tag[]> {
-    let res = await this.http.delete<Tag[]>(`/api/admin/icon/${icon.id}/tag/${tag.id}`).toPromise();
-    return res.map(t => new Tag().from(t));
+  async deleteTag(icon: Icon, tag: Tag): Promise<Icon> {
+    let res = await this.http.delete<Icon>(`/api/admin/icon/${icon.id}/tag/${tag.id}`).toPromise();
+    return new Icon().from(res);
   }
 
 }
