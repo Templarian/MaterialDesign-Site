@@ -285,7 +285,7 @@ export class AdminIconsPageComponent {
       const updatedIcon = await this.tagService.assignTag(this.selectedIcon, tag);
       this.editIcon.tags = updatedIcon.tags;
     }, (reason) => {
-      // dismissed
+      // dismissed modal
     });
   }
 
@@ -298,7 +298,7 @@ export class AdminIconsPageComponent {
       const updatedIcon = await this.aliasService.assignAlias(this.selectedIcon, alias);
       this.editIcon.aliases = updatedIcon.aliases;
     }, (reason) => {
-      // dismissed
+      // dismissed modal
     });
   }
 }
