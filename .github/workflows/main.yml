@@ -1,0 +1,27 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Install Dependencies
+      run: npm install
+    - name: Build for Production
+      run: npm run build
+    - name: Sync to FTP
+      uses: SamKirkland/FTP-Deploy-Action@master
+      env:
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        LOCAL_DIR: ${{ secrets.LOCAL_DIR }}
+        REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
+    - name: Trigger Server Steps
+      uses: swinton/httpie.action@69125d73caa2c6821f6a41a86112777a37adc171
+      with:
+        args: POST https://dev.materialdesignicons.com/api/admin/build
