@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 4.0.96
+
+- 99 New Icons
+- ToDo Fill out
+
 ## Version 3.9.97
 
 - 102 New Icons
