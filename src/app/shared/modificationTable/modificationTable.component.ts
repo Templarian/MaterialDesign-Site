@@ -49,7 +49,11 @@ export class ModfiicationTableComponent {
       ModificationType.IconAliasDeleted,
       ModificationType.IconAuthorModified,
       ModificationType.IconTagCreated,
-      ModificationType.IconTagDeleted
+      ModificationType.IconTagDeleted,
+      ModificationType.IconPublished,
+      ModificationType.IconWorkInProgress,
+      ModificationType.IconLive,
+      ModificationType.IconDeprecated
     ]
     this.modificationsByDate = [];
     let modifications = await this.modificationService.getAdminIconModificationsByType(icon.id, mods, this.page, 100);
@@ -91,6 +95,14 @@ export class ModfiicationTableComponent {
         return 'Deleted';
       case ModificationType.IconRenamed:
         return 'Renamed';
+      case ModificationType.IconPublished:
+        return 'Published';
+      case ModificationType.IconWorkInProgress:
+        return 'Work in Progress';
+      case ModificationType.IconLive:
+        return 'Live';
+      case ModificationType.IconDeprecated:
+        return 'Deprecated';
       case ModificationType.IconDescriptionModified:
         return 'Description Modified'
       case ModificationType.IconModified:
