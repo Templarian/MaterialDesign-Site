@@ -298,10 +298,10 @@ export class AdminIconsPageComponent {
   }
 
   async deprecated() {
-    this.editIcon = await this.iconService.updatePublished(this.editIcon);
+    this.editIcon = await this.iconService.updateDeprecated(this.editIcon);
   }
 
   async published() {
-    this.editIcon = await this.iconService.updateDeprecated(this.editIcon);
+    this.editIcon = await this.iconService.updatePublished(this.editIcon);
   }
 }
