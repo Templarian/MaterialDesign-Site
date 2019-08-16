@@ -239,8 +239,7 @@ export class AdminIconsPageComponent {
   }
 
   async rename(){
-    const updatedIcon = await this.iconService.rename(this.editIcon, this.selectedUser);
-    this.selectedIcon.name = updatedIcon.name;
+    this.selectedIcon = await this.iconService.rename(this.editIcon, this.selectedUser);
   }
 
   async assignUser() {
@@ -263,8 +262,7 @@ export class AdminIconsPageComponent {
     modal.componentInstance.title = "Delete Alias";
     modal.componentInstance.description = "Are you sure you delete this alias?";
     modal.result.then(async () => {
-      const updatedIcon =  await this.aliasService.deleteAlias(this.selectedIcon, alias);
-      this.editIcon.aliases = updatedIcon.aliases;
+      this.editIcon = await this.aliasService.deleteAlias(this.selectedIcon, alias);
     });
   }
 
@@ -273,8 +271,7 @@ export class AdminIconsPageComponent {
     modal.componentInstance.title = "Delete Tag";
     modal.componentInstance.description = "Are you sure you delete this tag?";
     modal.result.then(async () => {
-      const updatedIcon =  await this.tagService.deleteTag(this.selectedIcon, tag);
-      this.editIcon.tags = updatedIcon.tags;
+      this.editIcon = await this.tagService.deleteTag(this.selectedIcon, tag);
     });
   }
 
@@ -282,8 +279,7 @@ export class AdminIconsPageComponent {
     const modal = this.modalService.open(AssignTagModal);
     modal.componentInstance.package = this.selectedPackage;
     modal.result.then(async (tag: Tag) => {
-      const updatedIcon = await this.tagService.assignTag(this.selectedIcon, tag);
-      this.editIcon.tags = updatedIcon.tags;
+      this.editIcon = await this.tagService.assignTag(this.selectedIcon, tag);
     }, (reason) => {
       // dismissed modal
     });
@@ -295,20 +291,17 @@ export class AdminIconsPageComponent {
     modal.result.then(async (name: string) => {
       const alias = new Alias();
       alias.name = name;
-      const updatedIcon = await this.aliasService.assignAlias(this.selectedIcon, alias);
-      this.editIcon.aliases = updatedIcon.aliases;
+      this.editIcon = await this.aliasService.assignAlias(this.selectedIcon, alias);
     }, (reason) => {
       // dismissed modal
     });
   }
 
   async deprecated() {
-    const updatedIcon = await this.iconService.updatePublished(this.editIcon);
-    this.editIcon.deprecated = updatedIcon.deprecated;
+    this.editIcon = await this.iconService.updatePublished(this.editIcon);
   }
 
   async published() {
-    const updatedIcon = await this.iconService.updateDeprecated(this.editIcon);
-    this.editIcon.published = updatedIcon.published;
+    this.editIcon = await this.iconService.updateDeprecated(this.editIcon);
   }
 }
