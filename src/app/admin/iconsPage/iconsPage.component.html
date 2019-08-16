@@ -119,6 +119,58 @@
             </div>
           </div>
           <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div>
+                    <label>Published</label>
+                  </div>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn"
+                      [ngClass]="{'btn-primary active': editIcon.published, 'btn-outline-primary': !editIcon.published}">
+                      <input type="radio"
+                        [value]="true"
+                        [(ngModel)]="editIcon.published"
+                        (change)="published()"
+                        name="production" autocomplete="off"> Production
+                    </label>
+                    <label class="btn"
+                      [ngClass]="{'btn-primary active': !editIcon.published, 'btn-outline-primary': editIcon.published}">
+                      <input type="radio"
+                        [value]="false"
+                        [(ngModel)]="editIcon.published"
+                        (change)="published()"
+                        name="production" autocomplete="off"> Work in Progress
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div>
+                    <label>Deprecated</label>
+                  </div>
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn"
+                      [ngClass]="{'btn-primary active': !editIcon.deprecated, 'btn-outline-primary': editIcon.deprecated}">
+                      <input type="radio"
+                        [value]="false"
+                        [(ngModel)]="editIcon.deprecated"
+                        (change)="deprecated()"
+                        name="deprecated" autocomplete="off"> Live
+                    </label>
+                    <label class="btn"
+                      [ngClass]="{'btn-danger active': editIcon.deprecated, 'btn-outline-primary': !editIcon.deprecated}">
+                      <input type="radio"
+                        [value]="true"
+                        [(ngModel)]="editIcon.deprecated"
+                        (change)="deprecated()"
+                        name="deprecated" autocomplete="off"> Deprecated
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="form-group">
               <div>
                 <label>Aliases</label>
@@ -153,7 +205,7 @@
             </div>
             <div class="form-group form-group-edit">
               <label>Description</label>
-              <textarea class="form-control" name="description" rows="5"
+              <textarea class="form-control" name="description" rows="4"
                 [(ngModel)]="editIcon.description"></textarea>
               <div>
                 <button class="btn btn-primary"

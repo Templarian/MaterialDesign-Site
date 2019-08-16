@@ -17,6 +17,7 @@ export class Icon extends IconHelpers {
   public tags: Tag[] = [];
   public styles: Style[] = [];
   public published: boolean = true;
+  public deprecated: boolean = false;
   public codepoint: number = null;
 
   constructor(name?: string, data?: string) {
@@ -47,7 +48,10 @@ export class Icon extends IconHelpers {
     }
     if (typeof icon.published === 'boolean') {
       this.published = icon.published;
-    } 
+    }
+    if (typeof icon.deprecated === 'boolean') {
+      this.deprecated = icon.deprecated;
+    }
     if (icon.codepoint) {
       this.codepoint = icon.codepoint;
     }

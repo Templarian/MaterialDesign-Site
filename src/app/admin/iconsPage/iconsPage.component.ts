@@ -301,4 +301,14 @@ export class AdminIconsPageComponent {
       // dismissed modal
     });
   }
+
+  async deprecated() {
+    const updatedIcon = await this.iconService.updatePublished(this.editIcon);
+    this.editIcon.deprecated = updatedIcon.deprecated;
+  }
+
+  async published() {
+    const updatedIcon = await this.iconService.updateDeprecated(this.editIcon);
+    this.editIcon.published = updatedIcon.published;
+  }
 }

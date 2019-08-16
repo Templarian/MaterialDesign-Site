@@ -246,6 +246,26 @@ export class IconService {
     return new Icon().from(res);
   }
 
+  async updatePublished(icon: Icon): Promise<Icon> {
+    let res = await this.http.post<Icon>('/api/admin/icon/published', {
+      icon: {
+        id: icon.id,
+        published: icon.published
+      }
+    }).toPromise();
+    return new Icon().from(res);
+  }
+
+  async updateDeprecated(icon: Icon): Promise<Icon> {
+    let res = await this.http.post<Icon>('/api/admin/icon/deprecated', {
+      icon: {
+        id: icon.id,
+        deprecated: icon.deprecated
+      }
+    }).toPromise();
+    return new Icon().from(res);
+  }
+
   async toggleStyle(icon: Icon, style: Style) {
     let res = await this.http.post<Icon>('/api/admin/icon/style', {
       icon: { id: icon.id },
