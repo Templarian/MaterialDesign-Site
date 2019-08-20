@@ -18,9 +18,22 @@ Keeping that mission in mind, brand and logo icons are simply not _Material_. Ad
 
 ### What will happen with current brand icons in MDI?
 
-We are unsure about the future of the current brand and logo icons in MDI. For now, all current brand and logo icons available as of `v3.6.95` will continue to be available for the foreseeable future. There will be a very long deprecation, most likely announced at the `v4.0.x` release. We will likely keep these brand and logo icons until `v5.0.x`.
+We have selected several of the current brand and logo icons currently MDI which we feel are no longer a good fit for the library. These brand and logos icons will continue to be available until the `v5.0.x` release, at which time they will be permenantly removed.
 
-This announcement will also be given directly to larger projects so they can correctly handle these icons. We will provide suggestions of how to handle deprecated/removed icons. Most likely suggesting a placeholder.
+### What logos have been deprecated?
+
+| Deprecated Icons | | | |
+| --- | --- | --- | --- |
+|mdi:accusoft|mdi:basecamp|mdi:beats|mdi:behance|
+|mdi:blackberry|mdi:dribbble|mdi:dribbble-box|mdi:etsy|
+|mdi:eventbrite|mdi:flattr|mdi:foursquare|mdi:glassdoor|
+|mdi:houzz|mdi:houzz-box|mdi:instapaper|mdi:itunes|
+|mdi:lastfm|mdi:lyft|mdi:mail-ru|mdi:medium|
+|mdi:meetup|mdi:mixcloud|mdi:paypal|mdi:periscope|
+|mdi:pocket|mdi:quicktime|mdi:shopify|mdi:slackware|
+|mdi:square-inc|mdi:square-inc-cash|mdi:strava|mdi:tor|
+|mdi:tumblr|mdi:tumblr-box|mdi:tumblr-reblog|mdi:uber|
+|mdi:venmo|mdi:wunderlist|mdi:xda|mdi:yelp|
 
 ### Where should I get my brand and logo icons from?
 
@@ -28,7 +41,7 @@ We _highly_ recommend our friends over at [SimpleIcons][2] to serve your brand i
 
 ### I use Home Assistant, will I be affected by this change?
 
-Most likely not as we do not provide many brands specific to home automation. Current brand icons in the MDI library will remain unchanged for now, but if there is a new brand icon you would like to use in Home Assistant, that will require some changes on Home Assistant's part to support other icon libraries. We have communicated our intent with Home Assistant and [have opened a feature request][4], asking them to add support for SimpleIcons to provide an avenue for new brand and logo icons.
+Most likely not as none of the deprecated icons are specific to home automation. If there is a new brand icon you would like to use in Home Assistant, that will require some changes on Home Assistant's part to support other icon libraries. We have communicated our intent with Home Assistant and [have opened a feature request][4], asking them to add support for SimpleIcons to provide an avenue for new brand and logo icons.
 
 ### I use some other project that relies on MDI for their icons, will I be affected?
 
