@@ -18,7 +18,7 @@ Keeping that mission in mind, brand and logo icons are simply not _Material_. Ad
 
 ### What will happen with current brand icons in MDI?
 
-We have selected several of the current brand and logo icons currently MDI which we feel are no longer a good fit for the library. These brand and logos icons will continue to be available until the `v5.0.x` release, at which time they will be permenantly removed.
+We have selected several brand and logo icons currently included in MDI which we feel are no longer a good fit for the library. These brand and logos icons will continue to be available until the `v5.0.x` release, at which time they will be permenantly removed.
 
 ### What logos have been deprecated?
 
