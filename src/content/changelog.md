@@ -24,6 +24,7 @@
   - Added `credit-card-*` x 9
 - Updated `oil-temperature`
 - Updated `hospital`
+- Deprecated [40 brand and logo icons](https://dev.materialdesignicons.com/roadmap/brand-icons#what-logos-have-been-deprecated?)
 
 
 ## Version 3.9.97
