@@ -1,9 +1,30 @@
 # Changelog
 
-## Version 4.0.96
+## Version 4.1.95
 
 - 99 New Icons
 - ToDo Fill out
+
+## Version 4.0.96
+
+- 99 New Icons
+- Removed `google-allo`
+- Removed `loop`
+- Removed `note-circle` (duplicate of `music-circle`)
+- Removed `restore-clock` (duplicate of `history`)
+- Renamed `baby-buggy` to `baby-carriage`
+- Renamed `file-xml` to `file-code`
+- Renamed `gpu` to `expansion-card`
+- Renamed `format-list-triangle` to `format-list-bulleted-triangle`
+- Renamed `stadium` to `stadium-variant`
+  - Added `stadium`
+- Renamed `credit-card` to `credit-card-outline`
+  - Added `credit-card`
+- Renamed `credit-card-*` to `credit-card-*-outline` x 9
+  - Added `credit-card-*` x 9
+- Updated `oil-temperature`
+- Updated `hospital`
+
 
 ## Version 3.9.97
 

@@ -2,9 +2,20 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
-## 3.9.97 to 4.0.96
+## 4.0.96 to 4.1.95
 
 - ToDo Fill Out
+
+## 3.9.97 to 4.0.96
+
+- Removed `google-allo`
+- Removed `loop`
+- Removed `note-circle` (duplicate of `music-circle`)
+- Removed `restore-clock` (duplicate of `history`)
+- Renamed `baby-buggy` to `baby-carriage`
+- Renamed `file-xml` to `file-code`
+- Renamed `gpu` to `expansion-card`
+- Renamed `format-list-triangle` to `format-list-bulleted-triangle`
 
 ## 3.8.95 to 3.9.97
 
