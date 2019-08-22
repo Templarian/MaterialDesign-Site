@@ -82,7 +82,7 @@ export class AdminIconsPageComponent {
   }
 
   goBack() {
-    this.router.navigateByUrl('/admin/index')
+    this.router.navigateByUrl('/admin/index');
   }
 
   async logout() {

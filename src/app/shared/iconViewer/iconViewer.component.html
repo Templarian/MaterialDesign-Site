@@ -1,8 +1,8 @@
-<div *ngFor="let icon of icons" class="item">
+<button *ngFor="let icon of icons" class="item" (click)="select(icon)">
   <div>
     <svg viewBox="0 0 24 24">
       <path [attr.d]="icon.data"></path>
     </svg>
   </div>
   <div class="name">{{icon.name}}</div>
-</div>
+</button>
