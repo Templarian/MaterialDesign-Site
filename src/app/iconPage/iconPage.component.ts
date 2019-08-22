@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { LoginService } from 'app/admin/services/login.service';
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
 
 import { IconService } from "app/shared/icon.service";
 import { Icon } from 'app/shared/models/icon.model';
@@ -22,7 +22,13 @@ export class IconPageComponent {
     private router: Router,
     private route: ActivatedRoute,
     private iconService: IconService
-  ) { }
+  ) {
+    router.events.subscribe((evt) => {
+      if (evt instanceof NavigationEnd) {
+        this.loadIcon();
+      }
+    });
+  }
 
   loaded: boolean = false;
   icon: Icon = new Icon('Loading...', 'M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z');
@@ -35,10 +41,12 @@ export class IconPageComponent {
   }
 
   async ngOnInit() {
+    this.isAuthed = await this.loginService.isAuthed();
+  }
+
+  async loadIcon() {
     const packageId: string = this.route.snapshot.data['package'];
     const iconName: string = this.route.snapshot.params['iconName'];
-    this.isAuthed = await this.loginService.isAuthed();
-    
     const icon = await this.iconService.getIconByName(packageId, iconName);
     this.icon = icon;
     this.loaded = true;
