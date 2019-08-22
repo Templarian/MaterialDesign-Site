@@ -6,11 +6,12 @@
 
 The webfont is a quick way to integrate the icons into your application.
 
+<a class="btn btn-outline-primary" href="/changelog">View the Changelog<a> <a class="btn btn-outline-primary" href="/changelog">View the Upgrade Guide<a>
+
 ## Setup
 
 ```
 npm install @mdi/font
-bower install mdi
 ```
 
 ```
