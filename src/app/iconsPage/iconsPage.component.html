@@ -43,7 +43,7 @@
                     <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z"></path>
                 </svg>
             </div>
-            <div #content class="card p-2" *ngIf="!isIconsLoading" style="display: block;" [ngClass]="['size-' + size]">
+            <div #content class="card p-2" *ngIf="!isIconsLoading" style="flex-direction: row;flex-wrap: wrap;justify-content: space-around;" [ngClass]="['size-' + size]">
                 <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
                     [routerLink]="'/icon/' + icon.name + (packageId === PackageType.MaterialDesignIcons ? '' : '/light')">
                     <svg viewBox="0 0 24 24">
