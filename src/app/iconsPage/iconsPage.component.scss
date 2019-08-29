@@ -117,12 +117,12 @@
     
         &::-webkit-scrollbar-thumb {
             background: #FFF;
-            border-radius: 5px;
+            border-radius: 0 5px 5px 0;
         }
     
         &::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
+            background: #CCC;
+            border-radius: 0 5px 5px 0;
         }
     }
     .list-group-item {
