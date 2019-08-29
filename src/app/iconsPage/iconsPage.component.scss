@@ -106,33 +106,9 @@
         }
     }
 
-    //.has-vertical {
-    //    .list-group {
-    //        height: 100vh;
-    //    }
-    //}
-
-    .has-vertical.has-scrolled {
-        .list-group {
-            position: fixed;
-            top: 0;
-            width: 285px;
-            height: calc(100vh - 62.5px);
-        }
-    }
-    .has-vertical.has-scrolled.has-full {
-        .list-group {
-            height: 100vh;
-        }
-    }
-
-    .list-group {
-        height: calc(100vh - 62.5px - 57.5px - 36px - 0.5rem);
-        display: block;
+    .list-tags {
         overflow-y: auto;
-        padding-right: 2px;
-        position: relative;
-        transition: height 0.3s ease 0s;
+        margin-top: 0.5rem;
 
         &::-webkit-scrollbar {
             width:  10px;
@@ -157,6 +133,15 @@
         &:hover {
             background: #F1F1F1;
         }
+    }
+    .list-tags {
+        height: 70vh;
+        overflow: auto;
+        width: 100%;
+        background: transparent;
+        border: 0;
+        padding: 0;
+        box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.7);
     }
     .col-sidebar-opened {
         flex: 0 0 300px;

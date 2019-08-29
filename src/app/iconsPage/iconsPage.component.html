@@ -1,6 +1,6 @@
 <div class="container-fluid" [ngClass]="{ 'has-vertical': hasVertical, 'has-scrolled': hasScrolled, 'has-full': hasFull }">
     <div class="row">
-        <div [ngClass]="{'col-main-opened': !collapsed, 'col-main-collapsed': collapsed }">
+        <div class="col-md-9">
             <div class="filters">
                 <div class="wrap-search mr-2">
                     <input type="text" class="search" placeholder="Search..."
@@ -38,52 +38,36 @@
                         [ngClass]="{ 'active': packageId == PackageType.MaterialDesignIconsLight }">Light</button>
                 </div>
             </div>
-            <div class="card p-2 loading" *ngIf="isIconsLoading">
-                <svg class="loading-spin" viewBox="0 0 24 24">
-                    <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z"></path>
-                </svg>
-            </div>
-            <div #content class="card p-2" *ngIf="!isIconsLoading" style="flex-direction: row;flex-wrap: wrap;justify-content: space-around;" [ngClass]="['size-' + size]">
-                <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
-                    [routerLink]="'/icon/' + icon.name + (packageId === PackageType.MaterialDesignIcons ? '' : '/light')">
-                    <svg viewBox="0 0 24 24">
-                        <path [attr.d]="icon.data" />
-                    </svg>
-                    <span *ngIf="isCheatsheet"
-                        class="codepoint">f001{{icon.codepoint}}</span>
-                </a>
-            </div>
         </div>
-        <div [ngClass]="{'col-sidebar-opened': !collapsed, 'col-sidebar-collapsed': collapsed }">
-            <div class="mb-2">
-                <div class="row">
-                    <div class="col-9">
-                        <span style="color:white;font-size:1.5rem;">Categories</span>
-                    </div>
-                    <div class="col-3 text-right">
-                        <button class="btn btn-light btn-lighter"
-                            (click)="collapsed = true"
-                            *ngIf="!collapsed">
-                            <!--<mdi-icon name="chevron-right"></mdi-icon>-->d
-                        </button>
-                        <button class="btn btn-light btn-lighter"
-                            (click)="collapsed = false"
-                            *ngIf="collapsed">
-                            <!--<mdi-icon name="chevron-left"></mdi-icon>-->d
-                        </button>
-                    </div>
+        <div class="col-md-3">
+            <div ngbDropdown>
+                <button class="btn btn-light btn-lighter btn-block text-left" id="dropdownBasic2" ngbDropdownToggle>Filter by tags...</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2" class="dropdown-menu list-tags">
+                    <a [routerLink]="'/icons/' + tag.url + (packageId === PackageType.MaterialDesignIcons ? '' : '/light')"
+                        *ngFor="let tag of tags"
+                        class="list-group-item d-flex justify-content-between align-items-center"
+                        placement="left"
+                        [ngbTooltip]="collapsed ? tag.name : null">
+                        <span *ngIf="!collapsed">{{tag.name}}</span>
+                        <span class="badge badge-secondary badge-pill">{{tag.count}}</span>
+                    </a>
                 </div>
             </div>
-            <div #sidebarTags class="list-group">
-                <a [routerLink]="'/icons/' + tag.url + (packageId === PackageType.MaterialDesignIcons ? '' : '/light')"
-                    *ngFor="let tag of tags"
-                    class="list-group-item d-flex justify-content-between align-items-center"
-                    placement="left"
-                    [ngbTooltip]="collapsed ? tag.name : null">
-                    <span *ngIf="!collapsed">{{tag.name}}</span>
-                    <span class="badge badge-secondary badge-pill">{{tag.count}}</span>
-                </a>
-            </div>
         </div>
+    </div>
+    <div class="card p-2 loading" *ngIf="isIconsLoading">
+        <svg class="loading-spin" viewBox="0 0 24 24">
+            <path d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z"></path>
+        </svg>
+    </div>
+    <div #content class="card p-2" *ngIf="!isIconsLoading" style="flex-direction: row;flex-wrap: wrap;justify-content: space-around;" [ngClass]="['size-' + size]">
+        <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
+            [routerLink]="'/icon/' + icon.name + (packageId === PackageType.MaterialDesignIcons ? '' : '/light')">
+            <svg viewBox="0 0 24 24">
+                <path [attr.d]="icon.data" />
+            </svg>
+            <span *ngIf="isCheatsheet"
+                class="codepoint">f001{{icon.codepoint}}</span>
+        </a>
     </div>
 </div>

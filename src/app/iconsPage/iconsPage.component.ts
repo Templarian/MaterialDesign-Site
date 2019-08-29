@@ -23,7 +23,6 @@ export class IconsPageComponent {
   icons: Icon[] = [];
   errorMessage: any;
   tags: Tag[] = [];
-  @ViewChild('sidebarTags') sidebarTags;
   @ViewChild('content') content;
 
   constructor(
@@ -39,36 +38,19 @@ export class IconsPageComponent {
   hasScrolled: boolean = false;
   hasFull: boolean = false;
   listOffset: number = 0;
-  boundingSidebarTags: any = { top: 0 };
   isIconsLoading: boolean = true;
   isCheatsheet: boolean = false;
   PackageType = PackageType;
   packageId: PackageType = PackageType.MaterialDesignIcons;
 
-  setHasVertical() {
-    if (this.boundingSidebarTags.top == 0) {
-      this.boundingSidebarTags = this.sidebarTags.nativeElement.getBoundingClientRect();
-    }
-    this.hasVertical = document.body.scrollHeight > window.innerHeight;
-    if (window.scrollY >= this.boundingSidebarTags.top) {
-      this.hasScrolled = true;
-    } else {
-      this.hasScrolled = false;
-    }
-    this.hasFull = document.body.scrollHeight - window.innerHeight > 150
-      && document.body.scrollHeight - window.innerHeight - window.scrollY > 60;
-  }
-
   @HostListener('window:scroll', ['$event'])
   trackScroll(event) {
     //console.dir("Scroll Event", event);
-    this.setHasVertical();
   }
 
   @HostListener('window:resize', ['$event'])
   trackResize(event) {
     //console.dir("Resize Event", event);
-    this.setHasVertical();
   }
 
   async loadContent(data) {
@@ -81,8 +63,6 @@ export class IconsPageComponent {
       this.searchChanged();
     }
     this.tags = await this.tagService.getTags(data.package);
-    this.setHasVertical();
-    this.boundingSidebarTags = this.sidebarTags.nativeElement.getBoundingClientRect();
   }
 
   search: string = '';
@@ -142,7 +122,6 @@ export class IconsPageComponent {
           this.tagUrl = this.route.snapshot.params['tagUrl'] || null;
           this.searchChanged();
           document.body.scrollIntoView();
-          this.setHasVertical();
         }
       });
   }
