@@ -55,5 +55,5 @@ Below we have currated a list of commonly used icons in Home Assistant.
 | User        | mdi:account mdi:account-plus |
 | Vaccum      | mdi:robot-vacuum |
 | Video Games | mdi:xbox mdi:playstation mdi:gamepad mdi:gamepad-variant mdi:controller-classic mdi:controller-classic-outline mdi:xbox-controller mdi:xbox-controller-off mdi:google-controller mdi:google-controller-off |
-| Weather     | mdi:weather-sunny mdi:weather-partlycloudy mdi:weather-cloudy mdi:weather-rainy mdi:weather-pouring mdi:weather-snowy |
+| Weather     | mdi:weather-sunny mdi:weather-partly-cloudy mdi:weather-cloudy mdi:weather-rainy mdi:weather-pouring mdi:weather-snowy |
 | Window      | mdi:window-closed mdi:window-open |
