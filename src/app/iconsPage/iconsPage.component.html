@@ -61,7 +61,7 @@
         </svg>
     </div>
     <div #content class="card p-2" *ngIf="!isIconsLoading" style="flex-direction: row;flex-wrap: wrap;justify-content: space-around;" [ngClass]="['size-' + size]">
-        <a *ngFor="let icon of icons" [ngbTooltip]="icon.name" [placement]="'bottom'" class="icon"
+        <a *ngFor="let icon of icons" class="icon"
             [routerLink]="'/icon/' + icon.name + (packageId === PackageType.MaterialDesignIcons ? '' : '/light')">
             <svg viewBox="0 0 24 24">
                 <path [attr.d]="icon.data" />
@@ -71,3 +71,4 @@
         </a>
     </div>
 </div>
+<!--  [ngbTooltip]="icon.name" [placement]="'bottom'" -->
