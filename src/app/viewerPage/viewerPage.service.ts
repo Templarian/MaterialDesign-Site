@@ -27,7 +27,7 @@ export class ViewerService {
 
   private extractData(text: string) {
     // TODO: Replace with db config
-    text = text.replace(/\{\{version\}\}/g, '4.2.95');
+    text = text.replace(/\{\{version\}\}/g, '4.3.95');
     return text;
   }
 
