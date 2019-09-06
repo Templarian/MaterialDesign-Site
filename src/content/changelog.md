@@ -3,7 +3,7 @@
 ## Version 4.3.95
 
 - 100 New Icons
-- ToDo Fill Out
+- No Renames or Deletes
 
 ## Version 4.2.95
 
