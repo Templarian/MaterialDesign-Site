@@ -115,3 +115,17 @@ Many times an icon has text next to it that explains the things. The icon is jus
 The above files are also on the CDN: [View Latest](https://cdn.materialdesignicons.com/{{version}}).
 
 > Note: `preview.html` is renamed to `index.html` on the CDN.
+
+## Build Webfont
+
+The webfont can be built with the contents of the `@mdi/svg` and `@mdi/font-build`.
+
+```bash
+# Extract https://github.com/Templarian/MaterialDesign-SVG/archive/master.zip
+# Inside of the folder run
+npx @mdi/font-build
+```
+
+Learn more: http://npmjs.com/package/@mdi/font-build
+
+> Note: Using the `--fontSvg` flag will generate the `.svg` font.
