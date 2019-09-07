@@ -124,8 +124,9 @@ The webfont can be built with the contents of the `@mdi/svg` and `@mdi/font-buil
 # Extract https://github.com/Templarian/MaterialDesign-SVG/archive/master.zip
 # Inside of the folder run
 npx @mdi/font-build
+# The /dist folder contains the generated files
 ```
 
-Learn more: http://npmjs.com/package/@mdi/font-build
+Learn more: [@mdi/font-build](http://npmjs.com/package/@mdi/font-build)
 
 > Note: Using the `--fontSvg` flag will generate the `.svg` font.
