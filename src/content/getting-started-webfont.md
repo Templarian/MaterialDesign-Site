@@ -94,7 +94,6 @@ Many times an icon has text next to it that explains the things. The icon is jus
 
 - `fonts/`
   - `materialdesignicons-webfont.eot`
-  - `materialdesignicons-webfont.svg`
   - `materialdesignicons-webfont.ttf`
   - `materialdesignicons-webfont.woff`
   - `materialdesignicons-webfont.woff2`
@@ -129,4 +128,4 @@ npx @mdi/font-build
 
 Learn more: [@mdi/font-build](http://npmjs.com/package/@mdi/font-build)
 
-> Note: Using the `--fontSvg` flag will generate the `.svg` font.
+> Note: Using the `--fontSvg` flag will generate the `.svg` font. This was removed in 4.0+ as no modern browser uses it.
