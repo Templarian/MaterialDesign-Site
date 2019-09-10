@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 4.4.95
+
+- 100 New Icons
+- Updated `android`
+
 ## Version 4.3.95
 
 - 100 New Icons
