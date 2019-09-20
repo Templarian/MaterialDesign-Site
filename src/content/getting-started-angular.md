@@ -129,6 +129,10 @@ a.mat-menu-item > mat-icon {
   height: 24px;
   width: 24px;
 }
+.mat-step-icon-content .mat-icon svg {
+	height: 100%;
+	width: 100%;
+}
 ```
 
 [Demo](https://stackblitz.com/edit/mdi-material-example)
