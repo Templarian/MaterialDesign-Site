@@ -130,8 +130,8 @@ a.mat-menu-item > mat-icon {
   width: 24px;
 }
 .mat-step-icon-content .mat-icon svg {
-	height: 100%;
-	width: 100%;
+  height: 100%;
+  width: 100%;
 }
 ```
 
