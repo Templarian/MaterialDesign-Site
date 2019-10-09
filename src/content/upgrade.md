@@ -2,6 +2,10 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 4.4.95 to 4.5.95
+
+- None
+
 ## 4.3.95 to 4.4.95
 
 - Update `android`

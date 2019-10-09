@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 4.5.95
+
+- 100 New Icons
+- Updated `crown`
+- Updated `image-off`
+- Updated `laravel`
+- Updated `view-agenda`
+
+
 ## Version 4.4.95
 
 - 100 New Icons
