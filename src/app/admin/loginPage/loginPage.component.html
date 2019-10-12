@@ -3,6 +3,11 @@
         <div class="col-md-4"></div>
         <div class="col-md-4 panel-login">
             <h2>Contributor Access</h2>
+            <a href="api/admin/github?action=login" class="btn btn-primary btn-block pr-4">
+                <mdi-icon name="github" color="#FFF" style="float:left;margin-left:-0.25rem;"></mdi-icon>
+                Login with GitHub
+            </a>
+            <!--
             <div class="alert alert-danger" *ngIf="failed">
                 <mdi-icon name="alert"></mdi-icon>
                 Invalid login, please note 3 invalid logins locks the account.
@@ -39,10 +44,11 @@
                     </div>
                 </div>
             </form>
+            -->
             <div class="panel">
                 <mdi-icon name="information-outline"></mdi-icon>
                 <p>
-                    Accounts are locked after three failed requests. DM <a href="https://twitter.com/templarian">@Templarian</a> if you get locked out.
+                    All contributions are tracked back to the GitHub account.
                 </p>
             </div>
         </div>

@@ -1,4 +1,7 @@
 :host {
+    a /deep/ svg {
+        fill: #FFF;
+    }
     form {
         padding: 15px;
         label {
