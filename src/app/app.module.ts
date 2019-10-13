@@ -38,6 +38,7 @@ import { AdminLoginPageComponent } from './admin/loginPage/loginPage.component';
 import { NotFoundPageComponent } from './notFoundPage/notFoundPage.component';
 import { MarkdownComponent } from "app/shared/markdown/markdown.component";
 import { AdminAliasPageComponent } from 'app/admin/aliasPage/aliasPage.component';
+import { AdminProfilePageComponent } from 'app/admin/profilePage/profilePage.component';
 import { IssuesPageComponent } from 'app/issuesPage/issuesPage.component';
 import { AdminSheetPageComponent } from 'app/admin/sheetPage/sheetPage.component';
 import { AdminBasePageComponent } from 'app/admin/basePage/basePage.component';
@@ -469,6 +470,10 @@ const appRoutes: Routes = [
     component: AdminAliasPageComponent
   },
   {
+    path: 'admin/profile',
+    component: AdminProfilePageComponent
+  },
+  {
     path: 'admin/tag',
     component: AdminTagPageComponent
   },
@@ -514,6 +519,7 @@ const appRoutes: Routes = [
     AdminIconsPageComponent,
     AdminIndexPageComponent,
     AdminAliasPageComponent,
+    AdminProfilePageComponent,
     AdminTagPageComponent,
     AdminReleasePageComponent,
     AdminRenamePageComponent,
