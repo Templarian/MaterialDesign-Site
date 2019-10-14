@@ -13,7 +13,7 @@ On any entities that allow the `icon` configuration variable, you can provide th
 ```yaml
 switch.front_yard:
   friendly_name: Front Yard Sprinklers
-  icon: \mdi:water-pump
+  icon: \mdi:sprinkler
 ```
 
 For more information on customizing entities in Home Assistant, [see their official documentation](https://www.home-assistant.io/docs/configuration/customizing-devices/).
@@ -22,38 +22,39 @@ For more information on customizing entities in Home Assistant, [see their offic
 
 Below we have currated a list of commonly used icons in Home Assistant.
 
-| Category    | Icons |
-|-------------|-------|
-| Logo        | mdi:home-assistant |
-| Home        | mdi:home mdi:home-variant mdi:home-automation mdi:home-alert mdi:home-lock mdi:home-lock-open mdi:home-map-marker mdi:home-outline mdi:home-modern mdi:caravan mdi:floor-plan |
-| Alarm       | mdi:bell mdi:bell-off mdi:bell-ring mdi:alarm-light |
-| Assistants  | mdi:google-home mdi:amazon-alexa |
-| Audio       | mdi:speaker mdi:speaker-off mdi:speaker-wireless mdi:audio-video mdi:radio mdi:amplifier mdi:boombox mdi:dolby |
-| Bathroom    | mdi:shower mdi:toilet mdi:scale-bathroom |
-| Battery     | mdi:battery mdi:battery-alert mdi:battery-unknown mdi:battery-plus mdi:battery-minus mdi:battery-positive mdi:battery-negative mdi:battery-charging mdi:battery-outline mdi:battery-10 mdi:battery-20 mdi:battery-30 mdi:battery-40 mdi:battery-50 mdi:battery-60 mdi:battery-70 mdi:battery-80 mdi:battery-90 mdi:battery-charging-20 mdi:battery-charging-30 mdi:battery-charging-40 mdi:battery-charging-60 mdi:battery-charging-80 mdi:battery-charging-90 mdi:battery-charging-100 mdi:battery-charging-wireless-outline mdi:battery-charging-wireless-10 mdi:battery-charging-wireless-20 mdi:battery-charging-wireless-30 mdi:battery-charging-wireless-40 mdi:battery-charging-wireless-50 mdi:battery-charging-wireless-60 mdi:battery-charging-wireless-70 mdi:battery-charging-wireless-80 mdi:battery-charging-wireless-90 mdi:battery-charging-wireless mdi:battery-charging-wireless-alert |
-| Bedroom     | mdi:hotel mdi:bed-empty |
-| Camera      | mdi:cctv mdi:webcam mdi:video mdi:video-off mdi:camera |
-| Computer    | mdi:desktop-tower mdi:desktop-mac mdi:desktop-classic mdi:laptop mdi:laptop-off mdi:laptop-chromebook mdi:laptop-windows mdi:laptop-mac mdi:monitor mdi:monitor-multiple |
-| Cast        | mdi:cast mdi:cast-off mdi:cast-connected mdi:airplay |
-| Door        | mdi:door mdi:door-closed mdi:door-open |
-| Doorbell    | mdi:doorbell-video mdi:bell |
-| Fan         | mdi:fan mdi:fan-off |
-| Garage      | mdi:garage mdi:garage-open mdi:garage-alert |
-| Health      | mdi:scale-bathroom mdi:heart-pulse mdi:walk mdi:google-fit |
-| HVAC        | mdi:thermostat mdi:thermostat-box mdi:radiator mdi:radiator-off mdi:air-conditioner |
-| Kitchen     | mdi:fridge mdi:fridge-bottom mdi:fridge-top mdi:fridge-outline mdi:stove mdi:dishwasher mdi:washing-machine mdi:toaster-oven mdi:microwave |
-| Lighting    | mdi:lamp mdi:ceiling-light mdi:floor-lamp mdi:wall-sconce mdi:desk-lamp mdi:track-light mdi:light-switch mdi:lava-lamp mdi:led-strip mdi:lightbulb mdi:lightbulb-outline mdi:lightbulb-on mdi:lightbulb-on-outline mdi:spotlight mdi:spotlight-beam mdi:led-on mdi:led-off mdi:led-outline mdi:led-variant-on mdi:led-variant-off mdi:led-variant-outline |
-| Power       | mdi:power-plug mdi:power-plug-off mdi:power-socket mdi:power-socket-us mdi:power-socket-eu mdi:power-socket-uk |
-| Printer     | mdi:printer mdi:printer-alert mdi:printer-3d mdi:cloud-print mdi:cloud-print-outline |
-| Projector   | mdi:projector mdi:projector-screen |
-| Remote      | mdi:remote mdi:power mdi:play mdi:pause mdi:play-pause mdi:skip-previous mdi:skip-next mdi:skip-backward mdi:skip-forward mdi:record mdi:record-rec mdi:volume-high mdi:volume-medium mdi:volume-low mdi:volume-off mdi:volume-minus mdi:volume-plus mdi:gamepad |
-| Security    | mdi:security-home mdi:lock mdi:lock-open mdi:lock-outline mdi:lock-open-outline mdi:gate |
-| Sensors     | mdi:thermometer mdi:thermometer-lines mdi:gauge mdi:water-percent mdi:run-fast mdi:bell mdi:brightness-7 mdi:pipe-leak |
-| Smoke Alarm | mdi:smoke-detector |
-| Television  | mdi:television mdi:television-guide mdi:television-classic |
-| Transport   | mdi:car mdi:car-side mdi:bus mdi:bus-school mdi:train mdi:gas-station mdi:ev-station |
-| User        | mdi:account mdi:account-plus |
-| Vaccum      | mdi:robot-vacuum |
-| Video Games | mdi:xbox mdi:playstation mdi:gamepad mdi:gamepad-variant mdi:controller-classic mdi:controller-classic-outline mdi:xbox-controller mdi:xbox-controller-off mdi:google-controller mdi:google-controller-off |
-| Weather     | mdi:weather-sunny mdi:weather-partly-cloudy mdi:weather-cloudy mdi:weather-rainy mdi:weather-pouring mdi:weather-snowy |
-| Window      | mdi:window-closed mdi:window-open |
+| Category         | Icons |
+|------------------|-------|
+| Logo             | mdi:home-assistant |
+| Home             | mdi:home mdi:home-modern mdi:caravan mdi:rv-truck mdi:sailing mdi:floor-plan mdi:home-outline mdi:home-variant mdi:home-variant-outline mdi:home-automation mdi:home-analytics mdi:home-alert mdi:home-account mdi:home-heart mdi:home-map-marker mdi:home-thermometer mdi:home-thermometer-outline mdi:home-lock mdi:home-lock-open mdi:home-floor-b mdi:home-floor-negative-1 mdi:home-floor-g mdi:home-floor-0 mdi:home-floor-1mdi:home-floor-2 mdi:home-floor-3 mdi:home-floor-l mdi:home-floor-a |
+| Lighting         | mdi:lightbulb mdi:lightbulb-outline mdi:lamp mdi:ceiling-light mdi:floor-lamp mdi:floor-lamp-dual mdi:floor-lamp-variant mdi:desk-lamp mdi:wall-sconce mdi:wall-sconce-variant mdi:wall-sconce-flat mdi:track-light mdi:led-strip mdi:coach-lamp mdi:outdoor-lamp mdi:light-switch mdi:lava-lamp mdi:vanity-light mdi:led-off mdi:led-outline |
+| Power            | mdi:power-plug mdi:power-socket-us mdi:power-socket-eu mdi:power-socket-uk mdi:power-socket-fr mdi:power-socket-de mdi:power-socket-au mdi:power-socket-jp mdi:power-socket |
+| HVAC             | mdi:thermostat mdi:thermostat-box mdi:water-boiler mdi:water-boiler-alert mdi:air-purifier mdi:air-humidifier mdi:air-conditioner mdi:radiator mdi:radiator-disabled mdi:fireplace mdi:fireplace-off mdi:patio-heater |
+| Fan              | mdi:fan mdi:fan-off |
+| Audio            | mdi:speaker mdi:speaker-multiple mdi:speaker-wireless mdi:radio mdi:amplifier mdi:boombox mdi:record-player |
+| Television       | mdi:television mdi:television-classic mdi:set-top-box mdi:disc-player mdi:audio-video mdi:projector mdi:projector-screen |
+| Security         | mdi:lock-smart mdi:lock mdi:lock-outline mdi:lock-open mdi:lock-open-outline mdi:gate mdi:gate-open mdi:gate-arrow-right mdi:shield-lock mdi:shield-lock-outline mdi:alarm-bell mdi:alarm-light mdi:alarm-light-outline |
+| Doorbell         | mdi:doorbell-video mdi:bell mdi:bell-outline mdi:bell-ring mdi:bell-ring-outline |
+| Camera           | mdi:cctv mdi:webcam mdi:camera mdi:camera-outline mdi:video mdi:video-outline mdi:video-wireless mdi:video-wireless-outline |
+| Sensors          | mdi:thermometer mdi:thermometer-lines mdi:water-percent mdi:run-fast mdi:motion-sensor mdi:flash mdi:flash-outline mdi:flash-circle mdi:white-balance-sunny mdi:pipe-leak mdi:gauge  |
+| Window           | mdi:window-closed mdi:window-open mdi:window-closed-variant mdi:window-open-variant mdi:blinds mdi:blinds-open mdi:window-shutter mdi:window-shutter-open mdi:window-shutter-alert |
+| Door             | mdi:door mdi:door-closed mdi:door-open mdi:door-closed-lock |
+| Garage           | mdi:garage mdi:garage-open mdi:garage-alert |
+| Kitchen          | mdi:fridge mdi:fridge-bottom mdi:fridge-top mdi:fridge-outline mdi:stove mdi:microwave mdi:toaster-oven mdi:washing-machine mdi:tumble-dryer mdi:dishwasher mdi:coffee-maker mdi:toaster mdi:kettle mdi:kettline-outline mdi:water-pump |
+| Bedroom          | mdi:hotel mdi:bed-empty mdi:bed-king mdi:bed-king-outline mdi:bed-queen mdi:bed-queen-outline mdi:bed-double mdi:bed-double-outline mdi:bed-single mdi:bed-single-outline |
+| Bathroom         | mdi:shower mdi:toilet mdi:scale-bathroom |
+| Garden           | mdi:sprinkler mdi:sprinkler-variant |
+| Vaccum           | mdi:robot-vacuum mdi:robot-vaccum-variant |
+| Lawn Mower       | mdi:robot-mower mdi:robot-mower-outline |
+| Energy           | mdi:solar-power mdi:solar-panel mdi:solar-panel-large |
+| Car              | mdi:car mdi:car-electric mdi:car-key mdi:car-connected mdi:car-side mdi:car-hatchback mdi:car-estate mdi:car-convertible mdi:car-pickup mdi:car-sports mdi:bugle mdi:car-door mdi:car-door-lock mdi:car-defrost-front mdi:car-defrost-rear mdi:gas-station mdi:ev-station |
+| Computer         | mdi:laptop mdi:laptop-windows mdi:laptop-mac mdi:laptop-chromebook mdi:monitor mdi:monitor-multiple mdi:monitor-speaker mdi:desktop-tower mdi:desktop-mac mdi:desktop-classic mdi:desktop-tower-monitor |
+| Printer          | mdi:printer mdi:printer-wireless mdi:printer-3d mdi:printer-alert mdi:printer-3d-nozzle mdi:printer-3d-nozzle-outline mdi:printer-3d-nozzle-alert mdi:printer-3d-nozzle-alert-outline  |
+| Remote           | mdi:remote-tv mdi:remote mdi:power mdi:play mdi:pause mdi:play-pause mdi:stop mdi:skip-previous mdi:skip-next mdi:skip-backward mdi:skip-forward mdi:record mdi:record-rec mdi:volume-high mdi:volume-off mdi:volume-plus mdi:volume-minus mdi:volume-medium mdi:volume-low mdi:arrow-up mdi:arrow-right mdi:arrow-down mdi:arrow-left mdi:checkbox-blank-circle-outline mdi:keyboard-return mdi:gamepad mdi:dolby mdi:surround-sound mdi:xbox-controller-view mdi:xbox-controller-menu |
+| Smoke Alarm      | mdi:smoke-detector |
+| Health           | mdi:scale-bathroom mdi:heart-pulse mdi:walk mdi:google-fit mdi:shoe-print |
+| Cast             | mdi:cast mdi:cast-off mdi:cast-connected mdi:cast-audio mdi:google-chrome mdi:airplay |
+| Furniture        | mdi:cupboard mdi:cupboard-outline mdi:dresser mdi:dresser-outline mdi:wardrobe mdi:wardrobe-outline mdi:table-chair
+| Video Games      | mdi:nintendo-switch mdi:playstation mdi:xbox mdi:google-controller mdi:xbox-controller mdi:gamepad-square mdi:gamepad-square-outline mdi:gamepad-variant mdi:gamepad-variant-outline mdi:controller-classic mdi:controller-classic-outline |
+| Battery          | mdi:battery mdi:battery-charging mdi:battery-unknown mdi:battery-alert mdi:battery-outline mdi:battery-10 mdi:battery-20 mdi:battery-30 mdi:battery-40 mdi:battery-50 mdi:battery-60 mdi:battery-70 mdi:battery-80 mdi:battery-90 mdi:battery-charging-20 mdi:battery-charging-30 mdi:battery-charging-40 mdi:battery-charging-60 mdi:battery-charging-80 mdi:battery-charging-90 mdi:battery-charging-100 mdi:battery-charging-wireless-outline mdi:battery-charging-wireless-10 mdi:battery-charging-wireless-20 mdi:battery-charging-wireless-30 mdi:battery-charging-wireless-40 mdi:battery-charging-wireless-50 mdi:battery-charging-wireless-60 mdi:battery-charging-wireless-70 mdi:battery-charging-wireless-80 mdi:battery-charging-wireless-90 mdi:battery-charging-wireless mdi:battery-charging-wireless-alert mdi:battery-plus mdi:battery-minus mdi:battery-positive mdi:battery-negative |
+| Assistants       | mdi:google-home mdi:amazon-alexa |
+| Public Transport | mdi:bus mdi:bus-side mdi:bus-double-decker mdi:bus-school mdi:bus-articulated mdi:train mdi:train-variant mdi:subway-variant mdi:subway mdi:car-multiple mdi:train-car mdi:airplane mdi:gondola |
