@@ -33,6 +33,20 @@ export class UserService {
     });
   }
 
+  async getAdminProfile(): Promise<User> {
+    let user = await this.http.get<User>('/api/admin/profile')
+      .map(i => new User().from(i))
+      .toPromise();
+    return user;
+  }
+
+  async updateAdminProfile(user: User): Promise<User> {
+    let updatedUser = await this.http.post<User>('/api/admin/profile', user)
+      .map(i => new User().from(i))
+      .toPromise();
+    return updatedUser;
+  }
+
   async getAdminUsers(packageId: string): Promise<User[]> {
     let res = await this.http.get<User[]>('/api/admin/user', {
       params: {
