@@ -16,6 +16,7 @@ export class UserService {
   @PromiseCache()
   async getUser( @CacheParam userId: string): Promise<User> {
     let user = await this.http.get<User>('/api/user/' + userId)
+      .map(i => new User().from(i))
       .toPromise();
     return user;
   }
