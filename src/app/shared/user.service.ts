@@ -39,6 +39,14 @@ export class UserService {
       .toPromise();
   }
 
+  async updateAdminProfileAvatar(data: string): Promise<User> {
+    return await this.http.post<User>('/api/admin/profile/avatar', {
+        base64: data.replace('data:image/png;base64,', '')
+      })
+      .map(i => new User().from(i))
+      .toPromise();
+  }
+
   async getAdminUsers(packageId: string): Promise<User[]> {
     return await this.http.get<User[]>('/api/admin/user', {
         params: {

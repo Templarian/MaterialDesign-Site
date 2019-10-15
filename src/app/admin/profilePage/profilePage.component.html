@@ -55,10 +55,21 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="card p-3">
+      <div class="card p-3 mb-3">
         <h2>Disclaimer</h2>
         <p>For privacy reasons we do not sync GitHub profile information.</p>
       </div>
+      <div class="card p-3">
+          <h2>Profile Photo</h2>
+          <p>
+            <img [attr.src]="editUser.base64" />
+            <ng-template [ngIf]="updatedAvatar">
+              updated to...
+              <img [attr.src]="updatedAvatar" />
+            </ng-template>
+          </p>
+          <input type="file" id="files" name="files" (change)="handleFileSelect($event)" />
+        </div>
     </div>
   </div>
 </div>
