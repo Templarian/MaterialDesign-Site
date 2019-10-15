@@ -16,10 +16,7 @@ export class UserService {
   @PromiseCache()
   async getUser( @CacheParam userId: string): Promise<User> {
     let user = await this.http.get<User>('/api/user/' + userId)
-      .map(u => {
-        u.base64 = 'data:image/png;base64,' + u.base64;
-        return u;
-      }).toPromise();
+      .toPromise();
     return user;
   }
 
@@ -27,37 +24,29 @@ export class UserService {
   async getUsers(): Promise<User[]> {
     let res = await this.http.get<User[]>('/api/user')
       .toPromise();
-    return res.map(i => new User().from(i)).map(u => {
-      u.base64 = 'data:image/png;base64,' + u.base64;
-      return u;
-    });
+    return res.map(i => new User().from(i));
   }
 
   async getAdminProfile(): Promise<User> {
-    let user = await this.http.get<User>('/api/admin/profile')
+    return await this.http.get<User>('/api/admin/profile')
       .map(i => new User().from(i))
       .toPromise();
-    return user;
   }
 
   async updateAdminProfile(user: User): Promise<User> {
-    let updatedUser = await this.http.post<User>('/api/admin/profile', user)
+    return await this.http.post<User>('/api/admin/profile', user)
       .map(i => new User().from(i))
       .toPromise();
-    return updatedUser;
   }
 
   async getAdminUsers(packageId: string): Promise<User[]> {
-    let res = await this.http.get<User[]>('/api/admin/user', {
-      params: {
-        'packageId': packageId
-      }
-    })
+    return await this.http.get<User[]>('/api/admin/user', {
+        params: {
+          'packageId': packageId
+        }
+      })
+      .map(users => users.map(i => new User().from(i)))
       .toPromise();
-    return res.map(i => new User().from(i)).map(u => {
-      u.base64 = 'data:image/png;base64,' + u.base64;
-      return u;
-    });
   }
 
 }
