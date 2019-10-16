@@ -75,4 +75,33 @@
             border-bottom-left-radius: 0.25rem;
         }
     }
+    .github-sponsor::after {
+        bottom: 2.2rem;
+    }
+    .github-sponsored {
+        display: block;
+        position: relative;
+        border: 1px solid #DDD;
+        border-bottom-color: #CCC;
+        background: linear-gradient(180deg, #FFF 0%, #DDD 100%);
+        border-radius: 0.25rem;
+        color: #333;
+        width: 100%;
+        font-size: 0.875rem;
+        text-decoration: none;
+        padding: 2px;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+        z-index: 1;
+        mdi-icon /deep/ svg {
+            width: 1rem !important;
+            height: 1rem !important;
+            fill: #ea4aaa;
+        }
+        &:hover {
+            border-color: #BBB;
+            border-bottom-color: #AAA;
+        }
+    }
 }

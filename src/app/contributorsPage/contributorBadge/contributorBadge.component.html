@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [ngClass]="{'github-sponsor': user.sponsored }">
     <div class="avatar">
         <img [attr.src]="user.base64" />
     </div>
@@ -8,4 +8,8 @@
     </span>
     <span class="icon-count" *ngIf="user.iconCount > 0">{{user.iconCount}}</span>
     <span class="bio">{{user.description}}</span>
+    <a *ngIf="user.sponsored" class="github-sponsored" [href]="user.sponsorship">
+        <mdi-icon name="heart" class="mr-1"></mdi-icon>
+        Sponsor
+    </a>
 </div>

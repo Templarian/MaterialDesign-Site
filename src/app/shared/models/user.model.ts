@@ -8,6 +8,8 @@ export class User {
     public iconCount: number = null;
     public description: string = null;
     public website: string = null;
+    public sponsored: boolean = false;
+    public sponsorship: string = '';
 
     from(user: User): User {
         this.id = user.id;
@@ -24,6 +26,8 @@ export class User {
         this.iconCount = user.iconCount;
         this.description = user.description;
         this.website = user.website;
+        this.sponsored = user.sponsored;
+        this.sponsorship = `https://github.com/users/${user.github}/sponsorship`;
         return this;
     }
 }
