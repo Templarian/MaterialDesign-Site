@@ -389,7 +389,7 @@ export abstract class IconHelpers {
   }
 
   fixSVGO() {
-    this.data = this.data.replace(/(\d+)\.(\d+)\.(\d+)/g, "$1.$2 $3");
+    this.data = this.data.replace(/(\d+)\.(\d+)\.(\d+)/g, "$1.$2 .$3");
   }
 
   parsePathString(pathString) {
