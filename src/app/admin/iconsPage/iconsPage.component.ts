@@ -203,18 +203,18 @@ export class AdminIconsPageComponent {
   optimizeEdit() {
     this.iconService.optimizeData(this.editIcon).then((icon) => {
       this.editIcon.data = icon.data;
+      this.editIcon.fixSVGO();
       this.editIcon.cleanRounding();
       this.editIcon.expand();
-      this.editIcon.fixSVGO();
     });
   }
 
   optimize() {
     this.iconService.optimizeData(this.newIcon).then((icon) => {
       this.newIcon.data = icon.data;
+      this.newIcon.fixSVGO();
       this.newIcon.cleanRounding();
       this.newIcon.expand();
-      this.newIcon.fixSVGO();
     });
   }
 
