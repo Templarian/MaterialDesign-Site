@@ -388,6 +388,10 @@ export abstract class IconHelpers {
     this.data = data;
   }
 
+  fixSVGO() {
+    this.data = this.data.replace(/(\d+)\.(\d+)\.(\d+)/g, "$1.$2 $3");
+  }
+
   parsePathString(pathString) {
     /// <summary>Taken from Snap Library</summary>
     var paramCounts = { a: 7, c: 6, o: 2, h: 1, l: 2, m: 2, r: 4, q: 4, s: 4, t: 2, v: 1, u: 3, z: 0 },

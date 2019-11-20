@@ -205,6 +205,7 @@ export class AdminIconsPageComponent {
       this.editIcon.data = icon.data;
       this.editIcon.cleanRounding();
       this.editIcon.expand();
+      this.editIcon.fixSVGO();
     });
   }
 
@@ -213,6 +214,7 @@ export class AdminIconsPageComponent {
       this.newIcon.data = icon.data;
       this.newIcon.cleanRounding();
       this.newIcon.expand();
+      this.newIcon.fixSVGO();
     });
   }
 
