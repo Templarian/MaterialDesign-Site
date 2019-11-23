@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 4.6.95
+
+- 100 New Icons
+- Renamed `edge` to `edge-legacy`
+  - Added `edge`
+- Updated `firefox`
+- Updated `account-multiple` x 7
+- Updated `checkerboard`
+- Updated `exclamation`
+- Updated `expansion-card-variant`
+- Updated `tag-outline`
+- Updated `tag-text-outline`
+- Updated `vector-polyline`
+
 ## Version 4.5.95
 
 - 100 New Icons
