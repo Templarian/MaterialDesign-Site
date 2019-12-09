@@ -2,6 +2,10 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 4.6.95 to 4.6.95
+
+- None
+
 ## 4.5.95 to 4.6.95
 
 - `edge` to `edge-legacy` for updated logo
