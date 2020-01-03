@@ -21,7 +21,7 @@ import { Tag } from '../models/tag.model';
     TagService
   ]
 })
-export class ModfiicationTableComponent {
+export class ModificationTableComponent {
 
   constructor(
     private loginService: LoginService,
