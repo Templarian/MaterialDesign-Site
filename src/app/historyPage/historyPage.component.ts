@@ -31,7 +31,7 @@ export class HistoryPageComponent {
   modificationsByDate: GroupByDateModification[] = [];
   modificationType = ModificationType;
 
-  modificationTypes: SelectModfiicationType[] = [{
+  modificationTypes: SelectModificationType[] = [{
     name: 'News',
     modificationType: ModificationType.News,
     selected: true,
@@ -94,7 +94,7 @@ export class HistoryPageComponent {
   page: number = 0;
   currentDate: string = '';
 
-  async toggle (modificationType?: SelectModfiicationType) {
+  async toggle (modificationType?: SelectModificationType) {
     if (modificationType) {
       modificationType.selected = !modificationType.selected;
     }
@@ -148,7 +148,7 @@ export class HistoryPageComponent {
   
 }
 
-class SelectModfiicationType {
+class SelectModificationType {
   public name: string;
   public modificationType: ModificationType;
   public selected: boolean = false;

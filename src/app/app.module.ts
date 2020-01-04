@@ -53,7 +53,7 @@ import { AdminRenamePageComponent } from 'app/admin/renamePage/renamePage.compon
 import { GithubPageComponent } from 'app/githubPage/githubPage.component';
 import { SidebarComponent } from 'app/viewerPage/sidebar/sidebar.component';
 import { ContributorBadgeComponent } from 'app/contributorsPage/contributorBadge/contributorBadge.component';
-import { ModfiicationTableComponent } from 'app/shared/modificationTable/modificationTable.component';
+import { ModificationTableComponent } from 'app/shared/modificationTable/modificationTable.component';
 import { IconPreviewComponent } from 'app/shared/iconPreview/iconPreview.component';
 import { AssignIssueModal } from 'app/historyPage/assignIssueModal/assignIssueModal.component';
 import { AssignUserModal } from 'app/shared/assignUserModal/assignUserModal.component';
@@ -524,7 +524,7 @@ const appRoutes: Routes = [
     AdminReleasePageComponent,
     AdminRenamePageComponent,
     NotFoundPageComponent,
-    ModfiicationTableComponent,
+    ModificationTableComponent,
     IconPreviewComponent,
     IconComponent,
     UserComponent,
