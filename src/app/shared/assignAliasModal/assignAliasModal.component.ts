@@ -14,7 +14,7 @@ import { Package } from '../models/package.model';
 })
 export class AssignAliasModal {
   @Input() package: Package;
-  @ViewChild('inputAlias') inputAlias: ElementRef;
+  @ViewChild('inputAlias', { static: true }) inputAlias: ElementRef;
 
   constructor(
     public activeModal: NgbActiveModal

@@ -6,7 +6,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./carbon.component.scss']
 })
 export class CarbonComponent {
-  @ViewChild('carbon') carbon: ElementRef;
+  @ViewChild('carbon', { static: true }) carbon: ElementRef;
   isLocal: boolean = window.location.href.match(/localhost/) !== null
 
   ngAfterViewInit() {

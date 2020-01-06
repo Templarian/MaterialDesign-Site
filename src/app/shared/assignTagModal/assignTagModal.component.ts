@@ -14,7 +14,7 @@ import { Tag } from '../models/tag.model';
 })
 export class AssignTagModal {
   @Input() package: Package;
-  @ViewChild('inputTag') inputTag: ElementRef;
+  @ViewChild('inputTag', { static: true }) inputTag: ElementRef;
 
   constructor(
     public activeModal: NgbActiveModal,

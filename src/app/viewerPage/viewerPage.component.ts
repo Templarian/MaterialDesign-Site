@@ -23,7 +23,7 @@ declare let window: any;
   ]
 })
 export class ViewerPageComponent {
-  @ViewChild('content') content;
+  @ViewChild('content', { static: true }) content;
   remarkable = new Remarkable({
     html: true
   });

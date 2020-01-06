@@ -8,7 +8,7 @@ import { delay } from '../../shared/delay';
 })
 export class AssignIssueModal {
   @Input() issueNumber: number;
-  @ViewChild('issueNumberInput') issueNumberInput: ElementRef;
+  @ViewChild('issueNumberInput', { static: true }) issueNumberInput: ElementRef;
 
   constructor(public activeModal: NgbActiveModal) {}
 

@@ -7,7 +7,7 @@ import { Icon } from 'app/shared/models/icon.model';
   styleUrls: ['./githubPage.component.scss']
 })
 export class GithubPageComponent {
-  @ViewChild('canvas') canvas;
+  @ViewChild('canvas', { static: true }) canvas;
   title: string = 'GitHub Tools';
 
   name: string = 'account';

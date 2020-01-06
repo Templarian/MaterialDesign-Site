@@ -15,7 +15,7 @@ import { Package } from '../models/package.model';
 export class AssignUserModal {
   @Input() user: User;
   @Input() package: Package;
-  @ViewChild('userInput') userInput: ElementRef;
+  @ViewChild('userInput', { static: false }) userInput: ElementRef;
 
   constructor(
     public activeModal: NgbActiveModal,
