@@ -10,7 +10,7 @@ Here are a few tips for creating Accessible SVGs.
 
 ### Vector (SVG) vs. Rastor (PNG)
 
-For those designers reading this, you may understand the difference. But for those that don't, raster images, like PNG and JPG, are a pixel by pixel representation of an image. And vector images, like SVG's and fonts, generate images using math. This means, that no matter the scale of the image, a vector-based image will always be crisp. The goal is to always use raster-based images.
+For those designers reading this, you may understand the difference. But for those that don't, raster images, like PNG and JPG, are a pixel by pixel representation of an image. And vector images, like SVG's and fonts, generate images using math. This means, that no matter the scale of the image, a vector-based image will always be crisp. The goal is to always use vector-based images.
 
 ### Use inline SVGs
 
