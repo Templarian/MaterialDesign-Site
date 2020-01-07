@@ -1,5 +1,5 @@
 :host {
-    a /deep/ svg {
+    a ::ng-deep svg {
         fill: #FFF;
     }
     form {
@@ -22,7 +22,7 @@
 
         .alert {
             margin-bottom: 5px;
-            /deep/ {
+            ::ng-deep {
                 svg {
                     vertical-align: middle;
                     path {
@@ -38,7 +38,7 @@
         border-radius: 4px;
         padding: 15px;
         position: relative;
-        /deep/ {
+        ::ng-deep {
             svg {
                 position: absolute;
                 left: 15px;

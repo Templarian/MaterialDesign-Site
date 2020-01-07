@@ -62,7 +62,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MatIconRegistry, MatIconModule } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/common/http';
 /*
 From the latest master, HttpClientModule is required instead
 import { HttpClientModule } from '@angular/common/http';

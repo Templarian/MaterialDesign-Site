@@ -29,7 +29,7 @@
         }
     }
     
-    /deep/ {
+    ::ng-deep {
         .carbon-container {
             position: absolute;
             right: 20px;

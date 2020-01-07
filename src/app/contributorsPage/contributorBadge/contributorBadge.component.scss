@@ -94,7 +94,7 @@
         margin-bottom: 0.5rem;
         cursor: pointer;
         z-index: 1;
-        mdi-icon /deep/ svg {
+        mdi-icon ::ng-deep svg {
             width: 1rem !important;
             height: 1rem !important;
             fill: #ea4aaa;

@@ -18,7 +18,7 @@
             padding: 4px;
             vertical-align: top;
             
-            /deep/ path {
+            ::ng-deep path {
                 fill: #FFF;
             }
         }
@@ -93,7 +93,7 @@
     
     .list-group {
 
-        /deep/ {
+        ::ng-deep {
             svg {
                 path {
                     fill: #495057;
@@ -132,7 +132,7 @@
             a {
                 color: #FFF;
         
-                /deep/ {
+                ::ng-deep {
                     svg {
                         vertical-align: middle;
                         path {

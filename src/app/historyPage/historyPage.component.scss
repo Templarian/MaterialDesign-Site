@@ -8,7 +8,7 @@
     }
 
     h4 {
-        /deep/ {
+        ::ng-deep {
             svg {
                 margin-bottom: -3px;
                 path {
@@ -19,7 +19,7 @@
     }
     .list-group {
 
-        /deep/ {
+        ::ng-deep {
             svg {
                 path {
                     fill: #495057;
@@ -58,7 +58,7 @@
             a {
                 color: #FFF;
         
-                /deep/ {
+                ::ng-deep {
                     svg {
                         vertical-align: middle;
                         path {
@@ -125,7 +125,7 @@
                 overflow: hidden;
                 margin: 6px;
 
-                /deep/ {
+                ::ng-deep {
                     img {
                         width: 48px;
                         height: 48px;
@@ -140,7 +140,7 @@
                 width: 48px;
                 height: 48px;
 
-                /deep/ {
+                ::ng-deep {
                     svg {
                         width: 48px;
                         height: 48px;

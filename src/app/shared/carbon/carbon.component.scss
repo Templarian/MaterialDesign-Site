@@ -4,7 +4,7 @@
         height: 108px;
         border: 4px solid rgba(0,0,0,0.1);
         border-radius: 4px;
-        /deep/ {
+        ::ng-deep {
             .carbon-wrap {
                 display: flex;
                 .carbon-text {

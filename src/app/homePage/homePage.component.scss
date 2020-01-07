@@ -159,7 +159,7 @@
         -webkit-animation-delay: 4s;
     }
 
-    /deep/ {
+    ::ng-deep {
         .carbon-container {
             display:inline-block;
             margin-top:70px;
