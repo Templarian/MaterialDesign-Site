@@ -49,7 +49,7 @@ We _highly_ recommend our friends over at [SimpleIcons](https://simpleicons.org/
 | mdi:itunes | mdi:thumbs-down-outline | mdi:check |
 | mdi:lastfm | mdi:thumbs-down-outline | mdi:check |
 | mdi:lyft | mdi:thumbs-down-outline | mdi:check |
-| mdi:mail-ru | mdi:thumbs-down-outline | mdi:check |
+| mdi:mail-ru | mdi:thumbs-down-outline | mdi:check | SI name: `mail-dot-ru`
 | mdi:maxcdn | mdi:thumbs-down-outline | mdi:close | Renamed and available as `stackpath`. Will be replaced with same in MDI v4.8.95.
 | mdi:medium | mdi:thumbs-down-outline | mdi:check |
 | mdi:meetup | mdi:thumbs-down-outline | mdi:check |
