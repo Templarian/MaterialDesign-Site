@@ -26,52 +26,52 @@ We _highly_ recommend our friends over at [SimpleIcons](https://simpleicons.org/
 
 ### What logos have been deprecated?
 
-**Legend:** mdi:check Available mdi:clock Awaiting release mdi:progress-clock Not yet available mdi:thumbs-down-outline Deprecated mdi:close Not available
+**Legend:** mdi:check Available mdi:clock Awaiting release mdi:progress-clock Not yet available mdi:thumb-down-outline Deprecated mdi:close Not available
 
 | Icon | MDI | SI | Note(s) |
 | ---- | --- | -- | ------- |
-| mdi:accusoft | mdi:thumbs-down-outline | mdi:check |
+| mdi:accusoft | mdi:thumb-down-outline | mdi:check |
 | mdi:android-head | mdi:check | mdi:check | Available in both libraries as `android` |
-| mdi:basecamp | mdi:thumbs-down-outline | mdi:check |
-| mdi:beats | mdi:thumbs-down-outline | mdi:check | SI name: `beatsbydre`
-| mdi:behance | mdi:thumbs-down-outline | mdi:check |
-| mdi:blackberry | mdi:thumbs-down-outline | mdi:check |
-| mdi:dribbble | mdi:thumbs-down-outline | mdi:check |
-| mdi:dribbble-box | mdi:thumbs-down-outline | mdi:close | Variants are outside the scope of SI |
-| mdi:etsy | mdi:thumbs-down-outline | mdi:check |
-| mdi:eventbrite | mdi:thumbs-down-outline | mdi:check |
-| mdi:flattr | mdi:thumbs-down-outline | mdi:check |
-| mdi:foursquare | mdi:thumbs-down-outline | mdi:check |
-| mdi:glassdoor | mdi:thumbs-down-outline | mdi:check |
-| mdi:houzz | mdi:thumbs-down-outline | mdi:check |
-| mdi:houzz-box | mdi:thumbs-down-outline | mdi:close | Variants are outside the scope of SI |
-| mdi:instapaper | mdi:thumbs-down-outline | mdi:check |
-| mdi:itunes | mdi:thumbs-down-outline | mdi:check |
-| mdi:lastfm | mdi:thumbs-down-outline | mdi:check |
-| mdi:lyft | mdi:thumbs-down-outline | mdi:check |
-| mdi:mail-ru | mdi:thumbs-down-outline | mdi:check | SI name: `mail-dot-ru`
-| mdi:maxcdn | mdi:thumbs-down-outline | mdi:close | Renamed and available as `stackpath`. Will be replaced with same in MDI v4.8.95.
-| mdi:medium | mdi:thumbs-down-outline | mdi:check |
-| mdi:meetup | mdi:thumbs-down-outline | mdi:check |
-| mdi:mixcloud | mdi:thumbs-down-outline | mdi:check |
-| mdi:paypal | mdi:thumbs-down-outline | mdi:check |
-| mdi:periscope | mdi:thumbs-down-outline | mdi:check |
-| mdi:pocket | mdi:thumbs-down-outline | mdi:check |
-| mdi:quicktime | mdi:thumbs-down-outline | mdi:check |
-| mdi:shopify | mdi:thumbs-down-outline | mdi:check |
-| mdi:slackware | mdi:thumbs-down-outline | mdi:clock |
-| mdi:square-inc | mdi:thumbs-down-outline | mdi:check | SI name: `square` |
-| mdi:square-inc-cash | mdi:thumbs-down-outline | mdi:check | SI name: `cashapp`
-| mdi:strava | mdi:thumbs-down-outline | mdi:check |
-| mdi:tor | mdi:thumbs-down-outline | mdi:check |
-| mdi:tumblr | mdi:thumbs-down-outline | mdi:check |
-| mdi:tumblr-box | mdi:thumbs-down-outline | mdi:close | Variants are outside the scope of SI |
-| mdi:tumblr-reblog | mdi:thumbs-down-outline | mdi:close |
-| mdi:uber | mdi:thumbs-down-outline | mdi:check |
-| mdi:venmo | mdi:thumbs-down-outline | mdi:check | SI use the full wordmark |
-| mdi:wunderlist | mdi:thumbs-down-outline | mdi:close | Service deprecated by Microsoft |
-| mdi:xda | mdi:thumbs-down-outline | mdi:check | SI name: `xda-developers` |
-| mdi:yelp | mdi:thumbs-down-outline | mdi:check |
+| mdi:basecamp | mdi:thumb-down-outline | mdi:check |
+| mdi:beats | mdi:thumb-down-outline | mdi:check | SI name: `beatsbydre`
+| mdi:behance | mdi:thumb-down-outline | mdi:check |
+| mdi:blackberry | mdi:thumb-down-outline | mdi:check |
+| mdi:dribbble | mdi:thumb-down-outline | mdi:check |
+| mdi:dribbble-box | mdi:thumb-down-outline | mdi:close | Variants are outside the scope of SI |
+| mdi:etsy | mdi:thumb-down-outline | mdi:check |
+| mdi:eventbrite | mdi:thumb-down-outline | mdi:check |
+| mdi:flattr | mdi:thumb-down-outline | mdi:check |
+| mdi:foursquare | mdi:thumb-down-outline | mdi:check |
+| mdi:glassdoor | mdi:thumb-down-outline | mdi:check |
+| mdi:houzz | mdi:thumb-down-outline | mdi:check |
+| mdi:houzz-box | mdi:thumb-down-outline | mdi:close | Variants are outside the scope of SI |
+| mdi:instapaper | mdi:thumb-down-outline | mdi:check |
+| mdi:itunes | mdi:thumb-down-outline | mdi:check |
+| mdi:lastfm | mdi:thumb-down-outline | mdi:check |
+| mdi:lyft | mdi:thumb-down-outline | mdi:check |
+| mdi:mail-ru | mdi:thumb-down-outline | mdi:check | SI name: `mail-dot-ru`
+| mdi:maxcdn | mdi:thumb-down-outline | mdi:close | Renamed and available as `stackpath`. Will be replaced with same in MDI v4.8.95.
+| mdi:medium | mdi:thumb-down-outline | mdi:check |
+| mdi:meetup | mdi:thumb-down-outline | mdi:check |
+| mdi:mixcloud | mdi:thumb-down-outline | mdi:check |
+| mdi:paypal | mdi:thumb-down-outline | mdi:check |
+| mdi:periscope | mdi:thumb-down-outline | mdi:check |
+| mdi:pocket | mdi:thumb-down-outline | mdi:check |
+| mdi:quicktime | mdi:thumb-down-outline | mdi:check |
+| mdi:shopify | mdi:thumb-down-outline | mdi:check |
+| mdi:slackware | mdi:thumb-down-outline | mdi:clock |
+| mdi:square-inc | mdi:thumb-down-outline | mdi:check | SI name: `square` |
+| mdi:square-inc-cash | mdi:thumb-down-outline | mdi:check | SI name: `cashapp`
+| mdi:strava | mdi:thumb-down-outline | mdi:check |
+| mdi:tor | mdi:thumb-down-outline | mdi:check |
+| mdi:tumblr | mdi:thumb-down-outline | mdi:check |
+| mdi:tumblr-box | mdi:thumb-down-outline | mdi:close | Variants are outside the scope of SI |
+| mdi:tumblr-reblog | mdi:thumb-down-outline | mdi:close |
+| mdi:uber | mdi:thumb-down-outline | mdi:check |
+| mdi:venmo | mdi:thumb-down-outline | mdi:check | SI use the full wordmark |
+| mdi:wunderlist | mdi:thumb-down-outline | mdi:close | Service deprecated by Microsoft |
+| mdi:xda | mdi:thumb-down-outline | mdi:check | SI name: `xda-developers` |
+| mdi:yelp | mdi:thumb-down-outline | mdi:check |
 
 ### I use Home Assistant, will I be affected by this change?
 
