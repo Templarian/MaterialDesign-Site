@@ -28,11 +28,12 @@ We _highly_ recommend our friends over at [Simple Icons](https://simpleicons.org
 
 Icons are listed by name in the table below along with their current status in Material Design Icons (MDI) and Simple Icons.
 
-**Legend:** mdi:check:#2e7b32 Available mdi:clock:#1976d2 Awaiting release mdi:progress-clock Not yet available mdi:thumb-down-outline:#f57c00 Deprecated mdi:close:#b00020 Not available
+**Legend:** mdi:check:#2e7b32 Available mdi:clock-check-outline:#1976d2 Awaiting release mdi:progress-clock Not yet available mdi:thumb-down-outline:#f57c00 Deprecated mdi:close:#b00020 Not available
 
 | Icon | MDI | SI | Note(s) |
 | ---- | --- | -- | ------- |
 | `accusoft` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
+| `adchoices` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | [Licensed icon](http://digitaladvertisingalliance.org/license), will be removed in **v4.8.95** |
 | `android-head` | mdi:check:#2e7b32 | mdi:check:#2e7b32 | Available in both libraries as `android` |
 | `basecamp` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `beats` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `beatsbydre`
@@ -61,7 +62,7 @@ Icons are listed by name in the table below along with their current status in M
 | `pocket` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `quicktime` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `shopify` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `slackware` | mdi:thumb-down-outline:#f57c00 | mdi:clock:#1976d2 | |
+| `slackware` | mdi:thumb-down-outline:#f57c00 | mdi:clock-check-outline:#1976d2 | |
 | `square-inc` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `square` |
 | `square-inc-cash` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `cashapp`
 | `strava` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
