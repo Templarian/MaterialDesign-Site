@@ -1,5 +1,30 @@
 # Changelog
 
+## Version 4.8.95
+
+- 100 New Icons
+- Removed `adchoices` (due to license)
+- Updated `account-cancel`
+- Updated `cloud-sync`
+- Updated `comment-arrow-left-outline`
+- Updated `comment-arrow-left`
+- Updated `comment-arow-right-outline`
+- Updated `comment-arrow-right`
+- Updated `comment-edit`
+- Updated `doorbell-video`
+- Updated `edge`
+- Updated `facebook`
+- Updated `file-delimited-outline`
+- Updated `file-delimited`
+- Updated `kabaddi`
+- Updated `lightbulb-multiple-outline`
+- Updated `lightbulb-multiple`
+- Removed `maxcdn`
+  - Added `stackpath`
+- Updated `tooltip-edit`
+- Updated `trophy-*`
+- Updated `yahoo`
+
 ## Version 4.7.95
 
 - 100 New Icons

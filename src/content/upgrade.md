@@ -2,7 +2,15 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
-## 4.6.95 to 4.6.95
+## 4.7.95 to 4.8.95
+
+- Removed `adchoices` (due to license)
+- Removed `maxcdn`
+  - Added `stackpath`
+- Updated `yahoo`
+- Updated `edge`
+
+## 4.6.95 to 4.7.95
 
 - None
 
