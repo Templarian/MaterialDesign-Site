@@ -33,10 +33,10 @@ Icons are listed by name in the table below along with their current status in M
 | Icon | MDI | SI | Note(s) |
 | ---- | --- | -- | ------- |
 | `accusoft` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `adchoices` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | [Licensed icon](http://digitaladvertisingalliance.org/license), will be removed in **v4.8.95** |
+| `adchoices` | mdi:close:#b00020 | mdi:close:#b00020 | [Licensed icon](http://digitaladvertisingalliance.org/license), was removed in **v4.8.95** |
 | `android-head` | mdi:check:#2e7b32 | mdi:check:#2e7b32 | Available in both libraries as `android` |
 | `basecamp` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `beats` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `beatsbydre`
+| `beats` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `beatsbydre` |
 | `behance` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `blackberry` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `dribbble` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
@@ -53,7 +53,7 @@ Icons are listed by name in the table below along with their current status in M
 | `lastfm` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `lyft` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `mail-ru` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `mail-dot-ru` |
-| `maxcdn` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Renamed and available as `stackpath`, will be replaced with same in MDI **v4.8.95**
+| `maxcdn` | mdi:close:#b00020 | mdi:close:#b00020 | Renamed and available in both libraries as `stackpath` |
 | `medium` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `meetup` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `mixcloud` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
@@ -62,9 +62,9 @@ Icons are listed by name in the table below along with their current status in M
 | `pocket` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `quicktime` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `shopify` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `slackware` | mdi:thumb-down-outline:#f57c00 | mdi:clock-check-outline:#1976d2 | |
+| `slackware` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `square-inc` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `square` |
-| `square-inc-cash` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `cashapp`
+| `square-inc-cash` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `cashapp` |
 | `strava` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `tor` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `tumblr` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
