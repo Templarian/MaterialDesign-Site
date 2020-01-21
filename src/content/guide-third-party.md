@@ -20,6 +20,7 @@ NPMJS packages are built after each release node, JavaScript, and TypeScript com
 - `@mdi/js` - ES6/TypeScript module.
 - `@mdi/svg` - Individual optimized SVG files
   - `meta.json` - All icon meta data, tags, aliases, font codepoints.
+  - `@mdi/font-build` - This is what builds the webfont! (`@mdi/svg` contains `font-build.json` for this reason).
 - `@mdi/util` - Node scripting utility for building your own scripts.
 - `@mdi/font` - Webfont files.
 
