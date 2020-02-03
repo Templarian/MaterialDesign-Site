@@ -46,6 +46,7 @@ Icons are listed by name in the table below along with their current status in M
 | `flattr` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `foursquare` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `glassdoor` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
+| `google-adwords` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Renamed and available in both libraries as `google(-)ads` |
 | `houzz` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `houzz-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
 | `instapaper` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
@@ -57,6 +58,7 @@ Icons are listed by name in the table below along with their current status in M
 | `medium` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `meetup` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `mixcloud` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
+| `nfc-off` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
 | `paypal` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `periscope` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `pocket` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
