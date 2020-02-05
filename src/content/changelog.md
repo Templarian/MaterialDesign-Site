@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 4.9.95
+
+- 100 New Icons
+- Updated `account-details`
+- Updated `bottle-wine-outline`
+- Updated `hammer`
+- Updated `sticker`
+
 ## Version 4.8.95
 
 - 100 New Icons
@@ -65,12 +73,20 @@
 ## Version 4.2.95
 
 - 100 New Icons
-- ToDo Fill Out
 
 ## Version 4.1.95
 
 - 99 New Icons
-- ToDo Fill out
+- Removed `library-plus`
+  - Duplicate of `plus-box-multiple`
+- Updated `calendar-alert`
+- Updated `calendar-minus`
+- Updated `calendar-plus`
+- Updated `calendar-week`
+- Updated `close-box-multiple`
+- Updated `close-box-multiple-outline`
+- Updated `thermometer-*`
+- Updated `xda`
 
 ## Version 4.0.96
 

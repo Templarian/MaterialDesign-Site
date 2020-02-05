@@ -2,6 +2,10 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 4.8.95 to 4.9.95
+
+- None
+
 ## 4.7.95 to 4.8.95
 
 - Removed `adchoices` (due to license)
@@ -33,11 +37,18 @@ Follow the guide starting with your version to the version you wish to upgrade t
 
 ## 4.1.95 to 4.2.95
 
-- ToDo Fill Out
+- None
 
 ## 4.0.96 to 4.1.95
 
-- ToDo Fill Out
+- Renamed `baby-buggy` to `baby-carriage`
+- Removed `file-xml`
+- Removed `format-list-triangle`
+- Removed `gpu`
+- Removed `google-allo`
+- Removed `loop`
+- Removed `note-circle`
+- Removed `restore-clock`
 
 ## 3.9.97 to 4.0.96
 
