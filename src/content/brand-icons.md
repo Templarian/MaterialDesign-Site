@@ -55,6 +55,7 @@ Icons are listed by name in the table below along with their current status in M
 | `glassdoor` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `google-adwords` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Renamed and available in both libraries as `google(-)ads` |
 | `google-pages` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service discontinued |
+| `google-physical-web` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service discontinued |
 | `google-plus-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service discontinued |
 | `houzz` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
 | `houzz-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
