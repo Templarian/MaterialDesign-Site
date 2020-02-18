@@ -17,13 +17,13 @@ jobs:
     - name: Build for Production
       run: npm run build
     - name: Sync to FTP
-      uses: SamKirkland/FTP-Deploy-Action@master
-      with:
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        local-dir: ${{ secrets.LOCAL_DIR }}
-        git-ftp-args: --remote-root ${{ secrets.REMOTE_DIR }}
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        LOCAL_DIR: ${{ secrets.LOCAL_DIR }}
+        REMOTE_DIR: ${{ secrets.REMOTE_DIR }}
     - name: Trigger Server Steps
       uses: swinton/httpie.action@69125d73caa2c6821f6a41a86112777a37adc171
       with:
