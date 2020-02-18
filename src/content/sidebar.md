@@ -87,4 +87,4 @@
 - /roadmap
 - /roadmap/brand-icons
   - format-list Roadmap /roadmap
-  - format-list-check Branding Icons (v5.0.45) /roadmap/brand-icons
+  - format-list-check Branding Icons (v5+) /roadmap/brand-icons
