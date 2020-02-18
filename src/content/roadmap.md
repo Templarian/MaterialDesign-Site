@@ -2,7 +2,7 @@
 
 We have our on-going goal of adding icons tracked in milestones. But there are long term goals outlined below.
 
-- [Brand Icons](/roadmap/brand-icons)
+- [Brand Icons](/roadmap/brand-icons) (Released in `v5+`)
 - [First Party](/contribute/first-party)
   - [Web Component](https://github.com/Templarian/MaterialDesign-Web-Component)
 - [Third Party](/contribute/third-party)

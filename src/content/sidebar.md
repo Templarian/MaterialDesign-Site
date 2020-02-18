@@ -73,18 +73,18 @@
   - scale-balance Code of Conduct /code-of-conduct
 - /about
 - /license
-- /changelog
 - /history
+- /changelog
 - /upgrade
 - /contact
   - information-outline About /about
   - github Github Issues /issues
-  - format-list-checks Changelog /changelog
   - clock History /history
-  - arrow-up-thick Upgrade Guide /upgrade
+    - format-list-checks Changelog /changelog
+    - arrow-up-thick Upgrade Guide /upgrade
   - scale-balance License /license
   - email-outline Contact /contact
 - /roadmap
 - /roadmap/brand-icons
   - format-list Roadmap /roadmap
-  - format-list-check Roadmap /roadmap/brand-icons
+  - format-list-check Branding Icons (v5.0.45) /roadmap/brand-icons

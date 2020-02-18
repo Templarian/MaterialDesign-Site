@@ -1,5 +1,9 @@
 # Brand and Logo Icons
 
+<blockquote class="alert alert-success">
+  icon:check-circle-outline Released in <code>v5+</code>. Please reference the <a href="/changelog">changelog</a> or <a href="/upgrade">upgrade</a> guide for more details.
+</blockquote>
+
 Brand or logo icons are icons that represent a company and/or product logo. Some examples may include the Facebook logo, the VLC logo, the Square logo, etc.
 
 ## Brand Icons in Material Design Icons

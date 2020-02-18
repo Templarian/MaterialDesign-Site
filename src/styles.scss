@@ -108,6 +108,16 @@ body {
                 }
             }
         }
+
+        &.alert.alert-success {
+            border-left-color: #155724;
+            svg {
+                margin-right: 0.2rem;
+                path {
+                    fill: #155724;
+                }
+            }
+        }
     }
 
     pre:not([class]) {

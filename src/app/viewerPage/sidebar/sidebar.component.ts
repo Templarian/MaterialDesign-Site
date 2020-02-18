@@ -31,6 +31,7 @@ export class SidebarComponent {
     // Render Sidebar
     this.viewerService.getSidebar()
       .subscribe(sidebars => {
+        console.log('sidebars:', sidebars);
         this.sidebar = sidebars.find(sidebar => sidebar.url === this.url);
       });
   }
