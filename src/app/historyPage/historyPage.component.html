@@ -59,6 +59,11 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
+                                <span class="version" *ngIf="m.version && m.version.major != null">
+                                    <span>
+                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                    </span>
+                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -94,6 +99,11 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
+                                <span class="version" *ngIf="m.version && m.version.major != null">
+                                    <span>
+                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                    </span>
+                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -132,6 +142,11 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
+                                <span class="version" *ngIf="m.version && m.version.major != null">
+                                    <span>
+                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                    </span>
+                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -165,6 +180,11 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
+                                <span class="version" *ngIf="m.version && m.version.major != null">
+                                    <span>
+                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                    </span>
+                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"
@@ -200,6 +220,11 @@
                                 <small>at {{friendlyTime(m.date)}} by {{m.user.name}}</small>
                             </div>
                             <div class="actions">
+                                <span class="version" *ngIf="m.version && m.version.major != null">
+                                    <span>
+                                        v{{m.version.major}}.{{m.version.minor}}.{{m.version.patch}}
+                                    </span>
+                                </span>
                                 <a class="btn btn-sm btn-issue" *ngIf="m.issue != null"
                                     [ngbTooltip]="'GitHub Issue'"
                                     target="_blank"

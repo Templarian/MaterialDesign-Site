@@ -118,6 +118,20 @@
                 border-bottom: 1px solid rgba(0, 0, 0, 0.12);
             }
 
+            .version {
+                padding: 0.25rem;
+                position: relative;
+                width: 10px;
+
+                span {
+                    font-size: 0.875rem;
+                    color: rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    right: 0;
+                    top: 0.25rem;
+                }
+            }
+
             .photo {
                 display: inline-block;
                 vertical-align: top;

@@ -26,6 +26,11 @@
                 "twitter": "Google"
             }
         },
+        "version": {
+            "major": 5,
+            "minor": 0,
+            "patch": 45
+        },
         "issue": 42
     },
     {
