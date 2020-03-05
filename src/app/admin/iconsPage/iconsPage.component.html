@@ -64,9 +64,40 @@
         </div>
       </div>
     </div>
-    <div *ngIf="editIcon !== null" class="row mb-3">
+    <div *ngIf="editIcon !== null || newIcon !== null" class="row mb-3">
       <div class="col-md-1">
         <span class="step">Step 3</span>
+      </div>
+      <div class="col-md-7">
+        <label>
+          <span class="d-block">Select a Font</span>
+          <select
+            [(ngModel)]="selectedFont"
+            (change)="selectFont()"
+            class="custom-select">
+            <option *ngFor="let f of fonts" [ngValue]="f">{{f.name}} ({{f.iconCount}})</option>
+          </select>
+        </label>
+        <span class="or ml-3 mr-3">+</span>
+        <label>
+          <span class="d-block">Select a Version</span>
+          <select
+            [(ngModel)]="selectedFontVersion" (change)="selectFontVersion()" class="custom-select">
+            <option *ngFor="let v of versions" [ngValue]="v">{{v.major}}.{{v.minor}}.{{v.patch}} ({{v.iconCount}})</option>
+          </select>
+        </label>
+      </div>
+      <div class="col-md-4 pl-0">
+        <div class="card  text-white bg-info">
+          <div class="card-body">
+            Careful, this defaults all audit logs to the latest font version.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="editIcon !== null" class="row mb-3">
+      <div class="col-md-1">
+        <span class="step">Step 4</span>
       </div>
       <div class="col-md-11">
         <div class="row">
@@ -270,7 +301,7 @@
     <div *ngIf="newIcon !== null">
       <div class="row mb-3">
         <div class="col-md-1">
-          <span class="step">Step 3</span>
+          <span class="step">Step 4</span>
         </div>
         <div class="col-md-11">
           <div class="row">
@@ -302,7 +333,7 @@
       </div>
       <div class="row mb-3">
           <div class="col-md-1">
-            <span class="step">Step 4</span>
+            <span class="step">Step 5</span>
           </div>
           <div class="col-md-11">
             <div class="row">
@@ -343,7 +374,7 @@
         </div>
       <div class="row mb-3">
         <div class="col-md-1">
-          <span class="step">Step 5</span>
+          <span class="step">Step 6</span>
         </div>
         <div class="col-md-11">
           <div class="row">
@@ -381,7 +412,7 @@
       </div>
       <div class="row mb-3">
         <div class="col-md-1">
-          <span class="step">Step 6</span>
+          <span class="step">Step 7</span>
         </div>
         <div class="col-md-11">
           <div class="row">
@@ -425,30 +456,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row mb-3">
-        <div class="col-md-1">
-          <span class="step">Step 7</span>
-        </div>
-        <div class="col-md-11">
-          <label>
-            <span class="d-block">Select a Font</span>
-            <select
-              [(ngModel)]="selectedFont"
-              (change)="selectFont()"
-              class="custom-select">
-              <option *ngFor="let f of fonts" [ngValue]="f">{{f.name}} ({{f.iconCount}})</option>
-            </select>
-          </label>
-          <span class="or ml-3 mr-3">+</span>
-          <label>
-            <span class="d-block">Select a Version</span>
-            <select
-              [(ngModel)]="selectedFontVersion" (change)="selectFontVersion()" class="custom-select">
-              <option *ngFor="let v of versions" [ngValue]="v">{{v.major}}.{{v.minor}}.{{v.patch}} ({{v.iconCount}})</option>
-            </select>
-          </label>
         </div>
       </div>
       <div class="row mb-3">
