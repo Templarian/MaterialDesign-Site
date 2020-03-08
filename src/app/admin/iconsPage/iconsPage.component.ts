@@ -122,6 +122,7 @@ export class AdminIconsPageComponent {
     }
     this.loading = false;
     this.newIcon = null;
+    this.loadFonts();
   }
 
   async addIcon() {
@@ -130,6 +131,10 @@ export class AdminIconsPageComponent {
     this.newIcon = new Icon("", this.noIcon);
     this.newIcon.packageId = this.selectedPackage.id;
     this.newIcon.published = true;
+    this.loadFonts();
+  }
+
+  async loadFonts() {
     this.fonts = await this.iconService.getAdminFonts(this.selectedPackage.id);
     this.selectedFont = this.fonts[0];
     this.versions = this.selectedFont.versions;
