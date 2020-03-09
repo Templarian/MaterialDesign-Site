@@ -4,7 +4,7 @@ Follow the guide starting with your version to the version you wish to upgrade t
 
 ## 4.9.95 to 5.0.45
 
-- Removed Brands
+- Use [Simple Icons](https://simpleicons.org/) for the removed brands:
   - `accusoft`
   - `amazon-drive`
   - `android-head`
@@ -71,7 +71,7 @@ Follow the guide starting with your version to the version you wish to upgrade t
   - `xing-box`
   - `xing-circle`
   - `yelp`
-- Renamed
+- Rename
   - `account-badge` to `badge-account`
   - `account-badge-alert` to `badge-account-alert`
   - `account-badge-alert-outline` to `badge-account-alert-outline`
