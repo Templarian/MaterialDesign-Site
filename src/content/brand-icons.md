@@ -36,74 +36,74 @@ Icons are listed by name in the table below along with their current status in M
 
 | Icon | MDI | SI | Note(s) |
 | ---- | --- | -- | ------- |
-| `accusoft` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
+| `accusoft` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
 | `adchoices` | mdi:close:#b00020 | mdi:close:#b00020 | [Licensed icon](http://digitaladvertisingalliance.org/license), was removed in **v4.8.95** |
-| `amazon-drive` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service replaced by Amazon Photos |
+| `amazon-drive` | mdi:close:#b00020 | mdi:close:#b00020 | Service replaced by Amazon Photos |
 | `android-head` | mdi:check:#2e7b32 | mdi:check:#2e7b32 | Available in both libraries as `android` |
-| `basecamp` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `beats` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `beatsbydre` |
-| `behance` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `blackberry` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `cisco-webex` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Now uses the Cisco logo, available in SI |
-| `disqus-outline` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `dribbble` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `dribbble-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `etsy` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `eventbrite` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `facebook-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `flattr` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `flickr` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `foursquare` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `github-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `github-face` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `glassdoor` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `google-adwords` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Renamed and available in both libraries as `google(-)ads` |
-| `google-pages` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service discontinued |
-| `google-physical-web` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service discontinued |
-| `google-plus-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service discontinued |
-| `houzz` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `houzz-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `instapaper` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `itunes` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `language-python-text` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `lastfm` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `linkedin-box` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | Available in both libraries as `linkedin` |
-| `lyft` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `mail-ru` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `mail-dot-ru` |
-| `mastodon-variant` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `basecamp` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `beats` | mdi:close:#b00020 | mdi:check:#2e7b32 | SI name: `beatsbydre` |
+| `behance` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `blackberry` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `cisco-webex` | mdi:close:#b00020 | mdi:close:#b00020 | Now uses the Cisco logo, available in SI |
+| `disqus-outline` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `dribbble` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `dribbble-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `etsy` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `eventbrite` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `facebook-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `flattr` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `flickr` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `foursquare` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `github-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `github-face` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `glassdoor` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `google-adwords` | mdi:close:#b00020 | mdi:close:#b00020 | Renamed and available in both libraries as `google(-)ads` |
+| `google-pages` | mdi:close:#b00020 | mdi:close:#b00020 | Service discontinued |
+| `google-physical-web` | mdi:close:#b00020 | mdi:close:#b00020 | Service discontinued |
+| `google-plus-box` | mdi:close:#b00020 | mdi:close:#b00020 | Service discontinued |
+| `houzz` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `houzz-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `instapaper` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `itunes` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `language-python-text` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `lastfm` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `linkedin-box` | mdi:close:#b00020 | mdi:check:#2e7b32 | Available in both libraries as `linkedin` |
+| `lyft` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `mail-ru` | mdi:close:#b00020 | mdi:check:#2e7b32 | SI name: `mail-dot-ru` |
+| `mastodon-variant` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
 | `maxcdn` | mdi:close:#b00020 | mdi:close:#b00020 | Renamed and available in both libraries as `stackpath` |
-| `medium` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `meetup` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `mixcloud` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `nfc-off` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `npm-variant` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `npm-variant-outline` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `paypal` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `periscope` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `pinterest-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `pocket` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `quicktime` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `shopify` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `slackware` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `square-inc` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `square` |
-| `square-inc-cash` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `cashapp` |
-| `steam-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `strava` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `tor` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `tumblr` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `tumblr-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `tumblr-reblog` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | |
-| `twitter-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `twitter-circle` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `uber` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
-| `venmo` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI use the full wordmark |
-| `vk-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `vk-circle` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `wunderlist` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Service deprecated by Microsoft |
-| `xda` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | SI name: `xda-developers` |
-| `xing-box` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `xing-circle` | mdi:thumb-down-outline:#f57c00 | mdi:close:#b00020 | Variants are outside the scope of SI |
-| `yelp` | mdi:thumb-down-outline:#f57c00 | mdi:check:#2e7b32 | |
+| `medium` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `meetup` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `mixcloud` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `nfc-off` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `npm-variant` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `npm-variant-outline` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `paypal` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `periscope` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `pinterest-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `pocket` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `quicktime` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `shopify` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `slackware` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `square-inc` | mdi:close:#b00020 | mdi:check:#2e7b32 | SI name: `square` |
+| `square-inc-cash` | mdi:close:#b00020 | mdi:check:#2e7b32 | SI name: `cashapp` |
+| `steam-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `strava` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `tor` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `tumblr` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `tumblr-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `tumblr-reblog` | mdi:close:#b00020 | mdi:close:#b00020 | |
+| `twitter-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `twitter-circle` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `uber` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
+| `venmo` | mdi:close:#b00020 | mdi:check:#2e7b32 | SI use the full wordmark |
+| `vk-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `vk-circle` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `wunderlist` | mdi:close:#b00020 | mdi:close:#b00020 | Service deprecated by Microsoft |
+| `xda` | mdi:close:#b00020 | mdi:check:#2e7b32 | SI name: `xda-developers` |
+| `xing-box` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `xing-circle` | mdi:close:#b00020 | mdi:close:#b00020 | Variants are outside the scope of SI |
+| `yelp` | mdi:close:#b00020 | mdi:check:#2e7b32 | |
 
 ### I use Home Assistant, will I be affected by this change?
 
