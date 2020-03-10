@@ -4,9 +4,77 @@
 
 - 150 New Icons
 - Updated
+  - `account-cog`
+  - `account-cog-outline`
+  - `account-switch`
+  - `apple-ios`
+  - `babel`
+  - `bell-alert`
+  - `bell-alert-outline`
+  - `bell-plus`
+  - `bell-plus-outline`
+  - `bitbucket`
+  - `bitcoin`
+  - `blogger`
+  - `book-minus-multiple`
+  - `book-plus-multiple`
+  - `book-remove-multiple`
+  - `bootstrap`
+  - `bowl-mix`
+  - `camcorder`
+  - `camcorder-off`
+  - `circle-slice-*`
+  - `codepen`
+  - `dev-to`
+  - `docker`
+  - `dropbox`
+  - `font-awesome`
+  - `format-size`
+  - `gitlab`
+  - `google-analytics`
+  - `google-glass`
+  - `google-keep`
+  - `hanger`
+  - `home-export-outline`
+  - `home-import-outline`
+  - `home-lightbulb-outline`
+  - `home-thermometer-outline`
+  - `ice-cream`
+  - `jsfiddle`
+  - `kettle-alert`
+  - `kettle-alert-outline`
+  - `kickstarter`
+  - `language-xaml`
+  - `linkedin`
+  - `lock-alert`
+  - `microsoft-office`
+  - `microsoft-onedrive`
+  - `microsoft-onenote`
+  - `microsoft-outlook`
+  - `microsoft-yammer`
+  - `midi`
+  - `nfc`
+  - `patreon`
+  - `pot-mix`
+  - `pot-steam`
+  - `reddit`
+  - `redhat`
   - `rocket`
-  - `bell-*`
-  - ToDo: Fillout updated icons
+  - `snapchat`
+  - `sort`
+  - `sort-ascending`
+  - `sort-descending`
+  - `stack-exchange`
+  - `teamviewer`
+  - `twitch`
+  - `umbrella-closed`
+  - `unicode`
+  - `vk`
+  - `wall-sconce-round-variant`
+  - `webpack`
+  - `whatsapp`
+  - `xing`
+  - `youtube-gaming`
 - Removed Brands
   - `accusoft`
   - `amazon-drive`
