@@ -26,7 +26,7 @@ Each icon can be referenced by their name prefixed with `mdi-`. For instance to 
 Bob lives in a <span class="mdi mdi-home"></span>.
 ```
 
-<a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="btn btn-outline-secondary">icon:visual-studio-code VS Code Material Design Icons Extension</a>
+<a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="btn btn-outline-secondary">icon:microsoft-visual-studio-code VS Code Material Design Icons Extension</a>
 
 ## Helper Classes
 
