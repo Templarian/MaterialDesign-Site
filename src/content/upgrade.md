@@ -80,6 +80,7 @@ Follow the guide starting with your version to the version you wish to upgrade t
   - `account-badge-outline` to `badge-account-outline`
   - `account-card-details` to `card-account-details`
   - `account-card-details-outline` to `card-account-details-outline`
+  - `airplay` to `apple-airplay`
   - `artist` to `account-music`
   - `artist-outline` to `account-music-outline`
   - `audiobook` to `book-music`
@@ -130,10 +131,13 @@ Follow the guide starting with your version to the version you wish to upgrade t
   - `image-filter` to `image-multiple-outline`
   - `internet-explorer` to `microsoft-internet-explorer`
   - `json` to `code-json`
+  - `kotlin` to `language-kotlin`
   - `library-books` to `filmstrip-box`
   - `library-movie` to `filmstrip-box-multiple`
   - `library-music` to `music-box-multiple`
   - `library-music-outline` to `music-box-multiple-outline`
+  - `markdown` to `language-markdown`
+  - `markdown-outline` to `language-markdown-outline`
   - `message-settings-variant` to `message-cog`
   - `message-settings-variant-outline` to `message-cog-outline`
   - `microsoft-dynamics` to `microsoft-dynamics-365`
