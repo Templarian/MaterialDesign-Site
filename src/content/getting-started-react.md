@@ -33,6 +33,8 @@ class App extends Component {
 } 
 ```
 
+<a href="https://codesandbox.io/s/staging-paper-5w879" class="btn btn-outline-secondary">View Example App on CodeSandbox</a>
+
 ## Props
 
 | Prop        | PropTypes      | Default  | Details |
