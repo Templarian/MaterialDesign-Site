@@ -95,7 +95,7 @@ export class DatabaseService {
     const localHashIds = Object.keys(localHashes);
     const updateIds = [];
     hashIds.forEach((id) => {
-      if (!(id in localHashes) || localHashes[id] !== hashes[id]) {
+      if (!(id in localHashes) || !localHashes[id] || localHashes[id] !== hashes[id]) {
         updateIds.push(id);
       }
     });
