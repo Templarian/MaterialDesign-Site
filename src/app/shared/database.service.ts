@@ -130,10 +130,11 @@ export class DatabaseService {
         p.then(icons => {
           this.db.icons.bulkAdd(
             icons.map(icon => ({
-              id: icon.id.substr(0, 8),
+              id: icon.fontIcon.id,
               idFull: icon.id,
               name: icon.name,
               data: icon.data,
+              version: icon.version,
               codepoint: icon.codepoint,
               aliases: JSON.stringify(icon.aliases),
               tags: JSON.stringify(icon.tags)

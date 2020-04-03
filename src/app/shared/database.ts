@@ -28,6 +28,7 @@ interface IconTable {
   codepoint: number,
   name: string,
   data: string,
+  version: string,
   aliases: string,
   tags: string,
 }

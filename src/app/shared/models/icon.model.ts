@@ -13,12 +13,14 @@ export class Icon extends IconHelpers {
   public description: string = null;
   public data: string = null;
   public user: User = null;
+  public version: string = null;
   public aliases: Alias[] = [];
   public tags: Tag[] = [];
   public styles: Style[] = [];
   public published: boolean = true;
   public deprecated: boolean = false;
   public codepoint: number = null;
+  public fontIcon: any = null;
 
   constructor(name?: string, data?: string) {
     super();
@@ -34,6 +36,12 @@ export class Icon extends IconHelpers {
     this.name = icon.name;
     this.description = icon.description;
     this.data = icon.data;
+    if (icon.version) {
+      this.version = icon.version;
+    }
+    if (icon.fontIcon) {
+      this.fontIcon = icon.fontIcon;
+    }
     if (icon.user) {
       this.user = new User().from(icon.user);
     }
