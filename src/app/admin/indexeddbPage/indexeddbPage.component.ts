@@ -149,7 +149,7 @@ export class AdminIndexeddbPageComponent {
   }
 
   async where() {
-    this.db.hashes.where('id').equals('e602027a').first().then((item) => {
+    this.db.icons.where('name').equals('account').first().then((item) => {
       console.log(item);
     }, (err) => {
       console.log('not found')
