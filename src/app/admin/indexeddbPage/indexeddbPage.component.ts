@@ -127,21 +127,21 @@ export class AdminIndexeddbPageComponent {
           this.databaseService.getIconsByPage(font, page, size)
         );
       }
-      await this.asyncThrottledMap<Icon[], void>(2, chunkPromises, (icons) => {
-        console.log(icons);
-        this.db.icons.bulkAdd(
-          icons.map(icon => ({
-            id: icon.id.substr(0, 8),
-            idFull: icon.id,
-            name: icon.name,
-            data: icon.data,
-            codepoint: icon.codepoint,
-            aliases: JSON.stringify(icon.aliases),
-            tags: JSON.stringify(icon.tags)
-          })
-        ));
-        return Promise.resolve();
-      });
+      await this.asyncThrottledMap<Promise<Icon[]>, void>(2, chunkPromises, (p) =>
+        p.then(icons => {
+          this.db.icons.bulkAdd(
+            icons.map(icon => ({
+              id: icon.id.substr(0, 8),
+              idFull: icon.id,
+              name: icon.name,
+              data: icon.data,
+              codepoint: icon.codepoint,
+              aliases: JSON.stringify(icon.aliases),
+              tags: JSON.stringify(icon.tags)
+            })
+          ));
+        })
+      );
     }
     await this.db.hashes.bulkPut(hashIds.map(id => ({ id, hash: hashes[id] })));
     await this.db.hashes.bulkDelete(removeIds);
