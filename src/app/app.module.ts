@@ -49,6 +49,7 @@ import { UserComponent } from 'app/shared/userPhoto/userPhoto.component';
 import { IconSearchComponent } from 'app/shared/iconSearch/iconSearch.component';
 import { PromiseCacheService } from 'app/shared/promiseCache.service';
 import { AdminTagPageComponent } from 'app/admin/tagPage/tagPage.component';
+import { AdminIndexeddbPageComponent } from 'app/admin/indexeddbPage/indexeddbPage.component';
 import { AdminRenamePageComponent } from 'app/admin/renamePage/renamePage.component';
 import { GithubPageComponent } from 'app/githubPage/githubPage.component';
 import { SidebarComponent } from 'app/viewerPage/sidebar/sidebar.component';
@@ -478,6 +479,10 @@ const appRoutes: Routes = [
     component: AdminTagPageComponent
   },
   {
+    path: 'admin/indexeddb',
+    component: AdminIndexeddbPageComponent
+  },
+  {
     path: 'admin/release',
     component: AdminReleasePageComponent
   },
@@ -521,6 +526,7 @@ const appRoutes: Routes = [
     AdminAliasPageComponent,
     AdminProfilePageComponent,
     AdminTagPageComponent,
+    AdminIndexeddbPageComponent,
     AdminReleasePageComponent,
     AdminRenamePageComponent,
     NotFoundPageComponent,

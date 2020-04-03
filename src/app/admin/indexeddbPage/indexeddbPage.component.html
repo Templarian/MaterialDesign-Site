@@ -1,0 +1,30 @@
+<mdi-banner title="IndexedDB Playground" [carbon]="false"></mdi-banner>
+<div class="container-fluid">
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <p>IndexedDB Testing Page</p>
+    </div>
+    <div class="col-md-4 text-right">
+      <button class="btn btn-primary mr-2" (click)="goBack()">Go Back</button>
+      <button class="btn btn-primary" (click)="logout()">Logout</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h2>Create IndexedDB</h2>
+        <button (click)="sync()">Sync Data</button>
+        <button (click)="where()">Run Where</button>
+        <button (click)="delete()">Delete Database</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card p-3">
+        <h2>Approve Tags</h2>
+        <p>Coming Soon...</p>
+      </div>
+      <div class="card p-3 mt-3">
+        
+      </div>
+    </div>
+  </div>

@@ -26,6 +26,7 @@
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.7",
+    "dexie": "^3.0.0-rc.6",
     "jquery": "^3.3.1",
     "js-yaml": "^3.12.0",
     "luxon": "^1.17.2",
