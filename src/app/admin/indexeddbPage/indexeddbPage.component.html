@@ -22,7 +22,7 @@
       <div class="card p-3">
         <h2>Preview Data</h2>
         <input type="text" class="form-control" [(ngModel)]="search" (keyup)="keyup()" [disabled]="!isSynced" />
-        <div ng-if="icon">
+        <div *ngIf="icon">
           <div><code>{{icon.id}}</code> <code>{{icon.codepoint}}</code></div>
           <div>{{icon.name}}</div>
           <div>
