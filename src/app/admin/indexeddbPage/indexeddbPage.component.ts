@@ -73,11 +73,12 @@ export class AdminIndexeddbPageComponent {
   }
 
   search = '';
+  icon: Icon | null = null;
 
   async keyup() {
     this.isProcessing = true;
     const icon = await this.databaseService.getIconByName(this.search);
-    console.log(icon);
+    this.icon = icon;
     this.isProcessing = false;
   }
 

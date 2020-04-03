@@ -5,6 +5,7 @@ import { Database } from './database';
 
 import { Icon } from './models/icon.model';
 import { Font } from './models/font.model';
+import { Alias } from './models/alias.model';
 
 interface StringMap { [key: string]: string; }
 
@@ -146,11 +147,20 @@ export class DatabaseService {
   }
 
   async getIconByName(name) {
-    this.db.icons.where('name').equals(name).first().then((item) => {
-      console.log(item);
-    }, (err) => {
-      console.log('not found')
-    });
+    const local = await this.db.icons.where('name').equals(name).first();
+    if (!local) {
+      return null;
+    }
+    const icon = new Icon();
+    icon.id = local.idFull;
+    icon.name = local.name;
+    icon.data = local.data;
+    icon.codepoint = local.codepoint;
+    const aliases = JSON.parse(local.aliases);
+    icon.aliases = aliases.map(alias => new Alias().from(alias));
+    const tags = JSON.parse(local.tags);
+    icon.tags = tags.map(tag => new Alias().from(tag));
+    return icon;
   }
 
   async delete() {
