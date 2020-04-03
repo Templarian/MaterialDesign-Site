@@ -95,10 +95,11 @@ export class DatabaseService {
     const localHashIds = Object.keys(localHashes);
     const updateIds = [];
     hashIds.forEach((id) => {
-      if (!(id in localHashes) || !localHashes[id] || localHashes[id] !== hashes[id]) {
+      if (!(id in localHashes) || localHashes[id] !== hashes[id]) {
         updateIds.push(id);
       }
     });
+    console.log('update:', updateIds.length, updateIds.length);
     const removeIds = [];
     localHashIds.forEach((id) => {
       if (!(id in hashes)) {
