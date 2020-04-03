@@ -128,6 +128,7 @@ export class AdminIndexeddbPageComponent {
         );
       }
       await this.asyncThrottledMap<Icon[], void>(2, chunkPromises, (icons) => {
+        console.log(icons);
         this.db.icons.bulkAdd(
           icons.map(icon => ({
             id: icon.id.substr(0, 8),
