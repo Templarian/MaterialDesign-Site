@@ -23,15 +23,18 @@
         <h2>Preview Data</h2>
         <input type="text" class="form-control" [(ngModel)]="search" (keyup)="keyup()" [disabled]="!isSynced" />
         <div *ngIf="icon">
-          <div><code>{{icon.id}}</code> <code>{{icon.codepoint}}</code></div>
-          <div>{{icon.name}}</div>
+          <div>id: <code>{{icon.id}}</code></div>
+          <div>codepoint: <code>{{icon.codepoint}}</code></div>
+          <div>name: <code>{{icon.name}}</code></div>
           <div>
             <mdi-icon-preview [path]="icon.data" [color]="'#666'"></mdi-icon-preview>
           </div>
+          <div>Aliases:</div>
+          <div>Tags:</div>
         </div>
-      </div>
-      <div class="card p-3 mt-3">
-        
+        <div *ngIf="!icon">
+          <p class="alert alert-info">Search icons above</p>
+        </div>
       </div>
     </div>
   </div>
