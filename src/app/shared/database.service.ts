@@ -6,6 +6,7 @@ import { Database } from './database';
 import { Icon } from './models/icon.model';
 import { Font } from './models/font.model';
 import { Alias } from './models/alias.model';
+import { Tag } from './models/tag.model';
 
 interface StringMap { [key: string]: string; }
 
@@ -159,7 +160,7 @@ export class DatabaseService {
     const aliases = JSON.parse(local.aliases);
     icon.aliases = aliases.map(alias => new Alias().from(alias));
     const tags = JSON.parse(local.tags);
-    icon.tags = tags.map(tag => new Alias().from(tag));
+    icon.tags = tags.map(tag => new Tag().from(tag));
     return icon;
   }
 
