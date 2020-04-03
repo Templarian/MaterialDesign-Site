@@ -49,17 +49,36 @@ export class AdminIndexeddbPageComponent {
     await this.loginService.logout();
   }
 
+  isProcessing = false;
+  isSynced = false;
+
   async sync() {
+    this.isProcessing = true;
     await this.databaseService.sync();
+    this.isProcessing = false;
+    this.isSynced = true;
   }
 
   async where() {
+    this.isProcessing = true;
     const icon = await this.databaseService.getIconByName('account');
     console.log(icon);
+    this.isProcessing = false;
   }
 
   async delete() {
+    this.isProcessing = true;
     await this.databaseService.delete();
+    this.isProcessing = false;
+  }
+
+  search = '';
+
+  async keyup() {
+    this.isProcessing = true;
+    const icon = await this.databaseService.getIconByName(this.search);
+    console.log(icon);
+    this.isProcessing = false;
   }
 
 }

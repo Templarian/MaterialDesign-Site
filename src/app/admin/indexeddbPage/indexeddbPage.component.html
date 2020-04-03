@@ -13,7 +13,7 @@
     <div class="col-md-6">
       <div class="card p-3">
         <h2>Create IndexedDB</h2>
-        <button (click)="sync()">Sync Data</button>
+        <button (click)="sync()" [disabled]="isProcessing">Sync Data</button>
         <button (click)="where()">Run Where 'account'</button>
         <button (click)="delete()">Delete Database</button>
       </div>
@@ -21,6 +21,7 @@
     <div class="col-md-6">
       <div class="card p-3">
         <h2>Preview Data</h2>
+        <input type="text" class="form-control" [(ngModel)]="search" (keyup)="keyup()" [disabled]="!isSynced" />
         <p>Coming Soon...</p>
       </div>
       <div class="card p-3 mt-3">
