@@ -115,7 +115,21 @@ export class DatabaseService {
       const chunkPromises = chunkIds.map((ids) => {
         return this.getIcons(font, ids);
       });
-      await Promise.all(chunkPromises);
+      const results = await Promise.all(chunkPromises);
+      results.forEach(icons => {
+        this.db.icons.bulkPut(
+          icons.map(icon => ({
+            id: icon.fontIcon.id,
+            idFull: icon.id,
+            name: icon.name,
+            data: icon.data,
+            version: icon.version,
+            codepoint: icon.codepoint,
+            aliases: JSON.stringify(icon.aliases),
+            tags: JSON.stringify(icon.tags)
+          })
+        ));
+      });
     } else {
       // Sync every icon into the database
       let size = 500,
@@ -128,7 +142,7 @@ export class DatabaseService {
       }
       await this.asyncThrottledMap<Promise<Icon[]>, void>(2, chunkPromises, (p) =>
         p.then(icons => {
-          this.db.icons.bulkAdd(
+          this.db.icons.bulkPut(
             icons.map(icon => ({
               id: icon.fontIcon.id,
               idFull: icon.id,
@@ -157,6 +171,7 @@ export class DatabaseService {
     icon.id = local.idFull;
     icon.name = local.name;
     icon.data = local.data;
+    icon.version = local.version;
     icon.codepoint = local.codepoint;
     const aliases = JSON.parse(local.aliases);
     icon.aliases = aliases.map(alias => new Alias().from(alias));
