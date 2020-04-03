@@ -135,7 +135,7 @@ export class DatabaseService {
       let size = 500,
         pages = Math.ceil(hashIds.length / size),
         chunkPromises = [];
-      for (let page = 1; page < pages; page++) {
+      for (let page = 1; page <= pages; page++) {
         chunkPromises.push(
           this.getIconsByPage(font, page, size)
         );
