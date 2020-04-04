@@ -89,4 +89,13 @@ export class AdminIndexeddbPageComponent {
     console.log(this.icons.length, '...done')
   }
 
+  async allSync() {
+    await this.databaseService.sync();
+    this.icons = await this.databaseService.getIcons();
+  }
+
+  async clear() {
+    this.icons = [];
+  }
+
 }
