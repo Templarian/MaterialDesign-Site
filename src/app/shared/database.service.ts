@@ -189,13 +189,16 @@ export class DatabaseService {
     return this.convert(local);
   }
 
+  // ToDo, cache into a format that can be parsed quicker for search
+
   async getIcons(term?: string) {
     let icons;
     if (term) {
-      const safeTerm = term.replace(/[^a-z-]/g, '');
+      const safeTerm = term.toLowerCase().replace(/[^a-z0-9-]/g, '');
       const reg = new RegExp(`${safeTerm}`);
       icons = await this.db.icons.where('fontId').equals(font.id)
         .filter((icon) => {
+          // JSON.parse(icon.aliases);
           return icon.name.match(reg) !== null;
         }).sortBy('name');
     } else {

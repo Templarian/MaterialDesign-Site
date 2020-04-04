@@ -21,13 +21,17 @@
         <h2>Render All Icons</h2>
         <button (click)="all()" [disabled]="!isSynced">Render</button>
         <button (click)="allSync()" [disabled]="isProcessing">Sync + Render</button>
+        <button (click)="allPlaceholders()" [disabled]="isSynced">Render Placeholders</button>
         <button (click)="clear()" [disabled]="!isSynced">Clear</button>
         <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="keyup2()" [disabled]="!isSynced" />
         <div>
-          <svg *ngFor="let icon of icons" viewBox="0 0 24 24" style="display: inline-flex; width: 1.5rem; height: 1.5rem; margin-right: 0.5rem; vertical-align: top;">
+          <svg *ngFor="let icon of icons" viewBox="0 0 24 24" style="display: inline-flex; width: 1.5rem; height: 1.5rem; vertical-align: top;">
             <path [attr.d]="icon.data" />
           </svg>
         </div>
+        <div *ngFor="let icon of placeholders" style="display: inline-flex; width: 1.5rem; height: 1.5rem; vertical-align: top;">
+          aa
+        </svg>
       </div>
     </div>
     <div class="col-md-6">

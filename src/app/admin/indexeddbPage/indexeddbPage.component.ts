@@ -95,6 +95,11 @@ export class AdminIndexeddbPageComponent {
     this.isSynced = true;
   }
 
+  placeholders: Icon[] = [];
+  async allPlaceholders() {
+    this.placeholders = await this.databaseService.getIcons();
+  }
+
   searchTerm = '';
   async keyup2() {
     this.isProcessing = true;
