@@ -93,13 +93,10 @@ export class DatabaseService {
       localHashes[item.id] = item.hash;
     });
     const localHashIds = Object.keys(localHashes);
-    const updateIds = [];
-    const addIds = [];
+    const modifiedIds = [];
     hashIds.forEach((id) => {
-      if (!localHashes.hasOwnProperty(id)) {
-        addIds.push(id);
-      } else if (localHashes[id] !== hashes[id]) {
-        updateIds.push(id);
+      if (!(id in localHashes) || localHashes[id] !== hashes[id]) {
+        modifiedIds.push(id);
       }
     });
     const removeIds = [];
@@ -109,7 +106,6 @@ export class DatabaseService {
       }
     });
     await this.db.icons.bulkDelete(removeIds);
-    const modifiedIds = [...updateIds, ...addIds];
     if (modifiedIds.length < 500) {
       // Do a partial update patch of data
       let i, j, chunkIds = [], chunk = 100;
