@@ -21,7 +21,7 @@
         <h2>Render All Icons</h2>
         <button (click)="all()" [disabled]="!isSynced">Render</button>
         <div>
-          <svg *ngFor="let icon of icons" [attr.title]="icon.name" viewBox="0 0 24 24" style="display: inline-flex; width: 1.5rem; height: 1.5rem; margin-right: 0.5rem; vertical-align: top;">
+          <svg *ngFor="let icon of icons" viewBox="0 0 24 24" style="display: inline-flex; width: 1.5rem; height: 1.5rem; margin-right: 0.5rem; vertical-align: top;">
             <path [attr.d]="icon.data" />
           </svg>
         </div>
