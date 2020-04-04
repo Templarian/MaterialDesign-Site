@@ -94,13 +94,17 @@ export class DatabaseService {
     });
     const localHashIds = Object.keys(localHashes);
     const updateIds = [];
+    const addIds = [];
     hashIds.forEach((id) => {
-      if (!localHashes.hasOwnProperty(id) || localHashes[id] !== hashes[id]) {
+      if (!localHashIds.includes(id)) {
+        addIds.push(id);
+      } else if (localHashes[id] !== hashes[id]) {
         updateIds.push(id);
       }
       console.log(localHashes.hasOwnProperty(id), id)
     });
-    console.log('update:', updateIds.length, updateIds);
+    console.log('add:', addIds.length, addIds);
+    console.log('update:', hashIds.length, localHashIds.length, updateIds.length, updateIds);
     const removeIds = [];
     localHashIds.forEach((id) => {
       if (!(id in hashes)) {
@@ -108,11 +112,12 @@ export class DatabaseService {
       }
     });
     await this.db.icons.bulkDelete(removeIds);
-    if (updateIds.length < 500) {
+    const modifiedIds = [...updateIds, ...addIds];
+    if (modifiedIds.length < 500) {
       // Do a partial update patch of data
       let i, j, chunkIds = [], chunk = 100;
-      for (i = 0, j = updateIds.length; i < j; i += chunk) {
-        chunkIds.push(updateIds.slice(i, i + chunk));
+      for (i = 0, j = modifiedIds.length; i < j; i += chunk) {
+        chunkIds.push(modifiedIds.slice(i, i + chunk));
       }
       const chunkPromises = chunkIds.map((ids) => {
         return this.getIcons(font, ids);
