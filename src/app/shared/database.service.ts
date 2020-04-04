@@ -189,8 +189,18 @@ export class DatabaseService {
     return this.convert(local);
   }
 
-  async getIcons() {
-    const icons = await this.db.icons.where('fontId').equals(font.id).sortBy('name');
+  async getIcons(term?: string) {
+    let icons;
+    if (term) {
+      const safeTerm = term.replace(/[^a-z-]/g, '');
+      const reg = new RegExp(`${safeTerm}`);
+      icons = await this.db.icons.where('fontId').equals(font.id)
+        .filter((icon) => {
+          return icon.name.match(reg) !== null;
+        }).sortBy('name');
+    } else {
+      icons = await this.db.icons.where('fontId').equals(font.id).sortBy('name');
+    }
     return icons.map(icon => this.convert(icon));
   }
 

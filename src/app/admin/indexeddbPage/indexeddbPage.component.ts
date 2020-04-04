@@ -95,6 +95,14 @@ export class AdminIndexeddbPageComponent {
     this.isSynced = true;
   }
 
+  searchTerm = '';
+  async keyup2() {
+    this.isProcessing = true;
+    const icons = await this.databaseService.getIcons(this.searchTerm);
+    this.icons = icons;
+    this.isProcessing = false;
+  }
+
   async clear() {
     this.icons = [];
   }
