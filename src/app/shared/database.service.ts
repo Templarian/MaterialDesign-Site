@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Database } from './database';
+import { Database, IconTable } from './database';
 
 import { Icon } from './models/icon.model';
 import { Font } from './models/font.model';
 import { Alias } from './models/alias.model';
 import { Tag } from './models/tag.model';
 
-interface StringMap { [key: string]: string; }
+interface StringMap {
+  [key: string]: string;
+}
+
+const font = new Font().from({
+  id: 'D051337E-BC7E-11E5-A4E9-842B2B6CFE1B'
+} as Font);
 
 @Injectable()
 export class DatabaseService {
@@ -82,9 +88,6 @@ export class DatabaseService {
 
   async sync() {
     console.log('start');
-    const font = new Font().from({
-      id: 'D051337E-BC7E-11E5-A4E9-842B2B6CFE1B'
-    } as Font);
     const hashes = await this.getHashesFromServer(font);
     const hashIds = Object.keys(hashes);
     const localHashObj = await this.db.hashes.toArray();
@@ -121,6 +124,7 @@ export class DatabaseService {
           icons.map(icon => ({
             id: icon.fontIcon.id,
             idFull: icon.id,
+            fontId: font.id,
             name: icon.name,
             data: icon.data,
             version: icon.version,
@@ -146,6 +150,7 @@ export class DatabaseService {
             icons.map(icon => ({
               id: icon.fontIcon.id,
               idFull: icon.id,
+              fontId: font.id,
               name: icon.name,
               data: icon.data,
               version: icon.version,
@@ -162,12 +167,7 @@ export class DatabaseService {
     console.log('done');
   }
 
-  async getIconByName(name) {
-    const local = await this.db.icons.where('name').equals(name).first();
-    if (!local) {
-      return null;
-    }
-    console.log(local);
+  convert(local: IconTable) {
     const icon = new Icon();
     icon.id = local.idFull;
     icon.name = local.name;
@@ -181,8 +181,17 @@ export class DatabaseService {
     return icon;
   }
 
+  async getIconByName(name) {
+    const local = await this.db.icons.where('name').equals(name).first();
+    if (!local) {
+      return null;
+    }
+    return this.convert(local);
+  }
+
   async getIcons() {
-    return [];
+    const icons = await this.db.icons.where('fontId').equals(font.id).toArray();
+    return icons.map(icon => this.convert(icon));
   }
 
   async delete() {

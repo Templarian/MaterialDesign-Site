@@ -9,7 +9,7 @@ export class Database extends Dexie {
 
     this.version(1).stores({
       hashes: '&id, hash',
-      icons: '&id, idFull, name, data, aliases, tags, codepoint'
+      icons: '&id, idFull, fontId, name, data, aliases, tags, codepoint'
     });
     
     this.hashes = this.table("hashes");
@@ -17,14 +17,15 @@ export class Database extends Dexie {
   }
 }
 
-interface HashTable {
+export interface HashTable {
   id: string,
   hash: string
 }
 
-interface IconTable {
+export interface IconTable {
   id: string,
   idFull: string,
+  fontId: string,
   codepoint: number,
   name: string,
   data: string,
