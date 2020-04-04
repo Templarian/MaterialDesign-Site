@@ -125,8 +125,8 @@ export class DatabaseService {
             data: icon.data,
             version: icon.version,
             codepoint: icon.codepoint,
-            aliases: JSON.stringify(icon.aliases),
-            tags: JSON.stringify(icon.tags)
+            aliases: icon.aliases,
+            tags: icon.tags
           })
         ));
       });

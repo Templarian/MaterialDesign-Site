@@ -82,4 +82,8 @@ export class AdminIndexeddbPageComponent {
     this.isProcessing = false;
   }
 
+  all() {
+    //this.icons = this.databaseService.getAllIcons();
+  }
+
 }

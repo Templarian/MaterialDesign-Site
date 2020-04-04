@@ -29,6 +29,6 @@ interface IconTable {
   name: string,
   data: string,
   version: string,
-  aliases: string,
-  tags: string,
+  aliases: any,
+  tags: any
 }
