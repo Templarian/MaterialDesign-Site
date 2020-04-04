@@ -85,7 +85,7 @@ export class AdminIndexeddbPageComponent {
   async all() {
     console.log('get all icons...')
     this.icons = await this.databaseService.getIcons();
-    console.log('...done')
+    console.log(this.icons.length, '...done')
   }
 
 }
