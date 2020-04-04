@@ -190,7 +190,7 @@ export class DatabaseService {
   }
 
   async getIcons() {
-    const icons = await this.db.icons.where('fontId').equals(font.id).toArray();
+    const icons = await this.db.icons.where('fontId').equals(font.id).sortBy('name');
     return icons.map(icon => this.convert(icon));
   }
 
