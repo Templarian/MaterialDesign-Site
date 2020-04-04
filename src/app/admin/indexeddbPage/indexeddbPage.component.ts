@@ -92,6 +92,7 @@ export class AdminIndexeddbPageComponent {
   async allSync() {
     await this.databaseService.sync();
     this.icons = await this.databaseService.getIcons();
+    this.isSynced = true;
   }
 
   async clear() {
