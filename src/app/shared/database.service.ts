@@ -96,15 +96,12 @@ export class DatabaseService {
     const updateIds = [];
     const addIds = [];
     hashIds.forEach((id) => {
-      if (!localHashIds.includes(id)) {
+      if (!localHashes.hasOwnProperty(id)) {
         addIds.push(id);
       } else if (localHashes[id] !== hashes[id]) {
         updateIds.push(id);
       }
-      console.log(localHashes.hasOwnProperty(id), id)
     });
-    console.log('add:', addIds.length, addIds);
-    console.log('update:', hashIds.length, localHashIds.length, updateIds.length, updateIds);
     const removeIds = [];
     localHashIds.forEach((id) => {
       if (!(id in hashes)) {
