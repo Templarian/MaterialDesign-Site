@@ -69,6 +69,7 @@ export class AdminIndexeddbPageComponent {
   async delete() {
     this.isProcessing = true;
     await this.databaseService.delete();
+    window.location.reload();
     this.isProcessing = false;
   }
 
