@@ -24,12 +24,12 @@ export class DatabaseService {
    * 
    * @param font Font id to lookup hashes for
    */
-  private async getHashes(font: Font): Promise<StringMap> {
+  private async getHashesFromServer(font: Font): Promise<StringMap> {
     const res = await this.http.get<StringMap>(`/api/font/${font.id}/hash`).toPromise();
     return res;
   }
 
-  private async getIcons(font: Font, ids: string[]): Promise<Icon[]> {
+  private async getIconsFromServer(font: Font, ids: string[]): Promise<Icon[]> {
     if (ids.length === 0) {
       return [];
     }
@@ -85,7 +85,7 @@ export class DatabaseService {
     const font = new Font().from({
       id: 'D051337E-BC7E-11E5-A4E9-842B2B6CFE1B'
     } as Font);
-    const hashes = await this.getHashes(font);
+    const hashes = await this.getHashesFromServer(font);
     const hashIds = Object.keys(hashes);
     const localHashObj = await this.db.hashes.toArray();
     const localHashes = {};
@@ -113,7 +113,7 @@ export class DatabaseService {
         chunkIds.push(modifiedIds.slice(i, i + chunk));
       }
       const chunkPromises = chunkIds.map((ids) => {
-        return this.getIcons(font, ids);
+        return this.getIconsFromServer(font, ids);
       });
       const results = await Promise.all(chunkPromises);
       results.forEach(icons => {
@@ -167,6 +167,7 @@ export class DatabaseService {
     if (!local) {
       return null;
     }
+    console.log(local);
     const icon = new Icon();
     icon.id = local.idFull;
     icon.name = local.name;
@@ -178,6 +179,10 @@ export class DatabaseService {
     const tags = JSON.parse(local.tags);
     icon.tags = tags.map(tag => new Tag().from(tag));
     return icon;
+  }
+
+  async getIcons() {
+    return [];
   }
 
   async delete() {

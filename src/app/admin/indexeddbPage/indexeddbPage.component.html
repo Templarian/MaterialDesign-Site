@@ -15,13 +15,13 @@
         <h2>Create IndexedDB</h2>
         <button (click)="sync()" [disabled]="isProcessing">Sync Data</button>
         <button (click)="where()" [disabled]="!isSynced">Run Where 'account'</button>
-        <button (click)="delete()" [disabled]="!isSynced">Delete Database</button>
+        <button (click)="delete()">Delete Database</button>
       </div>
       <div class="card p-3 mt-3">
         <h2>Render All Icons</h2>
         <button (click)="all()" [disabled]="!isSynced">Sync Data</button>
         <div>
-          
+
         </div>
       </div>
     </div>
