@@ -19,9 +19,12 @@
       </div>
       <div class="card p-3 mt-3">
         <h2>Render All Icons</h2>
-        <button (click)="all()" [disabled]="!isSynced">Sync Data</button>
-        <div>
-
+        <button (click)="all()" [disabled]="!isSynced">Render</button>
+        <div *ngFor="let icon of icons">
+          <svg viewBox="0 0 24 24" style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem; vertical-align: middle;">
+            <path [attr.d]="icon.data" />
+          </svg>
+          <span>{{icon.name}}</span>
         </div>
       </div>
     </div>
