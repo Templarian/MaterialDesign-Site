@@ -1,3 +1,15 @@
 :host {
     
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(20, 1.5rem);
+    grid-template-rows: repeat(250, 1.5rem);
+}
+
+.grid svg {
+    grid-row: 3;
+    grid-column: 3;
+    background: red;
+}
