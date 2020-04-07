@@ -37,17 +37,17 @@ class App extends Component {
 
 ## Props
 
-| Prop        | PropTypes      | Default  | Details |
-|-------------|----------------|----------|---------|
-| path        | string         | required | SVG path data. Usually from @mdi/js |
-| title       | string, null   | `null`   | A11y `<title>{title}</title>` |
-| description | string, null   | `null`   | A11y `<desc>{desc}</desc>` |
-| size        | number, string | null     | `{size * 1.5}rem`, `'1em'`, `'24px'` |
-| horizontal  | bool           | `false ` | Flip Horizontal |
-| vertical    | bool           | `false`  | Flip Vertical |
-| rotate      | number         | `0 `     | degrees `0` to `360` |
-| color       | string         | `#000`   | `rgb()` / `rgba()` / `#000` |
-| spin        | bool, number   | `false`  | `true = 2s`, `{spin}s` |
+| Prop        | PropTypes      | Default        | Details |
+|-------------|----------------|----------------|---------|
+| path        | string         | required       | SVG path data. Usually from @mdi/js |
+| title       | string, null   | `null`         | A11y `<title>{title}</title>` |
+| description | string, null   | `null`         | A11y `<desc>{desc}</desc>` |
+| size        | number, string | null           | `{size * 1.5}rem`, `'1em'`, `'24px'` |
+| horizontal  | bool           | `false`        | Flip Horizontal |
+| vertical    | bool           | `false`        | Flip Vertical |
+| rotate      | number         | `0`            | degrees `0` to `360` |
+| color       | string         | `currentColor` | [CSS color values](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value), such as `rgb()`, `rgba()`, `#000` etc |
+| spin        | bool, number   | `false`        | `true = 2s`, `{spin}s` |
 
 <blockquote class="alert alert-info">
   icon:information-outline Learn more about other features including the `Stack` component in the <a href="https://github.com/Templarian/MaterialDesign-React">Repo</a>.
