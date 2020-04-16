@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 5.1.45
+
+- 100 New Icons
+- Renamed
+  - `selection-mutliple` to `selection-multiple`
+  - `textarea` to `form-textarea`
+  - `textbox` to `form-textbox`
+  - `textbox-lock` to `form-textbox-lock`
+  - `textbox-password` to `form-textbox-password`
+- Updated
+  - `sort`
+  - `sort-ascending`
+  - `sort-descending`
+
 ## Version 5.0.45
 
 - 150 New Icons

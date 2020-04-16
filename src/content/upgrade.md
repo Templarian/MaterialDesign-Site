@@ -2,6 +2,15 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 5.0.45 to 5.1.45
+
+- Rename
+  - `selection-mutliple` to `selection-multiple`
+  - `textarea` to `form-textarea`
+  - `textbox` to `form-textbox`
+  - `textbox-lock` to `form-textbox-lock`
+  - `textbox-password` to `form-textbox-password`
+
 ## 4.9.95 to 5.0.45
 
 - Use [Simple Icons](https://simpleicons.org/) for the removed brands:
