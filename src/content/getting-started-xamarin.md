@@ -45,7 +45,7 @@ Also on IOS (It's never easy with Apple!) you have to include the file in the in
         <On Platform="Android"
             Value="materialdesignicons-webfont.ttf#Material Design Icons" />
         <On Platform="iOS"
-            Value="materialdesignicons-webfont" />
+            Value="Material Design Icons" />
         <On Platform="UWP"
             Value="/Assets/materialdesignicons-webfont.ttf#Material Design Icons" />
     </OnPlatform>
