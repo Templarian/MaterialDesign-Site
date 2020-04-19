@@ -174,9 +174,9 @@ export class DatabaseService {
     icon.data = local.data;
     icon.version = local.version;
     icon.codepoint = local.codepoint;
-    const aliases = JSON.parse(local.aliases);
+    const aliases = local.aliases; //JSON.parse(local.aliases);
     icon.aliases = aliases.map(alias => new Alias().from(alias));
-    const tags = JSON.parse(local.tags);
+    const tags = local.tags; //JSON.parse(local.tags);
     icon.tags = tags.map(tag => new Tag().from(tag));
     return icon;
   }
