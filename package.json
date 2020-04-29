@@ -27,7 +27,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.7",
     "dexie": "^3.0.0-rc.6",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "js-yaml": "^3.12.0",
     "luxon": "^1.17.2",
     "popper.js": "^1.14.4",
