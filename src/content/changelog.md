@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 5.2.45
+
+- 100 New Icons
+- Renamed
+  - `syllabary-katakana-half-width` to `syllabary-katakana-halfwidth`
+- Updated
+  - Various `*-alert`
+  - `toy-brick-removed-outline`
+
 ## Version 5.1.45
 
 - 100 New Icons
