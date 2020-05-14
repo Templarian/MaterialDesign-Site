@@ -12,7 +12,7 @@ That makes Iconify easy to use with large icon sets, such as Material Design.
 To use Material Design icons with Iconify add Iconify script tag to header or footer of your page:
 
 ```html
-<script src="//code.iconify.design/1/1.0.0-rc1/iconify.min.js"></script>
+<script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
 ```
 
 See [Iconify.design](https://iconify.design) for latest script link.
