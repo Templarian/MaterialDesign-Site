@@ -11,7 +11,7 @@ There are many ways you as an individual can help, and to help we've broken it d
 - Suggest Icons - Search and open issues for suggestions you don't find.
 - Contribute Icons - Hundreds of open ideas waiting to be created.
 - Develop - Help make this website better.
-- Documention - Icons exist everywhere lets make it easy on everyone to use them.
+- Documentation - Icons exist everywhere let's make it easy on everyone to use them.
 
 Step by step guides below outline the above ways to contribute.
 
@@ -27,11 +27,11 @@ A member of the team or another designer should eventually reply with a designed
 
 ### Contribute Icons
 
-You may want to contribue an icon that you made yourself, that's great! Just create an [issue](https://github.com/Templarian/MaterialDesign/issues) on GitHub and we'll take a look. Make sure you follow the [Material Design guidelines](https://material.io/guidelines/style/icons.html#icons-system-icons) so you will have to make little to no revisions and hopefully it'll get added to the set!
+You may want to contribute an icon that you made yourself, that's great! Just create an [issue](https://github.com/Templarian/MaterialDesign/issues) on GitHub and we'll take a look. Make sure you follow the [Material Design guidelines](https://material.io/guidelines/style/icons.html#icons-system-icons) so you will have to make little to no revisions and hopefully it'll get added to the set!
 
 If you need ideas for what to design you can always take a look at the currently open issues and reply with your design.
 
-It's surprising how many different ways an icon can be conveyed. While the guidelines give good structure, having a diverse set of choices allows for continuous refinment on new and existing icons. If you want to you can open an issue with a refined design or even lowered point count.
+It's surprising how many different ways an icon can be conveyed. While the guidelines give good structure, having a diverse set of choices allows for continuous refinement on new and existing icons. If you want to you can open an issue with a refined design or even lowered point count.
 
 Once **five** of your icons have been added to the set you can become a contributor! What does this mean? Well, you get a contributor account on the site which allows you to manage icons and also have all the icons you designed assigned under your name.
 
