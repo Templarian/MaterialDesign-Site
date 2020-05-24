@@ -1,5 +1,16 @@
 # Changelog
 
+## Version 5.3.45
+
+- 100 New Icons
+- Updated
+  - All `rhombus` shapes
+  - `anchor`
+  - `view-sequential`
+  - `view-parallel`
+  - `newspaper-variant*`
+  - `google-maps`
+
 ## Version 5.2.45
 
 - 100 New Icons

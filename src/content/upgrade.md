@@ -2,6 +2,10 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 5.2.45 to 5.3.45
+
+- None
+
 ## 5.1.45 to 5.2.45
 
 Rename
