@@ -1,15 +1,30 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Material Design Icons</title>
-  <base href="/">
+<!DOCTYPE html>
+<html lang="en">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="//fonts.googleapis.com/css?family=Roboto:400,300" rel="stylesheet" type="text/css">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/svg" href="favicon.svg"/>
+  <title>Material Design Icons</title>
+  <style>
+    :root {
+      --site-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --site-color: #453C4F;
+      --mdi-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      --mdi-icon-color: var(--site-color);
+      --mdi-header-color: var(--site-color);
+      --mdi-header-background: #fff;
+      --mdi-search-border-color: var(--site-color);
+    }
+    body {
+      margin: 0;
+      font-family: var(--site-font-family);
+      color: var(--site-color);
+    }
+  </style>
 </head>
+
 <body>
-  <app-root>Loading...</app-root>
+  <site-router></site-router>
+  <script src="/main.js"></script>
 </body>
 </html>

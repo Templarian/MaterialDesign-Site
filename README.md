@@ -4,15 +4,31 @@ The [Material Design Icons](https://materialdesignicons.com) project has been gr
 
 ## Tech Stack
 
-Pretty much starting this with the latest of everything. Angular, ngAngular (Bootstrap 4), TypeScript2.
+The public site and admin use two different tech stacks.
 
-## Running Locally
+- Public Site: TypeScript, Web Components
+- Admin: TypeScript, Angular, ngAngular (Bootstrap 4)
+
+## Running Site Locally
+
+```
+npm install
+
+# Public Site
+npm run start:site
+```
+
+The browser will launch...
+
+## Running Admin Locally
 
 Clone the project and install `angular-cli` globally. This will handle running the Angular project.
 
 ```
 npm install angular-cli --global
 npm install
+
+# Admin Site
 ng serve
 ```
 

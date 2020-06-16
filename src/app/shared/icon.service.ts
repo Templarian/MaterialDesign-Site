@@ -18,6 +18,11 @@ type BundleCache = {
   date: DateTime;
 };
 
+type AuditAdditional = {
+  issue?: string,
+  fontVersion: FontVersion
+}
+
 @Injectable()
 export class IconService {
 
@@ -157,7 +162,7 @@ export class IconService {
     return new Icon().from(res);
   }
 
-  async addIcon(icon: Icon, user?: User, issue?: string): Promise<Icon> {
+  async addIcon(icon: Icon, user?: User, audit?: AuditAdditional): Promise<Icon> {
     const body: any = {
       icon: {
         packageId: icon.packageId,
@@ -168,12 +173,13 @@ export class IconService {
       },
     };
     if (user) { body.user = { id: user.id }; }
-    if (issue) { body.modification = { issue }; }
+    if (audit.issue) { body.modification = { issue: audit.issue }; }
+    if (audit.fontVersion) { body.fontVersion = audit.fontVersion; }
     let res = await this.http.post<Icon>('/api/admin/icon', body).toPromise();
     return new Icon().from(res);
   }
 
-  async updateUser(icon: Icon, user: User): Promise<Icon> {
+  async updateUser(icon: Icon, user: User, audit?: AuditAdditional): Promise<Icon> {
     const body = {
       icon: {
         id: icon.id,
@@ -181,6 +187,7 @@ export class IconService {
       }
     } as any;
     if (user) { body.user = { id: user.id }};
+    if (audit.fontVersion) { body.fontVersion = audit.fontVersion; }
     let res = await this.http.post<Icon>('/api/admin/icon/user', body).toPromise();
     return new Icon().from(res);
   }
@@ -201,7 +208,7 @@ export class IconService {
     return new Tag().from(res);
   }
 
-  async rename(icon: Icon, user?: User): Promise<Icon> {
+  async rename(icon: Icon, user?: User, audit?: AuditAdditional): Promise<Icon> {
     const body: any = {
       icon: {
         id: icon.id,
@@ -209,6 +216,7 @@ export class IconService {
       },
     };
     if (user) { body.user = { id: user.id }};
+    if (audit.fontVersion) { body.fontVersion = audit.fontVersion; }
     let res = await this.http.post<Icon>('/api/admin/icon/name', body).toPromise();
     return new Icon().from(res);
   }

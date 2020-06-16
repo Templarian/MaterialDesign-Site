@@ -118,6 +118,13 @@ export class AdminIndexeddbPageComponent {
     }
   }
 
+  setAll() {
+    const all = document.getElementsByTagName('path');
+    for (let path of all as any) {
+      path.setAttribute('d', 'M10,4A4,4 0 0,1 14,8A4,4 0 0,1 10,12A4,4 0 0,1 6,8A4,4 0 0,1 10,4M10,14C14.42,14 18,15.79 18,18V20H2V18C2,15.79 5.58,14 10,14M20,12V7H22V12H20M20,16V14H22V16H20Z');
+    }
+  }
+
   x = 0;
   y = 0;
   svg = 'http://www.w3.org/2000/svg';
@@ -130,6 +137,9 @@ export class AdminIndexeddbPageComponent {
           const path = document.createElementNS(this.svg, 'path');
           path.setAttribute('d', 'M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z');
           svg.appendChild(path);
+          svg.addEventListener('mouseenter', () => {
+            path.setAttribute('d', 'M10,4A4,4 0 0,1 14,8A4,4 0 0,1 10,12A4,4 0 0,1 6,8A4,4 0 0,1 10,4M10,14C14.42,14 18,15.79 18,18V20H2V18C2,15.79 5.58,14 10,14M20,12V7H22V12H20M20,16V14H22V16H20Z');
+          });
           document.getElementById('foo').appendChild(svg);
         }
         resolve();

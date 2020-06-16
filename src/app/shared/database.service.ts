@@ -198,7 +198,7 @@ export class DatabaseService {
       const reg = new RegExp(`${safeTerm}`);
       icons = await this.db.icons.where('fontId').equals(font.id)
         .filter((icon) => {
-          // JSON.parse(icon.aliases);
+          console.log(JSON.parse(icon.aliases));
           return icon.name.match(reg) !== null;
         }).sortBy('name');
     } else {

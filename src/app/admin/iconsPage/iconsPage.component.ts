@@ -148,7 +148,10 @@ export class AdminIconsPageComponent {
       alert('Icon name already exists!');
     } catch (e) {
       try {
-        await this.iconService.addIcon(this.newIcon, this.selectedUser, this.issue);
+        await this.iconService.addIcon(this.newIcon, this.selectedUser, {
+          issue: this.issue,
+          fontVersion: this.selectedFontVersion
+        });
         this.cancelIcon();
       } catch (ee) {
         alert('Failed to add icon... not sure why.');
@@ -246,7 +249,9 @@ export class AdminIconsPageComponent {
   }
 
   async rename(){
-    this.selectedIcon = await this.iconService.rename(this.editIcon, this.selectedUser);
+    this.selectedIcon = await this.iconService.rename(this.editIcon, this.selectedUser, {
+      fontVersion: this.selectedFontVersion
+    });
   }
 
   async assignUser() {
@@ -257,7 +262,9 @@ export class AdminIconsPageComponent {
       const icon = new Icon();
       icon.id = this.selectedIcon.id;
       icon.user = user;
-      var updatedIcon = await this.iconService.updateUser(icon, this.selectedUser);
+      var updatedIcon = await this.iconService.updateUser(icon, this.selectedUser, {
+        fontVersion: this.selectedFontVersion
+      });
       this.editIcon.user = updatedIcon.user;
     }, (reason) => {
       // dismissed
@@ -298,7 +305,11 @@ export class AdminIconsPageComponent {
     modal.result.then(async (name: string) => {
       const alias = new Alias();
       alias.name = name;
-      this.editIcon = await this.aliasService.assignAlias(this.selectedIcon, alias);
+      this.editIcon = await this.aliasService.assignAlias(
+        this.selectedIcon,
+        alias,
+        this.selectedFontVersion
+      );
     }, (reason) => {
       // dismissed modal
     });

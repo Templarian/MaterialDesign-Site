@@ -10,7 +10,10 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "start:site": "rollup -c -w",
+    "build:site": "rollup -c",
+    "test:site": "jest --no-cache"
   },
   "private": true,
   "dependencies": {
@@ -23,19 +26,35 @@
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/platform-server": "^8.2.14",
     "@angular/router": "^8.2.14",
+    "@mdi/components": "^0.1.8",
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
+    "@rollup/plugin-multi-entry": "^3.0.1",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-typescript": "^4.1.2",
+    "@types/jest": "^26.0.0",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.7",
     "dexie": "^3.0.0-rc.6",
+    "document-register-element": "^1.14.3",
+    "html-loader": "^1.1.0",
+    "jest": "^26.0.1",
     "jquery": "^3.3.1",
     "js-yaml": "^3.12.0",
     "luxon": "^1.17.2",
     "popper.js": "^1.14.4",
     "prismjs": "git+https://github.com/PrismJS/prism.git",
     "remarkable": "^1.7.1",
+    "rollup": "^2.16.0",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-string": "^3.0.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.1",
     "rxjs": "^6.5.4",
     "rxjs-compat": "^6.0.0-rc.0",
+    "ts-jest": "^26.1.0",
     "tslib": "^1.10.0",
+    "vanilla-router": "^1.2.8",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -57,6 +76,6 @@
     "protractor": "~5.1.x",
     "ts-node": "1.2.1",
     "tslint": "^4.5.x",
-    "typescript": "3.5.x"
+    "typescript": "3.7.x"
   }
 }

@@ -1,0 +1,21 @@
+.banner {
+  background: var(--site-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+}
+
+.banner mdi-icon {
+  vertical-align: middle;
+  --mdi-icon-color: #fff;
+  margin-right: 0.5rem;
+}
+
+.banner a {
+  color: #fff;
+}
+
+mdi-annoy {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+}
