@@ -83,6 +83,7 @@ const plugins = [
   copy({
     targets: [
       { src: 'src/api/*', dest: 'dist/api' },
+      { src: 'src/content/*', dest: 'dist/content' },
       { src: 'src/index.html', dest: 'dist' }
     ]
   })

@@ -1,5 +1,5 @@
 import { Component, Prop, Part } from '@mdi/element';
-import { Router } from './utils';
+import { Router } from './../shared/router';
 
 import '@mdi/components/mdi/annoy';
 import '@mdi/components/mdi/database';
@@ -31,7 +31,8 @@ const navigationItems = [
   { type: 'Documentation', name: 'Windows', url: '/getting-started/windows' },
   { type: 'Documentation', name: 'Xamarin', url: '/getting-started/xamarin' },
   { type: 'Documentation', name: 'VS Code', url: '/getting-started/visual-studio-code' },
-  { type: 'Documentation', name: 'Foo Angular Foo Angular', url: '/getting-started/bootstraps' }
+  { type: 'Documentation', name: 'Foo Angular Foo Angular', url: '/getting-started/bootstraps' },
+  { type: 'Admin', name: 'Contributor Portal', url: '/admin' }
 ];
 
 @Component({
@@ -68,7 +69,7 @@ export default class SiteRouter extends HTMLElement {
       this.updatePage('home');
     });
 
-    this.router.add('icon/(:any)', () => {
+    this.router.add('icons', () => {
       this.updatePage('icons');
     });
 
@@ -78,8 +79,9 @@ export default class SiteRouter extends HTMLElement {
       this.page.name = name;
     });
 
-    this.router.add('getting-started/(:any)', () => {
+    this.router.add('getting-started/(:any)', (slug) => {
       this.updatePage('view');
+      this.page.slug = `getting-started/${slug}`;
     });
 
     this.router.addUriListener();
@@ -94,6 +96,8 @@ export default class SiteRouter extends HTMLElement {
     console.log('Icon Objects:', icons.length);
     // Search
     this.$search.icons = icons;
+    // All Pages
+    this.page.icons = icons;
   }
 
   updatePage(page: string) {
