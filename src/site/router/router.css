@@ -19,3 +19,17 @@ mdi-annoy {
   bottom: 1rem;
   right: 2rem;
 }
+
+.nav-item {
+  align-self: center;
+  padding: 0.125rem 0.5rem;
+  margin: 0 0.5rem 0 0;
+  border: 1px solid transparent;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  color: var(--site-color);
+}
+.nav-item:hover {
+  color: #fff;
+  background: var(--site-color);
+}
