@@ -56,7 +56,7 @@ The following assumes that you're using the latest version of `@angular/material
 Place the SVG file under your `assets` folder. Please ensure that this file is publicly accessible.
 In your app's module file (typically `app.module.ts`), import `MatIconModule` and `MatIconRegistry` from `@angular/material`:
 
-```typescript App module
+```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -68,7 +68,7 @@ From the latest master, HttpClientModule is required instead
 import { HttpClientModule } from '@angular/common/http';
 */
 
-...
+// [...]
 @NgModule({
   imports: [
     BrowserModule,

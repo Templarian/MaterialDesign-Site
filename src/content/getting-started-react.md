@@ -6,9 +6,9 @@ Material Design Icons can be used in React with a custom component or with the o
 npm install @mdi/react @mdi/js
 ```
 
-<a href="https://templarian.github.io/@mdi/react/" class="btn btn-outline-primary">icon:teach Demo</a>
-<a href="https://github.com/Templarian/MaterialDesign-React" class="btn btn-outline-secondary ml-2">icon:github MaterialDesign-React on GitHub</a>
-<a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="btn btn-outline-secondary ml-2">icon:microsoft-visual-studio-code VS Code Extension</a>
+<a href="https://templarian.github.io/@mdi/react/" class="button">icon:teach Demo</a>
+<a href="https://github.com/Templarian/MaterialDesign-React" class="button">icon:github MaterialDesign-React on GitHub</a>
+<a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="button">icon:microsoft-visual-studio-code VS Code Extension</a>
 
 ## Usage
 
@@ -33,7 +33,7 @@ class App extends Component {
 } 
 ```
 
-<a href="https://codesandbox.io/s/staging-paper-5w879" class="btn btn-outline-secondary">View Example App on CodeSandbox</a>
+<a href="https://codesandbox.io/s/staging-paper-5w879" class="button">View Example App on CodeSandbox</a>
 
 ## Props
 

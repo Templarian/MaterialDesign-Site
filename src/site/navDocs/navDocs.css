@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  background: var(--site-color);
+  padding: 0.5rem;
+}
+
+a {
+  display: inline-flex;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  --mdi-icon-color: #fff;
+  color: #fff;
+  margin: 0.25rem 0;
+  border-radius: 0.25rem;
+}
+a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+a.active,
+a:active,
+a:focus {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) inset;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+mdi-icon {
+  margin-right: 0.25rem;
+}

@@ -28,8 +28,42 @@ mdi-annoy {
   text-decoration: none;
   border-radius: 0.25rem;
   color: var(--site-color);
+  position: relative;
 }
-.nav-item:hover {
+.nav-item:hover,
+.nav-item:active,
+.nav-item:focus {
   color: #fff;
   background: var(--site-color);
+}
+[part="navDocs"].active {
+  font-weight: bold;
+}
+[part="navDocs"].active::before {
+  content: '\25B2';
+  color: var(--site-color);
+  transform: scaleY(0.5);
+  display: block;
+  position: absolute;
+  left: calc(50% - 1rem);
+  font-size: 2.5rem;
+  bottom: -1rem;
+  line-height: 1rem;
+}
+[part="menu"] {
+  display: inline-flex;
+  align-self: center;
+  border: 0;
+  background: transparent;
+  margin-left: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  outline: 0;
+}
+[part="menu"]:hover,
+[part="menu"]:active,
+[part="menu"]:focus {
+  color: #fff;
+  background: var(--site-color);
+  --mdi-icon-color: #fff;
 }

@@ -13,6 +13,7 @@ import { Icon } from '@mdi/components/mdi/shared/models/icon';
 })
 export default class SitePageHome extends HTMLElement {  
   @Prop() icons: Icon[] = [];
+  @Prop() navigationItems: any[] = [];
   
   render(changes) {
 

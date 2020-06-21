@@ -1,5 +1,8 @@
 import { Component, Prop, Part } from '@mdi/element';
 import { Router } from './../shared/router';
+import SiteNavDocs from './../navDocs/navDocs';
+import SiteNavMenu from './../navMenu/navMenu';
+import { navigationItems } from './constants';
 
 import '@mdi/components/mdi/annoy';
 import '@mdi/components/mdi/database';
@@ -12,29 +15,6 @@ import MdiSearch from '@mdi/components/mdi/search';
 import template from "./router.html";
 import style from './router.css';
 
-const navigationItems = [
-  { type: 'Documentation', name: 'Android', url: '/getting-started/android' },
-  { type: 'Documentation', name: 'Angular', url: '/getting-started/angular' },
-  { type: 'Documentation', name: 'AngularJS', url: '/getting-started/angularjs' },
-  { type: 'Documentation', name: 'Bootstrap', url: '/getting-started/bootstrap' },
-  { type: 'Documentation', name: 'Bootstrap v3', url: '/getting-started/bootstrap-3' },
-  { type: 'Documentation', name: 'Ember', url: '/getting-started/ember' },
-  { type: 'Documentation', name: 'PHP', url: '/getting-started/php' },
-  { type: 'Documentation', name: 'Polymer', url: '/getting-started/polymer' },
-  { type: 'Documentation', name: 'React', url: '/getting-started/react' },
-  { type: 'Documentation', name: 'Rollup.js', url: '/getting-started/rollupjs' },
-  { type: 'Documentation', name: 'Ruby on Rails', url: '/getting-started/ruby-on-rails' },
-  { type: 'Documentation', name: 'SVG', url: '/getting-started/svg' },
-  { type: 'Documentation', name: 'VueJS', url: '/getting-started/vuejs' },
-  { type: 'Documentation', name: 'Webpack', url: '/getting-started/webpack' },
-  { type: 'Documentation', name: 'Webfont', url: '/getting-started/webfont' },
-  { type: 'Documentation', name: 'Windows', url: '/getting-started/windows' },
-  { type: 'Documentation', name: 'Xamarin', url: '/getting-started/xamarin' },
-  { type: 'Documentation', name: 'VS Code', url: '/getting-started/visual-studio-code' },
-  { type: 'Documentation', name: 'Foo Angular Foo Angular', url: '/getting-started/bootstraps' },
-  { type: 'Admin', name: 'Contributor Portal', url: '/admin' }
-];
-
 @Component({
   selector: 'site-router',
   style,
@@ -44,9 +24,15 @@ export default class SiteRouter extends HTMLElement {
   @Part() $container: HTMLDivElement;
   @Part() $search: MdiSearch;
   @Part() $database: MdiDatabase;
+  @Part() $siteNavDocs: SiteNavDocs;
+  @Part() $siteNavMenu: SiteNavMenu;
+  @Part() $navDocs: HTMLAnchorElement;
+  @Part() $navIcons: HTMLAnchorElement;
 
   router: any = null;
   page: any = null;
+  docsOpen = false;
+  menuOpen = false;
 
   fontId = 'D051337E-BC7E-11E5-A4E9-842B2B6CFE1B';
 
@@ -56,7 +42,12 @@ export default class SiteRouter extends HTMLElement {
       this.sync(db);
     });
     this.$database.font = this.fontId;
-    this.$search.items = navigationItems;
+    this.$search.addEventListener('focus', this.handleFocusSearch.bind(this));
+    this.$search.items = navigationItems.filter(x => !x.hideInSearch);
+    this.$siteNavDocs.items = navigationItems;
+    this.$siteNavMenu.items = navigationItems;
+    this.$navIcons.addEventListener('click', this.handleNavIcons.bind(this));
+    this.$navDocs.addEventListener('click', this.handleNavDocs.bind(this));
 
     this.router = new Router({
       mode: 'history',
@@ -100,6 +91,22 @@ export default class SiteRouter extends HTMLElement {
     this.page.icons = icons;
   }
 
+  handleFocusSearch() {
+    this.docsOpen = false;
+    this.menuOpen = false;
+    this.render();
+  }
+
+  handleNavIcons() {
+
+  }
+
+  handleNavDocs(e) {
+    this.docsOpen = !this.docsOpen;
+    this.render();
+    e.preventDefault();
+  }
+
   updatePage(page: string) {
     // Remove any current pages
     if (this.page) {
@@ -108,6 +115,12 @@ export default class SiteRouter extends HTMLElement {
     // Add New Page
     console.log(`site-page-${page}`);
     this.page = document.createElement(`site-page-${page}`);
+    this.page.navigationItems = navigationItems;
     this.$container.appendChild(this.page);
+  }
+
+  render(changes?: any) {
+    this.$siteNavDocs.style.display = this.docsOpen ? '' : 'none';
+    this.$navDocs.classList.toggle('active', this.docsOpen);
   }
 }

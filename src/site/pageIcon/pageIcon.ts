@@ -12,6 +12,7 @@ import { Icon } from '@mdi/components/mdi/shared/models/icon';
 })
 export default class SitePageIcon extends HTMLElement {
   @Prop() icons: Icon[] = [];
+  @Prop() navigationItems: any[] = [];
   @Prop() name = '';
   
   @Part() $message: HTMLDivElement;
