@@ -1,8 +1,8 @@
 # Contribute
 
-<a href="/contributors" class="btn btn-outline-primary">icon:account-group Contributors</a>
-<a href="/contribute/github" class="btn btn-outline-secondary">icon:github-circle GitHub Tools</a>
-<a href="/contribute/third-party" class="btn btn-outline-secondary">icon:puzzle-outline Third Party Dev Guide</a>
+<a href="/contributors" class="button">icon:account-group Contributors</a>
+<a href="/contribute/github" class="button">icon:github GitHub Tools</a>
+<a href="/contribute/third-party" class="button">icon:puzzle-outline Third Party Dev Guide</a>
 
 ## Ways to Help
 

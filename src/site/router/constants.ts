@@ -18,7 +18,10 @@ import {
   mdiHomeAssistant,
   mdiAngularjs,
   mdiLightbulbOn,
-  mdiHuman
+  mdiHuman,
+  mdiNodejs,
+  mdiEmoticonOutline,
+  mdiAccountCircle
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -137,35 +140,71 @@ export const navigationItems = [{
   url: '/getting-started/visual-studio-code',
   file: '/content/getting-started-visual-studio-code.md'
 }, {
-  type: 'Guide',
+  type: 'Guides',
   name: 'Accessibility',
   icon: mdiHuman,
   url: '/guide/accessibility',
-  file: '/content/guide-accessibility.md'
+  file: '/content/guide-wcag.md'
 }, {
-  type: 'Guide',
+  type: 'Guides',
   name: 'Home Assistant',
   icon: mdiHomeAssistant,
   url: '/guide/home-assistant',
   file: '/content/guide-home-assistant.md'
 }, {
-  type: 'Guide',
+  type: 'Guides',
   name: 'Webfont Alternatives',
   icon: mdiLightbulbOn,
   url: '/guide/webfont-alternatives',
-  file: '/content/guide-webfont-alternatives.md'
+  file: '/content/guide-webfont-alternative.md'
 }, {
-  type: 'Guide',
+  type: 'Guides',
   name: 'NodeJS Scripting',
-  icon: mdiLightbulbOn,
+  icon: mdiNodejs,
   url: '/guide/nodejs-scripting',
   file: '/content/guide-nodejs-scripting.md'
 }, {
-  type: 'Guide',
+  type: 'Guides',
   name: 'Iconify',
-  icon: mdiLightbulbOn,
+  icon: mdiEmoticonOutline,
   url: '/guide/iconify',
   file: '/content/guide-iconify.md'
+}, {
+  type: 'Contribute',
+  name: 'Contributors',
+  icon: mdiAccountCircle,
+  url: '/contributors',
+  file: '/content/guide-iconify.md'
+}, {
+  type: 'Contribute',
+  name: 'Contribute',
+  icon: mdiAccountCircle,
+  url: '/contribute',
+  file: '/content/contribute.md'
+}, {
+  type: 'Contribute',
+  name: 'Third Party Guide',
+  icon: mdiAccountCircle,
+  url: '/contribute/third-party-guide',
+  file: '/content/guide-third-party.md'
+}, {
+  type: 'Contribute',
+  name: 'Icon Naming',
+  icon: mdiAccountCircle,
+  url: '/contribute/icon-naming',
+  file: '/content/contribute-naming.md'
+}, {
+  type: 'Contribute',
+  name: 'Site',
+  icon: mdiAccountCircle,
+  url: '/contribute/site',
+  file: '/content/contribute-site.md'
+}, {
+  type: 'Contribute',
+  name: 'Site Api',
+  icon: mdiAccountCircle,
+  url: '/contribute/site/api',
+  file: '/content/api.md'
 }, {
   type: 'Meta',
   name: 'Changelog',
@@ -173,7 +212,7 @@ export const navigationItems = [{
   url: '/changelog',
   file: '/content/changelog.md'
 }, {
-  type: 'Guide',
+  type: 'Meta',
   name: 'Upgrade Guide',
   icon: mdiLightbulbOn,
   url: '/upgrade',

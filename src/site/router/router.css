@@ -59,6 +59,7 @@ mdi-annoy {
   border-radius: 0.25rem;
   padding: 0.125rem 0.25rem;
   outline: 0;
+  position: relative;
 }
 [part="menu"]:hover,
 [part="menu"]:active,
@@ -66,4 +67,15 @@ mdi-annoy {
   color: #fff;
   background: var(--site-color);
   --mdi-icon-color: #fff;
+}
+[part="menu"].active::before {
+  content: '\25B2';
+  color: var(--site-color);
+  transform: scaleY(0.5);
+  display: block;
+  position: absolute;
+  left: calc(50% - 1.25rem);
+  font-size: 2.5rem;
+  bottom: -1rem;
+  line-height: 1rem;
 }

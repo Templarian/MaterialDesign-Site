@@ -61,7 +61,7 @@ Third parties should be able to do anything that helps their respective communit
 <th></th>
 <th>Don't do this...</th>
 <th>Maybe Try...</th>
-</th>
+</tr>
 <tr>
 <td>icon:close:red</td>
 <td>Scraping the website for data</td>

@@ -28,6 +28,7 @@ export default class SiteRouter extends HTMLElement {
   @Part() $siteNavMenu: SiteNavMenu;
   @Part() $navDocs: HTMLAnchorElement;
   @Part() $navIcons: HTMLAnchorElement;
+  @Part() $menu: HTMLButtonElement;
 
   router: any = null;
   page: any = null;
@@ -48,6 +49,7 @@ export default class SiteRouter extends HTMLElement {
     this.$siteNavMenu.items = navigationItems;
     this.$navIcons.addEventListener('click', this.handleNavIcons.bind(this));
     this.$navDocs.addEventListener('click', this.handleNavDocs.bind(this));
+    this.$menu.addEventListener('click', this.handleMenu.bind(this));
 
     this.router = new Router({
       mode: 'history',
@@ -55,21 +57,33 @@ export default class SiteRouter extends HTMLElement {
         console.log('"/' + path + '" Page not found');
       }
     });
-
+    // Home Page
     this.router.add('', () => {
       this.updatePage('home');
     });
-
+    // Icons
     this.router.add('icons', () => {
       this.updatePage('icons');
     });
-
+    // Single Icon
     this.router.add('icon/(:any)', (name) => {
       console.log('Icon, ' + name);
       this.updatePage('icon');
       this.page.name = name;
     });
-
+    // Markdown Pages
+    this.router.add('contribute', () => {
+      this.updatePage('view');
+      this.page.slug = `contribute`;
+    });
+    this.router.add('contribute/(:any)', (slug) => {
+      this.updatePage('view');
+      this.page.slug = `contribute/${slug}`;
+    });
+    this.router.add('guide/(:any)', (slug) => {
+      this.updatePage('view');
+      this.page.slug = `guide/${slug}`;
+    });
     this.router.add('getting-started/(:any)', (slug) => {
       this.updatePage('view');
       this.page.slug = `getting-started/${slug}`;
@@ -103,6 +117,15 @@ export default class SiteRouter extends HTMLElement {
 
   handleNavDocs(e) {
     this.docsOpen = !this.docsOpen;
+    this.menuOpen = false;
+    this.render();
+    e.preventDefault();
+  }
+
+  handleMenu(e) {
+    console.log(this.menuOpen)
+    this.docsOpen = false;
+    this.menuOpen = !this.menuOpen;
     this.render();
     e.preventDefault();
   }
@@ -121,6 +144,8 @@ export default class SiteRouter extends HTMLElement {
 
   render(changes?: any) {
     this.$siteNavDocs.style.display = this.docsOpen ? '' : 'none';
+    this.$siteNavMenu.style.display = this.menuOpen ? '' : 'none';
     this.$navDocs.classList.toggle('active', this.docsOpen);
+    this.$menu.classList.toggle('active', this.menuOpen);
   }
 }

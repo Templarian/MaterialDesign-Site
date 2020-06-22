@@ -17,7 +17,14 @@ const TSCONFIG = {
     compilerOptions: {
       module: "es2015",
       allowSyntheticDefaultImports: true
-    }
+    },
+    include: [
+      'src/@types/*',
+      'src/site/**/*'
+    ],
+    exclude: [
+      'src/app/**/*'
+    ]
   }
 };
 
