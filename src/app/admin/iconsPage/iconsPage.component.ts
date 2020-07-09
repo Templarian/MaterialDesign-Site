@@ -51,7 +51,7 @@ export class AdminIconsPageComponent {
       this.selectedPackage = this.packages[0];
     }
   }
-  @ViewChild('newIconName', { static: false }) newIconName;
+  @ViewChild('newIconName') newIconName;
   public packages: Package[] = [];
   public users: User[] = [];
   public selectedUser: User = null;

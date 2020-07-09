@@ -23,7 +23,7 @@ export class IconsPageComponent {
   icons: Icon[] = [];
   errorMessage: any;
   tags: Tag[] = [];
-  @ViewChild('content', { static: false }) content;
+  @ViewChild('content') content;
 
   constructor(
     private router: Router,

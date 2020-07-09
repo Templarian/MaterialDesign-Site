@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "esnext",
     "target": "ES2017",
     "lib": ["ES2017", "ES5", "ES6", "DOM"],
     "baseUrl": "src",
