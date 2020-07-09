@@ -1,4 +1,83 @@
 :host {
   display: block;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 20rem 1fr 308px;
+  grid-template-rows: 108px auto;
+}
+
+site-carbon {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+header {
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  display: flex;
+}
+
+header h1 {
+  font-size: 2rem;
+  align-self: center;
+  margin: 0;
+}
+
+aside {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+nav {
+  border-top: 2px solid var(--site-color);
+  border-bottom: 2px solid var(--site-color);
+  margin-right: 1.5rem;
+  padding: 0 1rem 0 0;
+  border-right: 2px solid var(--site-color);
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-left: -1rem;
+  margin-top: 1rem;
+  background: var(--site-color);
+  color: #fff;
+  line-height: 1.5rem;;
+}
+
+nav ul {
+  list-style: square;
+  padding-left: 2.25rem;
+}
+nav ul li {
+  margin-bottom: 0.25rem;
+}
+nav ul li.indent-3 {
+  margin-left: 1rem;
+}
+nav ul li.indent-4 {
+  margin-left: 2rem;
+}
+nav ul li.indent-5 {
+  margin-left: 3rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a code {
+  padding: 0.125rem 0.25rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+main {
+  grid-row: 2;
+  grid-column: 2 / span 2;
+  padding: 0.5rem 0 0 0;
 }

@@ -14,6 +14,7 @@ import MdiSearch from '@mdi/components/mdi/search';
 
 import template from "./router.html";
 import style from './router.css';
+import { http } from '@mdi/components/mdi/shared/http';
 
 @Component({
   selector: 'site-router',
@@ -29,6 +30,7 @@ export default class SiteRouter extends HTMLElement {
   @Part() $navDocs: HTMLAnchorElement;
   @Part() $navIcons: HTMLAnchorElement;
   @Part() $menu: HTMLButtonElement;
+  @Part() $and: HTMLSpanElement;
 
   router: any = null;
   page: any = null;
@@ -72,6 +74,10 @@ export default class SiteRouter extends HTMLElement {
       this.page.name = name;
     });
     // Markdown Pages
+    this.router.add('documentation', () => {
+      this.updatePage('view');
+      this.page.slug = `documentation`;
+    });
     this.router.add('contribute', () => {
       this.updatePage('view');
       this.page.slug = `contribute`;
@@ -92,6 +98,18 @@ export default class SiteRouter extends HTMLElement {
     this.router.addUriListener();
 
     this.router.check();
+
+    this.and();
+  }
+
+  async and() {
+    const and = await http.asset('/content/and.md');
+    const messages = and.split(/\r?\n/);
+    this.$and.innerHTML = [
+      ` <span>${messages[0].replace('- ', '')}</span>`,
+      ` <span>${messages[1].replace('- ', '')}</span>`,
+      ` <span>${messages[2].replace('- ', '')}</span>`,
+    ].join('');
   }
 
   async sync(db) {

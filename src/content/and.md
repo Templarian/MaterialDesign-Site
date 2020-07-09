@@ -1,0 +1,5 @@
+- and copious amounts of tea
+- and people like <a href="/contribute">you</a>
+- and a chap in Ireland
+- and a friend in Baltimore
+- and a friend in Japan

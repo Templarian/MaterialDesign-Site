@@ -15,21 +15,21 @@ The webfont is several font files that your browser can pick from. All modern br
 
 ## Iconify
 
-Instead of using web font, you can use Iconify SVG framework. It is as easy to use as web font, but it only loads icons that are used on page and renders them as pixel perfect SVG rather than text. Read [Iconify Guide](/guide/iconify) guide on how to use MDI with Iconify.
+Instead of using web font, you can use Iconify SVG framework. It is as easy to use as the web font, but it only loads icons that are used on page and renders them as pixel perfect SVG rather than text. Read [Iconify Guide](/guide/iconify) guide on how to use MDI with Iconify.
 
 ## React Developer
 
 For those using the React framework there is a first party provided component `@mdi/react`.
 
-<a href="/getting-started/react" class="btn btn-outline-primary">icon:react View the React Guide</a>
+<a href="/getting-started/react" class="button">icon:react View the React Guide</a>
 
 ## Angular
 
-<a href="/getting-started/angular" class="btn btn-outline-primary">icon:angular View the Angular Guide</a>
+<a href="/getting-started/angular" class="button">icon:angular View the Angular Guide</a>
 
 ## VueJS
 
-<a href="/getting-started/vuejs" class="btn btn-outline-primary">icon:vuejs View the VueJS Guide</a>
+<a href="/getting-started/vuejs" class="button">icon:vuejs View the VueJS Guide</a>
 
 ## Other
 

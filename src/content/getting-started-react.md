@@ -2,7 +2,7 @@
 
 Material Design Icons can be used in React with a custom component or with the one provided in this module.
 
-```
+```bash
 npm install @mdi/react @mdi/js
 ```
 

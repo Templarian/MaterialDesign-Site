@@ -1,0 +1,10 @@
+site-carbon {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;;
+}
+
+[part="error"],
+[part="icon"] { 
+  display: none;
+}

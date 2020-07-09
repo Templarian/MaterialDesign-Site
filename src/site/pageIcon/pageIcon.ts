@@ -4,6 +4,10 @@ import template from "./pageIcon.html";
 import style from './pageIcon.css';
 
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
+import { http } from '@mdi/components/mdi/shared/http';
+
+import '@mdi/components/mdi/grid';
+import MdiGrid from '@mdi/components/mdi/grid';
 
 @Component({
   selector: 'site-page-icon',
@@ -15,11 +19,30 @@ export default class SitePageIcon extends HTMLElement {
   @Prop() navigationItems: any[] = [];
   @Prop() name = '';
   
-  @Part() $message: HTMLDivElement;
+  @Part() $header: HTMLHeadingElement;
+  @Part() $loading: HTMLDivElement;
+  @Part() $error: HTMLDivElement;
+  @Part() $icon: HTMLDivElement;
+  @Part() $related: MdiGrid;
   
   render(changes) {
-    if (changes.name) {
-      this.$message.innerText = this.name;
+    if (changes.name && this.name) {
+      this.$header.innerText = this.name;
+      this.load(this.name);
+    }
+  }
+
+  async load(name: string) {
+    const packageId = '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B';
+    const icon = await http.get<Icon>(`/api/package/${packageId}/name/${name}`);
+    const { error } = icon as any;
+    this.$loading.style.display = 'none';
+    if (error) {
+      this.$error.style.display = 'block';
+    } else {
+      const related = await http.get<Icon[]>(`/api/icon/${icon.id}/base`);
+      this.$related.icons = related;
+      this.$icon.style.display = 'block';
     }
   }
 }

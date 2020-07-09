@@ -26,7 +26,7 @@ NPMJS packages are built after each release node, JavaScript, and TypeScript com
 
 If your project can use one of the first party libraries indirectly we recommend telling people to install them seperately. For instance `@mdi/react` can use any icon version.
 
-```
+```bash
 npm install @mdi/js @mdi/react
 ```
 
@@ -57,21 +57,28 @@ GitHub is where we store all the NPM distribution repos. Each release is tagged 
 Third parties should be able to do anything that helps their respective community integrate the use of the icons. With that said there are a few things we advise against.
 
 <table>
+<thead>
 <tr>
-<th></th>
+<th style="width:1.5rem"></th>
 <th>Don't do this...</th>
+<th style="width:1.5rem"></th>
 <th>Maybe Try...</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>icon:close:red</td>
 <td>Scraping the website for data</td>
+<td>icon:check:green</td>
 <td>Let us know through an issue if `meta.json` is missing anything.</td>
 </tr>
 <tr>
 <td>icon:close:red</td>
 <td>Expecting us to add icons since you use the project</td>
+<td>icon:check:green</td>
 <td>We recommend projects to be built to support multiple icon packs and not to rely entirely on ours.</td>
 </tr>
+</tbody>
 </table>
 
 ## Let us know what you built!
@@ -85,7 +92,6 @@ Definitely search around and checkout all the exisiting projects before starting
 - [Chrome](https://chrome.google.com/webstore/detail/materialdesignicons-picke/edjaedpifkihpjkcgknfokmibkoafhme) / [Firefox](https://addons.mozilla.org/en-US/firefox/addon/materialdesignicons-picker/) Extensions.
 - [VS Code Material Design Icons Intellisense](https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense)
 - [Home Assistant](https://www.home-assistant.io/docs/configuration/customizing-devices/#icon)
-- `mdi-react`
 - mdi cli
 
 > Submit a PR to append to this list.

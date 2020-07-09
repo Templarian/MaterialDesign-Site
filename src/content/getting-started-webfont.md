@@ -6,15 +6,15 @@
 
 The webfont is a quick way to integrate the icons into your application.
 
-<a class="btn btn-outline-primary" href="/changelog">View the Changelog<a> <a class="btn btn-outline-primary" href="/changelog">View the Upgrade Guide<a>
+<a class="button" href="/changelog">View the Changelog<a> <a class="button" href="/changelog">View the Upgrade Guide<a>
 
 ## Setup
 
-```
+```bash
 npm install @mdi/font
 ```
 
-```
+```text
 https://cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css
 ```
 
@@ -26,7 +26,7 @@ Each icon can be referenced by their name prefixed with `mdi-`. For instance to 
 Bob lives in a <span class="mdi mdi-home"></span>.
 ```
 
-<a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="btn btn-outline-secondary">icon:microsoft-visual-studio-code VS Code Material Design Icons Extension</a>
+<a href="https://marketplace.visualstudio.com/items?itemName=lukas-tr.materialdesignicons-intellisense" class="button">icon:microsoft-visual-studio-code VS Code Material Design Icons Extension</a>
 
 ## Helper Classes
 

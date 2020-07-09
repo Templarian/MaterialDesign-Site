@@ -21,7 +21,13 @@ import {
   mdiHuman,
   mdiNodejs,
   mdiEmoticonOutline,
-  mdiAccountCircle
+  mdiAccountCircle,
+  mdiCommentAccount,
+  mdiAccountHeart,
+  mdiTextBox,
+  mdiWeb,
+  mdiFileTree,
+  mdiEmail
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -178,31 +184,31 @@ export const navigationItems = [{
 }, {
   type: 'Contribute',
   name: 'Contribute',
-  icon: mdiAccountCircle,
+  icon: mdiCommentAccount,
   url: '/contribute',
   file: '/content/contribute.md'
 }, {
   type: 'Contribute',
   name: 'Third Party Guide',
-  icon: mdiAccountCircle,
+  icon: mdiAccountHeart,
   url: '/contribute/third-party-guide',
   file: '/content/guide-third-party.md'
 }, {
   type: 'Contribute',
   name: 'Icon Naming',
-  icon: mdiAccountCircle,
+  icon: mdiTextBox,
   url: '/contribute/icon-naming',
   file: '/content/contribute-naming.md'
 }, {
   type: 'Contribute',
   name: 'Site',
-  icon: mdiAccountCircle,
+  icon: mdiWeb,
   url: '/contribute/site',
   file: '/content/contribute-site.md'
 }, {
   type: 'Contribute',
   name: 'Site Api',
-  icon: mdiAccountCircle,
+  icon: mdiFileTree,
   url: '/contribute/site/api',
   file: '/content/api.md'
 }, {
@@ -215,6 +221,12 @@ export const navigationItems = [{
   type: 'Meta',
   name: 'Upgrade Guide',
   icon: mdiLightbulbOn,
+  url: '/upgrade',
+  file: '/content/upgrade.md'
+}, {
+  type: 'Meta',
+  name: 'Contact',
+  icon: mdiEmail,
   url: '/upgrade',
   file: '/content/upgrade.md'
 }, {

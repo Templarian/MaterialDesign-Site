@@ -4,7 +4,7 @@ Scalable Vector Graphics can be used with the `<img />` or inlined in HTML. SVG 
 
 For users of NPM we provide all the icons as SVG files in the `@mdi/svg` package.
 
-```
+```bash
 npm install @mdi/svg
 ```
 

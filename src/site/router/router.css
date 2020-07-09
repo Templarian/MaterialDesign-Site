@@ -79,3 +79,76 @@ mdi-annoy {
   bottom: -1rem;
   line-height: 1rem;
 }
+footer {
+  display: flex;
+  background: var(--site-color);
+  color: #fff;
+  padding: 1rem;
+}
+footer a {
+  color: #fff;
+}
+footer > a {
+  margin-left: 0.25rem;
+}
+footer svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+[part="and"] {
+  opacity: 0.75;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25rem;
+  margin-left: 0.3rem;
+  height: 1.25rem;
+  position: relative;
+}
+[part="and"] span:first-child {
+  margin-top: -1.25rem;
+}
+[part="and"]::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.25rem;
+  top: -1rem;
+  background: linear-gradient(to bottom, #453c4f 0%,rgba(69, 60, 79, 0) 100%);
+  pointer-events: none;
+}
+[part="and"]::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.25rem;
+  top: 1.25rem;
+  background: linear-gradient(to bottom, rgba(69, 60, 79, 0) 0%,#453c4f 100%);
+  pointer-events: none;
+}
+
+footer .issue {
+  display: inline-flex;
+  background: #fff;
+  border: 0;
+  color: var(--site-color);
+  --mdi-icon-color: var(--site-color);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  justify-self: right;
+  margin: -0.25rem 0 -0.25rem auto;
+}
+
+footer .issue:hover {
+  box-shadow: 0 1px 8px #000;
+}
+
+footer mdi-icon {
+  align-self: center;
+  margin-left: -0.25rem;
+  margin-right: 0.25rem;
+}

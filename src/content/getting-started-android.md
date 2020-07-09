@@ -4,11 +4,11 @@ If you'd like to use Material Design Icons in your Android app, there are severa
 
 ## Using SVGs
 
-Android (5.0 API Level 21+) uses the Vector Drawable format that is similar to SVG. That means you can download each one of our icons as SVG and import them in your Android project for later use as an `src` in an `<ImageView>`.
+Android (5.0 API Level 21+) uses the Vector Drawable format that is similar to SVG. That means the icons can be imported your Android project for later use as a `src` in a `<ImageView>`.
 
 ## Using a Library (third-party)
 
-Instead of having to download an SVG for each icon you need, you can use the [Material Icon Library](https://github.com/code-mc/material-icon-lib), a constantly updated library containing all of our icons. It can be easily used as Drawable, a standalone View or inside menu resource files.
+Instead of having to download an SVG for each icon you need, you can use the [Material Icon Library](https://github.com/code-mc/material-icon-lib), a constantly updated library containing all icons. It can be easily used as Drawable, a standalone View or inside menu resource files.
 
 ## Demo
 
@@ -26,7 +26,7 @@ dependencies {
 }
 ```
 
-### Step 2
+#### Step 2
 
 There's a total of 3 different use cases (click the links to jump to their section). You can use the provided [`MaterialIconView`](/getting-started/android#materialiconview) which mostly is just a more advanced `ImageView` or use your preferred `ImageView` and use the [`MaterialDrawable`](/getting-started/android#materialdrawable) as Drawable resource. If you want to spice up your `Toolbar` with icons from this library there is a custom [`MaterialMenuInflater`](/getting-started/android#materialmenuinflater) that does just that in a single line of code.
 

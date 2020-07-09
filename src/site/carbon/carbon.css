@@ -1,0 +1,6 @@
+[part="carbon"] {
+  width: 300px;
+  height: 100px;
+  border-radius: 0.25rem;
+  border: 0.25rem solid var(--site-color);
+}
