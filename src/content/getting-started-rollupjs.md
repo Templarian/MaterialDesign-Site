@@ -4,7 +4,7 @@ The `@mdi/js` module and ES6 alongside [rollup.js](https://rollupjs.org) has [tr
 
 Tree-shaking will remove any unused icons. The example below will only bundle a single icon's data.
 
-```js
+```javascript
 import { mdiAccount } from '@mdi/js';
 
 console.log(mdiAccount); // M...Z Path data

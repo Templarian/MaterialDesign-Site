@@ -48,7 +48,7 @@ Some frameworks have specific implementations for using iconography as shown bel
 
 The [`mdi.svg`](https://materialdesignicons.com/api/download/angularmaterial/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B) file contains all the icons provided on the site. Use inline with $mdIconProvider.
 
-```js
+```javascript
 app.config(function($mdIconProvider) {
   $mdIconProvider
     .defaultIconSet('my/app/mdi.svg')
