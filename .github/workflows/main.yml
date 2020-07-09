@@ -14,8 +14,10 @@ jobs:
     - uses: actions/checkout@master
     - name: Install Dependencies
       run: npm install
-    - name: Build for Production
+    - name: Build admin for Production
       run: npm run build
+    - name: Build site for Production
+      run:  npm run build:site
     - name: Sync to FTP
       uses: SamKirkland/FTP-Deploy-Action@2.0.0
       env:

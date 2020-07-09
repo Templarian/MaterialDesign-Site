@@ -12,7 +12,7 @@ Instead of having to download an SVG for each icon you need, you can use the [Ma
 
 ## Demo
 
-![](http://i.imgur.com/KXHfXo8.gif)
+![](https://i.imgur.com/KXHfXo8.gif)
 
 ### Usage
 
