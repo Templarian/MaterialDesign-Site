@@ -93,7 +93,7 @@ Making icons accessible can be done through the `title` prop. If for some rare r
 
 By leaving off the `title` prop an icon is assumed to be presentation only. These will be ignored by screen readers. This is ideal for icon buttons or areas where text next to the icon suffices.
 
-```js
+```jsx
 <p><Icon path={mdiAccount} /> User Profile</p>
 <p><Icon path={mdiAccount} title="User Profile" /></p>
 <button aria-label="User Profile"><Icon path={mdiAccount} /></button>

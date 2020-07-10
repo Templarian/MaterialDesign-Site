@@ -168,7 +168,7 @@ export const navigationItems = [{
   name: 'NodeJS Scripting',
   icon: mdiNodejs,
   url: '/guide/nodejs-scripting',
-  file: '/content/guide-nodejs-scripting.md'
+  file: '/content/guide-nodejs.md'
 }, {
   type: 'Guides',
   name: 'Iconify',

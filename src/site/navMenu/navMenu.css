@@ -26,6 +26,7 @@ a:focus {
 mdi-icon {
   margin-right: 0.25rem;
   margin-left: -0.125rem;
+  align-self: center;
 }
 
 section:not(:first-child) {

@@ -12,6 +12,6 @@ console.log(mdiAccount); // M...Z Path data
 
 To learn more about using `@mdi/js` with frameworks look at the specific guides for more details.
 
-# Troubleshooting
+## Troubleshooting
 
 For TypeScript make sure you have `"module":"es6"` set in the `tsconfig.json`.
