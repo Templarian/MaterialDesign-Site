@@ -63,6 +63,10 @@ export default class SiteRouter extends HTMLElement {
     this.router.add('', () => {
       this.updatePage('home');
     });
+    // History Page
+    this.router.add('history', () => {
+      this.updatePage('history');
+    });
     // Icons
     this.router.add('icons', () => {
       this.updatePage('icons');

@@ -17,6 +17,7 @@ const menuCategories = [
 })
 export default class SiteNavMenu extends HTMLElement {
   @Prop() items: any[] = [];
+  @Prop() slug: string = '';
 
   @Part() $items: HTMLDivElement;
 

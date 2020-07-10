@@ -11,6 +11,7 @@ import MdiIcon from '@mdi/components/mdi/icon';
 })
 export default class SiteNavDocs extends HTMLElement {
   @Prop() items: any[] = [];
+  @Prop() slug: string = '';
 
   @Part() $items: HTMLDivElement;
 

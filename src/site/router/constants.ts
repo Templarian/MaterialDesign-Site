@@ -27,7 +27,8 @@ import {
   mdiTextBox,
   mdiWeb,
   mdiFileTree,
-  mdiEmail
+  mdiEmail,
+  mdiClockOutline
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -225,10 +226,15 @@ export const navigationItems = [{
   file: '/content/upgrade.md'
 }, {
   type: 'Meta',
+  name: 'History',
+  icon: mdiClockOutline,
+  url: '/history'
+}, {
+  type: 'Meta',
   name: 'Contact',
   icon: mdiEmail,
   url: '/upgrade',
-  file: '/content/upgrade.md'
+  file: '/content/contact.md'
 }, {
   type: 'Admin',
   name: 'Contributor Portal',
