@@ -12,7 +12,7 @@ The webfont is a quick way to integrate the icons into your application.
 npm install @mdi/font
 ```
 
-```text
+```
 https://cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css
 ```
 
