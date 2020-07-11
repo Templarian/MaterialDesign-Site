@@ -76,6 +76,37 @@ nav a code {
   border-radius: 0.25rem;
 }
 
+aside section {
+  margin-left: -1rem;
+  margin-right: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.25rem 1rem 0.75rem 1rem;
+  margin-top: 1rem;
+  background: #f1f1f1;
+  box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.2) inset;
+}
+
+aside section a {
+  display: flex;
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 1px solid var(--site-color);
+  color: var(--site-color);
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+aside section a mdi-icon {
+  margin-right: 0.5rem;
+}
+
+aside section a:hover {
+  background: var(--site-color);
+  color: #fff;
+  --mdi-icon-color: #fff;
+}
+
 main {
   grid-row: 2;
   grid-column: 2 / span 2;

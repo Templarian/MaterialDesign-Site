@@ -10,7 +10,7 @@ a {
   text-decoration: none;
   --mdi-icon-color: #fff;
   color: #fff;
-  margin: 0.25rem 0;
+  margin: 0.25rem 0.25rem 0.25rem 0;
   border-radius: 0.25rem;
 }
 a:hover {
@@ -21,6 +21,10 @@ a:active,
 a:focus {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) inset;
   background: rgba(0, 0, 0, 0.3);
+}
+
+a span {
+  align-self: center;
 }
 
 mdi-icon {

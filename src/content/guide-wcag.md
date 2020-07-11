@@ -64,8 +64,8 @@ these tips were taken from various blogs. You can find them below.
 ## References
 
 <dl>
-  <dd id="wcag-ref1">1: <cite>Web Content Accessibility Guidelines (WCAG) Overview.</cite><a href="//www.w3.org/WAI/intro/wcag" target="_blank">Source</a></dd>
-  <dd id="wcag-ref2">2: <cite>Document Object Model Level 2 Core Specification.</cite><a href="//www.w3.org/TR/DOM-Level-2-Core" target="_blank">Source</a></dd>
-  <dd><cite>Tips for Creating Accessible SVG.</cite><a href="//www.sitepoint.com/tips-accessible-svg" target="_blank">Source</a></dd>
-  <dd><cite>7 solutions for creating more accessible SVGs.</cite><a href="//simplyaccessible.com/article/7-solutions-svgs" target="_blank">Source</a></dd>
+  <dd id="wcag-ref1">1: <cite>Web Content Accessibility Guidelines (WCAG) Overview.</cite> <a href="//www.w3.org/WAI/intro/wcag" target="_blank">Source</a></dd>
+  <dd id="wcag-ref2">2: <cite>Document Object Model Level 2 Core Specification.</cite> <a href="//www.w3.org/TR/DOM-Level-2-Core" target="_blank">Source</a></dd>
+  <dd><cite>Tips for Creating Accessible SVG.</cite> <a href="//www.sitepoint.com/tips-accessible-svg" target="_blank">Source</a></dd>
+  <dd><cite>7 solutions for creating more accessible SVGs.</cite> <a href="//simplyaccessible.com/article/7-solutions-svgs" target="_blank">Source</a></dd>
 </dl>

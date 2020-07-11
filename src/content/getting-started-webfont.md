@@ -1,6 +1,4 @@
-<blockquote class="alert alert-warning">
-  icon:information-outline Due to size, the <b>webfont may harm app/web performance.</b> Please read the <a href="/guide/webfont-alternatives"><u>Webfont Alternatives Guide</u></a> to determine if it is right for your project.
-</blockquote>
+> **Warning:** icon:information-outline Due to size, the <b>webfont may harm app/web performance.</b> Please read the <a href="/guide/webfont-alternatives"><u>Webfont Alternatives Guide</u></a> to determine if it is right for your project.
 
 # Webfont - Getting Started
 
