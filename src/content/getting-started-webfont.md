@@ -4,7 +4,7 @@
 
 The webfont is a quick way to integrate the icons into your application.
 
-<a class="button" href="/changelog">View the Changelog<a> <a class="button" href="/changelog">View the Upgrade Guide<a>
+<a class="button" href="/changelog">icon:text-box-outline View the Changelog</a> <a class="button" href="/changelog">icon:format-list-checks View the Upgrade Guide</a>
 
 ## Setup
 

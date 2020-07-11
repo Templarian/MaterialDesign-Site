@@ -28,7 +28,9 @@ import {
   mdiWeb,
   mdiFileTree,
   mdiEmail,
-  mdiClockOutline
+  mdiClockOutline,
+  mdiFormatListChecks,
+  mdiTextBoxOutline
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -215,13 +217,13 @@ export const navigationItems = [{
 }, {
   type: 'Meta',
   name: 'Changelog',
-  icon: mdiLightbulbOn,
+  icon: mdiTextBoxOutline,
   url: '/changelog',
   file: '/content/changelog.md'
 }, {
   type: 'Meta',
   name: 'Upgrade Guide',
-  icon: mdiLightbulbOn,
+  icon: mdiFormatListChecks,
   url: '/upgrade',
   file: '/content/upgrade.md'
 }, {
