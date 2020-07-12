@@ -33,16 +33,29 @@ If you need ideas for what to design you can always take a look at the currently
 
 It's surprising how many different ways an icon can be conveyed. While the guidelines give good structure, having a diverse set of choices allows for continuous refinement on new and existing icons. If you want to you can open an issue with a refined design or even lowered point count.
 
-Once **five** of your icons have been added to the set you can become a contributor! What does this mean? Well, you get a contributor account on the site which allows you to manage icons and also have all the icons you designed assigned under your name.
+All icons you create will be assigned to you if they are accepted by the core team.
 
 ### Develop
 
-This [site](/contribute/site) is open source, from the documentation to the front end. Any modification in the `master` branch builds within 30 seconds to production and pull requests are usually merged very quickly (especially documentation).
+This [site](/contribute/site) is open source, from the documentation to the front end. Pull Requests are usually merged within a day (especially documentation related PRs);
 
-The tech stack consists of relatively modern tooling, but is organized to be easy to edit for newcomers:
+|             | Public Site | Admin |
+|-------------|-------------|-------|
+| *Language*  | TypeScript  | TypeScript |
+| *Framework* | Web Components | Angular 9 |
+| *CSS*      | Custom (CSS) | Bootstrap 4 (SASS) |
+| *Source* | [View](https://github.com/Templarian/MaterialDesign-Site/tree/master/src/site) | [View](https://github.com/Templarian/MaterialDesign-Site/tree/master/src) |
 
-- Angular 6
-- Bootstrap 4 (SASS)
-- Content is mostly Markdown files and can be edited right from GitHub's editor.
+The Web Components for the public site are stored in a seperate repo and published to NPM.
+
+> **Information:** [View the Web Components on GitHub](https://github.com/Templarian/MaterialDesign-Components/)
+
+All content is mostly stored in Markdown files and can be edited right from GitHub's editor.
 
 The [API endpoints](/contribute/site/api) are still being documented and are being worked on to provide more robust functionality.
+
+### Documentation
+
+All pages including this one can be edited. See those buttons in the left sidebar.
+
+You can either create the edit youself and submit a pull request, or suggest it through a issue for someone else to make.
