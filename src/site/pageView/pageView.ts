@@ -1,4 +1,5 @@
 import { Component, Prop, Part } from '@mdi/element';
+import * as YAML from 'js-yaml';
  
 import template from "./pageView.html";
 import style from './pageView.css';
@@ -102,22 +103,22 @@ export default class SitePageView extends HTMLElement {
         return m;
       }
     }];
+    this.$markdown.modify(($content) => {
+      const hash = window.location.hash;
+      const ele = $content.querySelector(`[href="${hash}"]`);
+      if (ele) {
+        scrollToElement(ele);
+      }
+    });
   }
-  
+
   async render(changes) {
     if (changes.slug && this.slug) {
       var match = this.navigationItems.find(item => {
         return item.url.indexOf(this.slug) !== -1;
       });
       var file = match ? match.file : '/content/404.md';
-      this.$markdown.text = await http.asset(file);
-      this.$markdown.modify(($content) => {
-        const hash = window.location.hash;
-        const ele = $content.querySelector(`[href="${hash}"]`);
-        if (ele) {
-          scrollToElement(ele);
-        }
-      });
+      this.$markdown.file = file;
       this.$edit.href = `https://github.com/Templarian/MaterialDesign-Site/tree/master/src/${file}`;
     }
     if (changes.icons) {

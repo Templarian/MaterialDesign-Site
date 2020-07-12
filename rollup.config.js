@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 import multi from '@rollup/plugin-multi-entry';
 import copy from 'rollup-plugin-copy'
 import { string } from "rollup-plugin-string";
@@ -16,7 +17,8 @@ const TSCONFIG = {
   tsconfigOverride: {
     compilerOptions: {
       module: "es2015",
-      allowSyntheticDefaultImports: true
+      allowSyntheticDefaultImports: true,
+      esModuleInterop: true
     },
     include: [
       'src/@types/*',
@@ -78,6 +80,7 @@ namespaces.forEach((namespace) => {
 });
 
 const plugins = [
+  commonjs(),
   resolve(),
   typescript(TSCONFIG),
   string({
