@@ -81,4 +81,6 @@ All features for the site are managed through pull requests. Clone the project i
 
 ## Documentation
 
-If you are interested in documentation edits and additions can be done directly in GitHub. GitHub will even create pull requests for you. In the right sidebar click [View Docs](https://github.com/Templarian/MaterialDesign-Site/tree/master/src/content).
+Documentation edits and additions can be done directly in GitHub. GitHub will even create pull requests for you if you use one of the links provided on the left sidebar of any page.
+
+<a class="button" href="https://github.com/Templarian/MaterialDesign-Site/tree/master/src/content">icon:file-multiple View all content files on GitHub</a>
