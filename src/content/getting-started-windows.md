@@ -6,13 +6,19 @@ The Universal Windows Platform and WPF both use a vector format similar to SVG.
 
 If you wanted to display the icon at `48x48` place the SVG path data in place of `M...Z`.
 
-```
+```xml
 <Viewbox Width="48" Height="48">
     <Canvas Width="24" Height="24">
         <Path Data="M...Z" Fill="Black" />
     </Canvas>
 </Viewbox>
 ```
+
+## MahApps.Metro.IconPacks
+
+Many popular Open Source icon packs are distributed via the `MahApps.Metro.IconPacks` package. They are nice enough to include both of our packs. These are updated constantly so you'll always have access to the latest version!
+
+[View MahApps.Metro.IconPacks on GitHub](https://github.com/MahApps/MahApps.Metro.IconPacks)
 
 ## As a WPF UserControl 
 

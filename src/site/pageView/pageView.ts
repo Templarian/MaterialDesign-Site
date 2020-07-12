@@ -70,7 +70,7 @@ export default class SitePageView extends HTMLElement {
         this.$nav.appendChild(li);
         return `<${m2}>
                   ${m3}
-                  <a href="#${id}" style="display:inline-block;vertical-align:middle;">
+                  <a href="#${id}" style="display:inline-block;">
                     <svg viewBox="0 0 24 24" style="width:18px;height:18px;">
                       <path d="${mdiLinkVariant}" fill="currentColor" />
                     </svg>
