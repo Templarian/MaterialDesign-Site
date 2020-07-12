@@ -72,7 +72,7 @@ export default class SitePageView extends HTMLElement {
                   ${m3}
                   <a href="#${id}" style="display:inline-block;vertical-align:middle;">
                     <svg viewBox="0 0 24 24" style="width:18px;height:18px;">
-                      <path d="${mdiLinkVariant}" fill="#999" />
+                      <path d="${mdiLinkVariant}" fill="currentColor" />
                     </svg>
                   </a>
                 </${m2}>`;
@@ -88,6 +88,18 @@ export default class SitePageView extends HTMLElement {
         } else {
           return `<svg class="icon" data-type="icon" viewBox="0 0 24 24"><path data-icon="${icon}" fill="currentColor" d="${mdiVanish}"${c} /></svg>`;
         }
+      }
+    }, {
+      find: new RegExp('<blockquote>([\\\s\\\S]*?)<\\\/blockquote>', 'g'),
+      replace: (m) => {
+        const matchLabel = m.match(/<blockquote>\r?\n?<p><strong>([\w ]+):</);
+        if (matchLabel) {
+          const label = matchLabel[1];
+          const classLabel = matchLabel[1].trim().toLowerCase().replace(/[ _]/g, '-');
+          m = m.replace(new RegExp(`<strong>${label}:</strong> ?`), '');
+          m = m.replace(/^<blockquote/, `<blockquote class="${classLabel}"`);
+        }
+        return m;
       }
     }];
   }
