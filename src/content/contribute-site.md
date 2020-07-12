@@ -17,8 +17,8 @@ From the home page, icon pages, and documentation the public site can be edited.
 
 ### Tech Stack
 
-- TypeScript - Fancy JavaScript
-- Web Components - 
+- TypeScript - [Learn More on TypeScript](https://www.typescriptlang.org/)
+- Web Components - Also known as custom elements.
 
 ### Building a Feature
 
@@ -28,11 +28,13 @@ From the home page, icon pages, and documentation the public site can be edited.
 
 All code relavant to the site is stored in `src/site`. Unless you need to modify a `mdi-*` Web Component. Those Web Components can be viewed [here](https://github.com/Templarian/MaterialDesign-Components).
 
-> **Information:** icon:comment-question Why 2 repos? The `mdi-*` Web Components are published as package on NPM `@mdi/components`.
+> **Information:** icon:comment-question Why 2 repos? The `mdi-*` Web Components are published as package on NPM `@mdi/components` for third parties to use. That repo is held to a higher code quality and testing strategy than the site.
 
 #### What Features are Wanted
 
 To know if your feature is going to be merged into production it is highly recommended that an issue be created first for the community and contribution team to review.
+
+<a href="https://github.com/Templarian/MaterialDesign-Site/issues" class="button">icon:github View Issues on GitHub</a>
 
 #### Feature Requires New Endpoints
 

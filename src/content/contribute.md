@@ -48,7 +48,7 @@ This [site](/contribute/site) is open source, from the documentation to the fron
 
 The Web Components for the public site are stored in a seperate repo and published to NPM.
 
-> **Information:** [View the Web Components on GitHub](https://github.com/Templarian/MaterialDesign-Components/)
+<a class="button" href="https://github.com/Templarian/MaterialDesign-Components/">icon:github View the Web Components on GitHub</a>
 
 All content is mostly stored in Markdown files and can be edited right from GitHub's editor.
 
