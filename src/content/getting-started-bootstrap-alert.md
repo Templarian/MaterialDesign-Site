@@ -1,3 +1,5 @@
+## Alerts
+
 tabs Alerts
 tab Example
 

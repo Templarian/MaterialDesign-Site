@@ -1,3 +1,5 @@
+## Buttons
+
 tabs Buttons
 tab Example
 
@@ -32,7 +34,7 @@ tab Example
 /tab
 tab Code
 
-## Button Group
+Button Group
 
 ```html
 <div class="btn-toolbar" role="toolbar">
@@ -48,7 +50,7 @@ tab Code
 </div>
 ```
 
-## Button Sizes
+Button Sizes
 
 ```html
 <button class="btn btn-primary btn-sm mdi mdi-home">SM</button>
@@ -56,7 +58,7 @@ tab Code
 <button class="btn btn-primary btn-lg mdi mdi-home">LG</button>
 ```
 
-## Button Colors
+Button Colors
 
 ```html
 <button type="button" class="btn btn-primary mdi mdi-home">Primary</button>
