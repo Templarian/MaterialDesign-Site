@@ -1,19 +1,16 @@
 ### POST Admin Icon Path Data
 
-```text
+```
 POST api/admin/icon/data
 ```
 
-tabs:
-tab:post-icon-data-description Description
-tab:post-icon-data-request Request
-tab:post-icon-data-response Response
-tabContent:post-icon-data-description
+tabs
+tab Description
 
 Update `icon.data`.
 
-/tabContent
-tabContent:post-icon-data-request
+/tab
+tab Request
 
 ```yaml
 type: object
@@ -29,12 +26,12 @@ properties:
         example: M...Z
 ```
 
-/tabContent
-tabContent:post-icon-data-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/icon'
 ```
 
-/tabContent
+/tab
 /tabs

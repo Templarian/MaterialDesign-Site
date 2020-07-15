@@ -4,16 +4,13 @@
 POST api/admin/icon/optimize
 ```
 
-tabs:
-tab:post-icon-optimize-description Description
-tab:post-icon-optimize-request Request
-tab:post-icon-optimize-response Response
-tabContent:post-icon-optimize-description
+tabs
+tab Description
 
 Optimize `icon.data` with SVGO. This is used to preview the change and will not touch the database.
 
-/tabContent
-tabContent:post-icon-optimize-request
+/tab
+tab Request
 
 ```yaml
 type: object
@@ -29,12 +26,12 @@ properties:
         example: M...Z
 ```
 
-/tabContent
-tabContent:post-icon-optimize-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/icon'
 ```
 
-/tabContent
+/tab
 /tabs

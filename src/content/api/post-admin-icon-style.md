@@ -4,16 +4,13 @@
 POST api/admin/icon/style
 ```
 
-tabs:
-tab:post-icon-style-description Description
-tab:post-icon-style-request Request
-tab:post-icon-style-response Response
-tabContent:post-icon-style-description
+tabs
+tab Description
 
 Toggle `icon.styles` on or off. For instance an icon called `account-outline` should have the `outline` style.
 
-/tabContent
-tabContent:post-icon-style-request
+/tab
+tab Request
 
 ```yaml
 type: object
@@ -32,12 +29,12 @@ properties:
         format: uuid
 ```
 
-/tabContent
-tabContent:post-icon-style-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/icon'
 ```
 
-/tabContent
+/tab
 /tabs

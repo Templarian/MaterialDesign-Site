@@ -1,19 +1,16 @@
 ### POST Admin Icon Description
 
-```text
+```
 POST api/admin/icon/description
 ```
 
-tabs:
-tab:post-icon-description-description Description
-tab:post-icon-description-request Request
-tab:post-icon-description-response Response
-tabContent:post-icon-description-description
+tabs
+tab Description
 
 Update `icon.description` in a Markdown string.
 
-/tabContent
-tabContent:post-icon-description-request
+/tab
+tab Request
 
 ```yaml
 type: object
@@ -30,12 +27,12 @@ properties:
         example: Icon Description.
 ```
 
-/tabContent
-tabContent:post-icon-description-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/icon'
 ```
 
-/tabContent
+/tab
 /tabs

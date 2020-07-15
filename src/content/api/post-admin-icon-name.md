@@ -4,16 +4,13 @@
 POST api/admin/icon/name
 ```
 
-tabs:
-tab:post-icon-name-description Description
-tab:post-icon-name-request Request
-tab:post-icon-name-response Response
-tabContent:post-icon-name-description
+tabs
+tab Description
 
 Update `icon.name` to rename an icon.
 
-/tabContent
-tabContent:post-icon-name-request
+/tab
+tab Request
 
 ```yaml
 type: object
@@ -29,12 +26,12 @@ properties:
         example: new-name
 ```
 
-/tabContent
-tabContent:post-icon-name-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/icon'
 ```
 
-/tabContent
+/tab
 /tabs

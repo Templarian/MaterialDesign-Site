@@ -1,19 +1,17 @@
 ### Get Users
 
-```text
+```
 GET api/user
 GET api/package/:packageId/user
 ```
 
-tabs:
-tab:get-user-by-id-description Description
-tab:get-user-by-id-response Response
-tabContent:get-user-by-id-description
+tabs
+tab Description
 
 Retrieve all users.  An alternative is to get users for only a single package.
 
-/tabContent
-tabContent:get-user-by-id-response
+/tab
+tab Response
 
 ```yaml
 type: array
@@ -21,5 +19,5 @@ items:
   $ref: '#/api/model/user'
 ```
 
-/tabContent
+/tab
 /tabs

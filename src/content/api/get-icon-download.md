@@ -4,16 +4,13 @@
 POST api/download
 ```
 
-tabs:
-tab:get-icon-download-description Description
-tab:get-icon-download-request Request
-tab:get-icon-download-response Response
-tabContent:get-icon-download-description
+tabs
+tab Description
 
 This endpoint is overloaded to allow downloading a single icon or a package of icons as a zip archive.
 
-/tabContent
-tabContent:get-icon-download-request
+/tab
+tab Request
 
 There is a universal endpoint for downloading icons or collections of icons allowing for various types `png` (default), `svg`, or `vector-drawable`.
 
@@ -55,10 +52,10 @@ Response: `*.png`, `*.jpg`, `*.svg`, `*.xaml`, `*.xml` or `*.zip`
 
 > Note: If an array is sent the results will be returned in a `zip`. `path` is ignored for object responses.
 
-/tabContent
-tabContent:get-icon-download-response
+/tab
+tab Response
 
 A single file will be returned or a zip archive.
 
-/tabContent
+/tab
 /tabs

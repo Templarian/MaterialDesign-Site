@@ -1,18 +1,16 @@
 ### Get Styles
 
-```text
+```
 GET api/:packageId/style
 ```
 
-tabs:
-tab:get-style-description Description
-tab:get-style-response Response
-tabContent:get-style-description
+tabs
+tab Description
 
 Styles are documented in the icon naming guidelines. Examples include `box`, `circle`, `outline`, `off`. This endpoint requires the `packageId` so that it can return the count of each style.
 
-/tabContent
-tabContent:get-style-response
+/tab
+tab Response
 
 ```yaml
 type: array
@@ -20,5 +18,5 @@ items:
   $ref: '#/api/model/style'
 ```
 
-/tabContent
+/tab
 /tabs

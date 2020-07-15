@@ -1,19 +1,16 @@
 ### POST Admin Icon Alias
 
-```text
+```
 POST api/admin/icon/alias
 ```
 
-tabs:
-tab:post-icon-alias-description Description
-tab:post-icon-alias-request Request
-tab:post-icon-alias-response Response
-tabContent:post-icon-alias-description
+tabs
+tab Description
 
 Aliasing icons with alternative names allows others to find them. For example `account` may also be known as `user` or `person`.
 
-/tabContent
-tabContent:post-icon-alias-request
+/tab
+tab Request
 
 ```yaml
 type: object
@@ -32,12 +29,12 @@ properties:
         example: user
 ```
 
-/tabContent
-tabContent:post-icon-alias-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/icon'
 ```
 
-/tabContent
+/tab
 /tabs

@@ -4,16 +4,13 @@
 POST api/admin/icon/tag
 ```
 
-tabs:
-tab:post-icon-tag-description Description
-tab:post-icon-tag-request Request
-tab:post-icon-tag-response Response
-tabContent:post-icon-tag-description
+tabs
+tab Description
 
 Inserts `tag` into the database for an icon.
 
-/tabContent
-tabContent:post-icon-tag-request
+/tab
+tab Request
 
 ```yaml
 type: object
@@ -32,12 +29,12 @@ properties:
         example: user
 ```
 
-/tabContent
-tabContent:post-icon-tag-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/icon'
 ```
 
-/tabContent
+/tab
 /tabs

@@ -1,19 +1,16 @@
 ### Get Package By Id
 
-```text
+```
 GET api/package/:packageId
 ```
 
-tabs:
-tab:get-package-by-id-description Description
-tab:get-package-by-id-request Request
-tab:get-package-by-id-response Response
-tabContent:get-package-by-id-description
+tabs
+tab Description
 
 Search through a package of icons.
 
-/tabContent
-tabContent:get-package-by-id-request
+/tab
+tab Request
 
 There are various ways to filter the icon results by appending various parameters.
 
@@ -25,12 +22,12 @@ There are various ways to filter the icon results by appending various parameter
 ?author=community
 ```
 
-/tabContent
-tabContent:get-package-by-id-response
+/tab
+tab Response
 
 ```yaml
 $ref: '#/api/model/package'
 ```
 
-/tabContent
+/tab
 /tabs
