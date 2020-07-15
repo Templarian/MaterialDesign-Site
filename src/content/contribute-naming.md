@@ -30,25 +30,31 @@ All position modifiers should be used to describe the direction an icon is point
 
 ### Overlay
 
-tabs test
-tab icon:account
+tabs Standard
+tab Plus
 
-Does this also work
+The plus modifier can be appended to any noun icon.
 
-/tab
-tab icon:account-circle test 2
-
-Does this work
+![plus](/assets/resources/grid-96-plus-bottom-right.svg)
 
 /tab
-tab test 2
+tab Minus
 
-Does this work
+The minus modifier can be appended to any noun icon.
+
+![minus](/assets/resources/grid-96-minus-bottom-right.svg)
+
+/tab
+tab Remove
+
+The remove modifier can be appended to any noun icon.
+
+![remove](/assets/resources/grid-96-remove-bottom-right.svg)
 
 /tab
 /tabs
 
-tabs
+tabs Other
 tab Alert
 
 The alerts modifer can be shown inside of an icon or to the right.
@@ -77,27 +83,6 @@ The settings modifer in Material Design should be depicted by three dots and not
 ![settings](/assets/resources/grid-96-settings.svg)
 
 /tab
-tab plus
-
-The plus modifier can be appended to any noun icon.
-
-![plus](/assets/resources/grid-96-plus-bottom-right.svg)
-
-/tab
-tab Minus
-
-The minus modifier can be appended to any noun icon.
-
-![minus](/assets/resources/grid-96-minus-bottom-right.svg)
-
-/tab
-tab Remove
-
-The remove modifier can be appended to any noun icon.
-
-![remove](/assets/resources/grid-96-remove-bottom-right.svg)
-
-/tab
 tab Magnify
 
 The search modifier can be appended to any noun icon to depict the ability to search the object.
@@ -111,13 +96,23 @@ The search modifier can be appended to any noun icon to depict the ability to se
 
 Modifiers are consistent across all icons in their representation.
 
-#### Multiple
+tabs
+tab Multiple
 
 ![multiple](/assets/resources/grid-96-multiple.svg)
 
-#### Off
+/tab
+tab Off
 
 ![off](/assets/resources/grid-96-off.svg)
+
+/tab
+tab Outline
+
+2dp outline of an existing filled icon.
+
+/tab
+/tabs
 
 ## Additional Details
 

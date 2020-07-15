@@ -6,10 +6,8 @@ In AngularJS you will want to use a method that cleanly inserts [SVG](./svg) inl
 
 If you need a standalone directive we suggest using the one below.
 
-tabs:Standalone
-tab:mdi-usage Usage
-tab:mdi-code mdi.js
-tabContent:mdi-usage
+tabs Standalone
+tab Usage
 
 ```html
 <!-- After defining in mdiService.add('account', 'data here') -->
@@ -30,14 +28,14 @@ angular.module('app', ['mdi'])
 ])
 ```
 
-/tabContent
-tabContent:mdi-code
+/tab
+tab mdi.js
 
 ```javascript
 import:/assets/docs/angularjs/mdi.js
 ```
 
-/tabContent
+/tab
 /tabs
 
 ## Frameworks
