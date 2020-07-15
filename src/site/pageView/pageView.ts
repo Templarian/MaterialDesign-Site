@@ -7,7 +7,6 @@ import style from './pageView.css';
 import '@mdi/components/mdi/markdown';
 import MdiMarkdown from '@mdi/components/mdi/markdown';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
-import { http } from '@mdi/components/mdi/shared/http';
 
 const mdiLinkVariant = 'M10.59,13.41C11,13.8 11,14.44 10.59,14.83C10.2,15.22 9.56,15.22 9.17,14.83C7.22,12.88 7.22,9.71 9.17,7.76V7.76L12.71,4.22C14.66,2.27 17.83,2.27 19.78,4.22C21.73,6.17 21.73,9.34 19.78,11.29L18.29,12.78C18.3,11.96 18.17,11.14 17.89,10.36L18.36,9.88C19.54,8.71 19.54,6.81 18.36,5.64C17.19,4.46 15.29,4.46 14.12,5.64L10.59,9.17C9.41,10.34 9.41,12.24 10.59,13.41M13.41,9.17C13.8,8.78 14.44,8.78 14.83,9.17C16.78,11.12 16.78,14.29 14.83,16.24V16.24L11.29,19.78C9.34,21.73 6.17,21.73 4.22,19.78C2.27,17.83 2.27,14.66 4.22,12.71L5.71,11.22C5.7,12.04 5.83,12.86 6.11,13.65L5.64,14.12C4.46,15.29 4.46,17.19 5.64,18.36C6.81,19.54 8.71,19.54 9.88,18.36L13.41,14.83C14.59,13.66 14.59,11.76 13.41,10.59C13,10.2 13,9.56 13.41,9.17Z';
 const mdiVanish = 'M16,13V11H21V13H16M14.83,7.76L17.66,4.93L19.07,6.34L16.24,9.17L14.83,7.76M11,16H13V21H11V16M11,3H13V8H11V3M4.93,17.66L7.76,14.83L9.17,16.24L6.34,19.07L4.93,17.66M4.93,6.34L6.34,4.93L9.17,7.76L7.76,9.17L4.93,6.34M8,13H3V11H8V13M19.07,17.66L17.66,19.07L14.83,16.24L16.24,14.83L19.07,17.66Z';
@@ -110,6 +109,10 @@ export default class SitePageView extends HTMLElement {
         scrollToElement(ele);
       }
     });
+    this.$markdown.addEventListener('load', (e: any) => {
+      this.initText = true;
+      this.renderIcons();
+    });
   }
 
   async render(changes) {
@@ -122,14 +125,22 @@ export default class SitePageView extends HTMLElement {
       this.$edit.href = `https://github.com/Templarian/MaterialDesign-Site/tree/master/src/${file}`;
     }
     if (changes.icons) {
-      this.$markdown.modify(($content) => {
-        var paths = $content.querySelectorAll('[data-icon]');
+      this.initIcons = true;
+      this.renderIcons();
+    }
+  }
+
+  initText = false;
+  initIcons = false;
+  renderIcons() {
+    if (this.initText && this.initIcons) {
+      var { $content } = this.$markdown;
+      var paths = $content.querySelectorAll('[data-icon]');
         for (var i = 0; i < paths.length; i++) {
-          var path = paths[i];
+          var path = paths[i] as SVGPathElement;
           var icon = this.icons.find(i => i.name == path.dataset.icon);
-          path.setAttribute('d', icon ? icon.data : mdiAlert)
+          path.setAttribute('d', icon ? icon.data || mdiAlert : mdiAlert);
         }
-      });
     }
   }
 }

@@ -30,71 +30,81 @@ All position modifiers should be used to describe the direction an icon is point
 
 ### Overlay
 
-tabs:
-tab:naming-alert icon:alert-box
-tab:naming-arrow icon:arrow-right-bold-box
-tab:naming-network icon:network
-tab:naming-settings icon:settings-helper
-tab:naming-plus icon:plus-box
-tab:naming-minus icon:minus-box
-tab:naming-remove icon:close-box
-tab:naming-search icon:magnify
-tabContent:naming-alert
+tabs test
+tab icon:account
+
+Does this also work
+
+/tab
+tab icon:account-circle test 2
+
+Does this work
+
+/tab
+tab test 2
+
+Does this work
+
+/tab
+/tabs
+
+tabs
+tab Alert
 
 The alerts modifer can be shown inside of an icon or to the right.
 
 ![alert](/assets/resources/grid-96-alert.svg)
 
-/tabContent
-tabContent:naming-arrow
+/tab
+tab Arrow
 
 The arrow modifer can point in any direction and should be placed in the bottom right.
 
 ![arrow-right](/assets/resources/grid-96-arrow-right-bottom-right.svg)
 
-/tabContent
-tabContent:naming-network
+/tab
+tab Network
 
 The network modifer should only be used to dipict a network connected device or object.
 
 ![network](/assets/resources/grid-96-network.svg)
 
-/tabContent
-tabContent:naming-settings
+/tab
+tab Settings
 
 The settings modifer in Material Design should be depicted by three dots and not a `cog` or `gear`.
 
 ![settings](/assets/resources/grid-96-settings.svg)
 
-/tabContent
-tabContent:naming-plus
+/tab
+tab plus
 
 The plus modifier can be appended to any noun icon.
 
 ![plus](/assets/resources/grid-96-plus-bottom-right.svg)
 
-/tabContent
-tabContent:naming-minus
+/tab
+tab Minus
 
 The minus modifier can be appended to any noun icon.
 
 ![minus](/assets/resources/grid-96-minus-bottom-right.svg)
 
-/tabContent
-tabContent:naming-remove
+/tab
+tab Remove
 
 The remove modifier can be appended to any noun icon.
 
 ![remove](/assets/resources/grid-96-remove-bottom-right.svg)
 
-/tabContent
-tabContent:naming-search
+/tab
+tab Magnify
 
 The search modifier can be appended to any noun icon to depict the ability to search the object.
 
 ![search](/assets/resources/grid-96-search-bottom-right.svg)
 
-/tabContent
+/tab
 /tabs
 
 ### Modifier
