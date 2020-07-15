@@ -1,8 +1,5 @@
-tabs:Modal
-tab:modal-example Example
-tab:modal-code Code
-tab:modal-notes Notes
-tabContent:modal-example
+tabs Modal
+tab Example
 
 <div class="modal" tabindex="-1" role="dialog" style="display:block;position:relative;">
   <div class="modal-dialog" role="document" style="margin-top:10px;margin-bottom:10px;">
@@ -24,8 +21,8 @@ tabContent:modal-example
   </div>
 </div>
 
-/tabContent
-tabContent:modal-code
+/tab
+tab Code
 
 ```html
 <div class="modal" tabindex="-1" role="dialog">
@@ -49,10 +46,10 @@ tabContent:modal-code
 </div>
 ```
 
-/tabContent
-tabContent:modal-notes
+/tab
+tab Nodes
 
 Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/modal/" target="_blank">Modal</a>
 
-/tabContent
+/tab
 /tabs

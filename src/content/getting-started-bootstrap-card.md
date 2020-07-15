@@ -1,8 +1,6 @@
-tabs:Cards
-tab:card-example Example
-tab:card-code Code
-tab:card-notes Notes
-tabContent:card-example
+tabs Cards
+tab Example
+
 <div class="card" style="width: 20rem;">
   <div class="card-body">
     <h4 class="card-title mdi mdi-home">Card title</h4>
@@ -12,8 +10,9 @@ tabContent:card-example
     <a href="#" class="card-link mdi mdi-checkbox-marked">Another link</a>
   </div>
 </div>
-/tabContent
-tabContent:card-code
+
+/tab
+tab Code
 
 ```html
 <div class="card" style="width: 20rem;">
@@ -27,10 +26,10 @@ tabContent:card-code
 </div>
 ```
 
-/tabContent
-tabContent:card-notes
+/tab
+tab Notes
 
 Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/card/" target="_blank">Cards</a>
 
-/tabContent
+/tab
 /tabs

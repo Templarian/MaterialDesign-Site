@@ -1,8 +1,6 @@
-tabs:Buttons
-tab:button-example Example
-tab:button-code Code
-tab:button-notes Notes
-tabContent:button-example
+tabs Buttons
+tab Example
+
 <div class="btn-toolbar" role="toolbar">
     <div class="btn-group mr-2">
         <button type="button" class="btn btn-secondary mdi mdi-format-align-left" aria-label="Left Align"></button>
@@ -30,8 +28,9 @@ tabContent:button-example
     <button type="button" class="btn btn-dark mdi mdi-home">Dark</button>
     <button type="button" class="btn btn-link mdi mdi-home">Link</button>
 </div>
-/tabContent
-tabContent:button-code
+
+/tab
+tab Code
 
 ## Button Group
 
@@ -71,8 +70,8 @@ tabContent:button-code
 <button type="button" class="btn btn-link mdi mdi-home">Link</button>
 ```
 
-/tabContent
-tabContent:button-notes
+/tab
+tab Notes
 
 Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/buttons/">Buttons</a>
 
@@ -88,5 +87,5 @@ Make sure not to include any whitespace if there is just an icon in a button.
 
 > **Note:** The helper CSS might be helpful if you're using different size buttons.
 
-/tabContent
+/tab
 /tabs

@@ -1,16 +1,15 @@
-tabs:Alerts
-tab:alert-example Example
-tab:alert-code Code
-tab:alert-notes Notes
-tabContent:alert-example
+tabs Alerts
+tab Example
+
 <div class="alert alert-primary mdi mdi-alert" role="alert">
     This is a primary alert—check it out!
 </div>
-<div class="alert alert-danger mdi mdi-skull mb-0" role="alert">
+<div class="alert alert-danger mdi mdi-skull" role="alert">
     This is a danger alert—careful!
 </div>
-/tabContent
-tabContent:alert-code
+
+/tab
+tab Code
 
 ```html
 <div class="alert alert-primary mdi mdi-alert" role="alert">
@@ -18,10 +17,10 @@ tabContent:alert-code
 </div>
 ```
 
-/tabContent
-tabContent:alert-notes
+/tab
+tab Notes
 
 Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="_blank">Alerts</a>
 
-/tabContent
+/tab
 /tabs

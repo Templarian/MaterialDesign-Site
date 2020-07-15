@@ -1,8 +1,5 @@
-tabs:List Group
-tab:listgroup-example Example
-tab:listgroup-code Code
-tab:listgroup-notes Notes
-tabContent:listgroup-example
+tabs List Group
+tab Example
 
 <ul class="list-group">
   <li class="list-group-item mdi mdi-numeric-1-box active">Cras justo odio</li>
@@ -10,8 +7,8 @@ tabContent:listgroup-example
   <li class="list-group-item mdi mdi-numeric-3-box">Morbi leo risus</li>
 </ul>
 
-/tabContent
-tabContent:listgroup-code
+/tab
+tab Code
 
 ```html
 <ul class="list-group">
@@ -21,10 +18,10 @@ tabContent:listgroup-code
 </ul>
 ```
 
-/tabContent
-tabContent:listgroup-notes
+/tab
+tab Notes
 
 Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/list-group/" target="_blank">List Group</a>
 
-/tabContent
+/tab
 /tabs

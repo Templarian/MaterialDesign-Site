@@ -1,8 +1,5 @@
-tabs:Navs
-tab:nav-example Example
-tab:nav-code Code
-tab:nav-notes Notes
-tabContent:nav-example
+tabs Navs
+tab Example
 
 <ul class="nav nav-pills">
   <li class="nav-item">
@@ -19,8 +16,8 @@ tabContent:nav-example
   </li>
 </ul>
 
-/tabContent
-tabContent:nav-code
+/tab
+tab Code
 
 ```html
 <ul class="nav nav-pills">
@@ -39,10 +36,10 @@ tabContent:nav-code
 </ul>
 ```
 
-/tabContent
-tabContent:nav-notes
+/tab
+tab Notes
 
 Official Documentation for <a href="https://getbootstrap.com/docs/4.0/components/navs/" target="_blank">Navs</a>
 
-/tabContent
+/tab
 /tabs
