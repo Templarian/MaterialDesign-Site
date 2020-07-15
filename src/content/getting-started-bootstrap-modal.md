@@ -1,6 +1,6 @@
-## Modal
+### Modal
 
-tabs Modal
+tabs
 tab Example
 
 <div class="modal" tabindex="-1" role="dialog" style="display:block;position:relative;">

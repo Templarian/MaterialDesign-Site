@@ -1,6 +1,6 @@
-## Breadcrumbs
+### Breadcrumbs
 
-tabs Breadcrumbs
+tabs
 tab Example
 
 <nav aria-label="breadcrumb" role="navigation">

@@ -1,6 +1,6 @@
-## Navs
+### Navs
 
-tabs Navs
+tabs
 tab Example
 
 <ul class="nav nav-pills">

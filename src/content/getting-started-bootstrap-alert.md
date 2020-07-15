@@ -1,6 +1,6 @@
-## Alerts
+### Alerts
 
-tabs Alerts
+tabs
 tab Example
 
 <div class="alert alert-primary mdi mdi-alert" role="alert">

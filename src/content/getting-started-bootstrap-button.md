@@ -1,6 +1,6 @@
-## Buttons
+### Buttons
 
-tabs Buttons
+tabs
 tab Example
 
 <div class="btn-toolbar" role="toolbar">

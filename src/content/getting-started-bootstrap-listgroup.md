@@ -1,6 +1,6 @@
-## List Group
+### List Group
 
-tabs List Group
+tabs
 tab Example
 
 <ul class="list-group">

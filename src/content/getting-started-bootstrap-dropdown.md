@@ -1,6 +1,6 @@
-## Dropdowns
+### Dropdowns
 
-tabs Dropdowns
+tabs
 tab Example
 
 <div class="dropdown">
