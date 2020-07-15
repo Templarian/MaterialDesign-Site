@@ -1,6 +1,6 @@
 ### Download Icon
 
-```text
+```
 POST api/download
 ```
 

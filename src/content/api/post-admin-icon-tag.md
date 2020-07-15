@@ -1,6 +1,6 @@
 ### POST Admin Icon Tag
 
-```text
+```
 POST api/admin/icon/tag
 ```
 

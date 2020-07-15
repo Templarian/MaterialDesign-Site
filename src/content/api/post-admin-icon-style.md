@@ -1,6 +1,6 @@
 ### POST Admin Icon Style
 
-```text
+```
 POST api/admin/icon/style
 ```
 

@@ -1,6 +1,6 @@
 ### POST Admin Icon Name
 
-```text
+```
 POST api/admin/icon/name
 ```
 

@@ -1,6 +1,6 @@
 ### POST Admin Icon Optimize
 
-```text
+```
 POST api/admin/icon/optimize
 ```
 
