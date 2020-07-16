@@ -1,4 +1,4 @@
-### POST Admin Icon Description
+### Post Admin Icon Description
 
 ```
 POST api/admin/icon/description

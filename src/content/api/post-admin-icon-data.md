@@ -1,4 +1,4 @@
-### POST Admin Icon Path Data
+### Post Admin Icon Path Data
 
 ```
 POST api/admin/icon/data

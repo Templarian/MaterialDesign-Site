@@ -241,6 +241,7 @@
   - `library-movie` to `filmstrip-box-multiple`
   - `library-music` to `music-box-multiple`
   - `library-music-outline` to `music-box-multiple-outline`
+  - `library-video` to `play-box-multiple`
   - `markdown` to `language-markdown`
   - `markdown-outline` to `language-markdown-outline`
   - `message-settings-variant` to `message-cog`
@@ -271,6 +272,8 @@
   - `timer` to `timer-outline`
   - `timer-off` to `timer-off-outline`
   - `towing` to `tow-truck`
+  - `visual-studio` to `microsoft-visual-studio`
+  - `visual-studio-code` to `microsoft-visual-studio-code`
   - `voice` to `account-voice`
   - `wall-sconce-variant` to `wall-sconce-round-variant`
   - `wii` to `nintendo-wii`

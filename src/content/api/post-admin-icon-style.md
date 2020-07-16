@@ -1,4 +1,4 @@
-### POST Admin Icon Style
+### Post Admin Icon Style
 
 ```
 POST api/admin/icon/style

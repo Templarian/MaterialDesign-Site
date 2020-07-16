@@ -1,4 +1,4 @@
-### POST Admin Icon Optimize
+### Post Admin Icon Optimize
 
 ```
 POST api/admin/icon/optimize

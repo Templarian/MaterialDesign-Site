@@ -1,4 +1,4 @@
-### POST Admin Icon
+### Post Admin Icon
 
 Inserts `icon` into the database.
 

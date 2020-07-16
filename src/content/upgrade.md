@@ -154,6 +154,7 @@ Rename
   - `library-movie` to `filmstrip-box-multiple`
   - `library-music` to `music-box-multiple`
   - `library-music-outline` to `music-box-multiple-outline`
+  - `library-video` to `play-box-multiple`
   - `markdown` to `language-markdown`
   - `markdown-outline` to `language-markdown-outline`
   - `message-settings-variant` to `message-cog`

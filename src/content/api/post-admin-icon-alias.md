@@ -1,4 +1,4 @@
-### POST Admin Icon Alias
+### Post Admin Icon Alias
 
 ```
 POST api/admin/icon/alias
