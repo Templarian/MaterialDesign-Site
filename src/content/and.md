@@ -4,4 +4,5 @@
 - and a friend in Baltimore
 - and people that submit <a href="https://github.com/Templarian/MaterialDesign/issues">issues</a>
 - and a friend in Japan
-- and that guy that wrong a <a href="https://chrome.google.com/webstore/detail/materialdesignicons-picke/edjaedpifkihpjkcgknfokmibkoafhme">Chrome extension</a>
+- and that guy that wrote a <a href="https://chrome.google.com/webstore/detail/materialdesignicons-picke/edjaedpifkihpjkcgknfokmibkoafhme">Chrome extension</a>
+- and a friend in Miami
