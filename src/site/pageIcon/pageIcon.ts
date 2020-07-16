@@ -27,6 +27,7 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $icon: HTMLDivElement;
   @Part() $related: MdiGrid;
   @Part() $preview: MdiPreview;
+  @Part() $codepoint: HTMLSpanElement;
   
   render(changes) {
     if (changes.name && this.name) {
@@ -48,6 +49,7 @@ export default class SitePageIcon extends HTMLElement {
       this.$related.icons = related;
       this.$preview.size = 8;
       this.$preview.path = icon.data as string;
+      this.$codepoint.innerText = icon.codepoint || '';
       this.$icon.style.display = 'block';
     }
   }
