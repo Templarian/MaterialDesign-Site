@@ -121,10 +121,11 @@ export default class SiteRouter extends HTMLElement {
   async and() {
     const and = await http.asset('/content/and.md');
     const messages = and.split(/\r?\n/);
+    const r = Math.floor(Math.random() * (messages.length - 2));
     this.$and.innerHTML = [
-      ` <span>${messages[0].replace('- ', '')}</span>`,
-      ` <span>${messages[1].replace('- ', '')}</span>`,
-      ` <span>${messages[2].replace('- ', '')}</span>`,
+      ` <span>${messages[r].replace('- ', '')}</span>`,
+      ` <span>${messages[r + 1].replace('- ', '')}</span>`,
+      ` <span>${messages[r + 2].replace('- ', '')}</span>`,
     ].join('');
   }
 

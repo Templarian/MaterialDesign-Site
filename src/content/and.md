@@ -2,4 +2,6 @@
 - and people like <a href="/contribute">you</a>
 - and a chap in Ireland
 - and a friend in Baltimore
+- and people that submit <a href="https://github.com/Templarian/MaterialDesign/issues">issues</a>
 - and a friend in Japan
+- and that guy that wrong a <a href="https://chrome.google.com/webstore/detail/materialdesignicons-picke/edjaedpifkihpjkcgknfokmibkoafhme">Chrome extension</a>
