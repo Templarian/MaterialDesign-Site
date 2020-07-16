@@ -46,6 +46,11 @@ export default class SitePageView extends HTMLElement {
 
   connectedCallback() {
     this.$markdown.replace = [{
+      find: new RegExp('\{\{version\}\}', 'g'),
+      replace: (m) => {
+        return '5.3.45';
+      }
+    }, {
       find: new RegExp('<h1>(.*)</h1>'),
       replace: (m, h1) => {
         // Prevent double setting title

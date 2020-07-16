@@ -9,7 +9,7 @@ properties:
   email:
     type: string
     format: email
-    example: austin@gmail.com
+    example: austin@email.com
     auth: Admin
   description:
     type: string
