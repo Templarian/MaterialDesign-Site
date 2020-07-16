@@ -46,7 +46,8 @@ export default class SiteNavMenu extends HTMLElement {
         const span = document.createElement('span');
         span.innerText = item.name;
         a.appendChild(span);
-        if (location.href.indexOf(item.url) !== -1) {
+        var r = new RegExp(`${location.host}${item.url}(#.*)?$`)
+        if (location.href.match(r) !== null) {
           a.classList.add('active');
         }
         sections[item.type].appendChild(a);
