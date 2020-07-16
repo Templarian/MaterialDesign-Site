@@ -8,6 +8,8 @@ import { http } from '@mdi/components/mdi/shared/http';
 
 import '@mdi/components/mdi/grid';
 import MdiGrid from '@mdi/components/mdi/grid';
+import '@mdi/components/mdi/preview';
+import MdiPreview from '@mdi/components/mdi/preview';
 
 @Component({
   selector: 'site-page-icon',
@@ -24,6 +26,7 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $error: HTMLDivElement;
   @Part() $icon: HTMLDivElement;
   @Part() $related: MdiGrid;
+  @Part() $preview: MdiPreview;
   
   render(changes) {
     if (changes.name && this.name) {
@@ -43,6 +46,8 @@ export default class SitePageIcon extends HTMLElement {
       console.log(icon);
       const related = await http.get<Icon[]>(`/api/icon/${icon.id}/base`);
       this.$related.icons = related;
+      this.$preview.size = 8;
+      this.$preview.path = icon.data as string;
       this.$icon.style.display = 'block';
     }
   }
