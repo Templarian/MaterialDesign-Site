@@ -36,7 +36,7 @@ properties:
   fonts:
     type: array
     items:
-      $ref: '#/api/model/font'
+      $ref: '#/api/model/iconFont'
   styles:
     type: array
     items:
