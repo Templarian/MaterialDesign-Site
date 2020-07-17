@@ -1,5 +1,3 @@
-<site-carbon></site-carbon>
-
 <div part="loading">
   <h1>Loading...</h1>
 </div>
@@ -12,10 +10,14 @@
 
 <div part="icon">
 
+  <mdi-icon part="headerIcon"></mdi-icon>
   <h1 part="header"></h1>
+  <site-carbon></site-carbon>
 
-  <mdi-preview part="preview"></mdi-preview>
-  Codepoint: <code part="codepoint"></code>
+  <div class="details">
+    <mdi-preview part="preview"></mdi-preview>
+    Codepoint: <code part="codepoint"></code>
+  </div>
 
-  <mdi-grid part="related"></mdi-grid>
+  <mdi-grid part="related" size="48"></mdi-grid>
 </div>

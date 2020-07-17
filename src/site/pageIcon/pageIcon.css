@@ -1,10 +1,49 @@
 site-carbon {
-  float: right;
-  margin-left: 1rem;
-  margin-bottom: 0.5rem;;
+  grid-column: 3;
+  grid-row: 1;
 }
 
 [part="error"],
 [part="icon"] { 
   display: none;
+}
+
+[part="icon"] {
+  padding: 1rem;
+  grid-template-columns: 4.25rem 1fr 308px;
+  grid-template-rows: 108px 1fr 1fr;
+}
+
+[part="icon"] mdi-icon {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  --mdi-icon-color: #fff;
+  background: var(--site-color);
+  justify-self: left;
+  padding: 0.25rem;
+}
+
+[part="icon"] h1 {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  margin: 0;
+}
+
+[part="icon"] .details {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+[part="icon"] mdi-grid {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+[part="headerIcon"] {
+  --mdi-icon-width: 3rem;
+  --mdi-icon-height: 3rem;
 }
