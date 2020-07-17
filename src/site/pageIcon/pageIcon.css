@@ -11,7 +11,7 @@ site-carbon {
 [part="icon"] {
   padding: 1rem;
   grid-template-columns: 4.25rem 1fr 308px;
-  grid-template-rows: 108px 1fr 1fr;
+  grid-template-rows: 108px auto auto auto;
 }
 
 [part="icon"] mdi-icon {
@@ -46,4 +46,9 @@ site-carbon {
 [part="headerIcon"] {
   --mdi-icon-width: 3rem;
   --mdi-icon-height: 3rem;
+}
+
+[part="debug"] {
+  grid-column: 1 / span 3;
+  grid-row: 4;
 }

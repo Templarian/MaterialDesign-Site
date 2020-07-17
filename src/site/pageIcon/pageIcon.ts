@@ -6,6 +6,8 @@ import style from './pageIcon.css';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
 import { http } from '@mdi/components/mdi/shared/http';
 
+import '@mdi/components/mdi/markdown';
+import MdiMarkdown from '@mdi/components/mdi/markdown';
 import '@mdi/components/mdi/grid';
 import MdiGrid from '@mdi/components/mdi/grid';
 import '@mdi/components/mdi/preview';
@@ -31,6 +33,7 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $preview: MdiPreview;
   @Part() $codepoint: HTMLSpanElement;
   @Part() $headerIcon: MdiIcon;
+  @Part() $debug: MdiMarkdown;
   
   render(changes) {
     if (changes.name && this.name) {
@@ -55,6 +58,8 @@ export default class SitePageIcon extends HTMLElement {
       this.$headerIcon.path = icon.data as string;
       this.$codepoint.innerText = icon.codepoint || '';
       this.$icon.style.display = 'grid';
+      const ticks = '```';
+      this.$debug.text = `${ticks}json\n${JSON.stringify(icon, null, 2)}\n${ticks}`;
     }
   }
 }
