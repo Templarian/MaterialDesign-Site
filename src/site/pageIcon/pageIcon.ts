@@ -34,6 +34,7 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $codepoint: HTMLSpanElement;
   @Part() $headerIcon: MdiIcon;
   @Part() $debug: MdiMarkdown;
+  @Part() $description: MdiMarkdown;
   
   render(changes) {
     if (changes.name && this.name) {
@@ -58,6 +59,7 @@ export default class SitePageIcon extends HTMLElement {
       this.$headerIcon.path = icon.data as string;
       this.$codepoint.innerText = icon.codepoint || '';
       this.$icon.style.display = 'grid';
+      this.$description.text = icon.description || '';
       const ticks = '```';
       this.$debug.text = `${ticks}json\n${JSON.stringify(icon, null, 2)}\n${ticks}`;
     }
