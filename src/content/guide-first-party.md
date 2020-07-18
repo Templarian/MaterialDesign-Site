@@ -1,8 +1,6 @@
 # First Party Developer Guide
 
-<div class="alert alert-info">
-  icon:information-outline First party libraries/tools only differs from third party in who is publishing the packages. If a <a href="/contributors">core member</a> of MDI is involved in the publishing step of the package it is first party.
-</div>
+> **Information:** icon:information-outline First party libraries/tools only differs from third party in who is publishing the packages. If a <a href="/contributors">core member</a> of MDI is involved in the publishing step of the package it is first party.
 
 ## NPM
 
