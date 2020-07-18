@@ -30,7 +30,8 @@ import {
   mdiEmail,
   mdiClockOutline,
   mdiFormatListChecks,
-  mdiTextBoxOutline
+  mdiTextBoxOutline,
+  mdiFileStar
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -192,6 +193,11 @@ export const navigationItems = [{
   file: '/content/contribute.md'
 }, {
   type: 'Contribute',
+  name: 'GitHub Tools',
+  icon: mdiCommentAccount,
+  url: '/contribute/github'
+}, {
+  type: 'Contribute',
   name: 'Third Party Guide',
   icon: mdiAccountHeart,
   url: '/contribute/third-party-guide',
@@ -231,6 +237,12 @@ export const navigationItems = [{
   name: 'History',
   icon: mdiClockOutline,
   url: '/history'
+}, {
+  type: 'Meta',
+  name: 'First Party Guide',
+  icon: mdiFileStar,
+  url: '/contribute/first-party-guide',
+  file: '/content/guide-first-party.md'
 }, {
   type: 'Meta',
   name: 'Contact',

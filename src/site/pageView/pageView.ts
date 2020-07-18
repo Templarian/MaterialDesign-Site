@@ -1,5 +1,4 @@
 import { Component, Prop, Part } from '@mdi/element';
-import * as YAML from 'js-yaml';
  
 import template from "./pageView.html";
 import style from './pageView.css';
