@@ -1,6 +1,6 @@
 # Third Party Developer Guide
 
-While MDI supports several first party libraries, utils, and components our core team leaves a lot of the integrations up to the third party community.
+While MDI supports several [first party](/contribute/first-party-guide) libraries, utils, and components our core team leaves a lot of the integrations up to the third party community.
 
 ## Who is a Third Party Developer?
 
@@ -17,12 +17,12 @@ The top priority of building an integration is knowing where you'll get the icon
 NPMJS packages are built after each release node, JavaScript, and TypeScript communities.
 
 - The [@mdi](https://www.npmjs.com/org/mdi) organization on NPMJS.
-- `@mdi/js` - ES6/TypeScript module.
-- `@mdi/svg` - Individual optimized SVG files
+- [`@mdi/js`](https://www.npmjs.com/package/@mdi/js) - ES6/TypeScript module.
+- [`@mdi/svg`](https://www.npmjs.com/package/@mdi/svg) - Individual optimized SVG files
   - `meta.json` - All icon meta data, tags, aliases, font codepoints.
   - `@mdi/font-build` - This is what builds the webfont! (`@mdi/svg` contains `font-build.json` for this reason).
-- `@mdi/util` - Node scripting utility for building your own scripts.
-- `@mdi/font` - Webfont files.
+- [`@mdi/util`](https://www.npmjs.com/package/@mdi/util) - [Node scripting](/guide/nodejs-scripting) utility for building your own scripts.
+- [`@mdi/font`](https://www.npmjs.com/package/@mdi/font) - Webfont files.
 
 If your project can use one of the first party libraries indirectly we recommend telling people to install them seperately. For instance `@mdi/react` can use any icon version.
 
