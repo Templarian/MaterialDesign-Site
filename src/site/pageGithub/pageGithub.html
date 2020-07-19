@@ -5,7 +5,9 @@
   <site-carbon></site-carbon>
   <aside>
     <nav>
-      <ul part="nav"></ul>
+      <ul part="nav">
+        <li>Icon Preview Generator</li>
+      </ul>
     </nav>
     <section>
       <p>This site and documentation can be edited on GitHub...</p>
@@ -21,11 +23,49 @@
   </aside>
   <main>
     <mdi-markdown part="markdown"></mdi-markdown>
+
+    <h2>Icon Preview Generator</h2>
+
     <div class="card">
-      <label>Name</label>
-      <input type="text" />
-      <label>Name</label>
-      <input type="text" />
+      <div class="row">
+        <div class="col">
+          <label>Name</label>
+          <input part="inputName" type="text" value="account" placeholder="account-circle" />
+        </div>
+        <div class="col">
+          <label>Work in Progress</label>
+          <mdi-button-group>
+            <mdi-button part="wipYes" active>Yes</mdi-button>
+            <mdi-button part="wipNo">No</mdi-button>
+          </mdi-button-group>
+        </div>
+        <div class="col">
+          <label>Link Icon</label>
+          <mdi-button-group>
+            <mdi-button part="iconNone" active>None</mdi-button>
+            <mdi-button part="iconDownload">Download</mdi-button>
+            <mdi-button part="iconLink">Link</mdi-button>
+          </mdi-button-group>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="flex:1">
+          <label>Path Data</label>
+          <input part="inputData" type="text" placeholder="M..." value="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="flex:1">
+          <label>Optional Shadow Path Data</label>
+          <input part="inputShadow" type="text" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <canvas part="canvas" width="325" height="294"></canvas>
+        </div>
+      </div>
+      <p>Right click and copy the image above. Paste into the GitHub comment area to inline attach the preview.</p>
     </div>
   </main>
 </article>

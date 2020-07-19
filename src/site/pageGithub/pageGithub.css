@@ -112,3 +112,48 @@ main {
   grid-column: 2 / span 2;
   padding: 0.5rem 0 0 0;
 }
+
+label {
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.card {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--site-color);
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col:not(:first-child) {
+  margin-left: 1rem;
+}
+
+input {
+  border: 1px solid var(--site-color);
+  border-radius: 0.125rem;
+  padding: calc(0.5rem - 1px) 0.75rem;
+  font-size: 1rem;
+}
+
+input:active,
+input:focus {
+  box-shadow: 0 0 0 3px #4F8FF9;
+}
+
+canvas {
+  margin-top: 1rem;
+  box-shadow: 0 1px 0.25rem rgba(0, 0, 0, 0.4);
+}

@@ -94,6 +94,7 @@ const plugins = [
     targets: [
       { src: 'src/api/*', dest: 'dist/api' },
       { src: 'src/content/*', dest: 'dist/content' },
+      { src: 'assets/resources/*', dest: 'assets/resources' },
       { src: 'src/index.html', dest: 'dist' }
     ]
   })
