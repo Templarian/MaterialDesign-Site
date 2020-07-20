@@ -9,6 +9,8 @@ import '@mdi/components/mdi/database';
 import '@mdi/components/mdi/icon';
 import '@mdi/components/mdi/header';
 import '@mdi/components/mdi/search';
+import '@mdi/components/mdi/tooltip';
+import MdiTooltip from '@mdi/components/mdi/tooltip';
 import MdiDatabase from '@mdi/components/mdi/database';
 import MdiSearch from '@mdi/components/mdi/search';
 
@@ -31,6 +33,7 @@ export default class SiteRouter extends HTMLElement {
   @Part() $navIcons: HTMLAnchorElement;
   @Part() $menu: HTMLButtonElement;
   @Part() $and: HTMLSpanElement;
+  @Part() $tooltip: MdiTooltip;
 
   router: any = null;
   page: any = null;
@@ -52,6 +55,7 @@ export default class SiteRouter extends HTMLElement {
     this.$navIcons.addEventListener('click', this.handleNavIcons.bind(this));
     this.$navDocs.addEventListener('click', this.handleNavDocs.bind(this));
     this.$menu.addEventListener('click', this.handleMenu.bind(this));
+    this.$container.addEventListener('tooltip', this.handleTooltip.bind(this))
 
     this.router = new Router({
       mode: 'history',
@@ -179,6 +183,17 @@ export default class SiteRouter extends HTMLElement {
     this.page = document.createElement(`site-page-${page}`);
     this.page.navigationItems = navigationItems;
     this.$container.appendChild(this.page);
+  }
+
+  /**
+   * Global tooltip
+   */
+  handleTooltip(e) {
+    console.log(e.detail)
+    var { visible, rect, text } = e.detail;
+    this.$tooltip.visible = visible;
+    this.$tooltip.rect = rect;
+    this.$tooltip.text = text;
   }
 
   render(changes?: any) {
