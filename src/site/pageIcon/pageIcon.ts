@@ -14,6 +14,11 @@ import '@mdi/components/mdi/preview';
 import MdiPreview from '@mdi/components/mdi/preview';
 import '@mdi/components/mdi/icon';
 import MdiIcon from '@mdi/components/mdi/icon';
+import '@mdi/components/mdi/button';
+import MdiButton from '@mdi/components/mdi/button';
+import '@mdi/components/mdi/avatar';
+import MdiAvatar from '@mdi/components/mdi/avatar';
+import { User } from '@mdi/components/mdi/shared/models/user';
 
 @Component({
   selector: 'site-page-icon',
@@ -35,6 +40,8 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $headerIcon: MdiIcon;
   @Part() $debug: MdiMarkdown;
   @Part() $description: MdiMarkdown;
+  @Part() $authorAvatar: MdiAvatar;
+  @Part() $authorName: HTMLDivElement;
   
   render(changes) {
     if (changes.name && this.name) {
@@ -51,17 +58,23 @@ export default class SitePageIcon extends HTMLElement {
     if (error) {
       this.$error.style.display = 'block';
     } else {
-      console.log(icon);
+      // Populate Icon data
       const related = await http.get<Icon[]>(`/api/icon/${icon.id}/base`);
       this.$related.icons = related;
       this.$preview.size = 10;
       this.$preview.path = icon.data as string;
       this.$headerIcon.path = icon.data as string;
-      this.$codepoint.innerText = icon.codepoint || '';
+      if (icon.fontIcons.length) {
+        this.$codepoint.innerText = icon.fontIcons[0].codepoint || 'Not in a Release';
+      }
       this.$icon.style.display = 'grid';
       this.$description.text = icon.description || '';
       const ticks = '```';
       this.$debug.text = `${ticks}json\n${JSON.stringify(icon, null, 2)}\n${ticks}`;
+      // Author data
+      const user = await http.get<User>(`/api/package/${packageId}/user/${icon.user?.id}`);
+      this.$authorAvatar.user = user;
+      this.$authorName.innerText = user.name || 'Unknown';
     }
   }
 }

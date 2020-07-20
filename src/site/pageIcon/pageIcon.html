@@ -14,9 +14,27 @@
   <h1 part="header"></h1>
   <site-carbon></site-carbon>
 
-
-  <mdi-preview part="preview"></mdi-preview>
+  <aside part="sidebar">
+    <mdi-preview part="preview"></mdi-preview>
+    <mdi-button>
+      <mdi-icon path="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></mdi-icon>
+      Download SVG
+    </mdi-button>
+    <mdi-button>
+      <mdi-icon path="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></mdi-icon>
+      Download 24x24 Black
+    </mdi-button>
+    <mdi-button>
+      <mdi-icon path="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z"></mdi-icon>
+      Download 24x24 White
+    </mdi-button>
+  </aside>
   <div class="details">
+    <div class="author">
+      <mdi-avatar class="avatar" part="authorAvatar"></mdi-avatar>
+      <div class="label">Created By</div>
+      <div class="name" part="authorName">...</div>
+    </div>
     Codepoint: <code part="codepoint"></code>
     <mdi-markdown part="description"></mdi-markdown>
   </div>

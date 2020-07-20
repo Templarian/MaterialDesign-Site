@@ -11,10 +11,10 @@ site-carbon {
 [part="icon"] {
   padding: 1rem;
   grid-template-columns: 4.25rem 10.75rem 1fr 308px;
-  grid-template-rows: 108px auto auto auto;
+  grid-template-rows: 108px auto auto auto auto;
 }
 
-[part="icon"] mdi-icon {
+[part="headerIcon"] {
   grid-column: 1;
   grid-row: 1;
   align-self: center;
@@ -33,7 +33,7 @@ site-carbon {
   margin: 0;
 }
 
-[part="preview"] {
+[part="sidebar"] {
   grid-column: 1 / span 2;
   grid-row: 2;
 }
@@ -50,11 +50,32 @@ site-carbon {
 }
 
 [part="related"] {
-  grid-column: 1;
+  grid-column: 3 / span 2;
   grid-row: 3;
 }
 
 [part="debug"] {
-  grid-column: 1 / span 4;
+  grid-column: 3 / span 2;
   grid-row: 4;
+}
+
+.author {
+  display: grid;
+  grid-template-columns: 3.75rem auto;
+  grid-template-rows: auto auto;
+}
+.author .avatar {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.author .label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  grid-column: 2;
+  grid-row: 1;
+}
+.author .name {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 1.125rem;
 }
