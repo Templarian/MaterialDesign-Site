@@ -114,10 +114,43 @@ code {
 [part="aliasList"] li:not(:first-child),
 [part="tagList"] li:not(:first-child) {
   display: inline-flex;
+  margin-left: 0.25rem;
+  --mdi-icon-color: #646464;
+  --mdi-icon-width: 1rem;
+  --mdi-icon-height: 1rem;
   background: #fff;
   border-radius: 0.25rem;
-  align-content: center;
-  align-items: center;
+  padding: 1px;
+}
+
+[part="aliasList"] li:not(:first-child) span {
   padding: 0 0.5rem;
+  background: #fff;
+  border-radius: 0.25rem;
+}
+
+[part="tagList"] li:not(:first-child) a {
+  display: inline-flex;
+  padding: 0 0.5rem;
+  background: #fff;
+  border-radius: 0.25rem;
+  color: var(--site-color);
+  --mdi-icon-color: #278eca;
+  text-decoration: none;
+  align-items: center;
+  border: 1px solid #fff;
+}
+
+[part="tagList"] li:not(:first-child) a:hover {
+  --mdi-icon-color: #278eca;
+  border-color: #278eca;
+}
+
+[part="tagList"] li:not(:first-child) a span {
+  display: inline-flex;
+}
+
+[part="tagList"] li:not(:first-child) a mdi-icon {
   margin-left: 0.25rem;
+  margin-right: -0.25rem;
 }
