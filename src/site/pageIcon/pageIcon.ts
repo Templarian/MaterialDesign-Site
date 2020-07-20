@@ -42,6 +42,8 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $description: MdiMarkdown;
   @Part() $authorAvatar: MdiAvatar;
   @Part() $authorName: HTMLDivElement;
+  @Part() $aliasList: HTMLUListElement;
+  @Part() $tagList: HTMLUListElement;
   
   render(changes) {
     if (changes.name && this.name) {
@@ -75,6 +77,21 @@ export default class SitePageIcon extends HTMLElement {
       const user = await http.get<User>(`/api/package/${packageId}/user/${icon.user?.id}`);
       this.$authorAvatar.user = user;
       this.$authorName.innerText = user.name || 'Unknown';
+      // Tags
+      icon.tags.forEach((tag) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.innerText = tag.name || 'error';
+        a.href = `/icons?tag=${tag.url}`;
+        li.appendChild(a);
+        this.$tagList.appendChild(li);
+      });
+      // Aliases
+      icon.aliases.forEach((alias) => {
+        const li = document.createElement('li');
+        li.innerText = alias.name || 'error';
+        this.$aliasList.appendChild(li);
+      });
     }
   }
 }

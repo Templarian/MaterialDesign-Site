@@ -41,7 +41,7 @@ site-carbon {
 .details {
   grid-column: 3 / span 2;
   grid-row: 2;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 [part="headerIcon"] {
@@ -78,4 +78,46 @@ site-carbon {
   grid-column: 2;
   grid-row: 2;
   font-size: 1.125rem;
+}
+
+code {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.125rem;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(69, 60, 79, 0.2);
+  line-height: 1.125rem;
+}
+
+[part="aliasList"],
+[part="tagList"] {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  background-color: var(--site-color);
+  border-radius: 0.25rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+}
+
+[part="aliasList"] li:first-child,
+[part="tagList"] li:first-child {
+  display: inline-flex;
+  --mdi-icon-color: #fff;
+  align-content: center;
+  align-items: center;
+  padding: 0 0.125rem;
+}
+
+[part="aliasList"] li:not(:first-child),
+[part="tagList"] li:not(:first-child) {
+  display: inline-flex;
+  background: #fff;
+  border-radius: 0.25rem;
+  align-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  margin-left: 0.25rem;
 }

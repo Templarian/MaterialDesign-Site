@@ -23,11 +23,13 @@
     "tags": [
         {
             "id": "uuid1",
-            "name": "tag1"
+            "name": "tag1",
+            "url": "tag-1"
         },
         {
             "id": "uuid2",
-            "name": "tag2"
+            "name": "tag2",
+            "url": "tag-2"
         }
     ],
     "fontIcons": [
