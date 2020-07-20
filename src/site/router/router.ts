@@ -55,7 +55,7 @@ export default class SiteRouter extends HTMLElement {
     this.$navIcons.addEventListener('click', this.handleNavIcons.bind(this));
     this.$navDocs.addEventListener('click', this.handleNavDocs.bind(this));
     this.$menu.addEventListener('click', this.handleMenu.bind(this));
-    this.$container.addEventListener('tooltip', this.handleTooltip.bind(this))
+    this.$container.addEventListener('tooltip', this.handleTooltip.bind(this));
 
     this.router = new Router({
       mode: 'history',
