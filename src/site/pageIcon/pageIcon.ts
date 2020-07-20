@@ -37,6 +37,7 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $related: MdiGrid;
   @Part() $preview: MdiPreview;
   @Part() $codepoint: HTMLSpanElement;
+  @Part() $version: HTMLSpanElement;
   @Part() $headerIcon: MdiIcon;
   @Part() $debug: MdiMarkdown;
   @Part() $description: MdiMarkdown;
@@ -68,6 +69,8 @@ export default class SitePageIcon extends HTMLElement {
       this.$headerIcon.path = icon.data as string;
       if (icon.fontIcons.length) {
         this.$codepoint.innerText = icon.fontIcons[0].codepoint || 'Not in a Release';
+        var version = icon.fontIcons[0].version;
+        this.$version.innerText = `v${version.major}.${version.minor}.${version.patch}`
       }
       this.$icon.style.display = 'grid';
       this.$description.text = icon.description || '';
