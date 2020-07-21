@@ -117,20 +117,18 @@ code {
   --mdi-icon-color: #646464;
   --mdi-icon-width: 1rem;
   --mdi-icon-height: 1rem;
-  background: #fff;
-  border-radius: 0.25rem;
-  padding: 1px;
 }
 
 [part="aliasList"] li.item span {
-  padding: 0 0.5rem;
+  padding: 0.25rem 0.5rem;
   background: #fff;
   border-radius: 0.25rem;
+  line-height: 1rem;
 }
 
 [part="tagList"] li.item a {
   display: flex;
-  padding: 0 0.5rem;
+  padding: 0.125rem 0.5rem;
   background: #fff;
   border-radius: 0.25rem;
   color: var(--site-color);
@@ -143,11 +141,12 @@ code {
 [part="tagList"] li.item a:hover {
   --mdi-icon-color: #278eca;
   border-color: #278eca;
+  box-shadow: 0 0 0 1px #fff;
 }
 
 [part="tagList"] li.item a span {
   line-height: 1rem;
-  padding: 0 0 0.25rem 0;
+  padding: 0 0 0.125rem 0;
 }
 
 [part="tagList"] li.item a mdi-icon {
