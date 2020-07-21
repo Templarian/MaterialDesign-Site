@@ -81,27 +81,55 @@ export default class SitePageIcon extends HTMLElement {
       this.$authorAvatar.user = user;
       this.$authorName.innerText = user.name || 'Unknown';
       // Tags
-      icon.tags.forEach((tag) => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        const span = document.createElement('span');
-        const mdiIcon = document.createElement('mdi-icon') as MdiIcon;
-        span.innerText = tag.name || 'error';
-        a.href = `/icons?tag=${tag.url}`;
-        mdiIcon.path = 'M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z';
-        a.appendChild(span);
-        a.appendChild(mdiIcon)
-        li.appendChild(a);
-        this.$tagList.appendChild(li);
-      });
+      this.renderTags(icon);
       // Aliases
-      icon.aliases.forEach((alias) => {
-        const li = document.createElement('li');
-        const span = document.createElement('span');
-        span.innerText = alias.name || 'error';
-        li.appendChild(span);
-        this.$aliasList.appendChild(li);
-      });
+      this.renderAliases(icon);
     }
+  }
+  
+  renderTags(icon) {
+    icon.tags.forEach((tag) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      const span = document.createElement('span');
+      const mdiIcon = document.createElement('mdi-icon') as MdiIcon;
+      span.innerText = tag.name || 'error';
+      a.href = `/icons?tag=${tag.url}`;
+      mdiIcon.path = 'M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z';
+      a.appendChild(span);
+      a.appendChild(mdiIcon);
+      li.classList.add('item');
+      li.appendChild(a);
+      this.$tagList.appendChild(li);
+    });
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    const mdiIcon = document.createElement('mdi-icon') as MdiIcon;
+    mdiIcon.path = 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z';
+    a.href = '';
+    a.appendChild(mdiIcon);
+    li.appendChild(a);
+    li.classList.add('add');
+    this.$tagList.append(li);
+  }
+
+  renderAliases(icon) {
+    icon.aliases.forEach((alias) => {
+      const li = document.createElement('li');
+      const span = document.createElement('span');
+      span.innerText = alias.name || 'error';
+      li.classList.add('item');
+      li.appendChild(span);
+      this.$aliasList.appendChild(li);
+    });
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    const mdiIcon = document.createElement('mdi-icon') as MdiIcon;
+    mdiIcon.path = 'M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z';
+    a.href = '';
+    a.appendChild(mdiIcon);
+    li.appendChild(a);
+    li.classList.add('add');
+    this.$aliasList.append(li);
   }
 }

@@ -93,6 +93,7 @@ code {
 [part="aliasList"],
 [part="tagList"] {
   display: flex;
+  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
@@ -106,13 +107,11 @@ code {
 [part="tagList"] li:first-child {
   display: inline-flex;
   --mdi-icon-color: #fff;
-  align-content: center;
-  align-items: center;
   padding: 0 0.125rem;
 }
 
-[part="aliasList"] li:not(:first-child),
-[part="tagList"] li:not(:first-child) {
+[part="aliasList"] li.item,
+[part="tagList"] li.item {
   display: inline-flex;
   margin-left: 0.25rem;
   --mdi-icon-color: #646464;
@@ -123,14 +122,14 @@ code {
   padding: 1px;
 }
 
-[part="aliasList"] li:not(:first-child) span {
+[part="aliasList"] li.item span {
   padding: 0 0.5rem;
   background: #fff;
   border-radius: 0.25rem;
 }
 
-[part="tagList"] li:not(:first-child) a {
-  display: inline-flex;
+[part="tagList"] li.item a {
+  display: flex;
   padding: 0 0.5rem;
   background: #fff;
   border-radius: 0.25rem;
@@ -141,16 +140,50 @@ code {
   border: 1px solid #fff;
 }
 
-[part="tagList"] li:not(:first-child) a:hover {
+[part="tagList"] li.item a:hover {
   --mdi-icon-color: #278eca;
   border-color: #278eca;
 }
 
-[part="tagList"] li:not(:first-child) a span {
-  display: inline-flex;
+[part="tagList"] li.item a span {
+  line-height: 1rem;
+  padding: 0 0 0.25rem 0;
 }
 
-[part="tagList"] li:not(:first-child) a mdi-icon {
+[part="tagList"] li.item a mdi-icon {
   margin-left: 0.25rem;
   margin-right: -0.25rem;
+}
+
+[part="aliasList"] li.add,
+[part="tagList"] li.add {
+  display: inline-flex;
+  margin-left: 0.25rem;
+}
+
+[part="aliasList"] li.add a,
+[part="tagList"] li.add a {
+  display: inline-flex;
+  padding: 0.25rem;
+  background: #fff;
+  border-radius: 0.25rem;
+  color: var(--site-color);
+  --mdi-icon-color: #278eca;
+  text-decoration: none;
+  align-items: center;
+  border: 0;
+}
+
+[part="aliasList"] li.add a:hover,
+[part="tagList"] li.add a:hover {
+  background-color: #278eca;
+  border-color: #278eca;
+  --mdi-icon-color: #fff;
+}
+
+[part="aliasList"] li.add a mdi-icon,
+[part="tagList"] li.add a mdi-icon {
+  margin: 0;
+  --mdi-icon-width: 1rem;
+  --mdi-icon-height: 1rem;
 }
