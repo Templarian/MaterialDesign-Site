@@ -19,6 +19,7 @@ import MdiButton from '@mdi/components/mdi/button';
 import '@mdi/components/mdi/avatar';
 import MdiAvatar from '@mdi/components/mdi/avatar';
 import { User } from '@mdi/components/mdi/shared/models/user';
+import { addTooltip } from '@mdi/components/mdi/tooltip/addTooltip';
 
 @Component({
   selector: 'site-page-icon',
@@ -45,6 +46,12 @@ export default class SitePageIcon extends HTMLElement {
   @Part() $authorName: HTMLDivElement;
   @Part() $aliasList: HTMLUListElement;
   @Part() $tagList: HTMLUListElement;
+
+  connectedCallback() {
+    addTooltip(this.$codepoint, () => {
+      return `Webfont index`;
+    });
+  }
   
   render(changes) {
     if (changes.name && this.name) {
@@ -111,6 +118,9 @@ export default class SitePageIcon extends HTMLElement {
     li.appendChild(a);
     li.classList.add('add');
     this.$tagList.append(li);
+    addTooltip(a, () => {
+      return `Suggest an Tag`;
+    });
   }
 
   renderAliases(icon) {
@@ -131,5 +141,8 @@ export default class SitePageIcon extends HTMLElement {
     li.appendChild(a);
     li.classList.add('add');
     this.$aliasList.append(li);
+    addTooltip(a, () => {
+      return `Suggest a Alias`;
+    });
   }
 }
