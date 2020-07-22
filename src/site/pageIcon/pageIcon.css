@@ -186,3 +186,7 @@ code {
   --mdi-icon-width: 1rem;
   --mdi-icon-height: 1rem;
 }
+
+.download {
+  margin-top: 0.25rem;
+}
