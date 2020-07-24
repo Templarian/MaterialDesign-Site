@@ -6,3 +6,6 @@
 - and a friend in Japan
 - and that guy that wrote a <a href="https://chrome.google.com/webstore/detail/materialdesignicons-picke/edjaedpifkihpjkcgknfokmibkoafhme">Chrome extension</a>
 - and a friend in Miami
+- and a friend in Germany
+- and fans of Material Design
+- and the Power of Grayskull
