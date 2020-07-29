@@ -1,5 +1,30 @@
 # Changelog
 
+## Version 5.4.55
+
+- 110 New Icons
+- Removed
+  - `mixer`
+- Updated
+  - `beaker-minus-outline`
+  - `bell-minus-outline`
+  - `bell-minus`
+  - `book-minus-multiple-outline`
+  - `book-minus-multiple`
+  - `book-open-variant`
+  - `cancel`
+  - `cash-refund`
+  - `chat-minus-outline`
+  - `credit-card-minus-outline`
+  - `credit-card-minus`
+  - `currency-sign`
+  - `email-minus-outline`
+  - `map-minus`
+  - `tag-minus-outline`
+  - `toy-brick-minus-outline`
+  - `toy-brick-minus`
+  - `water-off`
+
 ## Version 5.3.45
 
 - 100 New Icons

@@ -2,13 +2,18 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 5.3.45 to 5.4.55
+
+- Removed
+  - `mixer`
+
 ## 5.2.45 to 5.3.45
 
 - None
 
 ## 5.1.45 to 5.2.45
 
-Rename
+- Rename
   - `syllabary-katakana-half-width` to `syllabary-katakana-halfwidth`
 
 ## 5.0.45 to 5.1.45
