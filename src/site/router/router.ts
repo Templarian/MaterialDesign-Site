@@ -131,16 +131,16 @@ export default class SiteRouter extends HTMLElement {
     const messages = and.split(/\r?\n/);
 
     // shuffle and resize array in-place
-    const size = Math.min(3, messages.length);
-    const lastIndex = messages.length - 1;
+    const length = messages.length;
+    const samples = Math.min(3, length);
     let index = -1;
-    while (++index < size) {
-      const rand = index + Math.floor(Math.random() * (lastIndex - index + 1));
+    while (++index < samples) {
+      const rand = index + Math.floor(Math.random() * (length - index));
       const value = messages[rand];
       messages[rand] = messages[index];
       messages[index] = value;
     }
-    messages.length = size;
+    messages.length = samples;
 
     this.$and.innerHTML = messages
       .map(m => ` <span>${m.replace('- ', '')}</span>`)
