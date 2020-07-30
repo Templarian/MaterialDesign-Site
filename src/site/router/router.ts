@@ -127,7 +127,7 @@ export default class SiteRouter extends HTMLElement {
   }
 
   async and() {
-    const and = await http.asset('/content/and.md');
+    const and = (await http.asset('/content/and.md')).trim();
     const messages = and.split(/\r?\n/);
 
     // shuffle and resize array in-place
