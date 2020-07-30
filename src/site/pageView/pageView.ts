@@ -53,9 +53,12 @@ export default class SitePageView extends HTMLElement {
       find: new RegExp('<h1>(.*)</h1>'),
       replace: (m, h1) => {
         // Prevent double setting title
-        document.title = h1;
         this.$header.innerHTML = h1;
-        this.$suggest.href = `https://github.com/Templarian/MaterialDesign-Site/issues/new?title=Suggested%20Change%20to%20%22${h1}%22&body=%3C%21--%20Describe%20how%20you%20would%20improve%20the%20documentation%20here%20--%3E`;
+        const decodedTitle = this.$header.textContent ?? window.location.pathname;
+        document.title = decodedTitle;
+        const title = encodeURIComponent(`Suggested Change to "${decodedTitle}"`);
+        const body = encodeURIComponent(`<!-- Describe how you would improve the documentation here -->`);
+        this.$suggest.href = `https://github.com/Templarian/MaterialDesign-Site/issues/new?title=${title}&body=${body}`;
         return '';
       }
     }, {
@@ -126,7 +129,7 @@ export default class SitePageView extends HTMLElement {
       });
       var file = match ? match.file : '/content/404.md';
       this.$markdown.file = file;
-      this.$edit.href = `https://github.com/Templarian/MaterialDesign-Site/tree/master/src/${file}`;
+      this.$edit.href = `https://github.com/Templarian/MaterialDesign-Site/blob/master/src${file}`;
     }
     if (changes.icons) {
       this.initIcons = true;
