@@ -127,14 +127,24 @@ export default class SiteRouter extends HTMLElement {
   }
 
   async and() {
-    const and = await http.asset('/content/and.md');
+    const and = (await http.asset('/content/and.md')).trim();
     const messages = and.split(/\r?\n/);
-    const r = Math.floor(Math.random() * (messages.length - 2));
-    this.$and.innerHTML = [
-      ` <span>${messages[r].replace('- ', '')}</span>`,
-      ` <span>${messages[r + 1].replace('- ', '')}</span>`,
-      ` <span>${messages[r + 2].replace('- ', '')}</span>`,
-    ].join('');
+
+    // shuffle and resize array in-place
+    const length = messages.length;
+    const samples = Math.min(3, length);
+    let index = -1;
+    while (++index < samples) {
+      const rand = index + Math.floor(Math.random() * (length - index));
+      const value = messages[rand];
+      messages[rand] = messages[index];
+      messages[index] = value;
+    }
+    messages.length = samples;
+
+    this.$and.innerHTML = messages
+      .map(m => ` <span>${m.replace('- ', '')}</span>`)
+      .join('');
   }
 
   async sync(db) {
