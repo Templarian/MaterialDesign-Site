@@ -69,9 +69,11 @@ export default class SitePageGithub extends HTMLElement {
 
   connectedCallback() {
     this.$markdown.file = GITHUB_FILE;
-    this.$edit.href = `https://github.com/Templarian/MaterialDesign-Site/tree/master/src/${GITHUB_FILE}`;
+    this.$edit.href = `https://github.com/Templarian/MaterialDesign-Site/blob/master/src${GITHUB_FILE}`;
     const h1 = 'GitHub Icon Preview Generator Instructions';
-    this.$suggest.href = `https://github.com/Templarian/MaterialDesign-Site/issues/new?title=Suggested%20Change%20to%20%22${h1}%22&body=%3C%21--%20Describe%20how%20you%20would%20improve%20the%20documentation%20here%20--%3E`;
+    const title = encodeURIComponent(`Suggested Change to "${h1}"`);
+    const body = encodeURIComponent(`<!-- Describe how you would improve the documentation here -->`);
+    this.$suggest.href = `https://github.com/Templarian/MaterialDesign-Site/issues/new?title=${title}&body=${body}`;
     this.$wipYes.addEventListener('click', () => {
       this.wip = true;
     });
