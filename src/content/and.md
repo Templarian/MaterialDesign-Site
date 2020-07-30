@@ -6,3 +6,12 @@
 - and a friend in Japan
 - and that guy that wrote a <a href="https://chrome.google.com/webstore/detail/materialdesignicons-picke/edjaedpifkihpjkcgknfokmibkoafhme">Chrome extension</a>
 - and a friend in Miami
+- and a friend in Germany
+- and fans of Material Design
+- and Bond. James Bond.
+- and the Power of Grayskull
+- and oh my God! They killed Kenny!
+- and don’t call me Shirley
+- and may the Force be with you!
+- in a galaxy far, far away
+- – to boldly go where no man has gone before
