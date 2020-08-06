@@ -82,6 +82,10 @@ export default class SiteRouter extends HTMLElement {
       this.page.name = name;
     });
     // Markdown Pages
+    this.router.add('about', () => {
+      this.updatePage('about');
+      this.page.slug = `about`;
+    });
     this.router.add('documentation', () => {
       this.updatePage('view');
       this.page.slug = `documentation`;

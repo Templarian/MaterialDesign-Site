@@ -31,7 +31,8 @@ import {
   mdiClockOutline,
   mdiFormatListChecks,
   mdiTextBoxOutline,
-  mdiFileStar
+  mdiFileStar,
+  mdiInformationOutline
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -220,6 +221,12 @@ export const navigationItems = [{
   icon: mdiFileTree,
   url: '/contribute/site/api',
   file: '/content/api.md'
+}, {
+  type: 'Meta',
+  name: 'About',
+  icon: mdiInformationOutline,
+  url: '/about',
+  file: '/content/about.md'
 }, {
   type: 'Meta',
   name: 'Changelog',
