@@ -9,6 +9,8 @@ import '@mdi/components/mdi/button';
 import MdiButton from '@mdi/components/mdi/button';
 import '@mdi/components/mdi/buttonGroup';
 import MdiButtonGroup from '@mdi/components/mdi/buttonGroup';
+import '@mdi/components/mdi/inputText';
+import MdiInputText from '@mdi/components/mdi/inputText';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
 import { getGitHubPreview } from './utils';
 
@@ -33,9 +35,9 @@ export default class SitePageGithub extends HTMLElement {
   @Part() $iconNone: MdiButton;
   @Part() $iconDownload: MdiButton;
   @Part() $iconLink: MdiButton;
-  @Part() $inputName: HTMLInputElement;
-  @Part() $inputData: HTMLInputElement;
-  @Part() $inputShadow: HTMLInputElement;
+  @Part() $inputName: MdiInputText;
+  @Part() $inputData: MdiInputText;
+  @Part() $inputShadow: MdiInputText;
   @Part() $canvas: HTMLCanvasElement;
 
   ulIndent: HTMLLIElement[] = [];
