@@ -3,6 +3,8 @@ import { Component, Prop, Part } from '@mdi/element';
 import template from "./pageView.html";
 import style from './pageView.css';
 
+import '@mdi/components/mdi/buttonLink';
+import MdiButtonLink from '@mdi/components/mdi/buttonLink';
 import '@mdi/components/mdi/markdown';
 import MdiMarkdown from '@mdi/components/mdi/markdown';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
@@ -38,8 +40,8 @@ export default class SitePageView extends HTMLElement {
   @Part() $markdown: MdiMarkdown;
   @Part() $nav: HTMLUListElement;
   @Part() $header: HTMLHeadingElement;
-  @Part() $edit: HTMLAnchorElement;
-  @Part() $suggest: HTMLAnchorElement;
+  @Part() $edit: MdiButtonLink;
+  @Part() $suggest: MdiButtonLink;
 
   ulIndent: HTMLLIElement[] = [];
 

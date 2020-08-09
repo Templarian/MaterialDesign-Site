@@ -86,25 +86,14 @@ aside section {
   box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.2) inset;
 }
 
-aside section a {
-  display: flex;
-  padding: 0.5rem;
-  text-decoration: none;
-  border: 1px solid var(--site-color);
-  color: var(--site-color);
-  border-radius: 0.25rem;
+aside section mdi-button-link {
+  --mdi-button-background-color: transparent;
+  --mdi-button-padding: 0.5rem;
   margin-bottom: 0.5rem;
-  align-items: center;
 }
 
-aside section a mdi-icon {
+aside section mdi-button-link mdi-icon {
   margin-right: 0.5rem;
-}
-
-aside section a:hover {
-  background: var(--site-color);
-  color: #fff;
-  --mdi-icon-color: #fff;
 }
 
 main {
