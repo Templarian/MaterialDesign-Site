@@ -7,6 +7,8 @@ import '@mdi/components/mdi/buttonLink';
 import '@mdi/components/mdi/scroll';
 import '@mdi/components/mdi/grid';
 import MdiGrid from '@mdi/components/mdi/grid';
+import '@mdi/components/mdi/inputSelect';
+import MdiInputSelect from '@mdi/components/mdi/inputSelect';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
 
 @Component({
@@ -19,8 +21,14 @@ export default class SitePageIcons extends HTMLElement {
   @Prop() navigationItems: any[] = [];
   
   @Part() $grid: MdiGrid;
+  @Part() $select: MdiInputSelect;
 
   connectedCallback() {
+    this.$select.options = [
+      { label: 'one', value: '1' },
+      { label: 'two', value: '2' },
+      { label: 'three', value: '3' }
+    ]
   }
   
   render(changes) {

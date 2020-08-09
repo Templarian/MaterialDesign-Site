@@ -4,13 +4,12 @@
 }
 
 aside {
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
   grid-column: 1;
 }
 
 aside section {
   margin-left: -1rem;
-  margin-right: -1rem;
   border-radius: 0 0.5rem 0.5rem 0;
   padding: 0.25rem 1rem 0.75rem 1rem;
   margin-top: 1rem;
@@ -37,31 +36,8 @@ main {
   border: 1px solid var(--site-color);
   border-radius: 0.25rem;
   padding: 0.5rem 0.75rem;
-  width: calc(100% - 0.725rem);
+  width: calc(100% - 1.725rem);
   font-size: 1rem;
   margin-top: 1rem;
   outline: 0;
-}
-
-[part="select"] {
-  border: 1px solid var(--site-color);
-  border-radius: 0.25rem;
-  padding: 0.5rem 0.75rem;
-  width: calc(100% + 1rem);
-  font-size: 1rem;
-  margin-top: 1rem;
-  outline: 0;
-  -webkit-appearance: none;
-}
-
-.icon {
-  height: 0;
-}
-
-.icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  transform: translate(275px, -29px);
-  color: var(--site-color);
-  pointer-events: none;
 }
