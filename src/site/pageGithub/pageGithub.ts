@@ -5,6 +5,10 @@ import style from './pageGithub.css';
 
 import '@mdi/components/mdi/markdown';
 import MdiMarkdown from '@mdi/components/mdi/markdown';
+import '@mdi/components/mdi/icon';
+import MdiIcon from '@mdi/components/mdi/icon';
+import '@mdi/components/mdi/buttonToggle';
+import MdiButtonToggle from '@mdi/components/mdi/buttonToggle';
 import '@mdi/components/mdi/button';
 import MdiButton from '@mdi/components/mdi/button';
 import '@mdi/components/mdi/buttonLink';
@@ -14,6 +18,7 @@ import MdiButtonGroup from '@mdi/components/mdi/buttonGroup';
 import '@mdi/components/mdi/inputText';
 import MdiInputText from '@mdi/components/mdi/inputText';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
+import { addTooltip } from '@mdi/components/mdi/tooltip/addTooltip';
 import { getGitHubPreview } from './utils';
 
 const GITHUB_FILE = '/content/github.md';
@@ -27,6 +32,8 @@ export default class SitePageGithub extends HTMLElement {
   @Prop() icons: Icon[] = [];
   @Prop() navigationItems: any[] = [];
   
+  @Part() $instructionsButton: MdiButtonToggle;
+  @Part() $instructionsSection: HTMLDivElement;
   @Part() $markdown: MdiMarkdown;
   @Part() $nav: HTMLUListElement;
   @Part() $header: HTMLHeadingElement;
@@ -72,10 +79,18 @@ export default class SitePageGithub extends HTMLElement {
   _shadowPath = '';
 
   connectedCallback() {
+    // Instructions
     this.$markdown.file = GITHUB_FILE;
+    this.$instructionsButton.addEventListener('click', this.handleInstructionsToggle.bind(this));
+    this.$instructionsSection.style.display = 'none';
+    addTooltip(this.$instructionsButton, () => {
+      return `Toggle Instructions`;
+    });
+    // Sidebar
     this.$edit.href = `https://github.com/Templarian/MaterialDesign-Site/tree/master/src/${GITHUB_FILE}`;
     const h1 = 'GitHub Icon Preview Generator Instructions';
     this.$suggest.href = `https://github.com/Templarian/MaterialDesign-Site/issues/new?title=Suggested%20Change%20to%20%22${h1}%22&body=%3C%21--%20Describe%20how%20you%20would%20improve%20the%20documentation%20here%20--%3E`;
+    // Form
     this.$wipYes.addEventListener('click', () => {
       this.wip = true;
     });
@@ -174,5 +189,10 @@ export default class SitePageGithub extends HTMLElement {
       img.onerror = () => { reject(); };
       img.src = imageUrl;
     });
+  }
+
+  handleInstructionsToggle(e) {
+    const { active } = e.detail;
+    this.$instructionsSection.style.display = active ? 'initial' : 'none';
   }
 }

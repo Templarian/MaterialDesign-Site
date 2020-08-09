@@ -146,3 +146,8 @@ canvas {
   margin-top: 1rem;
   box-shadow: 0 1px 0.25rem rgba(0, 0, 0, 0.4);
 }
+
+h2 mdi-button-toggle {
+  float: left;
+  margin-right: 0.5rem;
+}

@@ -6,6 +6,7 @@
   <aside>
     <nav>
       <ul part="nav">
+        <li>Instructions</li>
         <li>Icon Preview Generator</li>
       </ul>
     </nav>
@@ -22,7 +23,16 @@
     </section>
   </aside>
   <main>
-    <mdi-markdown part="markdown"></mdi-markdown>
+    <h2>
+      <mdi-button-toggle part="instructionsButton">
+        <mdi-icon slot="active" path="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></mdi-icon>
+        <mdi-icon slot="inactive" path="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"></mdi-icon>
+      </mdi-button-toggle>
+      Instructions
+    </h2>
+    <div part="instructionsSection">
+      <mdi-markdown part="markdown"></mdi-markdown>
+    </div>
 
     <h2>Icon Preview Generator</h2>
 
