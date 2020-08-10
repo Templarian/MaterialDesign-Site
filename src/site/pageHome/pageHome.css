@@ -9,6 +9,7 @@
   --mdi-button-border-color: rgba(255, 255, 255, 0.5);
   --mdi-button-background-color: transparent;
   --mdi-button-hover-border-color: #fff;
+  --mdi-button-padding: 0.5rem 0.75rem;
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
@@ -26,6 +27,10 @@
   padding-top: 1rem;
   justify-items: center;
   justify-content: center;
+}
+
+.banner .buttons mdi-icon {
+  margin-right: 0.5rem;
 }
 
 .banner .buttons mdi-button-link:first-child {
