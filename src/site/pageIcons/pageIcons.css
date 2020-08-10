@@ -41,3 +41,35 @@ main {
   margin-top: 1rem;
   outline: 0;
 }
+
+.seperator {
+  display: flex;
+  padding: 0.75rem 0;
+  justify-items: center;
+  align-items: center;
+  cursor: default;
+}
+
+.seperator::before {
+  content: ' ';
+  border-top: 1px solid rgba(69, 60, 79, 0.75);
+  height: 0;
+  flex: 1;
+  margin-bottom: -1px;
+}
+
+.seperator::after {
+  content: ' ';
+  border-top: 1px solid rgba(69, 60, 79, 0.75);
+  height: 0;
+  flex: 1;
+  margin-bottom: -1px;
+}
+
+.seperator span {
+  padding: 0.25rem 0.5rem;
+  color: rgba(69, 60, 79, 0.9);
+  border-radius: 0.5rem;
+  flex: 1;
+  white-space: nowrap;
+}
