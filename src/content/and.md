@@ -5,7 +5,7 @@
 - and people that submit <a href="https://github.com/Templarian/MaterialDesign/issues">issues</a>
 - and a friend in Japan
 - and that guy that wrote a <a href="https://chrome.google.com/webstore/detail/materialdesignicons-picke/edjaedpifkihpjkcgknfokmibkoafhme">Chrome extension</a>
-- and a friend in Miami
+- and a friend outside Tampa
 - and a friend in Germany
 - and fans of Material Design
 - and Bond. James Bond.
