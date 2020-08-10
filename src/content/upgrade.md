@@ -4,8 +4,9 @@ Follow the guide starting with your version to the version you wish to upgrade t
 
 ## 5.4.45 to 5.5.55
 
-- Removed
-  - `scooter` (mistake, this will be fixed soon)
+- Renamed
+  - `scooter` to `scooter-human`
+    - `scooter` in next release
 
 ## 5.3.45 to 5.4.55
 

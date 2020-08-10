@@ -3,8 +3,9 @@
 ## Version 5.5.55
 
 - 100 New Icons
-- Removed
-  - `scooter` (mistake, this will be fixed soon)
+- Renamed
+  - `scooter` to `scooter-human`
+    - `scooter` in next release
 - Updated
   - `account-tie`
   - `calculator-variant`
