@@ -1,5 +1,19 @@
 # Changelog
 
+## Version 5.5.55
+
+- 100 New Icons
+- Removed
+  - `scooter` (mistake, this will be fixed soon)
+- Updated
+  - `account-tie`
+  - `calculator-variant`
+  - `car-electric`
+  - `content-save-cog`
+  - `meditation`
+  - `sofa`
+  - `star-off`
+
 ## Version 5.4.55
 
 - 110 New Icons

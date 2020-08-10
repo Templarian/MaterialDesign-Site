@@ -2,6 +2,11 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 5.4.45 to 5.5.55
+
+- Removed
+  - `scooter` (mistake, this will be fixed soon)
+
 ## 5.3.45 to 5.4.55
 
 - Removed
