@@ -10,6 +10,8 @@ import MdiGrid from '@mdi/components/mdi/grid';
 import '@mdi/components/mdi/inputSelect';
 import MdiInputSelect from '@mdi/components/mdi/inputSelect';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
+import { http } from '@mdi/components/mdi/shared/http';
+import { Tag } from 'app/shared/models/tag.model';
 
 @Component({
   selector: 'site-page-icons',
@@ -23,12 +25,20 @@ export default class SitePageIcons extends HTMLElement {
   @Part() $grid: MdiGrid;
   @Part() $select: MdiInputSelect;
 
-  connectedCallback() {
+  async connectedCallback() {
+    const packageId = '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B';
+    const tags = (await http.get<Tag[]>(`/api/package/${packageId}/tag`)).map(tag => new Tag().from(tag));
     this.$select.options = [
-      { label: 'one', value: '1' },
-      { label: 'two', value: '2' },
-      { label: 'three', value: '3' }
-    ]
+      {
+        label: 'All Tags',
+        value: 'all'
+      },
+      ...tags.map(tag => ({
+        label: tag.name,
+        value: tag.id
+      }))
+    ];
+    this.$select.value = 'all';
   }
   
   render(changes) {

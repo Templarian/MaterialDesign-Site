@@ -1,0 +1,368 @@
+[
+  {
+    "id": "fe9fa4d9-c43f-11e7-bf5c-94188269ec50",
+    "name": "Account \/ User",
+    "url": "user",
+    "count": 141
+  },
+  {
+    "id": "d77d700f-c442-11e7-bf5c-94188269ec50",
+    "name": "Agriculture",
+    "url": "agriculture",
+    "count": 31
+  },
+  {
+    "id": "b342d299-c440-11e7-bf5c-94188269ec50",
+    "name": "Alert \/ Error",
+    "url": "alert",
+    "count": 125
+  },
+  {
+    "id": "698dfe05-8c5d-11e9-aab8-94188269ec50",
+    "name": "Alpha \/ Numeric",
+    "url": "alpha-numeric",
+    "count": 252
+  },
+  {
+    "id": "e6e50b86-c442-11e7-bf5c-94188269ec50",
+    "name": "Animal",
+    "url": "animal",
+    "count": 39
+  },
+  {
+    "id": "7d5b9cd9-c440-11e7-bf5c-94188269ec50",
+    "name": "Arrange",
+    "url": "arrange",
+    "count": 10
+  },
+  {
+    "id": "ee2becf5-c440-11e7-bf5c-94188269ec50",
+    "name": "Arrow",
+    "url": "arrow",
+    "count": 199
+  },
+  {
+    "id": "951b494b-c440-11e7-bf5c-94188269ec50",
+    "name": "Audio",
+    "url": "audio",
+    "count": 64
+  },
+  {
+    "id": "8270a6d0-f01d-11e8-92de-94188269ec50",
+    "name": "Automotive",
+    "url": "automotive",
+    "count": 140
+  },
+  {
+    "id": "a2fb86c1-c441-11e7-bf5c-94188269ec50",
+    "name": "Banking",
+    "url": "banking",
+    "count": 81
+  },
+  {
+    "id": "fa71492a-c441-11e7-bf5c-94188269ec50",
+    "name": "Battery",
+    "url": "battery",
+    "count": 76
+  },
+  {
+    "id": "ba265295-c440-11e7-bf5c-94188269ec50",
+    "name": "Brand \/ Logo",
+    "url": "brand",
+    "count": 211
+  },
+  {
+    "id": "73931f8b-c442-11e7-bf5c-94188269ec50",
+    "name": "Cellphone \/ Phone",
+    "url": "phone",
+    "count": 123
+  },
+  {
+    "id": "02a561dc-c443-11e7-bf5c-94188269ec50",
+    "name": "Clothing",
+    "url": "clothing",
+    "count": 23
+  },
+  {
+    "id": "3aba918a-c442-11e7-bf5c-94188269ec50",
+    "name": "Cloud",
+    "url": "cloud",
+    "count": 29
+  },
+  {
+    "id": "eae0dab6-c441-11e7-bf5c-94188269ec50",
+    "name": "Color",
+    "url": "color",
+    "count": 17
+  },
+  {
+    "id": "f0192aab-c442-11e7-bf5c-94188269ec50",
+    "name": "Currency",
+    "url": "currency",
+    "count": 43
+  },
+  {
+    "id": "730fd2ee-933e-11ea-8a9a-94188269ec50",
+    "name": "Database",
+    "url": "database",
+    "count": 58
+  },
+  {
+    "id": "4c4ffbd8-c441-11e7-bf5c-94188269ec50",
+    "name": "Date \/ Time",
+    "url": "date-time",
+    "count": 131
+  },
+  {
+    "id": "57b8927b-c442-11e7-bf5c-94188269ec50",
+    "name": "Developer \/ Languages",
+    "url": "developer-languages",
+    "count": 92
+  },
+  {
+    "id": "166bda53-c442-11e7-bf5c-94188269ec50",
+    "name": "Device \/ Tech",
+    "url": "device-tech",
+    "count": 86
+  },
+  {
+    "id": "d0136de8-c441-11e7-bf5c-94188269ec50",
+    "name": "Drawing \/ Art",
+    "url": "drawing-art",
+    "count": 29
+  },
+  {
+    "id": "9893f0c5-c442-11e7-bf5c-94188269ec50",
+    "name": "Edit \/ Modify",
+    "url": "edit-modify",
+    "count": 46
+  },
+  {
+    "id": "59de11e2-c443-11e7-bf5c-94188269ec50",
+    "name": "Emoji",
+    "url": "emoji",
+    "count": 37
+  },
+  {
+    "id": "46ec35eb-c441-11e7-bf5c-94188269ec50",
+    "name": "Files \/ Folders",
+    "url": "file-folder",
+    "count": 201
+  },
+  {
+    "id": "5e1955a5-c441-11e7-bf5c-94188269ec50",
+    "name": "Food \/ Drink",
+    "url": "food-drink",
+    "count": 145
+  },
+  {
+    "id": "87220f3e-c442-11e7-bf5c-94188269ec50",
+    "name": "Form",
+    "url": "form",
+    "count": 33
+  },
+  {
+    "id": "c78f2957-eae3-11e8-92de-94188269ec50",
+    "name": "Gaming \/ RPG",
+    "url": "gaming",
+    "count": 160
+  },
+  {
+    "id": "2f9f3dd6-f0a4-11e9-8924-94188269ec50",
+    "name": "Geographic Information System",
+    "url": "geographic-information-system",
+    "count": 117
+  },
+  {
+    "id": "69697a56-c442-11e7-bf5c-94188269ec50",
+    "name": "Hardware \/ Tools",
+    "url": "hardware-tools",
+    "count": 42
+  },
+  {
+    "id": "713cb190-d41a-11ea-8812-94188269ec50",
+    "name": "Health \/ Beauty",
+    "url": "health-beauty",
+    "count": 10
+  },
+  {
+    "id": "a89ea81e-c442-11e7-bf5c-94188269ec50",
+    "name": "Holiday",
+    "url": "holiday",
+    "count": 40
+  },
+  {
+    "id": "8399c00e-c441-11e7-bf5c-94188269ec50",
+    "name": "Home Automation",
+    "url": "home-automation",
+    "count": 365
+  },
+  {
+    "id": "f7a680b9-c440-11e7-bf5c-94188269ec50",
+    "name": "Lock",
+    "url": "lock",
+    "count": 68
+  },
+  {
+    "id": "a3cf229b-c440-11e7-bf5c-94188269ec50",
+    "name": "Math",
+    "url": "math",
+    "count": 110
+  },
+  {
+    "id": "c7ebc20f-c442-11e7-bf5c-94188269ec50",
+    "name": "Medical \/ Hospital",
+    "url": "medical",
+    "count": 63
+  },
+  {
+    "id": "4c855818-2594-11e9-92de-94188269ec50",
+    "name": "Music",
+    "url": "music",
+    "count": 66
+  },
+  {
+    "id": "a2fb7fcb-c441-11e7-bf5c-94188269ec50",
+    "name": "Nature",
+    "url": "nature",
+    "count": 50
+  },
+  {
+    "id": "c6eca571-c440-11e7-bf5c-94188269ec50",
+    "name": "Navigation",
+    "url": "navigation",
+    "count": 68
+  },
+  {
+    "id": "2d8a6dba-095e-11e4-bf19-842b2b6cfe1b",
+    "name": "Notification",
+    "url": "notification",
+    "count": 24
+  },
+  {
+    "id": "40243e9b-9ad7-11e9-aab8-94188269ec50",
+    "name": "People \/ Family",
+    "url": "people-family",
+    "count": 44
+  },
+  {
+    "id": "08ab8b7d-c443-11e7-bf5c-94188269ec50",
+    "name": "Photography",
+    "url": "photography",
+    "count": 61
+  },
+  {
+    "id": "3aac837d-c443-11e7-bf5c-94188269ec50",
+    "name": "Places",
+    "url": "places",
+    "count": 30
+  },
+  {
+    "id": "44ec2404-07fa-11e4-bf19-842b2b6cfe1b",
+    "name": "Printer",
+    "url": "printer",
+    "count": 17
+  },
+  {
+    "id": "af20ff10-c442-11e7-bf5c-94188269ec50",
+    "name": "Religion",
+    "url": "religion",
+    "count": 13
+  },
+  {
+    "id": "21bab097-c443-11e7-bf5c-94188269ec50",
+    "name": "Science",
+    "url": "science",
+    "count": 68
+  },
+  {
+    "id": "74b4ac37-c441-11e7-bf5c-94188269ec50",
+    "name": "Settings",
+    "url": "settings",
+    "count": 65
+  },
+  {
+    "id": "51511543-c440-11e7-bf5c-94188269ec50",
+    "name": "Shape",
+    "url": "shape",
+    "count": 60
+  },
+  {
+    "id": "011d3c39-c441-11e7-bf5c-94188269ec50",
+    "name": "Shopping",
+    "url": "shopping",
+    "count": 34
+  },
+  {
+    "id": "714f16ec-c440-11e7-bf5c-94188269ec50",
+    "name": "Social Media",
+    "url": "social-media",
+    "count": 10
+  },
+  {
+    "id": "3aac7d8b-c443-11e7-bf5c-94188269ec50",
+    "name": "Sport",
+    "url": "sport",
+    "count": 96
+  },
+  {
+    "id": "df0dfcdf-c441-11e7-bf5c-94188269ec50",
+    "name": "Text \/ Content \/ Format",
+    "url": "formatting",
+    "count": 183
+  },
+  {
+    "id": "2ff4d537-c442-11e7-bf5c-94188269ec50",
+    "name": "Tooltip",
+    "url": "tooltip",
+    "count": 17
+  },
+  {
+    "id": "1e719aec-c442-11e7-bf5c-94188269ec50",
+    "name": "Transportation + Flying",
+    "url": "transportation-flying",
+    "count": 29
+  },
+  {
+    "id": "ebe0e29d-c447-11e7-bf5c-94188269ec50",
+    "name": "Transportation + Other",
+    "url": "transportation-other",
+    "count": 44
+  },
+  {
+    "id": "da97dccc-c447-11e7-bf5c-94188269ec50",
+    "name": "Transportation + Road",
+    "url": "transportation-road",
+    "count": 75
+  },
+  {
+    "id": "ce7a7c34-c447-11e7-bf5c-94188269ec50",
+    "name": "Transportation + Water",
+    "url": "transportation-water",
+    "count": 10
+  },
+  {
+    "id": "cceb1857-c440-11e7-bf5c-94188269ec50",
+    "name": "Vector",
+    "url": "vector",
+    "count": 23
+  },
+  {
+    "id": "e1d9034c-c440-11e7-bf5c-94188269ec50",
+    "name": "Video \/ Movie",
+    "url": "video",
+    "count": 59
+  },
+  {
+    "id": "0cce4b67-c441-11e7-bf5c-94188269ec50",
+    "name": "View",
+    "url": "view",
+    "count": 40
+  },
+  {
+    "id": "5B2EB615-1802-4E65-92A5-90653EE673B3",
+    "name": "Weather",
+    "url": "weather",
+    "count": 72
+  }
+]
