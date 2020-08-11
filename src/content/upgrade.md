@@ -5,7 +5,7 @@ Follow the guide starting with your version to the version you wish to upgrade t
 ## 5.4.45 to 5.5.55
 
 - Renamed
-  - `scooter` to `scooter-human`
+  - `scooter` to `human-scooter`
     - `scooter` in next release
 
 ## 5.3.45 to 5.4.55

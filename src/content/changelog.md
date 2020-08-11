@@ -4,7 +4,7 @@
 
 - 100 New Icons
 - Renamed
-  - `scooter` to `scooter-human`
+  - `scooter` to `human-scooter`
     - `scooter` in next release
 - Updated
   - `account-tie`
