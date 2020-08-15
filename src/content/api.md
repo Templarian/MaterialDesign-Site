@@ -56,3 +56,5 @@ import:/content/api/post-admin-icon-tag.md
 import:/content/api/post-admin-icon-alias.md
 
 import:/content/api/post-admin-icon-style.md
+
+import:/content/api/post-admin-user.md

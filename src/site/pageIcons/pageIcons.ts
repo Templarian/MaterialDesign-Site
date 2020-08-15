@@ -7,6 +7,8 @@ import '@mdi/components/mdi/buttonLink';
 import '@mdi/components/mdi/scroll';
 import '@mdi/components/mdi/grid';
 import MdiGrid from '@mdi/components/mdi/grid';
+import '@mdi/components/mdi/inputTextIcon';
+import MdiInputTextIcon from '@mdi/components/mdi/inputTextIcon';
 import '@mdi/components/mdi/inputSelect';
 import MdiInputSelect from '@mdi/components/mdi/inputSelect';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
@@ -23,6 +25,7 @@ export default class SitePageIcons extends HTMLElement {
   @Prop() navigationItems: any[] = [];
   
   @Part() $grid: MdiGrid;
+  @Part() $search: MdiInputTextIcon;
   @Part() $select: MdiInputSelect;
 
   async connectedCallback() {

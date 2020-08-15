@@ -11,7 +11,7 @@
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor",
-    "start:site": "cross-env NODE_OPTIONS=--max_old_space_size=4096 rollup -c -w",
+    "start:site": "cross-env NODE_OPTIONS=--max_old_space_size=8192 rollup -c -w",
     "build:site": "rollup -c",
     "test:site": "jest --no-cache"
   },
@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "^9.1.12",
     "@angular/platform-server": "^9.1.12",
     "@angular/router": "^9.1.12",
-    "@mdi/components": "^0.1.69",
+    "@mdi/components": "^0.1.71",
     "@ng-bootstrap/ng-bootstrap": "^5.3.1",
     "@rollup/plugin-multi-entry": "^3.0.1",
     "@rollup/plugin-node-resolve": "^8.1.0",

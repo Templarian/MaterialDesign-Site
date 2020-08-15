@@ -33,13 +33,7 @@ main {
 }
 
 [part="search"] {
-  border: 1px solid var(--site-color);
-  border-radius: 0.25rem;
-  padding: 0.5rem 0.75rem;
-  width: calc(100% - 1.725rem);
-  font-size: 1rem;
   margin-top: 1rem;
-  outline: 0;
 }
 
 .seperator {
