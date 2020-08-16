@@ -9,7 +9,7 @@ tab Description
 
 Insert a new `user` into the database. These users are readonly and cannot be logged into.
 
-> **Note:** This API requires elevated `core` access.
+> **Information:** This API requires elevated `core` access.
 
 /tab
 tab Request
