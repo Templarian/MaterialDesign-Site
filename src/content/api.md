@@ -35,6 +35,8 @@ import:/content/api/get-base-icons.md
 
 import:/content/api/get-icon-download.md
 
+import:/content/api/get-package-user.md
+
 ## Private Endpoints
 
 While pretty much all data is open to the public most of the management related API's are restricted to collaborator and admin accounts.
