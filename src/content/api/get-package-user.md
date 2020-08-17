@@ -1,4 +1,4 @@
-### Get Package User
+### Get List of Users by PackageId
 
 ```
 POST api/package/:packageId/user
