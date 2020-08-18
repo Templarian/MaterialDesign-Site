@@ -62,14 +62,14 @@ export default class SitePageIcon extends HTMLElement {
 
   async load(name: string) {
     const packageId = '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B';
-    const icon = await http.get<Icon>(`/api/package/${packageId}/name/${name}`);
+    const icon = new Icon().from((await http.get<Icon>(`/api/package/${packageId}/name/${name}`)));
     const { error } = icon as any;
     this.$loading.style.display = 'none';
     if (error) {
       this.$error.style.display = 'block';
     } else {
       // Populate Icon data
-      const related = await http.get<Icon[]>(`/api/icon/${icon.id}/base`);
+      const related = (await http.get<Icon[]>(`/api/icon/${icon.id}/base`)).map(icon => new Icon().from(icon));
       this.$related.icons = related;
       this.$preview.size = 10;
       this.$preview.path = icon.data as string;
@@ -84,7 +84,7 @@ export default class SitePageIcon extends HTMLElement {
       const ticks = '```';
       this.$debug.text = `${ticks}json\n${JSON.stringify(icon, null, 2)}\n${ticks}`;
       // Author data
-      const user = await http.get<User>(`/api/package/${packageId}/user/${icon.user?.id}`);
+      const user = new User().from(await http.get<User>(`/api/package/${packageId}/user/${icon.user?.id}`));
       this.$authorAvatar.user = user;
       this.$authorName.innerText = user.name || 'Unknown';
       // Tags
