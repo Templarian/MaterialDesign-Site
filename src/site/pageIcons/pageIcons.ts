@@ -53,7 +53,7 @@ export default class SitePageIcons extends HTMLElement {
       avatar.user = user;
       this.$contributors.appendChild(avatar);
       addTooltip(avatar, () => {
-        return user.name;
+        return `${user.name} (${user.iconCount})`;
       });
     });
   }
