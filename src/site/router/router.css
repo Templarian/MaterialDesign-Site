@@ -152,3 +152,7 @@ footer mdi-icon {
   margin-left: -0.25rem;
   margin-right: 0.25rem;
 }
+
+[part="tooltip"] {
+  z-index: 999;
+}

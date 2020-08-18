@@ -17,6 +17,7 @@ import { Tag } from '@mdi/components/mdi/shared/models/tag';
 import { User } from '@mdi/components/mdi/shared/models/user';
 import '@mdi/components/mdi/avatar';
 import MdiAvatar from '@mdi/components/mdi/avatar';
+import { addTooltip } from '@mdi/components/mdi/tooltip';
 
 @Component({
   selector: 'site-page-icons',
@@ -51,6 +52,9 @@ export default class SitePageIcons extends HTMLElement {
       const avatar = document.createElement('mdi-avatar') as MdiAvatar;
       avatar.user = user;
       this.$contributors.appendChild(avatar);
+      addTooltip(avatar, () => {
+        return user.name;
+      });
     });
   }
   
