@@ -1,4 +1,4 @@
-### GET Admin Icon Modifications
+### Get Admin Icon Modifications
 
 ```
 GET api/admin/icon/:iconId/modification
