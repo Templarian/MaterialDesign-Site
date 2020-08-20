@@ -110,6 +110,14 @@ export default class SiteRouter extends HTMLElement {
       this.updatePage('view');
       this.page.slug = `contribute/${slug}`;
     });
+    this.router.add('roadmap', () => {
+      this.updatePage('view');
+      this.page.slug = `roadmap`;
+    });
+    this.router.add('roadmap/(:any)', (slug) => {
+      this.updatePage('view');
+      this.page.slug = `roadmap/${slug}`;
+    });
     this.router.add('contribute/(:any)/(:any)', (slug1, slug2) => {
       this.updatePage('view');
       this.page.slug = `contribute/${slug1}/${slug2}`;

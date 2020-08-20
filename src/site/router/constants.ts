@@ -32,7 +32,9 @@ import {
   mdiFormatListChecks,
   mdiTextBoxOutline,
   mdiFileStar,
-  mdiInformationOutline
+  mdiInformationOutline,
+  mdiRoutes,
+  mdiStar
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -250,6 +252,18 @@ export const navigationItems = [{
   icon: mdiFileStar,
   url: '/contribute/first-party-guide',
   file: '/content/guide-first-party.md'
+}, {
+  type: 'Meta',
+  name: 'Roadmap',
+  icon: mdiRoutes,
+  url: '/roadmap',
+  file: '/content/roadmap.md'
+}, {
+  type: 'Meta',
+  name: 'Brand Icons',
+  icon: mdiStar,
+  url: '/roadmap/brand-icons',
+  file: '/content/brand-icons.md'
 }, {
   type: 'Meta',
   name: 'Contact',
