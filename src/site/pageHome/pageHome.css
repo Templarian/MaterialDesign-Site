@@ -3,7 +3,21 @@
 }
 
 .banner {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
   background: var(--site-color);
+  box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.2) inset;
+  border-top: 4px solid #fff;
+  margin-top: -4px;
+  overflow: hidden;
+}
+
+.actions {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
   color: #fff;
   --mdi-button-color: #fff;
   --mdi-button-border-color: rgba(255, 255, 255, 0.5);
@@ -11,11 +25,12 @@
   --mdi-button-hover-border-color: #fff;
   --mdi-button-padding: 0.5rem 0.75rem;
   padding: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.2) inset;
-  border-top: 4px solid #fff;
-  margin-top: -4px;
+}
+
+.animation {
+  grid-column: 1;
+  grid-row: 1;
+  --mdi-icon-color: rgba(255, 255, 255, 0.5);
 }
 
 .banner .title {
