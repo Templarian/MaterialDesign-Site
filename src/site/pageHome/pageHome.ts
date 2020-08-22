@@ -16,6 +16,7 @@ export default class SitePageHome extends HTMLElement {
   @Prop() icons: Icon[] = [];
   @Prop() navigationItems: any[] = [];
 
+  @Part() $animation: HTMLDivElement;
   @Part() $animation1: MdiIcon;
   @Part() $animation2: MdiIcon;
   @Part() $animation3: MdiIcon;
@@ -49,6 +50,7 @@ export default class SitePageHome extends HTMLElement {
         var i = Math.floor(Math.random() * Math.floor(count - 1));
         animation.path = this.icons[i].data || '';
       });
+      this.$animation.classList.add('animate');
     }
   }
 }
