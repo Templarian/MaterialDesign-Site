@@ -1,17 +1,14 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
 {
-  "compilerOptions": {
-    "module": "esnext",
-    "target": "ES2017",
-    "lib": ["ES2017", "ES5", "ES6", "DOM"],
-    "baseUrl": "src",
-    "sourceMap": true,
-    "experimentalDecorators": true,
-    "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "dist",
-    "esModuleInterop": true
-  },
-  "include": [
-    "src/**/*"
+  "files": [],
+  "references": [
+    {
+      "path": "./src/tsconfig.json"
+    }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "ES2017",
+    "lib": ["ES2017", "ES5", "ES6", "DOM"],
+    "baseUrl": "src",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
+    "esModuleInterop": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
