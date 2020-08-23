@@ -83,7 +83,7 @@
   grid-column: 1;
   grid-row: 1;
   display: grid;
-  grid-template-columns: 1fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 0.25fr 420px 0.25fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 1fr;
+  grid-template-columns: 0.75fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 0.5fr 420px 0.5fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 0.5fr 3.5rem 0.5fr 2.5rem 0.75fr;
   overflow: hidden;
   --mdi-icon-width: 2rem;
   --mdi-icon-height: 2rem;
