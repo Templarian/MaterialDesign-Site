@@ -28,7 +28,7 @@
     "@angular/platform-server": "^9.1.12",
     "@angular/router": "^9.1.12",
     "@mdi/components": "^0.1.76",
-    "@ng-bootstrap/ng-bootstrap": "^5.3.1",
+    "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@rollup/plugin-multi-entry": "^3.0.1",
     "@rollup/plugin-node-resolve": "^8.1.0",
     "@rollup/plugin-typescript": "^4.1.2",
