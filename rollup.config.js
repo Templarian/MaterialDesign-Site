@@ -16,8 +16,16 @@ const TSCONFIG = {
   typescript: require('typescript'),
   tsconfigOverride: {
     compilerOptions: {
-      module: "es2015",
+      module: "esnext",
+      moduleResolution: "Node",
+      target: "ES2017",
+      lib: ["ES2017", "ES5", "ES6", "DOM"],
+      baseUrl: "src",
+      sourceMap: true,
+      experimentalDecorators: true,
+      strictNullChecks: true,
       allowSyntheticDefaultImports: true,
+      outDir: "dist",
       esModuleInterop: true
     },
     include: [
