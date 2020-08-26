@@ -11,8 +11,8 @@ import '@mdi/components/mdi/inputTextIcon';
 import MdiInputTextIcon from '@mdi/components/mdi/inputTextIcon';
 import '@mdi/components/mdi/inputSelect';
 import MdiInputSelect from '@mdi/components/mdi/inputSelect';
-//import '@mdi/components/mdi/inputUserSelect';
-//import MdiInputUserSelect from '@mdi/components/mdi/inputUserSelect';
+import '@mdi/components/mdi/inputUserSelect';
+import MdiInputUserSelect from '@mdi/components/mdi/inputUserSelect';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
 import { http } from '@mdi/components/mdi/shared/http';
 import { Tag } from '@mdi/components/mdi/shared/models/tag';
@@ -33,7 +33,7 @@ export default class SitePageIcons extends HTMLElement {
   @Part() $grid: MdiGrid;
   @Part() $search: MdiInputTextIcon;
   @Part() $select: MdiInputSelect;
-  @Part() $contributors: HTMLDivElement;
+  @Part() $contributors: MdiInputUserSelect;
 
   async connectedCallback() {
     const packageId = '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B';
@@ -50,14 +50,7 @@ export default class SitePageIcons extends HTMLElement {
     ];
     this.$select.value = 'all';
     const users = (await http.get<User[]>(`/api/package/${packageId}/user`)).map(user => new User().from(user));
-    users.forEach(user => {
-      const avatar = document.createElement('mdi-avatar') as MdiAvatar;
-      avatar.user = user;
-      this.$contributors.appendChild(avatar);
-      addTooltip(avatar, () => {
-        return `${user.name} (${user.iconCount})`;
-      });
-    });
+    this.$contributors.options = users;
   }
   
   render(changes) {
