@@ -39,13 +39,6 @@ import {
 } from '@mdi/js';
 
 export const navigationItems = [{
-  hideInSearch: true,
-  type: 'Documentation',
-  name: 'Documentation',
-  icon: mdiAndroid,
-  url: '/documentation',
-  file: '/content/documentation.md'
-}, {
   type: 'Documentation',
   name: 'Getting Started',
   icon: mdiClipboardCheck,
