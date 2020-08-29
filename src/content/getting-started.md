@@ -1,7 +1,7 @@
 # Getting Started
 
 <blockquote class="alert alert-info">
-  icon:information-outline Material Design Icons has been around for many years and is compatible with many technologies and frameworks. Please view the right sidebar for an appropriate getting started guide.
+  icon:information-outline Material Design Icons has been around for many years and is compatible with many technologies and frameworks. Please view the docs menu at the top for an appropriate getting started guide.
 </blockquote>
 
 ## Using the Webfont

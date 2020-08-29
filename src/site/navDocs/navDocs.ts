@@ -22,6 +22,9 @@ export default class SiteNavDocs extends HTMLElement {
   render(changes) {
     if (changes.items) {
       this.items.filter(x => x.type === 'Documentation' && x.name !== 'Documentation').forEach(item => {
+        if (item.url === '/getting-started') {
+          return;
+        }
         const a = document.createElement('a');
         a.href = item.url;
         const icon = document.createElement('mdi-icon') as MdiIcon;

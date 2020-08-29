@@ -34,7 +34,8 @@ import {
   mdiFileStar,
   mdiInformationOutline,
   mdiRoutes,
-  mdiStar
+  mdiStar,
+  mdiClipboardCheck
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -44,6 +45,12 @@ export const navigationItems = [{
   icon: mdiAndroid,
   url: '/documentation',
   file: '/content/documentation.md'
+}, {
+  type: 'Documentation',
+  name: 'Getting Started',
+  icon: mdiClipboardCheck,
+  url: '/getting-started',
+  file: '/content/getting-started.md'
 }, {
   type: 'Documentation',
   name: 'Android',
