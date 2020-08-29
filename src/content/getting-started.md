@@ -8,7 +8,8 @@
 
 One of the easiest ways to access all of our icons is to use the webfont. For testing or quick use you can include the CSS file from the CDN. You could also download the files via NPM to include in your project.
 
-<a href="/getting-started/webfont" class="btn btn-primary">Learn More (Webfont - Getting Started)</a>
+<a href="/getting-started/webfont" class="button">Learn More (Webfont - Getting Started)</a>
+<a href="/guide/webfont-alternatives" class="button">Webfont Alternatives</a>
 
 
 ## Using SVGs
