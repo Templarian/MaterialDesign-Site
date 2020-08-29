@@ -49,7 +49,7 @@ export default class SiteRouter extends HTMLElement {
     });
     this.$database.font = this.fontId;
     this.$search.addEventListener('focus', this.handleFocusSearch.bind(this));
-    this.$search.items = navigationItems.filter(x => !x.hideInSearch);
+    this.$search.items = navigationItems.filter((x: any) => !x.hideInSearch);
     this.$siteNavDocs.items = navigationItems;
     this.$siteNavMenu.items = navigationItems;
     this.$navIcons.addEventListener('click', this.handleNavIcons.bind(this));
