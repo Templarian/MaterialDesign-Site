@@ -1,15 +1,14 @@
 # Getting Started
 
-<blockquote class="alert alert-info">
-  icon:information-outline Material Design Icons has been around for many years and is compatible with many technologies and frameworks. Please view the docs menu at the top for an appropriate getting started guide.
-</blockquote>
+> **Information:** icon:information-outline Material Design Icons has been around for many years and is compatible with many technologies and frameworks. Please view the docs menu at the top for an appropriate getting started guide.
 
 ## Using the Webfont
 
 One of the easiest ways to access all of our icons is to use the webfont. For testing or quick use you can include the CSS file from the CDN. You could also download the files via NPM to include in your project.
 
 <a href="/getting-started/webfont" class="button">Learn More (Webfont - Getting Started)</a>
-<a href="/guide/webfont-alternatives" class="button">Webfont Alternatives</a>
+
+> **Danger:** Using the webfont while easy to use is highly discouraged due to performance and overall request size. Please read the [Webfont Alternatives Guide](/guide/webfont-alternatives) for more details.
 
 
 ## Using SVGs
