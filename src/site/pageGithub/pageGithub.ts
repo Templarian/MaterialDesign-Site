@@ -17,6 +17,8 @@ import '@mdi/components/mdi/buttonGroup';
 import MdiButtonGroup from '@mdi/components/mdi/buttonGroup';
 import '@mdi/components/mdi/inputText';
 import MdiInputText from '@mdi/components/mdi/inputText';
+import '@mdi/components/mdi/inputFileLocal';
+import MdiInputFileLocal from '@mdi/components/mdi/inputFileLocal';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
 import { addTooltip } from '@mdi/components/mdi/tooltip/addTooltip';
 import { getGitHubPreview } from './utils';
@@ -45,6 +47,7 @@ export default class SitePageGithub extends HTMLElement {
   @Part() $iconDownload: MdiButton;
   @Part() $iconLink: MdiButton;
   @Part() $inputName: MdiInputText;
+  @Part() $inputFile: MdiInputFileLocal;
   @Part() $inputData: MdiInputText;
   @Part() $inputShadow: MdiInputText;
   @Part() $canvas: HTMLCanvasElement;
@@ -108,6 +111,19 @@ export default class SitePageGithub extends HTMLElement {
     });
     this.$inputName.addEventListener('input', (e) => {
       this._name = (e.target as any).value;
+      this.update();
+    });
+    this.$inputFile.addEventListener('change', (e: any) => {
+      const name = e.detail.name.replace('.svg', '');
+      this._name = name;
+      this.$inputName.value = name;
+      const match = e.detail.value.match(/ d="([^"]+)"/);
+      if (match) {
+        this._path = match[1];
+        this.$inputData.value = match[1];
+      } else {
+        alert('Unable to find singular path tag with valid d attribute.')
+      }
       this.update();
     });
     this.$inputData.addEventListener('input', (e) => {
