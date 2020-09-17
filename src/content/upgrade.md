@@ -2,6 +2,12 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 5.5.55 to 5.6.55
+
+- Updated license
+- 100 New Icons
+- [todo: fill in]
+
 ## 5.4.45 to 5.5.55
 
 - Renamed

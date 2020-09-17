@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 5.6.55
+
+- Updated license
+- 100 New Icons
+- [todo: fill in]
+
 ## Version 5.5.55
 
 - 100 New Icons
