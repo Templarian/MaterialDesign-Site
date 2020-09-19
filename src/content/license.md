@@ -1,8 +1,8 @@
 # License
 
-There are many parts of this project and supporting projects covered under various licenses.
+The below license is included in all projects maintained.
 
-```
+```markdown
 Pictogrammers Free License
 --------------------------
 
@@ -25,6 +25,8 @@ licenses or are distributed under the Apache 2.0 license.
 The MIT license applies to all non-font and non-icon files.
 ```
 
+## Projects
+
 | Project                                 | License                   |
 |-----------------------------------------|---------------------------|
 | Material Design Icons Community         | Apache License 2.0        |
@@ -37,8 +39,6 @@ The MIT license applies to all non-font and non-icon files.
 | Material Design Icons @mdi/vue          | MIT License               |
 | Icon Templates                          | WTFPL                     |
 
-<blockquote class="alert alert-info">
-  <strong>Note:</strong> This does not cover third party plugins, components, etc that are shown in the documentation. Please reference their GitHub pages for license clarification.
-</blockquote>
+> **Note:** This does not cover third party plugins, components, etc that are shown in the documentation. Please reference their GitHub pages for license clarification.
 
 <sub>1</sub> License has changed a couple times over the years, so this may vary depending on version?
