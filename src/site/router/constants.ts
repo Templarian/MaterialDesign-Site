@@ -35,7 +35,8 @@ import {
   mdiInformationOutline,
   mdiRoutes,
   mdiStar,
-  mdiClipboardCheck
+  mdiClipboardCheck,
+  mdiScaleBalance
 } from '@mdi/js';
 
 export const navigationItems = [{
@@ -229,6 +230,12 @@ export const navigationItems = [{
   icon: mdiInformationOutline,
   url: '/about',
   file: '/content/about.md'
+}, {
+  type: 'Meta',
+  name: 'License',
+  icon: mdiScaleBalance,
+  url: '/license',
+  file: '/content/license.md'
 }, {
   type: 'Meta',
   name: 'Changelog',
