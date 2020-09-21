@@ -23,6 +23,12 @@ properties:
   base64:
     type: string
     description: Base64 Encoded 100x100 Avatar
+  sponsored:
+    type: boolean
+    description: Can this user be sponsored on github
+  core:
+    type: boolean
+    description: Core maintainer
   iconCount:
     type: integer
     example: 42

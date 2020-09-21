@@ -1,7 +1,7 @@
 ### Get List of Users by PackageId
 
 ```
-POST api/package/:packageId/user
+GET api/package/:packageId/user
 ```
 
 tabs

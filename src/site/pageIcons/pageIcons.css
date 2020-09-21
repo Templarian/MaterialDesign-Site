@@ -67,14 +67,3 @@ main {
   flex: 1;
   white-space: nowrap;
 }
-
-[part="contributors"] {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-[part="contributors"] mdi-avatar {
-  margin-bottom: 0.75rem;
-  margin-right: 0.5rem;
-}
