@@ -35,10 +35,10 @@ export default class SitePageContributors extends HTMLElement {
     if (error) {
       this.$error.style.display = 'block';
     } else {
-      users.filter(u => u.core).forEach(user => {
+      users.filter(u => u.core && (u.iconCount || 0) > 0).forEach(user => {
         this.addUser(this.$core, user);
       });
-      users.filter(u => !u.core).forEach(user => {
+      users.filter(u => !u.core && (u.iconCount || 0) > 0).forEach(user => {
         this.addUser(this.$community, user);
       });
       this.$main.style.display = 'block';
