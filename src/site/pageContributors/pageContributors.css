@@ -67,14 +67,18 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
-nav a:hover {
+nav a:hover span {
   text-decoration: underline;
 }
 
-nav mdi-icon {
+nav a mdi-icon {
   --mdi-icon-color: #fff;
   vertical-align: middle;
   margin-right: 0.125rem;
+}
+
+nav a:hover mdi-icon {
+  --mdi-icon-color: rgba(255, 255, 255, 0.8);
 }
 
 main {
