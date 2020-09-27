@@ -81,3 +81,13 @@ main {
   grid-column: 2 / span 2;
   padding: 0.5rem 0 1rem 0;
 }
+
+mdi-card-user {
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+
+[part="core"],
+[part="community"] {
+  columns: 3;
+}

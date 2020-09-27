@@ -6,6 +6,8 @@ import style from './pageContributors.css';
 import { Icon } from '@mdi/components/mdi/shared/models/icon';
 import { http } from '@mdi/components/mdi/shared/http';
 import { User } from '@mdi/components/mdi/shared/models/user';
+import '@mdi/components/mdi/cardUser';
+import MdiCardUser from '@mdi/components/mdi/cardUser';
 
 @Component({
   selector: 'site-page-contributors',
@@ -29,7 +31,7 @@ export default class SitePageContributors extends HTMLElement {
 
   async load() {
     const packageId = '38EF63D0-4744-11E4-B3CF-842B2B6CFE1B';
-    const users = await http.get<User[]>(`api/package/${packageId}/user`);
+    const users = (await http.get<User[]>(`api/package/${packageId}/user`)).map(user => new User().from(user));;
     const { error } = users as any;
     this.$loading.style.display = 'none';
     if (error) {
@@ -46,8 +48,8 @@ export default class SitePageContributors extends HTMLElement {
   }
 
   addUser(parent: HTMLDivElement, user: User) {
-    const $user = document.createElement('div');
-    $user.innerText = `${user.name} - ${user.iconCount}`;
+    const $user = document.createElement('mdi-card-user') as MdiCardUser;
+    $user.user = user;
     parent.appendChild($user);
   }
 }
