@@ -74,6 +74,7 @@ nav a:hover {
 nav mdi-icon {
   --mdi-icon-color: #fff;
   vertical-align: middle;
+  margin-right: 0.125rem;
 }
 
 main {
@@ -94,4 +95,10 @@ mdi-card-user {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
+}
+
+.divider {
+  list-style: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 1rem 0 1rem -1rem;
 }
