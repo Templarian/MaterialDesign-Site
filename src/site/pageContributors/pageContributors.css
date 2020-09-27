@@ -84,10 +84,13 @@ main {
 
 mdi-card-user {
   break-inside: avoid;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 [part="core"],
 [part="community"] {
-  columns: 3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
