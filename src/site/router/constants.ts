@@ -8,6 +8,7 @@ import {
   mdiReact,
   mdiRollupjs,
   mdiLanguageRubyOnRails,
+  mdiSvelte,
   mdiSvg,
   mdiVuejs,
   mdiWebpack,
@@ -111,6 +112,12 @@ export const navigationItems = [{
   icon: mdiLanguageRubyOnRails,
   url: '/getting-started/ruby-on-rails',
   file: '/content/getting-started-ruby-on-rails.md'
+}, {
+  type: 'Documentation',
+  name: 'Svelte',
+  icon: mdiSvelte,
+  url: '/getting-started/svelte',
+  file: '/content/getting-started-svelte.md'
 }, {
   type: 'Documentation',
   name: 'SVG',
