@@ -1,23 +1,61 @@
-<site-carbon></site-carbon>
-
 <article>
+  <site-carbon></site-carbon>
+  <header>
+    <h1>History</h1>
+  </header>
   <aside>
     <nav>
       <ul>
         <li>
           <a href="/upgrade">
-            <mdi-icon path="M3,5H9V11H3V5M5,7V9H7V7H5M11,7H21V9H11V7M11,15H21V17H11V15M5,20L1.5,16.5L2.91,15.09L5,17.17L9.59,12.59L11,14L5,20Z"></mdi-icon>
-            Upgrade Guide
+            <mdi-icon path="M14,20H10V11L6.5,14.5L4.08,12.08L12,4.16L19.92,12.08L17.5,14.5L14,11V20Z"></mdi-icon>
+            <span>Upgrade Guide</span>
           </a>
         </li>
         <li>
-          <a href="/upgrade">
-            <mdi-icon path="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,21A1,1 0 0,0 10,22H14A1,1 0 0,0 15,21V20H9V21Z"></mdi-icon>
-            Changelog
+          <a href="/changelog">
+            <mdi-icon path="M5,3C3.89,3 3,3.89 3,5V19C3,20.11 3.89,21 5,21H19C20.11,21 21,20.11 21,19V5C21,3.89 20.11,3 19,3H5M5,5H19V19H5V5M7,7V9H17V7H7M7,11V13H17V11H7M7,15V17H14V15H7Z"></mdi-icon>
+            <span>Changelog</span>
           </a>
         </li>
       </ul>
     </nav>
+    <section class="filter">
+      <h3>Filter Audit Entries</h3>
+      <ul>
+        <li>
+          <mdi-input-check part="news" type="checkbox"></mdi-input-check>
+          News
+        </li>
+        <li>
+          <mdi-input-check part="iconCreated" type="checkbox"></mdi-input-check>
+          Icon Created
+        </li>
+        <li>
+          <mdi-input-check part="iconModified" type="checkbox"></mdi-input-check>
+          Icon Modified
+        </li>
+        <li>
+          <mdi-input-check part="iconRenamed" type="checkbox"></mdi-input-check>
+          Icon Renamed
+        </li>
+        <li>
+          <mdi-input-check part="iconDeleted" type="checkbox"></mdi-input-check>
+          Icon Deleted
+        </li>
+        <li>
+          <mdi-input-check part="iconAliasCreated" type="checkbox"></mdi-input-check>
+          Alias Added / Removed
+        </li>
+        <li>
+          <mdi-input-check part="iconTagCreated" type="checkbox"></mdi-input-check>
+          Tag Added / Removed
+        </li>
+      </ul>
+    </section>
+    <div class="warning">
+      <p>Report an audit entry if there are any issues.</p>
+    </div>
   </aside>
 
   <main part="loading">
@@ -31,8 +69,6 @@
   </main>
 
   <main part="icon">
-
-    <h1 part="header"></h1>
-
+    <mdi-button part="more" block>Load More</mdi-button>
   </main>
 </article>
