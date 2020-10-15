@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 5.7.55
+
+- 100 New Icons
+- Updated
+  - `battery-charging-40`
+  - `message-*-outline`
+
 ## Version 5.6.55
 
 - Updated license
