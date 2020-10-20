@@ -12,6 +12,7 @@ import {
   mdiVuejs,
   mdiWebpack,
   mdiLanguageHtml5,
+  mdiLanguageJavascript,
   mdiMicrosoftWindows,
   mdiXamarin,
   mdiMicrosoftVisualStudioCode,
@@ -131,16 +132,22 @@ export const navigationItems = [{
   file: '/content/getting-started-vuejs.md'
 }, {
   type: 'Documentation',
-  name: 'Webpack',
-  icon: mdiWebpack,
-  url: '/getting-started/webpack',
-  file: '/content/getting-started-webpack.md'
+  name: 'Webcomponent',
+  icon: mdiLanguageJavascript,
+  url: '/getting-started/webfont',
+  file: '/content/getting-started-webcomponent.md'
 }, {
   type: 'Documentation',
   name: 'Webfont',
   icon: mdiLanguageHtml5,
   url: '/getting-started/webfont',
   file: '/content/getting-started-webfont.md'
+}, {
+  type: 'Documentation',
+  name: 'Webpack',
+  icon: mdiWebpack,
+  url: '/getting-started/webpack',
+  file: '/content/getting-started-webpack.md'
 }, {
   type: 'Documentation',
   name: 'Windows',
