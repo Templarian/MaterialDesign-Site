@@ -134,7 +134,7 @@ export const navigationItems = [{
   type: 'Documentation',
   name: 'Web Components',
   icon: mdiLanguageJavascript,
-  url: '/getting-started/webfont',
+  url: '/getting-started/webcomponent',
   file: '/content/getting-started-webcomponent.md'
 }, {
   type: 'Documentation',
