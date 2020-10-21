@@ -132,7 +132,7 @@ export const navigationItems = [{
   file: '/content/getting-started-vuejs.md'
 }, {
   type: 'Documentation',
-  name: 'Webcomponent',
+  name: 'Web Components',
   icon: mdiLanguageJavascript,
   url: '/getting-started/webfont',
   file: '/content/getting-started-webcomponent.md'
