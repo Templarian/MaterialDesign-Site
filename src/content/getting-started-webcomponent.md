@@ -1,4 +1,4 @@
-# Web Component
+# Web Components
 
 [![](https://chips.james-coyle.now.sh/npm/version/@jamescoyle/svg-icon)](https://www.npmjs.com/package/@jamescoyle/svg-icon)
 [![](https://chips.james-coyle.now.sh/npm/downloads/@jamescoyle/svg-icon)](https://www.npmjs.com/package/@jamescoyle/svg-icon)
