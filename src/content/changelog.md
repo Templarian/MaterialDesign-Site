@@ -1,5 +1,26 @@
 # Changelog
 
+## Version 5.8.55
+
+- 100 New Icons
+- Updated
+  - `book-lock`
+  - `book-minus`
+  - `book-music`
+  - `book-play`
+  - `book-play-outline`
+  - `book-plus`
+  - `book-remove`
+  - `lock-check`
+  - `lock-open-check`
+  - `lock-plus`
+  - `wifi-strength-1-lock`
+  - `wifi-strength-2-lock`
+  - `wifi-strength-3-lock`
+  - `wifi-strength-4-lock`
+  - `wifi-strength-lock-open-outline`
+
+
 ## Version 5.7.55
 
 - 100 New Icons

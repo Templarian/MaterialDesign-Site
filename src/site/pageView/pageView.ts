@@ -50,7 +50,7 @@ export default class SitePageView extends HTMLElement {
     this.$markdown.replace = [{
       find: new RegExp('\{\{version\}\}', 'g'),
       replace: (m) => {
-        return '5.7.55';
+        return '5.8.55';
       }
     }, {
       find: new RegExp('<h1>(.*)</h1>'),

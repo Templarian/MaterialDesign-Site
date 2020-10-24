@@ -2,6 +2,10 @@
 
 Follow the guide starting with your version to the version you wish to upgrade to.
 
+## 5.7.55 to 5.8.55
+
+- 100 New Icons
+
 ## 5.6.55 to 5.7.55
 
 - 100 New Icons
