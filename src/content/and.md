@@ -15,3 +15,15 @@
 - and may the Force be with you!
 - in a galaxy far, far away
 - – to boldly go where no man has gone before
+- and life uh... finds a way
+- and it's dangerous to go alone! Take this.
+- and a lady in England
+- and a mate in England
+- people who use <a href="https://www.home-assistant.io">Home Assistant</a>
+- once upon a time
+- since 2014
+- and Snake? Snake?! SNAAAAAAAAKE!
+- and my Rattata is in the top percentage
+- and a spoony bard
+- and snakes. Why did it have to be snakes?
+- and billions of bilious blue blistering barnacles!
