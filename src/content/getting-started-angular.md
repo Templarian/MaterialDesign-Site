@@ -17,8 +17,8 @@ import { Component, Input } from '@angular/core';
     </svg>
   `
 })
-export class IconComponent  {
-    @Input('path') data: string = 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z';
+export class IconComponent {
+  @Input('path') data: string = 'M13,14H11V10H13M13,18H11V16H13M1,21H23L12,2L1,21Z';
 }
 ```
 
@@ -29,13 +29,13 @@ import { mdiAccount } from '@mdi/js';
 @Component({
   selector: 'app',
   template: `
-    <div>
-      <icon path="mdiAccount"></icon>
-    </div>
+  <div>
+    <icon path="mdiAccount"></icon>
+  </div>
   `
 })
 export class AppComponent  {
-    mdiAccount: string = mdiAccount;
+  mdiAccount: string = mdiAccount;
 }
 ```
 
@@ -51,91 +51,133 @@ Or if you want the latest WIP straight from the database it can be downloaded vi
 
 <a href="https://materialdesignicons.com/api/download/angularmaterial/38EF63D0-4744-11E4-B3CF-842B2B6CFE1B" class="button">icon:download Angular 2+ Download for Angular Material 'mdi.svg'</a>
 
-The `mdi.svg` contains all the icons provided on the site. Use inline with [MatIconRegistry](https://material.angular.io/components/icon/api).
-The following assumes that you're using the latest version of `@angular/material` (`2.0.0-beta.12`) and you already have the basic knowledge of Angular Material.
-Place the SVG file under your `assets` folder. Please ensure that this file is publicly accessible.
-In your app's module file (typically `app.module.ts`), import `MatIconModule` and `MatIconRegistry` from `@angular/material`:
+### Step-by-step Usage
+
+(Note: Documentation for Angular CLI versions 1.x.x (around Angular v5) has been dropped
+as Angular v5 is [no longer supported](https://angular.io/guide/releases#support-policy-and-schedule).)
+
+#### 1. Including the icons into your app
+
+This bundle is usable with Angular Material and to facilitate usage, it's recommended to use
+[`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin).
+
+Add the following plugin configuration in the Webpack configuration:
+
+```javascript
+new CopyWebpackPlugin([
+  { from: 'node_modules/@mdi/angular-material/mdi.svg',
+    to: 'assets/mdi.svg'
+  }
+]);
+```
+
+Or if you're using the Angular CLI, make sure to include `mdi.svg` in your `assets`
+folder under the [Angular workspace configuration file](https://angular.io/guide/workspace-config)
+in the `assets` array, located in the build configuration for your project:
+
+```json
+{
+  // ...
+  "architect": {
+    "build": {
+      "options": {
+        "assets": [
+          { "glob": "**/*", "input": "./assets/", "output": "./assets/" },
+          { "glob": "favicon.ico", "input": "./", "output": "./" },
+          { "glob": "mdi.svg", "input": "./node_modules/@mdi/angular-material", "output": "./assets" }
+        ]
+      }
+    }
+  }
+  // ...
+}
+```
+
+Note that the input directory is dependent on the workspace root which can be found
+by looking at your desired project's `root` property. (For more information, visit the
+Angular documentation on [project configuration options](https://angular.io/guide/workspace-config#project-configuration-options).)
+
+Additionally, see the Angular documentation on [assets configuration](https://angular.io/guide/workspace-config#assets-configuration)
+for more information.
+
+#### 2. Adding the icons to your app
+
+The `mdi.svg` contains all the icons provided on the site. It can be used inline with
+[MatIconRegistry](https://material.angular.io/components/icon/api#MatIconRegistry).
+
+1. In your app's main module (typically `app.module.ts`), import `MatIconModule` from
+`@angular/material/icon` and `HttpClientModule` from `@angular/common/http`
+(`HttpClientModule` is needed for the icon set to be loaded correctly):
+
+    ```typescript
+    import { NgModule } from '@angular/core';
+    import { HttpClientModule } from '@angular/common/http';
+    import { MatIconModule } from '@angular/material/icon';
+
+    @NgModule({
+      imports: [
+        // ...
+        HttpClientModule,
+        MatIconModule
+      ]
+    })
+    export class AppModule {}
+    ```
+
+2. Register the icons with `MatIconRegistry#addSvgIconSet`, passing in the necessary
+resource URL to be added:
+
+    ```typescript
+    import { MatIconRegistry } from '@angular/material/icon';
+    import { DomSanitizer } from '@angular/platform-browser';
+
+    // ...
+    export class AppModule {
+      constructor(iconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+        iconRegistry.addSvgIconSet(
+          domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')
+        );
+      }
+    }
+    ```
+
+Tha final main module should look like this:
 
 ```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { MatIconRegistry, MatIconModule } from '@angular/material';
+import { MatIconModule, MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-import { HttpModule } from '@angular/common/http';
-/*
-From the latest master, HttpClientModule is required instead
-import { HttpClientModule } from '@angular/common/http';
-*/
 
-// [...]
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpModule,
-    // From the latest master, HttpClientModule is required instead
-    // Your other modules
-    // Take note that you have to import MatIconModule into your app
+    // Required by the Angular Material icon module
+    HttpClientModule,
+    // ...
     MatIconModule
   ]
 })
 export class AppModule {
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
-    matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')); // Or whatever path you placed mdi.svg at
+    matIconRegistry.addSvgIconSet(
+      domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi.svg')
+    );
   }
 }
 ```
 
-If you're using Angular CLI, make sure to include `assets` folder under `.angular-cli.json` in `assets` array (Although by default, the angular CLI will autofill it in):
+#### 3. Using the icons in your app
 
-```json
-{
-   "apps": [
-     {
-       "assets": [
-         "assets"
-       ]
-     }
-   ]
-}
-```
-
-Usage:
+The icons can be used with [`<mat-icon>`](https://material.angular.io/components/icon/api#MatIcon)'s
+`svgIcon` attribute as shown below:
 
 ```html
-<!-- Icon by itself -->
-<mat-icon svgIcon="android"></mat-icon>
-<!-- Icon button -->
-<button mat-icon-button>
-  <mat-icon svgIcon="android"></mat-icon>
-</button>
-<!-- You can also combine an icon and text together -->
-<button mat-button>
-  <mat-icon svgIcon="code-tags"></mat-icon>
-  View source
-</button>
+<mat-icon svgIcon="<name of icon>"></mat-icon>
 ```
 
-Please also add the following class to your styles (`styles.css`) to solve the problem where an icon isn't aligned properly when used in a menu item:
+For more information about SVG icons, check out the [documentation](https://material.angular.io/components/icon/overview#svg-icons).
 
-```css
-button.mat-menu-item {
-  line-height: 24px !important;
-}
-a.mat-menu-item > mat-icon {
-  margin-bottom: 14px;
-}
-.mat-icon svg {
-  height: 24px;
-  width: 24px;
-}
-.mat-step-icon-content .mat-icon svg {
-  height: 100%;
-  width: 100%;
-}
-```
+---
 
-[Demo](https://stackblitz.com/edit/mdi-material-example)
-
-For more information on icons, refer to the [icon docs](https://material.angular.io/components/icon/overview).
+[StackBlitz demo](https://stackblitz.com/edit/mdi-material-example)
