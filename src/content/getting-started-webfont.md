@@ -13,7 +13,7 @@ npm install @mdi/font
 ```
 
 ```
-https://cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css
+https://cdn.jsdelivr.net/npm/@mdi/font@{{version}}/css/materialdesignicons.min.css
 ```
 
 ## Basic Example
@@ -109,7 +109,7 @@ Many times an icon has text next to it that explains the things. The icon is jus
   - `materialdesignicons.sass` - Main
 - `preview.html` - Preview all icons
 
-The above files are also on the CDN: [View Latest](https://cdn.materialdesignicons.com/{{version}}).
+The above files are also on the CDN: [View Latest](https://www.jsdelivr.com/package/npm/@mdi/font@{{version}}).
 
 > Note: `preview.html` is renamed to `index.html` on the CDN.
 

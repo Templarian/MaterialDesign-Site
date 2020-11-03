@@ -11,7 +11,7 @@ tab Install
 <div class="row">
   <div class="col-md-8">
     <p>A content delivery network provides a fast way to deliver the webfont.</p>
-    <pre><code>//cdn.materialdesignicons.com/{{version}}/css/materialdesignicons.min.css</code></pre>
+    <pre><code>//cdn.jsdelivr.net/npm/@mdi/font@{{version}}/css/materialdesignicons.min.css</code></pre>
   </div>
   <div class="col-md-4">
     <p>For <a href="https://npmjs.com">NPM</a> use:</p>

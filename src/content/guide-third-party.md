@@ -34,10 +34,10 @@ This allows one to swap out other icon packs or upgrade/downgrade indpendently. 
 
 ###  CDN
 
-Similarly the CDN is updated after each release and keeps historical versions for compatability.
+As the `@mdi/svg` is also published it can be retrived from the CDN.
 
-- CDN: `https://cdn.materialdesignicons.com/{{version}}/`
-  - CDN `meta.json`: `https://cdn.materialdesignicons.com/{{version}}/meta.json`
+- CDN: `https://cdn.jsdelivr.net/npm/@mdi/svg`
+  - CDN `meta.json`: `https://cdn.jsdelivr.net/npm/@mdi/svg@{{version}}/meta.json`
 
 ### GitHub
 
