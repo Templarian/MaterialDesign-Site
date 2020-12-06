@@ -9,9 +9,11 @@ import { ModificationType } from '@mdi/components/mdi/shared/enums/modificationT
 import { http } from '@mdi/components/mdi/shared/http';
 import '@mdi/components/mdi/card';
 import '@mdi/components/mdi/button';
-import '@mdi/components/mdi/inputCheckList';
 import MdiButton from '@mdi/components/mdi/button';
+import '@mdi/components/mdi/inputCheckList';
 import MdiInputCheckList from '@mdi/components/mdi/inputCheckList';
+import '@mdi/components/mdi/modification';
+import MdiModification from  '@mdi/components/mdi/modification';
 
 const NEWS = 'news';
 const ICON_CREATED = 'iconCreated';
@@ -45,6 +47,7 @@ export default class SitePageHistory extends HTMLElement {
   @Part() $error: HTMLDivElement;
   @Part() $icon: HTMLDivElement;
   @Part() $more: MdiButton;
+  @Part() $modification: MdiModification;
 
   @Part() $filters: MdiInputCheckList;
 
@@ -69,18 +72,24 @@ export default class SitePageHistory extends HTMLElement {
     this.load();
   }
 
+  loadingState() {
+    this.$loading.style.display = 'block';
+    this.$error.style.display = 'none';
+    this.$modification.style.display = 'none';
+  }
+
+  successState() {
+    this.$loading.style.display = 'none';
+    this.$error.style.display = 'none';
+    this.$modification.style.display = 'block';
+  }
+
   async load() {
+    this.loadingState();
     const modifications = await this.requestPage(1);
     console.log(modifications);
-    /*const icon = await http.get<Icon>(`/api/package/${packageId}/name/${name}`);
-    const { error } = icon as any;
-    this.$loading.style.display = 'none';
-    if (error) {
-      this.$error.style.display = 'block';
-    } else {
-      const related = await http.get<Icon[]>(`/api/icon/${icon.id}/base`);
-      this.$icon.style.display = 'block';
-    }*/
+    this.$modification.modifications = modifications;
+    this.successState();
   }
 
   handleToggle(e: MouseEvent) {
