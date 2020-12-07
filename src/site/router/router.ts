@@ -224,10 +224,11 @@ export default class SiteRouter extends HTMLElement {
    */
   handleTooltip(e) {
     console.log(e.detail)
-    var { visible, rect, text } = e.detail;
+    var { visible, rect, text, position } = e.detail;
     this.$tooltip.visible = visible;
     this.$tooltip.rect = rect;
     this.$tooltip.text = text;
+    this.$tooltip.position = position;
   }
 
   render(changes?: any) {
