@@ -45,7 +45,8 @@ export default class SitePageHistory extends HTMLElement {
   @Part() $header: HTMLHeadingElement;
   @Part() $loading: HTMLDivElement;
   @Part() $error: HTMLDivElement;
-  @Part() $icon: HTMLDivElement;
+  @Part() $main: HTMLDivElement;
+  @Part() $none: HTMLDivElement;
   @Part() $more: MdiButton;
   @Part() $modification: MdiModification;
 
@@ -75,13 +76,15 @@ export default class SitePageHistory extends HTMLElement {
   loadingState() {
     this.$loading.style.display = 'block';
     this.$error.style.display = 'none';
-    this.$modification.style.display = 'none';
+    this.$main.style.display = 'none';
+    this.$none.style.display = 'none';
   }
 
   successState() {
     this.$loading.style.display = 'none';
     this.$error.style.display = 'none';
-    this.$modification.style.display = 'block';
+    this.$main.style.display = 'block';
+    this.$none.style.display = 'none';
   }
 
   async load() {
