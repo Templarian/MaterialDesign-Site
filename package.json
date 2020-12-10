@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "^10.0.11",
     "@angular/platform-server": "^10.0.11",
     "@angular/router": "^10.0.11",
-    "@mdi/components": "^0.2.3",
+    "@mdi/components": "^0.2.4",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@rollup/plugin-multi-entry": "^3.0.1",
     "@rollup/plugin-node-resolve": "^8.1.0",
