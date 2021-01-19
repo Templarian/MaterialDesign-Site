@@ -17,11 +17,12 @@ All naming must be in the exact order below.
 | `*-top-left`     | `*-bold`  | `*-box`      | `*-account`     | `*-variant`  |
 | `*-top-right`    | `*-thick` | `*-circle`   | `*-alert`       | `*-multiple` |
 | `*-bottom-left`  |           | `*-decagram` | `*-arrow-*`     | `*-off`      |
-| `*-bottom-right` |           | `*-octagram` | `*-cancel`      | `*-outline`  |
-| `*-up`           |           | `*-rhombus`  | `*-check`       |              |
-| `*-down`         |           | `*-shield`   | `*-clock`       |              |
-| `*-left`         |           |              | `*-cog`         |              |
-| `*-right`        |           |              | `*-edit`        |              |
+| `*-bottom-right` |           | `*-octagram` | `*-badge`       | `*-outline`  |
+| `*-up`           |           | `*-rhombus`  | `*-cancel`      |              |
+| `*-down`         |           | `*-shield`   | `*-check`       |              |
+| `*-left`         |           |              | `*-clock`       |              |
+| `*-right`        |           |              | `*-cog`         |              |
+|                  |           |              | `*-edit`        |              |
 |                  |           |              | `*-eye`         |              |
 |                  |           |              | `*-heart`       |              |
 |                  |           |              | `*-information` |              |
@@ -144,6 +145,11 @@ tab Arrow
 The arrow modifer can point in any direction and should be placed in the bottom right.
 
 ![arrow-right](/assets/resources/grid-96-arrow-right-bottom-right.svg)
+
+/tab
+tab Badge
+
+The badge modifier is always in the top right of the icon and is used to indicate a badge or notification.
 
 /tab
 tab Cancel
