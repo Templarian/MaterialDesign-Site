@@ -1,3 +1,8 @@
+
+**ARCHIVED:** Moved to https://github.com/Pictogrammers/Icon-Site
+
+-----------------
+
 # Material Design Icons - Site
 
 The [Material Design Icons](https://materialdesignicons.com) project has been growing pretty quickly over the years and now has a large community behind it and is need of a new site.
